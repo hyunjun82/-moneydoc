@@ -449,7 +449,30 @@ export function GenericCalculator({ spec }: { spec: Spec }) {
                   {breakdownKeys.map((key) => {
                     const v = result[key];
                     if (v === undefined || v === null) return null;
-                    if (typeof v === "object") return null;
+                    if (typeof v === "object" && !Array.isArray(v)) {
+                      const obj = v as Record<string, unknown>;
+                      return (
+                        <div key={key} style={{ padding: "10px 0", borderBottom: "1px solid var(--line-soft)" }}>
+                          <div style={{ fontSize: 13, fontWeight: 700, color: "var(--text)", marginBottom: 6 }}>
+                            {outputLabel(key)}
+                          </div>
+                          <div style={{ display: "flex", flexDirection: "column", gap: 4, paddingLeft: 8 }}>
+                            {Object.entries(obj).map(([k2, v2]) => {
+                              if (v2 === null || v2 === undefined || typeof v2 === "object") return null;
+                              return (
+                                <div key={k2} style={{ display: "flex", justifyContent: "space-between", fontSize: 13, color: "var(--text-2)" }}>
+                                  <span>{outputLabel(k2)}</span>
+                                  <span style={{ fontVariantNumeric: "tabular-nums", color: "var(--text)", fontWeight: 600 }}>
+                                    {formatValue(v2, isPercentKey(k2) ? "%" : "")}
+                                  </span>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      );
+                    }
+                    if (Array.isArray(v)) return null;
                     const unit = isPercentKey(key) ? "%" : "";
                     return (
                       <div key={key} className="b-row">
