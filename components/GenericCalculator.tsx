@@ -326,7 +326,7 @@ function formatValue(v: unknown, unit?: string, key?: string): string {
 }
 
 function isPercentKey(key: string): boolean {
-  return /Pct|Rate(?!s)|Ratio|Pcnt/i.test(key);
+  return /Pct|Rate(?!s)|Ratio|Pcnt|^ltv$|^dti$|^dsr$|^userPct/i.test(key);
 }
 
 function isDateKey(key: string): boolean {
