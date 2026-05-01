@@ -318,6 +318,10 @@ function formatValue(v: unknown, unit?: string, key?: string): string {
       return `${display.toFixed(2)}%`;
     }
     if (unit === "년" || unit === "개월" || unit === "일") return `${v}${unit}`;
+    // 단위 없는 카운트 키 (year/koreanAge/westAge/months/days/totalDays/yearsToCollege 등)
+    if (key && /^year$|Age$|^months$|^days$|^totalDays$|yearsTo|^yearsEarly$|^yearsDed$|^remainingDays$|^benefitDays$|^totalDays$|^kids$|^dependents$|^tier$|^newLevel$/i.test(key)) {
+      return String(v);
+    }
     return krw(v);
   }
   if (typeof v === "string") return v;
@@ -326,6 +330,8 @@ function formatValue(v: unknown, unit?: string, key?: string): string {
 }
 
 function isPercentKey(key: string): boolean {
+  // 금액 키 (Rate가 들어있어도 금액)
+  if (/^baseRate$|^hourlyRate$|^monthlyRate$|^dailyRate$|^baseAmount$/i.test(key)) return false;
   return /Pct|Rate(?!s)|Ratio|Pcnt|^ltv$|^dti$|^dsr$|^userPct/i.test(key);
 }
 
