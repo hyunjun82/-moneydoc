@@ -297,6 +297,11 @@ const OUTPUT_LABELS: Record<string, string> = {
   year: "연도",
   support: "지원금",
   allowance: "수당",
+  dailyWage: "일급",
+  deduction: "공제액",
+  tax: "세금",
+  monthlyAvg: "월 평균",
+  annualConverted: "연 환산",
 };
 
 function outputLabel(key: string): string {

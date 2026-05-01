@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "verify": "node moneydoc-data/verify/verify-all.js"
+    "verify": "node moneydoc-data/verify/verify-all.js && node scripts/verify-engine-vs-cases.mjs && node scripts/verify-default-state.mjs"
   },
   "dependencies": {
     "next": "^15.5.15",
