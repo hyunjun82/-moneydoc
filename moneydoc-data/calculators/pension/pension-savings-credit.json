@@ -1,7 +1,7 @@
 {
   "id": "pension-savings-credit", "category": "pension", "subCategory": "retirement",
   "title": "연금저축 환급 계산기", "subtitle": "연 600만 한도 + 16.5%/13.2% 세액공제",
-  "slug": "pension-savings-credit", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "slug": "pension-savings-credit", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "국세청", "document": "소득세법 §59의3", "year": 2026 } },
   "constants": { "PENSION_LIMIT": 6000000, "RATE_LOW": 0.165, "RATE_HIGH": 0.132, "INCOME_THRESHOLD": 55000000 },
   "formula": [
@@ -14,7 +14,7 @@
     { "id": "totalSalary", "label": "총급여", "type": "currency", "min": 0, "default": 50000000 }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "소득세법 §59의3. 600만 한도 + 16.5%/13.2% 차등.",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "소득세법 §59의3. 600만 한도 + 16.5%/13.2% 차등.",
     "cases": [
       { "name": "Case 1 — 연 600만 / 5천만 (16.5%)", "input": { "annualDeposit": 6000000, "totalSalary": 50000000 }, "expected": { "applied": 6000000, "rate": 0.165, "taxCredit": 990000 } },
       { "name": "Case 2 — 연 400만 / 8천만 (13.2%)", "input": { "annualDeposit": 4000000, "totalSalary": 80000000 }, "expected": { "applied": 4000000, "rate": 0.132, "taxCredit": 528000 } },
@@ -23,6 +23,6 @@
       { "name": "Case 5 — 연 800만(한도) / 1억", "input": { "annualDeposit": 8000000, "totalSalary": 100000000 }, "expected": { "applied": 6000000, "rate": 0.132, "taxCredit": 792000 } }
     ]
   },
-  "guide": { "howToUse": "연 납입액과 총급여 입력 시 세액공제 환급 산출.", "tips": ["IRP와 합산 한도 700만 (연금저축 단독 600만).", "55세 이전 해지 시 16.5% 기타소득세."] },
+  "guide": { "howToUse": "연 납입액과 총급여 입력 시 세액공제 환급 산출.", "tips": ["IRP와 합산 한도 **900만 (2024 개편)** — 연금저축 단독 600만.", "55세 이전 해지 시 16.5% 기타소득세."] },
   "related": ["irp-tax-credit", "national-pension"]
 }

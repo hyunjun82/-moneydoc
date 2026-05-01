@@ -6,8 +6,8 @@
   "subtitle": "임대수익 + 자본이득 통합 ROI",
   "slug": "real-estate-roi",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "표준 부동산 산식", "document": "Total ROI 표준 산식", "year": 2026 } },
   "constants": {},
   "formula": [
@@ -23,7 +23,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "(임대 + 자본이득) / 투자금 × 100. 연환산 = 총 / 보유년.",
     "cases": [
       { "name": "Case 1 — 투자 3억 / 임대 6천 / 자본 2억 / 5년", "input": { "investedCapital": 300000000, "totalRentIncome": 60000000, "capitalGain": 200000000, "holdingYears": 5 }, "expected": { "totalReturn": 260000000, "totalROI": 86.67, "annualROI": 17.33 } },

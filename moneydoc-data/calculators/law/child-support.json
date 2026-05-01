@@ -7,8 +7,8 @@
   "subtitle": "서울가정법원 양육비산정기준표 2024 (자녀 1인 표준)",
   "slug": "child-support",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "서울가정법원",
@@ -51,7 +51,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "서울가정법원 양육비산정기준표 2024 직접 lookup. 자녀 1인 기준.",
     "cases": [
       { "name": "Case 1 — 합산 250만, 자녀 5세", "input": { "totalIncome": 2500000, "childAge": 5, "nonCustodianIncome": 1500000 }, "expected": { "ageGroup": "3-5", "standardSupport": 658000, "nonCustodianShare": 394800 } },
@@ -64,7 +64,7 @@
   "guide": {
     "howToUse": "부모 합산 월소득과 자녀 나이를 입력하면 표준 양육비가 산출되고, 비양육친 소득 비율로 분담액이 계산됩니다.",
     "tips": [
-      "자녀가 2명 이상이면 인원별 가산 (대법원 기준).",
+      "**자녀 1인 양육 시 표 금액 가산** — 본 표는 자녀 1인 기준이며, 2명 이상은 인원별 가산 (대법원 기준).",
       "특수 사정 (장애·고액 의료비·사교육비 등)으로 가감 가능.",
       "이행명령·강제집행으로 미지급 양육비 회수 가능."
     ]

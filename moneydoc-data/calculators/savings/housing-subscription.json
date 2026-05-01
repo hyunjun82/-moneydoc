@@ -6,8 +6,8 @@
   "subtitle": "청약통장 단리 적립 + 이자소득세 차감",
   "slug": "housing-subscription",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "국토교통부", "document": "주택공급에 관한 규칙", "year": 2026 } },
   "constants": { "INTEREST_TAX_RATE": 0.154 },
   "formula": [
@@ -23,7 +23,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "월적립 단리 + 이자소득세 15.4% (소득공제 X).",
     "cases": [
       { "name": "Case 1 — 월 10만 × 24개월 × 2.5%", "input": { "monthlyDeposit": 100000, "months": 24, "rate": 0.025 }, "expected": { "principal": 2400000, "interest": 62500, "tax": 9625, "maturity": 2452875 } },
@@ -33,6 +33,6 @@
       { "name": "Case 5 — 월 10만 × 60개월 × 2.5%", "input": { "monthlyDeposit": 100000, "months": 60, "rate": 0.025 }, "expected": { "principal": 6000000, "interest": 381250, "tax": 58713, "maturity": 6322537 } }
     ]
   },
-  "guide": { "howToUse": "청약통장 월 납입과 기간을 입력하면 단리 만기액 산출.", "tips": ["무주택 세대주: 연 240만 한도 40% 소득공제.", "1순위 자격: 가입 24개월 + 납입 24회."] },
+  "guide": { "howToUse": "청약통장 월 납입과 기간을 입력하면 단리 만기액 산출.", "tips": ["무주택 세대주: 연 300만 한도 40% 공제 (최대 120만 공제, 2024년 240만→300만 인상).", "1순위 자격: 가입 24개월 + 납입 24회."] },
   "related": ["installment-savings", "tax-free-savings"]
 }

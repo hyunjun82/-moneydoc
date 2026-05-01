@@ -1,29 +1,30 @@
 {
   "id": "birth-childcare-support", "category": "government", "subCategory": "family",
-  "title": "출산·육아 지원금 통합 계산기", "subtitle": "첫만남 200만 + 부모급여 + 아동수당 통합",
-  "slug": "birth-childcare-support", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "title": "출산·육아 지원금 통합 계산기", "subtitle": "첫만남(첫째 200만/둘째+ 300만) + 부모급여 + 아동수당",
+  "slug": "birth-childcare-support", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "보건복지부", "document": "출산·양육 지원 통합", "year": 2026 } },
-  "constants": { "FIRST_MEETING": 2000000 },
+  "constants": { "WELCOME_FIRST": 2000000, "WELCOME_SECOND_PLUS": 3000000 },
   "formula": [
-    { "step": 1, "name": "첫만남 이용권", "expr": "출생 시 200만 (1회)" },
+    { "step": 1, "name": "첫만남 이용권", "expr": "첫째 200만 / 둘째 이상 300만 (1회)" },
     { "step": 2, "name": "부모급여 0세", "expr": "월 100만 × 12개월" },
     { "step": 3, "name": "부모급여 1세", "expr": "월 50만 × 12개월" },
     { "step": 4, "name": "아동수당", "expr": "월 10만 (만 8세 미만)" },
-    { "step": 5, "name": "총 지원", "expr": "현재 자녀 나이별 합산" }
+    { "step": 5, "name": "총 지원", "expr": "출산순위 + 자녀 나이별 합산" }
   ],
   "inputs": [
-    { "id": "childAge", "label": "자녀 현재 나이", "type": "number", "min": 0, "max": 18, "default": 0 }
+    { "id": "childAge", "label": "자녀 현재 나이", "type": "number", "min": 0, "max": 18, "default": 0 },
+    { "id": "birthOrder", "label": "출산 순위", "type": "select", "options": ["first", "second_plus"], "default": "first" }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "보건복지부 2024년 출산·양육 지원금 합산.",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "보건복지부 2026년 출산·양육 지원금 합산. 첫만남 출산순위 분기.",
     "cases": [
-      { "name": "Case 1 — 0세", "input": { "childAge": 0 }, "expected": { "firstMeeting": 2000000, "parentalAllowance0": 12000000, "parentalAllowance1": 0, "childAllowance": 1200000, "total": 15200000 } },
-      { "name": "Case 2 — 1세", "input": { "childAge": 1 }, "expected": { "firstMeeting": 2000000, "parentalAllowance0": 0, "parentalAllowance1": 6000000, "childAllowance": 1200000, "total": 9200000 } },
-      { "name": "Case 3 — 3세", "input": { "childAge": 3 }, "expected": { "firstMeeting": 2000000, "parentalAllowance0": 0, "parentalAllowance1": 0, "childAllowance": 1200000, "total": 3200000 } },
-      { "name": "Case 4 — 7세", "input": { "childAge": 7 }, "expected": { "firstMeeting": 2000000, "parentalAllowance0": 0, "parentalAllowance1": 0, "childAllowance": 1200000, "total": 3200000 } },
-      { "name": "Case 5 — 10세", "input": { "childAge": 10 }, "expected": { "firstMeeting": 2000000, "parentalAllowance0": 0, "parentalAllowance1": 0, "childAllowance": 0, "total": 2000000 } }
+      { "name": "Case 1 — 0세 / 첫째", "input": { "childAge": 0, "birthOrder": "first" }, "expected": { "firstMeeting": 2000000, "parentalAllowance0": 12000000, "parentalAllowance1": 0, "childAllowance": 1200000, "total": 15200000 } },
+      { "name": "Case 2 — 0세 / 둘째 이상", "input": { "childAge": 0, "birthOrder": "second_plus" }, "expected": { "firstMeeting": 3000000, "parentalAllowance0": 12000000, "parentalAllowance1": 0, "childAllowance": 1200000, "total": 16200000 } },
+      { "name": "Case 3 — 1세 / 둘째 이상", "input": { "childAge": 1, "birthOrder": "second_plus" }, "expected": { "firstMeeting": 3000000, "parentalAllowance0": 0, "parentalAllowance1": 6000000, "childAllowance": 1200000, "total": 10200000 } },
+      { "name": "Case 4 — 7세 / 첫째", "input": { "childAge": 7, "birthOrder": "first" }, "expected": { "firstMeeting": 2000000, "parentalAllowance0": 0, "parentalAllowance1": 0, "childAllowance": 1200000, "total": 3200000 } },
+      { "name": "Case 5 — 10세 / 첫째 (아동수당 X)", "input": { "childAge": 10, "birthOrder": "first" }, "expected": { "firstMeeting": 2000000, "parentalAllowance0": 0, "parentalAllowance1": 0, "childAllowance": 0, "total": 2000000 } }
     ]
   },
-  "guide": { "howToUse": "자녀 현재 나이 입력 시 1년치 받을 수 있는 지원금 합산.", "tips": ["부모급여 0세 100만 / 1세 50만 (2024년).", "아동수당 만 8세 미만 월 10만.", "지자체별 추가 출산축하금 별도."] },
-  "related": ["child-allowance", "child-rearing-cost"]
+  "guide": { "howToUse": "자녀 현재 나이와 출산 순위 입력 시 1년치 받을 수 있는 지원금 합산.", "tips": ["첫만남 이용권: 첫째 200만 / 둘째 이상 300만.", "부모급여 0세 100만 / 1세 50만.", "아동수당 만 8세 미만 월 10만.", "지자체별 추가 출산축하금 별도."] },
+  "related": ["child-allowance"]
 }

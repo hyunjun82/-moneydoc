@@ -1,13 +1,13 @@
 {
   "id": "housing-subscription-score", "category": "realestate", "subCategory": "subscription",
   "title": "청약 가점 계산기", "subtitle": "무주택기간 + 부양가족 + 청약통장 가입기간 합산 (총 84점)",
-  "slug": "housing-subscription-score", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "slug": "housing-subscription-score", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "국토교통부", "document": "주택공급규칙 §28", "year": 2026 } },
   "constants": { "MAX_NO_HOME": 32, "MAX_FAMILY": 35, "MAX_ACCOUNT": 17 },
   "formula": [
     { "step": 1, "name": "무주택 점수", "expr": "min(32, 무주택연수 × 2)" },
     { "step": 2, "name": "부양가족 점수", "expr": "min(35, 5 + 부양가족 × 5)" },
-    { "step": 3, "name": "청약통장 점수", "expr": "min(17, 가입연수)" }
+    { "step": 3, "name": "청약통장 점수", "expr": "6개월 미만 1점 / 1년 미만 2점 / 1년+ 매년 +1점 (15년+ 17점). 산식: accountYears < 0.5 ? 1 : accountYears < 1 ? 2 : min(17, accountYears + 1)" }
   ],
   "inputs": [
     { "id": "noHomeYears", "label": "무주택 기간 (년)", "type": "number", "min": 0, "max": 20, "default": 5 },
@@ -15,15 +15,15 @@
     { "id": "accountYears", "label": "청약통장 가입기간 (년)", "type": "number", "min": 0, "max": 20, "default": 5 }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "주택공급규칙 §28 별표. 무주택 32 + 부양가족 35 + 통장 17 = 84.",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "주택공급규칙 §28 별표. 무주택 32 + 부양가족 35 + 통장 17 = 84. 통장 점수: 6개월 미만 1점 / 1년 미만 2점 / 1년+ 매년 +1점 (15년+ 17점 한도).",
     "cases": [
-      { "name": "Case 1 — 무주택 5년 / 부양 2 / 통장 5년", "input": { "noHomeYears": 5, "dependents": 2, "accountYears": 5 }, "expected": { "noHomeScore": 10, "familyScore": 15, "accountScore": 5, "total": 30 } },
-      { "name": "Case 2 — 무주택 15년 / 부양 4 / 통장 15년", "input": { "noHomeYears": 15, "dependents": 4, "accountYears": 15 }, "expected": { "noHomeScore": 30, "familyScore": 25, "accountScore": 15, "total": 70 } },
-      { "name": "Case 3 — 무주택 10년 / 부양 3 / 통장 10년", "input": { "noHomeYears": 10, "dependents": 3, "accountYears": 10 }, "expected": { "noHomeScore": 20, "familyScore": 20, "accountScore": 10, "total": 50 } },
-      { "name": "Case 4 — 무주택 0년 / 부양 0 / 통장 2년", "input": { "noHomeYears": 0, "dependents": 0, "accountYears": 2 }, "expected": { "noHomeScore": 0, "familyScore": 5, "accountScore": 2, "total": 7 } },
-      { "name": "Case 5 — 무주택 8년 / 부양 5 / 통장 12년", "input": { "noHomeYears": 8, "dependents": 5, "accountYears": 12 }, "expected": { "noHomeScore": 16, "familyScore": 30, "accountScore": 12, "total": 58 } }
+      { "name": "Case 1 — 무주택 5년 / 부양 2 / 통장 5년", "input": { "noHomeYears": 5, "dependents": 2, "accountYears": 5 }, "expected": { "noHomeScore": 10, "familyScore": 15, "accountScore": 6, "total": 31 } },
+      { "name": "Case 2 — 무주택 15년 / 부양 4 / 통장 15년", "input": { "noHomeYears": 15, "dependents": 4, "accountYears": 15 }, "expected": { "noHomeScore": 30, "familyScore": 25, "accountScore": 16, "total": 71 } },
+      { "name": "Case 3 — 무주택 10년 / 부양 3 / 통장 10년", "input": { "noHomeYears": 10, "dependents": 3, "accountYears": 10 }, "expected": { "noHomeScore": 20, "familyScore": 20, "accountScore": 11, "total": 51 } },
+      { "name": "Case 4 — 무주택 0년 / 부양 0 / 통장 2년", "input": { "noHomeYears": 0, "dependents": 0, "accountYears": 2 }, "expected": { "noHomeScore": 0, "familyScore": 5, "accountScore": 3, "total": 8 } },
+      { "name": "Case 5 — 무주택 8년 / 부양 5 / 통장 12년", "input": { "noHomeYears": 8, "dependents": 5, "accountYears": 12 }, "expected": { "noHomeScore": 16, "familyScore": 30, "accountScore": 13, "total": 59 } }
     ]
   },
-  "guide": { "howToUse": "무주택연수·부양가족수·청약통장 가입연수 입력 시 가점 산출.", "tips": ["서울·경기 인기단지 당첨 가점: 보통 60점+.", "무주택기간은 만 30세 이후 기산.", "부양가족 = 본인 제외 직계존비속."] },
+  "guide": { "howToUse": "무주택연수·부양가족수·청약통장 가입연수 입력 시 가점 산출.", "tips": ["서울·경기 인기단지 당첨 가점: 보통 60점+.", "무주택기간은 만 30세 이후 기산.", "부양가족 = 본인 제외 직계존비속.", "통장 가점: 6개월 미만 1점, 6개월~1년 2점, 1년부터 매년 +1점 (15년 이상 17점 한도)."] },
   "related": ["housing-subscription", "subscription-priority"]
 }

@@ -1,9 +1,9 @@
 {
   "id": "industrial-accident-pay", "category": "government", "subCategory": "labor",
   "title": "산재 휴업급여 계산기", "subtitle": "평균임금의 70% × 휴업 일수",
-  "slug": "industrial-accident-pay", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "slug": "industrial-accident-pay", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "근로복지공단", "document": "산업재해보상보험법 §52", "year": 2026 } },
-  "constants": { "BENEFIT_RATE": 0.70 },
+  "constants": { "BENEFIT_RATE": 0.70, "_NOTE": "단순 70% 모델. 저소득 90% 보장·최저보상기준은 별도 적용." },
   "formula": [
     { "step": 1, "name": "일평균임금", "expr": "월급 / 30" },
     { "step": 2, "name": "일 휴업급여", "expr": "round(일급 × 70%)" },
@@ -14,7 +14,7 @@
     { "id": "injuryDays", "label": "휴업 일수", "type": "number", "min": 1, "max": 730, "default": 90 }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "산재보험법 §52. 평균임금의 70% × 일수. 휴업 4일 이상 지급.",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "산재보험법 §52. 평균임금의 70% × 일수. 휴업 4일 이상 지급.",
     "cases": [
       { "name": "Case 1 — 월 300만 / 30일", "input": { "monthlySalary": 3000000, "injuryDays": 30 }, "expected": { "dailyAvgWage": 100000, "dailyBenefit": 70000, "totalBenefit": 2100000 } },
       { "name": "Case 2 — 월 400만 / 90일", "input": { "monthlySalary": 4000000, "injuryDays": 90 }, "expected": { "dailyAvgWage": 133333, "dailyBenefit": 93333, "totalBenefit": 8399970 } },
@@ -23,6 +23,6 @@
       { "name": "Case 5 — 월 600만 / 365일", "input": { "monthlySalary": 6000000, "injuryDays": 365 }, "expected": { "dailyAvgWage": 200000, "dailyBenefit": 140000, "totalBenefit": 51100000 } }
     ]
   },
-  "guide": { "howToUse": "월 평균임금과 휴업 일수 입력 시 산재 휴업급여 산출.", "tips": ["휴업 4일 이상 지급 (3일 이내 X).", "근로복지공단에 신청.", "장해등급별 별도 보상금."] },
+  "guide": { "howToUse": "월 평균임금과 휴업 일수 입력 시 산재 휴업급여 산출.", "tips": ["휴업 4일 이상 지급 (3일 이내 X).", "근로복지공단에 신청.", "장해등급별 별도 보상금.", "저소득 근로자 90% 보장 / 최저보상기준 적용 (별도 산식)."] },
   "related": ["unemployment-benefit", "severance-pay"]
 }

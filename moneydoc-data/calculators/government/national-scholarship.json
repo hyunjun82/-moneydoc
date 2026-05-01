@@ -1,13 +1,13 @@
 {
   "id": "national-scholarship", "category": "government", "subCategory": "education",
-  "title": "국가장학금 소득분위 계산기", "subtitle": "소득분위별 학기당 장학금 지원",
+  "title": "국가장학금 소득분위 계산기", "subtitle": "소득분위별 학기당 장학금 지원 (1~3분위 285만/학기)",
   "searchAliases": ["한국장학재단 소득인정액 모의계산", "국가장학금 계산기", "국가장학금 모의계산"],
-  "slug": "national-scholarship", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "slug": "national-scholarship", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "한국장학재단", "document": "국가장학금 운영 지침", "year": 2026 } },
   "constants": {},
-  "tables": { "tierSupport": { "1": 5200000, "2": 5200000, "3": 5200000, "4": 3900000, "5": 3680000, "6": 3680000, "7": 3500000, "8": 3500000, "9": 0, "10": 0 } },
+  "tables": { "tierSupport": { "1": 2850000, "2": 2850000, "3": 2850000, "4": 2100000, "5": 2100000, "6": 2100000, "7": 1750000, "8": 1750000, "9": 0, "10": 0 } },
   "formula": [
-    { "step": 1, "name": "분위별 한도", "expr": "1~3분위 520만 / 4분위 390만 / 5~6분위 368만 / 7~8분위 350만 / 9~10분위 X" },
+    { "step": 1, "name": "분위별 한도(학기당)", "expr": "1~3분위 285만 / 4~6분위 210만 / 7~8분위 175만 / 9~10분위 X" },
     { "step": 2, "name": "지원액", "expr": "min(분위 한도, 등록금)" }
   ],
   "inputs": [
@@ -15,13 +15,13 @@
     { "id": "semesterTuition", "label": "학기 등록금", "type": "currency", "min": 1000000, "default": 4500000 }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "한국장학재단 분위별 한도. 등록금이 한도보다 적으면 등록금 전액.",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "한국장학재단 2026 분위별 학기당 한도. 등록금이 한도보다 적으면 등록금 전액.",
     "cases": [
-      { "name": "Case 1 — 1분위 / 등록금 400만", "input": { "incomeTier": 1, "semesterTuition": 4000000 }, "expected": { "tier": 1, "support": 4000000 } },
-      { "name": "Case 2 — 4분위 / 등록금 500만", "input": { "incomeTier": 4, "semesterTuition": 5000000 }, "expected": { "tier": 4, "support": 3900000 } },
-      { "name": "Case 3 — 7분위 / 등록금 450만", "input": { "incomeTier": 7, "semesterTuition": 4500000 }, "expected": { "tier": 7, "support": 3500000 } },
+      { "name": "Case 1 — 1분위 / 등록금 400만", "input": { "incomeTier": 1, "semesterTuition": 4000000 }, "expected": { "tier": 1, "support": 2850000 } },
+      { "name": "Case 2 — 4분위 / 등록금 500만", "input": { "incomeTier": 4, "semesterTuition": 5000000 }, "expected": { "tier": 4, "support": 2100000 } },
+      { "name": "Case 3 — 7분위 / 등록금 450만", "input": { "incomeTier": 7, "semesterTuition": 4500000 }, "expected": { "tier": 7, "support": 1750000 } },
       { "name": "Case 4 — 9분위 (지원 X)", "input": { "incomeTier": 9, "semesterTuition": 5000000 }, "expected": { "tier": 9, "support": 0 } },
-      { "name": "Case 5 — 3분위 / 등록금 600만", "input": { "incomeTier": 3, "semesterTuition": 6000000 }, "expected": { "tier": 3, "support": 5200000 } }
+      { "name": "Case 5 — 3분위 / 등록금 600만", "input": { "incomeTier": 3, "semesterTuition": 6000000 }, "expected": { "tier": 3, "support": 2850000 } }
     ]
   },
   "guide": { "howToUse": "소득분위와 등록금 입력 시 학기당 지원액 산출.", "tips": ["국가장학금 신청 (한국장학재단 홈페이지).", "다자녀 가구 우대 (3자녀+).", "대학 자체 장학금과 중복 가능."] },

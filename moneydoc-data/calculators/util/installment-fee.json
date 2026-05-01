@@ -3,7 +3,7 @@
   "title": "신용카드 할부 수수료 계산기", "subtitle": "원리금균등 방식 월 결제액 + 총 수수료",
   "slug": "installment-fee",
   "searchAliases": ["할부 수수료 계산기", "카드 할부 계산기", "할부수수료계산"],
-  "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "여신금융협회", "document": "신용카드 할부 수수료 표준 산식", "year": 2026 } },
   "constants": {},
   "formula": [
@@ -17,7 +17,7 @@
     { "id": "annualRate", "label": "연 수수료율", "type": "number", "min": 0.05, "max": 0.20, "step": 0.001, "default": 0.13 }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "원리금균등 PMT 산식 (대출 동일).",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "원리금균등 PMT 산식 (대출 동일).",
     "cases": [
       { "name": "Case 1 — 100만 / 6개월 / 10%", "input": { "principal": 1000000, "months": 6, "annualRate": 0.10 }, "expected": { "monthlyPayment": 171561, "totalPayment": 1029368, "totalFee": 29368 } },
       { "name": "Case 2 — 300만 / 12개월 / 13%", "input": { "principal": 3000000, "months": 12, "annualRate": 0.13 }, "expected": { "monthlyPayment": 267952, "totalPayment": 3215422, "totalFee": 215422 } },

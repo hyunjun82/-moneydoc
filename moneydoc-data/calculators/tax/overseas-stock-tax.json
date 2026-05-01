@@ -1,13 +1,13 @@
 {
   "id": "overseas-stock-tax", "category": "tax", "subCategory": "investment",
   "title": "해외주식 양도세 계산기", "subtitle": "연 250만 공제 + 22% 분리과세",
-  "slug": "overseas-stock-tax", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "slug": "overseas-stock-tax", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "국세청", "document": "소득세법 §118의2 (해외주식 양도)", "year": 2026 } },
   "constants": { "BASIC_DEDUCTION": 2500000, "INCOME_TAX_RATE": 0.20, "LOCAL_TAX_RATE": 0.02 },
   "formula": [ { "step": 1, "name": "과세표준", "expr": "max(0, gain - 250만)" }, { "step": 2, "name": "총 세금", "expr": "과표 × 22%" } ],
   "inputs": [ { "id": "gain", "label": "양도차익 (연 합산)", "type": "currency", "min": 0, "default": 30000000 } ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "소득세법 §118의2. 비대주주도 22% (소득 20% + 지방 2%).",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "소득세법 §118의2. 비대주주도 22% (소득 20% + 지방 2%).",
     "cases": [
       { "name": "Case 1 — 차익 500만", "input": { "gain": 5000000 }, "expected": { "taxableBase": 2500000, "incomeTax": 500000, "localTax": 50000, "totalTax": 550000 } },
       { "name": "Case 2 — 차익 3천만", "input": { "gain": 30000000 }, "expected": { "taxableBase": 27500000, "incomeTax": 5500000, "localTax": 550000, "totalTax": 6050000 } },

@@ -6,8 +6,8 @@
   "subtitle": "재산세 + 종합부동산세 + 지방교육세",
   "slug": "holding-tax-total",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "국세청·행정안전부", "document": "지방세법 §111 + 종부세법 §8/§9", "year": 2026 } },
   "constants": { "FAIR_MARKET_RATIO": 0.60, "EDUCATION_TAX_RATE": 0.20, "ONE_HOME_DEDUCTION": 1200000000, "GENERAL_DEDUCTION": 900000000 },
   "formula": [
@@ -22,7 +22,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "재산세 (지방세법 §111) + 종부세 (종부세법 §8, §9) 통합. 도시지역분 미포함.",
     "cases": [
       { "name": "Case 1 — 1주택 공시가 15억", "input": { "publicValue": 1500000000, "isOneHome": true }, "expected": { "propertyTax": 2970000, "propertyEduTax": 594000, "compTax": 900000, "totalTax": 4464000 } },
@@ -32,6 +32,6 @@
       { "name": "Case 5 — 다주택 공시가 40억", "input": { "publicValue": 4000000000, "isOneHome": false }, "expected": { "propertyTax": 8970000, "propertyEduTax": 1794000, "compTax": 22800000, "totalTax": 33564000 } }
     ]
   },
-  "guide": { "howToUse": "공시가 합계와 1세대 1주택 여부 입력 시 재산세·종부세·교육세 통합 산출.", "tips": ["과세기준일 6월 1일 기준 보유자 기준.", "재산세 7월·9월 분납. 종부세 12월 납부."] },
+  "guide": { "howToUse": "공시가 합계와 1세대 1주택 여부 입력 시 재산세·종부세·교육세 통합 산출.", "tips": ["과세기준일 6월 1일 기준 보유자 기준.", "재산세 7월·9월 분납. 종부세 12월 납부.", "1주택 + 시가표준 9억 이하: 재산세 공정시장가액비율 43% + 특례세율(0.05~0.35%) 적용 가능 (별도 신청).", "도시지역분(과세표준 × 0.14%)은 본 계산기 미포함, 별도 부과."] },
   "related": ["property-tax", "comprehensive-real-estate-tax", "transfer-tax-1home"]
 }

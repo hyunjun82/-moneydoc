@@ -6,8 +6,8 @@
   "subtitle": "1인당 5천만 한도 비과세 적금",
   "slug": "tax-free-savings",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "국세청", "document": "조세특례제한법 §88-2", "year": 2026 } },
   "constants": {},
   "formula": [
@@ -22,7 +22,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "월적립 단리 + 비과세 (조특법 §88-2). 1인당 5천만 한도.",
     "cases": [
       { "name": "Case 1 — 월 30만 × 60개월 × 3.5%", "input": { "monthlyDeposit": 300000, "months": 60, "rate": 0.035 }, "expected": { "principal": 18000000, "interest": 1601250, "maturity": 19601250 } },
@@ -32,6 +32,6 @@
       { "name": "Case 5 — 월 200만 × 24개월 × 4.5%", "input": { "monthlyDeposit": 2000000, "months": 24, "rate": 0.045 }, "expected": { "principal": 48000000, "interest": 2250000, "maturity": 50250000 } }
     ]
   },
-  "guide": { "howToUse": "65세 이상·장애인·국가유공자 등 비과세종합저축 가입 자격자가 사용. 1인당 5천만 한도까지 이자소득세 0원.", "tips": ["일반 적금 대비 동일 이자에서 15.4% 추가 수령.", "5천만 한도는 모든 비과세종합저축 합산."] },
+  "guide": { "howToUse": "만 65세 이상, 장애인, 기초수급자, 독립유공자, 5·18 민주유공자, 고엽제후유의증환자, 상이등급 국가유공자 등 8개 자격자가 사용. 1인당 5천만 한도까지 이자소득세 0원.", "tips": ["일반 적금 대비 동일 이자에서 15.4% 추가 수령.", "5천만 한도는 모든 비과세종합저축 합산."] },
   "related": ["installment-savings", "fixed-deposit"]
 }

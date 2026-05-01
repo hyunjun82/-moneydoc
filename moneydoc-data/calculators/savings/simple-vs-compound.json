@@ -6,8 +6,8 @@
   "subtitle": "동일 원금·기간·이율에서 단리와 월복리의 만기 차이",
   "slug": "simple-vs-compound",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "한국은행",
@@ -29,7 +29,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "단리: P × r × t. 복리: P × (1 + r/12)^(12t). Math.pow 직접 적용.",
     "cases": [
       { "name": "Case 1 — 1천만 / 1년 / 4.0%", "input": { "principal": 10000000, "years": 1, "rate": 0.04 }, "expected": { "simpleInterest": 400000, "simpleMaturity": 10400000, "compoundInterest": 407415, "compoundMaturity": 10407415, "diff": 7415 } },

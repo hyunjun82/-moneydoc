@@ -7,8 +7,8 @@
   "slug": "fixed-deposit",
   "searchAliases": ["예금 계산기", "정기예금 계산기", "예금 이자 계산기", "예금 만기 계산기"],
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "한국은행",
@@ -30,7 +30,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "정기예금 단리 산식 직접 적용. 이자소득세 15.4% 차감.",
     "cases": [
       { "name": "Case 1 — 1천만 × 1년 × 3.5%", "input": { "principal": 10000000, "years": 1, "rate": 0.035 }, "expected": { "interest": 350000, "tax": 53900, "maturity": 10296100 } },

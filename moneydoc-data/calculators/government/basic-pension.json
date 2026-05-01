@@ -2,31 +2,31 @@
   "id": "basic-pension",
   "category": "government",
   "subCategory": "elderly",
-  "title": "기초연금 수령액 계산기",
+  "title": "기초연금 수령액 계산기 (2026)",
   "searchAliases": ["기초연금 모의계산", "기초연금 계산기", "기초연금 자격 모의계산"],
-  "subtitle": "65세 이상 소득인정액 기준 자격 + 최대수령",
+  "subtitle": "65세 이상 소득인정액 기준 — 단독 34.97만 / 부부 55.95만 / 선정 단독 247만 (2026)",
   "slug": "basic-pension",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "보건복지부",
-      "document": "기초연금법",
+      "document": "기초연금법 + 2026 기준연금액·선정기준액 고시",
       "year": 2026,
       "laws": ["기초연금법 제5조 (수급권자)", "기초연금법 제8조 (기준연금액)"]
     },
-    "note": "2026년 기준연금액·선정기준액은 매년 1월 발표. 본 계산기는 2025년 기준 (단독 33.4만, 부부 53.4만, 선정기준 단독 213만, 부부 340.8만)."
+    "note": "2026년 기준연금액 단독 349,700원 (단독×1.6 = 부부 559,520원), 선정기준액 단독 2,470,000원 / 부부 3,952,000원."
   },
   "constants": {
-    "MAX_SINGLE_2025": 334000,
-    "MAX_COUPLE_2025": 534000,
-    "INCOME_THRESHOLD_SINGLE": 2130000,
-    "INCOME_THRESHOLD_COUPLE": 3408000
+    "MAX_SINGLE_2026": 349700,
+    "MAX_COUPLE_2026": 559520,
+    "INCOME_THRESHOLD_SINGLE": 2470000,
+    "INCOME_THRESHOLD_COUPLE": 3952000
   },
   "formula": [
     { "step": 1, "name": "자격 판정", "expr": "소득인정액 ≤ 선정기준액" },
-    { "step": 2, "name": "수령액", "expr": "자격: 단독 334,000 또는 부부 534,000. 자격 X: 0" }
+    { "step": 2, "name": "수령액", "expr": "자격: 단독 349,700 또는 부부 559,520. 자격 X: 0" }
   ],
   "inputs": [
     { "id": "householdType", "label": "가구 유형", "type": "select", "options": ["single", "couple"], "default": "single" },
@@ -34,14 +34,14 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
-    "method": "기초연금법 §5, §8 적용. 감액(소득역전 방지)은 단순화로 미적용.",
+    "verifiedAt": "2026-05-01",
+    "method": "기초연금법 §5, §8 + 2026 보건복지부 고시 적용. 감액(소득역전 방지)은 단순화로 미적용.",
     "cases": [
-      { "name": "Case 1 — 단독, 소득 100만 (자격 O)", "input": { "householdType": "single", "incomeAmount": 1000000 }, "expected": { "isEligible": true, "monthlyPension": 334000 } },
-      { "name": "Case 2 — 단독, 소득 250만 (자격 X)", "input": { "householdType": "single", "incomeAmount": 2500000 }, "expected": { "isEligible": false, "monthlyPension": 0 } },
-      { "name": "Case 3 — 부부, 소득 200만 (자격 O)", "input": { "householdType": "couple", "incomeAmount": 2000000 }, "expected": { "isEligible": true, "monthlyPension": 534000 } },
-      { "name": "Case 4 — 단독, 소득 213만 (경계, 자격 O)", "input": { "householdType": "single", "incomeAmount": 2130000 }, "expected": { "isEligible": true, "monthlyPension": 334000 } },
-      { "name": "Case 5 — 부부, 소득 350만 (자격 X)", "input": { "householdType": "couple", "incomeAmount": 3500000 }, "expected": { "isEligible": false, "monthlyPension": 0 } }
+      { "name": "Case 1 — 단독, 소득 100만 (자격 O)", "input": { "householdType": "single", "incomeAmount": 1000000 }, "expected": { "isEligible": true, "monthlyPension": 349700 } },
+      { "name": "Case 2 — 단독, 소득 250만 (자격 X — 247만 초과)", "input": { "householdType": "single", "incomeAmount": 2500000 }, "expected": { "isEligible": false, "monthlyPension": 0 } },
+      { "name": "Case 3 — 부부, 소득 200만 (자격 O)", "input": { "householdType": "couple", "incomeAmount": 2000000 }, "expected": { "isEligible": true, "monthlyPension": 559520 } },
+      { "name": "Case 4 — 단독, 소득 247만 (경계, 자격 O)", "input": { "householdType": "single", "incomeAmount": 2470000 }, "expected": { "isEligible": true, "monthlyPension": 349700 } },
+      { "name": "Case 5 — 부부, 소득 400만 (자격 X — 395.2만 초과)", "input": { "householdType": "couple", "incomeAmount": 4000000 }, "expected": { "isEligible": false, "monthlyPension": 0 } }
     ]
   },
   "guide": {
@@ -49,7 +49,8 @@
     "tips": [
       "소득인정액 = 근로/사업/이자 등 소득평가액 + 재산 환산액.",
       "선정기준 초과 시 단계적 감액 (소득역전 방지) 적용 가능.",
-      "주민센터 또는 복지로(bokjiro.go.kr) 신청."
+      "주민센터 또는 복지로(bokjiro.go.kr) 신청.",
+      "2026년 기준연금액 33.4만→34.97만, 선정기준 단독 213만→247만 인상."
     ]
   },
   "related": ["national-pension", "comprehensive-real-estate-tax"]

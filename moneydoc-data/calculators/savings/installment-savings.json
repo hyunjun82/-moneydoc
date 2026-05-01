@@ -7,8 +7,8 @@
   "slug": "installment-savings",
   "searchAliases": ["적금 계산기", "적금 만기 계산기", "단리 적금 계산기"],
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "한국은행",
@@ -33,7 +33,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "월적립 단리 표준 산식 직접 적용. 이자소득세 15.4% (소득세 14% + 지방세 1.4%) 차감.",
     "cases": [
       { "name": "Case 1 — 월 30만 × 12개월 × 3.5%", "input": { "monthlyDeposit": 300000, "months": 12, "rate": 0.035 }, "expected": { "principal": 3600000, "interest": 68250, "tax": 10511, "maturity": 3657739 } },

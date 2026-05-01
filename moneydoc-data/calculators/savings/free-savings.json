@@ -6,8 +6,8 @@
   "subtitle": "자유 납입 적금 단리 만기 + 이자소득세",
   "slug": "free-savings",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "한국은행", "document": "자유적금 단리 산식", "year": 2026 } },
   "constants": { "INTEREST_TAX_RATE": 0.154 },
   "formula": [
@@ -23,7 +23,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "월적립 단리 (정기적금과 동일). 자유적금은 평균 납입 기준으로 환산.",
     "cases": [
       { "name": "Case 1 — 월 100만 × 24개월 × 3.5%", "input": { "monthlyDeposit": 1000000, "months": 24, "rate": 0.035 }, "expected": { "principal": 24000000, "interest": 875000, "tax": 134750, "maturity": 24740250 } },

@@ -3,12 +3,12 @@
   "category": "loan",
   "subCategory": "limit",
   "title": "LTV 한도 계산기",
-  "subtitle": "주택담보비율 기준 대출 한도",
+  "subtitle": "주택담보비율 + 절대 한도 (수도권 규제 6억) 통합",
   "slug": "ltv-limit",
   "searchAliases": ["LTV 계산기", "주담대 한도 계산기", "주택담보대출 한도"],
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "국토교통부·금융감독원",
@@ -16,48 +16,64 @@
       "year": 2026,
       "laws": ["은행업감독규정 §29의2"]
     },
-    "note": "LTV 비율은 정부 정책에 따라 수시 변경. 본 계산기는 2024년 5월 완화 후 정상화 가정 적용. 실제 적용 시점 비율은 금융기관 확인 필수."
+    "note": "2025년 가계대출 관리방안 반영. 수도권 규제지역·신규지정 지역에 LTV 차등 + 절대 한도(수도권 규제 6억, 25억 초과 추가 2억) 적용. 정부 정책에 따라 수시 변경되므로 금융기관 최종 확인 필수."
   },
-  "constants": {},
+  "constants": {
+    "METRO_REGULATED_CAP": 600000000,
+    "OVER_25EOK_EXTRA_CAP": 200000000,
+    "OVER_25EOK_THRESHOLD": 2500000000
+  },
   "tables": {
     "ltvRates": {
-      "description": "주택담보대출 LTV 비율 (2024 완화 기준)",
+      "description": "주택담보대출 LTV 비율 (2025년 가계대출 관리방안 반영)",
       "rules": [
-        { "category": "firstHome", "adjusted": false, "ltv": 0.80, "label": "생애최초 (지역무관)" },
-        { "category": "firstHome", "adjusted": true, "ltv": 0.80, "label": "생애최초 (지역무관)" },
-        { "category": "noHouse", "adjusted": false, "ltv": 0.70, "label": "무주택자 비조정" },
-        { "category": "noHouse", "adjusted": true, "ltv": 0.50, "label": "무주택자 조정대상" },
-        { "category": "oneHome", "adjusted": false, "ltv": 0.60, "label": "1주택자 비조정" },
-        { "category": "oneHome", "adjusted": true, "ltv": 0.50, "label": "1주택자 조정대상" },
-        { "category": "multiHouse", "adjusted": false, "ltv": 0.60, "label": "다주택자 비조정" },
-        { "category": "multiHouse", "adjusted": true, "ltv": 0, "label": "다주택자 조정대상 (불가)" }
+        { "category": "firstHome", "regionType": "일반", "ltv": 0.80, "label": "생애최초 비조정" },
+        { "category": "firstHome", "regionType": "수도권 규제지역", "ltv": 0.70, "label": "생애최초 수도권 규제" },
+        { "category": "firstHome", "regionType": "투기과열지구·신규지정", "ltv": 0.70, "label": "생애최초 투기과열·신규지정" },
+        { "category": "noHouse", "regionType": "일반", "ltv": 0.70, "label": "무주택자 비조정" },
+        { "category": "noHouse", "regionType": "수도권 규제지역", "ltv": 0.50, "label": "무주택자 수도권 규제" },
+        { "category": "noHouse", "regionType": "투기과열지구·신규지정", "ltv": 0.40, "label": "무주택자 투기과열·신규지정" },
+        { "category": "oneHome", "regionType": "일반", "ltv": 0.60, "label": "1주택자 비조정" },
+        { "category": "oneHome", "regionType": "수도권 규제지역", "ltv": 0.50, "label": "1주택자 수도권 규제" },
+        { "category": "oneHome", "regionType": "투기과열지구·신규지정", "ltv": 0.50, "label": "1주택자 투기과열·신규지정" },
+        { "category": "multiHouse", "regionType": "일반", "ltv": 0.60, "label": "다주택자 비조정" },
+        { "category": "multiHouse", "regionType": "수도권 규제지역", "ltv": 0, "label": "다주택자 수도권 규제 (불가)" },
+        { "category": "multiHouse", "regionType": "투기과열지구·신규지정", "ltv": 0, "label": "다주택자 투기과열·신규지정 (불가)" }
       ]
     }
   },
   "formula": [
-    { "step": 1, "name": "LTV 비율", "expr": "주택수·지역·생애최초에 따라 lookup" },
-    { "step": 2, "name": "한도", "expr": "round(주택가격 × LTV비율)" }
+    { "step": 1, "name": "LTV 비율", "expr": "주택수·지역(regionType)·생애최초에 따라 lookup" },
+    { "step": 2, "name": "LTV 한도", "expr": "round(주택가격 × LTV비율)" },
+    { "step": 3, "name": "절대 한도 cap", "expr": "수도권 규제지역: 6억. 단 25억 초과 시 6억 + 추가 2억 = 8억." },
+    { "step": 4, "name": "최종 한도", "expr": "min(LTV한도, 절대 한도)" }
   ],
   "inputs": [
     { "id": "housePrice", "label": "주택가격", "type": "currency", "min": 50000000, "default": 500000000 },
     { "id": "category", "label": "주택보유 상태", "type": "select", "options": ["firstHome", "noHouse", "oneHome", "multiHouse"], "default": "noHouse" },
-    { "id": "adjusted", "label": "조정대상지역 여부", "type": "boolean", "default": false }
+    { "id": "regionType", "label": "지역 구분", "type": "select", "options": ["일반", "수도권 규제지역", "투기과열지구·신규지정"], "default": "일반" }
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
-    "method": "주택수·지역별 LTV 표 lookup, 한도 = 가격 × LTV.",
+    "verifiedAt": "2026-05-01",
+    "method": "주택수·지역별 LTV 표 lookup + 절대 한도 cap 적용. 최종 한도 = min(가격×LTV, 절대 한도). 수도권 규제 6억 cap, 25억 초과 시 6억+2억=8억.",
     "cases": [
-      { "name": "Case 1 — 5억 무주택자 비조정 (70%)", "input": { "housePrice": 500000000, "category": "noHouse", "adjusted": false }, "expected": { "ltv": 0.70, "maxLoan": 350000000 } },
-      { "name": "Case 2 — 5억 무주택자 조정대상 (50%)", "input": { "housePrice": 500000000, "category": "noHouse", "adjusted": true }, "expected": { "ltv": 0.50, "maxLoan": 250000000 } },
-      { "name": "Case 3 — 8억 1주택자 비조정 (60%)", "input": { "housePrice": 800000000, "category": "oneHome", "adjusted": false }, "expected": { "ltv": 0.60, "maxLoan": 480000000 } },
-      { "name": "Case 4 — 5억 생애최초 (80%)", "input": { "housePrice": 500000000, "category": "firstHome", "adjusted": false }, "expected": { "ltv": 0.80, "maxLoan": 400000000 } },
-      { "name": "Case 5 — 10억 다주택 조정대상 (불가)", "input": { "housePrice": 1000000000, "category": "multiHouse", "adjusted": true }, "expected": { "ltv": 0, "maxLoan": 0 } }
+      { "name": "Case 1 — 5억 무주택자 일반 (70%)", "input": { "housePrice": 500000000, "category": "noHouse", "regionType": "일반" }, "expected": { "ltv": 0.70, "ltvLimit": 350000000, "absoluteCap": null, "maxLoan": 350000000 } },
+      { "name": "Case 2 — 5억 무주택자 수도권 규제 (50%, cap 6억)", "input": { "housePrice": 500000000, "category": "noHouse", "regionType": "수도권 규제지역" }, "expected": { "ltv": 0.50, "ltvLimit": 250000000, "absoluteCap": 600000000, "maxLoan": 250000000 } },
+      { "name": "Case 3 — 15억 1주택자 수도권 규제 (50%, cap 6억 적용)", "input": { "housePrice": 1500000000, "category": "oneHome", "regionType": "수도권 규제지역" }, "expected": { "ltv": 0.50, "ltvLimit": 750000000, "absoluteCap": 600000000, "maxLoan": 600000000 } },
+      { "name": "Case 4 — 5억 생애최초 일반 (80%)", "input": { "housePrice": 500000000, "category": "firstHome", "regionType": "일반" }, "expected": { "ltv": 0.80, "ltvLimit": 400000000, "absoluteCap": null, "maxLoan": 400000000 } },
+      { "name": "Case 5 — 10억 다주택 수도권 규제 (불가)", "input": { "housePrice": 1000000000, "category": "multiHouse", "regionType": "수도권 규제지역" }, "expected": { "ltv": 0, "ltvLimit": 0, "absoluteCap": 600000000, "maxLoan": 0 } },
+      { "name": "Case 6 — 30억 1주택자 수도권 규제 (50%, 25억 초과 cap 8억)", "input": { "housePrice": 3000000000, "category": "oneHome", "regionType": "수도권 규제지역" }, "expected": { "ltv": 0.50, "ltvLimit": 1500000000, "absoluteCap": 800000000, "maxLoan": 800000000 } }
     ]
   },
   "guide": {
-    "howToUse": "주택가격, 보유 상태, 조정대상지역 여부를 선택하면 LTV 비율과 최대 대출 한도가 산출됩니다.",
-    "tips": ["생애최초는 모든 지역 LTV 80% 적용 (한도 6억).", "DSR 한도와 함께 적용되어 두 한도 중 낮은 금액이 실제 한도."]
+    "howToUse": "주택가격, 보유 상태, 지역 구분을 선택하면 LTV 비율과 최대 대출 한도(절대 한도 cap 포함)가 산출됩니다.",
+    "tips": [
+      "수도권 규제지역: 절대 한도 6억 cap 적용. 25억 초과 시 6억+추가 2억=8억.",
+      "투기과열지구·신규지정: 무주택 LTV 40% 등 가장 엄격.",
+      "DSR 한도와 함께 적용되어 두 한도 중 낮은 금액이 실제 한도.",
+      "정부 정책 수시 변경 — 금융기관 직접 확인 필수."
+    ]
   },
   "related": ["dsr-limit", "loan-amortization", "mortgage-loan-limit"]
 }

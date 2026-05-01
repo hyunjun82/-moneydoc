@@ -3,12 +3,12 @@
   "category": "savings",
   "subCategory": "youth",
   "title": "청년도약계좌 만기 시뮬레이터",
-  "subtitle": "5년 적립 + 정부 기여금 + 비과세 이자",
+  "subtitle": "5년 적립 + 정부 기여금 (2025.1 한도 상향) + 비과세 이자",
   "slug": "youth-leap-account",
   "searchAliases": ["청년도약계좌 계산기", "청년도약계좌 만기수령액"],
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "서민금융진흥원",
@@ -18,20 +18,21 @@
         "조세특례제한법 §91-22 (청년도약계좌 비과세)"
       ]
     },
-    "note": "정부 기여금 비율 및 한도는 2024년 기준. 이자는 시중은행 평균 적용 (변동 가능)."
+    "note": "2024년 → 2025.1 개정 기준 정부 기여금 매칭 한도 상향 반영. 7,500만 초과 가입 불가, 6,000만 초과 7,500만 이하는 비과세만 적용. 이자는 시중은행 평균 적용 (변동 가능)."
   },
   "constants": {
     "MONTHS": 60
   },
   "tables": {
     "governmentMatching": {
-      "description": "총급여 구간별 정부 기여금 (서민금융진흥원 고시)",
+      "description": "총급여 구간별 정부 기여금 (서민금융진흥원 고시, 2025.1 한도 상향)",
       "brackets": [
-        { "incomeUpper": 24000000, "rate": 0.060, "limit": 24000 },
-        { "incomeUpper": 36000000, "rate": 0.046, "limit": 23000 },
-        { "incomeUpper": 48000000, "rate": 0.037, "limit": 22200 },
+        { "incomeUpper": 24000000, "rate": 0.060, "limit": 33000 },
+        { "incomeUpper": 36000000, "rate": 0.046, "limit": 26000 },
+        { "incomeUpper": 48000000, "rate": 0.037, "limit": 25000 },
         { "incomeUpper": 60000000, "rate": 0.030, "limit": 21000 },
-        { "incomeUpper": null, "rate": 0, "limit": 0 }
+        { "incomeUpper": 75000000, "rate": 0,     "limit": 0, "taxFreeOnly": true },
+        { "incomeUpper": null,     "rate": 0,     "limit": 0 }
       ]
     }
   },
@@ -49,13 +50,13 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
-    "method": "서민금융진흥원 정부기여금 산식 + 월적립 단리 비과세 이자 산식 직접 적용",
+    "verifiedAt": "2026-05-01",
+    "method": "서민금융진흥원 정부기여금 산식(2025.1 한도 상향) + 월적립 단리 비과세 이자 산식 직접 적용",
     "cases": [
       {
-        "name": "Case 1 — 월 70만, 총급여 2,400만 이하 (6.0%, 한도 24,000), 이율 3.8%",
+        "name": "Case 1 — 월 70만, 총급여 2,400만 이하 (6.0%, 한도 33,000), 이율 3.8%",
         "input": { "monthlyDeposit": 700000, "annualIncome": 24000000, "interestRate": 0.038 },
-        "expected": { "monthlyMatching": 24000, "ownTotal": 42000000, "matchingTotal": 1440000, "interest": 4195580, "maturity": 47635580 }
+        "expected": { "monthlyMatching": 33000, "ownTotal": 42000000, "matchingTotal": 1980000, "interest": 4247735, "maturity": 48227735 }
       },
       {
         "name": "Case 2 — 월 50만, 총급여 5천만 (3.0%, 한도 21,000), 이율 3.8%",
@@ -63,29 +64,30 @@
         "expected": { "monthlyMatching": 15000, "ownTotal": 30000000, "matchingTotal": 900000, "interest": 2984425, "maturity": 33884425 }
       },
       {
-        "name": "Case 3 — 월 70만, 총급여 7천만 (구간 외, 이자만), 이율 3.8%",
+        "name": "Case 3 — 월 70만, 총급여 7천만 (구간 외, 이자만 비과세), 이율 3.8%",
         "input": { "monthlyDeposit": 700000, "annualIncome": 70000000, "interestRate": 0.038 },
         "expected": { "monthlyMatching": 0, "ownTotal": 42000000, "matchingTotal": 0, "interest": 4056500, "maturity": 46056500 }
       },
       {
-        "name": "Case 4 — 월 30만, 총급여 3천만 (4.6%, 한도 23,000), 이율 4.0%",
+        "name": "Case 4 — 월 30만, 총급여 3천만 (4.6%, 한도 26,000), 이율 4.0%",
         "input": { "monthlyDeposit": 300000, "annualIncome": 30000000, "interestRate": 0.040 },
         "expected": { "monthlyMatching": 13800, "ownTotal": 18000000, "matchingTotal": 828000, "interest": 1914180, "maturity": 20742180 }
       },
       {
-        "name": "Case 5 — 월 70만, 총급여 4천만 (3.7%, 한도 22,200), 이율 5.0%",
+        "name": "Case 5 — 월 70만, 총급여 4천만 (3.7%, 한도 25,000), 이율 5.0%",
         "input": { "monthlyDeposit": 700000, "annualIncome": 40000000, "interestRate": 0.050 },
-        "expected": { "monthlyMatching": 22200, "ownTotal": 42000000, "matchingTotal": 1332000, "interest": 5506775, "maturity": 48838775 }
+        "expected": { "monthlyMatching": 25000, "ownTotal": 42000000, "matchingTotal": 1500000, "interest": 5528125, "maturity": 49028125 }
       }
     ]
   },
   "guide": {
     "howToUse": "월 납입금(10만~70만), 총급여(정부 기여금 결정), 은행 적용 이자율을 입력하면 5년 만기 수령액이 산출됩니다. 본인 납입 + 정부 기여금 + 이자(비과세)가 합산되어 표시됩니다.",
     "tips": [
-      "총급여 6,000만원 초과 시 정부 기여금 X (이자만 비과세 혜택).",
+      "6천만 초과~7,500만 이하: 매칭 X, 비과세만. 7,500만 초과: 가입 불가.",
+      "2025.1 매칭 한도 상향: 2,400만 이하 24,000→33,000, 3,600만 이하 23,000→26,000, 4,800만 이하 22,200→25,000원.",
       "중도해지 시 정부 기여금 회수 + 이자 비과세 X (소득세 부과).",
       "만 19~34세 청년 + 가구소득 중위 250% 이하만 가입 가능."
     ]
   },
-  "related": ["youth-hope-deposit", "isa-tax-saving"]
+  "related": ["isa-tax-saving"]
 }

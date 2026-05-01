@@ -1,7 +1,7 @@
 {
   "id": "unemployment-benefit-days", "category": "government", "subCategory": "labor",
   "title": "실업급여 수급기간 계산기", "subtitle": "가입연수 + 50세 이상/장애인 가산일 적용",
-  "slug": "unemployment-benefit-days", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "slug": "unemployment-benefit-days", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "고용노동부", "document": "고용보험법 제50조", "year": 2026 } },
   "constants": {},
   "formula": [
@@ -13,7 +13,7 @@
     { "id": "isElderlyOrDisabled", "label": "50세+ 또는 장애인", "type": "boolean", "default": false }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "고용보험법 §50. 표 lookup.",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "고용보험법 §50. 표 lookup.",
     "cases": [
       { "name": "Case 1 — 0.5년 / 일반", "input": { "insuredYears": 0.5, "isElderlyOrDisabled": false }, "expected": { "days": 120 } },
       { "name": "Case 2 — 2년 / 일반", "input": { "insuredYears": 2, "isElderlyOrDisabled": false }, "expected": { "days": 150 } },

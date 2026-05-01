@@ -1,26 +1,26 @@
 {
   "id": "divorce-alimony", "category": "law", "subCategory": "family",
-  "title": "이혼 위자료 시뮬레이터", "subtitle": "[참고용 추정] 판례 통계 기반 — 실제 위자료는 법원 재량",
-  "slug": "divorce-alimony", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "title": "이혼 위자료 시뮬레이터", "subtitle": "**[참고용 추정]** 판례 통계 기반 — 실제 위자료는 법원 재량",
+  "slug": "divorce-alimony", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "대법원·서울가정법원", "document": "위자료 판례 통계 평균치", "year": 2026 } },
   "constants": {},
   "formula": [
-    { "step": 1, "name": "기본 위자료", "expr": "결혼기간별 (5년 미만 1천만 / 5~10년 2천만 / 10~20년 3,500만 / 20+ 6천만)" },
+    { "step": 1, "name": "기본 위자료 (보수 조정)", "expr": "결혼기간별 (5년 미만 1천만 / 5~10년 2천만 / 10~20년 2천만 / 20+ 3,333만)" },
     { "step": 2, "name": "유책 보정", "expr": "high 1.5배 / medium 1.0 / low 0.5배" },
-    { "step": 3, "name": "추정 위자료", "expr": "기본 × 보정" }
+    { "step": 3, "name": "추정 위자료", "expr": "기본 × 보정 (참고용)" }
   ],
   "inputs": [
     { "id": "marriageYears", "label": "결혼기간 (년)", "type": "number", "min": 0, "max": 60, "default": 10 },
     { "id": "faultDegree", "label": "상대방 유책 정도", "type": "select", "options": ["low", "medium", "high"], "default": "medium" }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "판례 통계 평균치 기반 추정. 실제 위자료는 법원 재량 (자녀·재산·유책 정도 등).",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "판례 통계 평균치 기반 추정. 실제 위자료는 법원 재량 (자녀·재산·유책 정도 등).",
     "cases": [
-      { "name": "Case 1 — 결혼 3년 / 중도 (medium 1천만)", "input": { "marriageYears": 3, "faultDegree": "medium" }, "expected": { "baseAmount": 10000000, "faultMultiplier": 1, "estimatedAmount": 10000000 } },
+      { "name": "Case 1 — 결혼 3년 / medium (1천만)", "input": { "marriageYears": 3, "faultDegree": "medium" }, "expected": { "baseAmount": 10000000, "faultMultiplier": 1, "estimatedAmount": 10000000 } },
       { "name": "Case 2 — 결혼 8년 / high (3천만)", "input": { "marriageYears": 8, "faultDegree": "high" }, "expected": { "baseAmount": 20000000, "faultMultiplier": 1.5, "estimatedAmount": 30000000 } },
-      { "name": "Case 3 — 결혼 15년 / medium (3,500만)", "input": { "marriageYears": 15, "faultDegree": "medium" }, "expected": { "baseAmount": 35000000, "faultMultiplier": 1, "estimatedAmount": 35000000 } },
-      { "name": "Case 4 — 결혼 25년 / high (9천만)", "input": { "marriageYears": 25, "faultDegree": "high" }, "expected": { "baseAmount": 60000000, "faultMultiplier": 1.5, "estimatedAmount": 90000000 } },
-      { "name": "Case 5 — 결혼 12년 / low (1,750만)", "input": { "marriageYears": 12, "faultDegree": "low" }, "expected": { "baseAmount": 35000000, "faultMultiplier": 0.5, "estimatedAmount": 17500000 } }
+      { "name": "Case 3 — 결혼 15년 / medium (2천만)", "input": { "marriageYears": 15, "faultDegree": "medium" }, "expected": { "baseAmount": 20000000, "faultMultiplier": 1, "estimatedAmount": 20000000 } },
+      { "name": "Case 4 — 결혼 25년 / high (5천만, 보수 조정)", "input": { "marriageYears": 25, "faultDegree": "high" }, "expected": { "baseAmount": 33333333, "faultMultiplier": 1.5, "estimatedAmount": 50000000 } },
+      { "name": "Case 5 — 결혼 12년 / low (1천만)", "input": { "marriageYears": 12, "faultDegree": "low" }, "expected": { "baseAmount": 20000000, "faultMultiplier": 0.5, "estimatedAmount": 10000000 } }
     ]
   },
   "guide": { "howToUse": "결혼기간과 유책 정도(low/medium/high) 입력 시 위자료 추정.", "tips": ["실제 위자료는 자녀 양육·재산분할과 별도 계산.", "유책 입증 (외도·폭력 등) 증거 중요.", "위자료 청구권 소멸시효: 이혼 후 3년."] },

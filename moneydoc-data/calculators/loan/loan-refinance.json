@@ -6,8 +6,8 @@
   "subtitle": "기존 대출 vs 신규 대출 월 상환·총 상환 비교",
   "slug": "loan-refinance",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "금융감독원", "document": "대환대출 표준 산식", "year": 2026 } },
   "constants": {},
   "formula": [
@@ -24,7 +24,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "양쪽 모두 원리금균등 PMT로 산출 후 차액 비교. 중도상환수수료는 별도 계산기.",
     "cases": [
       { "name": "Case 1 — 1억 잔액, 5%→4%, 25년", "input": { "balance": 100000000, "oldRate": 0.05, "newRate": 0.04, "remainingYears": 25 }, "expected": { "oldMonthly": 584590, "newMonthly": 527837, "monthlySaving": 56753, "oldTotal": 175377012, "newTotal": 158351052, "totalSaving": 17025960 } },

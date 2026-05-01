@@ -6,8 +6,8 @@
   "subtitle": "다주택·단기 양도까지 일반세율 적용",
   "slug": "transfer-tax-multi",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "국세청",
@@ -58,7 +58,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "소득세법 §95, §104 적용. 단기·일반·LBC 자동 분기.",
     "cases": [
       {

@@ -3,37 +3,40 @@
   "category": "loan",
   "subCategory": "limit",
   "title": "DTI 한도 계산기",
-  "subtitle": "총부채상환비율 기준 신규 주담대 한도",
+  "subtitle": "총부채상환비율 + 스트레스 DSR 옵션",
   "slug": "dti-limit",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
-  "source": { "primary": { "agency": "금융감독원", "document": "주담대 DTI 가이드라인", "year": 2026 } },
-  "constants": {},
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
+  "source": { "primary": { "agency": "금융감독원", "document": "주담대 DTI 가이드라인 + 스트레스 DSR (2024.9.1~)", "year": 2026 } },
+  "constants": { "STRESS_DSR_METRO": 0.015, "STRESS_DSR_NONMETRO": 0.0075 },
   "formula": [
-    { "step": 1, "name": "월 가용 원리금", "expr": "(연소득 × DTI한도)/12 - 기존대출 월이자" },
-    { "step": 2, "name": "원리금균등 환산계수", "expr": "((1+r)^n - 1) / (r × (1+r)^n)" },
-    { "step": 3, "name": "최대 신규 원금", "expr": "월가용 × factor" }
+    { "step": 1, "name": "스트레스 가산금리", "expr": "stressDSR=수도권: +1.5%p, 비수도권: +0.75%p, 미적용: 0" },
+    { "step": 2, "name": "적용 금리", "expr": "loanRate + 스트레스 가산" },
+    { "step": 3, "name": "월 가용 원리금", "expr": "(연소득 × DTI한도)/12 - 기존대출 월이자" },
+    { "step": 4, "name": "원리금균등 환산계수", "expr": "((1+r)^n - 1) / (r × (1+r)^n)" },
+    { "step": 5, "name": "최대 신규 원금", "expr": "월가용 × factor" }
   ],
   "inputs": [
     { "id": "annualIncome", "label": "연소득", "type": "currency", "min": 10000000, "default": 50000000 },
     { "id": "monthlyOtherDebtInterest", "label": "기존 대출 월 이자", "type": "currency", "min": 0, "default": 0 },
     { "id": "loanYears", "label": "신규대출 만기 (년)", "type": "number", "min": 1, "max": 40, "default": 30 },
     { "id": "loanRate", "label": "신규대출 금리", "type": "number", "min": 0.005, "max": 0.15, "step": 0.001, "default": 0.04 },
-    { "id": "dtiLimit", "label": "DTI 한도", "type": "number", "min": 0.30, "max": 0.60, "step": 0.05, "default": 0.40 }
+    { "id": "dtiLimit", "label": "DTI 한도", "type": "number", "min": 0.30, "max": 0.60, "step": 0.05, "default": 0.40 },
+    { "id": "stressDSR", "label": "스트레스 DSR 적용", "type": "select", "options": ["미적용", "수도권 1.5%p", "비수도권 0.75%p"], "default": "미적용" }
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
-    "method": "DTI = 신규 주담대 원리금 + 기타 대출 이자 / 연소득. 원리금균등 PMT 역산.",
+    "verifiedAt": "2026-05-01",
+    "method": "DTI = 신규 주담대 원리금 + 기타 대출 이자 / 연소득. 원리금균등 PMT 역산. 스트레스 DSR은 입력 금리에 가산금리 추가.",
     "cases": [
-      { "name": "Case 1 — 연 5천만, 기존 0, 30년, 4%, DTI 40%", "input": { "annualIncome": 50000000, "monthlyOtherDebtInterest": 0, "loanYears": 30, "loanRate": 0.04, "dtiLimit": 0.40 }, "expected": { "monthlyAvail": 1666667, "maxLoan": 349102137 } },
-      { "name": "Case 2 — 연 7천만, 기존 10만 이자, 30년, 4.5%, DTI 40%", "input": { "annualIncome": 70000000, "monthlyOtherDebtInterest": 100000, "loanYears": 30, "loanRate": 0.045, "dtiLimit": 0.40 }, "expected": { "monthlyAvail": 2233333, "maxLoan": 440773189 } },
-      { "name": "Case 3 — 연 1억, 기존 20만, 20년, 5%, DTI 50%", "input": { "annualIncome": 100000000, "monthlyOtherDebtInterest": 200000, "loanYears": 20, "loanRate": 0.05, "dtiLimit": 0.50 }, "expected": { "monthlyAvail": 3966667, "maxLoan": 601050459 } },
-      { "name": "Case 4 — 연 4천만, 기존 0, 20년, 4%, DTI 40%", "input": { "annualIncome": 40000000, "monthlyOtherDebtInterest": 0, "loanYears": 20, "loanRate": 0.04, "dtiLimit": 0.40 }, "expected": { "monthlyAvail": 1333333, "maxLoan": 220029089 } },
-      { "name": "Case 5 — 연 1.5억, 기존 50만, 30년, 4%, DTI 40%", "input": { "annualIncome": 150000000, "monthlyOtherDebtInterest": 500000, "loanYears": 30, "loanRate": 0.04, "dtiLimit": 0.40 }, "expected": { "monthlyAvail": 4500000, "maxLoan": 942575582 } }
+      { "name": "Case 1 — 연 5천만, 기존 0, 30년, 4%, DTI 40%, 스트레스 미적용", "input": { "annualIncome": 50000000, "monthlyOtherDebtInterest": 0, "loanYears": 30, "loanRate": 0.04, "dtiLimit": 0.40, "stressDSR": "미적용" }, "expected": { "appliedRate": 0.04, "monthlyAvail": 1666667, "maxLoan": 349102137 } },
+      { "name": "Case 2 — 연 7천만, 기존 10만 이자, 30년, 4.5%, DTI 40%, 스트레스 미적용", "input": { "annualIncome": 70000000, "monthlyOtherDebtInterest": 100000, "loanYears": 30, "loanRate": 0.045, "dtiLimit": 0.40, "stressDSR": "미적용" }, "expected": { "appliedRate": 0.045, "monthlyAvail": 2233333, "maxLoan": 440773189 } },
+      { "name": "Case 3 — 연 1억, 기존 20만, 20년, 5%, DTI 50%, 스트레스 미적용", "input": { "annualIncome": 100000000, "monthlyOtherDebtInterest": 200000, "loanYears": 20, "loanRate": 0.05, "dtiLimit": 0.50, "stressDSR": "미적용" }, "expected": { "appliedRate": 0.05, "monthlyAvail": 3966667, "maxLoan": 601050459 } },
+      { "name": "Case 4 — 연 4천만, 기존 0, 20년, 4%, DTI 40%, 스트레스 미적용", "input": { "annualIncome": 40000000, "monthlyOtherDebtInterest": 0, "loanYears": 20, "loanRate": 0.04, "dtiLimit": 0.40, "stressDSR": "미적용" }, "expected": { "appliedRate": 0.04, "monthlyAvail": 1333333, "maxLoan": 220029089 } },
+      { "name": "Case 5 — 연 1.5억, 기존 50만, 30년, 4%, DTI 40%, 스트레스 미적용", "input": { "annualIncome": 150000000, "monthlyOtherDebtInterest": 500000, "loanYears": 30, "loanRate": 0.04, "dtiLimit": 0.40, "stressDSR": "미적용" }, "expected": { "appliedRate": 0.04, "monthlyAvail": 4500000, "maxLoan": 942575582 } }
     ]
   },
-  "guide": { "howToUse": "연소득과 기존 대출 월이자를 입력하면 신규 주담대 한도 산출.", "tips": ["DSR과 함께 적용, 둘 중 더 작은 한도 적용.", "DTI 40% 일반 / 60%까지 가능."] },
+  "guide": { "howToUse": "연소득과 기존 대출 월이자를 입력하면 신규 주담대 한도 산출. 스트레스 DSR 적용 시 입력 금리에 가산금리 자동 추가.", "tips": ["DSR과 함께 적용, 둘 중 더 작은 한도 적용.", "DTI 40% 일반 / 60%까지 가능.", "스트레스 DSR(2024.9.1~): 수도권 +1.5%p / 비수도권 +0.75%p 가산금리 기준."] },
   "related": ["dsr-limit", "ltv-limit", "loan-amortization"]
 }

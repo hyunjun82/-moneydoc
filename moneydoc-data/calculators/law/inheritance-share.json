@@ -1,7 +1,7 @@
 {
   "id": "inheritance-share", "category": "law", "subCategory": "estate",
   "title": "법정상속분 계산기", "subtitle": "민법 §1009 배우자·자녀·부모 비율 분배",
-  "slug": "inheritance-share", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "slug": "inheritance-share", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "대법원", "document": "민법 §1009 (법정상속분)", "year": 2026 } },
   "constants": {},
   "formula": [
@@ -17,7 +17,7 @@
     { "id": "siblings", "label": "형제자매 수", "type": "stepper", "min": 0, "max": 10, "default": 0 }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "민법 §1009. 자녀 1, 배우자 1.5, 부모 1 배율 비례 분배.",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "민법 §1009. 자녀 1, 배우자 1.5, 부모 1 배율 비례 분배.",
     "cases": [
       { "name": "Case 1 — 10억 / 배우자 + 자녀 2", "input": { "totalEstate": 1000000000, "hasSpouse": true, "children": 2, "parents": 0, "siblings": 0 }, "expected": { "spouse": 428571429, "child": 285714286, "parent": 0, "sibling": 0 } },
       { "name": "Case 2 — 5억 / 배우자 + 부모 2 (자녀 X)", "input": { "totalEstate": 500000000, "hasSpouse": true, "children": 0, "parents": 2, "siblings": 0 }, "expected": { "spouse": 214285714, "child": 0, "parent": 142857143, "sibling": 0 } },

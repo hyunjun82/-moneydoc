@@ -3,16 +3,16 @@
   "category": "tax",
   "subCategory": "income",
   "title": "일용직 원천징수 계산기",
-  "subtitle": "일급 15만 비과세 + 초과분 6% × 45% 공제 후",
+  "subtitle": "일급 15만 비과세 + 초과분 6% × (1-55%) = 6% × 45% = 2.7% 적용",
   "slug": "daily-wage-tax",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "국세청", "document": "소득세법 §134, 시행령 §189", "year": 2026 } },
-  "constants": { "EXEMPT_AMOUNT": 150000, "TAX_RATE": 0.06, "CREDIT_RATE": 0.55, "LOCAL_TAX_RATE": 0.10 },
+  "constants": { "EXEMPT_AMOUNT": 150000, "TAX_RATE": 0.06, "CREDIT_RATE": 0.55, "EFFECTIVE_TAX_RATE": 0.027, "LOCAL_TAX_RATE": 0.10 },
   "formula": [
     { "step": 1, "name": "과세 일급", "expr": "max(0, 일급 - 150,000)" },
-    { "step": 2, "name": "일용근로 소득세", "expr": "과세일급 × 6% × 55% (45% 세액공제 후)" },
+    { "step": 2, "name": "일용근로 소득세", "expr": "과세일급 × 6% × (1 - 0.55) = 과세일급 × 2.7%" },
     { "step": 3, "name": "지방소득세", "expr": "소득세 × 10%" },
     { "step": 4, "name": "세후 일급", "expr": "일급 - 소득세 - 지방세" }
   ],
@@ -22,16 +22,16 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
-    "method": "소득세법 §134 일용근로자 원천징수. 일 15만 비과세 + 초과분 6% × 45% 공제.",
+    "verifiedAt": "2026-05-01",
+    "method": "소득세법 §134 일용근로자 원천징수. 일 15만 비과세 + 초과분 6% 산출세액에서 55% 세액공제 후 부담분(45%)만 원천징수. 즉 (일급-15만) × 6% × 45% = (일급-15만) × 2.7%.",
     "cases": [
       { "name": "Case 1 — 일급 15만 (비과세 한도)", "input": { "dailyWage": 150000, "days": 20 }, "expected": { "dailyTax": 0, "dailyLocalTax": 0, "totalDailyDeduct": 0, "netDailyWage": 150000, "totalNet": 3000000 } },
-      { "name": "Case 2 — 일급 20만", "input": { "dailyWage": 200000, "days": 22 }, "expected": { "dailyTax": 1650, "dailyLocalTax": 165, "totalDailyDeduct": 1815, "netDailyWage": 198185, "totalNet": 4360070 } },
-      { "name": "Case 3 — 일급 30만", "input": { "dailyWage": 300000, "days": 15 }, "expected": { "dailyTax": 4950, "dailyLocalTax": 495, "totalDailyDeduct": 5445, "netDailyWage": 294555, "totalNet": 4418325 } },
-      { "name": "Case 4 — 일급 25만", "input": { "dailyWage": 250000, "days": 25 }, "expected": { "dailyTax": 3300, "dailyLocalTax": 330, "totalDailyDeduct": 3630, "netDailyWage": 246370, "totalNet": 6159250 } },
-      { "name": "Case 5 — 일급 50만", "input": { "dailyWage": 500000, "days": 10 }, "expected": { "dailyTax": 11550, "dailyLocalTax": 1155, "totalDailyDeduct": 12705, "netDailyWage": 487295, "totalNet": 4872950 } }
+      { "name": "Case 2 — 일급 20만", "input": { "dailyWage": 200000, "days": 22 }, "expected": { "dailyTax": 1350, "dailyLocalTax": 135, "totalDailyDeduct": 1485, "netDailyWage": 198515, "totalNet": 4367330 } },
+      { "name": "Case 3 — 일급 30만", "input": { "dailyWage": 300000, "days": 15 }, "expected": { "dailyTax": 4050, "dailyLocalTax": 405, "totalDailyDeduct": 4455, "netDailyWage": 295545, "totalNet": 4433175 } },
+      { "name": "Case 4 — 일급 25만", "input": { "dailyWage": 250000, "days": 25 }, "expected": { "dailyTax": 2700, "dailyLocalTax": 270, "totalDailyDeduct": 2970, "netDailyWage": 247030, "totalNet": 6175750 } },
+      { "name": "Case 5 — 일급 50만", "input": { "dailyWage": 500000, "days": 10 }, "expected": { "dailyTax": 9450, "dailyLocalTax": 945, "totalDailyDeduct": 10395, "netDailyWage": 489605, "totalNet": 4896050 } }
     ]
   },
-  "guide": { "howToUse": "일급과 근무일수 입력 시 일용직 원천징수액과 세후 수령액 산출.", "tips": ["일 15만원까지 비과세 (1일 기준).", "일용근로자는 종합소득세 신고 X (분리과세).", "동일 사업장 3개월 이상이면 일반 근로자로 전환."] },
+  "guide": { "howToUse": "일급과 근무일수 입력 시 일용직 원천징수액과 세후 수령액 산출.", "tips": ["일 15만원까지 비과세 (1일 기준).", "일용근로자는 종합소득세 신고 X (분리과세).", "동일 사업장 3개월 이상이면 일반 근로자로 전환.", "산식: (일급-15만) × 6% × 45% (55% 세액공제 후 부담분).", "1,000원 미만은 소액부징수로 면제 가능."] },
   "related": ["salary-net-pay", "freelancer-tax"]
 }

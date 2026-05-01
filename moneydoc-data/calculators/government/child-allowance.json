@@ -1,7 +1,7 @@
 {
   "id": "child-allowance", "category": "government", "subCategory": "tax-credit",
   "title": "자녀장려금 자격·예상액 계산기", "subtitle": "총소득 7천만 이하 + 자녀 1인당 최대 100만",
-  "slug": "child-allowance", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "slug": "child-allowance", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "국세청", "document": "조세특례제한법 §100의6", "year": 2026 } },
   "constants": { "INCOME_LIMIT": 70000000, "MAX_PER_CHILD": 1000000 },
   "formula": [
@@ -13,7 +13,7 @@
     { "id": "childrenUnder18", "label": "18세 미만 자녀 수", "type": "stepper", "min": 0, "max": 10, "default": 2 }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "조특법 §100의6. 점감 산식 단순화 적용.",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "조특법 §100의6. 점감 산식 단순화 적용.",
     "cases": [
       { "name": "Case 1 — 3천만 / 자녀 2", "input": { "totalIncome": 30000000, "childrenUnder18": 2 }, "expected": { "isEligible": true, "estimatedAmount": 1142857 } },
       { "name": "Case 2 — 5천만 / 자녀 1", "input": { "totalIncome": 50000000, "childrenUnder18": 1 }, "expected": { "isEligible": true, "estimatedAmount": 285714 } },
@@ -22,6 +22,6 @@
       { "name": "Case 5 — 2천만 / 자녀 4", "input": { "totalIncome": 20000000, "childrenUnder18": 4 }, "expected": { "isEligible": true, "estimatedAmount": 2857143 } }
     ]
   },
-  "guide": { "howToUse": "총소득과 18세 미만 자녀 수 입력 시 자녀장려금 자격 + 예상액 산출.", "tips": ["근로장려금과 중복 가능.", "5월 정기신청.", "자녀 1인당 최대 100만원."] },
+  "guide": { "howToUse": "총소득과 18세 미만 자녀 수 입력 시 자녀장려금 자격 + 예상액 산출.", "tips": ["근로장려금과 중복 가능.", "5월 정기신청.", "자녀 1인당 최대 100만원.", "재산 한도 2.4억 이하 (가구 합산)."] },
   "related": ["earned-income-tax-credit", "child-tax-credit"]
 }

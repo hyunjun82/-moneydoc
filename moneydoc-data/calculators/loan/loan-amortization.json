@@ -7,8 +7,8 @@
   "slug": "loan-amortization",
   "searchAliases": ["대출 계산기", "주담대 계산기", "원리금균등 계산기", "주택담보대출 계산기"],
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "금융감독원",
@@ -32,7 +32,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "원리금균등 PMT 표준 산식 직접 적용. Math.pow로 (1+r)^n 정확 산출.",
     "cases": [
       { "name": "Case 1 — 1억 / 30년 / 4.0%", "input": { "principal": 100000000, "years": 30, "rate": 0.04 }, "expected": { "monthly": 477415, "totalPayment": 171869506, "totalInterest": 71869506 } },

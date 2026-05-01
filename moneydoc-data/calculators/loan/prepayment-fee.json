@@ -6,9 +6,9 @@
   "subtitle": "잔액 × 수수료율 × (잔여기간 / 총기간)",
   "slug": "prepayment-fee",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
-  "source": { "primary": { "agency": "금융감독원", "document": "은행업감독규정", "year": 2026 } },
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
+  "source": { "primary": { "agency": "금융감독원", "document": "은행업감독규정 (2025.1.13 인하 시행)", "year": 2026 } },
   "constants": {},
   "formula": [
     { "step": 1, "name": "수수료", "expr": "round(잔액 × 수수료율 × (잔여기간/총기간))" }
@@ -17,20 +17,20 @@
     { "id": "remainingBalance", "label": "대출 잔액", "type": "currency", "min": 1000000, "default": 100000000 },
     { "id": "totalMonths", "label": "총 약정 만기 (월)", "type": "number", "min": 12, "max": 480, "default": 360 },
     { "id": "remainingMonths", "label": "잔여 만기 (월)", "type": "number", "min": 0, "max": 480, "default": 24 },
-    { "id": "rate", "label": "수수료율", "type": "number", "min": 0, "max": 0.02, "step": 0.001, "default": 0.014 }
+    { "id": "rate", "label": "수수료율", "type": "number", "min": 0, "max": 0.015, "step": 0.001, "default": 0.007 }
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
-    "method": "잔액 × 수수료율 × (잔여/총). 일반 1.2~1.4%, 3년 후 면제 대부분.",
+    "verifiedAt": "2026-05-01",
+    "method": "잔액 × 수수료율 × (잔여/총). 0.6~1.2% (시중은행 평균 0.7%, 2025.1.13 인하). 3년 후 면제 대부분.",
     "cases": [
-      { "name": "Case 1 — 1억 잔액 / 360월 / 24월 잔여 / 1.4%", "input": { "remainingBalance": 100000000, "totalMonths": 360, "remainingMonths": 24, "rate": 0.014 }, "expected": { "fee": 93333 } },
+      { "name": "Case 1 — 1억 잔액 / 360월 / 24월 잔여 / 0.7% (시중평균)", "input": { "remainingBalance": 100000000, "totalMonths": 360, "remainingMonths": 24, "rate": 0.007 }, "expected": { "fee": 46667 } },
       { "name": "Case 2 — 2억 잔액 / 240월 / 12월 잔여 / 1.2%", "input": { "remainingBalance": 200000000, "totalMonths": 240, "remainingMonths": 12, "rate": 0.012 }, "expected": { "fee": 120000 } },
       { "name": "Case 3 — 5천만 잔액 / 120월 / 36월 잔여 / 1.2%", "input": { "remainingBalance": 50000000, "totalMonths": 120, "remainingMonths": 36, "rate": 0.012 }, "expected": { "fee": 180000 } },
-      { "name": "Case 4 — 3억 잔액 / 360월 / 6월 잔여 / 1.4%", "input": { "remainingBalance": 300000000, "totalMonths": 360, "remainingMonths": 6, "rate": 0.014 }, "expected": { "fee": 70000 } },
+      { "name": "Case 4 — 3억 잔액 / 360월 / 6월 잔여 / 0.7% (시중평균)", "input": { "remainingBalance": 300000000, "totalMonths": 360, "remainingMonths": 6, "rate": 0.007 }, "expected": { "fee": 35000 } },
       { "name": "Case 5 — 8천만 잔액 / 240월 / 48월 잔여 / 1.2%", "input": { "remainingBalance": 80000000, "totalMonths": 240, "remainingMonths": 48, "rate": 0.012 }, "expected": { "fee": 192000 } }
     ]
   },
-  "guide": { "howToUse": "잔액·총만기·잔여만기·수수료율 입력 시 중도상환수수료 산출.", "tips": ["대출 후 3년 이내 상환 시 일반 1.2~1.4% 부과.", "3년 경과 시 대부분 면제.", "신용대출은 보통 면제 또는 0.5%."] },
+  "guide": { "howToUse": "잔액·총만기·잔여만기·수수료율 입력 시 중도상환수수료 산출.", "tips": ["대출 후 3년 이내 상환 시 0.6~1.2% (시중은행 평균 0.7%, 2025.1.13 인하).", "3년 경과 시 대부분 면제.", "신용대출은 보통 면제 또는 0.5%."] },
   "related": ["loan-amortization", "loan-refinance"]
 }

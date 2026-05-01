@@ -6,8 +6,8 @@
   "subtitle": "매출 부가세 - 매입 부가세 = 납부세액",
   "slug": "vat-general",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "국세청", "document": "부가가치세법 §30, §38", "year": 2026 } },
   "constants": {},
   "formula": [
@@ -20,7 +20,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "부가세법 §30 (납부세액 = 매출 - 매입). 음수면 환급.",
     "cases": [
       { "name": "Case 1 — 매출 100만 / 매입 30만", "input": { "saleVat": 1000000, "purchaseVat": 300000 }, "expected": { "payable": 700000 } },

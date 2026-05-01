@@ -6,8 +6,8 @@
   "subtitle": "매매가·보증금·월세·연간 비용 기반 총수익률·순수익률",
   "slug": "rental-yield",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "표준 부동산 산식",
@@ -31,7 +31,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "표준 임대수익률 산식 직접 적용. 투자금 = 매매가 - 보증금, Gross/Net 비교.",
     "cases": [
       { "name": "Case 1 — 매매 3억 / 보증 5천 / 월세 100만 / 비용 120만", "input": { "purchasePrice": 300000000, "deposit": 50000000, "monthlyRent": 1000000, "annualExpense": 1200000 }, "expected": { "investedCapital": 250000000, "annualRentIncome": 12000000, "netAnnualIncome": 10800000, "grossYieldPct": 4.8, "netYieldPct": 4.32 } },

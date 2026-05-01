@@ -6,8 +6,8 @@
   "subtitle": "매월 이자만 + 만기 원금 일시상환",
   "slug": "balloon-payment",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "금융감독원", "document": "주택담보대출 상환 표준방식", "year": 2026 } },
   "constants": {},
   "formula": [
@@ -22,7 +22,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "월 이자 = 원금 × 금리/12. 총이자 = 월이자 × 만기월수. 만기에 원금 일시 상환.",
     "cases": [
       { "name": "Case 1 — 1억 / 1년 / 4%", "input": { "principal": 100000000, "years": 1, "rate": 0.04 }, "expected": { "monthlyInterest": 333333, "totalInterest": 3999996, "totalPayment": 103999996 } },

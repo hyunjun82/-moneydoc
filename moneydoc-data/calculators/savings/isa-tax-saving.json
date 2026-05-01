@@ -6,8 +6,8 @@
   "subtitle": "200만 비과세 + 초과분 9.9% 분리과세 절감액",
   "slug": "isa-tax-saving",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "국세청", "document": "조세특례제한법 §91-18", "year": 2026 } },
   "constants": { "ISA_EXEMPT_LIMIT": 2000000, "ISA_RATE": 0.099, "GENERAL_RATE": 0.154 },
   "formula": [
@@ -20,7 +20,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "조특법 §91-18 적용. 200만 비과세 + 초과 9.9% 분리과세.",
     "cases": [
       { "name": "Case 1 — 이자 100만 (한도 내)", "input": { "totalInterest": 1000000 }, "expected": { "generalTax": 154000, "isaTax": 0, "savings": 154000 } },

@@ -7,8 +7,8 @@
   "subtitle": "결정세액 vs 매월 떼인 세액 → 환급/추가납부",
   "slug": "year-end-tax-refund",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "국세청", "document": "소득세법 §137 (연말정산)", "year": 2026 } },
   "constants": { "PERSONAL_DEDUCTION": 1500000 },
   "formula": [

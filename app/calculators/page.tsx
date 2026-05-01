@@ -4,8 +4,8 @@ import { Footer } from "@/components/Footer";
 import { CALCULATORS_INDEX, CATEGORIES, type CategorySlug } from "@/lib/calculators-index";
 
 export const metadata: Metadata = {
-  title: "전체 계산기 목록 — 102종",
-  description: "한국 금융·세금·부동산·연금·법률·정부지원금 계산기 102종 전체 목록. 카테고리별 정리.",
+  title: "전체 계산기 목록 — 91종",
+  description: "한국 금융·세금·부동산·연금·법률·정부지원금 계산기 91종 전체 목록. 정부 공식 산식 기반. 카테고리별 정리.",
   alternates: { canonical: "/calculators/" },
 };
 
@@ -29,7 +29,6 @@ export default function Page() {
     "law",
     "government",
     "insurance",
-    "simulator",
     "util",
   ];
 

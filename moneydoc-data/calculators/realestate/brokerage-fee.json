@@ -7,8 +7,8 @@
   "slug": "brokerage-fee",
   "searchAliases": ["부동산 중개수수료 계산기", "복비 계산기", "중개보수 계산기"],
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "국토교통부",
@@ -64,7 +64,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "공인중개사법 시행규칙 §20 별표 1 표준 한도 직접 적용",
     "cases": [
       {
@@ -101,5 +101,5 @@
       { "q": "월세 중개수수료는 어떻게 계산되나요?", "a": "환산보증금 = 보증금 + (월세 × 100)으로 계산합니다. 환산금액이 5천만 미만이면 월세 × 70으로 환산합니다." }
     ]
   },
-  "related": ["acquisition-tax", "transfer-tax-1home", "registration-fee"]
+  "related": ["acquisition-tax", "transfer-tax-1home"]
 }

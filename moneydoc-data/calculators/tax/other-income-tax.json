@@ -1,23 +1,24 @@
 {
   "id": "other-income-tax", "category": "tax", "subCategory": "income",
   "title": "기타소득세 계산기", "subtitle": "필요경비 60% 차감 후 22% 분리과세",
-  "slug": "other-income-tax", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "slug": "other-income-tax", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "국세청", "document": "소득세법 §21 (기타소득)", "year": 2026 } },
   "constants": { "EXPENSE_RATE": 0.60, "INCOME_TAX_RATE": 0.20, "LOCAL_TAX_RATE": 0.02 },
   "formula": [
     { "step": 1, "name": "필요경비", "expr": "총수입 × 60%" },
     { "step": 2, "name": "기타소득금액", "expr": "총수입 - 필요경비" },
-    { "step": 3, "name": "원천징수", "expr": "소득금액 × 22% (소득 20% + 지방 2%)" }
+    { "step": 3, "name": "과세최저한 분기", "expr": "소득금액 ≤ 50,000 (총수입 ≤ 125,000) 이면 비과세 (소득세법 §84)" },
+    { "step": 4, "name": "원천징수", "expr": "소득금액 × 22% (소득 20% + 지방 2%)" }
   ],
   "inputs": [ { "id": "revenue", "label": "기타소득 총수입", "type": "currency", "min": 0, "default": 1000000 } ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "소득세법 §21. 강연료·인세·일시 사업 등 기타소득. 60% 경비 + 22%.",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "소득세법 §21. 강연료·인세·일시 사업 등 기타소득. 60% 경비 + 22%.",
     "cases": [
       { "name": "Case 1 — 50만", "input": { "revenue": 500000 }, "expected": { "expense": 300000, "incomeAmount": 200000, "incomeTax": 40000, "localTax": 4000, "totalTax": 44000 } },
       { "name": "Case 2 — 100만", "input": { "revenue": 1000000 }, "expected": { "expense": 600000, "incomeAmount": 400000, "incomeTax": 80000, "localTax": 8000, "totalTax": 88000 } },
       { "name": "Case 3 — 300만", "input": { "revenue": 3000000 }, "expected": { "expense": 1800000, "incomeAmount": 1200000, "incomeTax": 240000, "localTax": 24000, "totalTax": 264000 } },
       { "name": "Case 4 — 500만", "input": { "revenue": 5000000 }, "expected": { "expense": 3000000, "incomeAmount": 2000000, "incomeTax": 400000, "localTax": 40000, "totalTax": 440000 } },
-      { "name": "Case 5 — 10만", "input": { "revenue": 100000 }, "expected": { "expense": 60000, "incomeAmount": 40000, "incomeTax": 8000, "localTax": 800, "totalTax": 8800 } }
+      { "name": "Case 5 — 10만 (과세최저한 적용 비과세)", "input": { "revenue": 100000 }, "expected": { "expense": 60000, "incomeAmount": 40000, "incomeTax": 0, "localTax": 0, "totalTax": 0 } }
     ]
   },
   "guide": { "howToUse": "강연료·원고료·일시 사업 등 기타소득 입력 시 22% 원천징수 산출.", "tips": ["연 300만 이하: 분리과세 (별도 신고 X).", "300만 초과: 종합과세 합산.", "복권당첨금: 별도 산식 (3억 이하 22%, 초과 33%)."] },

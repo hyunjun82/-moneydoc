@@ -3,7 +3,7 @@
   "title": "현금서비스 수수료 계산기", "subtitle": "이용금액 × 연이율 / 365 × 사용일수 (단리)",
   "slug": "cash-service-fee",
   "searchAliases": ["현금서비스 수수료", "단기카드대출 수수료", "현금서비스 이자 계산"],
-  "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "여신금융협회", "document": "단기카드대출(현금서비스) 표준 산식", "year": 2026 } },
   "constants": {},
   "formula": [
@@ -16,7 +16,7 @@
     { "id": "days", "label": "사용일수", "type": "number", "min": 1, "max": 365, "default": 30 }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "단리 일할 계산: 금액 × (연이율 / 365) × 사용일수.",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "단리 일할 계산: 금액 × (연이율 / 365) × 사용일수.",
     "cases": [
       { "name": "Case 1 — 50만 / 30일 / 18%", "input": { "amount": 500000, "annualRate": 0.18, "days": 30 }, "expected": { "interest": 7397, "totalRepayment": 507397 } },
       { "name": "Case 2 — 100만 / 60일 / 20%", "input": { "amount": 1000000, "annualRate": 0.20, "days": 60 }, "expected": { "interest": 32877, "totalRepayment": 1032877 } },

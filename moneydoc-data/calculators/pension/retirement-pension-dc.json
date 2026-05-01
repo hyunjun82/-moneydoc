@@ -1,7 +1,7 @@
 {
   "id": "retirement-pension-dc", "category": "pension", "subCategory": "retirement",
   "title": "퇴직연금 DC형 시뮬레이터", "subtitle": "연봉 1/12 회사 부담 + 운용수익 누적",
-  "slug": "retirement-pension-dc", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "slug": "retirement-pension-dc", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "고용노동부", "document": "근로자퇴직급여보장법 (DC형)", "year": 2026 } },
   "constants": {},
   "formula": [
@@ -14,7 +14,7 @@
     { "id": "returnRate", "label": "연 운용수익률", "type": "number", "min": 0.01, "max": 0.15, "step": 0.01, "default": 0.04 }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "DC형: 매년 연봉/12 부담 + 운용수익 (1+r) 복리.",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "DC형: 매년 연봉/12 부담 + 운용수익 (1+r) 복리.",
     "cases": [
       { "name": "Case 1 — 연 5천만 / 10년 / 4%", "input": { "annualSalary": 50000000, "years": 10, "returnRate": 0.04 }, "expected": { "annualContribution": 4166667, "totalContribution": 41666670, "expectedBalance": 52026468 } },
       { "name": "Case 2 — 연 7천만 / 20년 / 4%", "input": { "annualSalary": 70000000, "years": 20, "returnRate": 0.04 }, "expected": { "annualContribution": 5833333, "totalContribution": 116666660, "expectedBalance": 180653666 } },

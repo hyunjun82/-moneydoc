@@ -3,76 +3,83 @@
   "category": "loan",
   "subCategory": "limit",
   "title": "DSR 한도 계산기",
-  "subtitle": "총부채원리금상환비율 기준 신규대출 한도",
+  "subtitle": "총부채원리금상환비율 + 스트레스 DSR 옵션",
   "slug": "dsr-limit",
   "searchAliases": ["DSR 계산기", "DSR 한도 계산기", "총부채원리금상환비율 계산기"],
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "금융감독원",
-      "document": "가계대출 관리방안 / DSR 산정기준",
+      "document": "가계대출 관리방안 / DSR 산정기준 / 스트레스 DSR (2024.9.1 시행, 2026 현재 2단계)",
       "year": 2026,
       "laws": [
         "은행업감독규정 §29의2 (가계대출 DSR 한도)",
-        "여신전문금융업감독규정 (제2금융권 50%)"
+        "여신전문금융업감독규정 (제2금융권 50%)",
+        "스트레스 DSR 가이드 (2024.9.1 시행, 수도권 1.5%p / 비수도권 0.75%p 가산)"
       ]
     }
   },
   "constants": {
     "DSR_LIMIT_BANK": 0.40,
-    "DSR_LIMIT_NONBANK": 0.50
+    "DSR_LIMIT_NONBANK": 0.50,
+    "STRESS_DSR_METRO": 0.015,
+    "STRESS_DSR_NONMETRO": 0.0075
   },
   "formula": [
-    { "step": 1, "name": "월 가용 원리금", "expr": "(annualIncome × dsrLimit) / 12 - monthlyExistingDebt" },
-    { "step": 2, "name": "월 금리", "expr": "loanRate / 12" },
-    { "step": 3, "name": "만기 월수", "expr": "loanYears × 12" },
-    { "step": 4, "name": "원리금균등 환산계수", "expr": "factor = ((1+r)^n - 1) / (r × (1+r)^n)" },
-    { "step": 5, "name": "최대 신규대출 원금", "expr": "monthlyAvailable × factor" }
+    { "step": 1, "name": "스트레스 가산금리", "expr": "stressDSR=수도권: +1.5%p, 비수도권: +0.75%p, 미적용: 0" },
+    { "step": 2, "name": "적용 금리", "expr": "loanRate + 스트레스 가산" },
+    { "step": 3, "name": "월 가용 원리금", "expr": "(annualIncome × dsrLimit) / 12 - monthlyExistingDebt" },
+    { "step": 4, "name": "월 금리", "expr": "적용금리 / 12" },
+    { "step": 5, "name": "만기 월수", "expr": "loanYears × 12" },
+    { "step": 6, "name": "원리금균등 환산계수", "expr": "factor = ((1+r)^n - 1) / (r × (1+r)^n)" },
+    { "step": 7, "name": "최대 신규대출 원금", "expr": "monthlyAvailable × factor" }
   ],
   "inputs": [
     { "id": "annualIncome", "label": "연소득", "type": "currency", "min": 10000000, "default": 50000000 },
     { "id": "monthlyExistingDebt", "label": "기존 월 원리금", "type": "currency", "min": 0, "default": 0, "hint": "신용대출·주담대 등 모든 기존 대출의 월 상환액 합계" },
     { "id": "loanYears", "label": "신규대출 만기 (년)", "type": "number", "min": 1, "max": 40, "default": 30 },
     { "id": "loanRate", "label": "신규대출 금리 (연)", "type": "number", "min": 0.005, "max": 0.20, "step": 0.001, "default": 0.04 },
-    { "id": "dsrLimit", "label": "DSR 한도", "type": "number", "min": 0.30, "max": 0.50, "step": 0.05, "default": 0.40 }
+    { "id": "dsrLimit", "label": "DSR 한도", "type": "number", "min": 0.30, "max": 0.50, "step": 0.05, "default": 0.40 },
+    { "id": "stressDSR", "label": "스트레스 DSR 적용", "type": "select", "options": ["미적용", "수도권 1.5%p", "비수도권 0.75%p"], "default": "미적용" }
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
-    "method": "원리금균등상환 PMT 역산식 직접 적용. (1+r)^n는 Math.pow로 계산.",
+    "verifiedAt": "2026-05-01",
+    "method": "원리금균등상환 PMT 역산식 직접 적용. (1+r)^n는 Math.pow로 계산. 스트레스 DSR은 입력 loanRate에 가산금리 추가.",
     "cases": [
       {
-        "name": "Case 1 — 연 5천만, 기존 0, 만기 30년, 금리 4.0%, DSR 40%",
-        "input": { "annualIncome": 50000000, "monthlyExistingDebt": 0, "loanYears": 30, "loanRate": 0.04, "dsrLimit": 0.40 },
-        "expected": { "monthlyAvailable": 1666667, "maxLoan": 349102137 }
+        "name": "Case 1 — 연 5천만, 기존 0, 만기 30년, 금리 4.0%, DSR 40%, 스트레스 미적용",
+        "input": { "annualIncome": 50000000, "monthlyExistingDebt": 0, "loanYears": 30, "loanRate": 0.04, "dsrLimit": 0.40, "stressDSR": "미적용" },
+        "expected": { "appliedRate": 0.04, "monthlyAvailable": 1666667, "maxLoan": 349102137 }
       },
       {
-        "name": "Case 2 — 연 7천만, 기존 50만, 만기 30년, 금리 4.5%, DSR 40%",
-        "input": { "annualIncome": 70000000, "monthlyExistingDebt": 500000, "loanYears": 30, "loanRate": 0.045, "dsrLimit": 0.40 },
-        "expected": { "monthlyAvailable": 1833333, "maxLoan": 361828726 }
+        "name": "Case 2 — 연 7천만, 기존 50만, 만기 30년, 금리 4.5%, DSR 40%, 스트레스 미적용",
+        "input": { "annualIncome": 70000000, "monthlyExistingDebt": 500000, "loanYears": 30, "loanRate": 0.045, "dsrLimit": 0.40, "stressDSR": "미적용" },
+        "expected": { "appliedRate": 0.045, "monthlyAvailable": 1833333, "maxLoan": 361828726 }
       },
       {
-        "name": "Case 3 — 연 1억, 기존 100만, 만기 20년, 금리 5.0%, DSR 40%",
-        "input": { "annualIncome": 100000000, "monthlyExistingDebt": 1000000, "loanYears": 20, "loanRate": 0.05, "dsrLimit": 0.40 },
-        "expected": { "monthlyAvailable": 2333333, "maxLoan": 353559013 }
+        "name": "Case 3 — 연 1억, 기존 100만, 만기 20년, 금리 5.0%, DSR 40%, 스트레스 미적용",
+        "input": { "annualIncome": 100000000, "monthlyExistingDebt": 1000000, "loanYears": 20, "loanRate": 0.05, "dsrLimit": 0.40, "stressDSR": "미적용" },
+        "expected": { "appliedRate": 0.05, "monthlyAvailable": 2333333, "maxLoan": 353559013 }
       },
       {
-        "name": "Case 4 — 연 4천만, 기존 0, 만기 20년, 금리 4.0%, DSR 40%",
-        "input": { "annualIncome": 40000000, "monthlyExistingDebt": 0, "loanYears": 20, "loanRate": 0.04, "dsrLimit": 0.40 },
-        "expected": { "monthlyAvailable": 1333333, "maxLoan": 220029089 }
+        "name": "Case 4 — 연 4천만, 기존 0, 만기 20년, 금리 4.0%, DSR 40%, 스트레스 미적용",
+        "input": { "annualIncome": 40000000, "monthlyExistingDebt": 0, "loanYears": 20, "loanRate": 0.04, "dsrLimit": 0.40, "stressDSR": "미적용" },
+        "expected": { "appliedRate": 0.04, "monthlyAvailable": 1333333, "maxLoan": 220029089 }
       },
       {
-        "name": "Case 5 — 연 1.5억, 기존 200만, 만기 30년, 금리 4.0%, DSR 40%",
-        "input": { "annualIncome": 150000000, "monthlyExistingDebt": 2000000, "loanYears": 30, "loanRate": 0.04, "dsrLimit": 0.40 },
-        "expected": { "monthlyAvailable": 3000000, "maxLoan": 628383721 }
+        "name": "Case 5 — 연 1.5억, 기존 200만, 만기 30년, 금리 4.0%, DSR 40%, 스트레스 미적용",
+        "input": { "annualIncome": 150000000, "monthlyExistingDebt": 2000000, "loanYears": 30, "loanRate": 0.04, "dsrLimit": 0.40, "stressDSR": "미적용" },
+        "expected": { "appliedRate": 0.04, "monthlyAvailable": 3000000, "maxLoan": 628383721 }
       }
     ]
   },
   "guide": {
-    "howToUse": "연소득과 기존 부채 월 상환액, 신규대출 만기·금리·DSR 한도(보통 은행권 40%)를 입력하면 신규로 받을 수 있는 최대 대출 한도가 산출됩니다.",
+    "howToUse": "연소득과 기존 부채 월 상환액, 신규대출 만기·금리·DSR 한도(보통 은행권 40%)를 입력하면 신규로 받을 수 있는 최대 대출 한도가 산출됩니다. 스트레스 DSR을 적용하면 입력 금리에 자동 가산금리(수도권 +1.5%p, 비수도권 +0.75%p)가 더해진 후 한도 계산.",
     "tips": [
+      "스트레스 DSR: 2024.9.1~ 시행, 2026 현재 2단계. 수도권 +1.5%p / 비수도권 +0.75%p 가산금리로 한도 산정.",
       "은행권: DSR 40%, 제2금융권(저축은행·캐피탈): DSR 50%.",
       "특례 (스트레스 DSR 미적용): 5억 이하 주담대, 전세대출, 일부 정책자금 등.",
       "신용대출은 DSR에 「실제 만기」가 아니라 「약정만기 5년 또는 10년」으로 산정 (관행)."

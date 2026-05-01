@@ -6,15 +6,15 @@
   "subtitle": "표준 적립등급 1~29급 기준 할인할증율 산출",
   "slug": "auto-insurance",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "손해보험협회",
       "document": "자동차보험 표준 약관 / 우량할인·불량할증 등급",
       "year": 2026
     },
-    "note": "본 계산기는 표준 등급체계 기반 단순 모델. 보험사별 세부 등급·할인율은 차이 가능. 실제 견적은 보험사 직접 확인."
+    "note": "본 계산기는 **표준 등급체계 단순 모델** — 실제는 사고점수제(상해등급별 1~4점)로 등급 변동이 결정되며, 보험사별 세부 할인율·우량할인 항목 차이 큼. 실제 견적은 보험사 직접 확인."
   },
   "constants": {
     "BASE_LEVEL": 11,
@@ -36,7 +36,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "표준 등급 산식 직접 적용 (-15% ~ +75%, 5% 단위).",
     "cases": [
       { "name": "Case 1 — 11급 무사고 (12급 5% 할인)", "input": { "basePremium": 1000000, "currentLevel": 11, "accidents": 0, "smallAccidents": 0 }, "expected": { "newLevel": 12, "discountRatePct": 5, "adjustedPremium": 950000 } },
@@ -54,5 +54,5 @@
       "최대 할인 75% (29급), 최대 할증 50% (1급)."
     ]
   },
-  "related": ["health-insurance-employee"]
+  "related": []
 }

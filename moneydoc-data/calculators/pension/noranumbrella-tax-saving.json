@@ -1,11 +1,11 @@
 {
   "id": "noranumbrella-tax-saving", "category": "pension", "subCategory": "small-business",
-  "title": "노란우산공제 절세 계산기", "subtitle": "사업소득 한계세율 × 납입액 절세효과",
-  "slug": "noranumbrella-tax-saving", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
-  "source": { "primary": { "agency": "중소기업중앙회", "document": "조세특례제한법 §86의3", "year": 2026 } },
+  "title": "노란우산공제 절세 계산기", "subtitle": "사업소득별 한도 차등 (2025.1 한도 상향: 600/500/400/200만) × 한계세율",
+  "slug": "noranumbrella-tax-saving", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
+  "source": { "primary": { "agency": "중소기업중앙회", "document": "조세특례제한법 §86의3 (2025.1 개정)", "year": 2026 } },
   "constants": {},
   "formula": [
-    { "step": 1, "name": "공제 한도", "expr": "사업소득 4천만 이하: 500만 / 4천~1억: 300만 / 1억 초과: 200만" },
+    { "step": 1, "name": "공제 한도", "expr": "사업소득 4천 이하: 600만 / 4천~6천: 500만 / 6천~1억: 400만 / 1억 초과: 200만" },
     { "step": 2, "name": "한계세율", "expr": "사업소득 구간별 6%~38%" },
     { "step": 3, "name": "절세액", "expr": "min(납입액, 한도) × 한계세율" }
   ],
@@ -14,15 +14,15 @@
     { "id": "businessIncome", "label": "사업소득금액", "type": "currency", "min": 0, "default": 50000000 }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "조특법 §86의3. 소득 구간별 한도 + 한계세율 적용.",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "조특법 §86의3 (2025.1 개정 후) 4단계 한도 + 한계세율 적용.",
     "cases": [
-      { "name": "Case 1 — 납입 500만 / 사업 3천만 (15%)", "input": { "annualDeposit": 5000000, "businessIncome": 30000000 }, "expected": { "limit": 5000000, "applied": 5000000, "marginalRate": 0.15, "taxSaving": 750000 } },
-      { "name": "Case 2 — 납입 300만 / 사업 8천만 (24%)", "input": { "annualDeposit": 3000000, "businessIncome": 80000000 }, "expected": { "limit": 3000000, "applied": 3000000, "marginalRate": 0.24, "taxSaving": 720000 } },
-      { "name": "Case 3 — 납입 200만 / 사업 2억 (38%)", "input": { "annualDeposit": 2000000, "businessIncome": 200000000 }, "expected": { "limit": 2000000, "applied": 2000000, "marginalRate": 0.38, "taxSaving": 760000 } },
-      { "name": "Case 4 — 납입 500만 / 사업 6천만 (한도 300만, 24%)", "input": { "annualDeposit": 5000000, "businessIncome": 60000000 }, "expected": { "limit": 3000000, "applied": 3000000, "marginalRate": 0.24, "taxSaving": 720000 } },
-      { "name": "Case 5 — 납입 100만 / 사업 4천만 (15%)", "input": { "annualDeposit": 1000000, "businessIncome": 40000000 }, "expected": { "limit": 5000000, "applied": 1000000, "marginalRate": 0.15, "taxSaving": 150000 } }
+      { "name": "Case 1 — 납입 500만 / 사업 3천만 (한도 600만, 15%)", "input": { "annualDeposit": 5000000, "businessIncome": 30000000 }, "expected": { "limit": 6000000, "applied": 5000000, "marginalRate": 0.15, "taxSaving": 750000 } },
+      { "name": "Case 2 — 납입 300만 / 사업 8천만 (한도 400만, 24%)", "input": { "annualDeposit": 3000000, "businessIncome": 80000000 }, "expected": { "limit": 4000000, "applied": 3000000, "marginalRate": 0.24, "taxSaving": 720000 } },
+      { "name": "Case 3 — 납입 200만 / 사업 2억 (한도 200만, 38%)", "input": { "annualDeposit": 2000000, "businessIncome": 200000000 }, "expected": { "limit": 2000000, "applied": 2000000, "marginalRate": 0.38, "taxSaving": 760000 } },
+      { "name": "Case 4 — 납입 500만 / 사업 6천만 (한도 500만 신설, 24%)", "input": { "annualDeposit": 5000000, "businessIncome": 60000000 }, "expected": { "limit": 5000000, "applied": 5000000, "marginalRate": 0.24, "taxSaving": 1200000 } },
+      { "name": "Case 5 — 납입 100만 / 사업 4천만 (한도 600만, 15%)", "input": { "annualDeposit": 1000000, "businessIncome": 40000000 }, "expected": { "limit": 6000000, "applied": 1000000, "marginalRate": 0.15, "taxSaving": 150000 } }
     ]
   },
-  "guide": { "howToUse": "연 납입액과 사업소득 입력 시 절세효과 산출. 소상공인·자영업자 가입.", "tips": ["폐업·노령·사망 시 일시금 또는 연금 수령.", "기타소득세 분리과세 가능.", "압류 면제 (사회보장적 성격)."] },
+  "guide": { "howToUse": "연 납입액과 사업소득 입력 시 절세효과 산출. 소상공인·자영업자 가입.", "tips": ["2025.1부터 한도 상향: 4천 이하 500→600만, 6천~1억 300→400만, 4천~6천 구간 500만 신설.", "폐업·노령·사망 시 일시금 또는 연금 수령.", "기타소득세 분리과세 가능.", "압류 면제 (사회보장적 성격)."] },
   "related": ["comprehensive-income-tax", "irp-tax-credit"]
 }

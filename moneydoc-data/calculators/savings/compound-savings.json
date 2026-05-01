@@ -3,15 +3,15 @@
   "category": "savings",
   "subCategory": "deposit",
   "title": "복리 적금 만기 계산기",
-  "subtitle": "월복리 적금 만기 + 이자소득세",
+  "subtitle": "월복리 적금 (annuity-due) 만기 + 이자소득세",
   "slug": "compound-savings",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
-  "source": { "primary": { "agency": "한국은행", "document": "월복리 표준 산식", "year": 2026 } },
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
+  "source": { "primary": { "agency": "한국은행", "document": "월복리 표준 산식 (annuity-due, 월초 납입)", "year": 2026 } },
   "constants": { "INTEREST_TAX_RATE": 0.154 },
   "formula": [
-    { "step": 1, "name": "FV (월복리)", "expr": "monthlyDeposit × ((1 + r/12)^n - 1) / (r/12)" },
+    { "step": 1, "name": "FV (월복리, annuity-due)", "expr": "monthlyDeposit × (1 + r/12) × ((1 + r/12)^n - 1) / (r/12)" },
     { "step": 2, "name": "원금", "expr": "monthlyDeposit × n" },
     { "step": 3, "name": "이자", "expr": "FV - 원금" },
     { "step": 4, "name": "세후 만기", "expr": "원금 + 이자 - 이자×15.4%" }
@@ -23,16 +23,16 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
-    "method": "월복리 적금 산식 (FV of ordinary annuity).",
+    "verifiedAt": "2026-05-01",
+    "method": "월복리 적금 산식 (annuity-due, 한국 적금 표준 — 월초 납입). FV_due = FV_ord × (1 + r/12).",
     "cases": [
-      { "name": "Case 1 — 월 50만 × 24개월 × 4.0%", "input": { "monthlyDeposit": 500000, "months": 24, "rate": 0.040 }, "expected": { "principal": 12000000, "interest": 471444, "tax": 72602, "maturity": 12398842 } },
-      { "name": "Case 2 — 월 100만 × 60개월 × 4.5%", "input": { "monthlyDeposit": 1000000, "months": 60, "rate": 0.045 }, "expected": { "principal": 60000000, "interest": 7145552, "tax": 1100415, "maturity": 66045137 } },
-      { "name": "Case 3 — 월 30만 × 36개월 × 3.8%", "input": { "monthlyDeposit": 300000, "months": 36, "rate": 0.038 }, "expected": { "principal": 10800000, "interest": 620552, "tax": 95565, "maturity": 11324987 } },
-      { "name": "Case 4 — 월 20만 × 60개월 × 3.5%", "input": { "monthlyDeposit": 200000, "months": 60, "rate": 0.035 }, "expected": { "principal": 12000000, "interest": 1093223, "tax": 168356, "maturity": 12924867 } },
-      { "name": "Case 5 — 월 70만 × 48개월 × 4.0%", "input": { "monthlyDeposit": 700000, "months": 48, "rate": 0.040 }, "expected": { "principal": 33600000, "interest": 2771721, "tax": 426845, "maturity": 35944876 } }
+      { "name": "Case 1 — 월 50만 × 24개월 × 4.0%", "input": { "monthlyDeposit": 500000, "months": 24, "rate": 0.040 }, "expected": { "principal": 12000000, "interest": 513015, "tax": 79004, "maturity": 12434011 } },
+      { "name": "Case 2 — 월 100만 × 60개월 × 4.5%", "input": { "monthlyDeposit": 1000000, "months": 60, "rate": 0.045 }, "expected": { "principal": 60000000, "interest": 7397348, "tax": 1139192, "maturity": 66258156 } },
+      { "name": "Case 3 — 월 30만 × 36개월 × 3.8%", "input": { "monthlyDeposit": 300000, "months": 36, "rate": 0.038 }, "expected": { "principal": 10800000, "interest": 656717, "tax": 101134, "maturity": 11355583 } },
+      { "name": "Case 4 — 월 20만 × 60개월 × 3.5%", "input": { "monthlyDeposit": 200000, "months": 60, "rate": 0.035 }, "expected": { "principal": 12000000, "interest": 1131412, "tax": 174237, "maturity": 12957175 } },
+      { "name": "Case 5 — 월 70만 × 48개월 × 4.0%", "input": { "monthlyDeposit": 700000, "months": 48, "rate": 0.040 }, "expected": { "principal": 33600000, "interest": 2892960, "tax": 445516, "maturity": 36047444 } }
     ]
   },
-  "guide": { "howToUse": "복리 적금은 매월 이자가 원금에 합산되어 다음 달 이자에 반영. 단리 적금 대비 5~15% 더 받음.", "tips": ["기간 길수록 복리 효과 ↑.", "월복리 vs 일복리: 일복리가 약간 더 유리."] },
+  "guide": { "howToUse": "복리 적금은 매월 이자가 원금에 합산되어 다음 달 이자에 반영. 한국 표준은 annuity-due(월초 납입)이며, 단리 적금 대비 5~15% 더 받음.", "tips": ["기간 길수록 복리 효과 ↑.", "월복리 vs 일복리: 일복리가 약간 더 유리.", "annuity-due(월초) vs ordinary(월말): 동일 조건에서 (1+r/12)배 차이."] },
   "related": ["installment-savings", "simple-vs-compound"]
 }

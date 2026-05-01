@@ -7,8 +7,8 @@
   "subtitle": "공정시장가액 60% 적용 + 1주택자 12억 공제",
   "slug": "comprehensive-real-estate-tax",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "국세청",
@@ -67,7 +67,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "종부세법 §8, §9 + 시행령 §2. 1주택자 60세+ 20~40% + 보유 5년+ 20~50% 추가공제 (합산 80% 한도).",
     "cases": [
       { "name": "Case 1 — 1주택 공시가 15억 (50세, 3년 — 추가공제 X)", "input": { "totalValue": 1500000000, "isOneHome": true, "age": 50, "holdingYears": 3 }, "expected": { "deduction": 1200000000, "excess": 300000000, "taxableBase": 180000000, "taxBeforeSeniorDed": 900000, "seniorDed": 0, "tax": 900000 } },
@@ -82,7 +82,8 @@
     "tips": [
       "1세대 1주택자 + 60세 이상: 추가 60~80% 공제 가능.",
       "1세대 1주택 + 5년 이상 보유: 장기보유공제.",
-      "임대사업자 등록 임대주택: 합산 배제 가능."
+      "임대사업자 등록 임대주택: 합산 배제 가능.",
+      "2주택자도 조정대상지역 외 지역이면 1주택 표(0.5~2.7%) 적용 가능 (정책 변동, 국세청 직접 확인)."
     ]
   },
   "related": ["acquisition-tax", "transfer-tax-1home", "property-tax"]

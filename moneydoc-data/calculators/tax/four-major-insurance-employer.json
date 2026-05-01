@@ -1,30 +1,38 @@
 {
   "id": "four-major-insurance-employer", "category": "tax", "subCategory": "insurance",
-  "title": "4대보험료 (회사 부담) 계산기", "subtitle": "회사 부담 + 산재보험 합산",
-  "slug": "four-major-insurance-employer", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
-  "source": { "primary": { "agency": "4대 사회보험 정보연계센터", "document": "회사 부담 요율 고시", "year": 2026 } },
-  "constants": { "NP_RATE": 0.045, "NP_CAP": 5900000, "HI_RATE": 0.03545, "LTC_RATE": 0.1295, "EI_RATE": 0.0115 },
+  "title": "4대보험료 (회사 부담) 계산기", "subtitle": "회사 부담 + 산재보험 합산 (2026.1.1 시행 요율)",
+  "slug": "four-major-insurance-employer", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
+  "source": { "primary": { "agency": "4대 사회보험 정보연계센터", "document": "회사 부담 요율 고시 2026", "year": 2026 } },
+  "constants": { "NP_RATE": 0.0475, "NP_CAP": 6370000, "HI_RATE": 0.03595, "LTC_RATE": 0.1314, "EI_RATE": 0.0115 },
   "formula": [
-    { "step": 1, "name": "국민연금 회사", "expr": "round(min(보수, 590만) × 4.5%)" },
-    { "step": 2, "name": "건강보험 회사", "expr": "round(보수 × 3.545%)" },
-    { "step": 3, "name": "장기요양 회사", "expr": "round(건보 × 12.95%)" },
-    { "step": 4, "name": "고용보험 회사", "expr": "round(보수 × 1.15%)" },
-    { "step": 5, "name": "산재보험", "expr": "round(보수 × 업종별 요율)" }
+    { "step": 1, "name": "국민연금 회사", "expr": "round(min(보수, 637만) × 4.75%)" },
+    { "step": 2, "name": "건강보험 회사", "expr": "round(보수 × 3.595%)" },
+    { "step": 3, "name": "장기요양 회사", "expr": "round(건보 × 13.14%)" },
+    { "step": 4, "name": "고용보험 회사", "expr": "round(보수 × 1.15%)  [150인 미만 기준]" },
+    { "step": 5, "name": "산재보험", "expr": "round(보수 × 업종별 요율, 평균 1.47%)" }
   ],
   "inputs": [
-    { "id": "salary", "label": "월 보수", "type": "currency", "min": 390000, "default": 3000000 },
-    { "id": "workCompRate", "label": "산재보험 요율 (업종별)", "type": "number", "min": 0.006, "max": 0.36, "step": 0.001, "default": 0.015 }
+    { "id": "salary", "label": "월 보수", "type": "currency", "min": 400000, "default": 3000000 },
+    { "id": "workCompRate", "label": "산재보험 요율 (업종별)", "type": "number", "min": 0.006, "max": 0.36, "step": 0.001, "default": 0.0147 }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "4대 공단 + 근로복지공단 회사 부담 요율 합산.",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "4대 공단 + 근로복지공단 회사 부담 요율 합산. 2026.1.1 시행 요율 적용.",
     "cases": [
-      { "name": "Case 1 — 월 300만, 산재 1.5%", "input": { "salary": 3000000, "workCompRate": 0.015 }, "expected": { "np": 135000, "hi": 106350, "ltc": 13772, "ei": 34500, "wc": 45000, "total": 334622 } },
-      { "name": "Case 2 — 월 500만, 산재 1.5%", "input": { "salary": 5000000, "workCompRate": 0.015 }, "expected": { "np": 225000, "hi": 177250, "ltc": 22954, "ei": 57500, "wc": 75000, "total": 557704 } },
-      { "name": "Case 3 — 월 700만 (NP 상한)", "input": { "salary": 7000000, "workCompRate": 0.015 }, "expected": { "np": 265500, "hi": 248150, "ltc": 32135, "ei": 80500, "wc": 105000, "total": 731285 } },
-      { "name": "Case 4 — 월 250만", "input": { "salary": 2500000, "workCompRate": 0.015 }, "expected": { "np": 112500, "hi": 88625, "ltc": 11477, "ei": 28750, "wc": 37500, "total": 278852 } },
-      { "name": "Case 5 — 월 1천만", "input": { "salary": 10000000, "workCompRate": 0.015 }, "expected": { "np": 265500, "hi": 354500, "ltc": 45908, "ei": 115000, "wc": 150000, "total": 930908 } }
+      { "name": "Case 1 — 월 300만, 산재 1.5%", "input": { "salary": 3000000, "workCompRate": 0.015 }, "expected": { "np": 142500, "hi": 107850, "ltc": 14171, "ei": 34500, "wc": 45000, "total": 344021 } },
+      { "name": "Case 2 — 월 500만, 산재 1.5%", "input": { "salary": 5000000, "workCompRate": 0.015 }, "expected": { "np": 237500, "hi": 179750, "ltc": 23619, "ei": 57500, "wc": 75000, "total": 573369 } },
+      { "name": "Case 3 — 월 700만 (NP 상한)", "input": { "salary": 7000000, "workCompRate": 0.015 }, "expected": { "np": 302575, "hi": 251650, "ltc": 33067, "ei": 80500, "wc": 105000, "total": 772792 } },
+      { "name": "Case 4 — 월 250만", "input": { "salary": 2500000, "workCompRate": 0.015 }, "expected": { "np": 118750, "hi": 89875, "ltc": 11810, "ei": 28750, "wc": 37500, "total": 286685 } },
+      { "name": "Case 5 — 월 1천만", "input": { "salary": 10000000, "workCompRate": 0.015 }, "expected": { "np": 302575, "hi": 359500, "ltc": 47238, "ei": 115000, "wc": 150000, "total": 974313 } }
     ]
   },
-  "guide": { "howToUse": "월 보수와 업종별 산재 요율 입력 시 회사 부담 4대보험 산출.", "tips": ["산재 요율 업종 차이 큼 (사무직 0.6%, 제조업 1~3%, 건설 3~5%).", "회사 부담은 본인 부담 + 산재보험.", "두루누리 사회보험료 지원 가능 (5인 미만 사업장)."] },
+  "guide": {
+    "howToUse": "월 보수와 업종별 산재 요율 입력 시 회사 부담 4대보험 산출.",
+    "tips": [
+      "산재 요율 업종 차이 큼 (사무직 0.6%, 제조업 1~3%, 건설 3~5%, 평균 1.47%).",
+      "회사 부담은 본인 부담 + 산재보험.",
+      "고용보험 회사 부담은 사업장 규모별 차등: 150인 미만 1.15% / 150~999인 1.55% / 1000인+ 1.75%.",
+      "두루누리 사회보험료 지원 가능 (10인 미만 사업장 + 월보수 270만 미만, 80% 지원, 2026 기준)."
+    ]
+  },
   "related": ["four-major-insurance", "salary-net-pay"]
 }

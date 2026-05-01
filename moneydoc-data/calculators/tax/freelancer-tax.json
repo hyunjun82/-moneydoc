@@ -6,8 +6,8 @@
   "subtitle": "사업소득 원천징수 3% + 지방세 0.3%",
   "slug": "freelancer-tax",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "국세청", "document": "소득세법 §129 (기타사업소득 원천징수)", "year": 2026 } },
   "constants": { "INCOME_TAX_RATE": 0.03, "LOCAL_TAX_RATE": 0.003 },
   "formula": [
@@ -21,7 +21,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "소득세법 §129. 사업소득 원천징수 3% + 지방세 0.3% = 3.3%.",
     "cases": [
       { "name": "Case 1 — 100만", "input": { "grossPayment": 1000000 }, "expected": { "incomeTax": 30000, "localTax": 3000, "totalTax": 33000, "netPayment": 967000 } },

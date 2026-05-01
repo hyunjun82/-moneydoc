@@ -7,8 +7,8 @@
   "slug": "severance-pay",
   "searchAliases": ["퇴직금 계산기", "법정 퇴직금 계산기", "퇴직금 계산"],
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "고용노동부",
@@ -38,7 +38,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "근로자퇴직급여보장법 §8 + 근기법 시행령 §2 평균임금 산정 산식 직접 적용. 상여금은 연간 ÷ 4 (3개월분), 연차수당은 전년 ÷ 4 가산.",
     "cases": [
       {

@@ -1,7 +1,7 @@
 {
   "id": "annual-leave-allowance", "category": "law", "subCategory": "labor",
   "title": "연차수당 계산기", "subtitle": "월급 / 209시간 × 8시간 × 미사용 일수",
-  "slug": "annual-leave-allowance", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "slug": "annual-leave-allowance", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "고용노동부", "document": "근로기준법 §60 + 시행령 §33", "year": 2026 } },
   "constants": { "MONTHLY_HOURS": 209, "DAILY_HOURS": 8 },
   "formula": [
@@ -14,7 +14,7 @@
     { "id": "unusedDays", "label": "미사용 연차 일수", "type": "number", "min": 0, "max": 30, "default": 5 }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "근기법 §60 시행령 §33. 월 209시간 (40h × 4.345주) 기준.",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "근기법 §60 시행령 §33. 월 209시간 (40h × 4.345주) 기준.",
     "cases": [
       { "name": "Case 1 — 월 300만 / 5일 미사용", "input": { "monthlySalary": 3000000, "unusedDays": 5 }, "expected": { "hourlyWage": 14354, "dailyWage": 114832, "allowance": 574160 } },
       { "name": "Case 2 — 월 400만 / 10일", "input": { "monthlySalary": 4000000, "unusedDays": 10 }, "expected": { "hourlyWage": 19139, "dailyWage": 153112, "allowance": 1531120 } },

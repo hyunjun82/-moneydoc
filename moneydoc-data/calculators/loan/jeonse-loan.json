@@ -6,8 +6,8 @@
   "subtitle": "주택금융공사 일반 전세대출 보증금 80% 기준",
   "slug": "jeonse-loan",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "주택금융공사", "document": "전세자금보증 운영규정", "year": 2026 } },
   "constants": { "DEFAULT_RATIO": 0.80, "DEFAULT_LIMIT": 400000000 },
   "formula": [ { "step": 1, "name": "한도", "expr": "min(보증금 × 비율, 한도)" } ],
@@ -18,7 +18,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "min(보증금 × 80%, 4억). 청년·신혼 특례는 별도.",
     "cases": [
       { "name": "Case 1 — 보증 2억", "input": { "deposit": 200000000, "ratio": 0.80, "limit": 400000000 }, "expected": { "maxLoan": 160000000 } },

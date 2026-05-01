@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "부동산 계산기 — 14종 | MoneyDoc",
+  title: "부동산 계산기 — 13종 | MoneyDoc",
   description: "양도세·취득세·중개수수료·종부세 — 지방세법·소득세법 §89 기반",
   alternates: { canonical: "/realestate/" },
 };
@@ -79,13 +79,6 @@ export default function Page() {
           <div className="cat-body">
             <h3 className="cat-name">부동산 ROI 계산기</h3>
             <p className="cat-desc">임대수익 + 자본이득 통합 ROI</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
-        <a href="/realestate/registration-fee/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">등기비용 계산기</h3>
-            <p className="cat-desc">등록면허세 0.8% + 지방교육세 0.16%</p>
             <span className="cat-count">정부 공식 산식</span>
           </div>
         </a>

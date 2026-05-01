@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "저축 계산기 — 10종 | MoneyDoc",
+  title: "저축 계산기 — 9종 | MoneyDoc",
   description: "예금·적금·청년도약·ISA — 한국은행 표준 산식 기반 저축 계산기",
   alternates: { canonical: "/savings/" },
 };
@@ -79,13 +79,6 @@ export default function Page() {
           <div className="cat-body">
             <h3 className="cat-name">비과세종합저축 계산기</h3>
             <p className="cat-desc">1인당 5천만 한도 비과세 적금</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
-        <a href="/savings/youth-hope-deposit/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">청년희망적금 만기 시뮬레이터</h3>
-            <p className="cat-desc">2년 만기 + 정부 저축장려금 (1년차 2% / 2년차 4%) + 비과세</p>
             <span className="cat-count">정부 공식 산식</span>
           </div>
         </a>

@@ -8,18 +8,18 @@
   --color-bg: #f7f5f0;
   --color-bg-soft: #efebe1;
   --color-bg-card: #fdfbf6;
-  --color-bg-tint: #ece8dc;
+  --color-bg-tint: #d6efea;
   --color-bg-tint-2: #f1ede2;
   --color-line: #e0d9c8;
   --color-line-soft: #ebe5d3;
-  --color-text: #1a1a1a;
-  --color-text-2: #57534e;
-  --color-text-3: #a8a29e;
-  --color-brand: #1f3a3a;
-  --color-brand-2: #2c4747;
-  --color-brand-3: #14302f;
-  --color-brand-soft: #e3e8e7;
-  --color-accent: #92400e;
+  --color-text: #134e4a;
+  --color-text-2: #4b5563;
+  --color-text-3: #9ca3af;
+  --color-brand: #0f766e;
+  --color-brand-2: #115e59;
+  --color-brand-3: #134e4a;
+  --color-brand-soft: #ccfbf1;
+  --color-accent: #b45309;
   --color-accent-soft: #fde68a;
 
   --font-sans: var(--font-pretendard), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
@@ -42,8 +42,8 @@
   --brand-soft: var(--color-brand-soft);
   --accent: var(--color-accent);
   --accent-soft: var(--color-accent-soft);
-  --shadow-card: 0 1px 2px rgba(20, 48, 47, 0.04), 0 4px 12px rgba(20, 48, 47, 0.06);
-  --shadow-hover: 0 2px 4px rgba(20, 48, 47, 0.06), 0 12px 24px rgba(20, 48, 47, 0.1);
+  --shadow-card: 0 1px 2px rgba(19, 78, 74, 0.04), 0 4px 12px rgba(19, 78, 74, 0.06);
+  --shadow-hover: 0 2px 4px rgba(19, 78, 74, 0.06), 0 12px 24px rgba(19, 78, 74, 0.1);
   --radius: 16px;
   --radius-sm: 12px;
   --max: 1180px;

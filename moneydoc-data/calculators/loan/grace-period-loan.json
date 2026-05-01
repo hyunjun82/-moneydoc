@@ -6,8 +6,8 @@
   "subtitle": "거치기간(이자만) + 상환기간(원리금균등)",
   "slug": "grace-period-loan",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "금융감독원", "document": "주택담보대출 상환 방식", "year": 2026 } },
   "constants": {},
   "formula": [
@@ -24,7 +24,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "거치기간: 월이자 = 원금 × r. 상환기간: 원리금균등 PMT(M = P × r × (1+r)^n / ((1+r)^n - 1)).",
     "cases": [
       { "name": "Case 1 — 1억 / 거치1년 / 상환30년 / 4%", "input": { "principal": 100000000, "graceYears": 1, "repayYears": 30, "rate": 0.04 }, "expected": { "graceMonthlyInterest": 333333, "totalGraceInterest": 3999996, "repayMonthly": 477415, "totalInterest": 75869502 } },

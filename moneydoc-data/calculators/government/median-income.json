@@ -1,17 +1,17 @@
 {
   "id": "median-income", "category": "government", "subCategory": "welfare",
-  "title": "중위소득 계산기", "subtitle": "가구원수별 중위소득 100/50/47/40/30% + 본인 소득 비율",
+  "title": "기준중위소득 계산기 (2026)", "subtitle": "가구원수별 중위 100/50/48/40/32% + 본인 소득 비율 (2026 6.51% 인상 적용)",
   "slug": "median-income",
   "searchAliases": ["기준중위소득 계산기", "중위소득 100% 계산"],
-  "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
-  "source": { "primary": { "agency": "보건복지부", "document": "기준 중위소득 고시 2024", "year": 2024 } },
+  "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
+  "source": { "primary": { "agency": "보건복지부", "document": "기준 중위소득 고시 2026 (전년 대비 6.51% 인상)", "year": 2026 } },
   "constants": {},
   "tables": {
-    "median100": { "1": 2228445, "2": 3682609, "3": 4714657, "4": 5729913, "5": 6695735, "6": 7618369 }
+    "median100": { "1": 2564238, "2": 4199292, "3": 5359036, "4": 6494738, "5": 7556719, "6": 8555952 }
   },
   "formula": [
-    { "step": 1, "name": "중위소득 100%", "expr": "가구원수별 lookup" },
-    { "step": 2, "name": "각 비율", "expr": "100% × 0.5 / 0.47 / 0.40 / 0.30" },
+    { "step": 1, "name": "중위소득 100%", "expr": "가구원수별 lookup (2026 고시)" },
+    { "step": 2, "name": "각 비율", "expr": "100% × 0.5 / 0.48 / 0.40 / 0.32 (생계 32% / 주거 48% 인상 반영)" },
     { "step": 3, "name": "본인 비율", "expr": "(소득 / 중위100%) × 100" }
   ],
   "inputs": [
@@ -19,16 +19,16 @@
     { "id": "incomeAmount", "label": "본인 소득 (월)", "type": "currency", "min": 0, "default": 1000000 }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30",
-    "method": "보건복지부 2024 기준중위소득 고시값 직접 lookup. 각 비율 산출.",
+    "verified": true, "verifiedAt": "2026-05-01",
+    "method": "보건복지부 2026 기준중위소득 고시값 직접 lookup. 각 비율(100/50/48/40/32%) 산출.",
     "cases": [
-      { "name": "Case 1 — 1인 / 100만", "input": { "householdSize": 1, "incomeAmount": 1000000 }, "expected": { "median100": 2228445, "median50": 1114223, "median47": 1047369, "median40": 891378, "median30": 668534, "userPct": 44.9 } },
-      { "name": "Case 2 — 2인 / 200만", "input": { "householdSize": 2, "incomeAmount": 2000000 }, "expected": { "median100": 3682609, "median50": 1841305, "median47": 1730826, "median40": 1473044, "median30": 1104783, "userPct": 54.3 } },
-      { "name": "Case 3 — 3인 / 400만", "input": { "householdSize": 3, "incomeAmount": 4000000 }, "expected": { "median100": 4714657, "median50": 2357329, "median47": 2215889, "median40": 1885863, "median30": 1414397, "userPct": 84.8 } },
-      { "name": "Case 4 — 4인 / 600만", "input": { "householdSize": 4, "incomeAmount": 6000000 }, "expected": { "median100": 5729913, "median50": 2864957, "median47": 2693059, "median40": 2291965, "median30": 1718974, "userPct": 104.7 } },
-      { "name": "Case 5 — 1인 / 50만", "input": { "householdSize": 1, "incomeAmount": 500000 }, "expected": { "median100": 2228445, "median50": 1114223, "median47": 1047369, "median40": 891378, "median30": 668534, "userPct": 22.4 } }
+      { "name": "Case 1 — 1인 / 100만", "input": { "householdSize": 1, "incomeAmount": 1000000 }, "expected": { "median100": 2564238, "median50": 1282119, "median48": 1230834, "median40": 1025695, "median32": 820556, "userPct": 39.0 } },
+      { "name": "Case 2 — 2인 / 200만", "input": { "householdSize": 2, "incomeAmount": 2000000 }, "expected": { "median100": 4199292, "median50": 2099646, "median48": 2015660, "median40": 1679717, "median32": 1343773, "userPct": 47.6 } },
+      { "name": "Case 3 — 3인 / 400만", "input": { "householdSize": 3, "incomeAmount": 4000000 }, "expected": { "median100": 5359036, "median50": 2679518, "median48": 2572337, "median40": 2143614, "median32": 1714892, "userPct": 74.6 } },
+      { "name": "Case 4 — 4인 / 600만", "input": { "householdSize": 4, "incomeAmount": 6000000 }, "expected": { "median100": 6494738, "median50": 3247369, "median48": 3117474, "median40": 2597895, "median32": 2078316, "userPct": 92.4 } },
+      { "name": "Case 5 — 1인 / 50만", "input": { "householdSize": 1, "incomeAmount": 500000 }, "expected": { "median100": 2564238, "median50": 1282119, "median48": 1230834, "median40": 1025695, "median32": 820556, "userPct": 19.5 } }
     ]
   },
-  "guide": { "howToUse": "가구원수와 본인 소득 입력 시 중위소득 비율과 각 복지 자격 기준 표시.", "tips": ["기준중위소득은 매년 8월 발표.", "30% 생계급여 / 40% 의료급여 / 47% 주거급여 / 50% 교육급여 자격 기준.", "차상위계층은 중위 50% 이하."] },
+  "guide": { "howToUse": "가구원수와 본인 소득 입력 시 중위소득 비율과 각 복지 자격 기준 표시.", "tips": ["기준중위소득은 매년 7~8월 발표.", "32% 생계급여 / 40% 의료급여 / 48% 주거급여 / 50% 교육급여 자격 기준 (2026).", "차상위계층은 중위 50% 이하.", "2026년 6.51% 인상 (1인 2,228,445→2,564,238 / 4인 5,729,913→6,494,738)."] },
   "related": ["near-poor-eligibility", "basic-livelihood-eligibility", "basic-pension"]
 }

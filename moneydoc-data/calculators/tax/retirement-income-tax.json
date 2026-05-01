@@ -6,14 +6,14 @@
   "subtitle": "근속연수공제 + 환산급여공제 적용 누진세",
   "slug": "retirement-income-tax",
   "year": 2026,
-  "lastUpdated": "2026-04-30",
-  "lastVerified": "2026-04-30",
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "국세청", "document": "소득세법 §48 (퇴직소득)", "year": 2026 } },
   "constants": {},
   "formula": [
     { "step": 1, "name": "근속연수공제", "expr": "5년 이하 100만/년, 5~10 200만/년+, 10~20 250만/년+, 20+ 300만/년+" },
     { "step": 2, "name": "환산급여", "expr": "(퇴직금 - 근속공제) × 12 / 근속연수" },
-    { "step": 3, "name": "환산급여공제", "expr": "구간별 차등 적용" },
+    { "step": 3, "name": "환산급여공제", "expr": "800만 이하 100%, 800만~7000만 800만+초과 60%, 7000만~1억 4520만+초과 55%, 1억~3억 6170만+초과 45%, 3억 초과 1억5170만+초과 35%" },
     { "step": 4, "name": "과세표준", "expr": "환산급여 - 환산공제" },
     { "step": 5, "name": "산출세액", "expr": "과표 × 종합소득세율 / 12 × 근속연수" }
   ],
@@ -23,7 +23,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-04-30",
+    "verifiedAt": "2026-05-01",
     "method": "소득세법 §48 단계적 산식 적용 (근속연수공제 + 환산급여공제 + 누진세).",
     "cases": [
       { "name": "Case 1 — 퇴직금 3천만 / 5년", "input": { "severance": 30000000, "workYears": 5 }, "expected": { "yearsDed": 5000000, "annualConverted": 60000000, "taxableBase": 20800000, "tax": 775000 } },

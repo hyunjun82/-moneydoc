@@ -3,7 +3,7 @@
   "title": "퍼센트 계산기", "subtitle": "% 계산 4가지 모드 (전체 중 일부 / 비율 / 증감률 / 증감 후)",
   "slug": "percent-calculator",
   "searchAliases": ["퍼센트 계산기", "% 계산기", "비율 계산기", "할인율 계산기"],
-  "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
   "source": { "primary": { "agency": "표준 산식", "document": "수학 기본 공식", "year": 2026 } },
   "constants": {},
   "formula": [
@@ -18,7 +18,7 @@
     { "id": "b", "label": "값 B", "type": "number", "default": 15 }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-04-30", "method": "수학 기본 산식.",
+    "verified": true, "verifiedAt": "2026-05-01", "method": "수학 기본 산식.",
     "cases": [
       { "name": "Case 1 — 5만의 15%", "input": { "mode": "percentOf", "a": 50000, "b": 15 }, "expected": { "result": 7500 } },
       { "name": "Case 2 — 3만은 20만의 몇 %", "input": { "mode": "ratio", "a": 30000, "b": 200000 }, "expected": { "result": 15 } },
