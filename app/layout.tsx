@@ -27,6 +27,21 @@ export const metadata: Metadata = {
   },
 };
 
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "MoneyDoc",
+  alternateName: "머니닥",
+  url: "https://moneydoc.kr",
+  description: "정부 공식 산식으로 검증된 한국 금융·세금·부동산·연금·법률 계산기 102종",
+  inLanguage: "ko",
+  publisher: {
+    "@type": "Organization",
+    name: "MoneyDoc",
+    url: "https://moneydoc.kr",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,7 +49,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={pretendard.variable}>
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
