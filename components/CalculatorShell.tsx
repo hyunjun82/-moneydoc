@@ -31,8 +31,76 @@ export function CalculatorShell({
   const cat = CATEGORIES[spec.category as CategorySlug];
   const breadcrumbLabel = spec.title.replace(/\s*계산기$/, "");
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "홈", item: "https://moneydoc.kr/" },
+      ...(cat
+        ? [
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: cat.name,
+              item: `https://moneydoc.kr${cat.href}`,
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: spec.title,
+              item: `https://moneydoc.kr/${spec.category}/${spec.slug}/`,
+            },
+          ]
+        : []),
+    ],
+  };
+
+  const faqs: { q: string; a: string }[] = spec.guide?.faq ?? [];
+  const faqJsonLd =
+    faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((qa) => ({
+            "@type": "Question",
+            name: qa.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: qa.a,
+            },
+          })),
+        }
+      : null;
+
+  const webAppJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: spec.title,
+    description: description ?? spec.subtitle,
+    url: `https://moneydoc.kr/${spec.category}/${spec.slug}/`,
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Any",
+    inLanguage: "ko",
+    isAccessibleForFree: true,
+    offers: { "@type": "Offer", price: 0, priceCurrency: "KRW" },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }}
+      />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <Header active={spec.category} />
 
       <nav className="crumbs">
