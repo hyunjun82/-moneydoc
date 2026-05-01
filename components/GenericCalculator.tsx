@@ -286,8 +286,8 @@ const OUTPUT_LABELS: Record<string, string> = {
   zodiac: "띠",
   deadline: "기한",
   firstMeeting: "최초 면담일",
-  firstPayment: "최초 지급일",
-  lastPayment: "최종 지급일",
+  firstPayment: "첫 달 상환",
+  lastPayment: "마지막 달 상환",
   repayMonthly: "월 상환금",
   // 미분류
   netAnnualIncome: "연 순소득",
