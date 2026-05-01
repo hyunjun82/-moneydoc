@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { calcSalaryNetPay } from "@/lib/calc/salary-net-pay";
+import { calcSalaryNetPay, calcSalaryNetPaySimpleTax } from "@/lib/calc/salary-net-pay";
 import { krw, parseKrw } from "@/lib/format";
 
 const QUICK_PICKS = [
@@ -25,6 +25,10 @@ export function SalaryNetPayClient() {
 
   const r = useMemo(
     () => calcSalaryNetPay({ annual, dependents, kids }),
+    [annual, dependents, kids]
+  );
+  const rSimple = useMemo(
+    () => calcSalaryNetPaySimpleTax({ annual, dependents, kids }),
     [annual, dependents, kids]
   );
 
@@ -170,13 +174,19 @@ export function SalaryNetPayClient() {
             </div>
 
             <div className="result-hero">
-              <div className="result-label">월 실수령액</div>
+              <div className="result-label">월 실수령액 (회사 매월 떼는 기준 · 간이세액표 §134)</div>
               <div>
-                <span className="result-value">{krw(r.netMonthly)}</span>
+                <span className="result-value">{krw(rSimple.netMonthly)}</span>
                 <span className="result-unit">원</span>
               </div>
               <div className="result-sub">
-                연 환산 <b>{krw(r.netMonthly * 12)}</b>원 · 공제율 <b>{r.deductRatePct.toFixed(1)}</b>%
+                연 환산 <b>{krw(rSimple.netMonthly * 12)}</b>원 · 공제율 <b>{rSimple.deductRatePct.toFixed(1)}</b>%
+              </div>
+              <div style={{ marginTop: 14, paddingTop: 14, borderTop: "1px solid var(--line-soft)", fontSize: 13, color: "var(--text-2)" }}>
+                <b>참고:</b> 1년 정확 환산(소득세법 §55 누진세율) <b style={{ color: "var(--brand)" }}>{krw(r.netMonthly)}원</b>
+                <span style={{ marginLeft: 6, color: "var(--text-3)" }}>
+                  · 차이는 연말정산 후 일치
+                </span>
               </div>
             </div>
 
