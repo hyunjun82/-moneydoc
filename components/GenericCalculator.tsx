@@ -318,8 +318,8 @@ function formatValue(v: unknown, unit?: string, key?: string): string {
       return `${display.toFixed(2)}%`;
     }
     if (unit === "년" || unit === "개월" || unit === "일") return `${v}${unit}`;
-    // 단위 없는 카운트 키 (year/koreanAge/westAge/months/days/totalDays/yearsToCollege 등)
-    if (key && /^year$|Age$|^months$|^days$|^totalDays$|yearsTo|^yearsEarly$|^yearsDed$|^remainingDays$|^benefitDays$|^totalDays$|^kids$|^dependents$|^tier$|^newLevel$/i.test(key)) {
+    // 단위 없는 카운트 키 (정확 매칭만)
+    if (key && /^(year|months|days|totalDays|yearsToCollege|yearsEarly|yearsDed|remainingDays|benefitDays|kids|dependents|tier|newLevel|westAge|koreanAge|ageGroup|ageMultiplier)$/.test(key)) {
       return String(v);
     }
     return krw(v);
