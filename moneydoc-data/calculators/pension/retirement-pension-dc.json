@@ -1,0 +1,28 @@
+{
+  "id": "retirement-pension-dc", "category": "pension", "subCategory": "retirement",
+  "title": "퇴직연금 DC형 시뮬레이터", "subtitle": "연봉 1/12 회사 부담 + 운용수익 누적",
+  "slug": "retirement-pension-dc", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "고용노동부", "document": "근로자퇴직급여보장법 (DC형)", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "연 회사부담", "expr": "annualSalary / 12 (1개월분)" },
+    { "step": 2, "name": "누적 잔액", "expr": "연 부담을 매년 (1+r) 복리 누적" }
+  ],
+  "inputs": [
+    { "id": "annualSalary", "label": "연봉 (현재)", "type": "currency", "min": 10000000, "default": 50000000 },
+    { "id": "years", "label": "근속연수", "type": "number", "min": 1, "max": 40, "default": 10 },
+    { "id": "returnRate", "label": "연 운용수익률", "type": "number", "min": 0.01, "max": 0.15, "step": 0.01, "default": 0.04 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "DC형: 매년 연봉/12 부담 + 운용수익 (1+r) 복리.",
+    "cases": [
+      { "name": "Case 1 — 연 5천만 / 10년 / 4%", "input": { "annualSalary": 50000000, "years": 10, "returnRate": 0.04 }, "expected": { "annualContribution": 4166667, "totalContribution": 41666670, "expectedBalance": 52026468 } },
+      { "name": "Case 2 — 연 7천만 / 20년 / 4%", "input": { "annualSalary": 70000000, "years": 20, "returnRate": 0.04 }, "expected": { "annualContribution": 5833333, "totalContribution": 116666660, "expectedBalance": 180653666 } },
+      { "name": "Case 3 — 연 1억 / 30년 / 5%", "input": { "annualSalary": 100000000, "years": 30, "returnRate": 0.05 }, "expected": { "annualContribution": 8333333, "totalContribution": 249999990, "expectedBalance": 581339892 } },
+      { "name": "Case 4 — 연 4천만 / 5년 / 3%", "input": { "annualSalary": 40000000, "years": 5, "returnRate": 0.03 }, "expected": { "annualContribution": 3333333, "totalContribution": 16666665, "expectedBalance": 18228031 } },
+      { "name": "Case 5 — 연 8천만 / 25년 / 4.5%", "input": { "annualSalary": 80000000, "years": 25, "returnRate": 0.045 }, "expected": { "annualContribution": 6666667, "totalContribution": 166666675, "expectedBalance": 310470980 } }
+    ]
+  },
+  "guide": { "howToUse": "연봉, 근속연수, 운용수익률 입력 시 DC형 퇴직연금 예상 잔액 산출.", "tips": ["DC형은 본인 책임 운용 (수익률 변동).", "DB형은 회사가 일정 산식 보장.", "55세 이후 연금 또는 일시금 수령."] },
+  "related": ["national-pension", "irp-tax-credit", "severance-pay"]
+}

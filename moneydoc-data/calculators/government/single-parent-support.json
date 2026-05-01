@@ -1,0 +1,27 @@
+{
+  "id": "single-parent-support", "category": "government", "subCategory": "family",
+  "title": "한부모가족 자녀양육비 계산기", "subtitle": "중위소득 60% 이하 + 18세 미만 자녀 1인당 월 21만원",
+  "slug": "single-parent-support", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "여성가족부", "document": "한부모가족지원법", "year": 2026 } },
+  "constants": { "MONTHLY_SUPPORT": 210000 },
+  "formula": [
+    { "step": 1, "name": "자격", "expr": "중위소득 60% 이하 + 자녀 18세 미만" },
+    { "step": 2, "name": "월 지원", "expr": "자녀 1인당 21만원" }
+  ],
+  "inputs": [
+    { "id": "medianIncomePct", "label": "중위소득 비율 (%)", "type": "number", "min": 0, "max": 100, "default": 50 },
+    { "id": "childAge", "label": "자녀 나이", "type": "number", "min": 0, "max": 25, "default": 8 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "한부모가족지원법. 60% 이하 + 18세 미만 + 자녀 1인당 21만원.",
+    "cases": [
+      { "name": "Case 1 — 50% / 8세 (자격 O)", "input": { "medianIncomePct": 50, "childAge": 8 }, "expected": { "isEligible": true, "monthlySupport": 210000, "annualSupport": 2520000 } },
+      { "name": "Case 2 — 70% / 10세 (소득 초과)", "input": { "medianIncomePct": 70, "childAge": 10 }, "expected": { "isEligible": false, "monthlySupport": 0, "annualSupport": 0 } },
+      { "name": "Case 3 — 30% / 5세", "input": { "medianIncomePct": 30, "childAge": 5 }, "expected": { "isEligible": true, "monthlySupport": 210000, "annualSupport": 2520000 } },
+      { "name": "Case 4 — 60% / 17세 (경계)", "input": { "medianIncomePct": 60, "childAge": 17 }, "expected": { "isEligible": true, "monthlySupport": 210000, "annualSupport": 2520000 } },
+      { "name": "Case 5 — 45% / 19세 (연령 초과)", "input": { "medianIncomePct": 45, "childAge": 19 }, "expected": { "isEligible": false, "monthlySupport": 0, "annualSupport": 0 } }
+    ]
+  },
+  "guide": { "howToUse": "소득비율과 자녀 나이 입력 시 한부모 자녀양육비 산출.", "tips": ["청소년 한부모(만 24세 이하): 추가 지원.", "주민센터 신청.", "2024년 기준 21만원 (변동 가능)."] },
+  "related": ["child-allowance", "child-rearing-cost"]
+}

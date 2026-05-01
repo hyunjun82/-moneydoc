@@ -1,0 +1,29 @@
+{
+  "id": "medical-insurance-payout", "category": "insurance", "subCategory": "medical",
+  "title": "실손보험 자기부담금 계산기", "subtitle": "의료비 - 면책금 - 자기부담률 = 보험금",
+  "slug": "medical-insurance-payout", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "금융감독원", "document": "실손보험 표준약관", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "공제 후 의료비", "expr": "max(0, 의료비 - 면책금)" },
+    { "step": 2, "name": "보험금", "expr": "round(공제후 × (1 - 자기부담률))" },
+    { "step": 3, "name": "최종 본인부담", "expr": "의료비 - 보험금" }
+  ],
+  "inputs": [
+    { "id": "medicalCost", "label": "총 의료비", "type": "currency", "min": 0, "default": 1000000 },
+    { "id": "deductible", "label": "면책금 (공제액)", "type": "currency", "min": 0, "default": 100000, "hint": "1세대 0, 2~3세대 1만~3만, 4세대 1만" },
+    { "id": "coPayRate", "label": "자기부담률", "type": "number", "min": 0.10, "max": 0.40, "step": 0.05, "default": 0.20, "hint": "1세대 10%, 2~3세대 20%, 4세대 20% (비급여 30%)" }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "표준약관 기준. 면책금 차감 + 자기부담률 적용.",
+    "cases": [
+      { "name": "Case 1 — 의료비 100만 / 면책 10만 / 부담 20%", "input": { "medicalCost": 1000000, "deductible": 100000, "coPayRate": 0.20 }, "expected": { "reimbursement": 720000, "netCost": 280000 } },
+      { "name": "Case 2 — 의료비 50만 / 면책 3만 / 부담 30%", "input": { "medicalCost": 500000, "deductible": 30000, "coPayRate": 0.30 }, "expected": { "reimbursement": 329000, "netCost": 171000 } },
+      { "name": "Case 3 — 의료비 500만 / 면책 10만 / 부담 20%", "input": { "medicalCost": 5000000, "deductible": 100000, "coPayRate": 0.20 }, "expected": { "reimbursement": 3920000, "netCost": 1080000 } },
+      { "name": "Case 4 — 의료비 10만 / 면책 3만 / 부담 30%", "input": { "medicalCost": 100000, "deductible": 30000, "coPayRate": 0.30 }, "expected": { "reimbursement": 49000, "netCost": 51000 } },
+      { "name": "Case 5 — 의료비 1천만 / 면책 20만 / 부담 20%", "input": { "medicalCost": 10000000, "deductible": 200000, "coPayRate": 0.20 }, "expected": { "reimbursement": 7840000, "netCost": 2160000 } }
+    ]
+  },
+  "guide": { "howToUse": "총 의료비, 면책금, 자기부담률 입력 시 보험금과 본인부담 산출.", "tips": ["1세대 (~2009): 본인 10%.", "4세대 (2021~): 본인 20% + 비급여 30%.", "비급여 차등제 적용 후 보험료 인상/할인."] },
+  "related": ["auto-insurance"]
+}

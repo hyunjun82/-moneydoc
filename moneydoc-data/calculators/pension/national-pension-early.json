@@ -1,0 +1,28 @@
+{
+  "id": "national-pension-early", "category": "pension", "subCategory": "public",
+  "title": "국민연금 조기수령 감액 계산기", "subtitle": "60~64세 조기수령 시 1년당 6% 감액",
+  "slug": "national-pension-early", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "국민연금공단", "document": "국민연금법 §62 (조기노령연금)", "year": 2026 } },
+  "constants": { "REDUCTION_PER_YEAR": 0.06, "NORMAL_AGE": 65 },
+  "formula": [
+    { "step": 1, "name": "조기수령 연수", "expr": "정상연령(65) - 시작연령" },
+    { "step": 2, "name": "감액률", "expr": "조기수령 연수 × 6%" },
+    { "step": 3, "name": "감액 후 수령액", "expr": "round(정상수령 × (1 - 감액률))" }
+  ],
+  "inputs": [
+    { "id": "normalPension", "label": "정상수령 시 월 연금액", "type": "currency", "min": 100000, "default": 1000000 },
+    { "id": "startAge", "label": "조기수령 시작 연령", "type": "number", "min": 60, "max": 64, "default": 60 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "국민연금법 §62. 1년 일찍 받을 때마다 6% 감액 (5년 = 30%).",
+    "cases": [
+      { "name": "Case 1 — 정상 100만 / 60세 (5년 일찍, 30% 감액)", "input": { "normalPension": 1000000, "startAge": 60 }, "expected": { "yearsEarly": 5, "reductionRate": 0.3, "reducedPension": 700000 } },
+      { "name": "Case 2 — 정상 80만 / 62세", "input": { "normalPension": 800000, "startAge": 62 }, "expected": { "yearsEarly": 3, "reductionRate": 0.18, "reducedPension": 656000 } },
+      { "name": "Case 3 — 정상 150만 / 60세", "input": { "normalPension": 1500000, "startAge": 60 }, "expected": { "yearsEarly": 5, "reductionRate": 0.3, "reducedPension": 1050000 } },
+      { "name": "Case 4 — 정상 60만 / 64세 (1년)", "input": { "normalPension": 600000, "startAge": 64 }, "expected": { "yearsEarly": 1, "reductionRate": 0.06, "reducedPension": 564000 } },
+      { "name": "Case 5 — 정상 200만 / 61세", "input": { "normalPension": 2000000, "startAge": 61 }, "expected": { "yearsEarly": 4, "reductionRate": 0.24, "reducedPension": 1520000 } }
+    ]
+  },
+  "guide": { "howToUse": "정상수령 연금액과 조기수령 시작 연령 입력 시 감액된 수령액 산출.", "tips": ["조기수령은 평생 감액 적용 (회복 X).", "연기수령(65세 이후): 1년당 7.2% 가산 (최대 5년).", "조기수령 신청 시 소득 활동 제한 (평균소득월액 초과 시 감액)."] },
+  "related": ["national-pension", "irp-tax-credit"]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "installment-savings",
+  "category": "savings",
+  "subCategory": "deposit",
+  "title": "적금 만기 계산기 (단리)",
+  "subtitle": "월적립 단리 적금 만기 수령액 + 이자소득세 차감",
+  "slug": "installment-savings",
+  "searchAliases": ["적금 계산기", "적금 만기 계산기", "단리 적금 계산기"],
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "한국은행",
+      "document": "월적립식 단리 표준 산식",
+      "year": 2026,
+      "laws": ["소득세법 §16 (이자소득)", "소득세법 §129 (원천징수세율 14% + 지방세 1.4%)"]
+    }
+  },
+  "constants": {
+    "INTEREST_TAX_RATE": 0.154
+  },
+  "formula": [
+    { "step": 1, "name": "원금", "expr": "monthlyDeposit × months" },
+    { "step": 2, "name": "이자 (단리)", "expr": "monthlyDeposit × (rate/12) × months × (months+1) / 2" },
+    { "step": 3, "name": "이자소득세", "expr": "interest × 0.154" },
+    { "step": 4, "name": "만기 세후", "expr": "principal + interest - tax" }
+  ],
+  "inputs": [
+    { "id": "monthlyDeposit", "label": "월 납입금", "type": "currency", "min": 10000, "default": 500000 },
+    { "id": "months", "label": "납입월수", "type": "number", "min": 1, "max": 600, "default": 24 },
+    { "id": "rate", "label": "연이율", "type": "number", "min": 0.001, "max": 0.20, "step": 0.001, "default": 0.04 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "월적립 단리 표준 산식 직접 적용. 이자소득세 15.4% (소득세 14% + 지방세 1.4%) 차감.",
+    "cases": [
+      { "name": "Case 1 — 월 30만 × 12개월 × 3.5%", "input": { "monthlyDeposit": 300000, "months": 12, "rate": 0.035 }, "expected": { "principal": 3600000, "interest": 68250, "tax": 10511, "maturity": 3657739 } },
+      { "name": "Case 2 — 월 50만 × 24개월 × 4.0%", "input": { "monthlyDeposit": 500000, "months": 24, "rate": 0.040 }, "expected": { "principal": 12000000, "interest": 500000, "tax": 77000, "maturity": 12423000 } },
+      { "name": "Case 3 — 월 70만 × 36개월 × 3.8%", "input": { "monthlyDeposit": 700000, "months": 36, "rate": 0.038 }, "expected": { "principal": 25200000, "interest": 1476300, "tax": 227350, "maturity": 26448950 } },
+      { "name": "Case 4 — 월 100만 × 60개월 × 4.5%", "input": { "monthlyDeposit": 1000000, "months": 60, "rate": 0.045 }, "expected": { "principal": 60000000, "interest": 6862500, "tax": 1056825, "maturity": 65805675 } },
+      { "name": "Case 5 — 월 20만 × 6개월 × 3.0%", "input": { "monthlyDeposit": 200000, "months": 6, "rate": 0.030 }, "expected": { "principal": 1200000, "interest": 10500, "tax": 1617, "maturity": 1208883 } }
+    ]
+  },
+  "guide": {
+    "howToUse": "월 납입금, 납입월수, 연이율을 입력하면 만기 시 세후 수령액이 산출됩니다. 일반 과세 적금은 이자소득세 15.4%가 차감됩니다.",
+    "tips": [
+      "비과세종합저축 가입자는 세금 0원 (1인당 5천만 한도, 65세 이상 등).",
+      "ISA 계좌 활용 시 이자소득 200만 비과세 + 초과 9.9% 분리과세.",
+      "복리 적금이면 동일 이율에서 5~10% 더 받을 수 있음."
+    ]
+  },
+  "related": ["fixed-deposit", "youth-leap-account", "isa-tax-saving"]
+}

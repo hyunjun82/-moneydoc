@@ -1,0 +1,63 @@
+{
+  "id": "four-major-insurance",
+  "category": "tax",
+  "subCategory": "insurance",
+  "title": "4대보험료 계산기 (근로자)",
+  "subtitle": "국민연금 + 건강보험 + 장기요양 + 고용보험 본인부담",
+  "slug": "four-major-insurance",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "4대 사회보험 정보연계센터",
+      "document": "4대보험 요율 고시",
+      "year": 2026
+    },
+    "secondary": [
+      { "agency": "국민연금공단", "rate": "9% (본인 4.5%)" },
+      { "agency": "건강보험공단", "rate": "7.09% (본인 3.545%)" },
+      { "agency": "건강보험공단", "name": "장기요양", "rate": "건강보험료 × 12.95%" },
+      { "agency": "고용노동부", "name": "고용보험", "rate": "1.8% (본인 0.9%)" }
+    ]
+  },
+  "constants": {
+    "NP_RATE": 0.045,
+    "NP_CAP": 5900000,
+    "NP_FLOOR": 390000,
+    "HI_RATE": 0.03545,
+    "LTC_RATE": 0.1295,
+    "EI_RATE": 0.009
+  },
+  "formula": [
+    { "step": 1, "name": "국민연금", "expr": "round(min(max(보수월액, 39만), 590만) × 4.5%)" },
+    { "step": 2, "name": "건강보험", "expr": "round(보수월액 × 3.545%)" },
+    { "step": 3, "name": "장기요양", "expr": "round(건강보험료 × 12.95%)" },
+    { "step": 4, "name": "고용보험", "expr": "round(보수월액 × 0.9%)" },
+    { "step": 5, "name": "총 부담", "expr": "합계" }
+  ],
+  "inputs": [
+    { "id": "monthlySalary", "label": "월 보수", "type": "currency", "min": 390000, "max": 100000000, "default": 3000000 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "4대 공단 2026년 고시 요율 직접 적용.",
+    "cases": [
+      { "name": "Case 1 — 월 보수 200만", "input": { "monthlySalary": 2000000 }, "expected": { "nationalPension": 90000, "healthInsurance": 70900, "longTermCare": 9182, "employmentInsurance": 18000, "total": 188082 } },
+      { "name": "Case 2 — 월 보수 300만", "input": { "monthlySalary": 3000000 }, "expected": { "nationalPension": 135000, "healthInsurance": 106350, "longTermCare": 13772, "employmentInsurance": 27000, "total": 282122 } },
+      { "name": "Case 3 — 월 보수 500만", "input": { "monthlySalary": 5000000 }, "expected": { "nationalPension": 225000, "healthInsurance": 177250, "longTermCare": 22954, "employmentInsurance": 45000, "total": 470204 } },
+      { "name": "Case 4 — 월 보수 700만 (NP 상한 적용)", "input": { "monthlySalary": 7000000 }, "expected": { "nationalPension": 265500, "healthInsurance": 248150, "longTermCare": 32135, "employmentInsurance": 63000, "total": 608785 } },
+      { "name": "Case 5 — 월 보수 1000만 (NP 상한)", "input": { "monthlySalary": 10000000 }, "expected": { "nationalPension": 265500, "healthInsurance": 354500, "longTermCare": 45908, "employmentInsurance": 90000, "total": 755908 } }
+    ]
+  },
+  "guide": {
+    "howToUse": "월 보수(세전)를 입력하면 4대보험 본인부담분이 항목별로 산출됩니다. 회사 부담은 별도(보통 본인과 동일).",
+    "tips": [
+      "국민연금은 월 보수 590만원까지만 부과 (상한).",
+      "건강보험은 상한 없이 비례 부과.",
+      "고용보험은 실업급여분(0.9%)만 본인 부담."
+    ]
+  },
+  "related": ["salary-net-pay", "national-pension", "unemployment-benefit"]
+}

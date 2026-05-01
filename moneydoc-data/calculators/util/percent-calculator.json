@@ -1,0 +1,32 @@
+{
+  "id": "percent-calculator", "category": "util", "subCategory": "math",
+  "title": "퍼센트 계산기", "subtitle": "% 계산 4가지 모드 (전체 중 일부 / 비율 / 증감률 / 증감 후)",
+  "slug": "percent-calculator",
+  "searchAliases": ["퍼센트 계산기", "% 계산기", "비율 계산기", "할인율 계산기"],
+  "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "표준 산식", "document": "수학 기본 공식", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "percentOf", "expr": "A의 B% = A × B / 100" },
+    { "step": 2, "name": "ratio", "expr": "A는 B의 몇 % = A / B × 100" },
+    { "step": 3, "name": "increase", "expr": "A→B 증감률 = (B-A) / A × 100" },
+    { "step": 4, "name": "afterIncrease", "expr": "A에서 B% 증가 = A × (1 + B/100)" }
+  ],
+  "inputs": [
+    { "id": "mode", "label": "계산 모드", "type": "select", "options": ["percentOf", "ratio", "increase", "afterIncrease"], "default": "percentOf" },
+    { "id": "a", "label": "값 A", "type": "number", "default": 100000 },
+    { "id": "b", "label": "값 B", "type": "number", "default": 15 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "수학 기본 산식.",
+    "cases": [
+      { "name": "Case 1 — 5만의 15%", "input": { "mode": "percentOf", "a": 50000, "b": 15 }, "expected": { "result": 7500 } },
+      { "name": "Case 2 — 3만은 20만의 몇 %", "input": { "mode": "ratio", "a": 30000, "b": 200000 }, "expected": { "result": 15 } },
+      { "name": "Case 3 — 10만 → 13만 증감률", "input": { "mode": "increase", "a": 100000, "b": 130000 }, "expected": { "result": 30 } },
+      { "name": "Case 4 — 10만에서 25% 증가", "input": { "mode": "afterIncrease", "a": 100000, "b": 25 }, "expected": { "result": 125000 } },
+      { "name": "Case 5 — 100만의 7.5%", "input": { "mode": "percentOf", "a": 1000000, "b": 7.5 }, "expected": { "result": 75000 } }
+    ]
+  },
+  "guide": { "howToUse": "4가지 모드 중 선택 후 두 값 입력.", "tips": ["할인율: 정상가 → 할인가 = increase 모드 (음수 결과)", "세금 포함가: afterIncrease로 부가세 10% 가산 가능"] },
+  "related": ["date-calculator"]
+}

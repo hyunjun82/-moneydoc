@@ -1,0 +1,69 @@
+{
+  "id": "inheritance-tax",
+  "category": "tax",
+  "subCategory": "estate",
+  "title": "상속세 계산기",
+  "subtitle": "상속세 및 증여세법 §26 누진세율 + 일괄/배우자공제",
+  "slug": "inheritance-tax",
+  "searchAliases": ["상속세 계산기"],
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "국세청",
+      "document": "상속세 및 증여세법",
+      "year": 2026,
+      "laws": [
+        "상증법 제26조 (세율)",
+        "상증법 제18조 (기초공제·인적공제·일괄공제)",
+        "상증법 제19조 (배우자공제)"
+      ]
+    },
+    "note": "배우자공제 정확 산식: min(30억, max(5억, 법정상속분)). 자녀·부모 수에 따라 법정상속분 자동 계산."
+  },
+  "constants": {
+    "BASIC_DEDUCTION": 500000000,
+    "SPOUSE_MIN": 500000000,
+    "SPOUSE_MAX": 3000000000
+  },
+  "tables": {
+    "brackets": {
+      "brackets": [
+        { "upperBound": 100000000, "rate": 0.10, "progressiveDeduction": 0 },
+        { "upperBound": 500000000, "rate": 0.20, "progressiveDeduction": 10000000 },
+        { "upperBound": 1000000000, "rate": 0.30, "progressiveDeduction": 60000000 },
+        { "upperBound": 3000000000, "rate": 0.40, "progressiveDeduction": 160000000 },
+        { "upperBound": null, "rate": 0.50, "progressiveDeduction": 460000000 }
+      ]
+    }
+  },
+  "formula": [
+    { "step": 1, "name": "공제", "expr": "일괄공제 5억 + (배우자 있으면 5억)" },
+    { "step": 2, "name": "과세표준", "expr": "max(0, 상속재산 - 공제)" },
+    { "step": 3, "name": "산출세액", "expr": "과세표준 × 세율 - 누진공제" }
+  ],
+  "inputs": [
+    { "id": "totalEstate", "label": "상속재산 총액", "type": "currency", "min": 0, "default": 1500000000 },
+    { "id": "hasSpouse", "label": "배우자 있음", "type": "boolean", "default": true },
+    { "id": "children", "label": "자녀 수", "type": "stepper", "min": 0, "max": 10, "default": 2 },
+    { "id": "parents", "label": "부모 수 (자녀 없을 때)", "type": "stepper", "min": 0, "max": 2, "default": 0 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "상증법 §26, §18, §19 정확 산식. 배우자공제 = min(30억, max(5억, 법정상속분)).",
+    "cases": [
+      { "name": "Case 1 — 5억, 배우자 X, 자녀 2", "input": { "totalEstate": 500000000, "hasSpouse": false, "children": 2, "parents": 0 }, "expected": { "deduction": 500000000, "spouseDeduction": 0, "taxableBase": 0, "tax": 0 } },
+      { "name": "Case 2 — 10억, 배우자 O, 자녀 2 (배우자공제 5억 최소)", "input": { "totalEstate": 1000000000, "hasSpouse": true, "children": 2, "parents": 0 }, "expected": { "deduction": 1000000000, "spouseDeduction": 500000000, "taxableBase": 0, "tax": 0 } },
+      { "name": "Case 3 — 15억, 배우자 O, 자녀 2 (배우자 6.43억)", "input": { "totalEstate": 1500000000, "hasSpouse": true, "children": 2, "parents": 0 }, "expected": { "deduction": 1142857143, "spouseDeduction": 642857143, "taxableBase": 357142857, "tax": 61428571 } },
+      { "name": "Case 4 — 30억, 배우자 O, 자녀 2 (배우자 12.86억)", "input": { "totalEstate": 3000000000, "hasSpouse": true, "children": 2, "parents": 0 }, "expected": { "deduction": 1785714286, "spouseDeduction": 1285714286, "taxableBase": 1214285714, "tax": 325714286 } },
+      { "name": "Case 5 — 50억, 배우자 O, 자녀 2 (배우자 21.43억)", "input": { "totalEstate": 5000000000, "hasSpouse": true, "children": 2, "parents": 0 }, "expected": { "deduction": 2642857143, "spouseDeduction": 2142857143, "taxableBase": 2357142857, "tax": 782857143 } }
+    ]
+  },
+  "guide": {
+    "howToUse": "상속재산 총액과 배우자 유무를 입력하면 상속세가 산출됩니다.",
+    "tips": ["배우자공제 최대 30억까지 가능 (실제 상속분 기준).", "10년 이상 동거주택 6억 추가공제.", "신고기한 6개월 내, 자진신고 시 3% 세액공제."]
+  },
+  "related": ["gift-tax", "comprehensive-income-tax"]
+}

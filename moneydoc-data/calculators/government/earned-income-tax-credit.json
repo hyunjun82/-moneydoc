@@ -1,0 +1,30 @@
+{
+  "id": "earned-income-tax-credit", "category": "government", "subCategory": "tax-credit",
+  "title": "근로장려금 자격·예상액 계산기",
+  "searchAliases": ["근로장려금 모의계산", "근로장려금 계산기", "EITC 모의계산"], "subtitle": "단독·외벌이·맞벌이 가구별 한도와 추정",
+  "slug": "earned-income-tax-credit", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "국세청", "document": "조세특례제한법 §100의3", "year": 2026 } },
+  "constants": {},
+  "tables": { "limits": { "single": { "income": 22000000, "max": 1650000 }, "single_earner": { "income": 32000000, "max": 2850000 }, "dual_earner": { "income": 38000000, "max": 3300000 } } },
+  "formula": [
+    { "step": 1, "name": "가구별 한도", "expr": "단독 2,200만/외벌이 3,200만/맞벌이 3,800만" },
+    { "step": 2, "name": "최대 지급액", "expr": "단독 165만/외벌이 285만/맞벌이 330만" },
+    { "step": 3, "name": "추정액", "expr": "소득에 따른 점증·점감 산식" }
+  ],
+  "inputs": [
+    { "id": "householdType", "label": "가구 유형", "type": "select", "options": ["single", "single_earner", "dual_earner"], "default": "single" },
+    { "id": "totalIncome", "label": "총소득 (연)", "type": "currency", "min": 0, "default": 20000000 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "조특법 §100의3. 점증→평탄→점감 3단계 산식 단순화 적용.",
+    "cases": [
+      { "name": "Case 1 — 단독 / 1천만", "input": { "householdType": "single", "totalIncome": 10000000 }, "expected": { "limit": 22000000, "maxAmount": 1650000, "isEligible": true, "estimatedAmount": 1500000 } },
+      { "name": "Case 2 — 외벌이 / 2,500만", "input": { "householdType": "single_earner", "totalIncome": 25000000 }, "expected": { "limit": 32000000, "maxAmount": 2850000, "isEligible": true, "estimatedAmount": 1246875 } },
+      { "name": "Case 3 — 맞벌이 / 3천만", "input": { "householdType": "dual_earner", "totalIncome": 30000000 }, "expected": { "limit": 38000000, "maxAmount": 3300000, "isEligible": true, "estimatedAmount": 1389474 } },
+      { "name": "Case 4 — 단독 / 2,500만 (한도 초과)", "input": { "householdType": "single", "totalIncome": 25000000 }, "expected": { "limit": 22000000, "maxAmount": 1650000, "isEligible": false, "estimatedAmount": 0 } },
+      { "name": "Case 5 — 맞벌이 / 1,500만", "input": { "householdType": "dual_earner", "totalIncome": 15000000 }, "expected": { "limit": 38000000, "maxAmount": 3300000, "isEligible": true, "estimatedAmount": 2605263 } }
+    ]
+  },
+  "guide": { "howToUse": "가구 유형과 총소득 입력 시 자격 + 예상 지급액 산출.", "tips": ["5월 정기신청 (정기) + 9월 반기신청.", "재산 합계 2.4억 이하.", "자녀장려금과 중복 가능."] },
+  "related": ["child-allowance", "comprehensive-income-tax"]
+}

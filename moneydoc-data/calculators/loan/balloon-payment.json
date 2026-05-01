@@ -1,0 +1,37 @@
+{
+  "id": "balloon-payment",
+  "category": "loan",
+  "subCategory": "repayment",
+  "title": "만기일시상환 계산기",
+  "subtitle": "매월 이자만 + 만기 원금 일시상환",
+  "slug": "balloon-payment",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "금융감독원", "document": "주택담보대출 상환 표준방식", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "월 이자", "expr": "round(principal × rate / 12)" },
+    { "step": 2, "name": "총 이자", "expr": "월이자 × 만기월수" },
+    { "step": 3, "name": "총 상환액", "expr": "원금 + 총이자" }
+  ],
+  "inputs": [
+    { "id": "principal", "label": "대출 원금", "type": "currency", "min": 1000000, "default": 100000000 },
+    { "id": "years", "label": "만기 (년)", "type": "number", "min": 1, "max": 30, "default": 1 },
+    { "id": "rate", "label": "연 금리", "type": "number", "min": 0.005, "max": 0.20, "step": 0.001, "default": 0.04 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "월 이자 = 원금 × 금리/12. 총이자 = 월이자 × 만기월수. 만기에 원금 일시 상환.",
+    "cases": [
+      { "name": "Case 1 — 1억 / 1년 / 4%", "input": { "principal": 100000000, "years": 1, "rate": 0.04 }, "expected": { "monthlyInterest": 333333, "totalInterest": 3999996, "totalPayment": 103999996 } },
+      { "name": "Case 2 — 5천만 / 2년 / 5%", "input": { "principal": 50000000, "years": 2, "rate": 0.05 }, "expected": { "monthlyInterest": 208333, "totalInterest": 4999992, "totalPayment": 54999992 } },
+      { "name": "Case 3 — 2억 / 3년 / 4.5%", "input": { "principal": 200000000, "years": 3, "rate": 0.045 }, "expected": { "monthlyInterest": 750000, "totalInterest": 27000000, "totalPayment": 227000000 } },
+      { "name": "Case 4 — 3천만 / 5년 / 4%", "input": { "principal": 30000000, "years": 5, "rate": 0.04 }, "expected": { "monthlyInterest": 100000, "totalInterest": 6000000, "totalPayment": 36000000 } },
+      { "name": "Case 5 — 1억5천 / 2년 / 5.5%", "input": { "principal": 150000000, "years": 2, "rate": 0.055 }, "expected": { "monthlyInterest": 687500, "totalInterest": 16500000, "totalPayment": 166500000 } }
+    ]
+  },
+  "guide": { "howToUse": "원금·만기·금리 입력 시 매월 이자와 만기 일시상환 총액 산출.", "tips": ["만기에 큰 원금 부담 → 자금계획 필수.", "주로 단기 대출 (1~5년)에 사용.", "원리금균등 대비 총 이자 더 큼."] },
+  "related": ["loan-amortization", "loan-decline"]
+}

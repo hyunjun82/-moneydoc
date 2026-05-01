@@ -1,0 +1,32 @@
+{
+  "id": "savings-vs-fund", "category": "simulator", "subCategory": "investment",
+  "title": "적금 vs 예금 vs 펀드 수익 비교", "subtitle": "동일 원금 기준 세후 수익 비교",
+  "slug": "savings-vs-fund", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "표준 금융 산식", "document": "FV 비교 모델", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "적금 (월적립 복리)", "expr": "월 × ((1+r/12)^n - 1) / (r/12)" },
+    { "step": 2, "name": "예금 (단리)", "expr": "원금 × (1 + r×t)" },
+    { "step": 3, "name": "펀드 (연복리)", "expr": "원금 × (1+수익률)^t" },
+    { "step": 4, "name": "각각 이자소득세 15.4% 차감" }
+  ],
+  "inputs": [
+    { "id": "monthlyDeposit", "label": "월 적립", "type": "currency", "default": 500000 },
+    { "id": "principal", "label": "원금 (예금/펀드)", "type": "currency", "default": 12000000 },
+    { "id": "months", "label": "기간 (월)", "type": "number", "default": 24 },
+    { "id": "rate", "label": "적금/예금 이율", "type": "number", "default": 0.04 },
+    { "id": "fundReturn", "label": "펀드 연 수익률", "type": "number", "default": 0.06 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "각 상품별 표준 산식 + 15.4% 세금 차감.",
+    "cases": [
+      { "name": "Case 1 — 월 50만 적립 vs 1,200만 / 24개월 / 4% / 펀드 6%", "input": { "monthlyDeposit": 500000, "principal": 12000000, "months": 24, "rate": 0.040, "fundReturn": 0.060 }, "expected": { "savingsNet": 12398842, "fixedNet": 12812160, "fundNet": 13254787 } },
+      { "name": "Case 2 — 월 100만 vs 6천만 / 60개월 / 4.5% / 7%", "input": { "monthlyDeposit": 1000000, "principal": 60000000, "months": 60, "rate": 0.045, "fundReturn": 0.070 }, "expected": { "savingsNet": 66045137, "fixedNet": 71421000, "fundNet": 80433526 } },
+      { "name": "Case 3 — 월 30만 vs 1,080만 / 36개월 / 3.8% / 5%", "input": { "monthlyDeposit": 300000, "principal": 10800000, "months": 36, "rate": 0.038, "fundReturn": 0.050 }, "expected": { "savingsNet": 11324987, "fixedNet": 11841595, "fundNet": 12240188 } },
+      { "name": "Case 4 — 월 70만 vs 3,360만 / 48개월 / 4% / 8%", "input": { "monthlyDeposit": 700000, "principal": 33600000, "months": 48, "rate": 0.040, "fundReturn": 0.080 }, "expected": { "savingsNet": 35944876, "fixedNet": 38148096, "fundNet": 43847115 } },
+      { "name": "Case 5 — 월 20만 vs 1,200만 / 60개월 / 3.5% / 6%", "input": { "monthlyDeposit": 200000, "principal": 12000000, "months": 60, "rate": 0.035, "fundReturn": 0.060 }, "expected": { "savingsNet": 12924866, "fixedNet": 13776600, "fundNet": 15433666 } }
+    ]
+  },
+  "guide": { "howToUse": "월 적립·원금·기간·이율 입력 시 적금/예금/펀드 세후 수익 비교.", "tips": ["펀드 수익률은 가정치, 실제는 변동.", "리스크 고려한 분산 추천.", "ISA 활용 시 비과세 혜택 추가."] },
+  "related": ["compound-savings", "fixed-deposit"]
+}

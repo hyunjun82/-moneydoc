@@ -1,0 +1,91 @@
+{
+  "id": "youth-leap-account",
+  "category": "savings",
+  "subCategory": "youth",
+  "title": "청년도약계좌 만기 시뮬레이터",
+  "subtitle": "5년 적립 + 정부 기여금 + 비과세 이자",
+  "slug": "youth-leap-account",
+  "searchAliases": ["청년도약계좌 계산기", "청년도약계좌 만기수령액"],
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "서민금융진흥원",
+      "document": "청년도약계좌 운영지침",
+      "year": 2026,
+      "laws": [
+        "조세특례제한법 §91-22 (청년도약계좌 비과세)"
+      ]
+    },
+    "note": "정부 기여금 비율 및 한도는 2024년 기준. 이자는 시중은행 평균 적용 (변동 가능)."
+  },
+  "constants": {
+    "MONTHS": 60
+  },
+  "tables": {
+    "governmentMatching": {
+      "description": "총급여 구간별 정부 기여금 (서민금융진흥원 고시)",
+      "brackets": [
+        { "incomeUpper": 24000000, "rate": 0.060, "limit": 24000 },
+        { "incomeUpper": 36000000, "rate": 0.046, "limit": 23000 },
+        { "incomeUpper": 48000000, "rate": 0.037, "limit": 22200 },
+        { "incomeUpper": 60000000, "rate": 0.030, "limit": 21000 },
+        { "incomeUpper": null, "rate": 0, "limit": 0 }
+      ]
+    }
+  },
+  "formula": [
+    { "step": 1, "name": "본인 납입 총액", "expr": "monthlyDeposit × 60" },
+    { "step": 2, "name": "월 정부 기여금", "expr": "min(monthlyDeposit × matchingRate, matchingLimit)" },
+    { "step": 3, "name": "정부 기여금 총액", "expr": "monthlyMatch × 60" },
+    { "step": 4, "name": "이자 (월적립 단리, 비과세)", "expr": "(monthlyDeposit + monthlyMatch) × interestRate / 12 × 60 × 61 / 2" },
+    { "step": 5, "name": "만기 수령액", "expr": "본인 총 + 정부 총 + 이자" }
+  ],
+  "inputs": [
+    { "id": "monthlyDeposit", "label": "월 납입금", "type": "currency", "min": 100000, "max": 700000, "step": 10000, "default": 700000 },
+    { "id": "annualIncome", "label": "총급여", "type": "currency", "min": 0, "max": 100000000, "default": 30000000 },
+    { "id": "interestRate", "label": "은행 적용 이자율 (연)", "type": "number", "min": 0.01, "max": 0.10, "step": 0.001, "default": 0.038 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "서민금융진흥원 정부기여금 산식 + 월적립 단리 비과세 이자 산식 직접 적용",
+    "cases": [
+      {
+        "name": "Case 1 — 월 70만, 총급여 2,400만 이하 (6.0%, 한도 24,000), 이율 3.8%",
+        "input": { "monthlyDeposit": 700000, "annualIncome": 24000000, "interestRate": 0.038 },
+        "expected": { "monthlyMatching": 24000, "ownTotal": 42000000, "matchingTotal": 1440000, "interest": 4195580, "maturity": 47635580 }
+      },
+      {
+        "name": "Case 2 — 월 50만, 총급여 5천만 (3.0%, 한도 21,000), 이율 3.8%",
+        "input": { "monthlyDeposit": 500000, "annualIncome": 50000000, "interestRate": 0.038 },
+        "expected": { "monthlyMatching": 15000, "ownTotal": 30000000, "matchingTotal": 900000, "interest": 2984425, "maturity": 33884425 }
+      },
+      {
+        "name": "Case 3 — 월 70만, 총급여 7천만 (구간 외, 이자만), 이율 3.8%",
+        "input": { "monthlyDeposit": 700000, "annualIncome": 70000000, "interestRate": 0.038 },
+        "expected": { "monthlyMatching": 0, "ownTotal": 42000000, "matchingTotal": 0, "interest": 4056500, "maturity": 46056500 }
+      },
+      {
+        "name": "Case 4 — 월 30만, 총급여 3천만 (4.6%, 한도 23,000), 이율 4.0%",
+        "input": { "monthlyDeposit": 300000, "annualIncome": 30000000, "interestRate": 0.040 },
+        "expected": { "monthlyMatching": 13800, "ownTotal": 18000000, "matchingTotal": 828000, "interest": 1914180, "maturity": 20742180 }
+      },
+      {
+        "name": "Case 5 — 월 70만, 총급여 4천만 (3.7%, 한도 22,200), 이율 5.0%",
+        "input": { "monthlyDeposit": 700000, "annualIncome": 40000000, "interestRate": 0.050 },
+        "expected": { "monthlyMatching": 22200, "ownTotal": 42000000, "matchingTotal": 1332000, "interest": 5506775, "maturity": 48838775 }
+      }
+    ]
+  },
+  "guide": {
+    "howToUse": "월 납입금(10만~70만), 총급여(정부 기여금 결정), 은행 적용 이자율을 입력하면 5년 만기 수령액이 산출됩니다. 본인 납입 + 정부 기여금 + 이자(비과세)가 합산되어 표시됩니다.",
+    "tips": [
+      "총급여 6,000만원 초과 시 정부 기여금 X (이자만 비과세 혜택).",
+      "중도해지 시 정부 기여금 회수 + 이자 비과세 X (소득세 부과).",
+      "만 19~34세 청년 + 가구소득 중위 250% 이하만 가입 가능."
+    ]
+  },
+  "related": ["youth-hope-deposit", "isa-tax-saving"]
+}

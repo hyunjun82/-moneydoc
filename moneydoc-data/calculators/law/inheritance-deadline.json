@@ -1,0 +1,28 @@
+{
+  "id": "inheritance-deadline", "category": "law", "subCategory": "estate",
+  "title": "상속포기·한정승인 기한 계산기", "subtitle": "사망일로부터 3개월 (민법 §1019)",
+  "slug": "inheritance-deadline", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "대법원", "document": "민법 §1019 (승인·포기 기간)", "year": 2026 } },
+  "constants": { "MONTHS_LIMIT": 3 },
+  "formula": [
+    { "step": 1, "name": "기한", "expr": "사망일 + 3개월" },
+    { "step": 2, "name": "잔여 일수", "expr": "기한 - 오늘" },
+    { "step": 3, "name": "만료 여부", "expr": "잔여 < 0이면 만료" }
+  ],
+  "inputs": [
+    { "id": "deathDate", "label": "사망일", "type": "date", "default": "2026-04-01" },
+    { "id": "todayDate", "label": "기준일 (오늘)", "type": "date", "default": "2026-04-30" }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "민법 §1019. 사망일로부터 3개월. 단, 상속개시 사실을 안 날부터 기산.",
+    "cases": [
+      { "name": "Case 1 — 사망 2026-04-01 / 오늘 2026-04-30", "input": { "deathDate": "2026-04-01", "todayDate": "2026-04-30" }, "expected": { "deadline": "2026-07-01", "remainingDays": 62, "isExpired": false } },
+      { "name": "Case 2 — 사망 2026-01-15 (만료)", "input": { "deathDate": "2026-01-15", "todayDate": "2026-04-30" }, "expected": { "deadline": "2026-04-15", "remainingDays": -15, "isExpired": true } },
+      { "name": "Case 3 — 사망 2026-04-30 (오늘)", "input": { "deathDate": "2026-04-30", "todayDate": "2026-04-30" }, "expected": { "deadline": "2026-07-30", "remainingDays": 91, "isExpired": false } },
+      { "name": "Case 4 — 사망 2026-03-01", "input": { "deathDate": "2026-03-01", "todayDate": "2026-04-30" }, "expected": { "deadline": "2026-06-01", "remainingDays": 32, "isExpired": false } },
+      { "name": "Case 5 — 사망 2026-02-15", "input": { "deathDate": "2026-02-15", "todayDate": "2026-04-30" }, "expected": { "deadline": "2026-05-15", "remainingDays": 15, "isExpired": false } }
+    ]
+  },
+  "guide": { "howToUse": "사망일과 기준일 입력 시 한정승인·상속포기 기한 산출.", "tips": ["3개월 경과 후 단순승인 의제 (모든 채무 상속).", "특별한정승인: 채무가 적극재산 초과 사실을 안 날부터 3개월.", "가정법원 신고로 진행."] },
+  "related": ["inheritance-tax", "inheritance-share"]
+}

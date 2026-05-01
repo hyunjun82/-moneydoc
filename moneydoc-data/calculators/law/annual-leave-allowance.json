@@ -1,0 +1,28 @@
+{
+  "id": "annual-leave-allowance", "category": "law", "subCategory": "labor",
+  "title": "연차수당 계산기", "subtitle": "월급 / 209시간 × 8시간 × 미사용 일수",
+  "slug": "annual-leave-allowance", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "고용노동부", "document": "근로기준법 §60 + 시행령 §33", "year": 2026 } },
+  "constants": { "MONTHLY_HOURS": 209, "DAILY_HOURS": 8 },
+  "formula": [
+    { "step": 1, "name": "시급", "expr": "round(월급 / 209)" },
+    { "step": 2, "name": "일급", "expr": "시급 × 8" },
+    { "step": 3, "name": "연차수당", "expr": "일급 × 미사용 일수" }
+  ],
+  "inputs": [
+    { "id": "monthlySalary", "label": "월 통상임금", "type": "currency", "min": 1000000, "default": 3000000 },
+    { "id": "unusedDays", "label": "미사용 연차 일수", "type": "number", "min": 0, "max": 30, "default": 5 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "근기법 §60 시행령 §33. 월 209시간 (40h × 4.345주) 기준.",
+    "cases": [
+      { "name": "Case 1 — 월 300만 / 5일 미사용", "input": { "monthlySalary": 3000000, "unusedDays": 5 }, "expected": { "hourlyWage": 14354, "dailyWage": 114832, "allowance": 574160 } },
+      { "name": "Case 2 — 월 400만 / 10일", "input": { "monthlySalary": 4000000, "unusedDays": 10 }, "expected": { "hourlyWage": 19139, "dailyWage": 153112, "allowance": 1531120 } },
+      { "name": "Case 3 — 월 250만 / 8일", "input": { "monthlySalary": 2500000, "unusedDays": 8 }, "expected": { "hourlyWage": 11962, "dailyWage": 95696, "allowance": 765568 } },
+      { "name": "Case 4 — 월 500만 / 15일", "input": { "monthlySalary": 5000000, "unusedDays": 15 }, "expected": { "hourlyWage": 23923, "dailyWage": 191384, "allowance": 2870760 } },
+      { "name": "Case 5 — 월 350만 / 3일", "input": { "monthlySalary": 3500000, "unusedDays": 3 }, "expected": { "hourlyWage": 16746, "dailyWage": 133968, "allowance": 401904 } }
+    ]
+  },
+  "guide": { "howToUse": "월 통상임금과 미사용 연차 일수 입력 시 연차수당 산출.", "tips": ["연차 발생: 1년 미만 매월 1일, 1년 이상 15일 + 매 2년마다 1일 추가 (한도 25일).", "통상임금 = 기본급 + 정기 상여금.", "사용촉진제 적용 시 미사용 연차수당 청구 X."] },
+  "related": ["severance-pay", "salary-net-pay"]
+}

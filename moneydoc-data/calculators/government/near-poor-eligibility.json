@@ -1,0 +1,33 @@
+{
+  "id": "near-poor-eligibility", "category": "government", "subCategory": "welfare",
+  "title": "차상위계층 자격 모의계산", "subtitle": "중위소득 50% 이하 가구 판정",
+  "slug": "near-poor-eligibility",
+  "searchAliases": ["차상위계층 모의계산", "차상위 모의계산", "차상위 자격 계산"],
+  "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "보건복지부", "document": "국민기초생활 보장법 시행령", "year": 2024 } },
+  "constants": {},
+  "tables": {
+    "median100": { "1": 2228445, "2": 3682609, "3": 4714657, "4": 5729913, "5": 6695735, "6": 7618369 }
+  },
+  "formula": [
+    { "step": 1, "name": "기준 (중위 50%)", "expr": "round(가구원수별 중위 100% × 0.50)" },
+    { "step": 2, "name": "자격", "expr": "소득인정액 ≤ 기준" },
+    { "step": 3, "name": "본인 비율", "expr": "(소득 / 중위100%) × 100" }
+  ],
+  "inputs": [
+    { "id": "householdSize", "label": "가구원 수", "type": "stepper", "min": 1, "max": 6, "default": 1 },
+    { "id": "incomeAmount", "label": "소득인정액 (월)", "type": "currency", "min": 0, "default": 800000 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "기준중위소득 50% 자동 산출. 보건복지부 2024 고시.",
+    "cases": [
+      { "name": "Case 1 — 1인 / 80만 (자격 O)", "input": { "householdSize": 1, "incomeAmount": 800000 }, "expected": { "threshold": 1114223, "isEligible": true, "incomePct": 35.9 } },
+      { "name": "Case 2 — 2인 / 150만", "input": { "householdSize": 2, "incomeAmount": 1500000 }, "expected": { "threshold": 1841305, "isEligible": true, "incomePct": 40.7 } },
+      { "name": "Case 3 — 3인 / 250만", "input": { "householdSize": 3, "incomeAmount": 2500000 }, "expected": { "threshold": 2357329, "isEligible": false, "incomePct": 53 } },
+      { "name": "Case 4 — 4인 / 300만", "input": { "householdSize": 4, "incomeAmount": 3000000 }, "expected": { "threshold": 2864957, "isEligible": false, "incomePct": 52.4 } },
+      { "name": "Case 5 — 4인 / 400만", "input": { "householdSize": 4, "incomeAmount": 4000000 }, "expected": { "threshold": 2864957, "isEligible": false, "incomePct": 69.8 } }
+    ]
+  },
+  "guide": { "howToUse": "가구원수와 소득인정액 입력 시 차상위계층 자격 판정.", "tips": ["차상위계층 혜택: 통신비 감면, 전기료 감면, 의료비 등.", "주민센터 신청 → 소득·재산 조사."] },
+  "related": ["basic-livelihood-eligibility", "median-income"]
+}

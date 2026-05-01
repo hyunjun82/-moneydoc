@@ -1,0 +1,26 @@
+{
+  "id": "transfer-tax-adjusted", "category": "realestate", "subCategory": "tax",
+  "title": "양도세 조정대상지역 다주택 (추가세율) 계산기", "subtitle": "기본 누진 + 2주택 +20%p / 3주택+ +30%p",
+  "slug": "transfer-tax-adjusted", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "국세청", "document": "소득세법 §104의2", "year": 2026 }, "note": "정부 정책에 따라 한시적 완화 적용 가능. 본 계산기는 기본 추가세율 적용 모델." },
+  "constants": { "BASIC_DEDUCTION": 2500000, "LOCAL_TAX_RATE": 0.10 },
+  "tables": { "incomeTaxBrackets": { "brackets": [{"upperBound": 14000000, "rate": 0.06, "progressiveDeduction": 0}, {"upperBound": 50000000, "rate": 0.15, "progressiveDeduction": 1260000}, {"upperBound": 88000000, "rate": 0.24, "progressiveDeduction": 5760000}, {"upperBound": 150000000, "rate": 0.35, "progressiveDeduction": 15440000}, {"upperBound": 300000000, "rate": 0.38, "progressiveDeduction": 19940000}, {"upperBound": 500000000, "rate": 0.40, "progressiveDeduction": 25940000}, {"upperBound": 1000000000, "rate": 0.42, "progressiveDeduction": 35940000}, {"upperBound": null, "rate": 0.45, "progressiveDeduction": 65940000}] } },
+  "inputs": [
+    { "id": "salePrice", "label": "양도가액", "type": "currency", "default": 800000000 },
+    { "id": "acquisitionPrice", "label": "취득가액", "type": "currency", "default": 500000000 },
+    { "id": "holdingYears", "label": "보유연수", "type": "number", "default": 5 },
+    { "id": "houseCount", "label": "보유 주택 수 (조정대상지역)", "type": "stepper", "min": 2, "max": 5, "default": 2 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "기본 누진 + 2주택 +20%p, 3주택+ +30%p 추가세율.",
+    "cases": [
+      { "name": "Case 1 — 양도 8억 / 취득 5억 / 보유 5년 / 2주택", "input": { "salePrice": 800000000, "acquisitionPrice": 500000000, "holdingYears": 5, "houseCount": 2 }, "expected": { "gain": 300000000, "ltbcRate": 0.10, "incomeAmount": 270000000, "taxableBase": 267500000, "baseTax": 81710000, "surcharge": 53500000, "totalIncomeTax": 135210000, "localTax": 13521000, "totalTax": 148731000 } },
+      { "name": "Case 2 — 양도 10억 / 취득 6억 / 보유 10년 / 3주택", "input": { "salePrice": 1000000000, "acquisitionPrice": 600000000, "holdingYears": 10, "houseCount": 3 }, "expected": { "gain": 400000000, "ltbcRate": 0.20, "incomeAmount": 320000000, "taxableBase": 317500000, "baseTax": 101060000, "surcharge": 95250000, "totalIncomeTax": 196310000, "localTax": 19631000, "totalTax": 215941000 } },
+      { "name": "Case 3 — 양도 6억 / 취득 4억 / 보유 3년 / 2주택", "input": { "salePrice": 600000000, "acquisitionPrice": 400000000, "holdingYears": 3, "houseCount": 2 }, "expected": { "gain": 200000000, "ltbcRate": 0.06, "incomeAmount": 188000000, "taxableBase": 185500000, "baseTax": 50550000, "surcharge": 37100000, "totalIncomeTax": 87650000, "localTax": 8765000, "totalTax": 96415000 } },
+      { "name": "Case 4 — 양도 15억 / 취득 8억 / 보유 15년 / 3주택", "input": { "salePrice": 1500000000, "acquisitionPrice": 800000000, "holdingYears": 15, "houseCount": 3 }, "expected": { "gain": 700000000, "ltbcRate": 0.30, "incomeAmount": 490000000, "taxableBase": 487500000, "baseTax": 169060000, "surcharge": 146250000, "totalIncomeTax": 315310000, "localTax": 31531000, "totalTax": 346841000 } },
+      { "name": "Case 5 — 양도 5억 / 취득 3억 / 보유 5년 / 4주택", "input": { "salePrice": 500000000, "acquisitionPrice": 300000000, "holdingYears": 5, "houseCount": 4 }, "expected": { "gain": 200000000, "ltbcRate": 0.10, "incomeAmount": 180000000, "taxableBase": 177500000, "baseTax": 47510000, "surcharge": 53250000, "totalIncomeTax": 100760000, "localTax": 10076000, "totalTax": 110836000 } }
+    ]
+  },
+  "guide": { "howToUse": "양도가액·취득가액·보유연수·주택수 입력 시 추가세율 포함 양도세 산출.", "tips": ["추가세율 한시적 완화 정책 변동 가능 (정부 발표 확인).", "다주택자 LBC 일반표 (30% 한도)."] },
+  "related": ["transfer-tax-1home", "transfer-tax-multi"]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "freelancer-tax",
+  "category": "tax",
+  "subCategory": "income",
+  "title": "프리랜서 3.3% 원천징수 계산기",
+  "subtitle": "사업소득 원천징수 3% + 지방세 0.3%",
+  "slug": "freelancer-tax",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "국세청", "document": "소득세법 §129 (기타사업소득 원천징수)", "year": 2026 } },
+  "constants": { "INCOME_TAX_RATE": 0.03, "LOCAL_TAX_RATE": 0.003 },
+  "formula": [
+    { "step": 1, "name": "소득세", "expr": "지급액 × 3%" },
+    { "step": 2, "name": "지방소득세", "expr": "지급액 × 0.3%" },
+    { "step": 3, "name": "총 원천징수", "expr": "소득세 + 지방세 = 3.3%" },
+    { "step": 4, "name": "실수령", "expr": "지급액 - 원천징수" }
+  ],
+  "inputs": [
+    { "id": "grossPayment", "label": "지급액 (세전)", "type": "currency", "min": 0, "default": 3000000 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "소득세법 §129. 사업소득 원천징수 3% + 지방세 0.3% = 3.3%.",
+    "cases": [
+      { "name": "Case 1 — 100만", "input": { "grossPayment": 1000000 }, "expected": { "incomeTax": 30000, "localTax": 3000, "totalTax": 33000, "netPayment": 967000 } },
+      { "name": "Case 2 — 300만", "input": { "grossPayment": 3000000 }, "expected": { "incomeTax": 90000, "localTax": 9000, "totalTax": 99000, "netPayment": 2901000 } },
+      { "name": "Case 3 — 500만", "input": { "grossPayment": 5000000 }, "expected": { "incomeTax": 150000, "localTax": 15000, "totalTax": 165000, "netPayment": 4835000 } },
+      { "name": "Case 4 — 1천만", "input": { "grossPayment": 10000000 }, "expected": { "incomeTax": 300000, "localTax": 30000, "totalTax": 330000, "netPayment": 9670000 } },
+      { "name": "Case 5 — 50만", "input": { "grossPayment": 500000 }, "expected": { "incomeTax": 15000, "localTax": 1500, "totalTax": 16500, "netPayment": 483500 } }
+    ]
+  },
+  "guide": { "howToUse": "지급액 입력 시 3.3% 원천징수 + 실수령 산출.", "tips": ["프리랜서는 5월 종합소득세 신고로 환급 가능.", "필요경비 인정 시 환급액 큼.", "단순경비율 적용 시 무서류 신고 가능."] },
+  "related": ["comprehensive-income-tax", "daily-wage-tax"]
+}

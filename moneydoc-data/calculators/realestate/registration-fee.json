@@ -1,0 +1,35 @@
+{
+  "id": "registration-fee",
+  "category": "realestate",
+  "subCategory": "transaction",
+  "title": "등기비용 계산기",
+  "subtitle": "등록면허세 0.8% + 지방교육세 0.16%",
+  "slug": "registration-fee",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "행정안전부", "document": "지방세법 §28 (등록면허세)", "year": 2026 } },
+  "constants": { "REG_RATE": 0.008, "EDU_RATE": 0.20 },
+  "formula": [
+    { "step": 1, "name": "등록면허세", "expr": "round(가액 × 0.8%)" },
+    { "step": 2, "name": "지방교육세", "expr": "round(등록면허세 × 20%)" },
+    { "step": 3, "name": "총 비용", "expr": "등록면허세 + 지방교육세" }
+  ],
+  "inputs": [
+    { "id": "price", "label": "매매가/등기 대상 가액", "type": "currency", "min": 50000000, "default": 500000000 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "지방세법 §28 (등록면허세 0.8%) + §151 (지방교육세 = 등록면허세 × 20%).",
+    "cases": [
+      { "name": "Case 1 — 5억", "input": { "price": 500000000 }, "expected": { "registrationTax": 4000000, "educationTax": 800000, "totalFee": 4800000 } },
+      { "name": "Case 2 — 10억", "input": { "price": 1000000000 }, "expected": { "registrationTax": 8000000, "educationTax": 1600000, "totalFee": 9600000 } },
+      { "name": "Case 3 — 3억", "input": { "price": 300000000 }, "expected": { "registrationTax": 2400000, "educationTax": 480000, "totalFee": 2880000 } },
+      { "name": "Case 4 — 7억", "input": { "price": 700000000 }, "expected": { "registrationTax": 5600000, "educationTax": 1120000, "totalFee": 6720000 } },
+      { "name": "Case 5 — 15억", "input": { "price": 1500000000 }, "expected": { "registrationTax": 12000000, "educationTax": 2400000, "totalFee": 14400000 } }
+    ]
+  },
+  "guide": { "howToUse": "매매가 입력 시 등기비용(등록면허세 + 지방교육세) 산출.", "tips": ["취득세와 함께 별도 납부.", "법무사 수수료(20~50만)는 별도.", "국민주택채권 매입비 별도 발생 가능."] },
+  "related": ["acquisition-tax", "brokerage-fee"]
+}

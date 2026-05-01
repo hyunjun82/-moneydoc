@@ -1,0 +1,37 @@
+{
+  "id": "tax-free-savings",
+  "category": "savings",
+  "subCategory": "deposit",
+  "title": "비과세종합저축 계산기",
+  "subtitle": "1인당 5천만 한도 비과세 적금",
+  "slug": "tax-free-savings",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "국세청", "document": "조세특례제한법 §88-2", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "원금", "expr": "monthlyDeposit × months" },
+    { "step": 2, "name": "이자 (단리, 비과세)", "expr": "monthlyDeposit × (rate/12) × months × (months+1) / 2" },
+    { "step": 3, "name": "만기", "expr": "원금 + 이자 (세금 0)" }
+  ],
+  "inputs": [
+    { "id": "monthlyDeposit", "label": "월 납입금", "type": "currency", "min": 10000, "default": 500000 },
+    { "id": "months", "label": "납입월수", "type": "number", "min": 1, "max": 600, "default": 36 },
+    { "id": "rate", "label": "연이율", "type": "number", "min": 0.001, "max": 0.10, "step": 0.001, "default": 0.04 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "월적립 단리 + 비과세 (조특법 §88-2). 1인당 5천만 한도.",
+    "cases": [
+      { "name": "Case 1 — 월 30만 × 60개월 × 3.5%", "input": { "monthlyDeposit": 300000, "months": 60, "rate": 0.035 }, "expected": { "principal": 18000000, "interest": 1601250, "maturity": 19601250 } },
+      { "name": "Case 2 — 월 100만 × 36개월 × 4.0%", "input": { "monthlyDeposit": 1000000, "months": 36, "rate": 0.040 }, "expected": { "principal": 36000000, "interest": 2220000, "maturity": 38220000 } },
+      { "name": "Case 3 — 월 50만 × 24개월 × 3.0%", "input": { "monthlyDeposit": 500000, "months": 24, "rate": 0.030 }, "expected": { "principal": 12000000, "interest": 375000, "maturity": 12375000 } },
+      { "name": "Case 4 — 월 70만 × 48개월 × 3.8%", "input": { "monthlyDeposit": 700000, "months": 48, "rate": 0.038 }, "expected": { "principal": 33600000, "interest": 2606800, "maturity": 36206800 } },
+      { "name": "Case 5 — 월 200만 × 24개월 × 4.5%", "input": { "monthlyDeposit": 2000000, "months": 24, "rate": 0.045 }, "expected": { "principal": 48000000, "interest": 2250000, "maturity": 50250000 } }
+    ]
+  },
+  "guide": { "howToUse": "65세 이상·장애인·국가유공자 등 비과세종합저축 가입 자격자가 사용. 1인당 5천만 한도까지 이자소득세 0원.", "tips": ["일반 적금 대비 동일 이자에서 15.4% 추가 수령.", "5천만 한도는 모든 비과세종합저축 합산."] },
+  "related": ["installment-savings", "fixed-deposit"]
+}

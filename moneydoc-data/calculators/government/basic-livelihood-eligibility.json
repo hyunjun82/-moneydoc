@@ -1,0 +1,35 @@
+{
+  "id": "basic-livelihood-eligibility", "category": "government", "subCategory": "welfare",
+  "title": "기초생활수급자 자격 모의계산", "subtitle": "생계 30% / 의료 40% / 주거 47% / 교육 50% 4종 급여 자격",
+  "slug": "basic-livelihood-eligibility",
+  "searchAliases": ["기초생활수급 모의계산", "기초수급자 자격"],
+  "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "보건복지부", "document": "국민기초생활 보장법 + 시행령", "year": 2024 } },
+  "constants": {},
+  "tables": {
+    "median100": { "1": 2228445, "2": 3682609, "3": 4714657, "4": 5729913, "5": 6695735, "6": 7618369 }
+  },
+  "formula": [
+    { "step": 1, "name": "생계급여 기준", "expr": "중위 100% × 30%" },
+    { "step": 2, "name": "의료급여 기준", "expr": "중위 100% × 40%" },
+    { "step": 3, "name": "주거급여 기준", "expr": "중위 100% × 47%" },
+    { "step": 4, "name": "교육급여 기준", "expr": "중위 100% × 50%" },
+    { "step": 5, "name": "자격", "expr": "소득인정액 ≤ 각 기준" }
+  ],
+  "inputs": [
+    { "id": "householdSize", "label": "가구원 수", "type": "stepper", "min": 1, "max": 6, "default": 1 },
+    { "id": "incomeAmount", "label": "소득인정액 (월)", "type": "currency", "min": 0, "default": 600000 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "기초생활보장법 시행령. 4종 급여 자격 기준 자동 판정.",
+    "cases": [
+      { "name": "Case 1 — 1인 / 60만 (4종 모두)", "input": { "householdSize": 1, "incomeAmount": 600000 }, "expected": { "median100": 2228445, "livelihood": { "threshold": 668534, "isEligible": true }, "medical": { "threshold": 891378, "isEligible": true }, "housing": { "threshold": 1047369, "isEligible": true }, "education": { "threshold": 1114223, "isEligible": true } } },
+      { "name": "Case 2 — 2인 / 110만 (4종)", "input": { "householdSize": 2, "incomeAmount": 1100000 }, "expected": { "median100": 3682609, "livelihood": { "threshold": 1104783, "isEligible": true }, "medical": { "threshold": 1473044, "isEligible": true }, "housing": { "threshold": 1730826, "isEligible": true }, "education": { "threshold": 1841305, "isEligible": true } } },
+      { "name": "Case 3 — 3인 / 150만 (생계 X, 나머지 O)", "input": { "householdSize": 3, "incomeAmount": 1500000 }, "expected": { "median100": 4714657, "livelihood": { "threshold": 1414397, "isEligible": false }, "medical": { "threshold": 1885863, "isEligible": true }, "housing": { "threshold": 2215889, "isEligible": true }, "education": { "threshold": 2357329, "isEligible": true } } },
+      { "name": "Case 4 — 4인 / 270만 (교육만 O)", "input": { "householdSize": 4, "incomeAmount": 2700000 }, "expected": { "median100": 5729913, "livelihood": { "threshold": 1718974, "isEligible": false }, "medical": { "threshold": 2291965, "isEligible": false }, "housing": { "threshold": 2693059, "isEligible": false }, "education": { "threshold": 2864957, "isEligible": true } } },
+      { "name": "Case 5 — 4인 / 350만 (모두 X)", "input": { "householdSize": 4, "incomeAmount": 3500000 }, "expected": { "median100": 5729913, "livelihood": { "threshold": 1718974, "isEligible": false }, "medical": { "threshold": 2291965, "isEligible": false }, "housing": { "threshold": 2693059, "isEligible": false }, "education": { "threshold": 2864957, "isEligible": false } } }
+    ]
+  },
+  "guide": { "howToUse": "가구원수와 소득인정액 입력 시 4종 급여(생계/의료/주거/교육) 자격 판정.", "tips": ["부양의무자 기준: 생계급여 일부 폐지, 의료급여만 일부 적용.", "재산 환산액도 소득인정액에 포함.", "복지로(bokjiro.go.kr) 정확 모의계산 가능."] },
+  "related": ["near-poor-eligibility", "median-income", "basic-pension"]
+}

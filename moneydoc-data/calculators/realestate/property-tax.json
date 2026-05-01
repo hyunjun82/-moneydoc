@@ -1,0 +1,58 @@
+{
+  "id": "property-tax",
+  "category": "realestate",
+  "subCategory": "tax",
+  "title": "재산세 계산기",
+  "searchAliases": ["재산세 계산기", "주택 재산세 계산"],
+  "subtitle": "지방세법 §111 주택 재산세 + 지방교육세",
+  "slug": "property-tax",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "행정안전부",
+      "document": "지방세법",
+      "year": 2026,
+      "laws": ["지방세법 제111조 (재산세 표준세율)", "지방세법 제151조 (지방교육세)"]
+    }
+  },
+  "constants": { "FAIR_MARKET_RATIO": 0.60, "EDUCATION_TAX_RATE": 0.20 },
+  "tables": {
+    "brackets": {
+      "description": "주택 재산세 누진세율 (과세표준 = 공시가 × 60%)",
+      "brackets": [
+        { "upperBound": 60000000, "rate": 0.001, "progressiveDeduction": 0 },
+        { "upperBound": 150000000, "rate": 0.0015, "progressiveDeduction": 30000 },
+        { "upperBound": 300000000, "rate": 0.0025, "progressiveDeduction": 180000 },
+        { "upperBound": null, "rate": 0.004, "progressiveDeduction": 630000 }
+      ]
+    }
+  },
+  "formula": [
+    { "step": 1, "name": "과세표준", "expr": "round(공시가 × 60%)" },
+    { "step": 2, "name": "재산세", "expr": "lookup brackets" },
+    { "step": 3, "name": "지방교육세", "expr": "재산세 × 20%" },
+    { "step": 4, "name": "총 납부", "expr": "재산세 + 지방교육세" }
+  ],
+  "inputs": [
+    { "id": "publicValue", "label": "주택공시가", "type": "currency", "min": 0, "default": 500000000 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "지방세법 §111 + §151 적용. 도시지역분 미포함.",
+    "cases": [
+      { "name": "Case 1 — 공시가 3억", "input": { "publicValue": 300000000 }, "expected": { "taxableBase": 180000000, "propertyTax": 270000, "educationTax": 54000, "totalTax": 324000 } },
+      { "name": "Case 2 — 공시가 5억", "input": { "publicValue": 500000000 }, "expected": { "taxableBase": 300000000, "propertyTax": 570000, "educationTax": 114000, "totalTax": 684000 } },
+      { "name": "Case 3 — 공시가 8억", "input": { "publicValue": 800000000 }, "expected": { "taxableBase": 480000000, "propertyTax": 1290000, "educationTax": 258000, "totalTax": 1548000 } },
+      { "name": "Case 4 — 공시가 1억", "input": { "publicValue": 100000000 }, "expected": { "taxableBase": 60000000, "propertyTax": 60000, "educationTax": 12000, "totalTax": 72000 } },
+      { "name": "Case 5 — 공시가 2억", "input": { "publicValue": 200000000 }, "expected": { "taxableBase": 120000000, "propertyTax": 150000, "educationTax": 30000, "totalTax": 180000 } }
+    ]
+  },
+  "guide": {
+    "howToUse": "주택공시가를 입력하면 재산세 + 지방교육세가 산출됩니다. 도시지역분(과세표준 × 0.14%)은 별도 부과.",
+    "tips": ["과세기준일 6월 1일, 7월·9월 분납.", "1주택자 시가표준 9억 이하: 공정시장가액비율 43% 적용 (2024년)."]
+  },
+  "related": ["acquisition-tax", "comprehensive-real-estate-tax"]
+}

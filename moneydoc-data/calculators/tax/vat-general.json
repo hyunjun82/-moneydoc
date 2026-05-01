@@ -1,0 +1,35 @@
+{
+  "id": "vat-general",
+  "category": "tax",
+  "subCategory": "business",
+  "title": "부가세 (일반과세자) 계산기",
+  "subtitle": "매출 부가세 - 매입 부가세 = 납부세액",
+  "slug": "vat-general",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "국세청", "document": "부가가치세법 §30, §38", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "납부세액", "expr": "매출세액 - 매입세액" },
+    { "step": 2, "name": "음수면", "expr": "환급 (다음 분기 또는 즉시)" }
+  ],
+  "inputs": [
+    { "id": "saleVat", "label": "매출 부가세 (10%)", "type": "currency", "min": 0, "default": 5000000 },
+    { "id": "purchaseVat", "label": "매입 부가세 (공제 대상)", "type": "currency", "min": 0, "default": 2000000 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "부가세법 §30 (납부세액 = 매출 - 매입). 음수면 환급.",
+    "cases": [
+      { "name": "Case 1 — 매출 100만 / 매입 30만", "input": { "saleVat": 1000000, "purchaseVat": 300000 }, "expected": { "payable": 700000 } },
+      { "name": "Case 2 — 매출 500만 / 매입 200만", "input": { "saleVat": 5000000, "purchaseVat": 2000000 }, "expected": { "payable": 3000000 } },
+      { "name": "Case 3 — 매출 1천만 / 매입 500만", "input": { "saleVat": 10000000, "purchaseVat": 5000000 }, "expected": { "payable": 5000000 } },
+      { "name": "Case 4 — 매출 200만 / 매입 250만 (환급)", "input": { "saleVat": 2000000, "purchaseVat": 2500000 }, "expected": { "payable": -500000 } },
+      { "name": "Case 5 — 매출 5천만 / 매입 3천만", "input": { "saleVat": 50000000, "purchaseVat": 30000000 }, "expected": { "payable": 20000000 } }
+    ]
+  },
+  "guide": { "howToUse": "매출·매입 부가세 입력 시 납부 또는 환급액 산출.", "tips": ["일반과세자: 분기별 신고 (4·7·10·1월).", "간이과세자: 연 1회.", "매입세액 공제는 적격증빙(세금계산서·신용카드 등) 필수."] },
+  "related": ["comprehensive-income-tax", "freelancer-tax"]
+}

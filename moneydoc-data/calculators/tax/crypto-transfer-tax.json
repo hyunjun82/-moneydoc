@@ -1,0 +1,24 @@
+{
+  "id": "crypto-transfer-tax", "category": "tax", "subCategory": "investment",
+  "title": "가상화폐 양도세 계산기", "subtitle": "연 250만 공제 + 22% 분리과세",
+  "slug": "crypto-transfer-tax", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "국세청", "document": "소득세법 §21", "year": 2026 }, "note": "가상자산 양도세는 정책 시행 시점에 따라 적용. 2025년 시행 예정 → 2027년 가능성." },
+  "constants": { "BASIC_DEDUCTION": 2500000, "INCOME_TAX_RATE": 0.20, "LOCAL_TAX_RATE": 0.02 },
+  "formula": [
+    { "step": 1, "name": "과세표준", "expr": "max(0, gain - 250만)" },
+    { "step": 2, "name": "총 세금", "expr": "과표 × 22% (소득세 20% + 지방세 2%)" }
+  ],
+  "inputs": [ { "id": "gain", "label": "가상자산 양도차익 (연 합산)", "type": "currency", "min": 0, "default": 30000000 } ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "소득세법 §21 기타소득. 250만 공제 + 22%.",
+    "cases": [
+      { "name": "Case 1 — 차익 500만", "input": { "gain": 5000000 }, "expected": { "taxableBase": 2500000, "incomeTax": 500000, "localTax": 50000, "totalTax": 550000 } },
+      { "name": "Case 2 — 차익 3천만", "input": { "gain": 30000000 }, "expected": { "taxableBase": 27500000, "incomeTax": 5500000, "localTax": 550000, "totalTax": 6050000 } },
+      { "name": "Case 3 — 차익 1억", "input": { "gain": 100000000 }, "expected": { "taxableBase": 97500000, "incomeTax": 19500000, "localTax": 1950000, "totalTax": 21450000 } },
+      { "name": "Case 4 — 차익 20만 (공제 미달)", "input": { "gain": 200000 }, "expected": { "taxableBase": 0, "incomeTax": 0, "localTax": 0, "totalTax": 0 } },
+      { "name": "Case 5 — 차익 5억", "input": { "gain": 500000000 }, "expected": { "taxableBase": 497500000, "incomeTax": 99500000, "localTax": 9950000, "totalTax": 109450000 } }
+    ]
+  },
+  "guide": { "howToUse": "연 합산 양도차익 입력 시 가상자산 양도세 산출.", "tips": ["손실 통산 가능 (같은 해 손실+이익).", "5월 종합소득세 신고 시 자진신고.", "정책 시행 시점에 따라 적용 (2025/2027 등)."] },
+  "related": ["overseas-stock-tax", "stock-transfer-tax"]
+}

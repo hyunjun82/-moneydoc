@@ -1,0 +1,30 @@
+{
+  "id": "cash-service-fee", "category": "util", "subCategory": "card",
+  "title": "현금서비스 수수료 계산기", "subtitle": "이용금액 × 연이율 / 365 × 사용일수 (단리)",
+  "slug": "cash-service-fee",
+  "searchAliases": ["현금서비스 수수료", "단기카드대출 수수료", "현금서비스 이자 계산"],
+  "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "여신금융협회", "document": "단기카드대출(현금서비스) 표준 산식", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "이자 (단리)", "expr": "round(금액 × (연이율/365) × 일수)" },
+    { "step": 2, "name": "총 상환", "expr": "원금 + 이자" }
+  ],
+  "inputs": [
+    { "id": "amount", "label": "현금서비스 이용금액", "type": "currency", "min": 10000, "default": 1000000 },
+    { "id": "annualRate", "label": "연 수수료율", "type": "number", "min": 0.10, "max": 0.30, "step": 0.001, "default": 0.20 },
+    { "id": "days", "label": "사용일수", "type": "number", "min": 1, "max": 365, "default": 30 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "단리 일할 계산: 금액 × (연이율 / 365) × 사용일수.",
+    "cases": [
+      { "name": "Case 1 — 50만 / 30일 / 18%", "input": { "amount": 500000, "annualRate": 0.18, "days": 30 }, "expected": { "interest": 7397, "totalRepayment": 507397 } },
+      { "name": "Case 2 — 100만 / 60일 / 20%", "input": { "amount": 1000000, "annualRate": 0.20, "days": 60 }, "expected": { "interest": 32877, "totalRepayment": 1032877 } },
+      { "name": "Case 3 — 300만 / 90일 / 22%", "input": { "amount": 3000000, "annualRate": 0.22, "days": 90 }, "expected": { "interest": 162740, "totalRepayment": 3162740 } },
+      { "name": "Case 4 — 20만 / 7일 / 15%", "input": { "amount": 200000, "annualRate": 0.15, "days": 7 }, "expected": { "interest": 575, "totalRepayment": 200575 } },
+      { "name": "Case 5 — 500만 / 180일 / 24%", "input": { "amount": 5000000, "annualRate": 0.24, "days": 180 }, "expected": { "interest": 591781, "totalRepayment": 5591781 } }
+    ]
+  },
+  "guide": { "howToUse": "이용금액·연 수수료율·사용일수 입력 시 이자와 총 상환액 산출.", "tips": ["연 18~24% (카드사·등급별 차이).", "최대 한도: 카드별 차이 (보통 200만~5천만).", "단기 사용 시 비교적 부담 적지만, 장기 사용 시 신용 영향."] },
+  "related": ["installment-fee", "loan-amortization"]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "auto-insurance",
+  "category": "insurance",
+  "subCategory": "auto",
+  "title": "자동차보험 할인할증 계산기",
+  "subtitle": "표준 적립등급 1~29급 기준 할인할증율 산출",
+  "slug": "auto-insurance",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "손해보험협회",
+      "document": "자동차보험 표준 약관 / 우량할인·불량할증 등급",
+      "year": 2026
+    },
+    "note": "본 계산기는 표준 등급체계 기반 단순 모델. 보험사별 세부 등급·할인율은 차이 가능. 실제 견적은 보험사 직접 확인."
+  },
+  "constants": {
+    "BASE_LEVEL": 11,
+    "RATE_PER_LEVEL": 0.05,
+    "MAX_LEVEL": 29,
+    "MIN_LEVEL": 1
+  },
+  "formula": [
+    { "step": 1, "name": "등급 변동", "expr": "무사고 +1, 사고(대인) -3, 소사고(접촉/미신고급) -1" },
+    { "step": 2, "name": "새 등급", "expr": "max(1, min(29, current + change))" },
+    { "step": 3, "name": "할인할증율", "expr": "(newLevel - 11) × 5%. 양수=할인, 음수=할증" },
+    { "step": 4, "name": "조정 보험료", "expr": "round(basePremium × (1 - discountRate))" }
+  ],
+  "inputs": [
+    { "id": "basePremium", "label": "기본 보험료 (11급 기준)", "type": "currency", "min": 200000, "default": 1000000 },
+    { "id": "currentLevel", "label": "현재 적립등급", "type": "number", "min": 1, "max": 29, "default": 11 },
+    { "id": "accidents", "label": "최근 1년 대인사고 건수", "type": "stepper", "min": 0, "max": 5, "default": 0 },
+    { "id": "smallAccidents", "label": "최근 1년 소사고 건수", "type": "stepper", "min": 0, "max": 5, "default": 0 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "표준 등급 산식 직접 적용 (-15% ~ +75%, 5% 단위).",
+    "cases": [
+      { "name": "Case 1 — 11급 무사고 (12급 5% 할인)", "input": { "basePremium": 1000000, "currentLevel": 11, "accidents": 0, "smallAccidents": 0 }, "expected": { "newLevel": 12, "discountRatePct": 5, "adjustedPremium": 950000 } },
+      { "name": "Case 2 — 15급 무사고 (16급 25% 할인)", "input": { "basePremium": 1000000, "currentLevel": 15, "accidents": 0, "smallAccidents": 0 }, "expected": { "newLevel": 16, "discountRatePct": 25, "adjustedPremium": 750000 } },
+      { "name": "Case 3 — 11급 사고 1건 (8급 15% 할증)", "input": { "basePremium": 1500000, "currentLevel": 11, "accidents": 1, "smallAccidents": 0 }, "expected": { "newLevel": 8, "discountRatePct": -15, "adjustedPremium": 1725000 } },
+      { "name": "Case 4 — 18급 소사고 1건 (17급 30% 할인)", "input": { "basePremium": 1200000, "currentLevel": 18, "accidents": 0, "smallAccidents": 1 }, "expected": { "newLevel": 17, "discountRatePct": 30, "adjustedPremium": 840000 } },
+      { "name": "Case 5 — 25급 무사고 (26급 75% 할인)", "input": { "basePremium": 800000, "currentLevel": 25, "accidents": 0, "smallAccidents": 0 }, "expected": { "newLevel": 26, "discountRatePct": 75, "adjustedPremium": 200000 } }
+    ]
+  },
+  "guide": {
+    "howToUse": "기본 보험료, 현재 적립등급, 최근 1년 사고 건수를 입력하면 갱신 시 등급과 보험료가 산출됩니다.",
+    "tips": [
+      "사고 1건당 등급 -3 (할인 15% 차감).",
+      "무사고 1년: 등급 +1 (할인 5% 추가).",
+      "최대 할인 75% (29급), 최대 할증 50% (1급)."
+    ]
+  },
+  "related": ["health-insurance-employee"]
+}

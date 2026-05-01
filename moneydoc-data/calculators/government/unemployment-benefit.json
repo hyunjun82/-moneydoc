@@ -1,0 +1,99 @@
+{
+  "id": "unemployment-benefit",
+  "category": "government",
+  "subCategory": "labor",
+  "title": "실업급여 일액 계산기",
+  "subtitle": "고용보험법 §46 구직급여 일액 + 소정급여일수",
+  "slug": "unemployment-benefit",
+  "searchAliases": ["실업급여 계산기", "구직급여 계산기", "실업급여 수령액 계산기"],
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "고용노동부",
+      "document": "고용보험법",
+      "year": 2026,
+      "laws": [
+        "고용보험법 제46조 (구직급여 일액)",
+        "고용보험법 제50조 (소정급여일수)",
+        "고용보험법 제45조 (구직급여 산정 기초)"
+      ]
+    },
+    "note": "2026년 1일 상한·하한액은 매년 1월 발표. 현재 2025년 기준 적용 (상한 70,000원, 하한 64,192원)."
+  },
+  "constants": {
+    "BENEFIT_RATE": 0.6,
+    "DAILY_UPPER_LIMIT_2025": 70000,
+    "DAILY_LOWER_LIMIT_2025": 64192,
+    "ELDERLY_DISABLED_BONUS_DAYS": 30
+  },
+  "tables": {
+    "benefitDays": {
+      "description": "소정급여일수 (고용보험법 §50). 가입기간 = 피보험단위기간 합산.",
+      "rules": [
+        { "minYears": 0, "maxYears": 1, "days": 120 },
+        { "minYears": 1, "maxYears": 3, "days": 150 },
+        { "minYears": 3, "maxYears": 5, "days": 180 },
+        { "minYears": 5, "maxYears": 10, "days": 210 },
+        { "minYears": 10, "maxYears": null, "days": 240 }
+      ],
+      "bonus": {
+        "elderlyOrDisabled": "+30일 (50세 이상 또는 장애인)"
+      }
+    }
+  },
+  "formula": [
+    { "step": 1, "name": "1일 평균임금", "expr": "최근 3개월 임금 / 90" },
+    { "step": 2, "name": "구직급여 일액 (raw)", "expr": "1일 평균임금 × 0.6" },
+    { "step": 3, "name": "일액 보정", "expr": "max(하한 64,192, min(raw, 상한 70,000))" },
+    { "step": 4, "name": "소정급여일수", "expr": "가입연수별 lookup, 50세+/장애 +30일" },
+    { "step": 5, "name": "총 수령액", "expr": "일액 × 일수" }
+  ],
+  "inputs": [
+    { "id": "monthlySalary", "label": "월 평균임금", "type": "currency", "min": 1000000, "max": 50000000, "default": 3000000 },
+    { "id": "insuredYears", "label": "고용보험 가입연수", "type": "number", "min": 0, "max": 40, "default": 5 },
+    { "id": "isElderlyOrDisabled", "label": "50세 이상 또는 장애인", "type": "boolean", "default": false }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "고용보험법 §46, §50 산식 직접 적용. 상·하한액은 2025년 고시값 사용 (2026년 미발표 시).",
+    "cases": [
+      {
+        "name": "Case 1 — 월급 200만, 가입 2년, 50세 미만 (하한 적용)",
+        "input": { "monthlySalary": 2000000, "insuredYears": 2, "isElderlyOrDisabled": false },
+        "expected": { "rawDailyWage": 66667, "rawBenefit": 40000, "dailyBenefit": 64192, "benefitDays": 150, "totalBenefit": 9628800 }
+      },
+      {
+        "name": "Case 2 — 월급 300만, 가입 5년 (정확히), 50세 미만 (하한 적용)",
+        "input": { "monthlySalary": 3000000, "insuredYears": 5, "isElderlyOrDisabled": false },
+        "expected": { "rawDailyWage": 100000, "rawBenefit": 60000, "dailyBenefit": 64192, "benefitDays": 210, "totalBenefit": 13480320 }
+      },
+      {
+        "name": "Case 3 — 월급 500만, 가입 10년, 50세 미만 (상한 적용)",
+        "input": { "monthlySalary": 5000000, "insuredYears": 10, "isElderlyOrDisabled": false },
+        "expected": { "rawDailyWage": 166667, "rawBenefit": 100000, "dailyBenefit": 70000, "benefitDays": 240, "totalBenefit": 16800000 }
+      },
+      {
+        "name": "Case 4 — 월급 250만, 가입 1년 (정확히), 50세 미만 (하한 적용)",
+        "input": { "monthlySalary": 2500000, "insuredYears": 1, "isElderlyOrDisabled": false },
+        "expected": { "rawDailyWage": 83333, "rawBenefit": 50000, "dailyBenefit": 64192, "benefitDays": 150, "totalBenefit": 9628800 }
+      },
+      {
+        "name": "Case 5 — 월급 400만, 가입 8년, 50세 이상 (상한 + 가산일)",
+        "input": { "monthlySalary": 4000000, "insuredYears": 8, "isElderlyOrDisabled": true },
+        "expected": { "rawDailyWage": 133333, "rawBenefit": 80000, "dailyBenefit": 70000, "benefitDays": 240, "totalBenefit": 16800000 }
+      }
+    ]
+  },
+  "guide": {
+    "howToUse": "월 평균임금과 고용보험 가입연수, 50세 이상 또는 장애인 여부를 입력하면 실업급여 일액과 총 수령액이 산출됩니다. 일액은 평균임금의 60%이며, 상·하한이 적용됩니다.",
+    "tips": [
+      "수급 자격: 가입기간 180일 이상 + 비자발적 이직 + 적극적 구직활동.",
+      "50세 이상 또는 장애인은 소정급여일수에 30일 가산.",
+      "일용직·예술인·특수형태근로자도 별도 산식으로 가능."
+    ]
+  },
+  "related": ["severance-pay", "salary-net-pay", "national-pension"]
+}

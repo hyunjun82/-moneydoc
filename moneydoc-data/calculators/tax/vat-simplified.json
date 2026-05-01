@@ -1,0 +1,24 @@
+{
+  "id": "vat-simplified", "category": "tax", "subCategory": "business",
+  "title": "부가세 (간이과세자) 계산기", "subtitle": "매출액 × 업종별 부가가치율 × 10%",
+  "slug": "vat-simplified", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "국세청", "document": "부가가치세법 §63", "year": 2026 } },
+  "constants": {},
+  "formula": [ { "step": 1, "name": "납부세액", "expr": "round(매출 × 부가가치율 × 10%)" } ],
+  "inputs": [
+    { "id": "sales", "label": "연 매출액", "type": "currency", "min": 0, "default": 50000000 },
+    { "id": "vatRate", "label": "업종별 부가가치율", "type": "select", "options": [{"value": 0.05, "label": "도매·소매 (5%)"}, {"value": 0.10, "label": "음식점·숙박 (10%)"}, {"value": 0.15, "label": "기타 (15%)"}, {"value": 0.20, "label": "제조·건설 (20%)"}, {"value": 0.30, "label": "기타 (30%)"}], "default": 0.10 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "부가세법 §63. 업종별 부가가치율 lookup × 10%.",
+    "cases": [
+      { "name": "Case 1 — 매출 3천만 / 음식점 10%", "input": { "sales": 30000000, "vatRate": 0.10 }, "expected": { "payable": 300000 } },
+      { "name": "Case 2 — 매출 5천만 / 제조 20%", "input": { "sales": 50000000, "vatRate": 0.20 }, "expected": { "payable": 1000000 } },
+      { "name": "Case 3 — 매출 8천만 / 도매 5%", "input": { "sales": 80000000, "vatRate": 0.05 }, "expected": { "payable": 400000 } },
+      { "name": "Case 4 — 매출 2천만 / 기타 30%", "input": { "sales": 20000000, "vatRate": 0.30 }, "expected": { "payable": 600000 } },
+      { "name": "Case 5 — 매출 1억 / 기타 15%", "input": { "sales": 100000000, "vatRate": 0.15 }, "expected": { "payable": 1500000 } }
+    ]
+  },
+  "guide": { "howToUse": "연 매출액 + 업종별 부가가치율 입력 시 간이과세자 부가세 산출.", "tips": ["연매출 8천만 미만: 간이과세 가능.", "연 4,800만 미만: 부가세 면제 가능.", "일반과세 대비 50~70% 절감."] },
+  "related": ["vat-general", "comprehensive-income-tax"]
+}

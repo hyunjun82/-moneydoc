@@ -1,0 +1,29 @@
+{
+  "id": "date-calculator", "category": "util", "subCategory": "date",
+  "title": "날짜 계산기 (D-Day)", "subtitle": "두 날짜 사이 일수·년월일 + 디데이",
+  "slug": "date-calculator",
+  "searchAliases": ["날짜 계산기", "디데이 계산기", "D-Day 계산기", "날짜 차이"],
+  "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "표준 산식", "document": "Date 차이 계산", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "총 일수", "expr": "Math.ceil((endDate - startDate) / 1일)" },
+    { "step": 2, "name": "년/월/일", "expr": "년 = floor(일수/365), 월 = floor((일수%365)/30), 일 = 나머지" }
+  ],
+  "inputs": [
+    { "id": "startDate", "label": "시작일", "type": "date", "default": "2026-01-01" },
+    { "id": "endDate", "label": "종료일 (또는 D-Day)", "type": "date", "default": "2026-04-30" }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "JS Date 객체 1일 단위 차이.",
+    "cases": [
+      { "name": "Case 1 — 4개월", "input": { "startDate": "2026-01-01", "endDate": "2026-04-30" }, "expected": { "totalDays": 119, "years": 0, "months": 3, "days": 29 } },
+      { "name": "Case 2 — 2년 4개월", "input": { "startDate": "2024-01-01", "endDate": "2026-04-30" }, "expected": { "totalDays": 850, "years": 2, "months": 4, "days": 0 } },
+      { "name": "Case 3 — 8개월", "input": { "startDate": "2026-04-15", "endDate": "2026-12-25" }, "expected": { "totalDays": 254, "years": 0, "months": 8, "days": 14 } },
+      { "name": "Case 4 — 6년", "input": { "startDate": "2020-03-10", "endDate": "2026-04-30" }, "expected": { "totalDays": 2242, "years": 6, "months": 1, "days": 22 } },
+      { "name": "Case 5 — 정확히 1년", "input": { "startDate": "2026-04-30", "endDate": "2027-04-30" }, "expected": { "totalDays": 365, "years": 1, "months": 0, "days": 0 } }
+    ]
+  },
+  "guide": { "howToUse": "시작일과 종료일 입력 시 일수·년월일 차이 + 디데이.", "tips": ["D-Day: 미래 날짜 - 오늘", "지난 날짜: 오늘 - 과거 날짜 (D+숫자)"] },
+  "related": ["age-calculator"]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "age-calculator", "category": "util", "subCategory": "date",
+  "title": "나이 계산기", "subtitle": "만 나이 + 한국 나이 + 띠 자동 산출",
+  "slug": "age-calculator",
+  "searchAliases": ["나이 계산기", "만나이 계산기", "한국나이 계산기", "띠 계산기"],
+  "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "표준 산식", "document": "민법 제158조 (만 나이 통일법 2023)", "year": 2023 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "만 나이", "expr": "오늘 연도 - 출생연도, 생일 안 지났으면 -1" },
+    { "step": 2, "name": "한국 나이", "expr": "오늘 연도 - 출생연도 + 1 (제도 폐지, 일부 사용)" },
+    { "step": 3, "name": "띠", "expr": "출생연도 % 12 → 12지지 lookup" }
+  ],
+  "inputs": [
+    { "id": "birthDate", "label": "생년월일", "type": "date", "default": "1990-01-01" },
+    { "id": "todayDate", "label": "기준일", "type": "date", "default": "2026-04-30" }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "민법 §158 만 나이 + 전통 한국 나이 + 12지 띠.",
+    "cases": [
+      { "name": "Case 1 — 1990-05-15 / 2026-04-30", "input": { "birthDate": "1990-05-15", "todayDate": "2026-04-30" }, "expected": { "westAge": 35, "koreanAge": 37, "zodiac": "말", "year": 1990 } },
+      { "name": "Case 2 — 2000-12-25 / 2026-04-30", "input": { "birthDate": "2000-12-25", "todayDate": "2026-04-30" }, "expected": { "westAge": 25, "koreanAge": 27, "zodiac": "용", "year": 2000 } },
+      { "name": "Case 3 — 1985-03-10 / 2026-04-30", "input": { "birthDate": "1985-03-10", "todayDate": "2026-04-30" }, "expected": { "westAge": 41, "koreanAge": 42, "zodiac": "소", "year": 1985 } },
+      { "name": "Case 4 — 1972-07-08 / 2026-04-30", "input": { "birthDate": "1972-07-08", "todayDate": "2026-04-30" }, "expected": { "westAge": 53, "koreanAge": 55, "zodiac": "쥐", "year": 1972 } },
+      { "name": "Case 5 — 2010-11-22 / 2026-04-30", "input": { "birthDate": "2010-11-22", "todayDate": "2026-04-30" }, "expected": { "westAge": 15, "koreanAge": 17, "zodiac": "호랑이", "year": 2010 } }
+    ]
+  },
+  "guide": { "howToUse": "생년월일과 기준일 입력 시 만 나이·한국 나이·띠 자동 산출.", "tips": ["2023년 6월 28일부터 만 나이 통일 (법령·계약상 모두 만 나이).", "한국 나이는 일상 대화에서만 사용."] },
+  "related": ["date-calculator"]
+}

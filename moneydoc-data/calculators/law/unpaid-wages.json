@@ -1,0 +1,27 @@
+{
+  "id": "unpaid-wages", "category": "law", "subCategory": "labor",
+  "title": "임금체불 미지급금 계산기", "subtitle": "미지급액 + 연 20% 지연이자",
+  "slug": "unpaid-wages", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "고용노동부", "document": "근로기준법 §37 (지연이자)", "year": 2026 } },
+  "constants": { "DELAY_RATE": 0.20 },
+  "formula": [
+    { "step": 1, "name": "지연이자", "expr": "round(미지급 × 20% × 경과일수 / 365)" },
+    { "step": 2, "name": "총 청구액", "expr": "미지급 + 지연이자" }
+  ],
+  "inputs": [
+    { "id": "unpaidAmount", "label": "미지급 임금", "type": "currency", "min": 0, "default": 5000000 },
+    { "id": "delayDays", "label": "지연 일수", "type": "number", "min": 14, "max": 1825, "default": 90, "hint": "퇴직 후 14일 이후부터 기산" }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "근기법 §37. 퇴직 14일 이후 미지급 시 연 20% 지연이자.",
+    "cases": [
+      { "name": "Case 1 — 300만 / 30일", "input": { "unpaidAmount": 3000000, "delayDays": 30 }, "expected": { "unpaidAmount": 3000000, "interest": 49315, "total": 3049315 } },
+      { "name": "Case 2 — 500만 / 90일", "input": { "unpaidAmount": 5000000, "delayDays": 90 }, "expected": { "unpaidAmount": 5000000, "interest": 246575, "total": 5246575 } },
+      { "name": "Case 3 — 1천만 / 180일", "input": { "unpaidAmount": 10000000, "delayDays": 180 }, "expected": { "unpaidAmount": 10000000, "interest": 986301, "total": 10986301 } },
+      { "name": "Case 4 — 200만 / 14일 (최소)", "input": { "unpaidAmount": 2000000, "delayDays": 14 }, "expected": { "unpaidAmount": 2000000, "interest": 15342, "total": 2015342 } },
+      { "name": "Case 5 — 800만 / 365일", "input": { "unpaidAmount": 8000000, "delayDays": 365 }, "expected": { "unpaidAmount": 8000000, "interest": 1600000, "total": 9600000 } }
+    ]
+  },
+  "guide": { "howToUse": "미지급 임금과 지연 일수 입력 시 지연이자 + 총 청구액 산출.", "tips": ["고용노동부 진정 → 14일 이내 미지급 시 형사 처벌.", "체당금 제도: 사업주 도산 시 정부가 최대 7천만 대신 지급."] },
+  "related": ["severance-pay", "annual-leave-allowance"]
+}

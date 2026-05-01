@@ -1,0 +1,30 @@
+{
+  "id": "youth-rent-support", "category": "government", "subCategory": "youth",
+  "title": "청년 월세 지원 계산기", "subtitle": "월 최대 20만원 × 12개월",
+  "slug": "youth-rent-support", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "국토교통부", "document": "청년 월세 한시 특별지원", "year": 2026 } },
+  "constants": { "MAX_MONTHLY": 200000, "MONTHS": 12 },
+  "formula": [
+    { "step": 1, "name": "자격", "expr": "만 19~34세 + 무주택 + 중위소득 60% 이하" },
+    { "step": 2, "name": "월 지원액", "expr": "min(실제월세, 200,000)" },
+    { "step": 3, "name": "연 지원액", "expr": "월지원 × 12" }
+  ],
+  "inputs": [
+    { "id": "age", "label": "연령", "type": "number", "min": 18, "max": 40, "default": 25 },
+    { "id": "isNoHome", "label": "무주택 세대주", "type": "boolean", "default": true },
+    { "id": "medianIncomePct", "label": "중위소득 비율 (%)", "type": "number", "min": 0, "max": 100, "default": 50 },
+    { "id": "actualRent", "label": "실제 월세", "type": "currency", "min": 0, "default": 500000 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "청년 월세 특별지원 지침. 자격 충족 시 min(월세, 20만) × 12.",
+    "cases": [
+      { "name": "Case 1 — 25세 / 무주택 / 50% / 월세 50만 (자격 O)", "input": { "age": 25, "isNoHome": true, "medianIncomePct": 50, "actualRent": 500000 }, "expected": { "isEligible": true, "monthlySupport": 200000, "annualSupport": 2400000 } },
+      { "name": "Case 2 — 30세 / 70% (소득 초과)", "input": { "age": 30, "isNoHome": true, "medianIncomePct": 70, "actualRent": 600000 }, "expected": { "isEligible": false, "monthlySupport": 0, "annualSupport": 0 } },
+      { "name": "Case 3 — 22세 / 무주택 / 40% / 월세 15만", "input": { "age": 22, "isNoHome": true, "medianIncomePct": 40, "actualRent": 150000 }, "expected": { "isEligible": true, "monthlySupport": 150000, "annualSupport": 1800000 } },
+      { "name": "Case 4 — 35세 (연령 초과)", "input": { "age": 35, "isNoHome": true, "medianIncomePct": 50, "actualRent": 400000 }, "expected": { "isEligible": false, "monthlySupport": 0, "annualSupport": 0 } },
+      { "name": "Case 5 — 28세 / 유주택 (X)", "input": { "age": 28, "isNoHome": false, "medianIncomePct": 45, "actualRent": 500000 }, "expected": { "isEligible": false, "monthlySupport": 0, "annualSupport": 0 } }
+    ]
+  },
+  "guide": { "howToUse": "연령·무주택·소득비율·월세 입력 시 자격 + 지원액 산출.", "tips": ["복지로(bokjiro) 신청.", "원가구 + 청년가구 소득 모두 충족 필요.", "한시적 사업 (정책 변동 가능)."] },
+  "related": ["youth-housing-allowance", "unemployment-benefit"]
+}

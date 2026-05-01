@@ -1,0 +1,56 @@
+{
+  "id": "basic-pension",
+  "category": "government",
+  "subCategory": "elderly",
+  "title": "기초연금 수령액 계산기",
+  "searchAliases": ["기초연금 모의계산", "기초연금 계산기", "기초연금 자격 모의계산"],
+  "subtitle": "65세 이상 소득인정액 기준 자격 + 최대수령",
+  "slug": "basic-pension",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "보건복지부",
+      "document": "기초연금법",
+      "year": 2026,
+      "laws": ["기초연금법 제5조 (수급권자)", "기초연금법 제8조 (기준연금액)"]
+    },
+    "note": "2026년 기준연금액·선정기준액은 매년 1월 발표. 본 계산기는 2025년 기준 (단독 33.4만, 부부 53.4만, 선정기준 단독 213만, 부부 340.8만)."
+  },
+  "constants": {
+    "MAX_SINGLE_2025": 334000,
+    "MAX_COUPLE_2025": 534000,
+    "INCOME_THRESHOLD_SINGLE": 2130000,
+    "INCOME_THRESHOLD_COUPLE": 3408000
+  },
+  "formula": [
+    { "step": 1, "name": "자격 판정", "expr": "소득인정액 ≤ 선정기준액" },
+    { "step": 2, "name": "수령액", "expr": "자격: 단독 334,000 또는 부부 534,000. 자격 X: 0" }
+  ],
+  "inputs": [
+    { "id": "householdType", "label": "가구 유형", "type": "select", "options": ["single", "couple"], "default": "single" },
+    { "id": "incomeAmount", "label": "소득인정액 (월)", "type": "currency", "min": 0, "default": 1000000, "hint": "근로/사업/이자 + 재산 환산" }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "기초연금법 §5, §8 적용. 감액(소득역전 방지)은 단순화로 미적용.",
+    "cases": [
+      { "name": "Case 1 — 단독, 소득 100만 (자격 O)", "input": { "householdType": "single", "incomeAmount": 1000000 }, "expected": { "isEligible": true, "monthlyPension": 334000 } },
+      { "name": "Case 2 — 단독, 소득 250만 (자격 X)", "input": { "householdType": "single", "incomeAmount": 2500000 }, "expected": { "isEligible": false, "monthlyPension": 0 } },
+      { "name": "Case 3 — 부부, 소득 200만 (자격 O)", "input": { "householdType": "couple", "incomeAmount": 2000000 }, "expected": { "isEligible": true, "monthlyPension": 534000 } },
+      { "name": "Case 4 — 단독, 소득 213만 (경계, 자격 O)", "input": { "householdType": "single", "incomeAmount": 2130000 }, "expected": { "isEligible": true, "monthlyPension": 334000 } },
+      { "name": "Case 5 — 부부, 소득 350만 (자격 X)", "input": { "householdType": "couple", "incomeAmount": 3500000 }, "expected": { "isEligible": false, "monthlyPension": 0 } }
+    ]
+  },
+  "guide": {
+    "howToUse": "65세 이상 가구 유형(단독/부부)과 소득인정액(월)을 입력하면 기초연금 자격과 최대 수령액이 산출됩니다.",
+    "tips": [
+      "소득인정액 = 근로/사업/이자 등 소득평가액 + 재산 환산액.",
+      "선정기준 초과 시 단계적 감액 (소득역전 방지) 적용 가능.",
+      "주민센터 또는 복지로(bokjiro.go.kr) 신청."
+    ]
+  },
+  "related": ["national-pension", "comprehensive-real-estate-tax"]
+}

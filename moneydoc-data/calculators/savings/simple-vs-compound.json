@@ -1,0 +1,47 @@
+{
+  "id": "simple-vs-compound",
+  "category": "savings",
+  "subCategory": "deposit",
+  "title": "단리 vs 복리 비교 계산기",
+  "subtitle": "동일 원금·기간·이율에서 단리와 월복리의 만기 차이",
+  "slug": "simple-vs-compound",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "한국은행",
+      "document": "단리·복리 표준 산식",
+      "year": 2026
+    }
+  },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "단리 이자", "expr": "principal × rate × years" },
+    { "step": 2, "name": "복리 만기 (월복리)", "expr": "principal × (1 + rate/12)^(years×12)" },
+    { "step": 3, "name": "복리 이자", "expr": "복리 만기 - 원금" },
+    { "step": 4, "name": "차이", "expr": "복리 이자 - 단리 이자" }
+  ],
+  "inputs": [
+    { "id": "principal", "label": "예치 원금", "type": "currency", "min": 1000000, "default": 10000000 },
+    { "id": "years", "label": "예치 기간 (년)", "type": "number", "min": 1, "max": 30, "default": 5 },
+    { "id": "rate", "label": "연이율", "type": "number", "min": 0.001, "max": 0.20, "step": 0.001, "default": 0.04 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "단리: P × r × t. 복리: P × (1 + r/12)^(12t). Math.pow 직접 적용.",
+    "cases": [
+      { "name": "Case 1 — 1천만 / 1년 / 4.0%", "input": { "principal": 10000000, "years": 1, "rate": 0.04 }, "expected": { "simpleInterest": 400000, "simpleMaturity": 10400000, "compoundInterest": 407415, "compoundMaturity": 10407415, "diff": 7415 } },
+      { "name": "Case 2 — 5천만 / 3년 / 4.0%", "input": { "principal": 50000000, "years": 3, "rate": 0.04 }, "expected": { "simpleInterest": 6000000, "simpleMaturity": 56000000, "compoundInterest": 6363594, "compoundMaturity": 56363594, "diff": 363594 } },
+      { "name": "Case 3 — 1억 / 5년 / 5.0%", "input": { "principal": 100000000, "years": 5, "rate": 0.05 }, "expected": { "simpleInterest": 25000000, "simpleMaturity": 125000000, "compoundInterest": 28335868, "compoundMaturity": 128335868, "diff": 3335868 } },
+      { "name": "Case 4 — 3천만 / 10년 / 4.5%", "input": { "principal": 30000000, "years": 10, "rate": 0.045 }, "expected": { "simpleInterest": 13500000, "simpleMaturity": 43500000, "compoundInterest": 17009783, "compoundMaturity": 47009783, "diff": 3509783 } },
+      { "name": "Case 5 — 5천만 / 20년 / 4.0%", "input": { "principal": 50000000, "years": 20, "rate": 0.04 }, "expected": { "simpleInterest": 40000000, "simpleMaturity": 90000000, "compoundInterest": 61129104, "compoundMaturity": 111129104, "diff": 21129104 } }
+    ]
+  },
+  "guide": {
+    "howToUse": "원금·기간·이율을 입력하면 단리와 월복리의 만기 수령액 차이를 한눈에 비교할 수 있습니다.",
+    "tips": ["기간이 길수록 복리 효과 폭발 (10년 vs 20년 차이는 약 6배).", "이율이 높을수록 복리 효과 증가."]
+  },
+  "related": ["installment-savings", "fixed-deposit"]
+}

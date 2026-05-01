@@ -1,0 +1,81 @@
+{
+  "id": "national-pension",
+  "category": "pension",
+  "subCategory": "public",
+  "title": "국민연금 예상수령액 계산기",
+  "subtitle": "국민연금공단 공식 산식 기반 노령연금 추정",
+  "slug": "national-pension",
+  "searchAliases": ["국민연금 예상수령액 계산기", "국민연금 계산기", "노령연금 계산기"],
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "국민연금공단",
+      "document": "국민연금법",
+      "year": 2026,
+      "laws": [
+        "국민연금법 제51조 (기본연금액 산식)",
+        "국민연금법 제52조 (가입기간 가산)",
+        "국민연금법 시행령 제36조 (소득대체율)"
+      ]
+    },
+    "note": "2026년 A값(전체가입자 평균소득월액)은 매년 4월경 발표. 본 계산기는 2025년 기준 A값 3,090,000원 사용. 비례상수는 2026년 기준 1.23 (2008년 1.5에서 매년 -0.015)."
+  },
+  "constants": {
+    "A_VALUE_2026": 3090000,
+    "PROPORTION_2026": 1.23,
+    "BASE_MONTHS": 240,
+    "BONUS_PER_YEAR_AFTER_20": 0.05
+  },
+  "formula": [
+    { "step": 1, "name": "기본 가산 (P)", "expr": "가입 240개월 미만: P = 가입월수/240. 240개월 이상: P = 1 + 0.05 × (가입연수 - 20)" },
+    { "step": 2, "name": "연금월액", "expr": "(비례상수 1.23 × (A + B) × P) / 12" },
+    { "step": 3, "name": "연금연액", "expr": "월액 × 12" }
+  ],
+  "inputs": [
+    { "id": "monthsContributed", "label": "가입월수", "type": "number", "min": 120, "max": 600, "default": 240, "hint": "최소 가입기간 120개월(10년)" },
+    { "id": "avgIncome", "label": "본인 평생 평균소득월액 (B값)", "type": "currency", "min": 350000, "max": 6170000, "default": 2000000, "hint": "월 보수 기준, 2026년 상한 5,900,000원" }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "국민연금법 §51 산식 직접 적용. 비례상수 1.23 (2026년 기준 단계적 감소). A값은 2025년 발표치 적용 (2026년 미발표). 산식 결과는 추정치, 실제 수령액과 ±5% 차이 가능.",
+    "cases": [
+      {
+        "name": "Case 1 — 가입 20년 (240개월), 평균소득 200만원",
+        "input": { "monthsContributed": 240, "avgIncome": 2000000 },
+        "expected": { "P": 1.0, "monthlyPension": 521725, "annualPension": 6260700 }
+      },
+      {
+        "name": "Case 2 — 가입 30년 (360개월), 평균소득 300만원",
+        "input": { "monthsContributed": 360, "avgIncome": 3000000 },
+        "expected": { "P": 1.5, "monthlyPension": 936338, "annualPension": 11236050 }
+      },
+      {
+        "name": "Case 3 — 가입 40년 (480개월), 평균소득 400만원",
+        "input": { "monthsContributed": 480, "avgIncome": 4000000 },
+        "expected": { "P": 2.0, "monthlyPension": 1453450, "annualPension": 17441400 }
+      },
+      {
+        "name": "Case 4 — 가입 10년 (120개월), 평균소득 200만원",
+        "input": { "monthsContributed": 120, "avgIncome": 2000000 },
+        "expected": { "P": 0.5, "monthlyPension": 260863, "annualPension": 3130350 }
+      },
+      {
+        "name": "Case 5 — 가입 25년 (300개월), 평균소득 250만원",
+        "input": { "monthsContributed": 300, "avgIncome": 2500000 },
+        "expected": { "P": 1.25, "monthlyPension": 716219, "annualPension": 8594625 }
+      }
+    ]
+  },
+  "guide": {
+    "howToUse": "국민연금에 가입한 총 월수와 평생 평균 보수월액을 입력하면 노령연금 예상 수령액이 산출됩니다. 가입 20년이 만점 기준이고, 그 이상은 매년 5% 가산됩니다.",
+    "tips": [
+      "가입 10년 미만은 노령연금 자격 X (반환일시금만 수령).",
+      "조기수령 (60세 이전): 1년 일찍 받을 때마다 6% 감액.",
+      "연기수령 (65세 이후): 1년 늦출 때마다 7.2% 가산 (최대 5년)."
+    ]
+  },
+  "related": ["pension-individual", "irp-tax-credit", "severance-pay"]
+}

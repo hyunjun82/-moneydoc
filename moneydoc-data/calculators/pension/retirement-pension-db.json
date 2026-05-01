@@ -1,0 +1,27 @@
+{
+  "id": "retirement-pension-db", "category": "pension", "subCategory": "retirement",
+  "title": "퇴직연금 DB형 계산기", "subtitle": "마지막 평균임금 × 30 × 근속연수 (퇴직금과 동일)",
+  "slug": "retirement-pension-db", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "고용노동부", "document": "근로자퇴직급여보장법 (DB형)", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "일급", "expr": "마지막 월 평균임금 / 30" },
+    { "step": 2, "name": "DB형 퇴직급여", "expr": "일급 × 30 × 근속연수" }
+  ],
+  "inputs": [
+    { "id": "lastAvgSalary", "label": "마지막 월 평균임금", "type": "currency", "min": 1000000, "default": 4000000 },
+    { "id": "workYears", "label": "근속연수", "type": "number", "min": 1, "max": 50, "default": 10 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "근로자퇴직급여보장법 §20 (DB형). 마지막 평균임금 × 30 × 근속연수.",
+    "cases": [
+      { "name": "Case 1 — 월 300만 / 5년", "input": { "lastAvgSalary": 3000000, "workYears": 5 }, "expected": { "dailyWage": 100000, "dbAmount": 15000000 } },
+      { "name": "Case 2 — 월 500만 / 10년", "input": { "lastAvgSalary": 5000000, "workYears": 10 }, "expected": { "dailyWage": 166667, "dbAmount": 50000100 } },
+      { "name": "Case 3 — 월 700만 / 20년", "input": { "lastAvgSalary": 7000000, "workYears": 20 }, "expected": { "dailyWage": 233333, "dbAmount": 139999800 } },
+      { "name": "Case 4 — 월 400만 / 15년", "input": { "lastAvgSalary": 4000000, "workYears": 15 }, "expected": { "dailyWage": 133333, "dbAmount": 59999850 } },
+      { "name": "Case 5 — 월 600만 / 25년", "input": { "lastAvgSalary": 6000000, "workYears": 25 }, "expected": { "dailyWage": 200000, "dbAmount": 150000000 } }
+    ]
+  },
+  "guide": { "howToUse": "마지막 월 평균임금과 근속연수 입력 시 DB형 퇴직연금 산출.", "tips": ["DB형: 회사가 산식 보장 (마지막 임금 기준).", "DC형: 본인 운용 책임 (운용수익률 차이).", "임금 상승 시 DB형이 유리."] },
+  "related": ["retirement-pension-dc", "severance-pay"]
+}

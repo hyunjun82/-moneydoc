@@ -1,0 +1,39 @@
+{
+  "id": "loan-refinance",
+  "category": "loan",
+  "subCategory": "refinance",
+  "title": "대환대출 비교 계산기",
+  "subtitle": "기존 대출 vs 신규 대출 월 상환·총 상환 비교",
+  "slug": "loan-refinance",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "금융감독원", "document": "대환대출 표준 산식", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "기존 월 상환", "expr": "원리금균등 PMT(잔액, 잔여기간, 기존금리)" },
+    { "step": 2, "name": "신규 월 상환", "expr": "원리금균등 PMT(잔액, 잔여기간, 신규금리)" },
+    { "step": 3, "name": "월 절감", "expr": "기존월 - 신규월" },
+    { "step": 4, "name": "총 절감", "expr": "기존총 - 신규총" }
+  ],
+  "inputs": [
+    { "id": "balance", "label": "대출 잔액", "type": "currency", "min": 1000000, "default": 100000000 },
+    { "id": "oldRate", "label": "기존 금리", "type": "number", "min": 0.005, "max": 0.20, "step": 0.001, "default": 0.05 },
+    { "id": "newRate", "label": "신규 금리", "type": "number", "min": 0.005, "max": 0.20, "step": 0.001, "default": 0.04 },
+    { "id": "remainingYears", "label": "잔여 만기 (년)", "type": "number", "min": 1, "max": 40, "default": 25 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "양쪽 모두 원리금균등 PMT로 산출 후 차액 비교. 중도상환수수료는 별도 계산기.",
+    "cases": [
+      { "name": "Case 1 — 1억 잔액, 5%→4%, 25년", "input": { "balance": 100000000, "oldRate": 0.05, "newRate": 0.04, "remainingYears": 25 }, "expected": { "oldMonthly": 584590, "newMonthly": 527837, "monthlySaving": 56753, "oldTotal": 175377012, "newTotal": 158351052, "totalSaving": 17025960 } },
+      { "name": "Case 2 — 2억, 6%→4.5%, 20년", "input": { "balance": 200000000, "oldRate": 0.06, "newRate": 0.045, "remainingYears": 20 }, "expected": { "oldMonthly": 1432862, "newMonthly": 1265299, "monthlySaving": 167563, "oldTotal": 343886908, "newTotal": 303671701, "totalSaving": 40215207 } },
+      { "name": "Case 3 — 3억, 5.5%→4%, 28년", "input": { "balance": 300000000, "oldRate": 0.055, "newRate": 0.04, "remainingYears": 28 }, "expected": { "oldMonthly": 1751897, "newMonthly": 1485637, "monthlySaving": 266260, "oldTotal": 588637547, "newTotal": 499174035, "totalSaving": 89463512 } },
+      { "name": "Case 4 — 5천만, 7%→5%, 10년", "input": { "balance": 50000000, "oldRate": 0.07, "newRate": 0.05, "remainingYears": 10 }, "expected": { "oldMonthly": 580542, "newMonthly": 530328, "monthlySaving": 50214, "oldTotal": 69665088, "newTotal": 63639309, "totalSaving": 6025779 } },
+      { "name": "Case 5 — 5억, 4.5%→3.8%, 30년", "input": { "balance": 500000000, "oldRate": 0.045, "newRate": 0.038, "remainingYears": 30 }, "expected": { "oldMonthly": 2533427, "newMonthly": 2329787, "monthlySaving": 203640, "oldTotal": 912033558, "newTotal": 838723232, "totalSaving": 73310326 } }
+    ]
+  },
+  "guide": { "howToUse": "잔액·기존 금리·신규 금리·잔여 만기 입력 시 월 절감액과 총 절감액 비교.", "tips": ["중도상환수수료 < 총 절감액일 때 갈아타기 유리.", "고정금리 → 변동금리 갈아탈 때 금리상승 리스크 주의."] },
+  "related": ["loan-amortization", "prepayment-fee"]
+}

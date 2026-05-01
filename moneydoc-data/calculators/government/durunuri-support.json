@@ -1,0 +1,28 @@
+{
+  "id": "durunuri-support", "category": "government", "subCategory": "labor",
+  "title": "두루누리 사회보험료 지원 계산기", "subtitle": "5인 미만 사업장 + 월 270만 미만 근로자 80% 지원",
+  "slug": "durunuri-support", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "고용노동부", "document": "두루누리 사회보험료 지원 지침", "year": 2026 } },
+  "constants": { "SUPPORT_RATE": 0.80, "SALARY_LIMIT": 2700000, "EMPLOYEE_LIMIT": 5 },
+  "formula": [
+    { "step": 1, "name": "자격 판정", "expr": "월 보수 < 270만 + 사업장 < 5인" },
+    { "step": 2, "name": "본인·사업주 NP+EI", "expr": "보수 × (NP 4.5% + EI 0.9% + EI 1.15%) 합산" },
+    { "step": 3, "name": "월 지원액", "expr": "총 보험료 × 80%" }
+  ],
+  "inputs": [
+    { "id": "salary", "label": "월 보수", "type": "currency", "min": 1000000, "default": 2000000 },
+    { "id": "employees", "label": "사업장 근로자 수", "type": "number", "min": 1, "max": 100, "default": 3 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "두루누리 지원 지침 적용. NP + EI 합산 × 80%.",
+    "cases": [
+      { "name": "Case 1 — 월 200만 / 3인", "input": { "salary": 2000000, "employees": 3 }, "expected": { "isEligible": true, "employeeNP": 90000, "employeeEI": 18000, "employerNP": 90000, "employerEI": 23000, "monthlySupport": 176800 } },
+      { "name": "Case 2 — 월 250만 / 4인", "input": { "salary": 2500000, "employees": 4 }, "expected": { "isEligible": true, "employeeNP": 112500, "employeeEI": 22500, "employerNP": 112500, "employerEI": 28750, "monthlySupport": 221000 } },
+      { "name": "Case 3 — 월 280만 (소득 초과)", "input": { "salary": 2800000, "employees": 3 }, "expected": { "isEligible": false, "employeeNP": 126000, "employeeEI": 25200, "employerNP": 126000, "employerEI": 32200, "monthlySupport": 0 } },
+      { "name": "Case 4 — 월 180만 / 7인 (인원 초과)", "input": { "salary": 1800000, "employees": 7 }, "expected": { "isEligible": false, "employeeNP": 81000, "employeeEI": 16200, "employerNP": 81000, "employerEI": 20700, "monthlySupport": 0 } },
+      { "name": "Case 5 — 월 220만 / 2인", "input": { "salary": 2200000, "employees": 2 }, "expected": { "isEligible": true, "employeeNP": 99000, "employeeEI": 19800, "employerNP": 99000, "employerEI": 25300, "monthlySupport": 194480 } }
+    ]
+  },
+  "guide": { "howToUse": "월 보수 + 사업장 근로자 수 입력 시 자격 + 지원액 산출.", "tips": ["신규가입자 한정 (3년).", "근로자 + 사업주 모두 지원.", "근로복지공단 신청."] },
+  "related": ["four-major-insurance", "unemployment-benefit"]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "public-officer-pension", "category": "pension", "subCategory": "public",
+  "title": "공무원연금 시뮬레이터", "subtitle": "평균 기준소득월액 × 재직기간 × 1.7%",
+  "slug": "public-officer-pension", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "공무원연금공단", "document": "공무원연금법 §43", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "비례상수 (가입연도별)", "expr": "≤1995: 1.90% / 1996-2009: 1.85% / 2010-2015: 1.78% / ≥2016: 1.70%" },
+    { "step": 2, "name": "연간 연금", "expr": "평균소득월액 × 재직년수 × 비례상수 × 12" },
+    { "step": 3, "name": "월 연금", "expr": "연 / 12" }
+  ],
+  "inputs": [
+    { "id": "avgSalary", "label": "평균 기준소득월액", "type": "currency", "min": 1000000, "default": 5000000 },
+    { "id": "workYears", "label": "재직 연수", "type": "number", "min": 10, "max": 40, "default": 30 },
+    { "id": "entryYear", "label": "공무원 입사 연도", "type": "number", "min": 1980, "max": 2030, "default": 2000 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "공무원연금법 §43 가입연도별 비례상수 차등 적용.",
+    "cases": [
+      { "name": "Case 1 — 평균 400만 / 30년 / 1990 입사 (1.9%)", "input": { "avgSalary": 4000000, "workYears": 30, "entryYear": 1990 }, "expected": { "rate": 0.019, "annualPension": 27360000, "monthlyPension": 2280000 } },
+      { "name": "Case 2 — 평균 550만 / 35년 / 2000 입사 (1.85%)", "input": { "avgSalary": 5500000, "workYears": 35, "entryYear": 2000 }, "expected": { "rate": 0.0185, "annualPension": 42735000, "monthlyPension": 3561250 } },
+      { "name": "Case 3 — 평균 350만 / 25년 / 2012 입사 (1.78%)", "input": { "avgSalary": 3500000, "workYears": 25, "entryYear": 2012 }, "expected": { "rate": 0.0178, "annualPension": 18690000, "monthlyPension": 1557500 } },
+      { "name": "Case 4 — 평균 600만 / 30년 / 2018 입사 (1.7%)", "input": { "avgSalary": 6000000, "workYears": 30, "entryYear": 2018 }, "expected": { "rate": 0.017, "annualPension": 36720000, "monthlyPension": 3060000 } },
+      { "name": "Case 5 — 평균 450만 / 28년 / 1995 입사 (1.9%)", "input": { "avgSalary": 4500000, "workYears": 28, "entryYear": 1995 }, "expected": { "rate": 0.019, "annualPension": 28728000, "monthlyPension": 2394000 } }
+    ]
+  },
+  "guide": { "howToUse": "평균 기준소득월액과 재직 연수 입력 시 공무원연금 산출.", "tips": ["2015년 개혁 후 비례상수 단계적 인하 (1.9%→1.7%).", "최소 가입기간 10년.", "조기수령·연기수령 가능."] },
+  "related": ["national-pension", "retirement-pension-db"]
+}

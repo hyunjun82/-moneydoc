@@ -1,0 +1,37 @@
+{
+  "id": "youth-hope-deposit",
+  "category": "savings",
+  "subCategory": "youth",
+  "title": "청년희망적금 만기 시뮬레이터",
+  "subtitle": "2년 만기 + 정부 저축장려금 (1년차 2% / 2년차 4%) + 비과세",
+  "slug": "youth-hope-deposit",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "서민금융진흥원", "document": "청년희망적금 운영지침", "year": 2026 } },
+  "constants": { "MONTHS": 24, "INCENTIVE_Y1": 0.02, "INCENTIVE_Y2": 0.04 },
+  "formula": [
+    { "step": 1, "name": "원금", "expr": "monthlyDeposit × 24" },
+    { "step": 2, "name": "이자 (단리, 비과세)", "expr": "monthlyDeposit × (rate/12) × 24 × 25 / 2" },
+    { "step": 3, "name": "저축장려금", "expr": "1년차 월 × 2% × 12 + 2년차 월 × 4% × 12" },
+    { "step": 4, "name": "만기", "expr": "원금 + 이자 + 장려금" }
+  ],
+  "inputs": [
+    { "id": "monthlyDeposit", "label": "월 납입금", "type": "currency", "min": 100000, "max": 500000, "default": 500000 },
+    { "id": "rate", "label": "은행 이자율 (연)", "type": "number", "min": 0.01, "max": 0.10, "step": 0.001, "default": 0.05 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "서민금융진흥원 지침 + 월적립 단리 비과세.",
+    "cases": [
+      { "name": "Case 1 — 월 50만 × 24개월 × 5%", "input": { "monthlyDeposit": 500000, "rate": 0.05 }, "expected": { "principal": 12000000, "interest": 625000, "incentive": 360000, "maturity": 12985000 } },
+      { "name": "Case 2 — 월 30만 × 24개월 × 5%", "input": { "monthlyDeposit": 300000, "rate": 0.05 }, "expected": { "principal": 7200000, "interest": 375000, "incentive": 216000, "maturity": 7791000 } },
+      { "name": "Case 3 — 월 50만 × 24개월 × 3%", "input": { "monthlyDeposit": 500000, "rate": 0.03 }, "expected": { "principal": 12000000, "interest": 375000, "incentive": 360000, "maturity": 12735000 } },
+      { "name": "Case 4 — 월 20만 × 24개월 × 5%", "input": { "monthlyDeposit": 200000, "rate": 0.05 }, "expected": { "principal": 4800000, "interest": 250000, "incentive": 144000, "maturity": 5194000 } },
+      { "name": "Case 5 — 월 10만 × 24개월 × 5%", "input": { "monthlyDeposit": 100000, "rate": 0.05 }, "expected": { "principal": 2400000, "interest": 125000, "incentive": 72000, "maturity": 2597000 } }
+    ]
+  },
+  "guide": { "howToUse": "월 납입금(10~50만)과 은행 이자율을 입력하면 2년 만기 수령액(이자 + 장려금) 산출.", "tips": ["만 19~34세, 총급여 3,600만 이하 가입.", "중도해지 시 장려금·비과세 혜택 X."] },
+  "related": ["youth-leap-account", "installment-savings"]
+}

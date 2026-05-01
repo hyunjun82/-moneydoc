@@ -1,0 +1,36 @@
+{
+  "id": "jeonse-monthly-conversion",
+  "category": "realestate",
+  "subCategory": "rental",
+  "title": "전월세 전환율 계산기",
+  "subtitle": "주택임대차보호법 §7-2 전세 → 월세 전환",
+  "slug": "jeonse-monthly-conversion",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "국토교통부", "document": "주택임대차보호법 §7-2", "year": 2026 } },
+  "constants": { "DEFAULT_RATE": 0.06 },
+  "formula": [
+    { "step": 1, "name": "전환금액", "expr": "전세보증금 - 월세보증금" },
+    { "step": 2, "name": "월세", "expr": "round(전환금액 × 전환율 / 12)" }
+  ],
+  "inputs": [
+    { "id": "jeonseDeposit", "label": "기존 전세보증금", "type": "currency", "min": 10000000, "default": 300000000 },
+    { "id": "securityDeposit", "label": "월세 전환 후 보증금", "type": "currency", "min": 0, "default": 100000000 },
+    { "id": "conversionRate", "label": "전환율 (연)", "type": "number", "min": 0.04, "max": 0.10, "step": 0.001, "default": 0.06 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "법정 전환율 (한국은행 기준금리 + 2% 또는 시중금리 × 1.5배). 2024년 일반 6%.",
+    "cases": [
+      { "name": "Case 1 — 전세 3억 → 보증 1억 (6%)", "input": { "jeonseDeposit": 300000000, "securityDeposit": 100000000, "conversionRate": 0.06 }, "expected": { "conversionAmount": 200000000, "monthlyRent": 1000000 } },
+      { "name": "Case 2 — 전세 5억 → 보증 2억 (6%)", "input": { "jeonseDeposit": 500000000, "securityDeposit": 200000000, "conversionRate": 0.06 }, "expected": { "conversionAmount": 300000000, "monthlyRent": 1500000 } },
+      { "name": "Case 3 — 전세 1억 → 무보증 (6%)", "input": { "jeonseDeposit": 100000000, "securityDeposit": 0, "conversionRate": 0.06 }, "expected": { "conversionAmount": 100000000, "monthlyRent": 500000 } },
+      { "name": "Case 4 — 전세 8억 → 보증 3억 (6%)", "input": { "jeonseDeposit": 800000000, "securityDeposit": 300000000, "conversionRate": 0.06 }, "expected": { "conversionAmount": 500000000, "monthlyRent": 2500000 } },
+      { "name": "Case 5 — 전세 2억 → 보증 5천 (6%)", "input": { "jeonseDeposit": 200000000, "securityDeposit": 50000000, "conversionRate": 0.06 }, "expected": { "conversionAmount": 150000000, "monthlyRent": 750000 } }
+    ]
+  },
+  "guide": { "howToUse": "기존 전세 보증금과 월세 전환 후 보증금을 입력하면 법정 월세 산출.", "tips": ["법정 전환율 초과 분쟁 시 임대료조정위원회 신청 가능.", "주택임대차보호법 §7-2 (한국은행 기준금리 + 2% 한도)."] },
+  "related": ["brokerage-fee", "rental-yield"]
+}

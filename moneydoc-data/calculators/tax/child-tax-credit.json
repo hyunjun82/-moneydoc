@@ -1,0 +1,52 @@
+{
+  "id": "child-tax-credit",
+  "category": "tax",
+  "subCategory": "deduction",
+  "title": "자녀세액공제 계산기",
+  "subtitle": "소득세법 §59의2 기본 자녀공제 + 출산·입양 추가공제",
+  "slug": "child-tax-credit",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "국세청",
+      "document": "소득세법",
+      "year": 2026,
+      "laws": ["소득세법 제59조의2 (자녀세액공제)"]
+    }
+  },
+  "constants": {
+    "FIRST_KID": 250000,
+    "TWO_KIDS": 550000,
+    "THREE_KIDS": 950000,
+    "ADDITIONAL_PER_KID": 400000,
+    "NEWBORN_PER_KID": 700000
+  },
+  "formula": [
+    { "step": 1, "name": "기본 자녀공제", "expr": "1명: 25만 / 2명: 55만 / 3명: 95만 / 4명+ 1명당 +40만" },
+    { "step": 2, "name": "출산·입양공제", "expr": "newbornKids × 70만" },
+    { "step": 3, "name": "총 세액공제", "expr": "기본 + 출산"  }
+  ],
+  "inputs": [
+    { "id": "kids", "label": "8세~20세 자녀 수", "type": "stepper", "min": 0, "max": 10, "default": 2 },
+    { "id": "monthlyKids", "label": "당해 출산·입양 자녀 수", "type": "stepper", "min": 0, "max": 5, "default": 0, "hint": "1명 70만원 추가" }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "소득세법 §59의2 산식 직접 적용.",
+    "cases": [
+      { "name": "Case 1 — 자녀 0", "input": { "kids": 0, "monthlyKids": 0 }, "expected": { "regularCredit": 0, "newbornCredit": 0, "total": 0 } },
+      { "name": "Case 2 — 자녀 1", "input": { "kids": 1, "monthlyKids": 0 }, "expected": { "regularCredit": 250000, "newbornCredit": 0, "total": 250000 } },
+      { "name": "Case 3 — 자녀 2", "input": { "kids": 2, "monthlyKids": 0 }, "expected": { "regularCredit": 550000, "newbornCredit": 0, "total": 550000 } },
+      { "name": "Case 4 — 자녀 3", "input": { "kids": 3, "monthlyKids": 0 }, "expected": { "regularCredit": 950000, "newbornCredit": 0, "total": 950000 } },
+      { "name": "Case 5 — 자녀 2 + 출산 1", "input": { "kids": 2, "monthlyKids": 1 }, "expected": { "regularCredit": 550000, "newbornCredit": 700000, "total": 1250000 } }
+    ]
+  },
+  "guide": {
+    "howToUse": "8세~20세 부양 자녀 수와 당해 출산·입양 자녀 수를 입력하면 자녀세액공제 총액이 산출됩니다.",
+    "tips": ["출산·입양: 첫째 30만, 둘째 50만, 셋째 이상 70만 (2024년 일괄 인상).", "둘 다 적용 가능 (기본공제 + 출산공제 중복)."]
+  },
+  "related": ["salary-net-pay", "comprehensive-income-tax"]
+}

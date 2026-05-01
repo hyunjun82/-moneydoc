@@ -1,0 +1,34 @@
+{
+  "id": "median-income", "category": "government", "subCategory": "welfare",
+  "title": "중위소득 계산기", "subtitle": "가구원수별 중위소득 100/50/47/40/30% + 본인 소득 비율",
+  "slug": "median-income",
+  "searchAliases": ["기준중위소득 계산기", "중위소득 100% 계산"],
+  "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "보건복지부", "document": "기준 중위소득 고시 2024", "year": 2024 } },
+  "constants": {},
+  "tables": {
+    "median100": { "1": 2228445, "2": 3682609, "3": 4714657, "4": 5729913, "5": 6695735, "6": 7618369 }
+  },
+  "formula": [
+    { "step": 1, "name": "중위소득 100%", "expr": "가구원수별 lookup" },
+    { "step": 2, "name": "각 비율", "expr": "100% × 0.5 / 0.47 / 0.40 / 0.30" },
+    { "step": 3, "name": "본인 비율", "expr": "(소득 / 중위100%) × 100" }
+  ],
+  "inputs": [
+    { "id": "householdSize", "label": "가구원 수", "type": "stepper", "min": 1, "max": 6, "default": 1 },
+    { "id": "incomeAmount", "label": "본인 소득 (월)", "type": "currency", "min": 0, "default": 1000000 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30",
+    "method": "보건복지부 2024 기준중위소득 고시값 직접 lookup. 각 비율 산출.",
+    "cases": [
+      { "name": "Case 1 — 1인 / 100만", "input": { "householdSize": 1, "incomeAmount": 1000000 }, "expected": { "median100": 2228445, "median50": 1114223, "median47": 1047369, "median40": 891378, "median30": 668534, "userPct": 44.9 } },
+      { "name": "Case 2 — 2인 / 200만", "input": { "householdSize": 2, "incomeAmount": 2000000 }, "expected": { "median100": 3682609, "median50": 1841305, "median47": 1730826, "median40": 1473044, "median30": 1104783, "userPct": 54.3 } },
+      { "name": "Case 3 — 3인 / 400만", "input": { "householdSize": 3, "incomeAmount": 4000000 }, "expected": { "median100": 4714657, "median50": 2357329, "median47": 2215889, "median40": 1885863, "median30": 1414397, "userPct": 84.8 } },
+      { "name": "Case 4 — 4인 / 600만", "input": { "householdSize": 4, "incomeAmount": 6000000 }, "expected": { "median100": 5729913, "median50": 2864957, "median47": 2693059, "median40": 2291965, "median30": 1718974, "userPct": 104.7 } },
+      { "name": "Case 5 — 1인 / 50만", "input": { "householdSize": 1, "incomeAmount": 500000 }, "expected": { "median100": 2228445, "median50": 1114223, "median47": 1047369, "median40": 891378, "median30": 668534, "userPct": 22.4 } }
+    ]
+  },
+  "guide": { "howToUse": "가구원수와 본인 소득 입력 시 중위소득 비율과 각 복지 자격 기준 표시.", "tips": ["기준중위소득은 매년 8월 발표.", "30% 생계급여 / 40% 의료급여 / 47% 주거급여 / 50% 교육급여 자격 기준.", "차상위계층은 중위 50% 이하."] },
+  "related": ["near-poor-eligibility", "basic-livelihood-eligibility", "basic-pension"]
+}

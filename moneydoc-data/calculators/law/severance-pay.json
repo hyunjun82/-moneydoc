@@ -1,0 +1,80 @@
+{
+  "id": "severance-pay",
+  "category": "law",
+  "subCategory": "labor",
+  "title": "퇴직금 계산기 (법정)",
+  "subtitle": "근로자퇴직급여보장법 §8 평균임금 기준",
+  "slug": "severance-pay",
+  "searchAliases": ["퇴직금 계산기", "법정 퇴직금 계산기", "퇴직금 계산"],
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "고용노동부",
+      "document": "근로자퇴직급여보장법",
+      "year": 2026,
+      "laws": [
+        "근로자퇴직급여보장법 제8조 (퇴직금제도)",
+        "근로기준법 제2조 1항 6호 (평균임금 정의)",
+        "근로기준법 시행령 제2조 (평균임금 산정)"
+      ]
+    }
+  },
+  "constants": {
+    "DAYS_PER_YEAR": 365
+  },
+  "formula": [
+    { "step": 1, "name": "근속일수", "expr": "퇴사일 - 입사일 (총 일수)" },
+    { "step": 2, "name": "최근 3개월 임금 총액", "expr": "기본급 × 3 + 상여금(연간/4) + 연차수당(전년 미사용 ÷ 4)" },
+    { "step": 3, "name": "평균임금 (1일)", "expr": "최근 3개월 임금 총액 / 90 (또는 89~92일)" },
+    { "step": 4, "name": "퇴직금", "expr": "평균임금 × 30 × (근속일수 / 365)" }
+  ],
+  "inputs": [
+    { "id": "monthlySalary", "label": "월 평균 기본급", "type": "currency", "min": 0, "default": 3000000, "hint": "최근 3개월 평균" },
+    { "id": "annualBonus", "label": "연간 상여금", "type": "currency", "min": 0, "default": 0, "hint": "1년치 상여금 총액" },
+    { "id": "unusedAnnualLeavePay", "label": "전년 미사용 연차수당", "type": "currency", "min": 0, "default": 0 },
+    { "id": "workDays", "label": "총 근속일수", "type": "number", "min": 365, "max": 18250, "default": 1095, "hint": "1년 = 365일, 3년 = 1095일" }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "근로자퇴직급여보장법 §8 + 근기법 시행령 §2 평균임금 산정 산식 직접 적용. 상여금은 연간 ÷ 4 (3개월분), 연차수당은 전년 ÷ 4 가산.",
+    "cases": [
+      {
+        "name": "Case 1 — 월급 250만, 1년 근속",
+        "input": { "monthlySalary": 2500000, "annualBonus": 0, "unusedAnnualLeavePay": 0, "workDays": 365 },
+        "expected": { "threeMonthTotal": 7500000, "avgDailyWage": 83333, "severance": 2500000 }
+      },
+      {
+        "name": "Case 2 — 월급 300만, 3년 근속, 연간 상여 600만",
+        "input": { "monthlySalary": 3000000, "annualBonus": 6000000, "unusedAnnualLeavePay": 0, "workDays": 1095 },
+        "expected": { "threeMonthTotal": 10500000, "avgDailyWage": 116667, "severance": 10500000 }
+      },
+      {
+        "name": "Case 3 — 월급 400만, 5년 근속, 상여 800만, 연차수당 80만",
+        "input": { "monthlySalary": 4000000, "annualBonus": 8000000, "unusedAnnualLeavePay": 800000, "workDays": 1825 },
+        "expected": { "threeMonthTotal": 14200000, "avgDailyWage": 157778, "severance": 23666667 }
+      },
+      {
+        "name": "Case 4 — 월급 500만, 10년 근속, 상여 1200만",
+        "input": { "monthlySalary": 5000000, "annualBonus": 12000000, "unusedAnnualLeavePay": 0, "workDays": 3650 },
+        "expected": { "threeMonthTotal": 18000000, "avgDailyWage": 200000, "severance": 60000000 }
+      },
+      {
+        "name": "Case 5 — 월급 350만, 7년 근속",
+        "input": { "monthlySalary": 3500000, "annualBonus": 0, "unusedAnnualLeavePay": 0, "workDays": 2555 },
+        "expected": { "threeMonthTotal": 10500000, "avgDailyWage": 116667, "severance": 24500000 }
+      }
+    ]
+  },
+  "guide": {
+    "howToUse": "월 기본급, 연간 상여금, 미사용 연차수당, 총 근속일수를 입력하면 법정 퇴직금이 계산됩니다. 평균임금은 「최근 3개월 임금 총액 ÷ 90일」로 산출되며, 상여금은 연간 ÷ 4(3개월분), 연차수당은 전년분 ÷ 4를 더해 계산합니다.",
+    "tips": [
+      "1년 미만 근속은 퇴직금 청구권 없음 (4주 평균 1주 15시간 미만 근로 제외).",
+      "퇴직 후 14일 이내 미지급 시 연 20% 지연이자 발생 (근로기준법 §37).",
+      "DC형 퇴직연금 가입자는 별도 계산 (회사 부담금 + 운용수익)."
+    ]
+  },
+  "related": ["national-pension", "salary-net-pay", "unemployment-benefit"]
+}

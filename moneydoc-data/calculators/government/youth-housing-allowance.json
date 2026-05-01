@@ -1,0 +1,35 @@
+{
+  "id": "youth-housing-allowance", "category": "government", "subCategory": "housing",
+  "title": "청년 주거급여 계산기", "subtitle": "주거급여법 정확 산식 — 기준임차료 - 자기부담분",
+  "slug": "youth-housing-allowance", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "보건복지부·국토교통부", "document": "주거급여법 시행령", "year": 2026 } },
+  "constants": {},
+  "tables": {
+    "baseRent": { "1": 350000, "2": 395000, "3": 470000, "4": 545000, "5": 620000, "6": 700000 },
+    "livelihoodBase": { "1": 712000, "2": 1178000, "3": 1508000, "4": 1832000, "5": 2142000, "6": 2438000 }
+  },
+  "formula": [
+    { "step": 1, "name": "기준 임차료", "expr": "가구원수별 (1급지 서울 기준)" },
+    { "step": 2, "name": "생계급여 기준", "expr": "중위소득 30% 가구원수별" },
+    { "step": 3, "name": "자기부담분", "expr": "max(0, (소득인정액 - 생계급여기준) × 30%)" },
+    { "step": 4, "name": "임차급여", "expr": "max(0, 기준임차료 - 자기부담분)" },
+    { "step": 5, "name": "자격", "expr": "소득인정액 ≤ 중위소득 47% (생계급여기준 × 47/30)" }
+  ],
+  "inputs": [
+    { "id": "householdSize", "label": "가구원 수", "type": "stepper", "min": 1, "max": 6, "default": 1 },
+    { "id": "incomeAmount", "label": "소득인정액 (월, 원)", "type": "currency", "min": 0, "default": 1000000 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30",
+    "method": "주거급여법 시행령 정확 산식 적용. 1급지 서울 기준임차료, 2024년 생계급여 기준.",
+    "cases": [
+      { "name": "Case 1 — 1인 / 50만", "input": { "householdSize": 1, "incomeAmount": 500000 }, "expected": { "isEligible": true, "baseRent": 350000, "livelihoodBase": 712000, "selfPay": 0, "monthlySupport": 350000 } },
+      { "name": "Case 2 — 1인 / 100만", "input": { "householdSize": 1, "incomeAmount": 1000000 }, "expected": { "isEligible": true, "baseRent": 350000, "livelihoodBase": 712000, "selfPay": 86400, "monthlySupport": 263600 } },
+      { "name": "Case 3 — 4인 / 150만", "input": { "householdSize": 4, "incomeAmount": 1500000 }, "expected": { "isEligible": true, "baseRent": 545000, "livelihoodBase": 1832000, "selfPay": 0, "monthlySupport": 545000 } },
+      { "name": "Case 4 — 4인 / 250만", "input": { "householdSize": 4, "incomeAmount": 2500000 }, "expected": { "isEligible": true, "baseRent": 545000, "livelihoodBase": 1832000, "selfPay": 200400, "monthlySupport": 344600 } },
+      { "name": "Case 5 — 1인 / 200만 (자격 X)", "input": { "householdSize": 1, "incomeAmount": 2000000 }, "expected": { "isEligible": false, "baseRent": 350000, "livelihoodBase": 712000, "selfPay": 386400, "monthlySupport": 0 } }
+    ]
+  },
+  "guide": { "howToUse": "가구원수와 소득인정액 입력 시 임차급여 산출.", "tips": ["1급지(서울) 기준. 2급지(경기·인천)·3급지·4급지 별도 표.", "자가가구는 수선비 지원 (별도).", "주민센터 신청."] },
+  "related": ["youth-rent-support", "basic-pension"]
+}

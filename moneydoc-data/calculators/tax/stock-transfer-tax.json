@@ -1,0 +1,60 @@
+{
+  "id": "stock-transfer-tax",
+  "category": "tax",
+  "subCategory": "investment",
+  "title": "주식 양도소득세 계산기",
+  "subtitle": "비대주주 22% / 대주주 22%~27.5% (3억 초과)",
+  "slug": "stock-transfer-tax",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "국세청",
+      "document": "소득세법",
+      "year": 2026,
+      "laws": [
+        "소득세법 제94조 (주식 등 양도소득)",
+        "소득세법 제104조 (양도소득세율)",
+        "소득세법 제103조 (양도소득기본공제)"
+      ]
+    },
+    "note": "국내 상장주식은 일반투자자 비과세 (대주주만 과세). 본 계산기는 「대주주 + 비상장」 또는 해외주식 일반투자자 케이스에 적용."
+  },
+  "constants": {
+    "BASIC_DEDUCTION": 2500000,
+    "RATE_NORMAL": 0.22,
+    "RATE_MAJOR_HIGH": 0.275,
+    "MAJOR_HIGH_THRESHOLD": 300000000
+  },
+  "formula": [
+    { "step": 1, "name": "과세표준", "expr": "max(0, gain - 250만)" },
+    { "step": 2, "name": "세율", "expr": "비대주주: 22%. 대주주 + 3억 초과분: 27.5%. 그 외: 22%" },
+    { "step": 3, "name": "지방세 분리", "expr": "총세 = 과세표준 × 세율. 소득세분 = 과표 × (rate - 2.2%). 지방세분 = 과표 × 2.2%" }
+  ],
+  "inputs": [
+    { "id": "gain", "label": "양도차익", "type": "currency", "min": 0, "default": 50000000 },
+    { "id": "isMajor", "label": "대주주 여부", "type": "boolean", "default": false }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "소득세법 §94, §103, §104 적용. 22% = 소득세 20% + 지방세 2%, 27.5% = 25% + 2.5%.",
+    "cases": [
+      { "name": "Case 1 — 비대주주 차익 500만 (22%)", "input": { "gain": 5000000, "isMajor": false }, "expected": { "taxableBase": 2500000, "incomeTax": 495000, "localTax": 55000, "totalTax": 550000 } },
+      { "name": "Case 2 — 비대주주 차익 5천만", "input": { "gain": 50000000, "isMajor": false }, "expected": { "taxableBase": 47500000, "incomeTax": 9405000, "localTax": 1045000, "totalTax": 10450000 } },
+      { "name": "Case 3 — 비대주주 차익 1억", "input": { "gain": 100000000, "isMajor": false }, "expected": { "taxableBase": 97500000, "incomeTax": 19305000, "localTax": 2145000, "totalTax": 21450000 } },
+      { "name": "Case 4 — 대주주 차익 2억 (3억 미만, 22%)", "input": { "gain": 200000000, "isMajor": true }, "expected": { "taxableBase": 197500000, "incomeTax": 39105000, "localTax": 4345000, "totalTax": 43450000 } },
+      { "name": "Case 5 — 대주주 차익 5억 (3억 초과, 27.5%)", "input": { "gain": 500000000, "isMajor": true }, "expected": { "taxableBase": 497500000, "incomeTax": 125867500, "localTax": 10945000, "totalTax": 136812500 } }
+    ]
+  },
+  "guide": {
+    "howToUse": "양도차익과 대주주 여부를 입력하면 주식 양도세가 산출됩니다.",
+    "tips": [
+      "국내 상장주식 일반투자자 양도세 비과세 (코스피·코스닥).",
+      "해외주식은 일반투자자도 양도세 22% 부과 (250만 공제).",
+      "대주주 기준: 종목당 1% (코스피) / 2% (코스닥) 또는 50억 이상 보유."
+    ]
+  },
+  "related": ["overseas-stock-tax", "comprehensive-income-tax"]
+}

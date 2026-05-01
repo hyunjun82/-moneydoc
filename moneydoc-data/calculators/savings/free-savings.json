@@ -1,0 +1,38 @@
+{
+  "id": "free-savings",
+  "category": "savings",
+  "subCategory": "deposit",
+  "title": "자유적금 만기 계산기",
+  "subtitle": "자유 납입 적금 단리 만기 + 이자소득세",
+  "slug": "free-savings",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "한국은행", "document": "자유적금 단리 산식", "year": 2026 } },
+  "constants": { "INTEREST_TAX_RATE": 0.154 },
+  "formula": [
+    { "step": 1, "name": "원금", "expr": "monthlyDeposit × months (평균 납입 가정)" },
+    { "step": 2, "name": "이자 (단리)", "expr": "monthlyDeposit × (rate/12) × months × (months+1) / 2" },
+    { "step": 3, "name": "이자소득세", "expr": "interest × 15.4%" },
+    { "step": 4, "name": "세후 만기", "expr": "원금 + 이자 - 세금" }
+  ],
+  "inputs": [
+    { "id": "monthlyDeposit", "label": "월 평균 납입금", "type": "currency", "min": 10000, "default": 1000000 },
+    { "id": "months", "label": "납입 월수", "type": "number", "min": 1, "max": 600, "default": 24 },
+    { "id": "rate", "label": "연이율", "type": "number", "min": 0.001, "max": 0.10, "step": 0.001, "default": 0.04 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "월적립 단리 (정기적금과 동일). 자유적금은 평균 납입 기준으로 환산.",
+    "cases": [
+      { "name": "Case 1 — 월 100만 × 24개월 × 3.5%", "input": { "monthlyDeposit": 1000000, "months": 24, "rate": 0.035 }, "expected": { "principal": 24000000, "interest": 875000, "tax": 134750, "maturity": 24740250 } },
+      { "name": "Case 2 — 월 50만 × 60개월 × 4.0%", "input": { "monthlyDeposit": 500000, "months": 60, "rate": 0.040 }, "expected": { "principal": 30000000, "interest": 3050000, "tax": 469700, "maturity": 32580300 } },
+      { "name": "Case 3 — 월 200만 × 12개월 × 4.5%", "input": { "monthlyDeposit": 2000000, "months": 12, "rate": 0.045 }, "expected": { "principal": 24000000, "interest": 585000, "tax": 90090, "maturity": 24494910 } },
+      { "name": "Case 4 — 월 30만 × 36개월 × 3.5%", "input": { "monthlyDeposit": 300000, "months": 36, "rate": 0.035 }, "expected": { "principal": 10800000, "interest": 582750, "tax": 89744, "maturity": 11293006 } },
+      { "name": "Case 5 — 월 70만 × 48개월 × 4.2%", "input": { "monthlyDeposit": 700000, "months": 48, "rate": 0.042 }, "expected": { "principal": 33600000, "interest": 2881200, "tax": 443705, "maturity": 36037495 } }
+    ]
+  },
+  "guide": { "howToUse": "월 평균 납입금·기간·이율 입력 시 세후 만기 산출. 자유적금은 매월 다른 금액 가능, 평균값 사용.", "tips": ["월별 납입액이 들쑥날쑥하면 평균 납입으로 근사.", "비과세종합저축으로 가입 시 세금 0원."] },
+  "related": ["installment-savings", "tax-free-savings"]
+}

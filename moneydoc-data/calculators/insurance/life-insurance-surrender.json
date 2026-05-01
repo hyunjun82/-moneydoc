@@ -1,0 +1,29 @@
+{
+  "id": "life-insurance-surrender", "category": "insurance", "subCategory": "life",
+  "title": "종신보험 실효보험료 계산기", "subtitle": "납입 보험료 - 환급금 = 실효 손실",
+  "slug": "life-insurance-surrender", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "금융감독원", "document": "보험상품 표준약관", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "총 납입", "expr": "월보험료 × 12 × 납입년수" },
+    { "step": 2, "name": "환급금", "expr": "총납입 × 환급률 (보험사·연수별 차등)" },
+    { "step": 3, "name": "실효 손실", "expr": "총납입 - 환급금" }
+  ],
+  "inputs": [
+    { "id": "monthlyPremium", "label": "월 보험료", "type": "currency", "min": 50000, "default": 200000 },
+    { "id": "paidYears", "label": "납입 년수", "type": "number", "min": 1, "max": 30, "default": 10 },
+    { "id": "surrenderRate", "label": "환급률", "type": "number", "min": 0, "max": 1.0, "step": 0.05, "default": 0.50, "hint": "5년 30%, 10년 50%, 15년 70%, 20년+ 90%" }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "총 납입 × (1 - 환급률) = 실효 손실. 보험사별 차등.",
+    "cases": [
+      { "name": "Case 1 — 월 10만 / 5년 / 30%", "input": { "monthlyPremium": 100000, "paidYears": 5, "surrenderRate": 0.30 }, "expected": { "totalPaid": 6000000, "surrender": 1800000, "netLoss": 4200000 } },
+      { "name": "Case 2 — 월 20만 / 10년 / 50%", "input": { "monthlyPremium": 200000, "paidYears": 10, "surrenderRate": 0.50 }, "expected": { "totalPaid": 24000000, "surrender": 12000000, "netLoss": 12000000 } },
+      { "name": "Case 3 — 월 30만 / 3년 / 10% (조기해지)", "input": { "monthlyPremium": 300000, "paidYears": 3, "surrenderRate": 0.10 }, "expected": { "totalPaid": 10800000, "surrender": 1080000, "netLoss": 9720000 } },
+      { "name": "Case 4 — 월 15만 / 15년 / 70%", "input": { "monthlyPremium": 150000, "paidYears": 15, "surrenderRate": 0.70 }, "expected": { "totalPaid": 27000000, "surrender": 18900000, "netLoss": 8100000 } },
+      { "name": "Case 5 — 월 50만 / 7년 / 40%", "input": { "monthlyPremium": 500000, "paidYears": 7, "surrenderRate": 0.40 }, "expected": { "totalPaid": 42000000, "surrender": 16800000, "netLoss": 25200000 } }
+    ]
+  },
+  "guide": { "howToUse": "월 보험료·납입년수·환급률 입력 시 실효(중도해지) 손실 산출.", "tips": ["조기 해지 시 환급률 매우 낮음 (3년 이내 10~30%).", "10년 이상 납입 후 해지가 손실 최소화.", "감액해지·연장정기보험으로 손실 줄이기 가능."] },
+  "related": ["medical-insurance-payout", "auto-insurance"]
+}

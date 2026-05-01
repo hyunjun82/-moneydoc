@@ -1,0 +1,54 @@
+{
+  "id": "loan-amortization",
+  "category": "loan",
+  "subCategory": "repayment",
+  "title": "원리금균등상환 계산기",
+  "subtitle": "PMT 산식 기반 월 상환액 + 총 이자",
+  "slug": "loan-amortization",
+  "searchAliases": ["대출 계산기", "주담대 계산기", "원리금균등 계산기", "주택담보대출 계산기"],
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "금융감독원",
+      "document": "주택담보대출 상환 표준방식",
+      "year": 2026,
+      "laws": ["은행업감독규정 §29 (대출 상환방식)"]
+    }
+  },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "월 금리", "expr": "annualRate / 12" },
+    { "step": 2, "name": "만기 월수", "expr": "years × 12" },
+    { "step": 3, "name": "월 상환액 M", "expr": "P × r × (1+r)^n / ((1+r)^n - 1)" },
+    { "step": 4, "name": "총 상환액", "expr": "M × n" },
+    { "step": 5, "name": "총 이자", "expr": "총 상환액 - P" }
+  ],
+  "inputs": [
+    { "id": "principal", "label": "대출 원금", "type": "currency", "min": 1000000, "default": 100000000 },
+    { "id": "years", "label": "만기 (년)", "type": "number", "min": 1, "max": 40, "default": 30 },
+    { "id": "rate", "label": "연 금리", "type": "number", "min": 0.005, "max": 0.20, "step": 0.001, "default": 0.04 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "원리금균등 PMT 표준 산식 직접 적용. Math.pow로 (1+r)^n 정확 산출.",
+    "cases": [
+      { "name": "Case 1 — 1억 / 30년 / 4.0%", "input": { "principal": 100000000, "years": 30, "rate": 0.04 }, "expected": { "monthly": 477415, "totalPayment": 171869506, "totalInterest": 71869506 } },
+      { "name": "Case 2 — 2억 / 20년 / 4.5%", "input": { "principal": 200000000, "years": 20, "rate": 0.045 }, "expected": { "monthly": 1265299, "totalPayment": 303671701, "totalInterest": 103671701 } },
+      { "name": "Case 3 — 5천만 / 10년 / 5.0%", "input": { "principal": 50000000, "years": 10, "rate": 0.05 }, "expected": { "monthly": 530328, "totalPayment": 63639309, "totalInterest": 13639309 } },
+      { "name": "Case 4 — 3억 / 30년 / 3.5%", "input": { "principal": 300000000, "years": 30, "rate": 0.035 }, "expected": { "monthly": 1347134, "totalPayment": 484968263, "totalInterest": 184968263 } },
+      { "name": "Case 5 — 5억 / 25년 / 4.2%", "input": { "principal": 500000000, "years": 25, "rate": 0.042 }, "expected": { "monthly": 2694712, "totalPayment": 808413477, "totalInterest": 308413477 } }
+    ]
+  },
+  "guide": {
+    "howToUse": "대출 원금, 만기(년), 연 금리를 입력하면 매월 일정한 원리금 상환액과 총 이자가 산출됩니다.",
+    "tips": [
+      "초기 몇 년은 이자 비중이 높고 원금 상환이 적음 (역피라미드 구조).",
+      "동일 만기·금리에서 원금균등이 총 이자 적음 (단, 초기 부담 큼).",
+      "30년 만기는 10년·20년보다 월 상환은 줄지만 총 이자는 2배 가까이 증가."
+    ]
+  },
+  "related": ["loan-decline", "dsr-limit", "ltv-limit"]
+}

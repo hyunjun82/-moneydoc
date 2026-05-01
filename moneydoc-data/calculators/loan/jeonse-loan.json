@@ -1,0 +1,33 @@
+{
+  "id": "jeonse-loan",
+  "category": "loan",
+  "subCategory": "housing",
+  "title": "전세자금대출 한도 계산기",
+  "subtitle": "주택금융공사 일반 전세대출 보증금 80% 기준",
+  "slug": "jeonse-loan",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "주택금융공사", "document": "전세자금보증 운영규정", "year": 2026 } },
+  "constants": { "DEFAULT_RATIO": 0.80, "DEFAULT_LIMIT": 400000000 },
+  "formula": [ { "step": 1, "name": "한도", "expr": "min(보증금 × 비율, 한도)" } ],
+  "inputs": [
+    { "id": "deposit", "label": "전세 보증금", "type": "currency", "min": 10000000, "default": 200000000 },
+    { "id": "ratio", "label": "보증 비율", "type": "number", "min": 0.50, "max": 1.0, "step": 0.05, "default": 0.80 },
+    { "id": "limit", "label": "최대 한도", "type": "currency", "min": 50000000, "default": 400000000 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "min(보증금 × 80%, 4억). 청년·신혼 특례는 별도.",
+    "cases": [
+      { "name": "Case 1 — 보증 2억", "input": { "deposit": 200000000, "ratio": 0.80, "limit": 400000000 }, "expected": { "maxLoan": 160000000 } },
+      { "name": "Case 2 — 보증 5억 (한도 적용)", "input": { "deposit": 500000000, "ratio": 0.80, "limit": 400000000 }, "expected": { "maxLoan": 400000000 } },
+      { "name": "Case 3 — 보증 1억", "input": { "deposit": 100000000, "ratio": 0.80, "limit": 400000000 }, "expected": { "maxLoan": 80000000 } },
+      { "name": "Case 4 — 보증 7억 (한도)", "input": { "deposit": 700000000, "ratio": 0.80, "limit": 400000000 }, "expected": { "maxLoan": 400000000 } },
+      { "name": "Case 5 — 보증 3억", "input": { "deposit": 300000000, "ratio": 0.80, "limit": 400000000 }, "expected": { "maxLoan": 240000000 } }
+    ]
+  },
+  "guide": { "howToUse": "전세 보증금 입력 시 일반 전세대출 한도 산출.", "tips": ["청년 특례: 보증금 90% / 한도 2억.", "신혼: 한도 3.5억.", "버팀목: 무주택 한도 1.2억."] },
+  "related": ["dsr-limit", "ltv-limit", "loan-amortization"]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "comprehensive-real-estate-tax",
+  "category": "realestate",
+  "subCategory": "tax",
+  "title": "종합부동산세 계산기",
+  "searchAliases": ["종부세 계산기"],
+  "subtitle": "공정시장가액 60% 적용 + 1주택자 12억 공제",
+  "slug": "comprehensive-real-estate-tax",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "국세청",
+      "document": "종합부동산세법",
+      "year": 2026,
+      "laws": [
+        "종합부동산세법 제8조 (과세기준)",
+        "종합부동산세법 제9조 (세율)",
+        "종합부동산세법 시행령 제2조 (공정시장가액비율 60%)"
+      ]
+    }
+  },
+  "constants": {
+    "ONE_HOME_DEDUCTION": 1200000000,
+    "GENERAL_DEDUCTION": 900000000,
+    "FAIR_MARKET_RATIO": 0.60
+  },
+  "tables": {
+    "brackets1Home": {
+      "description": "1세대 1주택자 종부세 누진세율 (과세표준 기준)",
+      "brackets": [
+        { "upperBound": 300000000, "rate": 0.005, "progressiveDeduction": 0 },
+        { "upperBound": 600000000, "rate": 0.007, "progressiveDeduction": 600000 },
+        { "upperBound": 1200000000, "rate": 0.010, "progressiveDeduction": 2400000 },
+        { "upperBound": 2500000000, "rate": 0.013, "progressiveDeduction": 6000000 },
+        { "upperBound": 5000000000, "rate": 0.015, "progressiveDeduction": 11000000 },
+        { "upperBound": 9400000000, "rate": 0.020, "progressiveDeduction": 36000000 },
+        { "upperBound": null, "rate": 0.027, "progressiveDeduction": 101800000 }
+      ]
+    },
+    "bracketsMulti": {
+      "description": "일반(2주택+) 종부세 누진세율 (과세표준 기준)",
+      "brackets": [
+        { "upperBound": 300000000, "rate": 0.005, "progressiveDeduction": 0 },
+        { "upperBound": 600000000, "rate": 0.007, "progressiveDeduction": 600000 },
+        { "upperBound": 1200000000, "rate": 0.010, "progressiveDeduction": 2400000 },
+        { "upperBound": 2500000000, "rate": 0.020, "progressiveDeduction": 14400000 },
+        { "upperBound": 5000000000, "rate": 0.030, "progressiveDeduction": 39400000 },
+        { "upperBound": 9400000000, "rate": 0.040, "progressiveDeduction": 89400000 },
+        { "upperBound": null, "rate": 0.050, "progressiveDeduction": 183400000 }
+      ]
+    }
+  },
+  "formula": [
+    { "step": 1, "name": "공시가 합계", "expr": "totalValue" },
+    { "step": 2, "name": "공제", "expr": "1주택자: 12억, 일반: 9억" },
+    { "step": 3, "name": "초과분", "expr": "max(0, totalValue - deduction)" },
+    { "step": 4, "name": "과세표준", "expr": "round(초과분 × 60%)" },
+    { "step": 5, "name": "산출세액", "expr": "과세표준 × 세율 - 누진공제 (1주택/일반 표 분리)" }
+  ],
+  "inputs": [
+    { "id": "totalValue", "label": "주택공시가 합계", "type": "currency", "min": 0, "default": 1500000000 },
+    { "id": "isOneHome", "label": "1세대 1주택자 여부", "type": "boolean", "default": true },
+    { "id": "age", "label": "연령 (1주택자 추가공제용)", "type": "number", "min": 20, "max": 100, "default": 50 },
+    { "id": "holdingYears", "label": "보유연수 (1주택자 추가공제용)", "type": "number", "min": 0, "max": 50, "default": 5 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "종부세법 §8, §9 + 시행령 §2. 1주택자 60세+ 20~40% + 보유 5년+ 20~50% 추가공제 (합산 80% 한도).",
+    "cases": [
+      { "name": "Case 1 — 1주택 공시가 15억 (50세, 3년 — 추가공제 X)", "input": { "totalValue": 1500000000, "isOneHome": true, "age": 50, "holdingYears": 3 }, "expected": { "deduction": 1200000000, "excess": 300000000, "taxableBase": 180000000, "taxBeforeSeniorDed": 900000, "seniorDed": 0, "tax": 900000 } },
+      { "name": "Case 2 — 1주택 공시가 30억 (65세, 10년 — 추가공제 70%)", "input": { "totalValue": 3000000000, "isOneHome": true, "age": 65, "holdingYears": 10 }, "expected": { "deduction": 1200000000, "excess": 1800000000, "taxableBase": 1080000000, "taxBeforeSeniorDed": 8400000, "seniorDed": 0.7, "tax": 2520000 } },
+      { "name": "Case 3 — 다주택 공시가 20억 (추가공제 X)", "input": { "totalValue": 2000000000, "isOneHome": false, "age": 50, "holdingYears": 0 }, "expected": { "deduction": 900000000, "excess": 1100000000, "taxableBase": 660000000, "taxBeforeSeniorDed": 4200000, "seniorDed": 0, "tax": 4200000 } },
+      { "name": "Case 4 — 다주택 공시가 40억 (추가공제 X)", "input": { "totalValue": 4000000000, "isOneHome": false, "age": 50, "holdingYears": 0 }, "expected": { "deduction": 900000000, "excess": 3100000000, "taxableBase": 1860000000, "taxBeforeSeniorDed": 22800000, "seniorDed": 0, "tax": 22800000 } },
+      { "name": "Case 5 — 1주택 공시가 8억 (70세, 15년 — 80%지만 공제 미달)", "input": { "totalValue": 800000000, "isOneHome": true, "age": 70, "holdingYears": 15 }, "expected": { "deduction": 1200000000, "excess": 0, "taxableBase": 0, "taxBeforeSeniorDed": 0, "seniorDed": 0.8, "tax": 0 } }
+    ]
+  },
+  "guide": {
+    "howToUse": "보유 주택의 공시가 합계와 1세대 1주택자 여부를 입력하면 종합부동산세 산출세액이 계산됩니다. 공시가에서 공제(1주택 12억, 일반 9억)를 빼고 60% 공정시장가액비율을 곱한 금액이 과세표준입니다.",
+    "tips": [
+      "1세대 1주택자 + 60세 이상: 추가 60~80% 공제 가능.",
+      "1세대 1주택 + 5년 이상 보유: 장기보유공제.",
+      "임대사업자 등록 임대주택: 합산 배제 가능."
+    ]
+  },
+  "related": ["acquisition-tax", "transfer-tax-1home", "property-tax"]
+}

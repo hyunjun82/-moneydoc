@@ -1,0 +1,38 @@
+{
+  "id": "retirement-income-tax",
+  "category": "tax",
+  "subCategory": "income",
+  "title": "퇴직소득세 계산기",
+  "subtitle": "근속연수공제 + 환산급여공제 적용 누진세",
+  "slug": "retirement-income-tax",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "국세청", "document": "소득세법 §48 (퇴직소득)", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "근속연수공제", "expr": "5년 이하 100만/년, 5~10 200만/년+, 10~20 250만/년+, 20+ 300만/년+" },
+    { "step": 2, "name": "환산급여", "expr": "(퇴직금 - 근속공제) × 12 / 근속연수" },
+    { "step": 3, "name": "환산급여공제", "expr": "구간별 차등 적용" },
+    { "step": 4, "name": "과세표준", "expr": "환산급여 - 환산공제" },
+    { "step": 5, "name": "산출세액", "expr": "과표 × 종합소득세율 / 12 × 근속연수" }
+  ],
+  "inputs": [
+    { "id": "severance", "label": "퇴직금", "type": "currency", "min": 0, "default": 50000000 },
+    { "id": "workYears", "label": "근속연수", "type": "number", "min": 1, "max": 50, "default": 10 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "소득세법 §48 단계적 산식 적용 (근속연수공제 + 환산급여공제 + 누진세).",
+    "cases": [
+      { "name": "Case 1 — 퇴직금 3천만 / 5년", "input": { "severance": 30000000, "workYears": 5 }, "expected": { "yearsDed": 5000000, "annualConverted": 60000000, "taxableBase": 20800000, "tax": 775000 } },
+      { "name": "Case 2 — 퇴직금 1억 / 15년", "input": { "severance": 100000000, "workYears": 15 }, "expected": { "yearsDed": 27500000, "annualConverted": 58000000, "taxableBase": 20000000, "tax": 2175000 } },
+      { "name": "Case 3 — 퇴직금 5천만 / 10년", "input": { "severance": 50000000, "workYears": 10 }, "expected": { "yearsDed": 15000000, "annualConverted": 42000000, "taxableBase": 13600000, "tax": 680000 } },
+      { "name": "Case 4 — 퇴직금 2억 / 25년", "input": { "severance": 200000000, "workYears": 25 }, "expected": { "yearsDed": 55000000, "annualConverted": 69600000, "taxableBase": 24640000, "tax": 5075000 } },
+      { "name": "Case 5 — 퇴직금 8천만 / 20년", "input": { "severance": 80000000, "workYears": 20 }, "expected": { "yearsDed": 40000000, "annualConverted": 24000000, "taxableBase": 6400000, "tax": 640000 } }
+    ]
+  },
+  "guide": { "howToUse": "퇴직금과 근속연수 입력 시 퇴직소득세 산출.", "tips": ["근속 길수록 세금 ↓ (분리과세 효과).", "IRP 계좌 이전 시 과세이연 가능.", "퇴직금은 종합소득과 분리과세."] },
+  "related": ["severance-pay", "comprehensive-income-tax"]
+}

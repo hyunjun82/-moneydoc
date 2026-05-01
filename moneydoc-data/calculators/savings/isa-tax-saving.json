@@ -1,0 +1,35 @@
+{
+  "id": "isa-tax-saving",
+  "category": "savings",
+  "subCategory": "investment",
+  "title": "ISA 절세효과 계산기",
+  "subtitle": "200만 비과세 + 초과분 9.9% 분리과세 절감액",
+  "slug": "isa-tax-saving",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "국세청", "document": "조세특례제한법 §91-18", "year": 2026 } },
+  "constants": { "ISA_EXEMPT_LIMIT": 2000000, "ISA_RATE": 0.099, "GENERAL_RATE": 0.154 },
+  "formula": [
+    { "step": 1, "name": "일반 과세", "expr": "이자 × 15.4%" },
+    { "step": 2, "name": "ISA 과세", "expr": "이자 ≤ 200만: 0. 초과분 × 9.9%" },
+    { "step": 3, "name": "절감액", "expr": "일반 - ISA" }
+  ],
+  "inputs": [
+    { "id": "totalInterest", "label": "5년 누적 이자수익", "type": "currency", "min": 0, "default": 3000000 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "조특법 §91-18 적용. 200만 비과세 + 초과 9.9% 분리과세.",
+    "cases": [
+      { "name": "Case 1 — 이자 100만 (한도 내)", "input": { "totalInterest": 1000000 }, "expected": { "generalTax": 154000, "isaTax": 0, "savings": 154000 } },
+      { "name": "Case 2 — 이자 200만 (한도 정확)", "input": { "totalInterest": 2000000 }, "expected": { "generalTax": 308000, "isaTax": 0, "savings": 308000 } },
+      { "name": "Case 3 — 이자 300만", "input": { "totalInterest": 3000000 }, "expected": { "generalTax": 462000, "isaTax": 99000, "savings": 363000 } },
+      { "name": "Case 4 — 이자 500만", "input": { "totalInterest": 5000000 }, "expected": { "generalTax": 770000, "isaTax": 297000, "savings": 473000 } },
+      { "name": "Case 5 — 이자 1천만", "input": { "totalInterest": 10000000 }, "expected": { "generalTax": 1540000, "isaTax": 792000, "savings": 748000 } }
+    ]
+  },
+  "guide": { "howToUse": "ISA 계좌 5년 만기 누적 이자수익을 입력하면 일반과세 대비 절감액을 산출.", "tips": ["서민형 ISA는 비과세 한도 400만.", "납입한도 연 2천만, 누적 1억."] },
+  "related": ["fixed-deposit", "youth-leap-account"]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "child-support",
+  "category": "law",
+  "subCategory": "family",
+  "title": "양육비 산정 계산기",
+  "searchAliases": ["양육비 계산기", "이혼 양육비 계산"],
+  "subtitle": "서울가정법원 양육비산정기준표 2024 (자녀 1인 표준)",
+  "slug": "child-support",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "서울가정법원",
+      "document": "양육비산정기준표 2024 개정",
+      "year": 2024,
+      "laws": ["민법 제837조 (이혼과 양육책임)"]
+    },
+    "note": "표는 서울가정법원 2024년 발표 기준. 자녀 1인 표준 양육비. 2인 이상은 인원별 가산. 부모 분담은 합산소득 비율 기준."
+  },
+  "constants": {},
+  "tables": {
+    "supportTable": {
+      "description": "자녀 1인 표준 양육비 (월, 부모합산소득 × 자녀나이)",
+      "ageGroups": ["0-2", "3-5", "6-8", "9-11", "12-14", "15-18"],
+      "rows": [
+        { "incomeUpper": 2000000, "values": [521000, 559000, 596000, 671000, 762000, 879000] },
+        { "incomeUpper": 3000000, "values": [615000, 658000, 698000, 783000, 891000, 1022000] },
+        { "incomeUpper": 4000000, "values": [686000, 733000, 776000, 868000, 991000, 1131000] },
+        { "incomeUpper": 5000000, "values": [750000, 802000, 848000, 947000, 1082000, 1232000] },
+        { "incomeUpper": 6000000, "values": [813000, 870000, 919000, 1025000, 1170000, 1330000] },
+        { "incomeUpper": 7000000, "values": [879000, 940000, 990000, 1103000, 1257000, 1427000] },
+        { "incomeUpper": 8000000, "values": [945000, 1012000, 1062000, 1184000, 1346000, 1524000] },
+        { "incomeUpper": 9000000, "values": [1012000, 1083000, 1135000, 1265000, 1436000, 1624000] },
+        { "incomeUpper": 10000000, "values": [1083000, 1158000, 1212000, 1349000, 1529000, 1725000] },
+        { "incomeUpper": 12000000, "values": [1159000, 1238000, 1295000, 1438000, 1629000, 1832000] },
+        { "incomeUpper": null, "values": [1250000, 1335000, 1396000, 1549000, 1752000, 1964000] }
+      ]
+    }
+  },
+  "formula": [
+    { "step": 1, "name": "자녀 나이 구간", "expr": "0-2 / 3-5 / 6-8 / 9-11 / 12-14 / 15-18 lookup" },
+    { "step": 2, "name": "합산소득 구간", "expr": "200만 단위 lookup" },
+    { "step": 3, "name": "표준 양육비", "expr": "표 cell value" },
+    { "step": 4, "name": "비양육친 분담", "expr": "표준양육비 × (비양육친 소득 / 합산소득)" }
+  ],
+  "inputs": [
+    { "id": "totalIncome", "label": "부모 합산 소득 (월)", "type": "currency", "min": 0, "default": 5000000 },
+    { "id": "childAge", "label": "자녀 나이", "type": "number", "min": 0, "max": 18, "default": 8 },
+    { "id": "nonCustodianIncome", "label": "비양육친 소득 (월)", "type": "currency", "min": 0, "default": 3000000 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "서울가정법원 양육비산정기준표 2024 직접 lookup. 자녀 1인 기준.",
+    "cases": [
+      { "name": "Case 1 — 합산 250만, 자녀 5세", "input": { "totalIncome": 2500000, "childAge": 5, "nonCustodianIncome": 1500000 }, "expected": { "ageGroup": "3-5", "standardSupport": 658000, "nonCustodianShare": 394800 } },
+      { "name": "Case 2 — 합산 500만, 자녀 10세", "input": { "totalIncome": 5000000, "childAge": 10, "nonCustodianIncome": 3000000 }, "expected": { "ageGroup": "9-11", "standardSupport": 1025000, "nonCustodianShare": 615000 } },
+      { "name": "Case 3 — 합산 800만, 자녀 16세", "input": { "totalIncome": 8000000, "childAge": 16, "nonCustodianIncome": 5000000 }, "expected": { "ageGroup": "15-18", "standardSupport": 1624000, "nonCustodianShare": 1015000 } },
+      { "name": "Case 4 — 합산 150만, 자녀 1세", "input": { "totalIncome": 1500000, "childAge": 1, "nonCustodianIncome": 1000000 }, "expected": { "ageGroup": "0-2", "standardSupport": 521000, "nonCustodianShare": 347333 } },
+      { "name": "Case 5 — 합산 1300만, 자녀 14세", "input": { "totalIncome": 13000000, "childAge": 14, "nonCustodianIncome": 8000000 }, "expected": { "ageGroup": "12-14", "standardSupport": 1752000, "nonCustodianShare": 1078154 } }
+    ]
+  },
+  "guide": {
+    "howToUse": "부모 합산 월소득과 자녀 나이를 입력하면 표준 양육비가 산출되고, 비양육친 소득 비율로 분담액이 계산됩니다.",
+    "tips": [
+      "자녀가 2명 이상이면 인원별 가산 (대법원 기준).",
+      "특수 사정 (장애·고액 의료비·사교육비 등)으로 가감 가능.",
+      "이행명령·강제집행으로 미지급 양육비 회수 가능."
+    ]
+  },
+  "related": ["divorce-alimony", "inheritance-share"]
+}

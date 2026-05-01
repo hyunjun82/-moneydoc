@@ -1,0 +1,30 @@
+{
+  "id": "subscription-priority", "category": "realestate", "subCategory": "subscription",
+  "title": "청약 1순위 자격 판정", "subtitle": "가입 24개월 + 납입 24회 + 무주택 충족 자격",
+  "slug": "subscription-priority", "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "국토교통부", "document": "주택공급규칙 §27", "year": 2026 } },
+  "constants": { "MIN_ACCOUNT_MONTHS": 24, "MIN_DEPOSITS": 24 },
+  "formula": [
+    { "step": 1, "name": "가입기간 충족", "expr": "accountMonths >= 24" },
+    { "step": 2, "name": "납입회차 충족", "expr": "depositCount >= 24" },
+    { "step": 3, "name": "무주택 여부", "expr": "isNoHome" },
+    { "step": 4, "name": "1순위", "expr": "셋 다 충족 시 1순위" }
+  ],
+  "inputs": [
+    { "id": "accountMonths", "label": "청약통장 가입 개월수", "type": "number", "min": 0, "default": 24 },
+    { "id": "depositCount", "label": "납입 횟수", "type": "number", "min": 0, "default": 24 },
+    { "id": "isNoHome", "label": "무주택 세대주", "type": "boolean", "default": true }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "주택공급규칙 §27 기본 1순위 자격. 지역·면적별 추가 요건은 별도.",
+    "cases": [
+      { "name": "Case 1 — 가입 24개월 / 납입 24회 / 무주택", "input": { "accountMonths": 24, "depositCount": 24, "isNoHome": true }, "expected": { "accountOk": true, "depositOk": true, "noHomeOk": true, "isEligible": true } },
+      { "name": "Case 2 — 가입 36개월 / 납입 36회 / 유주택 (X)", "input": { "accountMonths": 36, "depositCount": 36, "isNoHome": false }, "expected": { "accountOk": true, "depositOk": true, "noHomeOk": false, "isEligible": false } },
+      { "name": "Case 3 — 가입 12개월 / 납입 12회 (둘 다 부족)", "input": { "accountMonths": 12, "depositCount": 12, "isNoHome": true }, "expected": { "accountOk": false, "depositOk": false, "noHomeOk": true, "isEligible": false } },
+      { "name": "Case 4 — 가입 60개월 / 납입 60회 / 무주택", "input": { "accountMonths": 60, "depositCount": 60, "isNoHome": true }, "expected": { "accountOk": true, "depositOk": true, "noHomeOk": true, "isEligible": true } },
+      { "name": "Case 5 — 가입 24개월 / 납입 18회 (납입 부족)", "input": { "accountMonths": 24, "depositCount": 18, "isNoHome": true }, "expected": { "accountOk": true, "depositOk": false, "noHomeOk": true, "isEligible": false } }
+    ]
+  },
+  "guide": { "howToUse": "청약통장 가입개월·납입횟수·무주택 여부 입력 시 1순위 자격 판정.", "tips": ["수도권: 가입 24개월 + 납입 24회.", "비수도권: 가입 12개월 + 납입 12회.", "투기과열지구: 추가 요건 적용."] },
+  "related": ["housing-subscription-score", "housing-subscription"]
+}

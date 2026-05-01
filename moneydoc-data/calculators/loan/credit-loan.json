@@ -1,0 +1,32 @@
+{
+  "id": "credit-loan",
+  "category": "loan",
+  "subCategory": "limit",
+  "title": "신용대출 한도 계산기",
+  "subtitle": "연소득 기준 신용대출 한도 (관행 1.5배)",
+  "slug": "credit-loan",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "금융감독원", "document": "신용대출 한도 가이드", "year": 2026 } },
+  "constants": { "DEFAULT_MULTIPLIER": 1.5 },
+  "formula": [ { "step": 1, "name": "한도", "expr": "연소득 × 배수 (보통 1.5배, 신용도에 따라 1~2배)" } ],
+  "inputs": [
+    { "id": "annualIncome", "label": "연소득", "type": "currency", "min": 10000000, "default": 50000000 },
+    { "id": "multiplier", "label": "배수", "type": "number", "min": 1.0, "max": 2.5, "step": 0.1, "default": 1.5 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "관행적 신용대출 한도 = 연소득 × 1.5. DSR 한도와 별개 적용.",
+    "cases": [
+      { "name": "Case 1 — 연 5천만 × 1.5", "input": { "annualIncome": 50000000, "multiplier": 1.5 }, "expected": { "maxLoan": 75000000 } },
+      { "name": "Case 2 — 연 7천만 × 1.5", "input": { "annualIncome": 70000000, "multiplier": 1.5 }, "expected": { "maxLoan": 105000000 } },
+      { "name": "Case 3 — 연 1억 × 1.5", "input": { "annualIncome": 100000000, "multiplier": 1.5 }, "expected": { "maxLoan": 150000000 } },
+      { "name": "Case 4 — 연 4천만 × 1.5", "input": { "annualIncome": 40000000, "multiplier": 1.5 }, "expected": { "maxLoan": 60000000 } },
+      { "name": "Case 5 — 연 1.5억 × 1.5", "input": { "annualIncome": 150000000, "multiplier": 1.5 }, "expected": { "maxLoan": 225000000 } }
+    ]
+  },
+  "guide": { "howToUse": "연소득과 배수 입력 시 신용대출 한도. 실제는 신용도·DSR과 함께 결정.", "tips": ["고신용자(1~2등급): 2배까지 가능.", "DSR 40% 한도와 별도 적용 (둘 중 작은 것)."] },
+  "related": ["dsr-limit", "loan-amortization"]
+}

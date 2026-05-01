@@ -1,0 +1,57 @@
+{
+  "id": "irp-tax-credit",
+  "category": "pension",
+  "subCategory": "retirement",
+  "title": "IRP·연금저축 세액공제 계산기",
+  "subtitle": "소득세법 §59의3 연금계좌 세액공제 환급 산출",
+  "slug": "irp-tax-credit",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": {
+    "primary": {
+      "agency": "국세청",
+      "document": "소득세법",
+      "year": 2026,
+      "laws": ["소득세법 제59조의3 (연금계좌 세액공제)"]
+    }
+  },
+  "constants": {
+    "TOTAL_LIMIT": 7000000,
+    "PENSION_LIMIT": 6000000,
+    "RATE_LOW": 0.165,
+    "RATE_HIGH": 0.132,
+    "INCOME_THRESHOLD": 55000000
+  },
+  "formula": [
+    { "step": 1, "name": "납입 합계", "expr": "min(연금저축, 600만) + IRP, 합계 한도 700만" },
+    { "step": 2, "name": "공제율", "expr": "총급여 5,500만 이하: 16.5%, 초과: 13.2%" },
+    { "step": 3, "name": "세액공제 환급", "expr": "납입 × 공제율" }
+  ],
+  "inputs": [
+    { "id": "irpAmount", "label": "IRP 납입액 (연)", "type": "currency", "min": 0, "max": 7000000, "default": 5000000 },
+    { "id": "pensionAmount", "label": "연금저축 납입액 (연)", "type": "currency", "min": 0, "max": 6000000, "default": 0 },
+    { "id": "totalSalary", "label": "총급여", "type": "currency", "min": 0, "default": 50000000 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "소득세법 §59의3 산식 적용. 연금저축 600만 한도, 합산 700만 한도.",
+    "cases": [
+      { "name": "Case 1 — IRP 300, 연금저축 300, 총급여 5천만 (16.5%)", "input": { "irpAmount": 3000000, "pensionAmount": 3000000, "totalSalary": 50000000 }, "expected": { "appliedAmount": 6000000, "rate": 0.165, "taxCredit": 990000 } },
+      { "name": "Case 2 — IRP 700, 연금저축 0, 총급여 8천만 (13.2%)", "input": { "irpAmount": 7000000, "pensionAmount": 0, "totalSalary": 80000000 }, "expected": { "appliedAmount": 7000000, "rate": 0.132, "taxCredit": 924000 } },
+      { "name": "Case 3 — IRP 200, 연금저축 600, 총급여 4천만 (16.5%)", "input": { "irpAmount": 2000000, "pensionAmount": 6000000, "totalSalary": 40000000 }, "expected": { "appliedAmount": 7000000, "rate": 0.165, "taxCredit": 1155000 } },
+      { "name": "Case 4 — IRP 500, 연금저축 0, 총급여 3천만 (16.5%)", "input": { "irpAmount": 5000000, "pensionAmount": 0, "totalSalary": 30000000 }, "expected": { "appliedAmount": 5000000, "rate": 0.165, "taxCredit": 825000 } },
+      { "name": "Case 5 — IRP 1000(한도 700), 총급여 1억 (13.2%)", "input": { "irpAmount": 10000000, "pensionAmount": 0, "totalSalary": 100000000 }, "expected": { "appliedAmount": 7000000, "rate": 0.132, "taxCredit": 924000 } }
+    ]
+  },
+  "guide": {
+    "howToUse": "IRP·연금저축 납입액과 총급여를 입력하면 연말정산 환급액(세액공제)이 산출됩니다. 합산 한도 700만원, 공제율은 총급여 5,500만 기준 차등.",
+    "tips": [
+      "IRP는 한도 700만 단독 가능, 연금저축은 600만 한도.",
+      "합산 700만 = 환급 92~115만 (연봉별 차이).",
+      "55세 이전 중도해지 시 16.5% 기타소득세 부과 (환급분 + 운용수익)."
+    ]
+  },
+  "related": ["national-pension", "salary-net-pay"]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "holding-tax-total",
+  "category": "realestate",
+  "subCategory": "tax",
+  "title": "보유세 통합 시뮬레이터",
+  "subtitle": "재산세 + 종합부동산세 + 지방교육세",
+  "slug": "holding-tax-total",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "국세청·행정안전부", "document": "지방세법 §111 + 종부세법 §8/§9", "year": 2026 } },
+  "constants": { "FAIR_MARKET_RATIO": 0.60, "EDUCATION_TAX_RATE": 0.20, "ONE_HOME_DEDUCTION": 1200000000, "GENERAL_DEDUCTION": 900000000 },
+  "formula": [
+    { "step": 1, "name": "재산세", "expr": "공시가 × 60% × 재산세 누진 (0.1~0.4%)" },
+    { "step": 2, "name": "재산세 지방교육세", "expr": "재산세 × 20%" },
+    { "step": 3, "name": "종합부동산세", "expr": "(공시가 - 공제) × 60% × 종부세 누진 (1주택 0.5~2.7% / 일반 0.5~5.0%)" },
+    { "step": 4, "name": "총 보유세", "expr": "재산세 + 교육세 + 종부세" }
+  ],
+  "inputs": [
+    { "id": "publicValue", "label": "주택공시가 합계", "type": "currency", "min": 0, "default": 1500000000 },
+    { "id": "isOneHome", "label": "1세대 1주택자", "type": "boolean", "default": true }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "재산세 (지방세법 §111) + 종부세 (종부세법 §8, §9) 통합. 도시지역분 미포함.",
+    "cases": [
+      { "name": "Case 1 — 1주택 공시가 15억", "input": { "publicValue": 1500000000, "isOneHome": true }, "expected": { "propertyTax": 2970000, "propertyEduTax": 594000, "compTax": 900000, "totalTax": 4464000 } },
+      { "name": "Case 2 — 다주택 공시가 20억", "input": { "publicValue": 2000000000, "isOneHome": false }, "expected": { "propertyTax": 4170000, "propertyEduTax": 834000, "compTax": 4200000, "totalTax": 9204000 } },
+      { "name": "Case 3 — 1주택 공시가 8억 (종부세 X)", "input": { "publicValue": 800000000, "isOneHome": true }, "expected": { "propertyTax": 1290000, "propertyEduTax": 258000, "compTax": 0, "totalTax": 1548000 } },
+      { "name": "Case 4 — 1주택 공시가 30억", "input": { "publicValue": 3000000000, "isOneHome": true }, "expected": { "propertyTax": 6570000, "propertyEduTax": 1314000, "compTax": 8400000, "totalTax": 16284000 } },
+      { "name": "Case 5 — 다주택 공시가 40억", "input": { "publicValue": 4000000000, "isOneHome": false }, "expected": { "propertyTax": 8970000, "propertyEduTax": 1794000, "compTax": 22800000, "totalTax": 33564000 } }
+    ]
+  },
+  "guide": { "howToUse": "공시가 합계와 1세대 1주택 여부 입력 시 재산세·종부세·교육세 통합 산출.", "tips": ["과세기준일 6월 1일 기준 보유자 기준.", "재산세 7월·9월 분납. 종부세 12월 납부."] },
+  "related": ["property-tax", "comprehensive-real-estate-tax", "transfer-tax-1home"]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "real-estate-roi",
+  "category": "realestate",
+  "subCategory": "investment",
+  "title": "부동산 ROI 계산기",
+  "subtitle": "임대수익 + 자본이득 통합 ROI",
+  "slug": "real-estate-roi",
+  "year": 2026,
+  "lastUpdated": "2026-04-30",
+  "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "표준 부동산 산식", "document": "Total ROI 표준 산식", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "총 수익", "expr": "임대수익 + 자본이득" },
+    { "step": 2, "name": "총 ROI", "expr": "총수익 / 투자금 × 100" },
+    { "step": 3, "name": "연 ROI", "expr": "총 ROI / 보유기간" }
+  ],
+  "inputs": [
+    { "id": "investedCapital", "label": "투자금", "type": "currency", "min": 10000000, "default": 300000000 },
+    { "id": "totalRentIncome", "label": "총 임대수익 (보유기간)", "type": "currency", "min": 0, "default": 60000000 },
+    { "id": "capitalGain", "label": "자본이득 (매도가-매수가)", "type": "currency", "default": 200000000 },
+    { "id": "holdingYears", "label": "보유기간 (년)", "type": "number", "min": 1, "max": 50, "default": 5 }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-04-30",
+    "method": "(임대 + 자본이득) / 투자금 × 100. 연환산 = 총 / 보유년.",
+    "cases": [
+      { "name": "Case 1 — 투자 3억 / 임대 6천 / 자본 2억 / 5년", "input": { "investedCapital": 300000000, "totalRentIncome": 60000000, "capitalGain": 200000000, "holdingYears": 5 }, "expected": { "totalReturn": 260000000, "totalROI": 86.67, "annualROI": 17.33 } },
+      { "name": "Case 2 — 투자 5억 / 임대 1.2억 / 자본 3억 / 10년", "input": { "investedCapital": 500000000, "totalRentIncome": 120000000, "capitalGain": 300000000, "holdingYears": 10 }, "expected": { "totalReturn": 420000000, "totalROI": 84, "annualROI": 8.4 } },
+      { "name": "Case 3 — 투자 2억 / 임대 3천 / 자본 5천 / 3년", "input": { "investedCapital": 200000000, "totalRentIncome": 30000000, "capitalGain": 50000000, "holdingYears": 3 }, "expected": { "totalReturn": 80000000, "totalROI": 40, "annualROI": 13.33 } },
+      { "name": "Case 4 — 투자 10억 / 임대 1.5억 / 자본 5억 / 7년", "input": { "investedCapital": 1000000000, "totalRentIncome": 150000000, "capitalGain": 500000000, "holdingYears": 7 }, "expected": { "totalReturn": 650000000, "totalROI": 65, "annualROI": 9.29 } },
+      { "name": "Case 5 — 투자 4억 / 임대 8천 / 자본 1억 / 5년", "input": { "investedCapital": 400000000, "totalRentIncome": 80000000, "capitalGain": 100000000, "holdingYears": 5 }, "expected": { "totalReturn": 180000000, "totalROI": 45, "annualROI": 9 } }
+    ]
+  },
+  "guide": { "howToUse": "투자금·임대수익·자본이득·보유기간 입력 시 총·연 ROI 산출.", "tips": ["세금·중개수수료 등 비용 차감 후 정확한 ROI 산출.", "연 5% 이상 양호."] },
+  "related": ["rental-yield", "transfer-tax-1home"]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "installment-fee", "category": "util", "subCategory": "card",
+  "title": "신용카드 할부 수수료 계산기", "subtitle": "원리금균등 방식 월 결제액 + 총 수수료",
+  "slug": "installment-fee",
+  "searchAliases": ["할부 수수료 계산기", "카드 할부 계산기", "할부수수료계산"],
+  "year": 2026, "lastUpdated": "2026-04-30", "lastVerified": "2026-04-30",
+  "source": { "primary": { "agency": "여신금융협회", "document": "신용카드 할부 수수료 표준 산식", "year": 2026 } },
+  "constants": {},
+  "formula": [
+    { "step": 1, "name": "월 금리", "expr": "annualRate / 12" },
+    { "step": 2, "name": "월 결제액 (원리금균등)", "expr": "P × r × (1+r)^n / ((1+r)^n - 1)" },
+    { "step": 3, "name": "총 수수료", "expr": "총 결제 - 원금" }
+  ],
+  "inputs": [
+    { "id": "principal", "label": "할부 원금", "type": "currency", "min": 50000, "default": 1000000 },
+    { "id": "months", "label": "할부 개월", "type": "number", "min": 2, "max": 36, "default": 12 },
+    { "id": "annualRate", "label": "연 수수료율", "type": "number", "min": 0.05, "max": 0.20, "step": 0.001, "default": 0.13 }
+  ],
+  "verification": {
+    "verified": true, "verifiedAt": "2026-04-30", "method": "원리금균등 PMT 산식 (대출 동일).",
+    "cases": [
+      { "name": "Case 1 — 100만 / 6개월 / 10%", "input": { "principal": 1000000, "months": 6, "annualRate": 0.10 }, "expected": { "monthlyPayment": 171561, "totalPayment": 1029368, "totalFee": 29368 } },
+      { "name": "Case 2 — 300만 / 12개월 / 13%", "input": { "principal": 3000000, "months": 12, "annualRate": 0.13 }, "expected": { "monthlyPayment": 267952, "totalPayment": 3215422, "totalFee": 215422 } },
+      { "name": "Case 3 — 500만 / 24개월 / 15%", "input": { "principal": 5000000, "months": 24, "annualRate": 0.15 }, "expected": { "monthlyPayment": 242433, "totalPayment": 5818398, "totalFee": 818398 } },
+      { "name": "Case 4 — 50만 / 3개월 / 8%", "input": { "principal": 500000, "months": 3, "annualRate": 0.08 }, "expected": { "monthlyPayment": 168894, "totalPayment": 506681, "totalFee": 6681 } },
+      { "name": "Case 5 — 1천만 / 36개월 / 18%", "input": { "principal": 10000000, "months": 36, "annualRate": 0.18 }, "expected": { "monthlyPayment": 361524, "totalPayment": 13014862, "totalFee": 3014862 } }
+    ]
+  },
+  "guide": { "howToUse": "할부 원금·개월·수수료율 입력 시 월 결제액과 총 수수료 산출.", "tips": ["무이자 할부: 수수료 0%.", "장기 할부일수록 총 수수료 ↑.", "카드사·등급별 수수료율 차이 (8~20%)."] },
+  "related": ["cash-service-fee", "loan-amortization"]
+}
