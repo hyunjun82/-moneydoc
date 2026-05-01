@@ -308,11 +308,16 @@ function outputLabel(key: string): string {
   return OUTPUT_LABELS[key] ?? key;
 }
 
-function formatValue(v: unknown, unit?: string): string {
+function formatValue(v: unknown, unit?: string, key?: string): string {
   if (v === null || v === undefined) return "—";
   if (typeof v === "boolean") return v ? "O" : "X";
   if (typeof v === "number") {
-    if (unit === "%") return `${v.toFixed(2)}%`;
+    if (unit === "%") {
+      // Pct 키 = 이미 percent 형태 (예: 17.1), Rate/Ratio 키 = 소수 형태 (예: 0.01)
+      const isAlreadyPercent = key ? /Pct|Pcnt/i.test(key) : v >= 1;
+      const display = isAlreadyPercent ? v : v * 100;
+      return `${display.toFixed(2)}%`;
+    }
     if (unit === "년" || unit === "개월" || unit === "일") return `${v}${unit}`;
     return krw(v);
   }
@@ -403,7 +408,7 @@ export function GenericCalculator({ spec }: { spec: Spec }) {
   const breakdownKeys = expectedKeys.filter((k) => k !== primaryKey);
   const primaryVal = result?.[primaryKey];
   const primaryUnit = isPercentKey(primaryKey) ? "%" : isBooleanKey(primaryKey, primaryVal) ? "" : "원";
-  const primaryDisplay = formatValue(primaryVal, primaryUnit);
+  const primaryDisplay = formatValue(primaryVal, primaryUnit, primaryKey);
 
   return (
     <section className="main">
@@ -468,7 +473,7 @@ export function GenericCalculator({ spec }: { spec: Spec }) {
                                 <div key={k2} style={{ display: "flex", justifyContent: "space-between", fontSize: 13, color: "var(--text-2)" }}>
                                   <span>{outputLabel(k2)}</span>
                                   <span style={{ fontVariantNumeric: "tabular-nums", color: "var(--text)", fontWeight: 600 }}>
-                                    {formatValue(v2, isPercentKey(k2) ? "%" : "")}
+                                    {formatValue(v2, isPercentKey(k2) ? "%" : "", k2)}
                                   </span>
                                 </div>
                               );
@@ -482,7 +487,7 @@ export function GenericCalculator({ spec }: { spec: Spec }) {
                     return (
                       <div key={key} className="b-row">
                         <span className="name">{outputLabel(key)}</span>
-                        <span className="val">{formatValue(v, unit)}</span>
+                        <span className="val">{formatValue(v, unit, key)}</span>
                       </div>
                     );
                   })}
