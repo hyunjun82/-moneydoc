@@ -136,4 +136,6 @@ export const CALCULATORS_INDEX: Record<string, CalcMeta> = Object.fromEntries(
 
 export const GUIDE_TABLE_TITLES: Record<string, string> = {
   insuranceRates2026: "4대보험 요율 (2026년 기준)",
+  bracketTable: "월 납입금별 만기 수령액 (연 4% 복리, 세후)",
+  summary: "이자소득세 한눈에",
 };
