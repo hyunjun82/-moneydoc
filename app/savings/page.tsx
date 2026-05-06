@@ -3,8 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "저축 계산기 — 9종 | MoneyDoc",
-  description: "예금·적금·청년도약·ISA — 한국은행 표준 산식 기반 저축 계산기",
+  title: "저축 계산기 — 5종 | MoneyDoc",
+  description: "적금·정기예금·자유적금·ISA·비과세종합저축 — 금감원 finlife.fss.or.kr 검증, 1원 단위 정확",
   alternates: { canonical: "/savings/" },
 };
 
@@ -21,72 +21,44 @@ export default function Page() {
 
       <header className="page-head">
         <h1 className="page-title">저축 계산기</h1>
-        <p className="page-sub">예금·적금·청년도약·ISA — 한국은행 표준 산식 기반 저축 계산기</p>
+        <p className="page-sub">매월 적금부터 ISA·비과세종합저축까지, 사용자가 진짜 검색하는 저축 계산기</p>
       </header>
 
       <section className="section">
         <div className="cats">
-        <a href="/savings/compound-savings/" className="cat" style={{ textDecoration: "none" }}>
+        <a href="/savings/installment-savings/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
-            <h3 className="cat-name">복리 적금 만기 계산기</h3>
-            <p className="cat-desc">월복리 적금 만기 + 이자소득세</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <h3 className="cat-name">적금 계산기</h3>
+            <p className="cat-desc">월 X원 납입 시 만기 수령액 — 단리·복리 토글, 이자소득세 차감</p>
+            <span className="cat-count">금감원 finlife 검증</span>
           </div>
         </a>
         <a href="/savings/fixed-deposit/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
-            <h3 className="cat-name">정기예금 이자 계산기 (단리)</h3>
-            <p className="cat-desc">단리 정기예금 만기 시 수령액 + 이자소득세 차감</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <h3 className="cat-name">정기예금 계산기</h3>
+            <p className="cat-desc">목돈 일시 예치 시 만기 수령액 — 단리, 이자소득세 차감</p>
+            <span className="cat-count">금감원 finlife 검증</span>
           </div>
         </a>
         <a href="/savings/free-savings/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
-            <h3 className="cat-name">자유적금 만기 계산기</h3>
-            <p className="cat-desc">자유 납입 적금 단리 만기 + 이자소득세</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
-        <a href="/savings/housing-subscription/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">주택청약종합저축 만기 계산기</h3>
-            <p className="cat-desc">청약통장 단리 적립 + 이자소득세 차감</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
-        <a href="/savings/installment-savings/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">적금 만기 계산기 (단리)</h3>
-            <p className="cat-desc">월적립 단리 적금 만기 수령액 + 이자소득세 차감</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <h3 className="cat-name">자유적금 계산기</h3>
+            <p className="cat-desc">자유 입금 적금 만기 수령액 — 일별 단리, 이자소득세 차감</p>
+            <span className="cat-count">금감원 finlife 검증</span>
           </div>
         </a>
         <a href="/savings/isa-tax-saving/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
-            <h3 className="cat-name">ISA 절세효과 계산기</h3>
-            <p className="cat-desc">200만 비과세 + 초과분 9.9% 분리과세 절감액</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
-        <a href="/savings/simple-vs-compound/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">단리 vs 복리 비교 계산기</h3>
-            <p className="cat-desc">동일 원금·기간·이율에서 단리와 월복리의 만기 차이</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <h3 className="cat-name">ISA 계산기</h3>
+            <p className="cat-desc">200만 비과세 + 초과분 9.9% 분리과세 절세효과</p>
+            <span className="cat-count">조세특례제한법 §91의18</span>
           </div>
         </a>
         <a href="/savings/tax-free-savings/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">비과세종합저축 계산기</h3>
-            <p className="cat-desc">1인당 5천만 한도 비과세 적금</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
-        <a href="/savings/youth-leap-account/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">청년도약계좌 만기 시뮬레이터</h3>
-            <p className="cat-desc">5년 적립 + 정부 기여금 + 비과세 이자</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">만 65세 이상 등 1인당 5천만 한도 비과세 적금</p>
+            <span className="cat-count">조세특례제한법 §88의2</span>
           </div>
         </a>
         </div>
