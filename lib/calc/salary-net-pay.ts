@@ -213,6 +213,11 @@ export function calcSalaryNetPaySimpleTax(input: SalaryInput): SalaryResult {
   const netMonthly = round(monthly - totalDeduction);
   const deductRatePct = +((totalDeduction / monthly) * 100).toFixed(1);
 
+  // 간이세액표 모드는 EIC 미적용. 호환성 위해 0으로 채움.
+  const earnedIncomeCreditRaw = 0;
+  const earnedIncomeCreditLimit = 0;
+  const earnedIncomeCredit = 0;
+
   return {
     monthly,
     grossMonthly: round(monthly),

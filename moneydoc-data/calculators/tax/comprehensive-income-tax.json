@@ -5,7 +5,11 @@
   "title": "종합소득세 계산기",
   "subtitle": "사업소득·임대소득·기타소득 합산 종합소득세",
   "slug": "comprehensive-income-tax",
-  "searchAliases": ["종합소득세 계산기", "종소세 계산기", "사업소득세 계산기"],
+  "searchAliases": [
+    "종합소득세 계산기",
+    "종소세 계산기",
+    "사업소득세 계산기"
+  ],
   "year": 2026,
   "lastUpdated": "2026-05-01",
   "lastVerified": "2026-05-01",
@@ -24,46 +28,150 @@
   },
   "constants": {
     "PERSONAL_DEDUCTION": 1500000,
-    "LOCAL_TAX_RATE": 0.10
+    "LOCAL_TAX_RATE": 0.1
   },
   "tables": {
     "incomeTaxBrackets": {
       "description": "종합소득세 누진세율 (소득세법 §55)",
       "brackets": [
-        { "upperBound": 14000000, "rate": 0.06, "progressiveDeduction": 0 },
-        { "upperBound": 50000000, "rate": 0.15, "progressiveDeduction": 1260000 },
-        { "upperBound": 88000000, "rate": 0.24, "progressiveDeduction": 5760000 },
-        { "upperBound": 150000000, "rate": 0.35, "progressiveDeduction": 15440000 },
-        { "upperBound": 300000000, "rate": 0.38, "progressiveDeduction": 19940000 },
-        { "upperBound": 500000000, "rate": 0.40, "progressiveDeduction": 25940000 },
-        { "upperBound": 1000000000, "rate": 0.42, "progressiveDeduction": 35940000 },
-        { "upperBound": null, "rate": 0.45, "progressiveDeduction": 65940000 }
+        {
+          "upperBound": 14000000,
+          "rate": 0.06,
+          "progressiveDeduction": 0
+        },
+        {
+          "upperBound": 50000000,
+          "rate": 0.15,
+          "progressiveDeduction": 1260000
+        },
+        {
+          "upperBound": 88000000,
+          "rate": 0.24,
+          "progressiveDeduction": 5760000
+        },
+        {
+          "upperBound": 150000000,
+          "rate": 0.35,
+          "progressiveDeduction": 15440000
+        },
+        {
+          "upperBound": 300000000,
+          "rate": 0.38,
+          "progressiveDeduction": 19940000
+        },
+        {
+          "upperBound": 500000000,
+          "rate": 0.4,
+          "progressiveDeduction": 25940000
+        },
+        {
+          "upperBound": 1000000000,
+          "rate": 0.42,
+          "progressiveDeduction": 35940000
+        },
+        {
+          "upperBound": null,
+          "rate": 0.45,
+          "progressiveDeduction": 65940000
+        }
       ]
     },
     "childTaxCredit": {
       "amounts": [
-        { "kids": 0, "credit": 0 },
-        { "kids": 1, "credit": 250000 },
-        { "kids": 2, "credit": 550000 },
-        { "kids": 3, "credit": 950000 }
+        {
+          "kids": 0,
+          "credit": 0
+        },
+        {
+          "kids": 1,
+          "credit": 250000
+        },
+        {
+          "kids": 2,
+          "credit": 550000
+        },
+        {
+          "kids": 3,
+          "credit": 950000
+        }
       ],
       "additionalPerKid": 400000
     }
   },
   "inputs": [
-    { "id": "income", "label": "종합소득금액", "type": "currency", "min": 0, "max": 10000000000, "default": 50000000, "hint": "소득금액 (총수입 - 필요경비)" },
-    { "id": "dependents", "label": "부양가족 수", "type": "stepper", "min": 1, "max": 10, "default": 1 },
-    { "id": "kids", "label": "8~20세 자녀", "type": "stepper", "min": 0, "max": 8, "default": 0 },
-    { "id": "extraDeduction", "label": "추가 소득공제", "type": "currency", "min": 0, "default": 0, "hint": "국민연금·건강보험·연금저축 등" },
-    { "id": "extraTaxCredit", "label": "추가 세액공제", "type": "currency", "min": 0, "default": 0, "hint": "의료비·교육비·기부금 등" }
+    {
+      "id": "income",
+      "label": "종합소득금액",
+      "type": "currency",
+      "min": 0,
+      "max": 10000000000,
+      "default": 50000000,
+      "hint": "소득금액 (총수입 - 필요경비)"
+    },
+    {
+      "id": "dependents",
+      "label": "부양가족 수",
+      "type": "stepper",
+      "min": 1,
+      "max": 10,
+      "default": 1
+    },
+    {
+      "id": "kids",
+      "label": "8~20세 자녀",
+      "type": "stepper",
+      "min": 0,
+      "max": 8,
+      "default": 0
+    },
+    {
+      "id": "extraDeduction",
+      "label": "추가 소득공제",
+      "type": "currency",
+      "min": 0,
+      "default": 0,
+      "hint": "국민연금·건강보험·연금저축 등"
+    },
+    {
+      "id": "extraTaxCredit",
+      "label": "추가 세액공제",
+      "type": "currency",
+      "min": 0,
+      "default": 0,
+      "hint": "의료비·교육비·기부금 등"
+    }
   ],
   "formula": [
-    { "step": 1, "name": "과세표준", "expr": "max(0, income - dependents * PERSONAL_DEDUCTION - extraDeduction)" },
-    { "step": 2, "name": "산출세액", "expr": "taxable * rate - progressiveDeduction (lookup)" },
-    { "step": 3, "name": "자녀세액공제", "expr": "lookup(childTaxCredit, kids)" },
-    { "step": 4, "name": "결정세액", "expr": "max(0, taxBeforeCredit - childCredit - extraTaxCredit)" },
-    { "step": 5, "name": "지방소득세", "expr": "round(decisionTax * 0.10)" },
-    { "step": 6, "name": "총 세금", "expr": "decisionTax + localTax" }
+    {
+      "step": 1,
+      "name": "과세표준",
+      "expr": "max(0, income - dependents * PERSONAL_DEDUCTION - extraDeduction)"
+    },
+    {
+      "step": 2,
+      "name": "산출세액",
+      "expr": "taxable * rate - progressiveDeduction (lookup)"
+    },
+    {
+      "step": 3,
+      "name": "자녀세액공제",
+      "expr": "lookup(childTaxCredit, kids)"
+    },
+    {
+      "step": 4,
+      "name": "결정세액",
+      "expr": "max(0, taxBeforeCredit - childCredit - extraTaxCredit)"
+    },
+    {
+      "step": 5,
+      "name": "지방소득세",
+      "expr": "round(decisionTax * 0.10)"
+    },
+    {
+      "step": 6,
+      "name": "총 세금",
+      "expr": "decisionTax + localTax"
+    }
   ],
   "verification": {
     "verified": true,
@@ -72,36 +180,107 @@
     "cases": [
       {
         "name": "Case 1 — 사업소득 3천만, 부양 1, 자녀 0",
-        "input": { "income": 30000000, "dependents": 1, "kids": 0, "extraDeduction": 0, "extraTaxCredit": 0 },
-        "expected": { "taxableIncome": 28500000, "taxBeforeCredit": 3015000, "childCredit": 0, "decisionTax": 3015000, "localTax": 301500, "totalTax": 3316500 }
+        "input": {
+          "income": 30000000,
+          "dependents": 1,
+          "kids": 0,
+          "extraDeduction": 0,
+          "extraTaxCredit": 0
+        },
+        "expected": {
+          "taxableIncome": 28500000,
+          "taxBeforeCredit": 3015000,
+          "childCredit": 0,
+          "decisionTax": 3015000,
+          "localTax": 301500,
+          "totalTax": 3316500
+        }
       },
       {
         "name": "Case 2 — 임대소득 5천만, 부양 2, 자녀 0",
-        "input": { "income": 50000000, "dependents": 2, "kids": 0, "extraDeduction": 0, "extraTaxCredit": 0 },
-        "expected": { "taxableIncome": 47000000, "taxBeforeCredit": 5790000, "childCredit": 0, "decisionTax": 5790000, "localTax": 579000, "totalTax": 6369000 }
+        "input": {
+          "income": 50000000,
+          "dependents": 2,
+          "kids": 0,
+          "extraDeduction": 0,
+          "extraTaxCredit": 0
+        },
+        "expected": {
+          "taxableIncome": 47000000,
+          "taxBeforeCredit": 5790000,
+          "childCredit": 0,
+          "decisionTax": 5790000,
+          "localTax": 579000,
+          "totalTax": 6369000
+        }
       },
       {
         "name": "Case 3 — 사업소득 1억, 부양 4, 자녀 2",
-        "input": { "income": 100000000, "dependents": 4, "kids": 2, "extraDeduction": 0, "extraTaxCredit": 0 },
-        "expected": { "taxableIncome": 94000000, "taxBeforeCredit": 17460000, "childCredit": 550000, "decisionTax": 16910000, "localTax": 1691000, "totalTax": 18601000 }
+        "input": {
+          "income": 100000000,
+          "dependents": 4,
+          "kids": 2,
+          "extraDeduction": 0,
+          "extraTaxCredit": 0
+        },
+        "expected": {
+          "taxableIncome": 94000000,
+          "taxBeforeCredit": 17460000,
+          "childCredit": 550000,
+          "decisionTax": 16910000,
+          "localTax": 1691000,
+          "totalTax": 18601000
+        }
       },
       {
         "name": "Case 4 — 종합 1.5억, 부양 1",
-        "input": { "income": 150000000, "dependents": 1, "kids": 0, "extraDeduction": 0, "extraTaxCredit": 0 },
-        "expected": { "taxableIncome": 148500000, "taxBeforeCredit": 36535000, "childCredit": 0, "decisionTax": 36535000, "localTax": 3653500, "totalTax": 40188500 }
+        "input": {
+          "income": 150000000,
+          "dependents": 1,
+          "kids": 0,
+          "extraDeduction": 0,
+          "extraTaxCredit": 0
+        },
+        "expected": {
+          "taxableIncome": 148500000,
+          "taxBeforeCredit": 36535000,
+          "childCredit": 0,
+          "decisionTax": 36535000,
+          "localTax": 3653500,
+          "totalTax": 40188500
+        }
       },
       {
         "name": "Case 5 — 고소득 5억, 부양 4, 자녀 0",
-        "input": { "income": 500000000, "dependents": 4, "kids": 0, "extraDeduction": 0, "extraTaxCredit": 0 },
-        "expected": { "taxableIncome": 494000000, "taxBeforeCredit": 171660000, "childCredit": 0, "decisionTax": 171660000, "localTax": 17166000, "totalTax": 188826000 }
+        "input": {
+          "income": 500000000,
+          "dependents": 4,
+          "kids": 0,
+          "extraDeduction": 0,
+          "extraTaxCredit": 0
+        },
+        "expected": {
+          "taxableIncome": 494000000,
+          "taxBeforeCredit": 171660000,
+          "childCredit": 0,
+          "decisionTax": 171660000,
+          "localTax": 17166000,
+          "totalTax": 188826000
+        }
       }
     ]
   },
   "guide": {
     "howToUse": "근로소득 외 사업·임대·기타 소득이 있는 분이 매년 5월 신고하는 종합소득세를 계산합니다. 종합소득금액(총수입에서 필요경비를 뺀 금액)과 부양가족·자녀 수를 입력하면 결정세액이 자동으로 계산됩니다.",
     "faq": [
-      { "q": "근로소득만 있는데도 종합소득세 신고를 해야 하나요?", "a": "근로소득만 있고 회사에서 연말정산을 했다면 별도 종합소득세 신고는 불필요합니다. 다만 사업·임대·기타소득이 추가로 있다면 합산해 신고해야 합니다." },
-      { "q": "필요경비는 어떻게 산출하나요?", "a": "사업소득은 「장부 기장」 또는 「추계신고(단순경비율·기준경비율)」로 산정합니다. 매출 규모와 업종에 따라 적용 방법이 다릅니다." }
+      {
+        "q": "근로소득만 있는데도 종합소득세 신고를 해야 하나요?",
+        "a": "근로소득만 있고 회사에서 연말정산을 했다면 별도 종합소득세 신고는 불필요합니다. 다만 사업·임대·기타소득이 추가로 있다면 합산해 신고해야 합니다."
+      },
+      {
+        "q": "필요경비는 어떻게 산출하나요?",
+        "a": "사업소득은 「장부 기장」 또는 「추계신고(단순경비율·기준경비율)」로 산정합니다. 매출 규모와 업종에 따라 적용 방법이 다릅니다."
+      }
     ],
     "tips": [
       "노란우산공제: 연 200~500만원 한도 소득공제, 사업자 세금 절감 핵심.",
@@ -109,5 +288,9 @@
       "기부금: 종교·공익단체 기부 시 세액공제 (한도 차등)."
     ]
   },
-  "related": ["salary-net-pay", "year-end-tax", "business-income-tax"]
+  "related": [
+    "salary-net-pay",
+    "year-end-tax",
+    "business-income-tax"
+  ]
 }
