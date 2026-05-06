@@ -22,13 +22,16 @@ export function SalaryNetPayClient() {
   const [annual, setAnnual] = useState(50_000_000);
   const [dependents, setDependents] = useState(1);
   const [kids, setKids] = useState(0);
+  const [nontaxable, setNontaxable] = useState(0);
 
+  // 메인 = 간이세액표 §134 모드 (회사 매월 떼는 기준, 명세서와 일치)
   const r = useMemo(
-    () => calcSalaryNetPay({ annual, dependents, kids }),
-    [annual, dependents, kids]
+    () => calcSalaryNetPaySimpleTax({ annual, dependents, kids, nontaxable }),
+    [annual, dependents, kids, nontaxable]
   );
-  const rSimple = useMemo(
-    () => calcSalaryNetPaySimpleTax({ annual, dependents, kids }),
+  // 참고용 = 1년 정확 환산 (소득세법 §55 누진세율, 연말정산 후 일치)
+  const rAnnual = useMemo(
+    () => calcSalaryNetPay({ annual, dependents, kids }),
     [annual, dependents, kids]
   );
 
@@ -119,6 +122,25 @@ export function SalaryNetPayClient() {
                   </div>
                 </div>
               </div>
+
+              <div className="input-row">
+                <div className="input-label">
+                  <span className="name">비과세액 (월)</span>
+                  <span className="hint">식대·차량유지비 등, 일반적으로 0~20만</span>
+                </div>
+                <div className="input-box">
+                  <input
+                    type="text"
+                    inputMode="numeric"
+                    value={nontaxable.toLocaleString("ko-KR")}
+                    onChange={(e) => {
+                      const n = parseKrw(e.target.value);
+                      setNontaxable(Math.min(1_000_000, Math.max(0, n)));
+                    }}
+                  />
+                  <span className="input-suffix">원</span>
+                </div>
+              </div>
             </div>
 
             {/* DONUT VIZ */}
@@ -174,16 +196,16 @@ export function SalaryNetPayClient() {
             </div>
 
             <div className="result-hero">
-              <div className="result-label">월 실수령액 (회사 매월 떼는 기준 · 간이세액표 §134)</div>
+              <div className="result-label">월 실수령액 (간이세액표 §134 · 명세서 기준)</div>
               <div>
-                <span className="result-value">{krw(rSimple.netMonthly)}</span>
+                <span className="result-value">{krw(r.netMonthly)}</span>
                 <span className="result-unit">원</span>
               </div>
               <div className="result-sub">
-                연 환산 <b>{krw(rSimple.netMonthly * 12)}</b>원 · 공제율 <b>{rSimple.deductRatePct.toFixed(1)}</b>%
+                연 환산 <b>{krw(r.netMonthly * 12)}</b>원 · 공제율 <b>{r.deductRatePct.toFixed(1)}</b>%
               </div>
               <div style={{ marginTop: 14, paddingTop: 14, borderTop: "1px solid var(--line-soft)", fontSize: 13, color: "var(--text-2)" }}>
-                <b>참고:</b> 1년 정확 환산(소득세법 §55 누진세율) <b style={{ color: "var(--brand)" }}>{krw(r.netMonthly)}원</b>
+                <b>참고:</b> 1년 정확 환산(소득세법 §55) <b style={{ color: "var(--brand)" }}>{krw(rAnnual.netMonthly)}원</b>
                 <span style={{ marginLeft: 6, color: "var(--text-3)" }}>
                   · 차이는 연말정산 후 일치
                 </span>
@@ -212,7 +234,7 @@ export function SalaryNetPayClient() {
                 <span className="val minus">−{krw(r.employmentInsurance)}</span>
               </div>
               <div className="b-row">
-                <span className="name">소득세 <span className="tag minus">연간 산식</span></span>
+                <span className="name">소득세 <span className="tag minus">간이세액표 §134</span></span>
                 <span className="val minus">−{krw(r.monthlyIncomeTax)}</span>
               </div>
               <div className="b-row">

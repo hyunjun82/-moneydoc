@@ -66,11 +66,11 @@ function calcChildCredit(kids) {
   return last.credit + (kids - last.kids) * T.childTaxCredit.additionalPerKid;
 }
 
-// ───────── main calc ─────────
+// ───────── main calc (간이세액표 §134, 잡코리아·아는자산 매칭) ─────────
 function calculate(input) {
-  const { annual, dependents, kids } = input;
-
-  const monthly = annual / 12;
+  const { annual, dependents, kids, nontaxable = 0 } = input;
+  const taxableAnnual = Math.max(0, annual - nontaxable * 12);
+  const monthly = taxableAnnual / 12;
   const npBase = Math.min(monthly, C.NP_CAP_MONTHLY);
   const nationalPension = Math.round(npBase * C.NP_RATE);
   const healthInsurance = Math.round(monthly * C.HI_RATE);
@@ -78,15 +78,13 @@ function calculate(input) {
   const employmentInsurance = Math.round(monthly * C.EI_RATE);
   const totalInsurance = nationalPension + healthInsurance + longTermCare + employmentInsurance;
 
-  const earnedIncomeDeduction = calcEarnedIncomeDeduction(annual);
+  const earnedIncomeDeduction = calcEarnedIncomeDeduction(taxableAnnual);
   const personalDeduction = dependents * C.PERSONAL_DEDUCTION;
-  const taxableIncome = Math.max(0, annual - earnedIncomeDeduction - personalDeduction);
+  const taxableIncome = Math.max(0, taxableAnnual - earnedIncomeDeduction - personalDeduction);
   const taxBeforeCredit = calcTaxBeforeCredit(taxableIncome);
-  const earnedIncomeCreditRaw = calcEarnedIncomeCreditRaw(taxBeforeCredit);
-  const earnedIncomeCreditLimit = calcEarnedIncomeCreditLimit(annual);
-  const earnedIncomeCredit = Math.min(earnedIncomeCreditRaw, earnedIncomeCreditLimit);
   const childCredit = calcChildCredit(kids);
-  const annualIncomeTax = Math.max(0, taxBeforeCredit - earnedIncomeCredit - childCredit);
+  const STD = C.STANDARD_TAX_DEDUCTION_YEARLY || 1560000;
+  const annualIncomeTax = Math.max(0, taxBeforeCredit - STD - childCredit);
   const monthlyIncomeTax = Math.round(annualIncomeTax / 12);
   const monthlyLocalTax = Math.round(monthlyIncomeTax * C.LOCAL_TAX_RATE);
   const totalDeduction = totalInsurance + monthlyIncomeTax + monthlyLocalTax;
@@ -105,17 +103,7 @@ function calculate(input) {
     totalDeduction,
     netMonthly,
     deductRatePct,
-    _intermediate: {
-      earnedIncomeDeduction,
-      personalDeduction,
-      taxableIncome,
-      taxBeforeCredit,
-      earnedIncomeCreditRaw,
-      earnedIncomeCreditLimit,
-      earnedIncomeCredit,
-      childCredit,
-      annualIncomeTax
-    }
+    _intermediate: { earnedIncomeDeduction, personalDeduction, taxableIncome, taxBeforeCredit, childCredit, annualIncomeTax }
   };
 }
 

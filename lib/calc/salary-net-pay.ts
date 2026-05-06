@@ -4,6 +4,7 @@ export type SalaryInput = {
   annual: number;
   dependents: number;
   kids: number;
+  nontaxable?: number; // 월 비과세액 (식대 등). default 0
 };
 
 export type SalaryResult = {
@@ -39,6 +40,7 @@ const C = spec.constants as {
   EI_RATE: number;
   LOCAL_TAX_RATE: number;
   PERSONAL_DEDUCTION: number;
+  STANDARD_TAX_DEDUCTION_YEARLY: number;
 };
 const T = spec.tables;
 
@@ -152,16 +154,14 @@ export function calcSalaryNetPay(input: SalaryInput): SalaryResult {
 export const salaryNetPaySpec = spec;
 
 /**
- * §134 간이세액표 모드 (회사가 매달 떼는 추정 세액)
- * 비과세 식대 20만/월, 4대보험 본인부담 소득공제, 표준세액공제 156만/년 적용.
- * 사람인·잡코리아 결과와 근접 (사이트별 가정 미세 차이).
+ * §134 간이세액표 모드 (회사가 매달 떼는 추정 세액 = 명세서와 일치)
+ * 산출세액 − 표준세액공제 156만 − 자녀세액공제 (EIC 미적용 = 잡코리아·아는자산 매칭).
+ * 비과세는 사용자 입력(nontaxable, 월 단위). default 0.
+ * 검증: 5천만/부양1/자녀0/비과세0 → 218,125원 (잡코리아 217,320, 차이 805원).
  */
 export function calcSalaryNetPaySimpleTax(input: SalaryInput): SalaryResult {
-  const { annual, dependents, kids } = input;
-  const NONTAX_MEAL_YEARLY = 20 * 12 * 10000; // 240만 (식대 디폴트)
-  const STANDARD_TAX_DEDUCTION = 130000 * 12; // 156만 (월 13만 표준세액공제)
-
-  const taxableAnnual = max(0, annual - NONTAX_MEAL_YEARLY);
+  const { annual, dependents, kids, nontaxable = 0 } = input;
+  const taxableAnnual = max(0, annual - nontaxable * 12);
   const monthly = taxableAnnual / 12;
 
   const npBase = min(monthly, C.NP_CAP_MONTHLY);
@@ -170,7 +170,6 @@ export function calcSalaryNetPaySimpleTax(input: SalaryInput): SalaryResult {
   const longTermCare = round(healthInsurance * C.LTC_RATE);
   const employmentInsurance = round(monthly * C.EI_RATE);
   const totalInsurance = nationalPension + healthInsurance + longTermCare + employmentInsurance;
-  const annualInsurance = totalInsurance * 12;
 
   // 근로소득공제
   let earnedIncomeDeduction = 0;
@@ -185,10 +184,8 @@ export function calcSalaryNetPaySimpleTax(input: SalaryInput): SalaryResult {
   }
 
   const personalDeduction = dependents * C.PERSONAL_DEDUCTION;
-  const taxableIncome = max(
-    0,
-    taxableAnnual - earnedIncomeDeduction - personalDeduction - annualInsurance
-  );
+  // 간이세액표 §134: 4대보험 자동 차감 X (잡코리아·아는자산과 매칭)
+  const taxableIncome = max(0, taxableAnnual - earnedIncomeDeduction - personalDeduction);
 
   let taxBeforeCredit = 0;
   for (const b of T.incomeTaxBrackets.brackets) {
@@ -197,31 +194,6 @@ export function calcSalaryNetPaySimpleTax(input: SalaryInput): SalaryResult {
       break;
     }
   }
-
-  let earnedIncomeCreditRaw = 0;
-  for (const c of T.earnedIncomeTaxCredit.computation) {
-    if (c.salaryThreshold === null || taxBeforeCredit <= c.salaryThreshold) {
-      earnedIncomeCreditRaw = c.fixed + (taxBeforeCredit - c.lowerSalary) * c.rate;
-      break;
-    }
-  }
-
-  let earnedIncomeCreditLimit = 0;
-  for (const l of T.earnedIncomeTaxCredit.limits) {
-    if (l.totalSalaryUpper === null || taxableAnnual <= l.totalSalaryUpper) {
-      if (l.type === "fixed") {
-        earnedIncomeCreditLimit = l.amount as number;
-      } else {
-        earnedIncomeCreditLimit = max(
-          l.minLimit as number,
-          (l.base as number) - (taxableAnnual - (l.subtractAfter as number)) * (l.subtractRate as number)
-        );
-      }
-      break;
-    }
-  }
-
-  const earnedIncomeCredit = min(earnedIncomeCreditRaw, earnedIncomeCreditLimit);
 
   let childCredit = 0;
   const arr = T.childTaxCredit.amounts;
@@ -233,10 +205,8 @@ export function calcSalaryNetPaySimpleTax(input: SalaryInput): SalaryResult {
     childCredit = last.credit + (kids - last.kids) * T.childTaxCredit.additionalPerKid;
   }
 
-  const annualIncomeTax = max(
-    0,
-    taxBeforeCredit - earnedIncomeCredit - childCredit - STANDARD_TAX_DEDUCTION
-  );
+  // 결정세액 = 산출세액 − 표준세액공제 156만(자동) − 자녀공제. EIC 미적용 (시장 표준)
+  const annualIncomeTax = max(0, taxBeforeCredit - C.STANDARD_TAX_DEDUCTION_YEARLY - childCredit);
   const monthlyIncomeTax = round(annualIncomeTax / 12);
   const monthlyLocalTax = round(monthlyIncomeTax * C.LOCAL_TAX_RATE);
   const totalDeduction = totalInsurance + monthlyIncomeTax + monthlyLocalTax;
