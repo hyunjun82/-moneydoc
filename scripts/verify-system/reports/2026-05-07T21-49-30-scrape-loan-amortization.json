@@ -1,0 +1,65 @@
+{
+  "label": "scrape-loan-amortization",
+  "timestamp": "2026-05-07T21-49-30",
+  "pass": 8,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 1 — 1억 / 30년 / 4% / 원리금균등",
+      "adapter": "kinfa",
+      "ts": 1778190570540
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 2 — 2억 / 20년 / 4.5% / 원리금균등",
+      "adapter": "kinfa",
+      "ts": 1778190570541
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 3 — 1억 / 30년 / 4% / 원금균등",
+      "adapter": "kinfa",
+      "ts": 1778190570542
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 4 — 2억 / 20년 / 4.5% / 원금균등",
+      "adapter": "kinfa",
+      "ts": 1778190570543
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 5 — 1억 / 5년 / 5% / 만기일시",
+      "adapter": "kinfa",
+      "ts": 1778190570545
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 6 — 2억 / 3년 / 4.5% / 만기일시",
+      "adapter": "kinfa",
+      "ts": 1778190570546
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 7 — 1억 / 30년 (거치 3년 + 상환 27년) / 4% / 거치식",
+      "adapter": "kinfa",
+      "ts": 1778190570547
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 8 — 2억 / 20년 (거치 2년 + 상환 18년) / 4.5% / 거치식",
+      "adapter": "kinfa",
+      "ts": 1778190570548
+    }
+  ]
+}
