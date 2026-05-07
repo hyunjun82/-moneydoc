@@ -1,0 +1,94 @@
+{
+  "label": "guide-numbers-loan",
+  "timestamp": "2026-05-07T22-19-02",
+  "pass": 4,
+  "fail": 5,
+  "error": 0,
+  "results": [
+    {
+      "status": "fail",
+      "calc": "credit-loan",
+      "case": "(가이드 숫자)",
+      "detail": "정부값 차이",
+      "diffs": [
+        "[creditIncomeTable.70000000] 1.5배 Δ-90000000",
+        "[creditIncomeTable.10000] 1.5배 Δ149985000"
+      ],
+      "ts": 1778192342689
+    },
+    {
+      "status": "fail",
+      "calc": "dsr-limit",
+      "case": "(가이드 숫자)",
+      "detail": "정부값 차이",
+      "diffs": [
+        "[dsrIncomeTable.30000000] 미적용 표=29460000 vs eng=209461240 (Δ-180001240)",
+        "[dsrIncomeTable.10000] 미적용 표=698200000 vs eng=69751 (Δ698130249)",
+        "[dsrIncomeTable.10000] 3단계 표=587070000 vs eng=58649 (Δ587011351)",
+        "[dsrIncomeTable.150000] 미적용 표=1047300000 vs eng=1047306 (Δ1046252694)",
+        "[dsrIncomeTable.150000] 3단계 표=880600000 vs eng=880609 (Δ879719391)"
+      ],
+      "ts": 1778192342695
+    },
+    {
+      "status": "fail",
+      "calc": "dti-limit",
+      "case": "(가이드 숫자)",
+      "detail": "정부값 차이",
+      "diffs": [
+        "[dtiIncomeTable.10000] 50% Δ872662655",
+        "[dtiIncomeTable.10000] 60% Δ1047195269"
+      ],
+      "ts": 1778192342696
+    },
+    {
+      "status": "fail",
+      "calc": "jeonse-loan",
+      "case": "(가이드 숫자)",
+      "detail": "정부값 차이",
+      "diffs": [
+        "[jeonseDepositTable.5억] HF Δ-399960000"
+      ],
+      "ts": 1778192342696
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "(가이드 숫자)",
+      "detail": "정부값 0원 일치",
+      "ts": 1778192342697
+    },
+    {
+      "status": "pass",
+      "calc": "loan-refinance",
+      "case": "(가이드 숫자)",
+      "detail": "정부값 0원 일치",
+      "ts": 1778192342697
+    },
+    {
+      "status": "fail",
+      "calc": "ltv-limit",
+      "case": "(가이드 숫자)",
+      "detail": "정부값 차이",
+      "diffs": [
+        "[ltvPriceTable.10억] 비규제 Δ-699240000",
+        "[ltvPriceTable.15억] 비규제 Δ-1049940000"
+      ],
+      "ts": 1778192342698
+    },
+    {
+      "status": "pass",
+      "calc": "mortgage-loan-limit",
+      "case": "(가이드 숫자)",
+      "detail": "정부값 0원 일치",
+      "ts": 1778192342698
+    },
+    {
+      "status": "pass",
+      "calc": "prepayment-fee",
+      "case": "(가이드 숫자)",
+      "detail": "정부값 0원 일치",
+      "ts": 1778192342699
+    }
+  ]
+}
