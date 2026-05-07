@@ -132,7 +132,7 @@
           "graceYears": 0
         },
         "expected": {
-          "mode": "amortization",
+          "mode": "원리금균등",
           "monthly": 477415,
           "totalPayment": 171869506,
           "totalInterest": 71869506
@@ -148,7 +148,7 @@
           "graceYears": 0
         },
         "expected": {
-          "mode": "amortization",
+          "mode": "원리금균등",
           "monthly": 1265299,
           "totalPayment": 303671701,
           "totalInterest": 103671701
@@ -164,7 +164,7 @@
           "graceYears": 0
         },
         "expected": {
-          "mode": "decline",
+          "mode": "원금균등",
           "firstPayment": 611111,
           "lastPayment": 278704,
           "totalInterest": 60166667,
@@ -181,7 +181,7 @@
           "graceYears": 0
         },
         "expected": {
-          "mode": "decline",
+          "mode": "원금균등",
           "firstPayment": 1583333,
           "lastPayment": 836458,
           "totalInterest": 90375000,
@@ -198,7 +198,7 @@
           "graceYears": 0
         },
         "expected": {
-          "mode": "balloon",
+          "mode": "만기일시",
           "monthlyInterest": 416667,
           "totalInterest": 25000020,
           "totalPayment": 125000020
@@ -214,7 +214,7 @@
           "graceYears": 0
         },
         "expected": {
-          "mode": "balloon",
+          "mode": "만기일시",
           "monthlyInterest": 750000,
           "totalInterest": 27000000,
           "totalPayment": 227000000
@@ -230,7 +230,7 @@
           "graceYears": 3
         },
         "expected": {
-          "mode": "grace",
+          "mode": "거치식",
           "graceMonthlyInterest": 333333,
           "totalGraceInterest": 11999988,
           "repayMonthly": 505208,
@@ -248,7 +248,7 @@
           "graceYears": 2
         },
         "expected": {
-          "mode": "grace",
+          "mode": "거치식",
           "graceMonthlyInterest": 750000,
           "totalGraceInterest": 18000000,
           "repayMonthly": 1352649,

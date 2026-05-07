@@ -2,7 +2,7 @@
 cd /d "%~dp0"
 
 echo ===============================================
-echo  MoneyDoc - Loan 9 calc full depth push
+echo  MoneyDoc - Loan 9 calc full + mode KR
 echo ===============================================
 echo.
 
@@ -52,7 +52,7 @@ git diff --cached --name-status
 
 echo.
 echo [5/5] Commit and push...
-git commit -m "feat(loan): 12 to 9 calcs, integrate 4 modes (loan-amortization), full 4-section guides, 52/52 verified, 2026 regulations (stress DSR 3, 6eok cap, lease deduction, regional LTV)"
+git commit -m "feat(loan): 12 to 9 calcs, integrate 4 modes (loan-amortization Korean labels), full 4-section guides, 52/52 verified, 2026 regulations"
 git push origin main
 
 echo.
