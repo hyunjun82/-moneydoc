@@ -14,6 +14,9 @@
 8. **push-changes.bat은 stash 절대 금지**. 직접 git add → commit → push.
 9. **라인엔딩 LF 강제**. .gitattributes 있음. CRLF 감지되면 Python에서 `newline='\n'`.
 10. **한 번에 1개 계산기**만. 91개 동시 작업 금지.
+11. **.bat 파일은 순수 ASCII 영어만**. 한글 echo 메시지 금지 — CMD 인코딩(CP949) 깨져서 git 명령어가 행 단위로 실패함. 헤더/메시지 모두 영어로. 커밋 메시지도 ASCII만.
+12. **.bat 작성 후** `head -3 push.bat | xxd`로 BOM(EF BB BF) 없는지 확인. BOM 있으면 CMD 첫 줄 깨짐.
+13. **Cloudflare Pages CDN 캐시는 7일** (s-maxage=604800). 페이지 삭제 후에도 옛 URL 살아있으면 Cloudflare 대시보드 → Caching → Purge Everything 실행 필요.
 
 ## 디자인 (D 테마, 변경 금지)
 
@@ -41,7 +44,7 @@ generic 5섹션 금지. 매 계산기마다 검색 의도 분석 후 4섹션:
 3. **결과 근거** (산식 단계 + 4대보험·세율표 + 정부 출처)
 4. **다음 단계** (절세 / 혜택 / 신청 / 관련 계산기)
 
-제목: "{주제} 완전 가이드" 또는 "자주 검색하는 케이스" — "이 계산기 자세히 알아보기" 같은 generic 금지.
+가이드 섹션 제목: **"자주 묻는 질문"** 으로 통일 (CalculatorShell 자동). spec.guide.title로 개별 override 가능.
 
 ## 검증 기준 (오차 0 원칙)
 
