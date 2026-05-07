@@ -4,8 +4,8 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/loan/dsr-limit.json";
 
 export const metadata: Metadata = {
-  title: "DSR 한도 계산기 — 2026년 기준",
-  description: "연소득과 기존 부채 월 상환액, 신규대출 만기·금리·DSR 한도(보통 은행권 40%)를 입력하면 신규로 받을 수 있는 최대 대출 한도가 산출됩니다.",
+  title: "DSR 계산기 — 2026 정확 검증 | MoneyDoc",
+  description: "총부채원리금상환비율 기준 한도 + 스트레스 DSR 3단계 (2025.7 시행, 가산 1.5%)",
   alternates: { canonical: "/loan/dsr-limit/" },
 };
 
@@ -13,7 +13,8 @@ export default function Page() {
   return (
     <CalculatorShell
       spec={spec}
-      sourceBadge="금융감독원 2026 · 검증 완료"
+      sourceBadge="금감원·금융위 + 가계부채 관리방안 · 5케이스 검증"
+      description="총부채원리금상환비율 기준 한도 + 스트레스 DSR 3단계 (2025.7 시행, 가산 1.5%)"
     >
       <GenericCalculator spec={spec} />
     </CalculatorShell>

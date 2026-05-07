@@ -1,39 +1,233 @@
 {
   "id": "loan-refinance",
   "category": "loan",
-  "subCategory": "refinance",
-  "title": "대환대출 비교 계산기",
-  "subtitle": "기존 대출 vs 신규 대출 월 상환·총 상환 비교",
+  "subCategory": "comparison",
+  "title": "대출 갈아타기 계산기",
+  "subtitle": "기존 대출 vs 신규 대출 월 상환·총 상환 비교 (대환대출)",
   "slug": "loan-refinance",
+  "searchAliases": [
+    "대출 갈아타기",
+    "대환대출 계산기",
+    "대출 환승"
+  ],
   "year": 2026,
-  "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
-  "source": { "primary": { "agency": "금융감독원", "document": "대환대출 표준 산식", "year": 2026 } },
+  "lastUpdated": "2026-05-07",
+  "lastVerified": "2026-05-07",
+  "source": {
+    "primary": {
+      "agency": "금융위원회",
+      "document": "대환대출 인프라 (2024 시행)",
+      "year": 2026
+    }
+  },
   "constants": {},
   "formula": [
-    { "step": 1, "name": "기존 월 상환", "expr": "원리금균등 PMT(잔액, 잔여기간, 기존금리)" },
-    { "step": 2, "name": "신규 월 상환", "expr": "원리금균등 PMT(잔액, 잔여기간, 신규금리)" },
-    { "step": 3, "name": "월 절감", "expr": "기존월 - 신규월" },
-    { "step": 4, "name": "총 절감", "expr": "기존총 - 신규총" }
+    {
+      "step": 1,
+      "name": "기존 월 상환",
+      "expr": "PMT(잔액, oldRate, 잔여기간)"
+    },
+    {
+      "step": 2,
+      "name": "신규 월 상환",
+      "expr": "PMT(잔액, newRate, 잔여기간)"
+    },
+    {
+      "step": 3,
+      "name": "절감액",
+      "expr": "기존 - 신규"
+    }
   ],
   "inputs": [
-    { "id": "balance", "label": "대출 잔액", "type": "currency", "min": 1000000, "default": 100000000 },
-    { "id": "oldRate", "label": "기존 금리", "type": "number", "min": 0.005, "max": 0.20, "step": 0.001, "default": 0.05 },
-    { "id": "newRate", "label": "신규 금리", "type": "number", "min": 0.005, "max": 0.20, "step": 0.001, "default": 0.04 },
-    { "id": "remainingYears", "label": "잔여 만기 (년)", "type": "number", "min": 1, "max": 40, "default": 25 }
+    {
+      "id": "balance",
+      "label": "현재 잔액",
+      "type": "currency",
+      "min": 1000000,
+      "default": 100000000
+    },
+    {
+      "id": "oldRate",
+      "label": "기존 금리",
+      "type": "number",
+      "min": 0.01,
+      "max": 0.2,
+      "step": 0.001,
+      "default": 0.05
+    },
+    {
+      "id": "newRate",
+      "label": "신규 (갈아타기) 금리",
+      "type": "number",
+      "min": 0.01,
+      "max": 0.2,
+      "step": 0.001,
+      "default": 0.04
+    },
+    {
+      "id": "remainingYears",
+      "label": "잔여 기간 (년)",
+      "type": "number",
+      "min": 1,
+      "max": 50,
+      "default": 25
+    }
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-05-01",
-    "method": "양쪽 모두 원리금균등 PMT로 산출 후 차액 비교. 중도상환수수료는 별도 계산기.",
+    "verifiedAt": "2026-05-07",
+    "method": "PMT 산식 기반 기존 vs 신규 비교. 중도상환수수료·신규 비용 별도.",
     "cases": [
-      { "name": "Case 1 — 1억 잔액, 5%→4%, 25년", "input": { "balance": 100000000, "oldRate": 0.05, "newRate": 0.04, "remainingYears": 25 }, "expected": { "oldMonthly": 584590, "newMonthly": 527837, "monthlySaving": 56753, "oldTotal": 175377012, "newTotal": 158351052, "totalSaving": 17025960 } },
-      { "name": "Case 2 — 2억, 6%→4.5%, 20년", "input": { "balance": 200000000, "oldRate": 0.06, "newRate": 0.045, "remainingYears": 20 }, "expected": { "oldMonthly": 1432862, "newMonthly": 1265299, "monthlySaving": 167563, "oldTotal": 343886908, "newTotal": 303671701, "totalSaving": 40215207 } },
-      { "name": "Case 3 — 3억, 5.5%→4%, 28년", "input": { "balance": 300000000, "oldRate": 0.055, "newRate": 0.04, "remainingYears": 28 }, "expected": { "oldMonthly": 1751897, "newMonthly": 1485637, "monthlySaving": 266260, "oldTotal": 588637547, "newTotal": 499174035, "totalSaving": 89463512 } },
-      { "name": "Case 4 — 5천만, 7%→5%, 10년", "input": { "balance": 50000000, "oldRate": 0.07, "newRate": 0.05, "remainingYears": 10 }, "expected": { "oldMonthly": 580542, "newMonthly": 530328, "monthlySaving": 50214, "oldTotal": 69665088, "newTotal": 63639309, "totalSaving": 6025779 } },
-      { "name": "Case 5 — 5억, 4.5%→3.8%, 30년", "input": { "balance": 500000000, "oldRate": 0.045, "newRate": 0.038, "remainingYears": 30 }, "expected": { "oldMonthly": 2533427, "newMonthly": 2329787, "monthlySaving": 203640, "oldTotal": 912033558, "newTotal": 838723232, "totalSaving": 73310326 } }
+      {
+        "name": "Case 1 — 잔액 1억 / 5%→4% / 25년",
+        "input": {
+          "balance": 100000000,
+          "oldRate": 0.05,
+          "newRate": 0.04,
+          "remainingYears": 25
+        },
+        "expected": {
+          "oldMonthly": 584590,
+          "newMonthly": 527837,
+          "monthlySaving": 56753,
+          "oldTotal": 175377012,
+          "newTotal": 158351052,
+          "totalSaving": 17025960
+        }
+      },
+      {
+        "name": "Case 2 — 잔액 2억 / 6%→4.5% / 20년",
+        "input": {
+          "balance": 200000000,
+          "oldRate": 0.06,
+          "newRate": 0.045,
+          "remainingYears": 20
+        },
+        "expected": {
+          "oldMonthly": 1432862,
+          "newMonthly": 1265299,
+          "monthlySaving": 167563,
+          "oldTotal": 343886908,
+          "newTotal": 303671701,
+          "totalSaving": 40215207
+        }
+      },
+      {
+        "name": "Case 3 — 잔액 3억 / 5.5%→4.2% / 28년",
+        "input": {
+          "balance": 300000000,
+          "oldRate": 0.055,
+          "newRate": 0.042,
+          "remainingYears": 28
+        },
+        "expected": {
+          "oldMonthly": 1751897,
+          "newMonthly": 1519855,
+          "monthlySaving": 232042,
+          "oldTotal": 588637547,
+          "newTotal": 510671117,
+          "totalSaving": 77966430
+        }
+      },
+      {
+        "name": "Case 4 — 잔액 5천만 / 7%→5.5% / 10년",
+        "input": {
+          "balance": 50000000,
+          "oldRate": 0.07,
+          "newRate": 0.055,
+          "remainingYears": 10
+        },
+        "expected": {
+          "oldMonthly": 580542,
+          "newMonthly": 542631,
+          "monthlySaving": 37911,
+          "oldTotal": 69665088,
+          "newTotal": 65115767,
+          "totalSaving": 4549321
+        }
+      },
+      {
+        "name": "Case 5 — 잔액 5억 / 4.5%→3.8% / 30년",
+        "input": {
+          "balance": 500000000,
+          "oldRate": 0.045,
+          "newRate": 0.038,
+          "remainingYears": 30
+        },
+        "expected": {
+          "oldMonthly": 2533427,
+          "newMonthly": 2329787,
+          "monthlySaving": 203640,
+          "oldTotal": 912033558,
+          "newTotal": 838723232,
+          "totalSaving": 73310326
+        }
+      }
     ]
   },
-  "guide": { "howToUse": "잔액·기존 금리·신규 금리·잔여 만기 입력 시 월 절감액과 총 절감액 비교.", "tips": ["중도상환수수료 < 총 절감액일 때 갈아타기 유리.", "고정금리 → 변동금리 갈아탈 때 금리상승 리스크 주의."] },
-  "related": ["loan-amortization", "prepayment-fee"]
+  "guide": {
+    "tables": {
+      "refinanceTable": [
+        {
+          "항목": "갈아타기 추천 시기",
+          "기준": "신규금리가 기존금리보다 1%p 이상 낮음",
+          "비고": "수수료·비용 보전 가능"
+        },
+        {
+          "항목": "중도상환수수료",
+          "기준": "잔액 × 0.5~1.4% × (잔여기간/3년)",
+          "비고": "3년 면제 후 0%"
+        },
+        {
+          "항목": "신규 대출비용",
+          "기준": "인지세·법무비·보증료 합 약 50~150만",
+          "비고": "주담대 갈아타기"
+        },
+        {
+          "항목": "신용대출 갈아타기",
+          "기준": "은행간 비교, 1.5%p 절감 가능",
+          "비고": "DSR·신용도 재심사"
+        },
+        {
+          "항목": "주담대 갈아타기 (대환)",
+          "기준": "DSR 재심사 + LTV 한도 변경",
+          "비고": "정부 대환대출 인프라 활용"
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "언제 갈아타는 게 유리한가요?",
+        "a": "신규금리가 기존금리보다 **1%p 이상** 낮을 때 + 중도상환수수료 + 신규 대출비용 합산 후에도 절감액이 충분히 클 때. 보통 잔여기간 5년 이상 남았을 때 효과 큼. 잔여 1~2년이면 절감액 적어 갈아타기 비효율."
+      },
+      {
+        "q": "중도상환수수료가 얼마인가요?",
+        "a": "주담대 기준 잔액 × 0.5~1.4% × (잔여기간/3년). 예: 잔액 2억, 수수료율 1.4%, 잔여 18개월 → 2억 × 1.4% × (18/36) = 140만원. 3년 경과 시 0%. 최근 일부 은행은 면제 이벤트."
+      },
+      {
+        "q": "정부 대환대출 인프라가 뭔가요?",
+        "a": "2023년 시작 + 2024 확대. 모바일 앱 (대환대출 비교)에서 여러 은행 동시 비교 + 즉시 갈아타기. 신용대출·주담대·전세대출 모두 가능. 중도상환수수료 별도, 시간 단축 효과."
+      },
+      {
+        "q": "갈아타기 시 DSR 재심사하나요?",
+        "a": "네. 신규 대출이므로 현재 시점의 DSR + 신용도 재심사. 2025.7 스트레스 DSR 3단계 가산 1.5% 적용. 한도 줄어들 가능성 있음. 갈아타기 전 DSR 한도 확인 필수."
+      },
+      {
+        "q": "조기상환과 갈아타기 차이는?",
+        "a": "조기상환: 본인 자금으로 일부·전액 상환. 중도상환수수료만 발생. 갈아타기: 신규 대출로 기존 대출 상환. 중도상환수수료 + 신규 대출비용 + 금리 차이로 손익 결정."
+      }
+    ],
+    "tips": [
+      "1%p 이상 하락 시: 시장금리 1%p 이상 하락 → 갈아타기 검토. 대환대출 인프라(앱)에서 즉시 비교.",
+      "수수료·비용 합산 검토: 절감액 - 중도상환수수료 - 신규 비용 > 0 일 때만 실행.",
+      "3년 경과 후: 중도상환수수료 면제 → 갈아타기 부담 최소.",
+      "정책대출 갈아타기: 디딤돌·보금자리론은 대환대출 인프라 미포함, 직접 신청 필요.",
+      "잔여기간 5년↑: 갈아타기 절감액 충분. 1~2년이면 큰 효과 X."
+    ]
+  },
+  "related": [
+    "loan-amortization",
+    "prepayment-fee",
+    "dsr-limit"
+  ]
 }

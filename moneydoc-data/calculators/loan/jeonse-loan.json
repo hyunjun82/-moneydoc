@@ -1,33 +1,227 @@
 {
   "id": "jeonse-loan",
   "category": "loan",
-  "subCategory": "housing",
-  "title": "전세자금대출 한도 계산기",
-  "subtitle": "주택금융공사 일반 전세대출 보증금 80% 기준",
+  "subCategory": "limit",
+  "title": "전세자금대출 계산기",
+  "subtitle": "보증금 80% (HF·HUG·청년) + 한도 차등 — 정책별 적용",
   "slug": "jeonse-loan",
+  "searchAliases": [
+    "전세자금대출 계산기",
+    "전세대출 한도",
+    "HF 전세대출",
+    "HUG 전세대출"
+  ],
   "year": 2026,
-  "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
-  "source": { "primary": { "agency": "주택금융공사", "document": "전세자금보증 운영규정", "year": 2026 } },
-  "constants": { "DEFAULT_RATIO": 0.80, "DEFAULT_LIMIT": 400000000 },
-  "formula": [ { "step": 1, "name": "한도", "expr": "min(보증금 × 비율, 한도)" } ],
+  "lastUpdated": "2026-05-07",
+  "lastVerified": "2026-05-07",
+  "source": {
+    "primary": {
+      "agency": "한국주택금융공사·HUG",
+      "document": "전세자금대출 보증 (HF·HUG·SGI)",
+      "year": 2026
+    }
+  },
+  "constants": {},
+  "formula": [
+    {
+      "step": 1,
+      "name": "보증금 비율",
+      "expr": "deposit × ratio"
+    },
+    {
+      "step": 2,
+      "name": "최종 한도",
+      "expr": "min(보증금×비율, 보증한도)"
+    }
+  ],
   "inputs": [
-    { "id": "deposit", "label": "전세 보증금", "type": "currency", "min": 10000000, "default": 200000000 },
-    { "id": "ratio", "label": "보증 비율", "type": "number", "min": 0.50, "max": 1.0, "step": 0.05, "default": 0.80 },
-    { "id": "limit", "label": "최대 한도", "type": "currency", "min": 50000000, "default": 400000000 }
+    {
+      "id": "deposit",
+      "label": "전세 보증금",
+      "type": "currency",
+      "min": 30000000,
+      "default": 300000000
+    },
+    {
+      "id": "ratio",
+      "label": "보증 비율",
+      "type": "select",
+      "default": 0.8,
+      "options": [
+        {
+          "value": 0.7,
+          "label": "70% (일반 전세대출)"
+        },
+        {
+          "value": 0.8,
+          "label": "80% (HF/HUG 일반)"
+        },
+        {
+          "value": 0.9,
+          "label": "90% (특례 청년·신혼)"
+        }
+      ]
+    },
+    {
+      "id": "limit",
+      "label": "보증 한도",
+      "type": "select",
+      "default": 450000000,
+      "options": [
+        {
+          "value": 200000000,
+          "label": "2억 (HUG 청년 만 19~34세)"
+        },
+        {
+          "value": 400000000,
+          "label": "4억 (HUG 일반)"
+        },
+        {
+          "value": 450000000,
+          "label": "4.5억 (HF 일반)"
+        },
+        {
+          "value": 700000000,
+          "label": "7억 (수도권 신혼·다자녀)"
+        }
+      ]
+    }
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-05-01",
-    "method": "min(보증금 × 80%, 4억). 청년·신혼 특례는 별도.",
+    "verifiedAt": "2026-05-07",
+    "method": "보증금 × 보증비율 + 보증기관별 한도 cap.",
     "cases": [
-      { "name": "Case 1 — 보증 2억", "input": { "deposit": 200000000, "ratio": 0.80, "limit": 400000000 }, "expected": { "maxLoan": 160000000 } },
-      { "name": "Case 2 — 보증 5억 (한도 적용)", "input": { "deposit": 500000000, "ratio": 0.80, "limit": 400000000 }, "expected": { "maxLoan": 400000000 } },
-      { "name": "Case 3 — 보증 1억", "input": { "deposit": 100000000, "ratio": 0.80, "limit": 400000000 }, "expected": { "maxLoan": 80000000 } },
-      { "name": "Case 4 — 보증 7억 (한도)", "input": { "deposit": 700000000, "ratio": 0.80, "limit": 400000000 }, "expected": { "maxLoan": 400000000 } },
-      { "name": "Case 5 — 보증 3억", "input": { "deposit": 300000000, "ratio": 0.80, "limit": 400000000 }, "expected": { "maxLoan": 240000000 } }
+      {
+        "name": "Case 1 — 전세 3억 / HF 80% / 한도 4.5억",
+        "input": {
+          "deposit": 300000000,
+          "ratio": 0.8,
+          "limit": 450000000
+        },
+        "expected": {
+          "depositRatio": 240000000,
+          "appliedLimit": 240000000
+        }
+      },
+      {
+        "name": "Case 2 — 전세 5억 / HUG 80% / 한도 4억",
+        "input": {
+          "deposit": 500000000,
+          "ratio": 0.8,
+          "limit": 400000000
+        },
+        "expected": {
+          "depositRatio": 400000000,
+          "appliedLimit": 400000000
+        }
+      },
+      {
+        "name": "Case 3 — 전세 1억 / HF 80% / 한도 4.5억",
+        "input": {
+          "deposit": 100000000,
+          "ratio": 0.8,
+          "limit": 450000000
+        },
+        "expected": {
+          "depositRatio": 80000000,
+          "appliedLimit": 80000000
+        }
+      },
+      {
+        "name": "Case 4 — 전세 6억 / 청년 80% / 한도 2억",
+        "input": {
+          "deposit": 600000000,
+          "ratio": 0.8,
+          "limit": 200000000
+        },
+        "expected": {
+          "depositRatio": 480000000,
+          "appliedLimit": 200000000
+        }
+      },
+      {
+        "name": "Case 5 — 전세 2억 / 일반 70% / 한도 4억",
+        "input": {
+          "deposit": 200000000,
+          "ratio": 0.7,
+          "limit": 400000000
+        },
+        "expected": {
+          "depositRatio": 140000000,
+          "appliedLimit": 140000000
+        }
+      }
     ]
   },
-  "guide": { "howToUse": "전세 보증금 입력 시 일반 전세대출 한도 산출.", "tips": ["청년 특례: 보증금 90% / 한도 2억.", "신혼: 한도 3.5억.", "버팀목: 무주택 한도 1.2억."] },
-  "related": ["dsr-limit", "ltv-limit", "loan-amortization"]
+  "guide": {
+    "tables": {
+      "guaranteeTable": [
+        {
+          "보증기관": "한국주택금융공사 (HF)",
+          "한도": "4.5억",
+          "비율": "80%",
+          "특징": "보증료 0.05~0.1%/년, 이자 저렴"
+        },
+        {
+          "보증기관": "주택도시보증공사 (HUG)",
+          "한도": "4억",
+          "비율": "80%",
+          "특징": "보증료 0.054~0.16%, 빌라·다세대 강점"
+        },
+        {
+          "보증기관": "서울보증보험 (SGI)",
+          "한도": "5억",
+          "비율": "80%",
+          "특징": "보증료 높음, 보증사고 시 신속"
+        },
+        {
+          "보증기관": "HUG 청년 (만 19~34세)",
+          "한도": "2억",
+          "비율": "80%",
+          "특징": "이자 우대 (1.5% 가산 면제)"
+        },
+        {
+          "보증기관": "HF 신혼·다자녀",
+          "한도": "수도권 7억",
+          "비율": "80%",
+          "특징": "혼인 7년 이내, 자녀 1인↑"
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "HF와 HUG 차이는?",
+        "a": "HF (한국주택금융공사): 한도 4.5억, 보증료 저렴 (0.05~0.1%/년), 아파트·다세대 모두 가능, 일반적으로 시중은행에서 안내. HUG (주택도시보증공사): 한도 4억, 빌라·다세대·신축 강점, 청년·신혼·다자녀 특례 다양. 둘 다 보증료 별도 부과."
+      },
+      {
+        "q": "전세사기 방지 어떻게?",
+        "a": "① 등기부등본·건축물대장 직접 확인 ② 임대인 세금 체납 확인 (홈택스) ③ 다가구·다세대는 우선변제 한도 확인 ④ HUG 안심전세포털에서 '깡통전세' 체크 ⑤ 임대보증보험 (HUG 임대보증) 가입 우선."
+      },
+      {
+        "q": "DSR이 전세자금대출에도 적용되나요?",
+        "a": "전세자금대출은 DSR 산정에 별도. 단 신청 시점 신용·소득 심사. 2026년 일부 강화 예정. 대출 만기 일시상환 (이자만 매월). 만기 시 보증금 반환받아 일시 상환."
+      },
+      {
+        "q": "청년 전세대출 (HUG 만 19~34세) 자격은?",
+        "a": "만 19~34세 무주택 청년. 부부합산 연소득 7천만 이하. 보증금 3억(수도권)/2억(지방) 이하. 한도 2억, 금리 우대 1.5%p. 청년주택드림 청약통장 가입자 추가 우대."
+      },
+      {
+        "q": "전세대출 갈아타기 가능한가요?",
+        "a": "가능. 만기 1개월 전부터 신청. HF↔HUG 변경 또는 시중은행 갈아타기. 단 중도상환수수료 (보통 1.4%×잔여기간/3년) 부과 + 신규 대출비용 발생. 금리 1%p 이상 하락 시 검토."
+      }
+    ],
+    "tips": [
+      "HF vs HUG 비교: 보증료 + 시중은행 금리 합산해서 결정. 일반적으로 HF 저렴, 빌라는 HUG.",
+      "안심전세포털 필수 확인: hug.or.kr에서 매물 깡통전세 체크. 임대인 세금 체납 확인.",
+      "청년·신혼 우대: 자격 시 한도 큼 + 금리 우대. 만 34세 임박 시 빨리 신청.",
+      "임대보증보험 가입: HUG 임대보증 (전세금반환보증) 보험료 0.122~0.128%/년. 전세사기 방지.",
+      "갈아타기 조기: 시장금리 1%p 이상 하락 시 만기 1~2개월 전 신규 대출 비교."
+    ]
+  },
+  "related": [
+    "mortgage-loan-limit",
+    "dsr-limit",
+    "loan-refinance"
+  ]
 }

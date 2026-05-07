@@ -4,8 +4,8 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/loan/loan-refinance.json";
 
 export const metadata: Metadata = {
-  title: "대환대출 비교 계산기 — 2026년 기준",
-  description: "잔액·기존 금리·신규 금리·잔여 만기 입력 시 월 절감액과 총 절감액 비교.",
+  title: "대출 갈아타기 계산기 — 2026 정확 검증 | MoneyDoc",
+  description: "기존 대출 vs 신규 대출 월 상환·총 상환 비교",
   alternates: { canonical: "/loan/loan-refinance/" },
 };
 
@@ -13,7 +13,8 @@ export default function Page() {
   return (
     <CalculatorShell
       spec={spec}
-      sourceBadge="금융감독원 2026 · 검증 완료"
+      sourceBadge="대환대출 인프라 · 5케이스 검증"
+      description="기존 대출 vs 신규 대출 월 상환·총 상환 비교"
     >
       <GenericCalculator spec={spec} />
     </CalculatorShell>

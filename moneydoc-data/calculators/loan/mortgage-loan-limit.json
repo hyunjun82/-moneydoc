@@ -2,46 +2,365 @@
   "id": "mortgage-loan-limit",
   "category": "loan",
   "subCategory": "limit",
-  "title": "주담대 한도 계산기 (LTV+DSR 통합)",
-  "subtitle": "LTV·DSR + 절대 한도(수도권 규제 6억) + 스트레스 DSR 통합",
+  "title": "주담대 계산기",
+  "subtitle": "LTV·DSR 통합 — 두 한도 중 작은 것 = 실제 한도 + 6억 cap (수도권 규제·비규제)",
   "slug": "mortgage-loan-limit",
+  "searchAliases": [
+    "주담대 계산기",
+    "주택담보대출 한도",
+    "주담대 한도"
+  ],
   "year": 2026,
-  "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
-  "source": { "primary": { "agency": "금융감독원·국토교통부", "document": "주담대 LTV·DSR 통합 가이드 + 2025 가계대출 관리방안 + 스트레스 DSR (2024.9.1~)", "year": 2026 } },
-  "constants": { "METRO_REGULATED_CAP": 600000000, "OVER_25EOK_EXTRA_CAP": 200000000, "OVER_25EOK_THRESHOLD": 2500000000, "STRESS_DSR_METRO": 0.015, "STRESS_DSR_NONMETRO": 0.0075 },
+  "lastUpdated": "2026-05-07",
+  "lastVerified": "2026-05-07",
+  "source": {
+    "primary": {
+      "agency": "금융위원회·금융감독원",
+      "document": "주택담보대출 LTV+DSR 통합 + 가계부채 관리방안 2025.6.27",
+      "year": 2026,
+      "laws": [
+        "은행업감독규정 §29의2"
+      ]
+    }
+  },
+  "constants": {
+    "METRO_CAP_6": 600000000,
+    "METRO_CAP_8": 800000000,
+    "OVER_25EOK_THRESHOLD": 2500000000
+  },
   "formula": [
-    { "step": 1, "name": "스트레스 가산금리", "expr": "stressDSR=수도권: +1.5%p, 비수도권: +0.75%p, 미적용: 0" },
-    { "step": 2, "name": "DSR 적용 금리", "expr": "loanRate + 스트레스 가산" },
-    { "step": 3, "name": "LTV 한도", "expr": "round(housePrice × ltv)" },
-    { "step": 4, "name": "DSR 한도", "expr": "월가용 × 원리금균등 환산계수 (적용금리 기준)" },
-    { "step": 5, "name": "절대 한도 cap", "expr": "regionType=수도권 규제: 6억 (housePrice 25억 초과 시 8억). 그 외 cap 없음." },
-    { "step": 6, "name": "최종 한도", "expr": "min(LTV한도, DSR한도, 절대한도)" }
+    {
+      "step": 1,
+      "name": "LTV 한도",
+      "expr": "housePrice × LTV비율"
+    },
+    {
+      "step": 2,
+      "name": "절대 cap",
+      "expr": "수도권: 6억 (25억 초과 시 8억)"
+    },
+    {
+      "step": 3,
+      "name": "DSR 한도",
+      "expr": "월가용액 × ((1+r)^n − 1) / (r × (1+r)^n)"
+    },
+    {
+      "step": 4,
+      "name": "최종 한도",
+      "expr": "min(LTV한도, DSR한도)"
+    }
   ],
   "inputs": [
-    { "id": "housePrice", "label": "주택가격", "type": "currency", "min": 50000000, "default": 500000000 },
-    { "id": "ltv", "label": "LTV 비율", "type": "number", "min": 0, "max": 0.80, "step": 0.05, "default": 0.70 },
-    { "id": "annualIncome", "label": "연소득", "type": "currency", "min": 10000000, "default": 50000000 },
-    { "id": "monthlyExistingDebt", "label": "기존 월부채", "type": "currency", "min": 0, "default": 0 },
-    { "id": "dsrLimit", "label": "DSR 한도", "type": "number", "min": 0.30, "max": 0.50, "step": 0.05, "default": 0.40 },
-    { "id": "loanYears", "label": "신규 만기 (년)", "type": "number", "min": 1, "max": 40, "default": 30 },
-    { "id": "loanRate", "label": "신규 금리", "type": "number", "min": 0.005, "max": 0.15, "step": 0.001, "default": 0.04 },
-    { "id": "regionType", "label": "지역 구분", "type": "select", "options": ["일반", "수도권 규제지역", "투기과열지구·신규지정"], "default": "일반" },
-    { "id": "stressDSR", "label": "스트레스 DSR 적용", "type": "select", "options": ["미적용", "수도권 1.5%p", "비수도권 0.75%p"], "default": "미적용" }
+    {
+      "id": "housePrice",
+      "label": "주택가격",
+      "type": "currency",
+      "min": 50000000,
+      "default": 500000000
+    },
+    {
+      "id": "ltv",
+      "label": "LTV 비율",
+      "type": "select",
+      "default": 0.7,
+      "options": [
+        {
+          "value": 0.4,
+          "label": "40% (무주택 규제·조정)"
+        },
+        {
+          "value": 0.5,
+          "label": "50% (1주택 규제·조정 / 무주택 투기)"
+        },
+        {
+          "value": 0.6,
+          "label": "60% (1주택·다주택 일반)"
+        },
+        {
+          "value": 0.7,
+          "label": "70% (무주택 일반 / 생애최초 규제)"
+        },
+        {
+          "value": 0.8,
+          "label": "80% (생애최초 일반)"
+        }
+      ]
+    },
+    {
+      "id": "annualIncome",
+      "label": "연소득",
+      "type": "currency",
+      "min": 10000000,
+      "default": 70000000
+    },
+    {
+      "id": "monthlyExistingDebt",
+      "label": "기존 부채 월상환",
+      "type": "currency",
+      "min": 0,
+      "default": 0
+    },
+    {
+      "id": "dsrLimit",
+      "label": "DSR 한도",
+      "type": "select",
+      "default": 0.4,
+      "options": [
+        {
+          "value": 0.4,
+          "label": "40% (1금융권)"
+        },
+        {
+          "value": 0.5,
+          "label": "50% (2금융권)"
+        }
+      ]
+    },
+    {
+      "id": "loanYears",
+      "label": "대출 기간 (년)",
+      "type": "number",
+      "min": 1,
+      "max": 50,
+      "default": 30
+    },
+    {
+      "id": "loanRate",
+      "label": "대출 금리",
+      "type": "number",
+      "min": 0.01,
+      "max": 0.15,
+      "step": 0.001,
+      "default": 0.04
+    },
+    {
+      "id": "regionType",
+      "label": "지역",
+      "type": "select",
+      "default": "일반",
+      "options": [
+        {
+          "value": "수도권 규제·조정",
+          "label": "수도권 규제·조정 (cap 6억/8억)"
+        },
+        {
+          "value": "수도권 비규제",
+          "label": "수도권 비규제 (cap 6억/8억)"
+        },
+        {
+          "value": "일반",
+          "label": "기타 지역 (cap 없음)"
+        }
+      ]
+    },
+    {
+      "id": "stressDSR",
+      "label": "스트레스 DSR",
+      "type": "select",
+      "default": "3단계",
+      "options": [
+        {
+          "value": "미적용",
+          "label": "미적용"
+        },
+        {
+          "value": "3단계",
+          "label": "3단계 (1.5%)"
+        }
+      ]
+    }
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-05-01",
-    "method": "LTV = 가격 × 비율. DSR = (소득 × 비율 - 기존)/12 × PMT 환산. 절대 한도 cap (수도권 규제 6억, 25억 초과 8억). 최종 = min(셋).",
+    "verifiedAt": "2026-05-07",
+    "method": "min(LTV한도, DSR한도) + 수도권 6억 cap. 2025.6.27 가계부채 관리방안 반영.",
     "cases": [
-      { "name": "Case 1 — 5억 / LTV 70% / 연 5천 / 일반", "input": { "housePrice": 500000000, "ltv": 0.70, "annualIncome": 50000000, "monthlyExistingDebt": 0, "dsrLimit": 0.40, "loanYears": 30, "loanRate": 0.04, "regionType": "일반", "stressDSR": "미적용" }, "expected": { "ltvLimit": 350000000, "dsrLimitAmount": 349102137, "absoluteCap": null, "maxLoan": 349102137 } },
-      { "name": "Case 2 — 8억 / LTV 60% / 연 8천 / 일반", "input": { "housePrice": 800000000, "ltv": 0.60, "annualIncome": 80000000, "monthlyExistingDebt": 0, "dsrLimit": 0.40, "loanYears": 30, "loanRate": 0.045, "regionType": "일반", "stressDSR": "미적용" }, "expected": { "ltvLimit": 480000000, "dsrLimitAmount": 526296490, "absoluteCap": null, "maxLoan": 480000000 } },
-      { "name": "Case 3 — 10억 / LTV 50% / 연 1억 / 일반", "input": { "housePrice": 1000000000, "ltv": 0.50, "annualIncome": 100000000, "monthlyExistingDebt": 200000, "dsrLimit": 0.40, "loanYears": 30, "loanRate": 0.05, "regionType": "일반", "stressDSR": "미적용" }, "expected": { "ltvLimit": 500000000, "dsrLimitAmount": 583682338, "absoluteCap": null, "maxLoan": 500000000 } },
-      { "name": "Case 4 — 4억 / LTV 80% (생애최초) / 연 4천 / 일반", "input": { "housePrice": 400000000, "ltv": 0.80, "annualIncome": 40000000, "monthlyExistingDebt": 0, "dsrLimit": 0.40, "loanYears": 30, "loanRate": 0.04, "regionType": "일반", "stressDSR": "미적용" }, "expected": { "ltvLimit": 320000000, "dsrLimitAmount": 279281584, "absoluteCap": null, "maxLoan": 279281584 } },
-      { "name": "Case 5 — 15억 / LTV 60% / 연 1.5억 / 수도권 규제 (cap 6억 적용)", "input": { "housePrice": 1500000000, "ltv": 0.60, "annualIncome": 150000000, "monthlyExistingDebt": 500000, "dsrLimit": 0.40, "loanYears": 30, "loanRate": 0.04, "regionType": "수도권 규제지역", "stressDSR": "미적용" }, "expected": { "ltvLimit": 900000000, "dsrLimitAmount": 942575582, "absoluteCap": 600000000, "maxLoan": 600000000 } },
-      { "name": "Case 6 — 30억 / LTV 50% / 연 2억 / 수도권 규제 25억 초과 (cap 8억)", "input": { "housePrice": 3000000000, "ltv": 0.50, "annualIncome": 200000000, "monthlyExistingDebt": 0, "dsrLimit": 0.40, "loanYears": 30, "loanRate": 0.04, "regionType": "수도권 규제지역", "stressDSR": "미적용" }, "expected": { "ltvLimit": 1500000000, "dsrLimitAmount": 1396408547, "absoluteCap": 800000000, "maxLoan": 800000000 } }
+      {
+        "name": "Case 1 — 5억/LTV 70%/연 7천만/기존 0/DSR 40%/30년/4%/일반/미적용",
+        "input": {
+          "housePrice": 500000000,
+          "ltv": 0.7,
+          "annualIncome": 70000000,
+          "monthlyExistingDebt": 0,
+          "dsrLimit": 0.4,
+          "loanYears": 30,
+          "loanRate": 0.04,
+          "regionType": "일반",
+          "stressDSR": "미적용"
+        },
+        "expected": {
+          "ltvLimit": 350000000,
+          "dsrLimitAmount": 488742825,
+          "absoluteCap": null,
+          "maxLoan": 350000000
+        }
+      },
+      {
+        "name": "Case 2 — 8억/LTV 60%/연 8천만/기존 0/DSR 40%/30년/4.5%/일반/미적용",
+        "input": {
+          "housePrice": 800000000,
+          "ltv": 0.6,
+          "annualIncome": 80000000,
+          "monthlyExistingDebt": 0,
+          "dsrLimit": 0.4,
+          "loanYears": 30,
+          "loanRate": 0.045,
+          "regionType": "일반",
+          "stressDSR": "미적용"
+        },
+        "expected": {
+          "ltvLimit": 480000000,
+          "dsrLimitAmount": 526296490,
+          "absoluteCap": null,
+          "maxLoan": 480000000
+        }
+      },
+      {
+        "name": "Case 3 — 10억/LTV 40%/연 1억/기존 50만/DSR 40%/30년/4.5%/수도권 규제·조정/3단계",
+        "input": {
+          "housePrice": 1000000000,
+          "ltv": 0.4,
+          "annualIncome": 100000000,
+          "monthlyExistingDebt": 500000,
+          "dsrLimit": 0.4,
+          "loanYears": 30,
+          "loanRate": 0.045,
+          "regionType": "수도권 규제·조정",
+          "stressDSR": "3단계"
+        },
+        "expected": {
+          "ltvLimit": 400000000,
+          "dsrLimitAmount": 472576185,
+          "absoluteCap": 600000000,
+          "maxLoan": 400000000
+        }
+      },
+      {
+        "name": "Case 4 — 30억/LTV 50%/연 2억/기존 0/DSR 40%/30년/5%/수도권 규제·조정/3단계 (cap 8억)",
+        "input": {
+          "housePrice": 3000000000,
+          "ltv": 0.5,
+          "annualIncome": 200000000,
+          "monthlyExistingDebt": 0,
+          "dsrLimit": 0.4,
+          "loanYears": 30,
+          "loanRate": 0.05,
+          "regionType": "수도권 규제·조정",
+          "stressDSR": "3단계"
+        },
+        "expected": {
+          "ltvLimit": 800000000,
+          "dsrLimitAmount": 1054738850,
+          "absoluteCap": 800000000,
+          "maxLoan": 800000000
+        }
+      },
+      {
+        "name": "Case 5 — 5억/LTV 80% 생애최초/연 6천만/기존 0/DSR 40%/30년/4%/일반/3단계",
+        "input": {
+          "housePrice": 500000000,
+          "ltv": 0.8,
+          "annualIncome": 60000000,
+          "monthlyExistingDebt": 0,
+          "dsrLimit": 0.4,
+          "loanYears": 30,
+          "loanRate": 0.04,
+          "regionType": "일반",
+          "stressDSR": "3단계"
+        },
+        "expected": {
+          "ltvLimit": 400000000,
+          "dsrLimitAmount": 352243526,
+          "absoluteCap": null,
+          "maxLoan": 352243526
+        }
+      },
+      {
+        "name": "Case 6 — 7억/LTV 70%/연 9천만/기존 30만/DSR 40%/30년/4.5%/수도권 비규제/3단계 (cap 6억)",
+        "input": {
+          "housePrice": 700000000,
+          "ltv": 0.7,
+          "annualIncome": 90000000,
+          "monthlyExistingDebt": 300000,
+          "dsrLimit": 0.4,
+          "loanYears": 30,
+          "loanRate": 0.045,
+          "regionType": "수도권 비규제",
+          "stressDSR": "3단계"
+        },
+        "expected": {
+          "ltvLimit": 490000000,
+          "dsrLimitAmount": 450337359,
+          "absoluteCap": 600000000,
+          "maxLoan": 450337359
+        }
+      }
     ]
   },
-  "guide": { "howToUse": "주택가격 + LTV비율 + 연소득 + 기존부채 + DSR한도·만기·금리·지역구분·스트레스 DSR 입력 시 LTV·DSR·절대 한도 셋 중 가장 작은 한도 자동 산출.", "tips": ["LTV는 담보 기준, DSR은 소득 기준, 절대 한도는 정책 cap.", "수도권 규제지역: 절대 한도 6억 (25억 초과 시 8억).", "스트레스 DSR(2024.9.1~): 수도권 +1.5%p / 비수도권 +0.75%p 가산금리로 DSR 한도 산정.", "세 한도 모두 통과해야 대출 가능."] },
-  "related": ["ltv-limit", "dsr-limit", "loan-amortization"]
+  "guide": {
+    "tables": {
+      "mortgageRulesTable": [
+        {
+          "규제": "LTV (담보)",
+          "기준": "주택가격 × LTV비율",
+          "지역별 차등": "예. 무주택 규제 40%, 무주택 일반 70%"
+        },
+        {
+          "규제": "DSR (소득)",
+          "기준": "연소득 × DSR한도 ÷ 12 = 월 가용",
+          "지역별 차등": "1금융 40%, 2금융 50%"
+        },
+        {
+          "규제": "절대 cap",
+          "기준": "수도권 규제·비규제 6억 (25억 초과 8억)",
+          "지역별 차등": "지방 cap 없음"
+        },
+        {
+          "규제": "스트레스 DSR 3단계 (2025.7~)",
+          "기준": "가산금리 1.5%",
+          "지역별 차등": "지방 주담대 0.75% (2025.12까지)"
+        },
+        {
+          "규제": "전입의무",
+          "기준": "수도권 규제·비규제 6개월 이내 실거주",
+          "지역별 차등": "지방 면제"
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "LTV와 DSR 중 어느 게 더 작은 한도가 나오나요?",
+        "a": "일반적으로 DSR이 더 엄격 (소득 기준). 1억 연봉 + 5억 주택 (LTV 70% = 3.5억) → LTV 한도 3.5억 vs DSR 한도 약 4.5억. 이 경우 LTV가 작음. 그러나 연봉 5천만 + 주택 5억 → LTV 3.5억 vs DSR 약 2.3억 → DSR이 작음. 두 한도 중 작은 것이 실제 한도."
+      },
+      {
+        "q": "수도권 6억 한도가 왜 적용되나요?",
+        "a": "2025.6.27 가계부채 관리 강화방안: 수도권·규제지역 주택구입 목적 주담대 절대한도 6억으로 제한. 25억 초과 시 6억+추가 2억=8억. 6개월 이내 실거주 의무 부과."
+      },
+      {
+        "q": "스트레스 DSR 3단계로 한도 얼마나 줄어요?",
+        "a": "실제 4% 대출이 5.5%로 환산됨 (가산 1.5%). 한도 약 12~17% 감소. 연봉 1억/30년/4% → 한도 약 5.4억 / 5.5% 환산 시 약 4.6억."
+      },
+      {
+        "q": "디딤돌·보금자리론은 이 한도가 적용되나요?",
+        "a": "정책대출은 별도. 디딤돌: 무주택 + 부부 9천만 이하 → LTV 70% + DTI 60% (DSR 면제) + 한도 4억(아파트). 보금자리론: 부부 1.3억 이하 → LTV 70% + 한도 4.2억."
+      },
+      {
+        "q": "1주택자가 추가 주담대 받으려면?",
+        "a": "현재 1주택 + 신규 매수 시: 일시적 2주택 (기존 처분 6개월 이내) → 무주택자 LTV 적용. 처분 안 하면 1주택자 LTV 50~60%, 규제지역은 추가 제한."
+      }
+    ],
+    "tips": [
+      "DSR 우선 확인: 대부분의 경우 DSR이 한도 결정. DSR 계산기에서 먼저 산정.",
+      "정책대출 우선 검토: 무주택 + 소득 조건 충족 → 디딤돌/보금자리론 (DSR 면제 + 우대금리).",
+      "6억 cap 회피 전략: 25억 초과 매수 시 cap 8억 확대. 또는 비수도권 매수.",
+      "기존 부채 정리: 신용카드·마이너스 한도 줄이고 신청. DSR 5~10%p 여유 확보.",
+      "고정금리 5년 주기형: 변동금리보다 스트레스 가산 작음 (한도 유리)."
+    ]
+  },
+  "related": [
+    "ltv-limit",
+    "dsr-limit",
+    "loan-amortization",
+    "credit-loan"
+  ]
 }

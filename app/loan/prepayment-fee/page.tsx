@@ -4,8 +4,8 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/loan/prepayment-fee.json";
 
 export const metadata: Metadata = {
-  title: "중도상환수수료 계산기 — 2026년 기준",
-  description: "잔액·총만기·잔여만기·수수료율 입력 시 중도상환수수료 산출.",
+  title: "중도상환수수료 계산기 — 2026 정확 검증 | MoneyDoc",
+  description: "잔액 × 수수료율 × (잔여기간 / 총기간 36개월) — 3년 경과 후 0%",
   alternates: { canonical: "/loan/prepayment-fee/" },
 };
 
@@ -13,7 +13,8 @@ export default function Page() {
   return (
     <CalculatorShell
       spec={spec}
-      sourceBadge="금융감독원 2026 · 검증 완료"
+      sourceBadge="금감원 가이드라인 · 5케이스 검증"
+      description="잔액 × 수수료율 × (잔여기간 / 총기간 36개월) — 3년 경과 후 0%"
     >
       <GenericCalculator spec={spec} />
     </CalculatorShell>

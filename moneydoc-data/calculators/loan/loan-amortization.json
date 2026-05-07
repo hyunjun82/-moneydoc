@@ -1,54 +1,326 @@
 {
   "id": "loan-amortization",
   "category": "loan",
-  "subCategory": "repayment",
-  "title": "원리금균등상환 계산기",
-  "subtitle": "PMT 산식 기반 월 상환액 + 총 이자",
+  "subCategory": "calculation",
+  "title": "대출 계산기",
+  "subtitle": "원리금균등·원금균등·만기일시·거치식 4가지 상환방식 통합",
   "slug": "loan-amortization",
-  "searchAliases": ["대출 계산기", "주담대 계산기", "원리금균등 계산기", "주택담보대출 계산기"],
+  "searchAliases": [
+    "대출 계산기",
+    "원리금균등 계산기",
+    "원금균등 계산기",
+    "만기일시 계산기",
+    "거치식 계산기",
+    "PMT 산식"
+  ],
   "year": 2026,
-  "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastUpdated": "2026-05-07",
+  "lastVerified": "2026-05-07",
   "source": {
     "primary": {
       "agency": "금융감독원",
-      "document": "주택담보대출 상환 표준방식",
+      "document": "대출 상환방식 표준 산식 (PMT, 단리, 거치식)",
       "year": 2026,
-      "laws": ["은행업감독규정 §29 (대출 상환방식)"]
-    }
+      "laws": [
+        "은행업감독규정 §29의2"
+      ]
+    },
+    "secondary": [
+      {
+        "agency": "금융감독원",
+        "name": "금융상품통합비교공시 finlife.fss.or.kr"
+      }
+    ]
   },
   "constants": {},
   "formula": [
-    { "step": 1, "name": "월 금리", "expr": "annualRate / 12" },
-    { "step": 2, "name": "만기 월수", "expr": "years × 12" },
-    { "step": 3, "name": "월 상환액 M", "expr": "P × r × (1+r)^n / ((1+r)^n - 1)" },
-    { "step": 4, "name": "총 상환액", "expr": "M × n" },
-    { "step": 5, "name": "총 이자", "expr": "총 상환액 - P" }
+    {
+      "step": 1,
+      "name": "원리금균등 (PMT)",
+      "expr": "M = P × r × (1+r)^n / ((1+r)^n - 1)"
+    },
+    {
+      "step": 2,
+      "name": "원금균등",
+      "expr": "월 원금 = P/n, 월 이자 = 잔액 × r, 첫달 P×r → 마지막 0 근사"
+    },
+    {
+      "step": 3,
+      "name": "만기일시",
+      "expr": "월 이자만 = P × r/12, 만기에 원금 P 일시"
+    },
+    {
+      "step": 4,
+      "name": "거치식",
+      "expr": "거치기간: 이자만 / 거치 후: 원리금균등 (잔여기간)"
+    }
   ],
   "inputs": [
-    { "id": "principal", "label": "대출 원금", "type": "currency", "min": 1000000, "default": 100000000 },
-    { "id": "years", "label": "만기 (년)", "type": "number", "min": 1, "max": 40, "default": 30 },
-    { "id": "rate", "label": "연 금리", "type": "number", "min": 0.005, "max": 0.20, "step": 0.001, "default": 0.04 }
+    {
+      "id": "principal",
+      "label": "대출 원금",
+      "type": "currency",
+      "min": 1000000,
+      "max": 100000000000,
+      "step": 1000000,
+      "default": 100000000
+    },
+    {
+      "id": "years",
+      "label": "총 기간 (년)",
+      "type": "number",
+      "min": 1,
+      "max": 50,
+      "default": 30,
+      "hint": "거치식: 거치+상환 합산"
+    },
+    {
+      "id": "rate",
+      "label": "연이율",
+      "type": "number",
+      "min": 0.001,
+      "max": 0.2,
+      "step": 0.001,
+      "default": 0.04
+    },
+    {
+      "id": "mode",
+      "label": "상환방식",
+      "type": "select",
+      "default": "amortization",
+      "options": [
+        {
+          "value": "amortization",
+          "label": "원리금균등 (매월 같은 금액)"
+        },
+        {
+          "value": "decline",
+          "label": "원금균등 (월 원금 일정, 이자 감소)"
+        },
+        {
+          "value": "balloon",
+          "label": "만기일시 (이자만 + 만기 원금)"
+        },
+        {
+          "value": "grace",
+          "label": "거치식 (거치 + 원리금균등)"
+        }
+      ]
+    },
+    {
+      "id": "graceYears",
+      "label": "거치 기간 (년)",
+      "type": "number",
+      "min": 0,
+      "max": 20,
+      "default": 0,
+      "hint": "거치식 모드 전용 (다른 모드는 0)"
+    }
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-05-01",
-    "method": "원리금균등 PMT 표준 산식 직접 적용. Math.pow로 (1+r)^n 정확 산출.",
+    "verifiedAt": "2026-05-07",
+    "method": "PMT/원금균등/만기일시/거치식 4가지 표준 산식 직접 적용. 8케이스 검증 (모드별 2개씩).",
     "cases": [
-      { "name": "Case 1 — 1억 / 30년 / 4.0%", "input": { "principal": 100000000, "years": 30, "rate": 0.04 }, "expected": { "monthly": 477415, "totalPayment": 171869506, "totalInterest": 71869506 } },
-      { "name": "Case 2 — 2억 / 20년 / 4.5%", "input": { "principal": 200000000, "years": 20, "rate": 0.045 }, "expected": { "monthly": 1265299, "totalPayment": 303671701, "totalInterest": 103671701 } },
-      { "name": "Case 3 — 5천만 / 10년 / 5.0%", "input": { "principal": 50000000, "years": 10, "rate": 0.05 }, "expected": { "monthly": 530328, "totalPayment": 63639309, "totalInterest": 13639309 } },
-      { "name": "Case 4 — 3억 / 30년 / 3.5%", "input": { "principal": 300000000, "years": 30, "rate": 0.035 }, "expected": { "monthly": 1347134, "totalPayment": 484968263, "totalInterest": 184968263 } },
-      { "name": "Case 5 — 5억 / 25년 / 4.2%", "input": { "principal": 500000000, "years": 25, "rate": 0.042 }, "expected": { "monthly": 2694712, "totalPayment": 808413477, "totalInterest": 308413477 } }
+      {
+        "name": "Case 1 — 1억 / 30년 / 4% / 원리금균등",
+        "input": {
+          "principal": 100000000,
+          "years": 30,
+          "rate": 0.04,
+          "mode": "amortization",
+          "graceYears": 0
+        },
+        "expected": {
+          "mode": "amortization",
+          "monthly": 477415,
+          "totalPayment": 171869506,
+          "totalInterest": 71869506
+        }
+      },
+      {
+        "name": "Case 2 — 2억 / 20년 / 4.5% / 원리금균등",
+        "input": {
+          "principal": 200000000,
+          "years": 20,
+          "rate": 0.045,
+          "mode": "amortization",
+          "graceYears": 0
+        },
+        "expected": {
+          "mode": "amortization",
+          "monthly": 1265299,
+          "totalPayment": 303671701,
+          "totalInterest": 103671701
+        }
+      },
+      {
+        "name": "Case 3 — 1억 / 30년 / 4% / 원금균등",
+        "input": {
+          "principal": 100000000,
+          "years": 30,
+          "rate": 0.04,
+          "mode": "decline",
+          "graceYears": 0
+        },
+        "expected": {
+          "mode": "decline",
+          "firstPayment": 611111,
+          "lastPayment": 278704,
+          "totalInterest": 60166667,
+          "totalPayment": 160166667
+        }
+      },
+      {
+        "name": "Case 4 — 2억 / 20년 / 4.5% / 원금균등",
+        "input": {
+          "principal": 200000000,
+          "years": 20,
+          "rate": 0.045,
+          "mode": "decline",
+          "graceYears": 0
+        },
+        "expected": {
+          "mode": "decline",
+          "firstPayment": 1583333,
+          "lastPayment": 836458,
+          "totalInterest": 90375000,
+          "totalPayment": 290375000
+        }
+      },
+      {
+        "name": "Case 5 — 1억 / 5년 / 5% / 만기일시",
+        "input": {
+          "principal": 100000000,
+          "years": 5,
+          "rate": 0.05,
+          "mode": "balloon",
+          "graceYears": 0
+        },
+        "expected": {
+          "mode": "balloon",
+          "monthlyInterest": 416667,
+          "totalInterest": 25000020,
+          "totalPayment": 125000020
+        }
+      },
+      {
+        "name": "Case 6 — 2억 / 3년 / 4.5% / 만기일시",
+        "input": {
+          "principal": 200000000,
+          "years": 3,
+          "rate": 0.045,
+          "mode": "balloon",
+          "graceYears": 0
+        },
+        "expected": {
+          "mode": "balloon",
+          "monthlyInterest": 750000,
+          "totalInterest": 27000000,
+          "totalPayment": 227000000
+        }
+      },
+      {
+        "name": "Case 7 — 1억 / 30년 (거치 3년 + 상환 27년) / 4% / 거치식",
+        "input": {
+          "principal": 100000000,
+          "years": 30,
+          "rate": 0.04,
+          "mode": "grace",
+          "graceYears": 3
+        },
+        "expected": {
+          "mode": "grace",
+          "graceMonthlyInterest": 333333,
+          "totalGraceInterest": 11999988,
+          "repayMonthly": 505208,
+          "totalInterest": 75687440,
+          "totalPayment": 175687440
+        }
+      },
+      {
+        "name": "Case 8 — 2억 / 20년 (거치 2년 + 상환 18년) / 4.5% / 거치식",
+        "input": {
+          "principal": 200000000,
+          "years": 20,
+          "rate": 0.045,
+          "mode": "grace",
+          "graceYears": 2
+        },
+        "expected": {
+          "mode": "grace",
+          "graceMonthlyInterest": 750000,
+          "totalGraceInterest": 18000000,
+          "repayMonthly": 1352649,
+          "totalInterest": 110172230,
+          "totalPayment": 310172230
+        }
+      }
     ]
   },
   "guide": {
-    "howToUse": "대출 원금, 만기(년), 연 금리를 입력하면 매월 일정한 원리금 상환액과 총 이자가 산출됩니다.",
+    "tables": {
+      "modeComparison": [
+        {
+          "방식": "원리금균등",
+          "월 상환": "일정",
+          "이자": "초기 큼 → 점차 감소",
+          "총이자": "중간",
+          "용도": "안정적 가계 (대부분)"
+        },
+        {
+          "방식": "원금균등",
+          "월 상환": "초기 큼 → 점차 감소",
+          "이자": "잔액×이율",
+          "총이자": "가장 적음",
+          "용도": "초기 여유 + 후반 부담↓"
+        },
+        {
+          "방식": "만기일시",
+          "월 상환": "이자만",
+          "이자": "원금 × 이율 (일정)",
+          "총이자": "가장 큼",
+          "용도": "단기 자금 융통"
+        },
+        {
+          "방식": "거치식",
+          "월 상환": "거치: 이자만 / 상환: 원리금균등",
+          "이자": "거치기간 비례 증가",
+          "총이자": "거치기간 반영",
+          "용도": "초기 지출 부담 큰 경우"
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "어떤 상환방식이 가장 유리한가요?",
+        "a": "총 이자만 보면 원금균등이 가장 적게 냄. 그러나 초기 월 상환액이 가장 커서 부담. 일반 가계는 안정적인 원리금균등이 표준. 단기(3-5년) 사업자금이라면 만기일시. 입주 전 거치 필요시 거치식."
+      },
+      {
+        "q": "원리금균등 vs 원금균등 차이가 얼마나 나요?",
+        "a": "1억/30년/4% 기준: 원리금균등 총이자 약 7천2백만 / 원금균등 총이자 약 6천만. 약 1천2백만 차이 (17% 절감). 단 원금균등은 첫 달 약 47만원 vs 마지막 달 약 33만원으로 초기 부담 큼."
+      },
+      {
+        "q": "거치식이 나쁜가요?",
+        "a": "거치기간 동안 원금이 줄지 않아 총이자 더 큼. 단 입주 전 분양대출처럼 초기 지출 큰 경우 활용. 가능하면 거치 짧게 (1-2년) 또는 X."
+      },
+      {
+        "q": "스트레스 DSR이 적용되면 한도 줄어드나요?",
+        "a": "네. 스트레스 DSR 3단계 (2025.7~) = 가산금리 1.5%p. 실제 4% 대출이라도 5.5%로 환산해 DSR 산정. 한도 약 10~15% 감소."
+      }
+    ],
     "tips": [
-      "초기 몇 년은 이자 비중이 높고 원금 상환이 적음 (역피라미드 구조).",
-      "동일 만기·금리에서 원금균등이 총 이자 적음 (단, 초기 부담 큼).",
-      "30년 만기는 10년·20년보다 월 상환은 줄지만 총 이자는 2배 가까이 증가."
+      "DSR 한도 우선 확인: 대출 한도는 DSR로 결정. DSR 계산기에서 먼저 확인 후 상환방식 선택.",
+      "원리금균등 추천 (대부분): 월 상환 일정 → 가계 안정. 시중 주담대 80% 이 방식.",
+      "원금균등 (총이자 절감): 초기 큰 월 상환 감내 가능하면 1~2천만 절감.",
+      "거치 1~2년 이내: 거치 길수록 총이자 폭증. 분양대출도 가능한 짧게.",
+      "만기일시 단기만: 이자 부담 큼. 3~5년 단기 + 명확한 상환 계획 필수."
     ]
   },
-  "related": ["loan-decline", "dsr-limit", "ltv-limit"]
+  "related": [
+    "dsr-limit",
+    "ltv-limit",
+    "mortgage-loan-limit",
+    "loan-refinance"
+  ]
 }

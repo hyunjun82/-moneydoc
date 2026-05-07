@@ -2,31 +2,178 @@
   "id": "credit-loan",
   "category": "loan",
   "subCategory": "limit",
-  "title": "신용대출 한도 계산기",
-  "subtitle": "연소득 기준 신용대출 한도 (관행 1.5배)",
+  "title": "신용대출 계산기",
+  "subtitle": "연소득 기준 신용대출 한도 (관행 1.5배) + DSR·신용도 추가 적용",
   "slug": "credit-loan",
+  "searchAliases": [
+    "신용대출 계산기",
+    "신용대출 한도",
+    "마이너스통장 한도"
+  ],
   "year": 2026,
-  "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
-  "source": { "primary": { "agency": "금융감독원", "document": "신용대출 한도 가이드", "year": 2026 } },
-  "constants": { "DEFAULT_MULTIPLIER": 1.5 },
-  "formula": [ { "step": 1, "name": "한도", "expr": "연소득 × 배수 (보통 1.5배, 신용도에 따라 1~2배)" } ],
+  "lastUpdated": "2026-05-07",
+  "lastVerified": "2026-05-07",
+  "source": {
+    "primary": {
+      "agency": "금융감독원",
+      "document": "신용대출 한도 가이드",
+      "year": 2026
+    }
+  },
+  "constants": {},
+  "formula": [
+    {
+      "step": 1,
+      "name": "기본 한도",
+      "expr": "연소득 × 배수 (관행 1.5배)"
+    }
+  ],
   "inputs": [
-    { "id": "annualIncome", "label": "연소득", "type": "currency", "min": 10000000, "default": 50000000 },
-    { "id": "multiplier", "label": "배수", "type": "number", "min": 1.0, "max": 2.5, "step": 0.1, "default": 1.5 }
+    {
+      "id": "annualIncome",
+      "label": "연소득",
+      "type": "currency",
+      "min": 10000000,
+      "default": 50000000,
+      "hint": "세전 총소득"
+    },
+    {
+      "id": "multiplier",
+      "label": "한도 배수",
+      "type": "select",
+      "default": 1.5,
+      "options": [
+        {
+          "value": 1.0,
+          "label": "1.0배 (보수적·낮은 신용)"
+        },
+        {
+          "value": 1.5,
+          "label": "1.5배 (관행, 보통 신용 600~800점)"
+        },
+        {
+          "value": 2.0,
+          "label": "2.0배 (고소득·우량 800점↑)"
+        }
+      ]
+    }
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-05-01",
-    "method": "관행적 신용대출 한도 = 연소득 × 1.5. DSR 한도와 별개 적용.",
+    "verifiedAt": "2026-05-07",
+    "method": "관행 신용대출 한도 = 연소득 × 배수. 실제 한도는 DSR + 신용점수에 따라 추가 차감.",
     "cases": [
-      { "name": "Case 1 — 연 5천만 × 1.5", "input": { "annualIncome": 50000000, "multiplier": 1.5 }, "expected": { "maxLoan": 75000000 } },
-      { "name": "Case 2 — 연 7천만 × 1.5", "input": { "annualIncome": 70000000, "multiplier": 1.5 }, "expected": { "maxLoan": 105000000 } },
-      { "name": "Case 3 — 연 1억 × 1.5", "input": { "annualIncome": 100000000, "multiplier": 1.5 }, "expected": { "maxLoan": 150000000 } },
-      { "name": "Case 4 — 연 4천만 × 1.5", "input": { "annualIncome": 40000000, "multiplier": 1.5 }, "expected": { "maxLoan": 60000000 } },
-      { "name": "Case 5 — 연 1.5억 × 1.5", "input": { "annualIncome": 150000000, "multiplier": 1.5 }, "expected": { "maxLoan": 225000000 } }
+      {
+        "name": "Case 1 — 연 3천만 / 1.0배 (보수적)",
+        "input": {
+          "annualIncome": 30000000,
+          "multiplier": 1.0
+        },
+        "expected": {
+          "maxLoan": 30000000
+        }
+      },
+      {
+        "name": "Case 2 — 연 5천만 / 1.5배 (관행)",
+        "input": {
+          "annualIncome": 50000000,
+          "multiplier": 1.5
+        },
+        "expected": {
+          "maxLoan": 75000000
+        }
+      },
+      {
+        "name": "Case 3 — 연 7천만 / 1.5배",
+        "input": {
+          "annualIncome": 70000000,
+          "multiplier": 1.5
+        },
+        "expected": {
+          "maxLoan": 105000000
+        }
+      },
+      {
+        "name": "Case 4 — 연 1억 / 2.0배 (고소득·우량)",
+        "input": {
+          "annualIncome": 100000000,
+          "multiplier": 2.0
+        },
+        "expected": {
+          "maxLoan": 200000000
+        }
+      },
+      {
+        "name": "Case 5 — 연 2억 / 2.0배",
+        "input": {
+          "annualIncome": 200000000,
+          "multiplier": 2.0
+        },
+        "expected": {
+          "maxLoan": 400000000
+        }
+      }
     ]
   },
-  "guide": { "howToUse": "연소득과 배수 입력 시 신용대출 한도. 실제는 신용도·DSR과 함께 결정.", "tips": ["고신용자(1~2등급): 2배까지 가능.", "DSR 40% 한도와 별도 적용 (둘 중 작은 것).", "2025.7~ 신용대출에도 스트레스 DSR 적용 (수도권 +1.5%p / 비수도권 +0.75%p 가산금리 기준 한도 산정)."] },
-  "related": ["dsr-limit", "loan-amortization"]
+  "guide": {
+    "tables": {
+      "creditTierTable": [
+        {
+          "신용점수": "900점 이상 (1~2등급)",
+          "한도 배수": "1.5~2.0배",
+          "금리 수준": "3.5~5%"
+        },
+        {
+          "신용점수": "800~899점 (3등급)",
+          "한도 배수": "1.5배 (관행)",
+          "금리 수준": "4.5~6%"
+        },
+        {
+          "신용점수": "700~799점 (4~5등급)",
+          "한도 배수": "1.0~1.3배",
+          "금리 수준": "6~9%"
+        },
+        {
+          "신용점수": "600~699점 (6~7등급)",
+          "한도 배수": "0.5~1.0배",
+          "금리 수준": "9~14%"
+        },
+        {
+          "신용점수": "599점 이하",
+          "한도 배수": "거절 다수",
+          "금리 수준": "법정 최고 20% 근접"
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "신용대출 한도가 진짜 연소득 1.5배 보장되나요?",
+        "a": "아닙니다. 1.5배는 시중은행 관행 가이드라인일 뿐, 실제 한도는 ① DSR 40% (1금융권) 이내 ② 신용점수 ③ 직장 안정성 ④ 기존 부채로 결정. 동일 연봉 5천만이라도 800점 이상이면 7,500만, 700점이면 5,000만, 600점이면 거절도."
+      },
+      {
+        "q": "마이너스통장과 신용대출 차이는?",
+        "a": "마이너스통장: 한도 내 자유 입출금, 사용한 금액에만 이자. 한도 보통 신용대출의 80~100%. 신용대출: 한 번에 전액 받고 약정대로 상환. 금리는 신용대출이 0.5~1%p 낮음. 단기 자금 필요 시 마이너스, 명확한 용도 + 장기는 신용대출."
+      },
+      {
+        "q": "DSR이 신용대출에도 적용되나요?",
+        "a": "네. 신용대출도 DSR 40% (1금융권) 이내. 만기 5년 약정 + 분할상환 가정해 DSR 산정. 만기 일시상환이라도 분할상환 환산. 주담대 + 신용대출 + 카드 합산 40%."
+      },
+      {
+        "q": "스트레스 DSR이 신용대출에도?",
+        "a": "2024.9 2단계부터 신용대출도 스트레스 DSR 적용. 2025.7 3단계 가산 1.5%. 실제 5% 대출 → 6.5% 환산해 DSR 산정. 한도 약 10% 감소."
+      }
+    ],
+    "tips": [
+      "DSR 사전 확인: 한도는 결국 DSR로 결정. DSR 계산기에서 미리 산정.",
+      "신용점수 800↑ 유지: 매년 무료 조회 (코리아크레딧뷰로/올크레딧). 카드 연체 X + 분할 결제 자제.",
+      "우대 검색: 직장·통신사·카드 거래 우수 등으로 0.5~1.5%p 우대금리. 비교공시 finlife.fss.or.kr.",
+      "만기 일시 vs 분할: 일시상환은 매월 부담 X 단 만기 큰 부담. 분할상환은 매월 안정 + 총이자 적음.",
+      "카드론·캐피탈 회피: 1금융권 신용대출 부결 시 2금융 → 3금융 순. 캐피탈/카드론은 신용점수 급락."
+    ]
+  },
+  "related": [
+    "dsr-limit",
+    "loan-amortization",
+    "loan-refinance"
+  ]
 }

@@ -4,8 +4,8 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/loan/credit-loan.json";
 
 export const metadata: Metadata = {
-  title: "신용대출 한도 계산기 — 2026년 기준",
-  description: "연소득과 배수 입력 시 신용대출 한도. 실제는 신용도·DSR과 함께 결정.",
+  title: "신용대출 계산기 — 2026 정확 검증 | MoneyDoc",
+  description: "연소득 기준 한도 (관행 1.5배) + DSR·신용도 추가 적용",
   alternates: { canonical: "/loan/credit-loan/" },
 };
 
@@ -13,7 +13,8 @@ export default function Page() {
   return (
     <CalculatorShell
       spec={spec}
-      sourceBadge="금융감독원 2026 · 검증 완료"
+      sourceBadge="금감원 가이드라인 · 5케이스 검증"
+      description="연소득 기준 한도 (관행 1.5배) + DSR·신용도 추가 적용"
     >
       <GenericCalculator spec={spec} />
     </CalculatorShell>

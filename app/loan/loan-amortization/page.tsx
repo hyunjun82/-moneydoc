@@ -4,8 +4,8 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/loan/loan-amortization.json";
 
 export const metadata: Metadata = {
-  title: "원리금균등상환 계산기 — 2026년 기준",
-  description: "대출 원금, 만기(년), 연 금리를 입력하면 매월 일정한 원리금 상환액과 총 이자가 산출됩니다.",
+  title: "대출 계산기 — 원리금균등·원금균등·만기일시·거치식 통합 | MoneyDoc",
+  description: "원금·기간·이율·상환방식 입력 시 월 상환액·총 이자 자동 계산. PMT 표준 산식, 4가지 상환방식 통합. 8케이스 검증.",
   alternates: { canonical: "/loan/loan-amortization/" },
 };
 
@@ -13,7 +13,8 @@ export default function Page() {
   return (
     <CalculatorShell
       spec={spec}
-      sourceBadge="금융감독원 2026 · 검증 완료"
+      sourceBadge="금감원 PMT 표준 산식 · 8케이스 검증"
+      description="원리금균등·원금균등·만기일시·거치식 4가지 상환방식 통합"
     >
       <GenericCalculator spec={spec} />
     </CalculatorShell>

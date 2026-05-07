@@ -4,8 +4,8 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/loan/dti-limit.json";
 
 export const metadata: Metadata = {
-  title: "DTI 한도 계산기 — 2026년 기준",
-  description: "연소득과 기존 대출 월이자를 입력하면 신규 주담대 한도 산출.",
+  title: "DTI 계산기 — 2026 정확 검증 | MoneyDoc",
+  description: "총부채상환비율 기준 신규 주담대 한도",
   alternates: { canonical: "/loan/dti-limit/" },
 };
 
@@ -13,7 +13,8 @@ export default function Page() {
   return (
     <CalculatorShell
       spec={spec}
-      sourceBadge="금융감독원 2026 · 검증 완료"
+      sourceBadge="금감원 가이드라인 · 5케이스 검증"
+      description="총부채상환비율 기준 신규 주담대 한도"
     >
       <GenericCalculator spec={spec} />
     </CalculatorShell>
