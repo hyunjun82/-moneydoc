@@ -2,34 +2,252 @@
   "id": "isa-tax-saving",
   "category": "savings",
   "subCategory": "investment",
-  "title": "ISA 절세효과 계산기",
-  "subtitle": "200만 비과세 + 초과분 9.9% 분리과세 절감액",
+  "title": "ISA 계산기",
+  "subtitle": "ISA 5년 만기 누적 이자수익에서 일반과세 대비 절세액 — 일반형 200만 / 서민형 400만 비과세",
   "slug": "isa-tax-saving",
+  "searchAliases": [
+    "ISA 계산기",
+    "ISA 절세 계산기",
+    "ISA 비과세",
+    "개인종합자산관리계좌",
+    "서민형 ISA"
+  ],
   "year": 2026,
-  "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
-  "source": { "primary": { "agency": "국세청", "document": "조세특례제한법 §91-18", "year": 2026 } },
-  "constants": { "ISA_EXEMPT_LIMIT": 2000000, "ISA_RATE": 0.099, "GENERAL_RATE": 0.154 },
+  "lastUpdated": "2026-05-07",
+  "lastVerified": "2026-05-07",
+  "source": {
+    "primary": {
+      "agency": "국세청",
+      "document": "조세특례제한법 §91의18 (개인종합자산관리계좌)",
+      "year": 2026,
+      "laws": [
+        "조세특례제한법 §91의18 (ISA 비과세 한도)",
+        "소득세법 §129 (이자소득세 14% + 지방세 1.4%)"
+      ]
+    }
+  },
+  "constants": {
+    "ISA_EXEMPT_LIMIT_GENERAL": 2000000,
+    "ISA_EXEMPT_LIMIT_LOWINCOME": 4000000,
+    "ISA_RATE": 0.099,
+    "GENERAL_RATE": 0.154,
+    "ISA_NOTE": "일반형 200만 / 서민형 400만 비과세, 초과분 9.9% 분리과세 (조특법 §91의18)"
+  },
   "formula": [
-    { "step": 1, "name": "일반 과세", "expr": "이자 × 15.4%" },
-    { "step": 2, "name": "ISA 과세", "expr": "이자 ≤ 200만: 0. 초과분 × 9.9%" },
-    { "step": 3, "name": "절감액", "expr": "일반 - ISA" }
+    {
+      "step": 1,
+      "name": "일반과세",
+      "expr": "interest × 15.4%"
+    },
+    {
+      "step": 2,
+      "name": "ISA 비과세 한도",
+      "expr": "일반형 200만 / 서민형 400만"
+    },
+    {
+      "step": 3,
+      "name": "ISA 과세",
+      "expr": "max(0, (interest − 한도)) × 9.9%"
+    },
+    {
+      "step": 4,
+      "name": "절세액",
+      "expr": "일반과세 − ISA과세"
+    }
   ],
   "inputs": [
-    { "id": "totalInterest", "label": "5년 누적 이자수익", "type": "currency", "min": 0, "default": 3000000 }
+    {
+      "id": "totalInterest",
+      "label": "5년 누적 이자수익",
+      "type": "currency",
+      "min": 0,
+      "max": 100000000,
+      "step": 100000,
+      "default": 3000000,
+      "hint": "ISA 만기까지 발생한 이자·배당·매매차익 합계"
+    },
+    {
+      "id": "accountType",
+      "label": "ISA 유형",
+      "type": "select",
+      "default": "general",
+      "options": [
+        {
+          "value": "general",
+          "label": "일반형 (비과세 200만)"
+        },
+        {
+          "value": "lowincome",
+          "label": "서민형 (비과세 400만)"
+        }
+      ],
+      "hint": "서민형: 총급여 5,500만 이하 또는 종합소득 3,800만 이하"
+    }
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-05-01",
-    "method": "조특법 §91-18 적용. 200만 비과세 + 초과 9.9% 분리과세.",
+    "verifiedAt": "2026-05-07",
+    "method": "조세특례제한법 §91의18 직접 적용. 5년 만기 5,000만/서민형 250만 한도 누적 이자 기준.",
     "cases": [
-      { "name": "Case 1 — 이자 100만 (한도 내)", "input": { "totalInterest": 1000000 }, "expected": { "generalTax": 154000, "isaTax": 0, "savings": 154000 } },
-      { "name": "Case 2 — 이자 200만 (한도 정확)", "input": { "totalInterest": 2000000 }, "expected": { "generalTax": 308000, "isaTax": 0, "savings": 308000 } },
-      { "name": "Case 3 — 이자 300만", "input": { "totalInterest": 3000000 }, "expected": { "generalTax": 462000, "isaTax": 99000, "savings": 363000 } },
-      { "name": "Case 4 — 이자 500만", "input": { "totalInterest": 5000000 }, "expected": { "generalTax": 770000, "isaTax": 297000, "savings": 473000 } },
-      { "name": "Case 5 — 이자 1천만", "input": { "totalInterest": 10000000 }, "expected": { "generalTax": 1540000, "isaTax": 792000, "savings": 748000 } }
+      {
+        "name": "Case 1 — 일반형 / 이자 100만 (한도 내)",
+        "input": {
+          "totalInterest": 1000000,
+          "accountType": "general"
+        },
+        "expected": {
+          "generalTax": 154000,
+          "isaTax": 0,
+          "savings": 154000
+        }
+      },
+      {
+        "name": "Case 2 — 일반형 / 이자 300만",
+        "input": {
+          "totalInterest": 3000000,
+          "accountType": "general"
+        },
+        "expected": {
+          "generalTax": 462000,
+          "isaTax": 99000,
+          "savings": 363000
+        }
+      },
+      {
+        "name": "Case 3 — 일반형 / 이자 1천만",
+        "input": {
+          "totalInterest": 10000000,
+          "accountType": "general"
+        },
+        "expected": {
+          "generalTax": 1540000,
+          "isaTax": 792000,
+          "savings": 748000
+        }
+      },
+      {
+        "name": "Case 4 — 서민형 / 이자 300만 (한도 내)",
+        "input": {
+          "totalInterest": 3000000,
+          "accountType": "lowincome"
+        },
+        "expected": {
+          "generalTax": 462000,
+          "isaTax": 0,
+          "savings": 462000
+        }
+      },
+      {
+        "name": "Case 5 — 서민형 / 이자 1천만",
+        "input": {
+          "totalInterest": 10000000,
+          "accountType": "lowincome"
+        },
+        "expected": {
+          "generalTax": 1540000,
+          "isaTax": 594000,
+          "savings": 946000
+        }
+      }
     ]
   },
-  "guide": { "howToUse": "ISA 계좌 5년 만기 누적 이자수익을 입력하면 일반과세 대비 절감액을 산출.", "tips": ["서민형 ISA는 비과세 한도 400만.", "납입한도 연 2천만, 누적 1억."] },
-  "related": ["fixed-deposit", "youth-leap-account"]
+  "guide": {
+    "tables": {
+      "isaBracketTable": [
+        {
+          "5년 누적 이자": "1,000,000원",
+          "일반 과세 (15.4%)": "154,000원",
+          "ISA 일반형 (200만 비과세)": "0원",
+          "ISA 서민형 (400만 비과세)": "0원",
+          "최대 절세 (서민형)": "154,000원"
+        },
+        {
+          "5년 누적 이자": "2,000,000원",
+          "일반 과세 (15.4%)": "308,000원",
+          "ISA 일반형 (200만 비과세)": "0원",
+          "ISA 서민형 (400만 비과세)": "0원",
+          "최대 절세 (서민형)": "308,000원"
+        },
+        {
+          "5년 누적 이자": "3,000,000원",
+          "일반 과세 (15.4%)": "462,000원",
+          "ISA 일반형 (200만 비과세)": "99,000원",
+          "ISA 서민형 (400만 비과세)": "0원",
+          "최대 절세 (서민형)": "462,000원"
+        },
+        {
+          "5년 누적 이자": "5,000,000원",
+          "일반 과세 (15.4%)": "770,000원",
+          "ISA 일반형 (200만 비과세)": "297,000원",
+          "ISA 서민형 (400만 비과세)": "99,000원",
+          "최대 절세 (서민형)": "671,000원"
+        },
+        {
+          "5년 누적 이자": "10,000,000원",
+          "일반 과세 (15.4%)": "1,540,000원",
+          "ISA 일반형 (200만 비과세)": "792,000원",
+          "ISA 서민형 (400만 비과세)": "594,000원",
+          "최대 절세 (서민형)": "946,000원"
+        }
+      ],
+      "summary": [
+        {
+          "항목": "일반형 ISA 비과세 한도",
+          "한도": "5년 누적 200만원",
+          "근거": "조특법 §91의18"
+        },
+        {
+          "항목": "서민형 ISA 비과세 한도",
+          "한도": "5년 누적 400만원",
+          "근거": "조특법 §91의18 (총급여 5,500만↓)"
+        },
+        {
+          "항목": "초과분 분리과세율",
+          "세율": "9.9% (ISA 분리과세 9% + 지방세 0.9%)",
+          "근거": "조특법 §91의18"
+        },
+        {
+          "항목": "납입 한도",
+          "한도": "연 2,000만 / 누적 1억",
+          "근거": "조특법 §91의18"
+        },
+        {
+          "항목": "의무 가입기간",
+          "기간": "3년 (해지 시 일반과세로 추징)",
+          "근거": "조특법 §91의18"
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "서민형 ISA 자격은 어떻게 판정하나요?",
+        "a": "총급여 5,500만원 이하 또는 종합소득 3,800만원 이하인 거주자. 가입 시점 기준이며, 가입 후 소득이 늘어도 서민형 자격 유지. 단 신규 가입 시점에 자격 충족해야 함."
+      },
+      {
+        "q": "ISA가 일반계좌보다 얼마나 유리한가요?",
+        "a": "5년 누적 이자 300만 기준: 일반계좌 46.2만 세금 / ISA 일반형 9.9만 / ISA 서민형 0원. 서민형 자격이면 46만 절세. 1천만 이자 시 일반 154만 vs ISA 서민형 59.4만 = 약 95만 절세."
+      },
+      {
+        "q": "ISA 만기 전에 해지하면 어떻게 되나요?",
+        "a": "3년 의무 가입기간 미충족 해지 시 비과세 혜택 박탈, 일반세율(15.4%) 추징. 단 무주택 청약/주택구입/사망/해외이주 등은 특별중도해지 가능 (혜택 유지)."
+      },
+      {
+        "q": "ISA 안에서 어떤 상품에 투자할 수 있나요?",
+        "a": "예금/적금/펀드/ETF/리츠/ELS/RP 등 대부분 금융상품. 단 직접 주식 매매는 중개형 ISA만 가능. 분산투자 시 한도 내에서 자유롭게 운용."
+      }
+    ],
+    "tips": [
+      "서민형 우선 검토: 자격되면 비과세 한도 200만 → 400만 (2배). 가입 시점 소득 기준이라 진입 가능 시 빨리 가입.",
+      "ISA + 연금저축 병행: ISA 만기 후 연금저축으로 이체 시 추가 세액공제 (최대 30%, 한도 300만).",
+      "납입한도 매년 2천만 풀활용: 5년 누적 1억까지 납입 가능, 세금 절약 효과 극대화.",
+      "안전형/투자형 선택: 안전형(예금적금) — 이자세 절세 / 투자형(펀드ETF) — 매매차익까지 비과세.",
+      "중도인출 자유 (납입원금 한도 내): ISA는 적립금 인출 자유롭게 가능하지만 비과세 혜택 유지하려면 의무 가입기간 3년 준수."
+    ]
+  },
+  "related": [
+    "installment-savings",
+    "fixed-deposit",
+    "tax-free-savings",
+    "pension-savings-credit"
+  ]
 }
