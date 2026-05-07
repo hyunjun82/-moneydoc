@@ -173,7 +173,7 @@
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-07",
-    "method": "min(LTV한도, DSR한도) + 수도권 6억 cap. 2025.6.27 가계부채 관리방안 반영.",
+    "method": "maxLoan = min(LTV한도, DSR한도). LTV한도 = housePrice × ltv (수도권 6억/25억초과 8억 cap). DSR한도 = (연소득 × DSR / 12 − 기존 월부채) × PMT factor. 스트레스 DSR 3단계 가산 1.5% 적용. PMT 산식 독립 구현 0원 일치.",
     "cases": [
       {
         "name": "Case 1 — 5억/LTV 70%/연 7천만/기존 0/DSR 40%/30년/4%/일반/미적용",

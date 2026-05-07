@@ -30,7 +30,7 @@ export default function Page() {
           <div className="cat-body">
             <h3 className="cat-name">대출 계산기</h3>
             <p className="cat-desc">원리금균등·원금균등·만기일시·거치식 4가지 상환방식 통합</p>
-            <span className="cat-count">PMT 표준 산식 · 8케이스 검증</span>
+            <span className="cat-count">한국 표준 산식 · 회차별 round 0원 일치 (8/8 케이스)</span>
           </div>
         </a>
         <a href="/loan/dsr-limit/" className="cat" style={{ textDecoration: "none" }}>

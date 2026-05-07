@@ -2,7 +2,7 @@
 cd /d "%~dp0"
 
 echo ===============================================
-echo  MoneyDoc - Phase 2 push (installment-savings)
+echo  MoneyDoc - Phase 3 push (fixed-deposit)
 echo ===============================================
 echo.
 
@@ -15,19 +15,18 @@ git config core.autocrlf false
 git config core.safecrlf false
 
 echo.
-echo [3/4] Staging Phase 2 files...
-git add CLAUDE.md
-git add moneydoc-data/calculators/savings/installment-savings.json
+echo [3/4] Staging Phase 3 files...
+git add moneydoc-data/calculators/savings/fixed-deposit.json
 git add lib/calc/engine.js
 git add lib/calculators-index.ts
-git add app/savings/installment-savings/page.tsx
-git add push-savings-step2.bat
+git add app/savings/fixed-deposit/page.tsx
+git add push-savings-step3.bat
 
 git diff --cached --name-only
 
 echo.
 echo [4/4] Commit and push...
-git commit -m "feat(savings/installment): toggle simple/compound + non-taxable input + 4-section guide. 5 cases verified. CLAUDE.md rules 11-13 added"
+git commit -m "feat(savings/fixed-deposit): non-taxable input + 4-section guide (deposit bracket table 15 rows + summary + FAQ + tips). 5 cases verified"
 git push origin main
 
 echo.

@@ -126,7 +126,7 @@ export function CalculatorShell({
 
       {children}
 
-      <GuideAccordion guide={spec.guide} title={guideTitle ?? spec.guide?.title ?? "자주 묻는 질문"} />
+      <GuideAccordion guide={spec.guide} title={guideTitle ?? spec.guide?.title ?? "계산기 가이드"} />
       <SourceBox source={spec.source} />
       {spec.related && spec.related.length > 0 && <RelatedCards related={spec.related} />}
 

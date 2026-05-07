@@ -27,6 +27,16 @@ type Spec = {
 
 // 결과 키 → 한국어 라벨
 const OUTPUT_LABELS: Record<string, string> = {
+  // 모드/구분
+  mode: "상환방식",
+  accountType: "ISA 유형",
+  taxFree: "비과세 적용",
+  category: "주택보유 상태",
+  regionType: "지역 구분",
+  area: "소액보증금 지역",
+  roomDeduction: "방 공제",
+  stressDSR: "스트레스 DSR",
+  appliedRate: "적용 금리",
   // 급여 / 4대보험
   netMonthly: "월 실수령액",
   grossMonthly: "월 세전 급여",

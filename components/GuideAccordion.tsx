@@ -89,6 +89,20 @@ export function GuideAccordion({
     }
   }
 
+  if (guide.tips?.length) {
+    sections.push({
+      num: next(),
+      title: "활용 팁",
+      content: (
+        <ul>
+          {guide.tips.map((tip, i) => (
+            <li key={i}>{tip}</li>
+          ))}
+        </ul>
+      ),
+    });
+  }
+
   if (guide.faq?.length) {
     sections.push({
       num: next(),
@@ -104,20 +118,6 @@ export function GuideAccordion({
             </div>
           ))}
         </>
-      ),
-    });
-  }
-
-  if (guide.tips?.length) {
-    sections.push({
-      num: next(),
-      title: "활용 팁",
-      content: (
-        <ul>
-          {guide.tips.map((tip, i) => (
-            <li key={i}>{tip}</li>
-          ))}
-        </ul>
       ),
     });
   }

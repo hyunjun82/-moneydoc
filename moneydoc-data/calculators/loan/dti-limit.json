@@ -115,7 +115,7 @@
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-07",
-    "method": "DTI 산식 직접 적용. 2026년 보조지표.",
+    "method": "DTI = (월 원리금 + 기존 월부채 이자) / 월소득. PMT 산식 독립 구현과 0원 일치. DTI는 DSR 도입 후 보조 지표 (원금 제외 이자만 차감).",
     "cases": [
       {
         "name": "Case 1 — 연 5천만 / 기존이자 0 / 30년 / 4% / DTI 50% / 미적용",

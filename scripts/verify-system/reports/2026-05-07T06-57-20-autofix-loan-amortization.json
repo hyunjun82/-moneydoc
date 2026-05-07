@@ -1,0 +1,23 @@
+{
+  "label": "autofix-loan-amortization",
+  "timestamp": "2026-05-07T06-57-20",
+  "pass": 2,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 1 — 1억 / 30년 / 4% / 원리금균등",
+      "detail": "매칭 산식: korean-standard (한국 표준 (회차별 round + 잔금 정산))",
+      "ts": 1778137040228
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 2 — 2억 / 20년 / 4.5% / 원리금균등",
+      "detail": "매칭 산식: korean-standard (한국 표준 (회차별 round + 잔금 정산))",
+      "ts": 1778137040228
+    }
+  ]
+}

@@ -1,81 +1,69 @@
 # MoneyDoc — Claude 작업 규칙
 
-매 세션 시작 시 이 파일 먼저 읽기. 짧음. 다 지켜야 함.
+매 세션 첫 줄에 이 파일 읽기. 짧음. 다 지키기.
 
-## 절대 규칙 (실수 방지)
+## 0. 오차 0 원칙 (최우선)
 
-1. **JSON 큰 변경 = Python으로**. Edit 툴 쓰면 깨짐 (UTF-8 손상, truncation 실측됨).
-2. **TS/TSX 큰 변경도 Python으로**. Edit 툴 변경 시 끝부분 잘림 사례 다수.
-3. **Edit 툴은 작은 한 줄 변경에만** (라벨, 숫자 1개 등).
-4. **모든 파일 수정 후** `tail -c 30 파일 | xxd`로 truncation 체크. null byte 있으면 재작성.
-5. **JSON 수정 후** `python3 -c "import json; json.load(open('파일'))"`로 검증.
-6. **TS 수정 후** `npx tsc --noEmit -p .`로 0 에러 확인.
-7. **verify 스크립트** PASS 확인 후에만 push.
-8. **push-changes.bat은 stash 절대 금지**. 직접 git add → commit → push.
-9. **라인엔딩 LF 강제**. .gitattributes 있음. CRLF 감지되면 Python에서 `newline='\n'`.
-10. **한 번에 1개 계산기**만. 91개 동시 작업 금지.
-11. **.bat 파일은 순수 ASCII 영어만**. 한글 echo 메시지 금지 — CMD 인코딩(CP949) 깨져서 git 명령어가 행 단위로 실패함. 헤더/메시지 모두 영어로. 커밋 메시지도 ASCII만.
-12. **.bat 작성 후** `head -3 push.bat | xxd`로 BOM(EF BB BF) 없는지 확인. BOM 있으면 CMD 첫 줄 깨짐.
-13. **Cloudflare Pages CDN 캐시는 7일** (s-maxage=604800). 페이지 삭제 후에도 옛 URL 살아있으면 Cloudflare 대시보드 → Caching → Purge Everything 실행 필요.
+- ❌ 추측 답변 금지: "정확함", "공식 동일", "표준 산식"
+- ❌ 손으로 1개씩 대조 금지 (시스템 만들었음)
+- ✅ `scripts/verify-system/` 자동 시스템으로 정부값 0원 일치 확인 후에만 PASS
+- 정부 어댑터(gov=true) = **0원** / 대형(gov=false) = ±100원
 
-## 디자인 (D 테마, 변경 금지)
+## 1. 자동 검증 시스템
 
-- 배경 #f7f5f0 / 카드 #fdfbf6 / 브랜드 #1f3a3a / 마이너스 빨강
-- 폰트 Pretendard
-- 새 색상 추가 금지
-
-## 계산기 구조
-
-```
-moneydoc-data/calculators/{cat}/{slug}.json   ← 산식 데이터
-lib/calc/{slug}.ts                            ← TS 산식 (페이지에서 import)
-lib/calc/engine.js                            ← JS 동기화 (verify용)
-moneydoc-data/verify/verify-{slug}.js         ← 검증 스크립트
-app/{cat}/{slug}/page.tsx                     ← 메타 + Shell
-app/{cat}/{slug}/{Slug}Client.tsx             ← UI (use client)
+```bash
+node scripts/verify-system/scrape-gov.mjs --all --skip-existing  # 정부값 수집
+node scripts/verify-system/verify-3way.mjs --all                 # 3-way 비교
+node scripts/verify-system/auto-fix.mjs --calc=<slug>            # 산식 자동 탐색
 ```
 
-## 가이드 4섹션 (사용자 검색 의도 기반)
+상세는 `scripts/verify-system/README.md`. 새 어댑터 추가도 거기.
 
-generic 5섹션 금지. 매 계산기마다 검색 의도 분석 후 4섹션:
+**검증 통과 = push 가능. 미통과 = push 금지.**
 
-1. **즉답** (구간별 표 / 자격 체크리스트 / 케이스별 결과)
-2. **변동 케이스 FAQ** (사용자가 진짜 묻는 4~5개)
-3. **결과 근거** (산식 단계 + 4대보험·세율표 + 정부 출처)
-4. **다음 단계** (절세 / 혜택 / 신청 / 관련 계산기)
+## 2. 가이드 4섹션 (순서 고정)
 
-가이드 섹션 제목: **"자주 묻는 질문"** 으로 통일 (CalculatorShell 자동). spec.guide.title로 개별 override 가능.
+1. 즉답 (구간별 표/케이스별 결과) 2. 활용 팁 3. 자주 묻는 질문
 
-## 검증 기준 (오차 0 원칙)
+외부 헤더 = "계산기 가이드".
 
-- 정부 모의계산기와 ±10원 (1차)
-- 잡코리아·아는자산 시장표준과 ±1,000원 (2차)
-- verify 스크립트 5/5 PASS 필수
+## 3. 절대 규칙 (실수 방지)
 
-## 작업 우선순위
+1. **JSON/TS/JS 큰 변경 = Python으로**. Edit는 한 줄 변경만 (truncation 실측됨).
+2. **수정 후** `tail -c 30 파일 | xxd`로 truncation 체크. 잘리면 Python 재작성.
+3. **JSON 검증**: `python3 -c "import json; json.load(open('파일'))"`.
+4. **TS 검증**: `npx tsc --noEmit -p .` 0 에러.
+5. **검증 통과 후 push**: `verify-3way.mjs --all` PASS 확인.
+6. **push-changes.bat은 stash 금지**. git add → commit → push 직접.
+7. **라인엔딩 LF**. Python에서 `newline=\'\\n\'`.
+8. **.bat 파일은 ASCII 영어만** (CP949 깨짐). BOM 금지.
+9. **Cloudflare 캐시 7일** (s-maxage=604800). 옛 URL 안 죽으면 Purge Everything.
 
-세금(연봉/4대보험/종합소득세/양도세/퇴직금) → 저축(적금/예금/ISA) → 대출 → 부동산 → 연금 → 정부지원금 → 법률 → 보험
+## 4. 디자인 (변경 금지)
 
-## 진행 상황
+배경 #f7f5f0 / 카드 #fdfbf6 / 브랜드 #1f3a3a / 폰트 Pretendard.
 
-`docs/CALCULATORS-STATUS.md`에 매 계산기 완료 시 ✅ 마킹.
+## 5. 구조
 
-## 푸시 워크플로우
+```
+moneydoc-data/calculators/{cat}/{slug}.json   산식 + verification.cases (govSource 포함)
+lib/calc/engine.js                            모든 산식 (사이트가 import)
+components/GenericCalculator.tsx              UI
+app/{cat}/{slug}/page.tsx                     메타 + Shell
+scripts/verify-system/                        자동 검증
+```
 
-1. `node moneydoc-data/verify/verify-{slug}.js` PASS
+JSON case에 `govSource.govExpected` 자동 채움 (scrape-gov.mjs가 함, 손으로 X).
+
+## 6. 작업 우선순위
+
+1. `verify-3way.mjs --all` 리포트의 FAIL 우선
+2. 패턴별: 🔴 산식/데이터 오류 → engine.js 수정 / 🟡 정책 갱신 → JSON expected / 🟢 round Δ1 → 통일
+
+## 7. 푸시
+
+1. `verify-3way.mjs --all` PASS
 2. `npx tsc --noEmit -p .` 0 에러
-3. `python3 -c "import json; json.load(open('변경한 JSON'))"` OK
-4. push-changes.bat 더블클릭
-5. Cloudflare 빌드 로그 확인 (Cloudflare Pages 대시보드)
-6. Chrome MCP로 라이브 캡처 → 정부 사이트와 비교
-
-## 자주 쓰는 검증 출처
-
-- 4대보험: 4insure.or.kr
-- 소득세: hometax.go.kr taxsimple + jobkorea + knowingasset.com
-- 양도세: hometax.go.kr 양도세 모의계산
-- 적금/예금: finlife.fss.or.kr
-- 국민연금: nps.or.kr
-- 퇴직금: 고용노동부 퇴직금 모의계산
-
-상세는 `docs/VERIFICATION-SOURCES.md`.
+3. truncation 체크
+4. push-changes.bat → Cloudflare 빌드 확인
+5. push 후 `verify-3way.mjs --all` (--no-gov 빼고) → 라이브+정부 일치 재확인
