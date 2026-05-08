@@ -13,41 +13,134 @@
       "agency": "고용노동부",
       "document": "고용보험법",
       "year": 2026,
-      "laws": ["고용보험법 제70조 (육아휴직 급여)", "시행령 제95조"]
+      "laws": [
+        "고용보험법 제70조 (육아휴직 급여)",
+        "시행령 제95조"
+      ]
     },
     "note": "2026년 개편 — 3단계 구조 + 사후지급 폐지."
   },
   "constants": {
-    "PHASE1_RATE": 1.00,
+    "PHASE1_RATE": 1.0,
     "PHASE1_UPPER": 2500000,
-    "PHASE2_RATE": 1.00,
+    "PHASE2_RATE": 1.0,
     "PHASE2_UPPER": 2000000,
-    "PHASE3_RATE": 0.80,
+    "PHASE3_RATE": 0.8,
     "PHASE3_UPPER": 1600000,
     "MIN_PAY": 700000,
     "PHASE1_MONTHS": 3,
-    "PHASE2_MONTHS": 3
+    "PHASE2_MONTHS": 3,
+    "UPPER_LIMIT": 1925000
   },
   "formula": [
-    { "step": 1, "name": "1~3개월 월액", "expr": "max(min(통상임금 × 1.0, 2500000), 700000)" },
-    { "step": 2, "name": "4~6개월 월액", "expr": "max(min(통상임금 × 1.0, 2000000), 700000)" },
-    { "step": 3, "name": "7~12+개월 월액", "expr": "max(min(통상임금 × 0.8, 1600000), 700000)" },
-    { "step": 4, "name": "총 급여", "expr": "min(months,3)×phase1 + max(0,min(months,6)-3)×phase2 + max(0,months-6)×phase3" }
+    {
+      "step": 1,
+      "name": "1~3개월 월액",
+      "expr": "max(min(통상임금 × 1.0, 2500000), 700000)"
+    },
+    {
+      "step": 2,
+      "name": "4~6개월 월액",
+      "expr": "max(min(통상임금 × 1.0, 2000000), 700000)"
+    },
+    {
+      "step": 3,
+      "name": "7~12+개월 월액",
+      "expr": "max(min(통상임금 × 0.8, 1600000), 700000)"
+    },
+    {
+      "step": 4,
+      "name": "총 급여",
+      "expr": "min(months,3)×phase1 + max(0,min(months,6)-3)×phase2 + max(0,months-6)×phase3"
+    }
   ],
   "inputs": [
-    { "id": "monthlySalary", "label": "통상임금 (월)", "type": "currency", "min": 700000, "default": 3000000 },
-    { "id": "leaveMonths", "label": "휴직 개월수", "type": "number", "min": 1, "max": 18, "default": 12 }
+    {
+      "id": "monthlySalary",
+      "label": "통상임금 (월)",
+      "type": "currency",
+      "min": 700000,
+      "default": 3000000
+    },
+    {
+      "id": "leaveMonths",
+      "label": "휴직 개월수",
+      "type": "number",
+      "min": 1,
+      "max": 18,
+      "default": 12
+    }
   ],
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-01",
     "method": "고용보험법 §70 + 시행령 §95. 2026 개편 3단계 (1~3 100%/250만, 4~6 100%/200만, 7+ 80%/160만).",
     "cases": [
-      { "name": "Case 1 — 통상 200만 × 6개월", "input": { "monthlySalary": 2000000, "leaveMonths": 6 }, "expected": { "phase1Monthly": 2000000, "phase2Monthly": 2000000, "phase3Monthly": 1600000, "totalPay": 12000000 } },
-      { "name": "Case 2 — 통상 300만 × 12개월 (상한 적용)", "input": { "monthlySalary": 3000000, "leaveMonths": 12 }, "expected": { "phase1Monthly": 2500000, "phase2Monthly": 2000000, "phase3Monthly": 1600000, "totalPay": 23100000 } },
-      { "name": "Case 3 — 통상 150만 × 12개월", "input": { "monthlySalary": 1500000, "leaveMonths": 12 }, "expected": { "phase1Monthly": 1500000, "phase2Monthly": 1500000, "phase3Monthly": 1200000, "totalPay": 16200000 } },
-      { "name": "Case 4 — 통상 80만 × 12개월 (하한 적용)", "input": { "monthlySalary": 800000, "leaveMonths": 12 }, "expected": { "phase1Monthly": 800000, "phase2Monthly": 800000, "phase3Monthly": 700000, "totalPay": 9000000 } },
-      { "name": "Case 5 — 통상 500만 × 9개월 (상한 적용)", "input": { "monthlySalary": 5000000, "leaveMonths": 9 }, "expected": { "phase1Monthly": 2500000, "phase2Monthly": 2000000, "phase3Monthly": 1600000, "totalPay": 18300000 } }
+      {
+        "name": "Case 1 — 통상 200만 × 6개월",
+        "input": {
+          "monthlySalary": 2000000,
+          "leaveMonths": 6
+        },
+        "expected": {
+          "phase1Monthly": 2000000,
+          "phase2Monthly": 2000000,
+          "phase3Monthly": 1600000,
+          "totalPay": 12000000
+        }
+      },
+      {
+        "name": "Case 2 — 통상 300만 × 12개월 (상한 적용)",
+        "input": {
+          "monthlySalary": 3000000,
+          "leaveMonths": 12
+        },
+        "expected": {
+          "phase1Monthly": 2500000,
+          "phase2Monthly": 2000000,
+          "phase3Monthly": 1600000,
+          "totalPay": 23100000
+        }
+      },
+      {
+        "name": "Case 3 — 통상 150만 × 12개월",
+        "input": {
+          "monthlySalary": 1500000,
+          "leaveMonths": 12
+        },
+        "expected": {
+          "phase1Monthly": 1500000,
+          "phase2Monthly": 1500000,
+          "phase3Monthly": 1200000,
+          "totalPay": 16200000
+        }
+      },
+      {
+        "name": "Case 4 — 통상 80만 × 12개월 (하한 적용)",
+        "input": {
+          "monthlySalary": 800000,
+          "leaveMonths": 12
+        },
+        "expected": {
+          "phase1Monthly": 800000,
+          "phase2Monthly": 800000,
+          "phase3Monthly": 700000,
+          "totalPay": 9000000
+        }
+      },
+      {
+        "name": "Case 5 — 통상 500만 × 9개월 (상한 적용)",
+        "input": {
+          "monthlySalary": 5000000,
+          "leaveMonths": 9
+        },
+        "expected": {
+          "phase1Monthly": 2500000,
+          "phase2Monthly": 2000000,
+          "phase3Monthly": 1600000,
+          "totalPay": 18300000
+        }
+      }
     ]
   },
   "guide": {
@@ -58,5 +151,8 @@
       "고용센터 또는 워크넷에서 신청."
     ]
   },
-  "related": ["unemployment-benefit", "salary-net-pay"]
+  "related": [
+    "unemployment-benefit",
+    "salary-net-pay"
+  ]
 }

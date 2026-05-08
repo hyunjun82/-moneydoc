@@ -1,35 +1,228 @@
 {
-  "id": "basic-livelihood-eligibility", "category": "government", "subCategory": "welfare",
-  "title": "기초생활수급자 자격 모의계산", "subtitle": "생계 32% / 의료 40% / 주거 48% / 교육 50% (2026 기준중위소득 6.51% 인상 적용)",
+  "id": "basic-livelihood-eligibility",
+  "category": "government",
+  "subCategory": "welfare",
+  "title": "기초생활수급자 자격 모의계산",
+  "subtitle": "생계 32% / 의료 40% / 주거 48% / 교육 50% (2026 기준중위소득 6.51% 인상 적용)",
   "slug": "basic-livelihood-eligibility",
-  "searchAliases": ["기초생활수급 모의계산", "기초수급자 자격"],
-  "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
-  "source": { "primary": { "agency": "보건복지부", "document": "국민기초생활 보장법 + 시행령 + 2026 기준중위소득 고시", "year": 2026 } },
+  "searchAliases": [
+    "기초생활수급 모의계산",
+    "기초수급자 자격"
+  ],
+  "year": 2026,
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
+  "source": {
+    "primary": {
+      "agency": "보건복지부",
+      "document": "국민기초생활 보장법 + 시행령 + 2026 기준중위소득 고시",
+      "year": 2026
+    }
+  },
   "constants": {},
   "tables": {
-    "median100": { "1": 2564238, "2": 4199292, "3": 5359036, "4": 6494738, "5": 7556719, "6": 8555952 }
+    "median100": {
+      "1": 2564238,
+      "2": 4199292,
+      "3": 5359036,
+      "4": 6494738,
+      "5": 7556719,
+      "6": 8555952
+    }
   },
   "formula": [
-    { "step": 1, "name": "생계급여 기준", "expr": "중위 100% × 32% (2026 인상)" },
-    { "step": 2, "name": "의료급여 기준", "expr": "중위 100% × 40%" },
-    { "step": 3, "name": "주거급여 기준", "expr": "중위 100% × 48% (2026 인상)" },
-    { "step": 4, "name": "교육급여 기준", "expr": "중위 100% × 50%" },
-    { "step": 5, "name": "자격", "expr": "소득인정액 ≤ 각 기준" }
+    {
+      "step": 1,
+      "name": "생계급여 기준",
+      "expr": "중위 100% × 32% (2026 인상)"
+    },
+    {
+      "step": 2,
+      "name": "의료급여 기준",
+      "expr": "중위 100% × 40%"
+    },
+    {
+      "step": 3,
+      "name": "주거급여 기준",
+      "expr": "중위 100% × 48% (2026 인상)"
+    },
+    {
+      "step": 4,
+      "name": "교육급여 기준",
+      "expr": "중위 100% × 50%"
+    },
+    {
+      "step": 5,
+      "name": "자격",
+      "expr": "소득인정액 ≤ 각 기준"
+    }
   ],
   "inputs": [
-    { "id": "householdSize", "label": "가구원 수", "type": "stepper", "min": 1, "max": 6, "default": 1 },
-    { "id": "incomeAmount", "label": "소득인정액 (월)", "type": "currency", "min": 0, "default": 600000 }
+    {
+      "id": "householdSize",
+      "label": "가구원 수",
+      "type": "stepper",
+      "min": 1,
+      "max": 6,
+      "default": 1
+    },
+    {
+      "id": "incomeAmount",
+      "label": "소득인정액 (월)",
+      "type": "currency",
+      "min": 0,
+      "default": 600000
+    }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-05-01", "method": "기초생활보장법 시행령 + 2026 기준중위소득 고시 (1인 2,564,238 / 4인 6,494,738). 생계 32%, 주거 48%로 인상.",
+    "verified": true,
+    "verifiedAt": "2026-05-01",
+    "method": "기초생활보장법 시행령 + 2026 기준중위소득 고시 (1인 2,564,238 / 4인 6,494,738). 생계 32%, 주거 48%로 인상.",
     "cases": [
-      { "name": "Case 1 — 1인 / 60만 (4종 모두)", "input": { "householdSize": 1, "incomeAmount": 600000 }, "expected": { "median100": 2564238, "livelihood": { "threshold": 820556, "isEligible": true }, "medical": { "threshold": 1025695, "isEligible": true }, "housing": { "threshold": 1230834, "isEligible": true }, "education": { "threshold": 1282119, "isEligible": true } } },
-      { "name": "Case 2 — 2인 / 110만 (4종)", "input": { "householdSize": 2, "incomeAmount": 1100000 }, "expected": { "median100": 4199292, "livelihood": { "threshold": 1343773, "isEligible": true }, "medical": { "threshold": 1679717, "isEligible": true }, "housing": { "threshold": 2015660, "isEligible": true }, "education": { "threshold": 2099646, "isEligible": true } } },
-      { "name": "Case 3 — 3인 / 150만 (4종 모두 — 생계 한도 171만)", "input": { "householdSize": 3, "incomeAmount": 1500000 }, "expected": { "median100": 5359036, "livelihood": { "threshold": 1714892, "isEligible": true }, "medical": { "threshold": 2143614, "isEligible": true }, "housing": { "threshold": 2572337, "isEligible": true }, "education": { "threshold": 2679518, "isEligible": true } } },
-      { "name": "Case 4 — 4인 / 270만 (주거·교육만 O)", "input": { "householdSize": 4, "incomeAmount": 2700000 }, "expected": { "median100": 6494738, "livelihood": { "threshold": 2078316, "isEligible": false }, "medical": { "threshold": 2597895, "isEligible": false }, "housing": { "threshold": 3117474, "isEligible": true }, "education": { "threshold": 3247369, "isEligible": true } } },
-      { "name": "Case 5 — 4인 / 350만 (모두 X)", "input": { "householdSize": 4, "incomeAmount": 3500000 }, "expected": { "median100": 6494738, "livelihood": { "threshold": 2078316, "isEligible": false }, "medical": { "threshold": 2597895, "isEligible": false }, "housing": { "threshold": 3117474, "isEligible": false }, "education": { "threshold": 3247369, "isEligible": false } } }
+      {
+        "name": "Case 1 — 1인 / 60만 (4종 모두)",
+        "input": {
+          "householdSize": 1,
+          "incomeAmount": 600000
+        },
+        "expected": {
+          "median100": 2564238,
+          "livelihood": {
+            "threshold": 820556,
+            "isEligible": true
+          },
+          "medical": {
+            "threshold": 1025695,
+            "isEligible": true
+          },
+          "housing": {
+            "threshold": 1230834,
+            "isEligible": true
+          },
+          "education": {
+            "threshold": 1282119,
+            "isEligible": true
+          }
+        }
+      },
+      {
+        "name": "Case 2 — 2인 / 110만 (4종)",
+        "input": {
+          "householdSize": 2,
+          "incomeAmount": 1100000
+        },
+        "expected": {
+          "median100": 4199292,
+          "livelihood": {
+            "threshold": 1343773,
+            "isEligible": true
+          },
+          "medical": {
+            "threshold": 1679717,
+            "isEligible": true
+          },
+          "housing": {
+            "threshold": 2015660,
+            "isEligible": true
+          },
+          "education": {
+            "threshold": 2099646,
+            "isEligible": true
+          }
+        }
+      },
+      {
+        "name": "Case 3 — 3인 / 150만 (4종 모두 — 생계 한도 171만)",
+        "input": {
+          "householdSize": 3,
+          "incomeAmount": 1500000
+        },
+        "expected": {
+          "median100": 5359036,
+          "livelihood": {
+            "threshold": 1714892,
+            "isEligible": true
+          },
+          "medical": {
+            "threshold": 2143614,
+            "isEligible": true
+          },
+          "housing": {
+            "threshold": 2572337,
+            "isEligible": true
+          },
+          "education": {
+            "threshold": 2679518,
+            "isEligible": true
+          }
+        }
+      },
+      {
+        "name": "Case 4 — 4인 / 270만 (주거·교육만 O)",
+        "input": {
+          "householdSize": 4,
+          "incomeAmount": 2700000
+        },
+        "expected": {
+          "median100": 6494738,
+          "livelihood": {
+            "threshold": 2078316,
+            "isEligible": false
+          },
+          "medical": {
+            "threshold": 2597895,
+            "isEligible": false
+          },
+          "housing": {
+            "threshold": 3117474,
+            "isEligible": true
+          },
+          "education": {
+            "threshold": 3247369,
+            "isEligible": true
+          }
+        }
+      },
+      {
+        "name": "Case 5 — 4인 / 350만 (모두 X)",
+        "input": {
+          "householdSize": 4,
+          "incomeAmount": 3500000
+        },
+        "expected": {
+          "median100": 6494738,
+          "livelihood": {
+            "threshold": 2078316,
+            "isEligible": false
+          },
+          "medical": {
+            "threshold": 2597895,
+            "isEligible": false
+          },
+          "housing": {
+            "threshold": 3117474,
+            "isEligible": false
+          },
+          "education": {
+            "threshold": 3247369,
+            "isEligible": false
+          }
+        }
+      }
     ]
   },
-  "guide": { "howToUse": "가구원수와 소득인정액 입력 시 4종 급여(생계/의료/주거/교육) 자격 판정.", "tips": ["부양의무자 기준: 생계급여 일부 폐지, 의료급여만 일부 적용.", "재산 환산액도 소득인정액에 포함.", "복지로(bokjiro.go.kr) 정확 모의계산 가능.", "2026년 기준중위소득 6.51% 인상 + 생계급여 30→32%, 주거급여 47→48% 비율 상향."] },
-  "related": ["near-poor-eligibility", "median-income", "basic-pension"]
+  "guide": {
+    "howToUse": "가구원수와 소득인정액 입력 시 4종 급여(생계/의료/주거/교육) 자격 판정.",
+    "tips": [
+      "부양의무자 기준: 생계급여 일부 폐지, 의료급여만 일부 적용.",
+      "재산 환산액도 소득인정액에 포함.",
+      "복지로(bokjiro.go.kr) 정확 모의계산 가능.",
+      "2026년 기준중위소득 6.51% 인상 + 생계급여 30→32%, 주거급여 47→48% 비율 상향."
+    ]
+  },
+  "related": [
+    "near-poor-eligibility",
+    "median-income",
+    "basic-pension"
+  ]
 }

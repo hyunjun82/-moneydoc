@@ -50,10 +50,7 @@ import jeonseMonthlyConversion from "@/data/calculators/realestate/jeonse-monthl
 import propertyTax from "@/data/calculators/realestate/property-tax.json";
 import realEstateRoi from "@/data/calculators/realestate/real-estate-roi.json";
 import rentalYield from "@/data/calculators/realestate/rental-yield.json";
-import subscriptionPriority from "@/data/calculators/realestate/subscription-priority.json";
-import transferTax1home from "@/data/calculators/realestate/transfer-tax-1home.json";
-import transferTaxAdjusted from "@/data/calculators/realestate/transfer-tax-adjusted.json";
-import transferTaxMulti from "@/data/calculators/realestate/transfer-tax-multi.json";
+import transferTax from "@/data/calculators/realestate/transfer-tax.json";
 import fixedDeposit from "@/data/calculators/savings/fixed-deposit.json";
 import freeSavings from "@/data/calculators/savings/free-savings.json";
 import installmentSavings from "@/data/calculators/savings/installment-savings.json";
@@ -82,7 +79,7 @@ import dateCalculator from "@/data/calculators/util/date-calculator.json";
 import installmentFee from "@/data/calculators/util/installment-fee.json";
 import percentCalculator from "@/data/calculators/util/percent-calculator.json";
 
-const ALL_SPECS = [basicLivelihoodEligibility, basicPension, birthChildcareSupport, childAllowance, durunuriSupport, earnedIncomeTaxCredit, industrialAccidentPay, maternityLeavePay, medianIncome, nationalScholarship, nearPoorEligibility, parentalLeavePay, singleParentSupport, unemploymentBenefitDays, unemploymentBenefit, youthHousingAllowance, youthRentSupport, autoInsurance, medicalInsurancePayout, annualLeaveAllowance, childSupport, divorceAlimony, inheritanceDeadline, inheritanceShare, severancePay, unpaidWages, creditLoan, dsrLimit, dtiLimit, jeonseLoan, loanAmortization, loanRefinance, ltvLimit, mortgageLoanLimit, prepaymentFee, irpTaxCredit, nationalPensionEarly, nationalPension, noranumbrellaTaxSaving, pensionSavingsCredit, publicOfficerPension, retirementPensionDb, retirementPensionDc, acquisitionTax, brokerageFee, comprehensiveRealEstateTax, holdingTaxTotal, housingSubscriptionScore, jeonseMonthlyConversion, propertyTax, realEstateRoi, rentalYield, subscriptionPriority, transferTax1home, transferTaxAdjusted, transferTaxMulti, fixedDeposit, freeSavings, installmentSavings, isaTaxSaving, businessIncomeTaxSimple, childTaxCredit, comprehensiveIncomeTax, cryptoTransferTax, dailyWageTax, fourMajorInsuranceEmployer, fourMajorInsurance, freelancerTax, giftTax, inheritanceTax, otherIncomeTax, overseasStockTax, retirementIncomeTax, salaryNetPay, stockTransferTax, vatGeneral, vatSimplified, yearEndTaxRefund, ageCalculator, cashServiceFee, dateCalculator, installmentFee, percentCalculator] as const;
+const ALL_SPECS = [basicLivelihoodEligibility, basicPension, birthChildcareSupport, childAllowance, durunuriSupport, earnedIncomeTaxCredit, industrialAccidentPay, maternityLeavePay, medianIncome, nationalScholarship, nearPoorEligibility, parentalLeavePay, singleParentSupport, unemploymentBenefitDays, unemploymentBenefit, youthHousingAllowance, youthRentSupport, autoInsurance, medicalInsurancePayout, annualLeaveAllowance, childSupport, divorceAlimony, inheritanceDeadline, inheritanceShare, severancePay, unpaidWages, creditLoan, dsrLimit, dtiLimit, jeonseLoan, loanAmortization, loanRefinance, ltvLimit, mortgageLoanLimit, prepaymentFee, irpTaxCredit, nationalPensionEarly, nationalPension, noranumbrellaTaxSaving, pensionSavingsCredit, publicOfficerPension, retirementPensionDb, retirementPensionDc, acquisitionTax, brokerageFee, comprehensiveRealEstateTax, holdingTaxTotal, housingSubscriptionScore, jeonseMonthlyConversion, propertyTax, realEstateRoi, rentalYield, transferTax,     fixedDeposit, freeSavings, installmentSavings, isaTaxSaving, businessIncomeTaxSimple, childTaxCredit, comprehensiveIncomeTax, cryptoTransferTax, dailyWageTax, fourMajorInsuranceEmployer, fourMajorInsurance, freelancerTax, giftTax, inheritanceTax, otherIncomeTax, overseasStockTax, retirementIncomeTax, salaryNetPay, stockTransferTax, vatGeneral, vatSimplified, yearEndTaxRefund, ageCalculator, cashServiceFee, dateCalculator, installmentFee, percentCalculator] as const;
 
 export type CategorySlug =
   | "savings"
@@ -156,6 +153,16 @@ export const GUIDE_TABLE_TITLES: Record<string, string> = {
   creditIncomeTable: "연봉별 신용대출 한도 (1배 / 1.5배 / DSR 영향 후)",
   jeonseDepositTable: "전세 보증금별 대출 한도 (HF·HUG·SGI 80~90%)",
   refinanceSavingTable: "갈아타기 절약 시뮬 (잔액별 / 금리차별)",
+
+  acquisitionRateTable: "취득세 케이스별 세율 (1주택·다주택·생애최초)",
+  brokerageRateTable: "매매가격별 중개수수료 상한 요율",
+  comprehensiveTaxTable: "종부세 공시가별 과세 (1주택·다주택)",
+  holdingTaxTable: "공시가별 보유세 합계 (재산세+종부세+지방교육세)",
+  subscriptionScoreTable: "무주택기간별 청약 가점",
+  subscriptionFamilyTable: "부양가족별 청약 가점",
+  conversionTable: "전월세 전환 케이스별 월세 (5% / 6%)",
+  roiCaseTable: "부동산 ROI 시나리오 (자본이득 포함)",
+  rentalYieldTable: "임대수익률 케이스별 (총·순수익률)",
   prepaymentBalanceTable: "잔액별 중도상환수수료 (1.0% / 1.4% / 3년 면제)",
   calcMethodTable: "계산 방식 비교 (표준 PMT vs HF 일할)",
   depositRateTable: "원금별 정기예금 만기액 (1년 / 단리 2.5~4%)",

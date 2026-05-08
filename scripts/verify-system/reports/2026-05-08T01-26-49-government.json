@@ -1,0 +1,523 @@
+{
+  "label": "government",
+  "timestamp": "2026-05-08T01-26-49",
+  "pass": 84,
+  "fail": 1,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "basic-livelihood-eligibility",
+      "case": "Case 1 — 1인 / 60만 (4종 모두)",
+      "ts": 1778203609165
+    },
+    {
+      "status": "pass",
+      "calc": "basic-livelihood-eligibility",
+      "case": "Case 2 — 2인 / 110만 (4종)",
+      "ts": 1778203609167
+    },
+    {
+      "status": "pass",
+      "calc": "basic-livelihood-eligibility",
+      "case": "Case 3 — 3인 / 150만 (4종 모두 — 생계 한도 171만)",
+      "ts": 1778203609167
+    },
+    {
+      "status": "pass",
+      "calc": "basic-livelihood-eligibility",
+      "case": "Case 4 — 4인 / 270만 (주거·교육만 O)",
+      "ts": 1778203609167
+    },
+    {
+      "status": "pass",
+      "calc": "basic-livelihood-eligibility",
+      "case": "Case 5 — 4인 / 350만 (모두 X)",
+      "ts": 1778203609167
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 1 — 단독, 소득 100만 (자격 O)",
+      "ts": 1778203609167
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 2 — 단독, 소득 250만 (자격 X — 247만 초과)",
+      "ts": 1778203609168
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 3 — 부부, 소득 200만 (자격 O)",
+      "ts": 1778203609168
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 4 — 단독, 소득 247만 (경계, 자격 O)",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 5 — 부부, 소득 400만 (자격 X — 395.2만 초과)",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "birth-childcare-support",
+      "case": "Case 1 — 0세 / 첫째",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "birth-childcare-support",
+      "case": "Case 2 — 0세 / 둘째 이상",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "birth-childcare-support",
+      "case": "Case 3 — 1세 / 둘째 이상",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "birth-childcare-support",
+      "case": "Case 4 — 7세 / 첫째",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "birth-childcare-support",
+      "case": "Case 5 — 10세 / 첫째 (아동수당 X)",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "child-allowance",
+      "case": "Case 1 — 3천만 / 자녀 2",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "child-allowance",
+      "case": "Case 2 — 5천만 / 자녀 1",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "child-allowance",
+      "case": "Case 3 — 7천만 / 자녀 3 (경계)",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "child-allowance",
+      "case": "Case 4 — 8천만 (한도 초과)",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "child-allowance",
+      "case": "Case 5 — 2천만 / 자녀 4",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "durunuri-support",
+      "case": "Case 1 — 월 200만 / 3인",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "durunuri-support",
+      "case": "Case 2 — 월 250만 / 4인",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "durunuri-support",
+      "case": "Case 3 — 월 280만 (소득 초과)",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "durunuri-support",
+      "case": "Case 4 — 월 180만 / 7인 (10인 미만 자격 O)",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "durunuri-support",
+      "case": "Case 5 — 월 220만 / 2인",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "earned-income-tax-credit",
+      "case": "Case 1 — 단독 / 1천만",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "earned-income-tax-credit",
+      "case": "Case 2 — 외벌이 / 2,500만",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "earned-income-tax-credit",
+      "case": "Case 3 — 맞벌이 / 3천만",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "earned-income-tax-credit",
+      "case": "Case 4 — 단독 / 2,500만 (한도 초과)",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "earned-income-tax-credit",
+      "case": "Case 5 — 맞벌이 / 1,500만",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "industrial-accident-pay",
+      "case": "Case 1 — 월 300만 / 30일",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "industrial-accident-pay",
+      "case": "Case 2 — 월 400만 / 90일",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "industrial-accident-pay",
+      "case": "Case 3 — 월 250만 / 60일",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "industrial-accident-pay",
+      "case": "Case 4 — 월 500만 / 180일",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "industrial-accident-pay",
+      "case": "Case 5 — 월 600만 / 365일",
+      "ts": 1778203609169
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 1 — 월 250만 / 단태",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 2 — 월 350만 / 단태",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 3 — 월 400만 / 다태",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 4 — 월 200만 / 단태 (상한 미만)",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 5 — 월 500만 / 다태 (상한)",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "median-income",
+      "case": "Case 1 — 1인 / 100만",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "median-income",
+      "case": "Case 2 — 2인 / 200만",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "median-income",
+      "case": "Case 3 — 3인 / 400만",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "median-income",
+      "case": "Case 4 — 4인 / 600만",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "median-income",
+      "case": "Case 5 — 1인 / 50만",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 1 — 1분위 / 등록금 400만",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 2 — 4분위 / 등록금 500만",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 3 — 7분위 / 등록금 450만",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 4 — 9분위 (지원 X)",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 5 — 3분위 / 등록금 600만",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "near-poor-eligibility",
+      "case": "Case 1 — 1인 / 80만 (자격 O)",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "near-poor-eligibility",
+      "case": "Case 2 — 2인 / 150만",
+      "ts": 1778203609170
+    },
+    {
+      "status": "fail",
+      "calc": "near-poor-eligibility",
+      "case": "Case 3 — 3인 / 250만 (자격 O)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "incomePct: engine=46.7 vs expected=46.6 (Δ0.10000000000000142)"
+      ],
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "near-poor-eligibility",
+      "case": "Case 4 — 4인 / 300만 (자격 O — 2026 인상으로 변경)",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "near-poor-eligibility",
+      "case": "Case 5 — 4인 / 400만 (자격 X)",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 1 — 통상 200만 × 6개월",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 2 — 통상 300만 × 12개월 (상한 적용)",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 3 — 통상 150만 × 12개월",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 4 — 통상 80만 × 12개월 (하한 적용)",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 5 — 통상 500만 × 9개월 (상한 적용)",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 1 — 50% / 8세 (자격 O)",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 2 — 70% / 10세 (소득 초과)",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 3 — 30% / 5세",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 4 — 60% / 17세 (경계)",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 5 — 45% / 19세 (연령 초과)",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit-days",
+      "case": "Case 1 — 0.5년 / 일반",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit-days",
+      "case": "Case 2 — 2년 / 일반",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit-days",
+      "case": "Case 3 — 4년 / 일반",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit-days",
+      "case": "Case 4 — 7년 / 50세+",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit-days",
+      "case": "Case 5 — 15년 / 50세+",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit",
+      "case": "Case 1 — 월급 200만, 가입 2년, 50세 미만 (하한 적용)",
+      "ts": 1778203609170
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit",
+      "case": "Case 2 — 월급 300만, 가입 5년 (정확히), 50세 미만 (하한 적용)",
+      "ts": 1778203609171
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit",
+      "case": "Case 3 — 월급 500만, 가입 10년, 50세 미만 (상한 적용)",
+      "ts": 1778203609171
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit",
+      "case": "Case 4 — 월급 250만, 가입 1년 (정확히), 50세 미만 (하한 적용)",
+      "ts": 1778203609171
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit",
+      "case": "Case 5 — 월급 400만, 가입 8년, 50세 이상 (상한 + 가산일)",
+      "ts": 1778203609171
+    },
+    {
+      "status": "pass",
+      "calc": "youth-housing-allowance",
+      "case": "Case 1 — 1인 / 50만",
+      "ts": 1778203609171
+    },
+    {
+      "status": "pass",
+      "calc": "youth-housing-allowance",
+      "case": "Case 2 — 1인 / 100만",
+      "ts": 1778203609171
+    },
+    {
+      "status": "pass",
+      "calc": "youth-housing-allowance",
+      "case": "Case 3 — 4인 / 150만",
+      "ts": 1778203609171
+    },
+    {
+      "status": "pass",
+      "calc": "youth-housing-allowance",
+      "case": "Case 4 — 4인 / 250만",
+      "ts": 1778203609171
+    },
+    {
+      "status": "pass",
+      "calc": "youth-housing-allowance",
+      "case": "Case 5 — 1인 / 200만 (자격 X)",
+      "ts": 1778203609171
+    },
+    {
+      "status": "pass",
+      "calc": "youth-rent-support",
+      "case": "Case 1 — 25세 / 무주택 / 50% / 월세 50만 (자격 O)",
+      "ts": 1778203609171
+    },
+    {
+      "status": "pass",
+      "calc": "youth-rent-support",
+      "case": "Case 2 — 30세 / 70% (소득 초과)",
+      "ts": 1778203609171
+    },
+    {
+      "status": "pass",
+      "calc": "youth-rent-support",
+      "case": "Case 3 — 22세 / 무주택 / 40% / 월세 15만",
+      "ts": 1778203609171
+    },
+    {
+      "status": "pass",
+      "calc": "youth-rent-support",
+      "case": "Case 4 — 35세 (연령 초과)",
+      "ts": 1778203609171
+    },
+    {
+      "status": "pass",
+      "calc": "youth-rent-support",
+      "case": "Case 5 — 28세 / 유주택 (X)",
+      "ts": 1778203609171
+    }
+  ]
+}

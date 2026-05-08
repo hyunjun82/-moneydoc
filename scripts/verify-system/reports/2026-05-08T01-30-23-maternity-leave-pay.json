@@ -1,0 +1,39 @@
+{
+  "label": "maternity-leave-pay",
+  "timestamp": "2026-05-08T01-30-23",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 1 — 월 250만 / 단태",
+      "ts": 1778203823281
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 2 — 월 350만 / 단태",
+      "ts": 1778203823284
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 3 — 월 400만 / 다태",
+      "ts": 1778203823284
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 4 — 월 200만 / 단태 (상한 미만)",
+      "ts": 1778203823284
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 5 — 월 500만 / 다태 (상한)",
+      "ts": 1778203823284
+    }
+  ]
+}

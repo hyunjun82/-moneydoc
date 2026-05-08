@@ -1,0 +1,39 @@
+{
+  "label": "unemployment-benefit",
+  "timestamp": "2026-05-08T01-29-44",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit",
+      "case": "Case 1 — 월급 200만, 가입 2년, 50세 미만 (하한 적용)",
+      "ts": 1778203784727
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit",
+      "case": "Case 2 — 월급 300만, 가입 5년 (정확히), 50세 미만 (하한 적용)",
+      "ts": 1778203784732
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit",
+      "case": "Case 3 — 월급 500만, 가입 10년, 50세 미만 (상한 적용)",
+      "ts": 1778203784732
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit",
+      "case": "Case 4 — 월급 250만, 가입 1년 (정확히), 50세 미만 (하한 적용)",
+      "ts": 1778203784732
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit",
+      "case": "Case 5 — 월급 400만, 가입 8년, 50세 이상 (상한 + 가산일)",
+      "ts": 1778203784733
+    }
+  ]
+}

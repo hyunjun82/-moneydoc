@@ -1,0 +1,234 @@
+{
+  "label": "law",
+  "timestamp": "2026-05-08T01-24-37",
+  "pass": 32,
+  "fail": 3,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "annual-leave-allowance",
+      "case": "Case 1 — 월 300만 / 5일 미사용",
+      "ts": 1778203477482
+    },
+    {
+      "status": "pass",
+      "calc": "annual-leave-allowance",
+      "case": "Case 2 — 월 400만 / 10일",
+      "ts": 1778203477485
+    },
+    {
+      "status": "pass",
+      "calc": "annual-leave-allowance",
+      "case": "Case 3 — 월 250만 / 8일",
+      "ts": 1778203477485
+    },
+    {
+      "status": "pass",
+      "calc": "annual-leave-allowance",
+      "case": "Case 4 — 월 500만 / 15일",
+      "ts": 1778203477485
+    },
+    {
+      "status": "pass",
+      "calc": "annual-leave-allowance",
+      "case": "Case 5 — 월 350만 / 3일",
+      "ts": 1778203477485
+    },
+    {
+      "status": "pass",
+      "calc": "child-support",
+      "case": "Case 1 — 합산 250만, 자녀 5세",
+      "ts": 1778203477485
+    },
+    {
+      "status": "pass",
+      "calc": "child-support",
+      "case": "Case 2 — 합산 500만, 자녀 10세",
+      "ts": 1778203477485
+    },
+    {
+      "status": "pass",
+      "calc": "child-support",
+      "case": "Case 3 — 합산 800만, 자녀 16세",
+      "ts": 1778203477485
+    },
+    {
+      "status": "pass",
+      "calc": "child-support",
+      "case": "Case 4 — 합산 150만, 자녀 1세",
+      "ts": 1778203477486
+    },
+    {
+      "status": "pass",
+      "calc": "child-support",
+      "case": "Case 5 — 합산 1300만, 자녀 14세",
+      "ts": 1778203477486
+    },
+    {
+      "status": "pass",
+      "calc": "divorce-alimony",
+      "case": "Case 1 — 결혼 3년 / medium (1천만)",
+      "ts": 1778203477487
+    },
+    {
+      "status": "pass",
+      "calc": "divorce-alimony",
+      "case": "Case 2 — 결혼 8년 / high (3천만)",
+      "ts": 1778203477487
+    },
+    {
+      "status": "fail",
+      "calc": "divorce-alimony",
+      "case": "Case 3 — 결혼 15년 / medium (2천만)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "baseAmount: engine=35000000 vs expected=20000000 (Δ15000000)",
+        "estimatedAmount: engine=35000000 vs expected=20000000 (Δ15000000)"
+      ],
+      "ts": 1778203477487
+    },
+    {
+      "status": "fail",
+      "calc": "divorce-alimony",
+      "case": "Case 4 — 결혼 25년 / high (5천만, 보수 조정)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "baseAmount: engine=60000000 vs expected=33333333 (Δ26666667)",
+        "estimatedAmount: engine=90000000 vs expected=50000000 (Δ40000000)"
+      ],
+      "ts": 1778203477487
+    },
+    {
+      "status": "fail",
+      "calc": "divorce-alimony",
+      "case": "Case 5 — 결혼 12년 / low (1천만)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "baseAmount: engine=35000000 vs expected=20000000 (Δ15000000)",
+        "estimatedAmount: engine=17500000 vs expected=10000000 (Δ7500000)"
+      ],
+      "ts": 1778203477487
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-deadline",
+      "case": "Case 1 — 상속개시를 안 날 2026-04-01 / 오늘 2026-05-01",
+      "ts": 1778203477487
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-deadline",
+      "case": "Case 2 — 상속개시를 안 날 2026-01-15 (만료)",
+      "ts": 1778203477487
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-deadline",
+      "case": "Case 3 — 상속개시를 안 날 2026-05-01 (오늘)",
+      "ts": 1778203477487
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-deadline",
+      "case": "Case 4 — 상속개시를 안 날 2026-03-01",
+      "ts": 1778203477487
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-deadline",
+      "case": "Case 5 — 상속개시를 안 날 2026-02-15",
+      "ts": 1778203477487
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 1 — 10억 / 배우자 + 자녀 2",
+      "ts": 1778203477487
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 2 — 5억 / 배우자 + 부모 2 (자녀 X)",
+      "ts": 1778203477487
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 3 — 20억 / 배우자 + 자녀 3",
+      "ts": 1778203477487
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 4 — 3억 / 자녀 1만 (배우자 X)",
+      "ts": 1778203477487
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 5 — 5억 / 형제 3 (배우자·자녀·부모 모두 X)",
+      "ts": 1778203477488
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 1 — 월급 250만, 1년 근속",
+      "ts": 1778203477488
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 2 — 월급 300만, 3년 근속, 연간 상여 600만",
+      "ts": 1778203477488
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 3 — 월급 400만, 5년 근속, 상여 800만, 연차수당 80만",
+      "ts": 1778203477488
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 4 — 월급 500만, 10년 근속, 상여 1200만",
+      "ts": 1778203477488
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 5 — 월급 350만, 7년 근속",
+      "ts": 1778203477488
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 1 — 300만 / 30일",
+      "ts": 1778203477488
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 2 — 500만 / 90일",
+      "ts": 1778203477488
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 3 — 1천만 / 180일",
+      "ts": 1778203477488
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 4 — 200만 / 14일 (최소)",
+      "ts": 1778203477488
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 5 — 800만 / 365일",
+      "ts": 1778203477488
+    }
+  ]
+}

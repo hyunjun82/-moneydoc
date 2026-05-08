@@ -8,31 +8,208 @@
   "year": 2026,
   "lastUpdated": "2026-05-01",
   "lastVerified": "2026-05-01",
-  "source": { "primary": { "agency": "표준 부동산 산식", "document": "Total ROI 표준 산식", "year": 2026 } },
+  "source": {
+    "primary": {
+      "agency": "표준 부동산 산식",
+      "document": "Total ROI 표준 산식",
+      "year": 2026
+    }
+  },
   "constants": {},
   "formula": [
-    { "step": 1, "name": "총 수익", "expr": "임대수익 + 자본이득" },
-    { "step": 2, "name": "총 ROI", "expr": "총수익 / 투자금 × 100" },
-    { "step": 3, "name": "연 ROI", "expr": "총 ROI / 보유기간" }
+    {
+      "step": 1,
+      "name": "총 수익",
+      "expr": "임대수익 + 자본이득"
+    },
+    {
+      "step": 2,
+      "name": "총 ROI",
+      "expr": "총수익 / 투자금 × 100"
+    },
+    {
+      "step": 3,
+      "name": "연 ROI",
+      "expr": "총 ROI / 보유기간"
+    }
   ],
   "inputs": [
-    { "id": "investedCapital", "label": "투자금", "type": "currency", "min": 10000000, "default": 300000000 },
-    { "id": "totalRentIncome", "label": "총 임대수익 (보유기간)", "type": "currency", "min": 0, "default": 60000000 },
-    { "id": "capitalGain", "label": "자본이득 (매도가-매수가)", "type": "currency", "default": 200000000 },
-    { "id": "holdingYears", "label": "보유기간 (년)", "type": "number", "min": 1, "max": 50, "default": 5 }
+    {
+      "id": "investedCapital",
+      "label": "투자금",
+      "type": "currency",
+      "min": 10000000,
+      "default": 300000000
+    },
+    {
+      "id": "totalRentIncome",
+      "label": "총 임대수익 (보유기간)",
+      "type": "currency",
+      "min": 0,
+      "default": 60000000
+    },
+    {
+      "id": "capitalGain",
+      "label": "자본이득 (매도가-매수가)",
+      "type": "currency",
+      "default": 200000000
+    },
+    {
+      "id": "holdingYears",
+      "label": "보유기간 (년)",
+      "type": "number",
+      "min": 1,
+      "max": 50,
+      "default": 5
+    }
   ],
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-01",
     "method": "(임대 + 자본이득) / 투자금 × 100. 연환산 = 총 / 보유년.",
     "cases": [
-      { "name": "Case 1 — 투자 3억 / 임대 6천 / 자본 2억 / 5년", "input": { "investedCapital": 300000000, "totalRentIncome": 60000000, "capitalGain": 200000000, "holdingYears": 5 }, "expected": { "totalReturn": 260000000, "totalROI": 86.67, "annualROI": 17.33 } },
-      { "name": "Case 2 — 투자 5억 / 임대 1.2억 / 자본 3억 / 10년", "input": { "investedCapital": 500000000, "totalRentIncome": 120000000, "capitalGain": 300000000, "holdingYears": 10 }, "expected": { "totalReturn": 420000000, "totalROI": 84, "annualROI": 8.4 } },
-      { "name": "Case 3 — 투자 2억 / 임대 3천 / 자본 5천 / 3년", "input": { "investedCapital": 200000000, "totalRentIncome": 30000000, "capitalGain": 50000000, "holdingYears": 3 }, "expected": { "totalReturn": 80000000, "totalROI": 40, "annualROI": 13.33 } },
-      { "name": "Case 4 — 투자 10억 / 임대 1.5억 / 자본 5억 / 7년", "input": { "investedCapital": 1000000000, "totalRentIncome": 150000000, "capitalGain": 500000000, "holdingYears": 7 }, "expected": { "totalReturn": 650000000, "totalROI": 65, "annualROI": 9.29 } },
-      { "name": "Case 5 — 투자 4억 / 임대 8천 / 자본 1억 / 5년", "input": { "investedCapital": 400000000, "totalRentIncome": 80000000, "capitalGain": 100000000, "holdingYears": 5 }, "expected": { "totalReturn": 180000000, "totalROI": 45, "annualROI": 9 } }
+      {
+        "name": "Case 1 — 투자 3억 / 임대 6천 / 자본 2억 / 5년",
+        "input": {
+          "investedCapital": 300000000,
+          "totalRentIncome": 60000000,
+          "capitalGain": 200000000,
+          "holdingYears": 5
+        },
+        "expected": {
+          "totalReturn": 260000000,
+          "totalROI": 86.67,
+          "annualROI": 17.33
+        }
+      },
+      {
+        "name": "Case 2 — 투자 5억 / 임대 1.2억 / 자본 3억 / 10년",
+        "input": {
+          "investedCapital": 500000000,
+          "totalRentIncome": 120000000,
+          "capitalGain": 300000000,
+          "holdingYears": 10
+        },
+        "expected": {
+          "totalReturn": 420000000,
+          "totalROI": 84,
+          "annualROI": 8.4
+        }
+      },
+      {
+        "name": "Case 3 — 투자 2억 / 임대 3천 / 자본 5천 / 3년",
+        "input": {
+          "investedCapital": 200000000,
+          "totalRentIncome": 30000000,
+          "capitalGain": 50000000,
+          "holdingYears": 3
+        },
+        "expected": {
+          "totalReturn": 80000000,
+          "totalROI": 40,
+          "annualROI": 13.33
+        }
+      },
+      {
+        "name": "Case 4 — 투자 10억 / 임대 1.5억 / 자본 5억 / 7년",
+        "input": {
+          "investedCapital": 1000000000,
+          "totalRentIncome": 150000000,
+          "capitalGain": 500000000,
+          "holdingYears": 7
+        },
+        "expected": {
+          "totalReturn": 650000000,
+          "totalROI": 65,
+          "annualROI": 9.29
+        }
+      },
+      {
+        "name": "Case 5 — 투자 4억 / 임대 8천 / 자본 1억 / 5년",
+        "input": {
+          "investedCapital": 400000000,
+          "totalRentIncome": 80000000,
+          "capitalGain": 100000000,
+          "holdingYears": 5
+        },
+        "expected": {
+          "totalReturn": 180000000,
+          "totalROI": 45,
+          "annualROI": 9
+        }
+      }
     ]
   },
-  "guide": { "howToUse": "투자금·임대수익·자본이득·보유기간 입력 시 총·연 ROI 산출.", "tips": ["세금·중개수수료 등 비용 차감 후 정확한 ROI 산출.", "연 5% 이상 양호."] },
-  "related": ["rental-yield", "transfer-tax-1home"]
+  "guide": {
+    "howToUse": "투자금·임대수익·자본이득·보유기간 입력 시 총·연 ROI 산출.",
+    "tips": [
+      "💰 ROI = (임대수익 + 자본이득) / 투자금 × 100.",
+      "📊 임대수익률 3~5% / ROI는 자본이득 더해 5~10% 가능.",
+      "🏛️ 양도세 차감 후 = 실수령 ROI. 다주택 50%+ 시 반토막.",
+      "⚠️ 가격 정체·하락 시 ROI 음수 가능.",
+      "🔗 양도세·보유세 계산기로 실수령 ROI 정확 산정."
+    ],
+    "tables": {
+      "roiCaseTable": [
+        {
+          "매매가": "5억",
+          "보증금": "1억",
+          "월세": "150만",
+          "5년 매도": "6억",
+          "총 ROI": "약 28%",
+          "연환산": "5.6%"
+        },
+        {
+          "매매가": "10억",
+          "보증금": "2억",
+          "월세": "300만",
+          "5년 매도": "12억",
+          "총 ROI": "약 25%",
+          "연환산": "5.0%"
+        },
+        {
+          "매매가": "5억",
+          "보증금": "1억",
+          "월세": "150만",
+          "5년 매도": "5억 (정체)",
+          "총 ROI": "약 22%",
+          "연환산": "4.4%"
+        },
+        {
+          "매매가": "10억",
+          "보증금": "2억",
+          "월세": "300만",
+          "5년 매도": "9억 (하락)",
+          "총 ROI": "약 -8%",
+          "연환산": "-1.6%"
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "5억 / 보증금 1억 / 월세 150만 / 5년 6억 매도 ROI?",
+        "a": "투자 4억 / 수익 1.9억 / ROI 약 47.5%. 양도세 차감 후 32~35%."
+      },
+      {
+        "q": "임대수익률 vs ROI?",
+        "a": "임대수익률은 임대만. ROI는 자본이득 포함. 5년+ 보유 시 ROI ↑."
+      },
+      {
+        "q": "다주택자 양도세 후 ROI?",
+        "a": "조정 다주택 양도세 50%+ → 실수령 ROI 절반 이하."
+      },
+      {
+        "q": "투자금이란?",
+        "a": "매수가 - 보증금 + 취득세·중개수수료."
+      },
+      {
+        "q": "ROI 음수?",
+        "a": "5년간 5%+ 하락 + 임대수익 < 양도세·보유세 시 발생."
+      }
+    ]
+  },
+  "related": [
+    "rental-yield",
+    "transfer-tax-1home"
+  ]
 }

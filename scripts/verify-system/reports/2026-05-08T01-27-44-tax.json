@@ -1,0 +1,660 @@
+{
+  "label": "tax",
+  "timestamp": "2026-05-08T01-27-44",
+  "pass": 72,
+  "fail": 18,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 1 — 매출 3천만 / 경비 80% / 1인",
+      "ts": 1778203664578
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 2 — 매출 5천만 / 경비 65% / 2인",
+      "ts": 1778203664580
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 3 — 매출 1억 / 경비 50% / 4인",
+      "ts": 1778203664580
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 4 — 매출 2천만 / 경비 85% / 1인",
+      "ts": 1778203664580
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 5 — 매출 2억 / 경비 60% / 1인",
+      "ts": 1778203664580
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 1 — 자녀 0",
+      "ts": 1778203664580
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 2 — 자녀 1, 첫째 출산",
+      "ts": 1778203664580
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 3 — 자녀 2, 둘째 출산",
+      "ts": 1778203664580
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 4 — 자녀 3, 셋째 출산",
+      "ts": 1778203664581
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 5 — 자녀 2 (출산 없음)",
+      "ts": 1778203664581
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 1 — 사업소득 3천만, 부양 1, 자녀 0",
+      "ts": 1778203664582
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 2 — 임대소득 5천만, 부양 2, 자녀 0",
+      "ts": 1778203664582
+    },
+    {
+      "status": "fail",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 3 — 사업소득 1억, 부양 4, 자녀 2",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "taxBeforeCredit: engine=17459999.999999996 vs expected=17460000 (Δ-3.725290298461914e-9)",
+        "decisionTax: engine=16909999.999999996 vs expected=16910000 (Δ-3.725290298461914e-9)",
+        "totalTax: engine=18600999.999999996 vs expected=18601000 (Δ-3.725290298461914e-9)"
+      ],
+      "ts": 1778203664582
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 4 — 종합 1.5억, 부양 1",
+      "ts": 1778203664582
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 5 — 고소득 5억, 부양 4, 자녀 0",
+      "ts": 1778203664582
+    },
+    {
+      "status": "pass",
+      "calc": "crypto-transfer-tax",
+      "case": "Case 1 — 차익 500만",
+      "ts": 1778203664582
+    },
+    {
+      "status": "pass",
+      "calc": "crypto-transfer-tax",
+      "case": "Case 2 — 차익 3천만",
+      "ts": 1778203664582
+    },
+    {
+      "status": "pass",
+      "calc": "crypto-transfer-tax",
+      "case": "Case 3 — 차익 1억",
+      "ts": 1778203664582
+    },
+    {
+      "status": "pass",
+      "calc": "crypto-transfer-tax",
+      "case": "Case 4 — 차익 20만 (공제 미달)",
+      "ts": 1778203664582
+    },
+    {
+      "status": "pass",
+      "calc": "crypto-transfer-tax",
+      "case": "Case 5 — 차익 5억",
+      "ts": 1778203664582
+    },
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 1 — 일급 15만 (비과세 한도)",
+      "ts": 1778203664582
+    },
+    {
+      "status": "fail",
+      "calc": "daily-wage-tax",
+      "case": "Case 2 — 일급 20만",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "dailyTax: engine=1650 vs expected=1350 (Δ300)",
+        "dailyLocalTax: engine=165 vs expected=135 (Δ30)",
+        "totalDailyDeduct: engine=1815 vs expected=1485 (Δ330)",
+        "netDailyWage: engine=198185 vs expected=198515 (Δ-330)",
+        "totalNet: engine=4360070 vs expected=4367330 (Δ-7260)"
+      ],
+      "ts": 1778203664582
+    },
+    {
+      "status": "fail",
+      "calc": "daily-wage-tax",
+      "case": "Case 3 — 일급 30만",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "dailyTax: engine=4950 vs expected=4050 (Δ900)",
+        "dailyLocalTax: engine=495 vs expected=405 (Δ90)",
+        "totalDailyDeduct: engine=5445 vs expected=4455 (Δ990)",
+        "netDailyWage: engine=294555 vs expected=295545 (Δ-990)",
+        "totalNet: engine=4418325 vs expected=4433175 (Δ-14850)"
+      ],
+      "ts": 1778203664582
+    },
+    {
+      "status": "fail",
+      "calc": "daily-wage-tax",
+      "case": "Case 4 — 일급 25만",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "dailyTax: engine=3300 vs expected=2700 (Δ600)",
+        "dailyLocalTax: engine=330 vs expected=270 (Δ60)",
+        "totalDailyDeduct: engine=3630 vs expected=2970 (Δ660)",
+        "netDailyWage: engine=246370 vs expected=247030 (Δ-660)",
+        "totalNet: engine=6159250 vs expected=6175750 (Δ-16500)"
+      ],
+      "ts": 1778203664583
+    },
+    {
+      "status": "fail",
+      "calc": "daily-wage-tax",
+      "case": "Case 5 — 일급 50만",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "dailyTax: engine=11550 vs expected=9450 (Δ2100)",
+        "dailyLocalTax: engine=1155 vs expected=945 (Δ210)",
+        "totalDailyDeduct: engine=12705 vs expected=10395 (Δ2310)",
+        "netDailyWage: engine=487295 vs expected=489605 (Δ-2310)",
+        "totalNet: engine=4872950 vs expected=4896050 (Δ-23100)"
+      ],
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance-employer",
+      "case": "Case 1 — 월 300만, 산재 1.5%",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance-employer",
+      "case": "Case 2 — 월 500만, 산재 1.5%",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance-employer",
+      "case": "Case 3 — 월 700만 (NP 상한)",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance-employer",
+      "case": "Case 4 — 월 250만",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance-employer",
+      "case": "Case 5 — 월 1천만",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 1 — 월 보수 200만",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 2 — 월 보수 300만",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 3 — 월 보수 500만",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 4 — 월 보수 700만 (NP 상한 적용)",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 5 — 월 보수 1000만 (NP 상한)",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 1 — 100만",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 2 — 300만",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 3 — 500만",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 4 — 1천만",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 5 — 50만",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 1 — 1억 자녀(성인) (공제 5천만)",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 2 — 5억 자녀(성인)",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 3 — 10억 배우자 (공제 6억)",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 4 — 3억 부모(성인 직계존속)",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 5 — 1억 형제 (공제 1천만)",
+      "ts": 1778203664583
+    },
+    {
+      "status": "fail",
+      "calc": "inheritance-tax",
+      "case": "Case 1 — 5억, 배우자 X, 자녀 2 (인적공제 0)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "deduction: engine=200000000 vs expected=500000000 (Δ-300000000)",
+        "taxableBase: engine=300000000 vs expected=0 (Δ300000000)",
+        "tax: engine=50000000 vs expected=0 (Δ50000000)"
+      ],
+      "ts": 1778203664583
+    },
+    {
+      "status": "fail",
+      "calc": "inheritance-tax",
+      "case": "Case 2 — 10억, 배우자 O, 자녀 2 (배우자공제 5억 최소)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "deduction: engine=700000000 vs expected=1000000000 (Δ-300000000)",
+        "taxableBase: engine=300000000 vs expected=0 (Δ300000000)",
+        "tax: engine=50000000 vs expected=0 (Δ50000000)"
+      ],
+      "ts": 1778203664583
+    },
+    {
+      "status": "fail",
+      "calc": "inheritance-tax",
+      "case": "Case 3 — 15억, 배우자 O, 자녀 2 (배우자 6.43억)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "deduction: engine=842857143 vs expected=1142857143 (Δ-300000000)",
+        "taxableBase: engine=657142857 vs expected=357142857 (Δ300000000)",
+        "tax: engine=137142857 vs expected=61428571 (Δ75714286)"
+      ],
+      "ts": 1778203664583
+    },
+    {
+      "status": "fail",
+      "calc": "inheritance-tax",
+      "case": "Case 4 — 30억, 배우자 O, 자녀 2 (배우자 12.86억)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "deduction: engine=1485714286 vs expected=1785714286 (Δ-300000000)",
+        "taxableBase: engine=1514285714 vs expected=1214285714 (Δ300000000)",
+        "tax: engine=445714286 vs expected=325714286 (Δ120000000)"
+      ],
+      "ts": 1778203664583
+    },
+    {
+      "status": "fail",
+      "calc": "inheritance-tax",
+      "case": "Case 5 — 50억, 배우자 O, 자녀 2 (배우자 21.43억)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "deduction: engine=2342857143 vs expected=2642857143 (Δ-300000000)",
+        "taxableBase: engine=2657142857 vs expected=2357142857 (Δ300000000)",
+        "tax: engine=902857143 vs expected=782857143 (Δ120000000)"
+      ],
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 1 — 50만",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 2 — 100만",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 3 — 300만",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 4 — 500만",
+      "ts": 1778203664583
+    },
+    {
+      "status": "fail",
+      "calc": "other-income-tax",
+      "case": "Case 5 — 10만 (과세최저한 적용 비과세)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "incomeTax: engine=8000 vs expected=0 (Δ8000)",
+        "localTax: engine=800 vs expected=0 (Δ800)",
+        "totalTax: engine=8800 vs expected=0 (Δ8800)"
+      ],
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "overseas-stock-tax",
+      "case": "Case 1 — 차익 500만",
+      "ts": 1778203664583
+    },
+    {
+      "status": "pass",
+      "calc": "overseas-stock-tax",
+      "case": "Case 2 — 차익 3천만",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "overseas-stock-tax",
+      "case": "Case 3 — 차익 1억",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "overseas-stock-tax",
+      "case": "Case 4 — 차익 50만 (공제 미달)",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "overseas-stock-tax",
+      "case": "Case 5 — 차익 2억",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-income-tax",
+      "case": "Case 1 — 퇴직금 3천만 / 5년",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-income-tax",
+      "case": "Case 2 — 퇴직금 1억 / 15년",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-income-tax",
+      "case": "Case 3 — 퇴직금 5천만 / 10년",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-income-tax",
+      "case": "Case 4 — 퇴직금 2억 / 25년",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-income-tax",
+      "case": "Case 5 — 퇴직금 8천만 / 20년",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 1 — 신입사원 (연봉 3천만, 부양 1명, 자녀 0, 비과세 0)",
+      "ts": 1778203664584
+    },
+    {
+      "status": "fail",
+      "calc": "salary-net-pay",
+      "case": "Case 2 — 평균 직장인 (연봉 5천만, 부양 1명, 자녀 0, 비과세 0)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "monthlyLocalTax: engine=21813 vs expected=21812 (Δ1)",
+        "totalDeduction: engine=644830 vs expected=644829 (Δ1)",
+        "netMonthly: engine=3521837 vs expected=3521838 (Δ-1)"
+      ],
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 3 — 4인 가족 (연봉 7천만, 부양 4명, 자녀 2, 비과세 0)",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 4 — 고연봉 미혼 (연봉 1억, 부양 1명, 자녀 0, 비과세 0)",
+      "ts": 1778203664584
+    },
+    {
+      "status": "fail",
+      "calc": "salary-net-pay",
+      "case": "Case 5 — 비과세 적용 (연봉 5천만, 부양 1명, 자녀 0, 비과세 월 20만)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "monthlyLocalTax: engine=18963 vs expected=18962 (Δ1)",
+        "totalDeduction: engine=594045 vs expected=594044 (Δ1)",
+        "netMonthly: engine=3372622 vs expected=3372623 (Δ-1)"
+      ],
+      "ts": 1778203664584
+    },
+    {
+      "status": "fail",
+      "calc": "stock-transfer-tax",
+      "case": "Case 1 — 비대주주 차익 500만 (22%)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "incomeTax: engine=495000 vs expected=500000 (Δ-5000)",
+        "localTax: engine=55000 vs expected=50000 (Δ5000)"
+      ],
+      "ts": 1778203664584
+    },
+    {
+      "status": "fail",
+      "calc": "stock-transfer-tax",
+      "case": "Case 2 — 비대주주 차익 5천만",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "incomeTax: engine=9405000 vs expected=9500000 (Δ-95000)",
+        "localTax: engine=1045000 vs expected=950000 (Δ95000)"
+      ],
+      "ts": 1778203664584
+    },
+    {
+      "status": "fail",
+      "calc": "stock-transfer-tax",
+      "case": "Case 3 — 비대주주 차익 1억",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "incomeTax: engine=19305000 vs expected=19500000 (Δ-195000)",
+        "localTax: engine=2145000 vs expected=1950000 (Δ195000)"
+      ],
+      "ts": 1778203664584
+    },
+    {
+      "status": "fail",
+      "calc": "stock-transfer-tax",
+      "case": "Case 4 — 대주주 차익 2억 (3억 미만, 22%)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "incomeTax: engine=39105000 vs expected=39500000 (Δ-395000)",
+        "localTax: engine=4345000 vs expected=3950000 (Δ395000)"
+      ],
+      "ts": 1778203664584
+    },
+    {
+      "status": "fail",
+      "calc": "stock-transfer-tax",
+      "case": "Case 5 — 대주주 차익 5억 (3억 초과, 27.5%)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "incomeTax: engine=125867500 vs expected=124375000 (Δ1492500)",
+        "localTax: engine=10945000 vs expected=12437500 (Δ-1492500)"
+      ],
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 1 — 매출 100만 / 매입 30만",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 2 — 매출 500만 / 매입 200만",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 3 — 매출 1천만 / 매입 500만",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 4 — 매출 200만 / 매입 250만 (환급)",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 5 — 매출 5천만 / 매입 3천만",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "vat-simplified",
+      "case": "Case 1 — 매출 3천만 / 음식점 15%",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "vat-simplified",
+      "case": "Case 2 — 매출 5천만 / 제조 20%",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "vat-simplified",
+      "case": "Case 3 — 매출 8천만 / 소매 15%",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "vat-simplified",
+      "case": "Case 4 — 매출 2천만 / 건설 30%",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "vat-simplified",
+      "case": "Case 5 — 매출 1억 / 숙박 25%",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "year-end-tax-refund",
+      "case": "Case 1 — 연 5천만, 부양 1, 떼인 400만",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "year-end-tax-refund",
+      "case": "Case 2 — 연 7천만, 4인 가족, 추가공제, 떼인 500만",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "year-end-tax-refund",
+      "case": "Case 3 — 연 3천만, 부양 1, 떼인 100만",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "year-end-tax-refund",
+      "case": "Case 4 — 연 1억, 부양 1, 떼인 1500만",
+      "ts": 1778203664584
+    },
+    {
+      "status": "pass",
+      "calc": "year-end-tax-refund",
+      "case": "Case 5 — 연 4천만, 부양 3, 자녀 1, 추가공제",
+      "ts": 1778203664584
+    }
+  ]
+}

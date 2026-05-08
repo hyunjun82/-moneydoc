@@ -1,0 +1,673 @@
+{
+  "label": "government",
+  "timestamp": "2026-05-08T01-19-03",
+  "pass": 57,
+  "fail": 28,
+  "error": 0,
+  "results": [
+    {
+      "status": "fail",
+      "calc": "basic-livelihood-eligibility",
+      "case": "Case 1 — 1인 / 60만 (4종 모두)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "median100: engine=2735186 vs expected=2564238 (Δ170948)",
+        "medical.threshold: engine=1094074 vs expected=1025695 (Δ68379)",
+        "housing.threshold: engine=1285537 vs expected=1230834 (Δ54703)",
+        "education.threshold: engine=1367593 vs expected=1282119 (Δ85474)"
+      ],
+      "ts": 1778203143270
+    },
+    {
+      "status": "fail",
+      "calc": "basic-livelihood-eligibility",
+      "case": "Case 2 — 2인 / 110만 (4종)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "median100: engine=4479243 vs expected=4199292 (Δ279951)",
+        "medical.threshold: engine=1791697 vs expected=1679717 (Δ111980)",
+        "housing.threshold: engine=2105244 vs expected=2015660 (Δ89584)",
+        "education.threshold: engine=2239622 vs expected=2099646 (Δ139976)"
+      ],
+      "ts": 1778203143277
+    },
+    {
+      "status": "fail",
+      "calc": "basic-livelihood-eligibility",
+      "case": "Case 3 — 3인 / 150만 (4종 모두 — 생계 한도 171만)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "median100: engine=5729913 vs expected=5359036 (Δ370877)",
+        "livelihood.threshold: engine=1718974 vs expected=1714892 (Δ4082)",
+        "medical.threshold: engine=2291965 vs expected=2143614 (Δ148351)",
+        "housing.threshold: engine=2693059 vs expected=2572337 (Δ120722)",
+        "education.threshold: engine=2864957 vs expected=2679518 (Δ185439)"
+      ],
+      "ts": 1778203143280
+    },
+    {
+      "status": "fail",
+      "calc": "basic-livelihood-eligibility",
+      "case": "Case 4 — 4인 / 270만 (주거·교육만 O)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "median100: engine=6953664 vs expected=6494738 (Δ458926)",
+        "livelihood.threshold: engine=2086099 vs expected=2078316 (Δ7783)",
+        "medical.threshold: engine=2781466 vs expected=2597895 (Δ183571)",
+        "medical.isEligible: engine=true vs expected=false (Δstring)",
+        "housing.threshold: engine=3268222 vs expected=3117474 (Δ150748)",
+        "education.threshold: engine=3476832 vs expected=3247369 (Δ229463)"
+      ],
+      "ts": 1778203143280
+    },
+    {
+      "status": "fail",
+      "calc": "basic-livelihood-eligibility",
+      "case": "Case 5 — 4인 / 350만 (모두 X)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "median100: engine=6953664 vs expected=6494738 (Δ458926)",
+        "livelihood.threshold: engine=2086099 vs expected=2078316 (Δ7783)",
+        "medical.threshold: engine=2781466 vs expected=2597895 (Δ183571)",
+        "housing.threshold: engine=3268222 vs expected=3117474 (Δ150748)",
+        "education.threshold: engine=3476832 vs expected=3247369 (Δ229463)"
+      ],
+      "ts": 1778203143280
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 1 — 단독, 소득 100만 (자격 O)",
+      "ts": 1778203143281
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 2 — 단독, 소득 250만 (자격 X — 247만 초과)",
+      "ts": 1778203143281
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 3 — 부부, 소득 200만 (자격 O)",
+      "ts": 1778203143281
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 4 — 단독, 소득 247만 (경계, 자격 O)",
+      "ts": 1778203143281
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 5 — 부부, 소득 400만 (자격 X — 395.2만 초과)",
+      "ts": 1778203143281
+    },
+    {
+      "status": "pass",
+      "calc": "birth-childcare-support",
+      "case": "Case 1 — 0세 / 첫째",
+      "ts": 1778203143281
+    },
+    {
+      "status": "pass",
+      "calc": "birth-childcare-support",
+      "case": "Case 2 — 0세 / 둘째 이상",
+      "ts": 1778203143281
+    },
+    {
+      "status": "pass",
+      "calc": "birth-childcare-support",
+      "case": "Case 3 — 1세 / 둘째 이상",
+      "ts": 1778203143281
+    },
+    {
+      "status": "pass",
+      "calc": "birth-childcare-support",
+      "case": "Case 4 — 7세 / 첫째",
+      "ts": 1778203143281
+    },
+    {
+      "status": "pass",
+      "calc": "birth-childcare-support",
+      "case": "Case 5 — 10세 / 첫째 (아동수당 X)",
+      "ts": 1778203143281
+    },
+    {
+      "status": "pass",
+      "calc": "child-allowance",
+      "case": "Case 1 — 3천만 / 자녀 2",
+      "ts": 1778203143281
+    },
+    {
+      "status": "pass",
+      "calc": "child-allowance",
+      "case": "Case 2 — 5천만 / 자녀 1",
+      "ts": 1778203143281
+    },
+    {
+      "status": "pass",
+      "calc": "child-allowance",
+      "case": "Case 3 — 7천만 / 자녀 3 (경계)",
+      "ts": 1778203143281
+    },
+    {
+      "status": "pass",
+      "calc": "child-allowance",
+      "case": "Case 4 — 8천만 (한도 초과)",
+      "ts": 1778203143281
+    },
+    {
+      "status": "pass",
+      "calc": "child-allowance",
+      "case": "Case 5 — 2천만 / 자녀 4",
+      "ts": 1778203143281
+    },
+    {
+      "status": "fail",
+      "calc": "durunuri-support",
+      "case": "Case 1 — 월 200만 / 3인",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "employeeNP: engine=90000 vs expected=95000 (Δ-5000)",
+        "employerNP: engine=90000 vs expected=95000 (Δ-5000)",
+        "monthlySupport: engine=176800 vs expected=184800 (Δ-8000)"
+      ],
+      "ts": 1778203143282
+    },
+    {
+      "status": "fail",
+      "calc": "durunuri-support",
+      "case": "Case 2 — 월 250만 / 4인",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "employeeNP: engine=112500 vs expected=118750 (Δ-6250)",
+        "employerNP: engine=112500 vs expected=118750 (Δ-6250)",
+        "monthlySupport: engine=221000 vs expected=231000 (Δ-10000)"
+      ],
+      "ts": 1778203143282
+    },
+    {
+      "status": "fail",
+      "calc": "durunuri-support",
+      "case": "Case 3 — 월 280만 (소득 초과)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "employeeNP: engine=126000 vs expected=133000 (Δ-7000)",
+        "employerNP: engine=126000 vs expected=133000 (Δ-7000)"
+      ],
+      "ts": 1778203143282
+    },
+    {
+      "status": "fail",
+      "calc": "durunuri-support",
+      "case": "Case 4 — 월 180만 / 7인 (10인 미만 자격 O)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "employeeNP: engine=81000 vs expected=85500 (Δ-4500)",
+        "employerNP: engine=81000 vs expected=85500 (Δ-4500)",
+        "monthlySupport: engine=159120 vs expected=166320 (Δ-7200)"
+      ],
+      "ts": 1778203143282
+    },
+    {
+      "status": "fail",
+      "calc": "durunuri-support",
+      "case": "Case 5 — 월 220만 / 2인",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "employeeNP: engine=99000 vs expected=104500 (Δ-5500)",
+        "employerNP: engine=99000 vs expected=104500 (Δ-5500)",
+        "monthlySupport: engine=194480 vs expected=203280 (Δ-8800)"
+      ],
+      "ts": 1778203143282
+    },
+    {
+      "status": "pass",
+      "calc": "earned-income-tax-credit",
+      "case": "Case 1 — 단독 / 1천만",
+      "ts": 1778203143282
+    },
+    {
+      "status": "pass",
+      "calc": "earned-income-tax-credit",
+      "case": "Case 2 — 외벌이 / 2,500만",
+      "ts": 1778203143282
+    },
+    {
+      "status": "pass",
+      "calc": "earned-income-tax-credit",
+      "case": "Case 3 — 맞벌이 / 3천만",
+      "ts": 1778203143282
+    },
+    {
+      "status": "pass",
+      "calc": "earned-income-tax-credit",
+      "case": "Case 4 — 단독 / 2,500만 (한도 초과)",
+      "ts": 1778203143282
+    },
+    {
+      "status": "pass",
+      "calc": "earned-income-tax-credit",
+      "case": "Case 5 — 맞벌이 / 1,500만",
+      "ts": 1778203143282
+    },
+    {
+      "status": "pass",
+      "calc": "industrial-accident-pay",
+      "case": "Case 1 — 월 300만 / 30일",
+      "ts": 1778203143282
+    },
+    {
+      "status": "pass",
+      "calc": "industrial-accident-pay",
+      "case": "Case 2 — 월 400만 / 90일",
+      "ts": 1778203143282
+    },
+    {
+      "status": "pass",
+      "calc": "industrial-accident-pay",
+      "case": "Case 3 — 월 250만 / 60일",
+      "ts": 1778203143282
+    },
+    {
+      "status": "pass",
+      "calc": "industrial-accident-pay",
+      "case": "Case 4 — 월 500만 / 180일",
+      "ts": 1778203143282
+    },
+    {
+      "status": "pass",
+      "calc": "industrial-accident-pay",
+      "case": "Case 5 — 월 600만 / 365일",
+      "ts": 1778203143282
+    },
+    {
+      "status": "fail",
+      "calc": "maternity-leave-pay",
+      "case": "Case 1 — 월 250만 / 단태",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "govPay: engine=2000010 vs expected=2199990 (Δ-199980)",
+        "total: engine=6999990 vs expected=7199970 (Δ-199980)"
+      ],
+      "ts": 1778203143283
+    },
+    {
+      "status": "fail",
+      "calc": "maternity-leave-pay",
+      "case": "Case 2 — 월 350만 / 단태",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "govPay: engine=2000010 vs expected=2199990 (Δ-199980)",
+        "total: engine=9000030 vs expected=9200010 (Δ-199980)"
+      ],
+      "ts": 1778203143283
+    },
+    {
+      "status": "fail",
+      "calc": "maternity-leave-pay",
+      "case": "Case 3 — 월 400만 / 다태",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "govPay: engine=4000020 vs expected=4399980 (Δ-399960)",
+        "total: engine=12000000 vs expected=12399960 (Δ-399960)"
+      ],
+      "ts": 1778203143283
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 4 — 월 200만 / 단태 (상한 미만)",
+      "ts": 1778203143283
+    },
+    {
+      "status": "fail",
+      "calc": "maternity-leave-pay",
+      "case": "Case 5 — 월 500만 / 다태 (상한)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "govPay: engine=4000020 vs expected=4399980 (Δ-399960)",
+        "total: engine=14000040 vs expected=14400000 (Δ-399960)"
+      ],
+      "ts": 1778203143283
+    },
+    {
+      "status": "pass",
+      "calc": "median-income",
+      "case": "Case 1 — 1인 / 100만",
+      "ts": 1778203143283
+    },
+    {
+      "status": "pass",
+      "calc": "median-income",
+      "case": "Case 2 — 2인 / 200만",
+      "ts": 1778203143283
+    },
+    {
+      "status": "pass",
+      "calc": "median-income",
+      "case": "Case 3 — 3인 / 400만",
+      "ts": 1778203143283
+    },
+    {
+      "status": "pass",
+      "calc": "median-income",
+      "case": "Case 4 — 4인 / 600만",
+      "ts": 1778203143283
+    },
+    {
+      "status": "pass",
+      "calc": "median-income",
+      "case": "Case 5 — 1인 / 50만",
+      "ts": 1778203143283
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 1 — 1분위 / 등록금 400만",
+      "ts": 1778203143283
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 2 — 4분위 / 등록금 500만",
+      "ts": 1778203143283
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 3 — 7분위 / 등록금 450만",
+      "ts": 1778203143283
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 4 — 9분위 (지원 X)",
+      "ts": 1778203143283
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 5 — 3분위 / 등록금 600만",
+      "ts": 1778203143283
+    },
+    {
+      "status": "fail",
+      "calc": "near-poor-eligibility",
+      "case": "Case 1 — 1인 / 80만 (자격 O)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "threshold: engine=1367593 vs expected=1282119 (Δ85474)",
+        "incomePct: engine=29.2 vs expected=31.2 (Δ-2)"
+      ],
+      "ts": 1778203143283
+    },
+    {
+      "status": "fail",
+      "calc": "near-poor-eligibility",
+      "case": "Case 2 — 2인 / 150만",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "threshold: engine=2239622 vs expected=2099646 (Δ139976)",
+        "incomePct: engine=33.5 vs expected=35.7 (Δ-2.200000000000003)"
+      ],
+      "ts": 1778203143283
+    },
+    {
+      "status": "fail",
+      "calc": "near-poor-eligibility",
+      "case": "Case 3 — 3인 / 250만 (자격 O)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "threshold: engine=2864957 vs expected=2679518 (Δ185439)",
+        "incomePct: engine=43.6 vs expected=46.6 (Δ-3)"
+      ],
+      "ts": 1778203143283
+    },
+    {
+      "status": "fail",
+      "calc": "near-poor-eligibility",
+      "case": "Case 4 — 4인 / 300만 (자격 O — 2026 인상으로 변경)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "threshold: engine=3476832 vs expected=3247369 (Δ229463)",
+        "incomePct: engine=43.1 vs expected=46.2 (Δ-3.1000000000000014)"
+      ],
+      "ts": 1778203143283
+    },
+    {
+      "status": "fail",
+      "calc": "near-poor-eligibility",
+      "case": "Case 5 — 4인 / 400만 (자격 X)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "threshold: engine=3476832 vs expected=3247369 (Δ229463)",
+        "incomePct: engine=57.5 vs expected=61.6 (Δ-4.100000000000001)"
+      ],
+      "ts": 1778203143283
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 1 — 통상 200만 × 6개월",
+      "ts": 1778203143284
+    },
+    {
+      "status": "fail",
+      "calc": "parental-leave-pay",
+      "case": "Case 2 — 통상 300만 × 12개월 (상한 적용)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "totalPay: engine=25500000 vs expected=23100000 (Δ2400000)"
+      ],
+      "ts": 1778203143284
+    },
+    {
+      "status": "fail",
+      "calc": "parental-leave-pay",
+      "case": "Case 3 — 통상 150만 × 12개월",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "totalPay: engine=18000000 vs expected=16200000 (Δ1800000)"
+      ],
+      "ts": 1778203143284
+    },
+    {
+      "status": "fail",
+      "calc": "parental-leave-pay",
+      "case": "Case 4 — 통상 80만 × 12개월 (하한 적용)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "totalPay: engine=9600000 vs expected=9000000 (Δ600000)"
+      ],
+      "ts": 1778203143284
+    },
+    {
+      "status": "fail",
+      "calc": "parental-leave-pay",
+      "case": "Case 5 — 통상 500만 × 9개월 (상한 적용)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "totalPay: engine=19500000 vs expected=18300000 (Δ1200000)"
+      ],
+      "ts": 1778203143284
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 1 — 50% / 8세 (자격 O)",
+      "ts": 1778203143284
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 2 — 70% / 10세 (소득 초과)",
+      "ts": 1778203143284
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 3 — 30% / 5세",
+      "ts": 1778203143284
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 4 — 60% / 17세 (경계)",
+      "ts": 1778203143284
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 5 — 45% / 19세 (연령 초과)",
+      "ts": 1778203143284
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit-days",
+      "case": "Case 1 — 0.5년 / 일반",
+      "ts": 1778203143284
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit-days",
+      "case": "Case 2 — 2년 / 일반",
+      "ts": 1778203143284
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit-days",
+      "case": "Case 3 — 4년 / 일반",
+      "ts": 1778203143284
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit-days",
+      "case": "Case 4 — 7년 / 50세+",
+      "ts": 1778203143284
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit-days",
+      "case": "Case 5 — 15년 / 50세+",
+      "ts": 1778203143284
+    },
+    {
+      "status": "fail",
+      "calc": "unemployment-benefit",
+      "case": "Case 1 — 월급 200만, 가입 2년, 50세 미만 (하한 적용)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "dailyBenefit: engine=40000 vs expected=66048 (Δ-26048)",
+        "totalBenefit: engine=6000000 vs expected=9907200 (Δ-3907200)"
+      ],
+      "ts": 1778203143284
+    },
+    {
+      "status": "fail",
+      "calc": "unemployment-benefit",
+      "case": "Case 2 — 월급 300만, 가입 5년 (정확히), 50세 미만 (하한 적용)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "dailyBenefit: engine=60000 vs expected=66048 (Δ-6048)",
+        "totalBenefit: engine=12600000 vs expected=13870080 (Δ-1270080)"
+      ],
+      "ts": 1778203143284
+    },
+    {
+      "status": "fail",
+      "calc": "unemployment-benefit",
+      "case": "Case 3 — 월급 500만, 가입 10년, 50세 미만 (상한 적용)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "dailyBenefit: engine=100000 vs expected=68100 (Δ31900)",
+        "totalBenefit: engine=24000000 vs expected=16344000 (Δ7656000)"
+      ],
+      "ts": 1778203143284
+    },
+    {
+      "status": "fail",
+      "calc": "unemployment-benefit",
+      "case": "Case 4 — 월급 250만, 가입 1년 (정확히), 50세 미만 (하한 적용)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "dailyBenefit: engine=50000 vs expected=66048 (Δ-16048)",
+        "totalBenefit: engine=7500000 vs expected=9907200 (Δ-2407200)"
+      ],
+      "ts": 1778203143284
+    },
+    {
+      "status": "fail",
+      "calc": "unemployment-benefit",
+      "case": "Case 5 — 월급 400만, 가입 8년, 50세 이상 (상한 + 가산일)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "dailyBenefit: engine=80000 vs expected=68100 (Δ11900)",
+        "totalBenefit: engine=19200000 vs expected=16344000 (Δ2856000)"
+      ],
+      "ts": 1778203143284
+    },
+    {
+      "status": "pass",
+      "calc": "youth-housing-allowance",
+      "case": "Case 1 — 1인 / 50만",
+      "ts": 1778203143284
+    },
+    {
+      "status": "pass",
+      "calc": "youth-housing-allowance",
+      "case": "Case 2 — 1인 / 100만",
+      "ts": 1778203143284
+    },
+    {
+      "status": "pass",
+      "calc": "youth-housing-allowance",
+      "case": "Case 3 — 4인 / 150만",
+      "ts": 1778203143285
+    },
+    {
+      "status": "pass",
+      "calc": "youth-housing-allowance",
+      "case": "Case 4 — 4인 / 250만",
+      "ts": 1778203143285
+    },
+    {
+      "status": "pass",
+      "calc": "youth-housing-allowance",
+      "case": "Case 5 — 1인 / 200만 (자격 X)",
+      "ts": 1778203143285
+    },
+    {
+      "status": "pass",
+      "calc": "youth-rent-support",
+      "case": "Case 1 — 25세 / 무주택 / 50% / 월세 50만 (자격 O)",
+      "ts": 1778203143285
+    },
+    {
+      "status": "pass",
+      "calc": "youth-rent-support",
+      "case": "Case 2 — 30세 / 70% (소득 초과)",
+      "ts": 1778203143285
+    },
+    {
+      "status": "pass",
+      "calc": "youth-rent-support",
+      "case": "Case 3 — 22세 / 무주택 / 40% / 월세 15만",
+      "ts": 1778203143285
+    },
+    {
+      "status": "pass",
+      "calc": "youth-rent-support",
+      "case": "Case 4 — 35세 (연령 초과)",
+      "ts": 1778203143285
+    },
+    {
+      "status": "pass",
+      "calc": "youth-rent-support",
+      "case": "Case 5 — 28세 / 유주택 (X)",
+      "ts": 1778203143285
+    }
+  ]
+}

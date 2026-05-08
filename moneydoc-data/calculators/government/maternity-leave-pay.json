@@ -1,29 +1,148 @@
 {
-  "id": "maternity-leave-pay", "category": "government", "subCategory": "labor",
-  "title": "출산휴가 급여 계산기", "subtitle": "90일 (다태 120일) + 고용보험 월 220만 상한",
-  "slug": "maternity-leave-pay", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
-  "source": { "primary": { "agency": "고용노동부", "document": "고용보험법 §75 (출산전후휴가급여)", "year": 2026 } },
-  "constants": { "GOV_DAILY_UPPER": 73333 },
+  "id": "maternity-leave-pay",
+  "category": "government",
+  "subCategory": "labor",
+  "title": "출산휴가 급여 계산기",
+  "subtitle": "90일 (다태 120일) + 고용보험 월 220만 상한",
+  "slug": "maternity-leave-pay",
+  "year": 2026,
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
+  "source": {
+    "primary": {
+      "agency": "고용노동부",
+      "document": "고용보험법 §75 (출산전후휴가급여)",
+      "year": 2026
+    }
+  },
+  "constants": {
+    "GOV_DAILY_UPPER": 73333,
+    "DAILY_UPPER_LIMIT": 24444
+  },
   "formula": [
-    { "step": 1, "name": "총 일수", "expr": "단태 90일 / 다태 120일" },
-    { "step": 2, "name": "회사 부담", "expr": "60일 × 일당 (월 통상임금 / 30)" },
-    { "step": 3, "name": "고용보험", "expr": "(총일수-60) × min(일당, 상한)" },
-    { "step": 4, "name": "총 급여", "expr": "회사 + 고용보험" }
+    {
+      "step": 1,
+      "name": "총 일수",
+      "expr": "단태 90일 / 다태 120일"
+    },
+    {
+      "step": 2,
+      "name": "회사 부담",
+      "expr": "60일 × 일당 (월 통상임금 / 30)"
+    },
+    {
+      "step": 3,
+      "name": "고용보험",
+      "expr": "(총일수-60) × min(일당, 상한)"
+    },
+    {
+      "step": 4,
+      "name": "총 급여",
+      "expr": "회사 + 고용보험"
+    }
   ],
   "inputs": [
-    { "id": "monthlySalary", "label": "월 통상임금", "type": "currency", "min": 1000000, "default": 3000000 },
-    { "id": "isMultiple", "label": "다태아 출산", "type": "boolean", "default": false }
+    {
+      "id": "monthlySalary",
+      "label": "월 통상임금",
+      "type": "currency",
+      "min": 1000000,
+      "default": 3000000
+    },
+    {
+      "id": "isMultiple",
+      "label": "다태아 출산",
+      "type": "boolean",
+      "default": false
+    }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-05-01", "method": "고용보험법 §75. 첫 60일 회사 통상임금 100%, 후 30/60일 고용보험 (월 220만 상한).",
+    "verified": true,
+    "verifiedAt": "2026-05-01",
+    "method": "고용보험법 §75. 첫 60일 회사 통상임금 100%, 후 30/60일 고용보험 (월 220만 상한).",
     "cases": [
-      { "name": "Case 1 — 월 250만 / 단태", "input": { "monthlySalary": 2500000, "isMultiple": false }, "expected": { "totalDays": 90, "dailyWage": 83333, "govPay": 2199990, "companyPay": 4999980, "total": 7199970 } },
-      { "name": "Case 2 — 월 350만 / 단태", "input": { "monthlySalary": 3500000, "isMultiple": false }, "expected": { "totalDays": 90, "dailyWage": 116667, "govPay": 2199990, "companyPay": 7000020, "total": 9200010 } },
-      { "name": "Case 3 — 월 400만 / 다태", "input": { "monthlySalary": 4000000, "isMultiple": true }, "expected": { "totalDays": 120, "dailyWage": 133333, "govPay": 4399980, "companyPay": 7999980, "total": 12399960 } },
-      { "name": "Case 4 — 월 200만 / 단태 (상한 미만)", "input": { "monthlySalary": 2000000, "isMultiple": false }, "expected": { "totalDays": 90, "dailyWage": 66667, "govPay": 2000010, "companyPay": 4000020, "total": 6000030 } },
-      { "name": "Case 5 — 월 500만 / 다태 (상한)", "input": { "monthlySalary": 5000000, "isMultiple": true }, "expected": { "totalDays": 120, "dailyWage": 166667, "govPay": 4399980, "companyPay": 10000020, "total": 14400000 } }
+      {
+        "name": "Case 1 — 월 250만 / 단태",
+        "input": {
+          "monthlySalary": 2500000,
+          "isMultiple": false
+        },
+        "expected": {
+          "totalDays": 90,
+          "dailyWage": 83333,
+          "govPay": 2199990,
+          "companyPay": 4999980,
+          "total": 7199970
+        }
+      },
+      {
+        "name": "Case 2 — 월 350만 / 단태",
+        "input": {
+          "monthlySalary": 3500000,
+          "isMultiple": false
+        },
+        "expected": {
+          "totalDays": 90,
+          "dailyWage": 116667,
+          "govPay": 2199990,
+          "companyPay": 7000020,
+          "total": 9200010
+        }
+      },
+      {
+        "name": "Case 3 — 월 400만 / 다태",
+        "input": {
+          "monthlySalary": 4000000,
+          "isMultiple": true
+        },
+        "expected": {
+          "totalDays": 120,
+          "dailyWage": 133333,
+          "govPay": 4399980,
+          "companyPay": 7999980,
+          "total": 12399960
+        }
+      },
+      {
+        "name": "Case 4 — 월 200만 / 단태 (상한 미만)",
+        "input": {
+          "monthlySalary": 2000000,
+          "isMultiple": false
+        },
+        "expected": {
+          "totalDays": 90,
+          "dailyWage": 66667,
+          "govPay": 2000010,
+          "companyPay": 4000020,
+          "total": 6000030
+        }
+      },
+      {
+        "name": "Case 5 — 월 500만 / 다태 (상한)",
+        "input": {
+          "monthlySalary": 5000000,
+          "isMultiple": true
+        },
+        "expected": {
+          "totalDays": 120,
+          "dailyWage": 166667,
+          "govPay": 4399980,
+          "companyPay": 10000020,
+          "total": 14400000
+        }
+      }
     ]
   },
-  "guide": { "howToUse": "월 통상임금과 다태 여부 입력 시 출산휴가 총 급여 산출.", "tips": ["회사 60일 + 고용보험 30/60일.", "유산·사산 휴가: 5~90일 차등.", "복귀 후 6개월 미만 퇴사 시 회사 환수 가능."] },
-  "related": ["parental-leave-pay", "unemployment-benefit"]
+  "guide": {
+    "howToUse": "월 통상임금과 다태 여부 입력 시 출산휴가 총 급여 산출.",
+    "tips": [
+      "회사 60일 + 고용보험 30/60일.",
+      "유산·사산 휴가: 5~90일 차등.",
+      "복귀 후 6개월 미만 퇴사 시 회사 환수 가능."
+    ]
+  },
+  "related": [
+    "parental-leave-pay",
+    "unemployment-benefit"
+  ]
 }

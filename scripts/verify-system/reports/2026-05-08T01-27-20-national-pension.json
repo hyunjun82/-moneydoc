@@ -1,0 +1,39 @@
+{
+  "label": "national-pension",
+  "timestamp": "2026-05-08T01-27-20",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "national-pension",
+      "case": "Case 1 — 가입 20년 (240개월), 평균소득 200만원",
+      "ts": 1778203640996
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension",
+      "case": "Case 2 — 가입 30년 (360개월), 평균소득 300만원",
+      "ts": 1778203640999
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension",
+      "case": "Case 3 — 가입 40년 (480개월), 평균소득 400만원",
+      "ts": 1778203640999
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension",
+      "case": "Case 4 — 가입 10년 (120개월), 평균소득 200만원",
+      "ts": 1778203640999
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension",
+      "case": "Case 5 — 가입 25년 (300개월), 평균소득 250만원",
+      "ts": 1778203640999
+    }
+  ]
+}

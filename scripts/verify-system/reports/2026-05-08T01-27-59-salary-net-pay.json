@@ -1,0 +1,39 @@
+{
+  "label": "salary-net-pay",
+  "timestamp": "2026-05-08T01-27-59",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 1 — 신입사원 (연봉 3천만, 부양 1명, 자녀 0, 비과세 0)",
+      "ts": 1778203679885
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 2 — 평균 직장인 (연봉 5천만, 부양 1명, 자녀 0, 비과세 0)",
+      "ts": 1778203679887
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 3 — 4인 가족 (연봉 7천만, 부양 4명, 자녀 2, 비과세 0)",
+      "ts": 1778203679887
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 4 — 고연봉 미혼 (연봉 1억, 부양 1명, 자녀 0, 비과세 0)",
+      "ts": 1778203679887
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 5 — 비과세 적용 (연봉 5천만, 부양 1명, 자녀 0, 비과세 월 20만)",
+      "ts": 1778203679887
+    }
+  ]
+}

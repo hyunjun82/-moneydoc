@@ -1,33 +1,147 @@
 {
-  "id": "near-poor-eligibility", "category": "government", "subCategory": "welfare",
-  "title": "차상위계층 자격 모의계산 (2026)", "subtitle": "중위소득 50% 이하 가구 판정 — 2026 인상값 반영",
+  "id": "near-poor-eligibility",
+  "category": "government",
+  "subCategory": "welfare",
+  "title": "차상위계층 자격 모의계산 (2026)",
+  "subtitle": "중위소득 50% 이하 가구 판정 — 2026 인상값 반영",
   "slug": "near-poor-eligibility",
-  "searchAliases": ["차상위계층 모의계산", "차상위 모의계산", "차상위 자격 계산"],
-  "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
-  "source": { "primary": { "agency": "보건복지부", "document": "국민기초생활 보장법 시행령 + 2026 기준중위소득 고시", "year": 2026 } },
+  "searchAliases": [
+    "차상위계층 모의계산",
+    "차상위 모의계산",
+    "차상위 자격 계산"
+  ],
+  "year": 2026,
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
+  "source": {
+    "primary": {
+      "agency": "보건복지부",
+      "document": "국민기초생활 보장법 시행령 + 2026 기준중위소득 고시",
+      "year": 2026
+    }
+  },
   "constants": {},
   "tables": {
-    "median100": { "1": 2564238, "2": 4199292, "3": 5359036, "4": 6494738, "5": 7556719, "6": 8555952 }
+    "median100": {
+      "1": 2564238,
+      "2": 4199292,
+      "3": 5359036,
+      "4": 6494738,
+      "5": 7556719,
+      "6": 8555952
+    }
   },
   "formula": [
-    { "step": 1, "name": "기준 (중위 50%)", "expr": "round(가구원수별 중위 100% × 0.50)" },
-    { "step": 2, "name": "자격", "expr": "소득인정액 ≤ 기준" },
-    { "step": 3, "name": "본인 비율", "expr": "(소득 / 중위100%) × 100" }
+    {
+      "step": 1,
+      "name": "기준 (중위 50%)",
+      "expr": "round(가구원수별 중위 100% × 0.50)"
+    },
+    {
+      "step": 2,
+      "name": "자격",
+      "expr": "소득인정액 ≤ 기준"
+    },
+    {
+      "step": 3,
+      "name": "본인 비율",
+      "expr": "(소득 / 중위100%) × 100"
+    }
   ],
   "inputs": [
-    { "id": "householdSize", "label": "가구원 수", "type": "stepper", "min": 1, "max": 6, "default": 1 },
-    { "id": "incomeAmount", "label": "소득인정액 (월)", "type": "currency", "min": 0, "default": 800000 }
+    {
+      "id": "householdSize",
+      "label": "가구원 수",
+      "type": "stepper",
+      "min": 1,
+      "max": 6,
+      "default": 1
+    },
+    {
+      "id": "incomeAmount",
+      "label": "소득인정액 (월)",
+      "type": "currency",
+      "min": 0,
+      "default": 800000
+    }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-05-01", "method": "기준중위소득 50% 자동 산출. 보건복지부 2026 고시 (1인 2,564,238 → 50% = 1,282,119).",
+    "verified": true,
+    "verifiedAt": "2026-05-01",
+    "method": "기준중위소득 50% 자동 산출. 보건복지부 2026 고시 (1인 2,564,238 → 50% = 1,282,119).",
     "cases": [
-      { "name": "Case 1 — 1인 / 80만 (자격 O)", "input": { "householdSize": 1, "incomeAmount": 800000 }, "expected": { "threshold": 1282119, "isEligible": true, "incomePct": 31.2 } },
-      { "name": "Case 2 — 2인 / 150만", "input": { "householdSize": 2, "incomeAmount": 1500000 }, "expected": { "threshold": 2099646, "isEligible": true, "incomePct": 35.7 } },
-      { "name": "Case 3 — 3인 / 250만 (자격 O)", "input": { "householdSize": 3, "incomeAmount": 2500000 }, "expected": { "threshold": 2679518, "isEligible": true, "incomePct": 46.6 } },
-      { "name": "Case 4 — 4인 / 300만 (자격 O — 2026 인상으로 변경)", "input": { "householdSize": 4, "incomeAmount": 3000000 }, "expected": { "threshold": 3247369, "isEligible": true, "incomePct": 46.2 } },
-      { "name": "Case 5 — 4인 / 400만 (자격 X)", "input": { "householdSize": 4, "incomeAmount": 4000000 }, "expected": { "threshold": 3247369, "isEligible": false, "incomePct": 61.6 } }
+      {
+        "name": "Case 1 — 1인 / 80만 (자격 O)",
+        "input": {
+          "householdSize": 1,
+          "incomeAmount": 800000
+        },
+        "expected": {
+          "threshold": 1282119,
+          "isEligible": true,
+          "incomePct": 31.2
+        }
+      },
+      {
+        "name": "Case 2 — 2인 / 150만",
+        "input": {
+          "householdSize": 2,
+          "incomeAmount": 1500000
+        },
+        "expected": {
+          "threshold": 2099646,
+          "isEligible": true,
+          "incomePct": 35.7
+        }
+      },
+      {
+        "name": "Case 3 — 3인 / 250만 (자격 O)",
+        "input": {
+          "householdSize": 3,
+          "incomeAmount": 2500000
+        },
+        "expected": {
+          "threshold": 2679518,
+          "isEligible": true,
+          "incomePct": 46.7
+        }
+      },
+      {
+        "name": "Case 4 — 4인 / 300만 (자격 O — 2026 인상으로 변경)",
+        "input": {
+          "householdSize": 4,
+          "incomeAmount": 3000000
+        },
+        "expected": {
+          "threshold": 3247369,
+          "isEligible": true,
+          "incomePct": 46.2
+        }
+      },
+      {
+        "name": "Case 5 — 4인 / 400만 (자격 X)",
+        "input": {
+          "householdSize": 4,
+          "incomeAmount": 4000000
+        },
+        "expected": {
+          "threshold": 3247369,
+          "isEligible": false,
+          "incomePct": 61.6
+        }
+      }
     ]
   },
-  "guide": { "howToUse": "가구원수와 소득인정액 입력 시 차상위계층 자격 판정.", "tips": ["차상위계층 혜택: 통신비 감면, 전기료 감면, 의료비 등.", "주민센터 신청 → 소득·재산 조사.", "2026년 기준중위소득 6.51% 인상으로 자격 임계값 상향 (4인 286만→324만)."] },
-  "related": ["basic-livelihood-eligibility", "median-income"]
+  "guide": {
+    "howToUse": "가구원수와 소득인정액 입력 시 차상위계층 자격 판정.",
+    "tips": [
+      "차상위계층 혜택: 통신비 감면, 전기료 감면, 의료비 등.",
+      "주민센터 신청 → 소득·재산 조사.",
+      "2026년 기준중위소득 6.51% 인상으로 자격 임계값 상향 (4인 286만→324만)."
+    ]
+  },
+  "related": [
+    "basic-livelihood-eligibility",
+    "median-income"
+  ]
 }

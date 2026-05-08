@@ -1,0 +1,54 @@
+{
+  "label": "divorce-alimony",
+  "timestamp": "2026-05-08T01-31-34",
+  "pass": 2,
+  "fail": 3,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "divorce-alimony",
+      "case": "Case 1 — 결혼 3년 / medium (1천만)",
+      "ts": 1778203894976
+    },
+    {
+      "status": "pass",
+      "calc": "divorce-alimony",
+      "case": "Case 2 — 결혼 8년 / high (3천만)",
+      "ts": 1778203894979
+    },
+    {
+      "status": "fail",
+      "calc": "divorce-alimony",
+      "case": "Case 3 — 결혼 15년 / medium (2천만)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "baseAmount: engine=35000000 vs expected=20000000 (Δ15000000)",
+        "estimatedAmount: engine=35000000 vs expected=20000000 (Δ15000000)"
+      ],
+      "ts": 1778203894979
+    },
+    {
+      "status": "fail",
+      "calc": "divorce-alimony",
+      "case": "Case 4 — 결혼 25년 / high (5천만, 보수 조정)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "baseAmount: engine=60000000 vs expected=33333333 (Δ26666667)",
+        "estimatedAmount: engine=90000000 vs expected=50000000 (Δ40000000)"
+      ],
+      "ts": 1778203894979
+    },
+    {
+      "status": "fail",
+      "calc": "divorce-alimony",
+      "case": "Case 5 — 결혼 12년 / low (1천만)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "baseAmount: engine=35000000 vs expected=20000000 (Δ15000000)",
+        "estimatedAmount: engine=17500000 vs expected=10000000 (Δ7500000)"
+      ],
+      "ts": 1778203894979
+    }
+  ]
+}
