@@ -3,7 +3,11 @@
   "category": "government",
   "subCategory": "elderly",
   "title": "기초연금 수령액 계산기 (2026)",
-  "searchAliases": ["기초연금 모의계산", "기초연금 계산기", "기초연금 자격 모의계산"],
+  "searchAliases": [
+    "기초연금 모의계산",
+    "기초연금 계산기",
+    "기초연금 자격 모의계산"
+  ],
   "subtitle": "65세 이상 소득인정액 기준 — 단독 34.97만 / 부부 55.95만 / 선정 단독 247만 (2026)",
   "slug": "basic-pension",
   "year": 2026,
@@ -14,7 +18,10 @@
       "agency": "보건복지부",
       "document": "기초연금법 + 2026 기준연금액·선정기준액 고시",
       "year": 2026,
-      "laws": ["기초연금법 제5조 (수급권자)", "기초연금법 제8조 (기준연금액)"]
+      "laws": [
+        "기초연금법 제5조 (수급권자)",
+        "기초연금법 제8조 (기준연금액)"
+      ]
     },
     "note": "2026년 기준연금액 단독 349,700원 (단독×1.6 = 부부 559,520원), 선정기준액 단독 2,470,000원 / 부부 3,952,000원."
   },
@@ -25,23 +32,103 @@
     "INCOME_THRESHOLD_COUPLE": 3952000
   },
   "formula": [
-    { "step": 1, "name": "자격 판정", "expr": "소득인정액 ≤ 선정기준액" },
-    { "step": 2, "name": "수령액", "expr": "자격: 단독 349,700 또는 부부 559,520. 자격 X: 0" }
+    {
+      "step": 1,
+      "name": "자격 판정",
+      "expr": "소득인정액 ≤ 선정기준액"
+    },
+    {
+      "step": 2,
+      "name": "수령액",
+      "expr": "자격: 단독 349,700 또는 부부 559,520. 자격 X: 0"
+    }
   ],
   "inputs": [
-    { "id": "householdType", "label": "가구 유형", "type": "select", "options": ["single", "couple"], "default": "single" },
-    { "id": "incomeAmount", "label": "소득인정액 (월)", "type": "currency", "min": 0, "default": 1000000, "hint": "근로/사업/이자 + 재산 환산" }
+    {
+      "id": "householdType",
+      "label": "가구 유형",
+      "type": "select",
+      "options": [
+        {
+          "value": "single",
+          "label": "단독가구"
+        },
+        {
+          "value": "couple",
+          "label": "부부가구"
+        }
+      ],
+      "default": "single"
+    },
+    {
+      "id": "incomeAmount",
+      "label": "소득인정액 (월)",
+      "type": "currency",
+      "min": 0,
+      "default": 1000000,
+      "hint": "근로/사업/이자 + 재산 환산"
+    }
   ],
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-01",
     "method": "기초연금법 §5, §8 + 2026 보건복지부 고시 적용. 감액(소득역전 방지)은 단순화로 미적용.",
     "cases": [
-      { "name": "Case 1 — 단독, 소득 100만 (자격 O)", "input": { "householdType": "single", "incomeAmount": 1000000 }, "expected": { "isEligible": true, "monthlyPension": 349700 } },
-      { "name": "Case 2 — 단독, 소득 250만 (자격 X — 247만 초과)", "input": { "householdType": "single", "incomeAmount": 2500000 }, "expected": { "isEligible": false, "monthlyPension": 0 } },
-      { "name": "Case 3 — 부부, 소득 200만 (자격 O)", "input": { "householdType": "couple", "incomeAmount": 2000000 }, "expected": { "isEligible": true, "monthlyPension": 559520 } },
-      { "name": "Case 4 — 단독, 소득 247만 (경계, 자격 O)", "input": { "householdType": "single", "incomeAmount": 2470000 }, "expected": { "isEligible": true, "monthlyPension": 349700 } },
-      { "name": "Case 5 — 부부, 소득 400만 (자격 X — 395.2만 초과)", "input": { "householdType": "couple", "incomeAmount": 4000000 }, "expected": { "isEligible": false, "monthlyPension": 0 } }
+      {
+        "name": "Case 1 — 단독, 소득 100만 (자격 O)",
+        "input": {
+          "householdType": "single",
+          "incomeAmount": 1000000
+        },
+        "expected": {
+          "isEligible": true,
+          "monthlyPension": 349700
+        }
+      },
+      {
+        "name": "Case 2 — 단독, 소득 250만 (자격 X — 247만 초과)",
+        "input": {
+          "householdType": "single",
+          "incomeAmount": 2500000
+        },
+        "expected": {
+          "isEligible": false,
+          "monthlyPension": 0
+        }
+      },
+      {
+        "name": "Case 3 — 부부, 소득 200만 (자격 O)",
+        "input": {
+          "householdType": "couple",
+          "incomeAmount": 2000000
+        },
+        "expected": {
+          "isEligible": true,
+          "monthlyPension": 559520
+        }
+      },
+      {
+        "name": "Case 4 — 단독, 소득 247만 (경계, 자격 O)",
+        "input": {
+          "householdType": "single",
+          "incomeAmount": 2470000
+        },
+        "expected": {
+          "isEligible": true,
+          "monthlyPension": 349700
+        }
+      },
+      {
+        "name": "Case 5 — 부부, 소득 400만 (자격 X — 395.2만 초과)",
+        "input": {
+          "householdType": "couple",
+          "incomeAmount": 4000000
+        },
+        "expected": {
+          "isEligible": false,
+          "monthlyPension": 0
+        }
+      }
     ]
   },
   "guide": {
@@ -53,5 +140,8 @@
       "2026년 기준연금액 33.4만→34.97만, 선정기준 단독 213만→247만 인상."
     ]
   },
-  "related": ["national-pension", "comprehensive-real-estate-tax"]
+  "related": [
+    "national-pension",
+    "comprehensive-real-estate-tax"
+  ]
 }

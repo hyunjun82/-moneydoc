@@ -142,6 +142,9 @@
           "appliedRate": 0.04,
           "monthlyAvailable": 1666667,
           "maxLoan": 349102137
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -158,6 +161,9 @@
           "appliedRate": 0.055,
           "monthlyAvailable": 1833333,
           "maxLoan": 322889840
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -174,6 +180,9 @@
           "appliedRate": 0.06,
           "monthlyAvailable": 2333333,
           "maxLoan": 389180378
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -190,6 +199,9 @@
           "appliedRate": 0.04,
           "monthlyAvailable": 2083333,
           "maxLoan": 436377514
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -206,6 +218,9 @@
           "appliedRate": 0.065,
           "monthlyAvailable": 1333333,
           "maxLoan": 178833294
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       }
     ]

@@ -78,8 +78,8 @@
         "expected": {
           "noHomeScore": 10,
           "familyScore": 15,
-          "accountScore": 6,
-          "total": 31
+          "accountScore": 7,
+          "total": 32
         }
       },
       {
@@ -92,8 +92,8 @@
         "expected": {
           "noHomeScore": 30,
           "familyScore": 25,
-          "accountScore": 16,
-          "total": 71
+          "accountScore": 17,
+          "total": 72
         }
       },
       {
@@ -106,8 +106,8 @@
         "expected": {
           "noHomeScore": 20,
           "familyScore": 20,
-          "accountScore": 11,
-          "total": 51
+          "accountScore": 12,
+          "total": 52
         }
       },
       {
@@ -120,8 +120,8 @@
         "expected": {
           "noHomeScore": 0,
           "familyScore": 5,
-          "accountScore": 3,
-          "total": 8
+          "accountScore": 4,
+          "total": 9
         }
       },
       {
@@ -134,8 +134,8 @@
         "expected": {
           "noHomeScore": 16,
           "familyScore": 30,
-          "accountScore": 13,
-          "total": 59
+          "accountScore": 14,
+          "total": 60
         }
       }
     ]

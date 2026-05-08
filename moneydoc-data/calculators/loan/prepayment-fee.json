@@ -103,6 +103,9 @@
           "fee": 600000,
           "feePct": 0.012,
           "rateInRange": true
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -117,6 +120,9 @@
           "fee": 1866667,
           "feePct": 0.014,
           "rateInRange": true
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -131,6 +137,9 @@
           "fee": 1400000,
           "feePct": 0.014,
           "rateInRange": true
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -145,6 +154,9 @@
           "fee": 83333,
           "feePct": 0.01,
           "rateInRange": true
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -159,6 +171,9 @@
           "fee": 5833333,
           "feePct": 0.014,
           "rateInRange": true
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       }
     ]

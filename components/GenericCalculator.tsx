@@ -27,6 +27,11 @@ type Spec = {
 
 // 결과 키 → 한국어 라벨
 const OUTPUT_LABELS: Record<string, string> = {
+  // ltv/대출 — 누락분
+  leaseDeductTotal: "임차보증금 공제",
+  priorityClaim: "최우선변제 한도",
+  feePct: "수수료율",
+  rateInRange: "약정 범위 내",
   // 모드/구분
   mode: "상환방식",
   accountType: "ISA 유형",
@@ -325,13 +330,14 @@ function formatValue(v: unknown, unit?: string, key?: string): string {
   if (typeof v === "number") {
     if (unit === "%") {
       // Pct 키 = 이미 percent 형태 (예: 17.1), Rate/Ratio 키 = 소수 형태 (예: 0.01)
-      const isAlreadyPercent = key ? /Pct|Pcnt/i.test(key) : v >= 1;
+      // Pct 키여도 절댓값 < 1이면 소수 형태로 간주 (예: feePct=0.012 → 1.2%)
+      const isAlreadyPercent = key ? (/Pct|Pcnt/i.test(key) && Math.abs(v) >= 1) : v >= 1;
       const display = isAlreadyPercent ? v : v * 100;
       return `${display.toFixed(2)}%`;
     }
     if (unit === "년" || unit === "개월" || unit === "일") return `${v}${unit}`;
     // 단위 없는 카운트 키 (정확 매칭만)
-    if (key && /^(year|months|days|totalDays|yearsToCollege|yearsEarly|yearsDed|remainingDays|benefitDays|kids|dependents|tier|newLevel|westAge|koreanAge|ageGroup|ageMultiplier)$/.test(key)) {
+    if (key && (/^(year|months|days|totalDays|yearsToCollege|yearsEarly|yearsDed|remainingDays|benefitDays|kids|dependents|tier|newLevel|westAge|koreanAge|ageGroup|ageMultiplier)$/.test(key) || /Score$/.test(key))) {
       return String(v);
     }
     return krw(v);

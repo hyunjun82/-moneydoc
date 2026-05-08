@@ -70,10 +70,10 @@
           "isOneHome": true
         },
         "expected": {
-          "propertyTax": 2970000,
-          "propertyEduTax": 594000,
+          "propertyTax": 2070000,
+          "propertyEduTax": 414000,
           "compTax": 900000,
-          "totalTax": 4464000
+          "totalTax": 3384000
         }
       },
       {
@@ -96,10 +96,10 @@
           "isOneHome": true
         },
         "expected": {
-          "propertyTax": 1290000,
-          "propertyEduTax": 258000,
+          "propertyTax": 746000,
+          "propertyEduTax": 149200,
           "compTax": 0,
-          "totalTax": 1548000
+          "totalTax": 895200
         }
       },
       {
@@ -109,10 +109,10 @@
           "isOneHome": true
         },
         "expected": {
-          "propertyTax": 6570000,
-          "propertyEduTax": 1314000,
+          "propertyTax": 4770000,
+          "propertyEduTax": 954000,
           "compTax": 8400000,
-          "totalTax": 16284000
+          "totalTax": 14124000
         }
       },
       {

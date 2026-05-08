@@ -17,6 +17,8 @@ import { getAdapter, AdapterError } from './adapters/_base.mjs';
 
 import './adapters/ezloan.mjs';
 import './adapters/kinfa.mjs';
+import './adapters/budongsan-loan.mjs';
+import './adapters/loan-formulas.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ENGINE_PATH = path.resolve(__dirname, '../../lib/calc/engine.js');
@@ -70,7 +72,7 @@ async function verifyOneCase(calc, c, engineFn, opts) {
   if (!opts.noGov && c.govSource?.adapter) {
     try {
       const adapter = getAdapter(c.govSource.adapter);
-      const govOut = await adapter.calculate(c.input);
+      const govOut = await adapter.calculate(c.input, calc.slug);
       const tolerance = opts.tolerance ?? (adapter.constructor.gov ? 0 : 100);
       const govDiffs = compareFields(engineOut, govOut, tolerance);
       if (govDiffs.length > 0) {

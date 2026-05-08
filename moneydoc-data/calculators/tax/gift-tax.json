@@ -5,7 +5,10 @@
   "title": "증여세 계산기",
   "subtitle": "상증법 §53 수증자별 증여재산공제 + 누진세율",
   "slug": "gift-tax",
-  "searchAliases": ["증여세 계산기", "증여 세금 계산기"],
+  "searchAliases": [
+    "증여세 계산기",
+    "증여 세금 계산기"
+  ],
   "year": 2026,
   "lastUpdated": "2026-05-01",
   "lastVerified": "2026-05-01",
@@ -14,55 +17,206 @@
       "agency": "국세청",
       "document": "상속세 및 증여세법",
       "year": 2026,
-      "laws": ["상증법 제53조 (증여재산공제)", "상증법 제56조 (세율, 상속세와 동일)"]
+      "laws": [
+        "상증법 제53조 (증여재산공제)",
+        "상증법 제56조 (세율, 상속세와 동일)"
+      ]
     }
   },
-  "constants": { "LOCAL_TAX_RATE": 0 },
+  "constants": {
+    "LOCAL_TAX_RATE": 0
+  },
   "tables": {
     "deductions": {
       "description": "수증자별 증여재산공제 (10년 합산)",
       "rules": [
-        { "relation": "spouse", "label": "배우자", "deduction": 600000000 },
-        { "relation": "lineal_adult", "label": "직계존비속 (성인)", "deduction": 50000000 },
-        { "relation": "lineal_minor", "label": "직계존비속 (미성년)", "deduction": 20000000 },
-        { "relation": "sibling", "label": "형제자매·기타 친족", "deduction": 10000000 },
-        { "relation": "other", "label": "그 외", "deduction": 0 }
+        {
+          "relation": "spouse",
+          "label": "배우자",
+          "deduction": 600000000
+        },
+        {
+          "relation": "lineal_adult",
+          "label": "직계존비속 (성인)",
+          "deduction": 50000000
+        },
+        {
+          "relation": "lineal_minor",
+          "label": "직계존비속 (미성년)",
+          "deduction": 20000000
+        },
+        {
+          "relation": "sibling",
+          "label": "형제자매·기타 친족",
+          "deduction": 10000000
+        },
+        {
+          "relation": "other",
+          "label": "그 외",
+          "deduction": 0
+        }
       ]
     },
     "brackets": {
       "brackets": [
-        { "upperBound": 100000000, "rate": 0.10, "progressiveDeduction": 0 },
-        { "upperBound": 500000000, "rate": 0.20, "progressiveDeduction": 10000000 },
-        { "upperBound": 1000000000, "rate": 0.30, "progressiveDeduction": 60000000 },
-        { "upperBound": 3000000000, "rate": 0.40, "progressiveDeduction": 160000000 },
-        { "upperBound": null, "rate": 0.50, "progressiveDeduction": 460000000 }
+        {
+          "upperBound": 100000000,
+          "rate": 0.1,
+          "progressiveDeduction": 0
+        },
+        {
+          "upperBound": 500000000,
+          "rate": 0.2,
+          "progressiveDeduction": 10000000
+        },
+        {
+          "upperBound": 1000000000,
+          "rate": 0.3,
+          "progressiveDeduction": 60000000
+        },
+        {
+          "upperBound": 3000000000,
+          "rate": 0.4,
+          "progressiveDeduction": 160000000
+        },
+        {
+          "upperBound": null,
+          "rate": 0.5,
+          "progressiveDeduction": 460000000
+        }
       ]
     }
   },
   "formula": [
-    { "step": 1, "name": "공제", "expr": "수증자 관계별 lookup" },
-    { "step": 2, "name": "과세표준", "expr": "max(0, 증여재산 - 공제)" },
-    { "step": 3, "name": "산출세액", "expr": "과세표준 × 세율 - 누진공제" }
+    {
+      "step": 1,
+      "name": "공제",
+      "expr": "수증자 관계별 lookup"
+    },
+    {
+      "step": 2,
+      "name": "과세표준",
+      "expr": "max(0, 증여재산 - 공제)"
+    },
+    {
+      "step": 3,
+      "name": "산출세액",
+      "expr": "과세표준 × 세율 - 누진공제"
+    }
   ],
   "inputs": [
-    { "id": "giftAmount", "label": "증여재산", "type": "currency", "min": 0, "default": 100000000 },
-    { "id": "relation", "label": "수증자 관계", "type": "select", "options": ["spouse", "lineal_adult", "lineal_minor", "sibling", "other"], "default": "lineal_adult" }
+    {
+      "id": "giftAmount",
+      "label": "증여재산",
+      "type": "currency",
+      "min": 0,
+      "default": 100000000
+    },
+    {
+      "id": "relation",
+      "label": "수증자 관계",
+      "type": "select",
+      "options": [
+        {
+          "value": "spouse",
+          "label": "배우자"
+        },
+        {
+          "value": "lineal_adult",
+          "label": "직계존비속 (성인)"
+        },
+        {
+          "value": "lineal_minor",
+          "label": "직계존비속 (미성년)"
+        },
+        {
+          "value": "sibling",
+          "label": "형제자매"
+        },
+        {
+          "value": "other",
+          "label": "기타 친족"
+        }
+      ],
+      "default": "lineal_adult"
+    }
   ],
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-01",
     "method": "상증법 §53, §56 적용. 10년 합산 시점 가정 X (단일 증여 기준).",
     "cases": [
-      { "name": "Case 1 — 1억 자녀(성인) (공제 5천만)", "input": { "giftAmount": 100000000, "relation": "lineal_adult" }, "expected": { "deduction": 50000000, "taxableBase": 50000000, "tax": 5000000 } },
-      { "name": "Case 2 — 5억 자녀(성인)", "input": { "giftAmount": 500000000, "relation": "lineal_adult" }, "expected": { "deduction": 50000000, "taxableBase": 450000000, "tax": 80000000 } },
-      { "name": "Case 3 — 10억 배우자 (공제 6억)", "input": { "giftAmount": 1000000000, "relation": "spouse" }, "expected": { "deduction": 600000000, "taxableBase": 400000000, "tax": 70000000 } },
-      { "name": "Case 4 — 3억 부모(성인 직계존속)", "input": { "giftAmount": 300000000, "relation": "lineal_adult" }, "expected": { "deduction": 50000000, "taxableBase": 250000000, "tax": 40000000 } },
-      { "name": "Case 5 — 1억 형제 (공제 1천만)", "input": { "giftAmount": 100000000, "relation": "sibling" }, "expected": { "deduction": 10000000, "taxableBase": 90000000, "tax": 9000000 } }
+      {
+        "name": "Case 1 — 1억 자녀(성인) (공제 5천만)",
+        "input": {
+          "giftAmount": 100000000,
+          "relation": "lineal_adult"
+        },
+        "expected": {
+          "deduction": 50000000,
+          "taxableBase": 50000000,
+          "tax": 5000000
+        }
+      },
+      {
+        "name": "Case 2 — 5억 자녀(성인)",
+        "input": {
+          "giftAmount": 500000000,
+          "relation": "lineal_adult"
+        },
+        "expected": {
+          "deduction": 50000000,
+          "taxableBase": 450000000,
+          "tax": 80000000
+        }
+      },
+      {
+        "name": "Case 3 — 10억 배우자 (공제 6억)",
+        "input": {
+          "giftAmount": 1000000000,
+          "relation": "spouse"
+        },
+        "expected": {
+          "deduction": 600000000,
+          "taxableBase": 400000000,
+          "tax": 70000000
+        }
+      },
+      {
+        "name": "Case 4 — 3억 부모(성인 직계존속)",
+        "input": {
+          "giftAmount": 300000000,
+          "relation": "lineal_adult"
+        },
+        "expected": {
+          "deduction": 50000000,
+          "taxableBase": 250000000,
+          "tax": 40000000
+        }
+      },
+      {
+        "name": "Case 5 — 1억 형제 (공제 1천만)",
+        "input": {
+          "giftAmount": 100000000,
+          "relation": "sibling"
+        },
+        "expected": {
+          "deduction": 10000000,
+          "taxableBase": 90000000,
+          "tax": 9000000
+        }
+      }
     ]
   },
   "guide": {
     "howToUse": "증여재산과 수증자 관계를 입력하면 증여세가 산출됩니다. 공제는 10년 합산 한도이며, 동일 수증자에게 10년 내 추가 증여 시 합산 신고 필수.",
-    "tips": ["10년 단위로 공제 한도 갱신 (전략적 분할 증여).", "신고기한 증여일이 속하는 달의 말일부터 3개월 내, **자진신고세액공제 3%** (산출세액의 3%).", "**혼인·출산 증여 추가공제 1억** (혼인일/출생일 전후 2년, 2024 신설, 직계존속 → 직계비속)."]
+    "tips": [
+      "10년 단위로 공제 한도 갱신 (전략적 분할 증여).",
+      "신고기한 증여일이 속하는 달의 말일부터 3개월 내, **자진신고세액공제 3%** (산출세액의 3%).",
+      "**혼인·출산 증여 추가공제 1억** (혼인일/출생일 전후 2년, 2024 신설, 직계존속 → 직계비속)."
+    ]
   },
-  "related": ["inheritance-tax"]
+  "related": [
+    "inheritance-tax"
+  ]
 }

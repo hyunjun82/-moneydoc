@@ -169,6 +169,9 @@
           "monthly": 477415,
           "totalPayment": 171869605,
           "totalInterest": 71869605
+        },
+        "govSource": {
+          "adapter": "budongsan-loan"
         }
       },
       {
@@ -185,6 +188,9 @@
           "monthly": 1265299,
           "totalPayment": 303671660,
           "totalInterest": 103671660
+        },
+        "govSource": {
+          "adapter": "budongsan-loan"
         }
       },
       {
@@ -202,6 +208,9 @@
           "lastPayment": 278704,
           "totalInterest": 60166620,
           "totalPayment": 160166620
+        },
+        "govSource": {
+          "adapter": "budongsan-loan"
         }
       },
       {
@@ -219,6 +228,9 @@
           "lastPayment": 836458,
           "totalInterest": 90375000,
           "totalPayment": 290375000
+        },
+        "govSource": {
+          "adapter": "budongsan-loan"
         }
       },
       {
@@ -235,6 +247,9 @@
           "monthlyInterest": 416667,
           "totalInterest": 25000020,
           "totalPayment": 125000020
+        },
+        "govSource": {
+          "adapter": "budongsan-loan"
         }
       },
       {
@@ -251,6 +266,9 @@
           "monthlyInterest": 750000,
           "totalInterest": 27000000,
           "totalPayment": 227000000
+        },
+        "govSource": {
+          "adapter": "budongsan-loan"
         }
       },
       {
@@ -269,6 +287,9 @@
           "repayMonthly": 505208,
           "totalInterest": 75687495,
           "totalPayment": 175687495
+        },
+        "govSource": {
+          "adapter": "budongsan-loan"
         }
       },
       {
@@ -287,6 +308,9 @@
           "repayMonthly": 1352649,
           "totalInterest": 110172253,
           "totalPayment": 310172253
+        },
+        "govSource": {
+          "adapter": "budongsan-loan"
         }
       }
     ]

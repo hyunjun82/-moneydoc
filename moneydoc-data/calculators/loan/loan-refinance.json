@@ -93,6 +93,9 @@
           "oldTotal": 175377012,
           "newTotal": 158351052,
           "totalSaving": 17025960
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -110,6 +113,9 @@
           "oldTotal": 343886908,
           "newTotal": 303671701,
           "totalSaving": 40215207
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -127,6 +133,9 @@
           "oldTotal": 588637547,
           "newTotal": 510671117,
           "totalSaving": 77966430
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -144,6 +153,9 @@
           "oldTotal": 69665088,
           "newTotal": 65115767,
           "totalSaving": 4549321
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -161,6 +173,9 @@
           "oldTotal": 912033558,
           "newTotal": 838723232,
           "totalSaving": 73310326
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       }
     ]

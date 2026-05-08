@@ -1,0 +1,39 @@
+{
+  "label": "housing-subscription-score",
+  "timestamp": "2026-05-08T06-25-43",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "housing-subscription-score",
+      "case": "Case 1 — 무주택 5년 / 부양 2 / 통장 5년",
+      "ts": 1778221543897
+    },
+    {
+      "status": "pass",
+      "calc": "housing-subscription-score",
+      "case": "Case 2 — 무주택 15년 / 부양 4 / 통장 15년",
+      "ts": 1778221543900
+    },
+    {
+      "status": "pass",
+      "calc": "housing-subscription-score",
+      "case": "Case 3 — 무주택 10년 / 부양 3 / 통장 10년",
+      "ts": 1778221543900
+    },
+    {
+      "status": "pass",
+      "calc": "housing-subscription-score",
+      "case": "Case 4 — 무주택 0년 / 부양 0 / 통장 2년",
+      "ts": 1778221543900
+    },
+    {
+      "status": "pass",
+      "calc": "housing-subscription-score",
+      "case": "Case 5 — 무주택 8년 / 부양 5 / 통장 12년",
+      "ts": 1778221543900
+    }
+  ]
+}

@@ -193,6 +193,9 @@
           "dsrLimitAmount": 488742825,
           "absoluteCap": null,
           "maxLoan": 350000000
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -213,6 +216,9 @@
           "dsrLimitAmount": 526296490,
           "absoluteCap": null,
           "maxLoan": 480000000
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -233,6 +239,9 @@
           "dsrLimitAmount": 472576185,
           "absoluteCap": 600000000,
           "maxLoan": 400000000
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -253,6 +262,9 @@
           "dsrLimitAmount": 1054738850,
           "absoluteCap": 800000000,
           "maxLoan": 800000000
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -273,6 +285,9 @@
           "dsrLimitAmount": 352243526,
           "absoluteCap": null,
           "maxLoan": 352243526
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -293,6 +308,9 @@
           "dsrLimitAmount": 450337359,
           "absoluteCap": 600000000,
           "maxLoan": 450337359
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       }
     ]

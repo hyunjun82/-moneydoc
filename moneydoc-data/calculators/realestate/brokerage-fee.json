@@ -105,9 +105,18 @@
       "label": "거래 유형",
       "type": "select",
       "options": [
-        "sale",
-        "rent_jeonse",
-        "rent_monthly"
+        {
+          "value": "sale",
+          "label": "매매"
+        },
+        {
+          "value": "rent_jeonse",
+          "label": "전세"
+        },
+        {
+          "value": "rent_monthly",
+          "label": "월세"
+        }
       ],
       "default": "sale"
     },

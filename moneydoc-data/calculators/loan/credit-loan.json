@@ -71,6 +71,9 @@
         },
         "expected": {
           "maxLoan": 30000000
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -81,6 +84,9 @@
         },
         "expected": {
           "maxLoan": 75000000
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -91,6 +97,9 @@
         },
         "expected": {
           "maxLoan": 105000000
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -101,6 +110,9 @@
         },
         "expected": {
           "maxLoan": 200000000
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       },
       {
@@ -111,6 +123,9 @@
         },
         "expected": {
           "maxLoan": 400000000
+        },
+        "govSource": {
+          "adapter": "loan-formulas"
         }
       }
     ]
