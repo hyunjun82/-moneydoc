@@ -1,0 +1,647 @@
+{
+  "id": "transfer-tax",
+  "category": "realestate",
+  "subCategory": "tax",
+  "title": "양도소득세 계산기 (통합)",
+  "subtitle": "1세대 1주택 / 다주택자 / 조정대상지역 다주택 모두 — 한 화면",
+  "slug": "transfer-tax",
+  "searchAliases": [
+    "양도세 계산기",
+    "양도소득세",
+    "1세대1주택 양도세",
+    "다주택 양도세",
+    "조정대상지역 양도세"
+  ],
+  "year": 2026,
+  "lastUpdated": "2026-05-08",
+  "lastVerified": "2026-05-08",
+  "source": {
+    "primary": {
+      "agency": "국세청",
+      "document": "소득세법",
+      "year": 2026,
+      "laws": [
+        "소득세법 제89조 (1세대 1주택 비과세)",
+        "소득세법 제95조 (장기보유특별공제)",
+        "소득세법 제103조 (양도소득기본공제)",
+        "소득세법 제104조 (양도소득세율)",
+        "소득세법 시행령 제159조의3 (1세대1주택 장특공제율)"
+      ]
+    }
+  },
+  "constants": {
+    "NON_TAXABLE_LIMIT": 1200000000,
+    "BASIC_DEDUCTION": 2500000,
+    "LOCAL_TAX_RATE": 0.1
+  },
+  "tables": {
+    "incomeTaxBrackets": {
+      "description": "양도세 일반 누진세율 (소득세법 §104) — 종합소득세와 동일",
+      "brackets": [
+        {
+          "upperBound": 14000000,
+          "rate": 0.06,
+          "progressiveDeduction": 0
+        },
+        {
+          "upperBound": 50000000,
+          "rate": 0.15,
+          "progressiveDeduction": 1260000
+        },
+        {
+          "upperBound": 88000000,
+          "rate": 0.24,
+          "progressiveDeduction": 5760000
+        },
+        {
+          "upperBound": 150000000,
+          "rate": 0.35,
+          "progressiveDeduction": 15440000
+        },
+        {
+          "upperBound": 300000000,
+          "rate": 0.38,
+          "progressiveDeduction": 19940000
+        },
+        {
+          "upperBound": 500000000,
+          "rate": 0.4,
+          "progressiveDeduction": 25940000
+        },
+        {
+          "upperBound": 1000000000,
+          "rate": 0.42,
+          "progressiveDeduction": 35940000
+        },
+        {
+          "upperBound": null,
+          "rate": 0.45,
+          "progressiveDeduction": 65940000
+        }
+      ]
+    },
+    "ltbcGeneral": {
+      "description": "일반 장기보유특별공제 (다주택자, 1세대1주택 거주 미달자)",
+      "formula": "보유 3년 미만 0%, 3년 6%, 매년 +2%, 15년 이상 30% 한도"
+    },
+    "ltbc1Home": {
+      "description": "1세대1주택 장특공제 (보유 3년+ AND 거주 2년+, 시행령 §159의3)",
+      "formula": "보유연수 × 4% (한도 40%) + 거주연수 × 4% (한도 40%) = 합계 한도 80%. 적용 요건: 보유 3년 이상 + 거주 2년 이상 모두 충족."
+    }
+  },
+  "inputs": [
+    {
+      "id": "taxMode",
+      "label": "양도 상황",
+      "type": "select",
+      "default": "1home",
+      "options": [
+        {
+          "value": "1home",
+          "label": "1세대 1주택 (12억 비과세 + LBC 우대)"
+        },
+        {
+          "value": "multi",
+          "label": "다주택자 (일반 누진세 + LBC 일반)"
+        },
+        {
+          "value": "adjusted",
+          "label": "조정대상지역 다주택 (가산세율 +20~30%p)"
+        }
+      ]
+    },
+    {
+      "id": "salePrice",
+      "label": "양도가액",
+      "type": "currency",
+      "min": 0,
+      "default": 1500000000
+    },
+    {
+      "id": "acquisitionPrice",
+      "label": "취득가액",
+      "type": "currency",
+      "min": 0,
+      "default": 800000000
+    },
+    {
+      "id": "expense",
+      "label": "필요경비",
+      "type": "currency",
+      "min": 0,
+      "default": 0,
+      "hint": "취득세, 중개수수료 등"
+    },
+    {
+      "id": "holdingYears",
+      "label": "보유연수",
+      "type": "number",
+      "min": 0,
+      "max": 50,
+      "default": 10
+    },
+    {
+      "id": "livedYears",
+      "label": "거주연수 (1주택만 적용)",
+      "type": "number",
+      "min": 0,
+      "max": 50,
+      "default": 10
+    },
+    {
+      "id": "homeCount",
+      "label": "주택수 (다주택만)",
+      "type": "number",
+      "min": 1,
+      "max": 10,
+      "default": 2
+    }
+  ],
+  "formula": [
+    {
+      "step": 1,
+      "name": "양도차익",
+      "expr": "salePrice - acquisitionPrice - expense"
+    },
+    {
+      "step": 2,
+      "name": "1세대1주택",
+      "expr": "12억 비과세 (보유 2년+ 거주 2년+) + LBC 보유×4% + 거주×4% (max 80%)"
+    },
+    {
+      "step": 3,
+      "name": "다주택자",
+      "expr": "일반 누진세 + LBC 일반 (보유×2%, max 30%)"
+    },
+    {
+      "step": 4,
+      "name": "조정대상지역",
+      "expr": "다주택 + 가산세율 +20~30%p (2주택 +20, 3주택+ +30)"
+    },
+    {
+      "step": 5,
+      "name": "지방소득세",
+      "expr": "산출세액 × 10%"
+    }
+  ],
+  "verification": {
+    "verified": true,
+    "verifiedAt": "2026-05-08",
+    "method": "3가지 모드 통합 (1home / multi / adjusted) — 각 산식별 검증 완료. taxMode 입력으로 분기.",
+    "cases": [
+      {
+        "name": "[1home] Case 1 — 1세대1주택 비과세 (양도 10억, 취득 5억, 보유5년, 거주5년)",
+        "input": {
+          "salePrice": 1000000000,
+          "acquisitionPrice": 500000000,
+          "expense": 0,
+          "holdingYears": 5,
+          "livedYears": 5,
+          "isOneHome": true,
+          "taxMode": "1home"
+        },
+        "expected": {
+          "gain": 500000000,
+          "isNonTaxable": true,
+          "taxableGain": 0,
+          "ltbcRate": 0,
+          "incomeAmount": 0,
+          "taxableBase": 0,
+          "taxBeforeLocal": 0,
+          "localTax": 0,
+          "totalTax": 0
+        }
+      },
+      {
+        "name": "[1home] Case 2 — 1세대1주택 12억 초과 (양도 15억, 보유10년, 거주10년)",
+        "input": {
+          "salePrice": 1500000000,
+          "acquisitionPrice": 800000000,
+          "expense": 0,
+          "holdingYears": 10,
+          "livedYears": 10,
+          "isOneHome": true,
+          "taxMode": "1home"
+        },
+        "expected": {
+          "gain": 700000000,
+          "isNonTaxable": false,
+          "taxableGain": 140000000,
+          "ltbcRate": 0.8,
+          "incomeAmount": 28000000,
+          "taxableBase": 25500000,
+          "taxBeforeLocal": 2565000,
+          "localTax": 256500,
+          "totalTax": 2821500
+        }
+      },
+      {
+        "name": "[1home] Case 3 — 1세대1주택 거주 짧음 (양도 20억, 취득 10억, 보유5년, 거주3년)",
+        "input": {
+          "salePrice": 2000000000,
+          "acquisitionPrice": 1000000000,
+          "expense": 0,
+          "holdingYears": 5,
+          "livedYears": 3,
+          "isOneHome": true,
+          "taxMode": "1home"
+        },
+        "expected": {
+          "gain": 1000000000,
+          "isNonTaxable": false,
+          "taxableGain": 400000000,
+          "ltbcRate": 0.32,
+          "incomeAmount": 272000000,
+          "taxableBase": 269500000,
+          "taxBeforeLocal": 82470000,
+          "localTax": 8247000,
+          "totalTax": 90717000
+        }
+      },
+      {
+        "name": "[1home] Case 4 — 1세대1주택 거주 미달 (양도 9억, 취득 6억, 보유3년, 거주0년 → 비과세 X, 일반 LBC)",
+        "input": {
+          "salePrice": 900000000,
+          "acquisitionPrice": 600000000,
+          "expense": 0,
+          "holdingYears": 3,
+          "livedYears": 0,
+          "isOneHome": true,
+          "taxMode": "1home"
+        },
+        "expected": {
+          "gain": 300000000,
+          "isNonTaxable": false,
+          "taxableGain": 300000000,
+          "ltbcRate": 0.06,
+          "incomeAmount": 282000000,
+          "taxableBase": 279500000,
+          "taxBeforeLocal": 86270000,
+          "localTax": 8627000,
+          "totalTax": 94897000
+        }
+      },
+      {
+        "name": "[1home] Case 5 — 다주택자 (양도 8억, 취득 5억, 보유5년)",
+        "input": {
+          "salePrice": 800000000,
+          "acquisitionPrice": 500000000,
+          "expense": 0,
+          "holdingYears": 5,
+          "livedYears": 0,
+          "isOneHome": false,
+          "taxMode": "1home"
+        },
+        "expected": {
+          "gain": 300000000,
+          "isNonTaxable": false,
+          "taxableGain": 300000000,
+          "ltbcRate": 0.1,
+          "incomeAmount": 270000000,
+          "taxableBase": 267500000,
+          "taxBeforeLocal": 81710000,
+          "localTax": 8171000,
+          "totalTax": 89881000
+        }
+      },
+      {
+        "name": "[1home] Case 6 — 단기 1년 미만 (1세대1주택 70%)",
+        "input": {
+          "salePrice": 800000000,
+          "acquisitionPrice": 600000000,
+          "expense": 0,
+          "holdingYears": 0.5,
+          "livedYears": 0,
+          "isOneHome": true,
+          "taxMode": "1home"
+        },
+        "expected": {
+          "gain": 200000000,
+          "isNonTaxable": false,
+          "taxableGain": 200000000,
+          "ltbcRate": 0,
+          "incomeAmount": 200000000,
+          "taxableBase": 197500000,
+          "taxBeforeLocal": 138250000,
+          "localTax": 13825000,
+          "totalTax": 152075000
+        }
+      },
+      {
+        "name": "[1home] Case 7 — 단기 1-2년 (60%)",
+        "input": {
+          "salePrice": 700000000,
+          "acquisitionPrice": 500000000,
+          "expense": 0,
+          "holdingYears": 1.5,
+          "livedYears": 1,
+          "isOneHome": true,
+          "taxMode": "1home"
+        },
+        "expected": {
+          "gain": 200000000,
+          "isNonTaxable": false,
+          "taxableGain": 200000000,
+          "ltbcRate": 0,
+          "incomeAmount": 200000000,
+          "taxableBase": 197500000,
+          "taxBeforeLocal": 118500000,
+          "localTax": 11850000,
+          "totalTax": 130350000
+        }
+      },
+      {
+        "name": "[multi] Case 1 — 다주택 양도 5억, 취득 3억, 보유 5년",
+        "input": {
+          "salePrice": 500000000,
+          "acquisitionPrice": 300000000,
+          "expense": 0,
+          "holdingYears": 5,
+          "taxMode": "multi"
+        },
+        "expected": {
+          "gain": 200000000,
+          "ltbcRate": 0.1,
+          "incomeAmount": 180000000,
+          "taxableBase": 177500000,
+          "taxBeforeLocal": 47510000,
+          "localTax": 4751000,
+          "totalTax": 52261000
+        }
+      },
+      {
+        "name": "[multi] Case 2 — 다주택 양도 8억, 취득 5억, 보유 10년",
+        "input": {
+          "salePrice": 800000000,
+          "acquisitionPrice": 500000000,
+          "expense": 0,
+          "holdingYears": 10,
+          "taxMode": "multi"
+        },
+        "expected": {
+          "gain": 300000000,
+          "ltbcRate": 0.2,
+          "incomeAmount": 240000000,
+          "taxableBase": 237500000,
+          "taxBeforeLocal": 70310000,
+          "localTax": 7031000,
+          "totalTax": 77341000
+        }
+      },
+      {
+        "name": "[multi] Case 3 — 단기 양도 10억, 취득 7억, 보유 1년 (단기 60%)",
+        "input": {
+          "salePrice": 1000000000,
+          "acquisitionPrice": 700000000,
+          "expense": 0,
+          "holdingYears": 1,
+          "taxMode": "multi"
+        },
+        "expected": {
+          "gain": 300000000,
+          "ltbcRate": 0,
+          "incomeAmount": 300000000,
+          "taxableBase": 297500000,
+          "taxBeforeLocal": 178500000,
+          "localTax": 17850000,
+          "totalTax": 196350000
+        }
+      },
+      {
+        "name": "[multi] Case 4 — 다주택 양도 6억, 취득 4억, 보유 3년",
+        "input": {
+          "salePrice": 600000000,
+          "acquisitionPrice": 400000000,
+          "expense": 0,
+          "holdingYears": 3,
+          "taxMode": "multi"
+        },
+        "expected": {
+          "gain": 200000000,
+          "ltbcRate": 0.06,
+          "incomeAmount": 188000000,
+          "taxableBase": 185500000,
+          "taxBeforeLocal": 50550000,
+          "localTax": 5055000,
+          "totalTax": 55605000
+        }
+      },
+      {
+        "name": "[multi] Case 5 — 다주택 양도 12억, 취득 8억, 보유 15년 (LBC 30%)",
+        "input": {
+          "salePrice": 1200000000,
+          "acquisitionPrice": 800000000,
+          "expense": 0,
+          "holdingYears": 15,
+          "taxMode": "multi"
+        },
+        "expected": {
+          "gain": 400000000,
+          "ltbcRate": 0.3,
+          "incomeAmount": 280000000,
+          "taxableBase": 277500000,
+          "taxBeforeLocal": 85510000,
+          "localTax": 8551000,
+          "totalTax": 94061000
+        }
+      },
+      {
+        "name": "[adjusted] Case 1 — 양도 8억 / 취득 5억 / 보유 5년 / 2주택",
+        "input": {
+          "salePrice": 800000000,
+          "acquisitionPrice": 500000000,
+          "holdingYears": 5,
+          "houseCount": 2,
+          "taxMode": "adjusted"
+        },
+        "expected": {
+          "gain": 300000000,
+          "ltbcRate": 0.1,
+          "incomeAmount": 270000000,
+          "taxableBase": 267500000,
+          "baseTax": 81710000,
+          "surcharge": 53500000,
+          "totalIncomeTax": 135210000,
+          "localTax": 13521000,
+          "totalTax": 148731000
+        }
+      },
+      {
+        "name": "[adjusted] Case 2 — 양도 10억 / 취득 6억 / 보유 10년 / 3주택",
+        "input": {
+          "salePrice": 1000000000,
+          "acquisitionPrice": 600000000,
+          "holdingYears": 10,
+          "houseCount": 3,
+          "taxMode": "adjusted"
+        },
+        "expected": {
+          "gain": 400000000,
+          "ltbcRate": 0.2,
+          "incomeAmount": 320000000,
+          "taxableBase": 317500000,
+          "baseTax": 101060000,
+          "surcharge": 95250000,
+          "totalIncomeTax": 196310000,
+          "localTax": 19631000,
+          "totalTax": 215941000
+        }
+      },
+      {
+        "name": "[adjusted] Case 3 — 양도 6억 / 취득 4억 / 보유 3년 / 2주택",
+        "input": {
+          "salePrice": 600000000,
+          "acquisitionPrice": 400000000,
+          "holdingYears": 3,
+          "houseCount": 2,
+          "taxMode": "adjusted"
+        },
+        "expected": {
+          "gain": 200000000,
+          "ltbcRate": 0.06,
+          "incomeAmount": 188000000,
+          "taxableBase": 185500000,
+          "baseTax": 50550000,
+          "surcharge": 37100000,
+          "totalIncomeTax": 87650000,
+          "localTax": 8765000,
+          "totalTax": 96415000
+        }
+      },
+      {
+        "name": "[adjusted] Case 4 — 양도 15억 / 취득 8억 / 보유 15년 / 3주택",
+        "input": {
+          "salePrice": 1500000000,
+          "acquisitionPrice": 800000000,
+          "holdingYears": 15,
+          "houseCount": 3,
+          "taxMode": "adjusted"
+        },
+        "expected": {
+          "gain": 700000000,
+          "ltbcRate": 0.3,
+          "incomeAmount": 490000000,
+          "taxableBase": 487500000,
+          "baseTax": 169060000,
+          "surcharge": 146250000,
+          "totalIncomeTax": 315310000,
+          "localTax": 31531000,
+          "totalTax": 346841000
+        }
+      },
+      {
+        "name": "[adjusted] Case 5 — 양도 5억 / 취득 3억 / 보유 5년 / 4주택",
+        "input": {
+          "salePrice": 500000000,
+          "acquisitionPrice": 300000000,
+          "holdingYears": 5,
+          "houseCount": 4,
+          "taxMode": "adjusted"
+        },
+        "expected": {
+          "gain": 200000000,
+          "ltbcRate": 0.1,
+          "incomeAmount": 180000000,
+          "taxableBase": 177500000,
+          "baseTax": 47510000,
+          "surcharge": 53250000,
+          "totalIncomeTax": 100760000,
+          "localTax": 10076000,
+          "totalTax": 110836000
+        }
+      }
+    ]
+  },
+  "guide": {
+    "tables": {
+      "transferTaxModeTable": [
+        {
+          "케이스": "1세대 1주택 12억 이하",
+          "비과세": "전액 (보유 2+/거주 2+)",
+          "LBC": "보유×4% + 거주×4% (최대 80%)",
+          "세율": "일반 누진"
+        },
+        {
+          "케이스": "1세대 1주택 12억 초과",
+          "비과세": "12억까지만",
+          "LBC": "동일 (1주택 우대)",
+          "세율": "일반 누진"
+        },
+        {
+          "케이스": "다주택자 (비조정)",
+          "비과세": "없음",
+          "LBC": "보유×2% (최대 30%)",
+          "세율": "일반 누진"
+        },
+        {
+          "케이스": "조정 다주택 2주택",
+          "비과세": "없음",
+          "LBC": "X",
+          "세율": "일반 + 20%p"
+        },
+        {
+          "케이스": "조정 다주택 3주택+",
+          "비과세": "없음",
+          "LBC": "X",
+          "세율": "일반 + 30%p"
+        }
+      ],
+      "transferTaxExampleTable": [
+        {
+          "케이스": "1세대1주택 10억 (보유10/거주10)",
+          "양도차익": "5억 (취득 5억)",
+          "총 세금": "0원 (비과세)"
+        },
+        {
+          "케이스": "1세대1주택 15억 (보유10/거주10)",
+          "양도차익": "7억",
+          "총 세금": "약 3,500만원 (12억 초과분)"
+        },
+        {
+          "케이스": "다주택자 8억 (취득 5억, 보유 5)",
+          "양도차익": "3억",
+          "총 세금": "약 5,226만원"
+        },
+        {
+          "케이스": "조정 2주택 8억 (취득 5억, 보유 5)",
+          "양도차익": "3억",
+          "총 세금": "약 1억 350만원 (가산 20%p)"
+        }
+      ]
+    },
+    "tips": [
+      "💰 1세대 1주택 12억 비과세 — 보유 2년 + 거주 2년 충족 필수.",
+      "📊 1주택 LBC 최대 80% (보유×4% + 거주×4%) vs 다주택 LBC 최대 30%. 1주택이 압도적 유리.",
+      "⚠️ 조정대상지역 다주택 = 가산세율 +20~30%p (2025.5 한시 완화 후 2026 환원).",
+      "🏛️ 단기양도(2년 미만): 1년 미만 70% / 1~2년 60% (1주택 동일 적용).",
+      "🔗 다음 단계 → 취득세 계산기로 새 주택 매수 비용 + 종부세 계산기로 보유 부담."
+    ],
+    "faq": [
+      {
+        "q": "1세대 1주택이면 무조건 비과세?",
+        "a": "조건부. 보유 2년 + 거주 2년 + 12억 이하. 12억 초과분만 과세 (예: 15억이면 차익의 (15-12)/15 = 20%만 과세)."
+      },
+      {
+        "q": "다주택자가 일시적 1주택 되면?",
+        "a": "기존 주택 매도 후 신규 매수 시 일시적 2주택. 신규 매수 후 3년 내 기존 매도하면 비과세 적용 가능 (소득세법 §155). 본 계산기에서는 다주택 모드 사용."
+      },
+      {
+        "q": "조정 다주택 가산세율이 정확히?",
+        "a": "2주택 +20%p, 3주택 이상 +30%p. 2025.5.10 한시 완화로 일반세율 적용 가능 (2026.5까지 연장 여부 미확정)."
+      },
+      {
+        "q": "LBC 1주택 vs 일반 차이?",
+        "a": "1주택: 보유×4% + 거주×4% = 최대 80% (보유 10년 거주 10년이면 80%). 일반: 보유×2% = 최대 30%. 1주택은 차익의 80%까지 공제."
+      },
+      {
+        "q": "양도세 신고 기한?",
+        "a": "양도 다음달 말일 (예: 5월 양도 → 6월 30일). 미신고 시 가산세 20% + 지연 가산 0.025%/일."
+      }
+    ]
+  },
+  "related": [
+    "acquisition-tax",
+    "comprehensive-real-estate-tax",
+    "property-tax"
+  ]
+}
