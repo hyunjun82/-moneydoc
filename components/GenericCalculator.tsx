@@ -113,6 +113,8 @@ const OUTPUT_LABELS: Record<string, string> = {
   totalPayment: "총 상환액",
   totalRepayment: "총 상환액",
   maxLoan: "최대 대출 한도",
+  depositRatio: "대출 가능 금액 (보증금 × 보증비율)",
+  appliedLimit: "적용 한도 (보증한도 cap 적용)",
   ltvLimit: "LTV 한도",
   dsrLimitAmount: "DSR 한도 금액",
   dsrPct: "DSR",
@@ -340,8 +342,8 @@ function formatValue(v: unknown, unit?: string, key?: string): string {
 }
 
 function isPercentKey(key: string): boolean {
-  // 금액 키 (Rate가 들어있어도 금액)
-  if (/^baseRate$|^hourlyRate$|^monthlyRate$|^dailyRate$|^baseAmount$/i.test(key)) return false;
+  // 금액 키 (Rate/Ratio가 들어있어도 금액 — 명시적 예외)
+  if (/^baseRate$|^hourlyRate$|^monthlyRate$|^dailyRate$|^baseAmount$|^depositRatio$/i.test(key)) return false;
   return /Pct|Rate(?!s)|Ratio|Pcnt|^ltv$|^dti$|^dsr$|^userPct/i.test(key);
 }
 

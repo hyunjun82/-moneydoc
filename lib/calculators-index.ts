@@ -157,6 +157,12 @@ export const GUIDE_TABLE_TITLES: Record<string, string> = {
   jeonseDepositTable: "전세 보증금별 대출 한도 (HF·HUG·SGI 80~90%)",
   refinanceSavingTable: "갈아타기 절약 시뮬 (잔액별 / 금리차별)",
   prepaymentBalanceTable: "잔액별 중도상환수수료 (1.0% / 1.4% / 3년 면제)",
+  calcMethodTable: "계산 방식 비교 (표준 PMT vs HF 일할)",
+  depositRateTable: "원금별 정기예금 만기액 (1년 / 단리 2.5~4%)",
+  installmentMonthTable: "월 납입액별 적금 만기액 (12개월 / 단리 3.5%)",
+  freeSavingsMonthTable: "월 평균 납입별 자유적금 만기액 (24개월 / 3.5%)",
+  isaInterestTable: "5년 누적 이자별 ISA 절세액 (일반·서민형)",
+  taxFreeEligibilityTable: "비과세종합저축 자격·한도·절세 효과",
   summary: "한눈에 보는 세금·보호 한도",
   eligibility: "비과세종합저축 가입 자격 (8개)",
 };
