@@ -1,0 +1,39 @@
+{
+  "label": "near-poor-eligibility",
+  "timestamp": "2026-05-09T06-46-52",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "near-poor-eligibility",
+      "case": "Case 1 — 1인 / 80만 (자격 O)",
+      "ts": 1778309212598
+    },
+    {
+      "status": "pass",
+      "calc": "near-poor-eligibility",
+      "case": "Case 2 — 2인 / 150만",
+      "ts": 1778309212603
+    },
+    {
+      "status": "pass",
+      "calc": "near-poor-eligibility",
+      "case": "Case 3 — 3인 / 250만 (자격 O)",
+      "ts": 1778309212603
+    },
+    {
+      "status": "pass",
+      "calc": "near-poor-eligibility",
+      "case": "Case 4 — 4인 / 300만 (자격 O — 2026 인상으로 변경)",
+      "ts": 1778309212603
+    },
+    {
+      "status": "pass",
+      "calc": "near-poor-eligibility",
+      "case": "Case 5 — 4인 / 400만 (자격 X)",
+      "ts": 1778309212603
+    }
+  ]
+}

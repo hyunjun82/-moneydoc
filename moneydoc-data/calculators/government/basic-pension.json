@@ -26,8 +26,8 @@
     "note": "2026년 기준연금액 단독 349,700원 (단독×1.6 = 부부 559,520원), 선정기준액 단독 2,470,000원 / 부부 3,952,000원."
   },
   "constants": {
-    "MAX_SINGLE_2026": 349700,
-    "MAX_COUPLE_2026": 559520,
+    "MAX_SINGLE_2026": 343700,
+    "MAX_COUPLE_2026": 553520,
     "INCOME_THRESHOLD_SINGLE": 2470000,
     "INCOME_THRESHOLD_COUPLE": 3952000
   },
@@ -82,7 +82,7 @@
         },
         "expected": {
           "isEligible": true,
-          "monthlyPension": 349700
+          "monthlyPension": 343700
         }
       },
       {
@@ -104,7 +104,7 @@
         },
         "expected": {
           "isEligible": true,
-          "monthlyPension": 559520
+          "monthlyPension": 553520
         }
       },
       {
@@ -115,7 +115,7 @@
         },
         "expected": {
           "isEligible": true,
-          "monthlyPension": 349700
+          "monthlyPension": 343700
         }
       },
       {

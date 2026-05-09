@@ -1,0 +1,39 @@
+{
+  "label": "basic-pension",
+  "timestamp": "2026-05-09T06-40-08",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 1 — 단독, 소득 100만 (자격 O)",
+      "ts": 1778308808905
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 2 — 단독, 소득 250만 (자격 X — 247만 초과)",
+      "ts": 1778308808914
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 3 — 부부, 소득 200만 (자격 O)",
+      "ts": 1778308808914
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 4 — 단독, 소득 247만 (경계, 자격 O)",
+      "ts": 1778308808914
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 5 — 부부, 소득 400만 (자격 X — 395.2만 초과)",
+      "ts": 1778308808914
+    }
+  ]
+}
