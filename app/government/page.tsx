@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "정부지원금 계산기 — 17종 | MoneyDoc",
+  title: "정부지원금 계산기 — 11종 | MoneyDoc",
   description: "기초연금·실업급여·육아휴직급여·산재보험·근로/자녀장려금·기초생활수급·청년월세지원·기준중위소득 — 2026년 기준 보건복지부·고용노동부 공식 산식",
   alternates: { canonical: "/government/" },
 };
@@ -40,30 +40,9 @@ export default function Page() {
             <span className="cat-count">정부 공식 산식</span>
           </div>
         </a>
-        <a href="/government/birth-childcare-support/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">출산·육아 지원금 통합 계산기</h3>
-            <p className="cat-desc">첫만남 200만 + 부모급여 + 아동수당 통합</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
-        <a href="/government/child-allowance/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">자녀장려금 자격·예상액 계산기</h3>
-            <p className="cat-desc">총소득 7천만 이하 + 자녀 1인당 최대 100만</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
-        <a href="/government/durunuri-support/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">두루누리 사회보험료 지원 계산기</h3>
-            <p className="cat-desc">5인 미만 사업장 + 월 270만 미만 근로자 80% 지원</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
         <a href="/government/earned-income-tax-credit/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
-            <h3 className="cat-name">근로장려금 자격·예상액 계산기</h3>
+            <h3 className="cat-name">근로장려금 모의계산</h3>
             <p className="cat-desc">단독·외벌이·맞벌이 가구별 한도와 추정</p>
             <span className="cat-count">정부 공식 산식</span>
           </div>
@@ -117,31 +96,10 @@ export default function Page() {
             <span className="cat-count">정부 공식 산식</span>
           </div>
         </a>
-        <a href="/government/unemployment-benefit-days/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">실업급여 수급기간 계산기</h3>
-            <p className="cat-desc">가입연수 + 50세 이상/장애인 가산일 적용</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
         <a href="/government/unemployment-benefit/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
-            <h3 className="cat-name">실업급여 일액 계산기</h3>
+            <h3 className="cat-name">실업급여 계산기</h3>
             <p className="cat-desc">고용보험법 §46 구직급여 일액 + 소정급여일수</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
-        <a href="/government/youth-housing-allowance/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">청년 주거급여 계산기</h3>
-            <p className="cat-desc">주거급여법 정확 산식 — 기준임차료 - 자기부담분</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
-        <a href="/government/youth-rent-support/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">청년 월세 지원 계산기</h3>
-            <p className="cat-desc">월 최대 20만원 × 12개월</p>
             <span className="cat-count">정부 공식 산식</span>
           </div>
         </a>

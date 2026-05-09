@@ -1,8 +1,5 @@
 import basicLivelihoodEligibility from "@/data/calculators/government/basic-livelihood-eligibility.json";
 import basicPension from "@/data/calculators/government/basic-pension.json";
-import birthChildcareSupport from "@/data/calculators/government/birth-childcare-support.json";
-import childAllowance from "@/data/calculators/government/child-allowance.json";
-import durunuriSupport from "@/data/calculators/government/durunuri-support.json";
 import earnedIncomeTaxCredit from "@/data/calculators/government/earned-income-tax-credit.json";
 import industrialAccidentPay from "@/data/calculators/government/industrial-accident-pay.json";
 import maternityLeavePay from "@/data/calculators/government/maternity-leave-pay.json";
@@ -11,10 +8,7 @@ import nationalScholarship from "@/data/calculators/government/national-scholars
 import nearPoorEligibility from "@/data/calculators/government/near-poor-eligibility.json";
 import parentalLeavePay from "@/data/calculators/government/parental-leave-pay.json";
 import singleParentSupport from "@/data/calculators/government/single-parent-support.json";
-import unemploymentBenefitDays from "@/data/calculators/government/unemployment-benefit-days.json";
 import unemploymentBenefit from "@/data/calculators/government/unemployment-benefit.json";
-import youthHousingAllowance from "@/data/calculators/government/youth-housing-allowance.json";
-import youthRentSupport from "@/data/calculators/government/youth-rent-support.json";
 import autoTax from "@/data/calculators/insurance/auto-tax.json";
 import medicalInsurancePayout from "@/data/calculators/insurance/medical-insurance-payout.json";
 import annualLeaveAllowance from "@/data/calculators/law/annual-leave-allowance.json";
@@ -107,9 +101,6 @@ export type CalcMeta = {
 const ALL_SPECS: { slug: string; category: string; title: string; subtitle: string; }[] = [
   basicLivelihoodEligibility,
   basicPension,
-  birthChildcareSupport,
-  childAllowance,
-  durunuriSupport,
   earnedIncomeTaxCredit,
   industrialAccidentPay,
   maternityLeavePay,
@@ -118,10 +109,7 @@ const ALL_SPECS: { slug: string; category: string; title: string; subtitle: stri
   nearPoorEligibility,
   parentalLeavePay,
   singleParentSupport,
-  unemploymentBenefitDays,
   unemploymentBenefit,
-  youthHousingAllowance,
-  youthRentSupport,
   autoTax,
   medicalInsurancePayout,
   annualLeaveAllowance,

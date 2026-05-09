@@ -2,7 +2,7 @@
   "id": "unemployment-benefit",
   "category": "government",
   "subCategory": "labor",
-  "title": "실업급여 일액 계산기",
+  "title": "실업급여 계산기",
   "subtitle": "고용보험법 §46 — 일액 상한 68,100원 / 하한 66,048원 (2026.1.1 시행)",
   "slug": "unemployment-benefit",
   "searchAliases": [

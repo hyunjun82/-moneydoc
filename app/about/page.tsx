@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "소개 — MoneyDoc",
-  description: "정부 공식 산식으로 검증된 한국 금융·세금·법률 계산기 73종을 한 곳에서.",
+  description: "정부 공식 산식으로 검증된 한국 금융·세금·법률 계산기 67종을 한 곳에서.",
   alternates: { canonical: "/about/" },
 };
 
@@ -20,7 +20,7 @@ export default function Page() {
         <div className="guide-list" style={{ padding: "32px 36px", color: "var(--text-2)", lineHeight: 1.75 }}>
           <h2 style={{ fontSize: 18, color: "var(--text)", marginTop: 0 }}>우리가 만든 것</h2>
           <p>
-            저축·대출·부동산·세금·보험·연금·법률·정부지원금 — <strong>한국 금융·세금·법률 계산기 73종</strong>을 한 곳에 모았습니다.
+            저축·대출·부동산·세금·보험·연금·법률·정부지원금 — <strong>한국 금융·세금·법률 계산기 67종</strong>을 한 곳에 모았습니다.
             모든 산식은 정부 공식 자료(소득세법, 지방세법, 시행령, 공단 고시 등)를 기반으로 구현되었으며, 정부 예시값으로 검증을 거칩니다.
           </p>
           <h2 style={{ fontSize: 18, color: "var(--text)" }}>왜 다른가</h2>
