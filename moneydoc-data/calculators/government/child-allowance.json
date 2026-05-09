@@ -1,27 +1,254 @@
 {
-  "id": "child-allowance", "category": "government", "subCategory": "tax-credit",
-  "title": "자녀장려금 자격·예상액 계산기", "subtitle": "총소득 7천만 이하 + 자녀 1인당 최대 100만",
-  "slug": "child-allowance", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
-  "source": { "primary": { "agency": "국세청", "document": "조세특례제한법 §100의6", "year": 2026 } },
-  "constants": { "INCOME_LIMIT": 70000000, "MAX_PER_CHILD": 1000000 },
+  "id": "child-allowance",
+  "category": "government",
+  "subCategory": "tax-credit",
+  "title": "자녀장려금 자격·예상액 계산기",
+  "subtitle": "총소득 7천만 이하 + 자녀 1인당 최대 100만",
+  "slug": "child-allowance",
+  "year": 2026,
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
+  "source": {
+    "primary": {
+      "agency": "국세청",
+      "document": "조세특례제한법 §100의6",
+      "year": 2026
+    }
+  },
+  "constants": {
+    "INCOME_LIMIT": 70000000,
+    "MAX_PER_CHILD": 1000000
+  },
   "formula": [
-    { "step": 1, "name": "자격", "expr": "총소득 7천만 이하 + 18세 미만 자녀" },
-    { "step": 2, "name": "추정액", "expr": "min(자녀수 × 100만, 자녀수 × 100만 × (1 - 소득/7000만))" }
+    {
+      "step": 1,
+      "name": "자격",
+      "expr": "총소득 7천만 이하 + 18세 미만 자녀"
+    },
+    {
+      "step": 2,
+      "name": "추정액",
+      "expr": "min(자녀수 × 100만, 자녀수 × 100만 × (1 - 소득/7000만))"
+    }
   ],
   "inputs": [
-    { "id": "totalIncome", "label": "총소득 (연)", "type": "currency", "min": 0, "default": 30000000 },
-    { "id": "childrenUnder18", "label": "18세 미만 자녀 수", "type": "stepper", "min": 0, "max": 10, "default": 2 }
+    {
+      "id": "totalIncome",
+      "label": "총소득 (연)",
+      "type": "currency",
+      "min": 0,
+      "default": 30000000
+    },
+    {
+      "id": "childrenUnder18",
+      "label": "18세 미만 자녀 수",
+      "type": "stepper",
+      "min": 0,
+      "max": 10,
+      "default": 2
+    }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-05-01", "method": "조특법 §100의6. 점감 산식 단순화 적용.",
+    "verified": true,
+    "verifiedAt": "2026-05-01",
+    "method": "조특법 §100의6. 점감 산식 단순화 적용.",
     "cases": [
-      { "name": "Case 1 — 3천만 / 자녀 2", "input": { "totalIncome": 30000000, "childrenUnder18": 2 }, "expected": { "isEligible": true, "estimatedAmount": 1142857 } },
-      { "name": "Case 2 — 5천만 / 자녀 1", "input": { "totalIncome": 50000000, "childrenUnder18": 1 }, "expected": { "isEligible": true, "estimatedAmount": 285714 } },
-      { "name": "Case 3 — 7천만 / 자녀 3 (경계)", "input": { "totalIncome": 70000000, "childrenUnder18": 3 }, "expected": { "isEligible": true, "estimatedAmount": 0 } },
-      { "name": "Case 4 — 8천만 (한도 초과)", "input": { "totalIncome": 80000000, "childrenUnder18": 2 }, "expected": { "isEligible": false, "estimatedAmount": 0 } },
-      { "name": "Case 5 — 2천만 / 자녀 4", "input": { "totalIncome": 20000000, "childrenUnder18": 4 }, "expected": { "isEligible": true, "estimatedAmount": 2857143 } }
+      {
+        "name": "Case 1 — 3천만 / 자녀 2",
+        "input": {
+          "totalIncome": 30000000,
+          "childrenUnder18": 2
+        },
+        "expected": {
+          "isEligible": true,
+          "estimatedAmount": 1142857
+        }
+      },
+      {
+        "name": "Case 2 — 5천만 / 자녀 1",
+        "input": {
+          "totalIncome": 50000000,
+          "childrenUnder18": 1
+        },
+        "expected": {
+          "isEligible": true,
+          "estimatedAmount": 285714
+        }
+      },
+      {
+        "name": "Case 3 — 7천만 / 자녀 3 (경계)",
+        "input": {
+          "totalIncome": 70000000,
+          "childrenUnder18": 3
+        },
+        "expected": {
+          "isEligible": true,
+          "estimatedAmount": 0
+        }
+      },
+      {
+        "name": "Case 4 — 8천만 (한도 초과)",
+        "input": {
+          "totalIncome": 80000000,
+          "childrenUnder18": 2
+        },
+        "expected": {
+          "isEligible": false,
+          "estimatedAmount": 0
+        }
+      },
+      {
+        "name": "Case 5 — 2천만 / 자녀 4",
+        "input": {
+          "totalIncome": 20000000,
+          "childrenUnder18": 4
+        },
+        "expected": {
+          "isEligible": true,
+          "estimatedAmount": 2857143
+        }
+      }
     ]
   },
-  "guide": { "howToUse": "총소득과 18세 미만 자녀 수 입력 시 자녀장려금 자격 + 예상액 산출.", "tips": ["근로장려금과 중복 가능.", "5월 정기신청.", "자녀 1인당 최대 100만원.", "재산 한도 2.4억 이하 (가구 합산)."] },
-  "related": ["earned-income-tax-credit", "child-tax-credit"]
+  "guide": {
+    "howToUse": "총소득과 18세 미만 자녀 수 입력 시 자녀장려금 자격 + 예상액 산출.",
+    "tips": [
+      "아동수당 = 만 8세 미만 모든 아동 월 10만. 소득 기준 X — 부자도 받음.",
+      "출생 시 신청 → 다음 달부터 8년간 매월 10만. 누적 960만 (8년).",
+      "부모급여(0~1세) + 아동수당(0~8세) 중복 수령 가능. 0세 = 월 110만 받음.",
+      "어린이집·유치원 이용 시 — 보육료/유아학비 vs 양육수당 택1.",
+      "신청 = 출생신고와 동시 가능 (동주민센터). 부모급여·양육수당 동시 신청.",
+      "지급일 = 매월 25일 통장 입금. 부모 명의 (출생신고자).",
+      "8세 생일 전월까지 자동 지급. 별도 종료 신청 X."
+    ],
+    "tables": {
+      "아동수당개요": [
+        {
+          "항목": "지원 대상",
+          "내용": "만 8세 미만 모든 아동",
+          "근거": "아동수당법 §4"
+        },
+        {
+          "항목": "월 지급액",
+          "내용": "10만/월",
+          "근거": "—"
+        },
+        {
+          "항목": "소득 기준",
+          "내용": "X (모든 아동)",
+          "근거": "—"
+        },
+        {
+          "항목": "지급 시작",
+          "내용": "출생 후 즉시 (신청 익월)",
+          "근거": "—"
+        },
+        {
+          "항목": "지급 종료",
+          "내용": "만 8세 도달 전월까지",
+          "근거": "—"
+        }
+      ],
+      "연령별누적수령": [
+        {
+          "기간": "0~1세 (1년)",
+          "월 10만 × 12개월": "120만"
+        },
+        {
+          "기간": "0~3세 (3년)",
+          "월 10만 × 36개월": "360만"
+        },
+        {
+          "기간": "0~6세 (6년)",
+          "월 10만 × 72개월": "720만"
+        },
+        {
+          "기간": "0~8세 (8년 만기)",
+          "월 10만 × 96개월": "960만"
+        }
+      ],
+      "다른지원과중복": [
+        {
+          "지원": "부모급여 (0~1세)",
+          "월액": "월 100만 (0세) / 월 50만 (1세)",
+          "중복 가능": "○ 동시 수령"
+        },
+        {
+          "지원": "양육수당 (0~7세, 가정양육 시)",
+          "월액": "월 10~20만",
+          "중복 가능": "△ 일부 중복"
+        },
+        {
+          "지원": "보육료 (0~5세, 어린이집 이용 시)",
+          "월액": "어린이집 이용료 전액",
+          "중복 가능": "양육수당과 택1"
+        },
+        {
+          "지원": "유아학비 (3~5세)",
+          "월액": "유치원 이용료 전액",
+          "중복 가능": "양육수당과 택1"
+        }
+      ],
+      "신청절차": [
+        {
+          "단계": "1. 출생신고 (1개월 이내)",
+          "장소": "동주민센터",
+          "비고": "—"
+        },
+        {
+          "단계": "2. 아동수당 신청",
+          "장소": "동주민센터 또는 복지로(bokjiro.go.kr)",
+          "비고": "출생신고와 동시 가능"
+        },
+        {
+          "단계": "3. 부모급여·양육수당 신청",
+          "장소": "동시 신청 가능",
+          "비고": "—"
+        },
+        {
+          "단계": "4. 지급 시작",
+          "장소": "신청 다음 달 25일 통장",
+          "비고": "—"
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "아동수당 자격은?",
+        "a": "만 8세 미만 모든 아동. 소득 기준 X. 출생 시 자동 자격."
+      },
+      {
+        "q": "월 얼마?",
+        "a": "월 10만. 8년 누적 960만. 출생 다음 달부터 만 8세 생일 전월까지."
+      },
+      {
+        "q": "부모급여랑 같이?",
+        "a": "동시 수령 가능. 0세 = 부모급여 100만 + 아동수당 10만 = 월 110만. 1세 = 50만 + 10만 = 60만."
+      },
+      {
+        "q": "어린이집 가면 못 받나요?",
+        "a": "아동수당은 그대로. 단, 양육수당은 어린이집 이용 시 X — 보육료 지원으로 대체."
+      },
+      {
+        "q": "신청 어디?",
+        "a": "동주민센터 또는 복지로(bokjiro.go.kr). 출생신고와 동시 신청 권장. 부모급여·양육수당도 같이."
+      },
+      {
+        "q": "지급일?",
+        "a": "매월 25일 통장. 첫 지급은 신청 다음 달."
+      },
+      {
+        "q": "부모 이혼 후 받는 사람?",
+        "a": "양육권자(친권자) 명의 통장. 이혼 시 이혼 신고 + 양육권자 변경 시 지급 대상도 변경."
+      },
+      {
+        "q": "외국인 자녀도?",
+        "a": "한국 국적 자녀만. 단, 부모 중 1명이 한국 국적이면 자녀도 한국 국적 신청 가능."
+      }
+    ]
+  },
+  "related": [
+    "earned-income-tax-credit",
+    "child-tax-credit"
+  ]
 }

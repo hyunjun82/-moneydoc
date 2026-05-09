@@ -1,35 +1,281 @@
 {
-  "id": "youth-housing-allowance", "category": "government", "subCategory": "housing",
-  "title": "청년 주거급여 계산기", "subtitle": "주거급여법 정확 산식 — 기준임차료 - 자기부담분",
-  "slug": "youth-housing-allowance", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
-  "source": { "primary": { "agency": "보건복지부·국토교통부", "document": "주거급여법 시행령", "year": 2026 } },
+  "id": "youth-housing-allowance",
+  "category": "government",
+  "subCategory": "housing",
+  "title": "청년 주거급여 계산기",
+  "subtitle": "주거급여법 정확 산식 — 기준임차료 - 자기부담분",
+  "slug": "youth-housing-allowance",
+  "year": 2026,
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
+  "source": {
+    "primary": {
+      "agency": "보건복지부·국토교통부",
+      "document": "주거급여법 시행령",
+      "year": 2026
+    }
+  },
   "constants": {},
   "tables": {
-    "baseRent": { "1": 369000, "2": 414000, "3": 492000, "4": 571000, "5": 663000, "6": 759000 },
-    "livelihoodBase": { "1": 820556, "2": 1343773, "3": 1714892, "4": 2078316, "5": 2418150, "6": 2737904 }
+    "baseRent": {
+      "1": 369000,
+      "2": 414000,
+      "3": 492000,
+      "4": 571000,
+      "5": 663000,
+      "6": 759000
+    },
+    "livelihoodBase": {
+      "1": 820556,
+      "2": 1343773,
+      "3": 1714892,
+      "4": 2078316,
+      "5": 2418150,
+      "6": 2737904
+    }
   },
   "formula": [
-    { "step": 1, "name": "기준 임차료", "expr": "가구원수별 (1급지 서울 기준)" },
-    { "step": 2, "name": "생계급여 기준", "expr": "중위소득 32% 가구원수별" },
-    { "step": 3, "name": "자기부담분", "expr": "max(0, (소득인정액 - 생계급여기준) × 30%)" },
-    { "step": 4, "name": "임차급여", "expr": "max(0, 기준임차료 - 자기부담분)" },
-    { "step": 5, "name": "자격", "expr": "소득인정액 ≤ 중위소득 48% (생계급여기준 × 48/32)" }
+    {
+      "step": 1,
+      "name": "기준 임차료",
+      "expr": "가구원수별 (1급지 서울 기준)"
+    },
+    {
+      "step": 2,
+      "name": "생계급여 기준",
+      "expr": "중위소득 32% 가구원수별"
+    },
+    {
+      "step": 3,
+      "name": "자기부담분",
+      "expr": "max(0, (소득인정액 - 생계급여기준) × 30%)"
+    },
+    {
+      "step": 4,
+      "name": "임차급여",
+      "expr": "max(0, 기준임차료 - 자기부담분)"
+    },
+    {
+      "step": 5,
+      "name": "자격",
+      "expr": "소득인정액 ≤ 중위소득 48% (생계급여기준 × 48/32)"
+    }
   ],
   "inputs": [
-    { "id": "householdSize", "label": "가구원 수", "type": "stepper", "min": 1, "max": 6, "default": 1 },
-    { "id": "incomeAmount", "label": "소득인정액 (월, 원)", "type": "currency", "min": 0, "default": 1000000 }
+    {
+      "id": "householdSize",
+      "label": "가구원 수",
+      "type": "stepper",
+      "min": 1,
+      "max": 6,
+      "default": 1
+    },
+    {
+      "id": "incomeAmount",
+      "label": "소득인정액 (월, 원)",
+      "type": "currency",
+      "min": 0,
+      "default": 1000000
+    }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-05-01",
+    "verified": true,
+    "verifiedAt": "2026-05-01",
     "method": "주거급여법 시행령 정확 산식 적용. 1급지 서울 기준임차료, 2026년 생계급여(32%) 기준.",
     "cases": [
-      { "name": "Case 1 — 1인 / 50만", "input": { "householdSize": 1, "incomeAmount": 500000 }, "expected": { "isEligible": true, "baseRent": 369000, "livelihoodBase": 820556, "selfPay": 0, "monthlySupport": 369000 } },
-      { "name": "Case 2 — 1인 / 100만", "input": { "householdSize": 1, "incomeAmount": 1000000 }, "expected": { "isEligible": true, "baseRent": 369000, "livelihoodBase": 820556, "selfPay": 53833, "monthlySupport": 315167 } },
-      { "name": "Case 3 — 4인 / 150만", "input": { "householdSize": 4, "incomeAmount": 1500000 }, "expected": { "isEligible": true, "baseRent": 571000, "livelihoodBase": 2078316, "selfPay": 0, "monthlySupport": 571000 } },
-      { "name": "Case 4 — 4인 / 250만", "input": { "householdSize": 4, "incomeAmount": 2500000 }, "expected": { "isEligible": true, "baseRent": 571000, "livelihoodBase": 2078316, "selfPay": 126505, "monthlySupport": 444495 } },
-      { "name": "Case 5 — 1인 / 200만 (자격 X)", "input": { "householdSize": 1, "incomeAmount": 2000000 }, "expected": { "isEligible": false, "baseRent": 369000, "livelihoodBase": 820556, "selfPay": 353833, "monthlySupport": 0 } }
+      {
+        "name": "Case 1 — 1인 / 50만",
+        "input": {
+          "householdSize": 1,
+          "incomeAmount": 500000
+        },
+        "expected": {
+          "isEligible": true,
+          "baseRent": 369000,
+          "livelihoodBase": 820556,
+          "selfPay": 0,
+          "monthlySupport": 369000
+        }
+      },
+      {
+        "name": "Case 2 — 1인 / 100만",
+        "input": {
+          "householdSize": 1,
+          "incomeAmount": 1000000
+        },
+        "expected": {
+          "isEligible": true,
+          "baseRent": 369000,
+          "livelihoodBase": 820556,
+          "selfPay": 53833,
+          "monthlySupport": 315167
+        }
+      },
+      {
+        "name": "Case 3 — 4인 / 150만",
+        "input": {
+          "householdSize": 4,
+          "incomeAmount": 1500000
+        },
+        "expected": {
+          "isEligible": true,
+          "baseRent": 571000,
+          "livelihoodBase": 2078316,
+          "selfPay": 0,
+          "monthlySupport": 571000
+        }
+      },
+      {
+        "name": "Case 4 — 4인 / 250만",
+        "input": {
+          "householdSize": 4,
+          "incomeAmount": 2500000
+        },
+        "expected": {
+          "isEligible": true,
+          "baseRent": 571000,
+          "livelihoodBase": 2078316,
+          "selfPay": 126505,
+          "monthlySupport": 444495
+        }
+      },
+      {
+        "name": "Case 5 — 1인 / 200만 (자격 X)",
+        "input": {
+          "householdSize": 1,
+          "incomeAmount": 2000000
+        },
+        "expected": {
+          "isEligible": false,
+          "baseRent": 369000,
+          "livelihoodBase": 820556,
+          "selfPay": 353833,
+          "monthlySupport": 0
+        }
+      }
     ]
   },
-  "guide": { "howToUse": "가구원수와 소득인정액 입력 시 임차급여 산출.", "tips": ["1급지(서울) 기준. 2급지(경기·인천)·3급지·4급지 별도 표.", "자가가구는 수선비 지원 (별도).", "주민센터 신청."] },
-  "related": ["youth-rent-support", "basic-pension"]
+  "guide": {
+    "howToUse": "가구원수와 소득인정액 입력 시 임차급여 산출.",
+    "tips": [
+      "청년 주거급여 = 만 19~34세 단독세대주, 중위소득 60% 이하 (1인 144만 미만).",
+      "월 지원 — 서울 21만, 수도권 16만, 광역시 13만, 지방 10만.",
+      "최대 12개월 지원 — 1년 누적 서울 252만.",
+      "임차료(월세) 우선 지원. 자가는 별도 (수선비 등).",
+      "기초수급자·차상위 + 청년 = 청년 주거급여 + 일반 주거급여 중복 가능.",
+      "신청 = 복지로(bokjiro.go.kr) 또는 동주민센터.",
+      "재산 1.7억 미만 — 기본공제 후 환산. 부모 명의 재산은 X (단독세대주이므로)."
+    ],
+    "tables": {
+      "청년주거급여": [
+        {
+          "항목": "자격 연령",
+          "내용": "만 19~34세 (단독세대주)",
+          "근거": "—"
+        },
+        {
+          "항목": "소득 기준",
+          "내용": "중위소득 60% 이하",
+          "근거": "—"
+        },
+        {
+          "항목": "재산 기준",
+          "내용": "1.7억 미만",
+          "근거": "—"
+        },
+        {
+          "항목": "월 지원금 (서울)",
+          "내용": "월 21만 (1인)",
+          "근거": "지자체별 차등"
+        }
+      ],
+      "지역별지원금": [
+        {
+          "지역": "서울",
+          "월 지원": "21만"
+        },
+        {
+          "지역": "수도권 (인천·경기)",
+          "월 지원": "16만"
+        },
+        {
+          "지역": "광역시 (부산·대구 등)",
+          "월 지원": "13만"
+        },
+        {
+          "지역": "기타 지방",
+          "월 지원": "10만"
+        }
+      ],
+      "지원기간": [
+        {
+          "항목": "지원 기간",
+          "내용": "최대 12개월",
+          "비고": "1회만"
+        },
+        {
+          "항목": "재신청 (정책 변경)",
+          "내용": "정책에 따라 가능",
+          "비고": "—"
+        },
+        {
+          "항목": "1년 누적 (서울)",
+          "내용": "약 252만",
+          "비고": "—"
+        }
+      ],
+      "신청절차": [
+        {
+          "단계": "1. 복지로(bokjiro.go.kr) 또는 동주민센터 신청"
+        },
+        {
+          "단계": "2. 임대차계약서 + 재직증명서 + 통장사본"
+        },
+        {
+          "단계": "3. 약 1개월 조사"
+        },
+        {
+          "단계": "4. 매월 25일 통장 입금"
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "청년 주거급여 자격?",
+        "a": "만 19~34세 단독세대주 + 중위소득 60% 이하 (1인 약 144만) + 재산 1.7억 미만."
+      },
+      {
+        "q": "월 얼마?",
+        "a": "서울 21만, 수도권 16만, 광역시 13만, 지방 10만. 매월 25일 통장."
+      },
+      {
+        "q": "지원 기간?",
+        "a": "최대 12개월. 1회만 (재신청 X 원칙)."
+      },
+      {
+        "q": "부모 집에 살아도?",
+        "a": "단독세대주만 자격. 부모와 함께 살면 X. 독립 거주 + 임대차계약 입증."
+      },
+      {
+        "q": "자가는 못 받나요?",
+        "a": "청년 주거급여는 임차료 위주. 자가는 일반 주거급여(다른 카테고리)로 신청."
+      },
+      {
+        "q": "기숙사 거주는?",
+        "a": "기숙사 비용 영수증으로 신청 가능. 단, 학교 직영 기숙사만."
+      },
+      {
+        "q": "신청 어디?",
+        "a": "복지로(bokjiro.go.kr) 또는 동주민센터. 임대차계약서 + 재직증명서 + 통장사본."
+      },
+      {
+        "q": "결혼하면 자격 박탈?",
+        "a": "결혼 시 단독세대주 자격 X — 신혼부부 카테고리(별도 지원)로 전환."
+      }
+    ]
+  },
+  "related": [
+    "youth-rent-support",
+    "basic-pension"
+  ]
 }

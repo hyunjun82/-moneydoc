@@ -1,28 +1,268 @@
 {
-  "id": "industrial-accident-pay", "category": "government", "subCategory": "labor",
-  "title": "산재 휴업급여 계산기", "subtitle": "평균임금의 70% × 휴업 일수",
-  "slug": "industrial-accident-pay", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
-  "source": { "primary": { "agency": "근로복지공단", "document": "산업재해보상보험법 §52", "year": 2026 } },
-  "constants": { "BENEFIT_RATE": 0.70, "_NOTE": "단순 70% 모델. 저소득 90% 보장·최저보상기준은 별도 적용." },
+  "id": "industrial-accident-pay",
+  "category": "government",
+  "subCategory": "labor",
+  "title": "산재 휴업급여 계산기",
+  "subtitle": "평균임금의 70% × 휴업 일수",
+  "slug": "industrial-accident-pay",
+  "year": 2026,
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
+  "source": {
+    "primary": {
+      "agency": "근로복지공단",
+      "document": "산업재해보상보험법 §52",
+      "year": 2026
+    }
+  },
+  "constants": {
+    "BENEFIT_RATE": 0.7,
+    "_NOTE": "단순 70% 모델. 저소득 90% 보장·최저보상기준은 별도 적용."
+  },
   "formula": [
-    { "step": 1, "name": "일평균임금", "expr": "월급 / 30" },
-    { "step": 2, "name": "일 휴업급여", "expr": "round(일급 × 70%)" },
-    { "step": 3, "name": "총 급여", "expr": "일급여 × 휴업일수" }
+    {
+      "step": 1,
+      "name": "일평균임금",
+      "expr": "월급 / 30"
+    },
+    {
+      "step": 2,
+      "name": "일 휴업급여",
+      "expr": "round(일급 × 70%)"
+    },
+    {
+      "step": 3,
+      "name": "총 급여",
+      "expr": "일급여 × 휴업일수"
+    }
   ],
   "inputs": [
-    { "id": "monthlySalary", "label": "월 평균임금", "type": "currency", "min": 1000000, "default": 4000000 },
-    { "id": "injuryDays", "label": "휴업 일수", "type": "number", "min": 1, "max": 730, "default": 90 }
+    {
+      "id": "monthlySalary",
+      "label": "월 평균임금",
+      "type": "currency",
+      "min": 1000000,
+      "default": 4000000
+    },
+    {
+      "id": "injuryDays",
+      "label": "휴업 일수",
+      "type": "number",
+      "min": 1,
+      "max": 730,
+      "default": 90
+    }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-05-01", "method": "산재보험법 §52. 평균임금의 70% × 일수. 휴업 4일 이상 지급.",
+    "verified": true,
+    "verifiedAt": "2026-05-01",
+    "method": "산재보험법 §52. 평균임금의 70% × 일수. 휴업 4일 이상 지급.",
     "cases": [
-      { "name": "Case 1 — 월 300만 / 30일", "input": { "monthlySalary": 3000000, "injuryDays": 30 }, "expected": { "dailyAvgWage": 100000, "dailyBenefit": 70000, "totalBenefit": 2100000 } },
-      { "name": "Case 2 — 월 400만 / 90일", "input": { "monthlySalary": 4000000, "injuryDays": 90 }, "expected": { "dailyAvgWage": 133333, "dailyBenefit": 93333, "totalBenefit": 8399970 } },
-      { "name": "Case 3 — 월 250만 / 60일", "input": { "monthlySalary": 2500000, "injuryDays": 60 }, "expected": { "dailyAvgWage": 83333, "dailyBenefit": 58333, "totalBenefit": 3499980 } },
-      { "name": "Case 4 — 월 500만 / 180일", "input": { "monthlySalary": 5000000, "injuryDays": 180 }, "expected": { "dailyAvgWage": 166667, "dailyBenefit": 116667, "totalBenefit": 21000060 } },
-      { "name": "Case 5 — 월 600만 / 365일", "input": { "monthlySalary": 6000000, "injuryDays": 365 }, "expected": { "dailyAvgWage": 200000, "dailyBenefit": 140000, "totalBenefit": 51100000 } }
+      {
+        "name": "Case 1 — 월 300만 / 30일",
+        "input": {
+          "monthlySalary": 3000000,
+          "injuryDays": 30
+        },
+        "expected": {
+          "dailyAvgWage": 100000,
+          "dailyBenefit": 70000,
+          "totalBenefit": 2100000
+        }
+      },
+      {
+        "name": "Case 2 — 월 400만 / 90일",
+        "input": {
+          "monthlySalary": 4000000,
+          "injuryDays": 90
+        },
+        "expected": {
+          "dailyAvgWage": 133333,
+          "dailyBenefit": 93333,
+          "totalBenefit": 8399970
+        }
+      },
+      {
+        "name": "Case 3 — 월 250만 / 60일",
+        "input": {
+          "monthlySalary": 2500000,
+          "injuryDays": 60
+        },
+        "expected": {
+          "dailyAvgWage": 83333,
+          "dailyBenefit": 58333,
+          "totalBenefit": 3499980
+        }
+      },
+      {
+        "name": "Case 4 — 월 500만 / 180일",
+        "input": {
+          "monthlySalary": 5000000,
+          "injuryDays": 180
+        },
+        "expected": {
+          "dailyAvgWage": 166667,
+          "dailyBenefit": 116667,
+          "totalBenefit": 21000060
+        }
+      },
+      {
+        "name": "Case 5 — 월 600만 / 365일",
+        "input": {
+          "monthlySalary": 6000000,
+          "injuryDays": 365
+        },
+        "expected": {
+          "dailyAvgWage": 200000,
+          "dailyBenefit": 140000,
+          "totalBenefit": 51100000
+        }
+      }
     ]
   },
-  "guide": { "howToUse": "월 평균임금과 휴업 일수 입력 시 산재 휴업급여 산출.", "tips": ["휴업 4일 이상 지급 (3일 이내 X).", "근로복지공단에 신청.", "장해등급별 별도 보상금.", "저소득 근로자 90% 보장 / 최저보상기준 적용 (별도 산식)."] },
-  "related": ["unemployment-benefit", "severance-pay"]
+  "guide": {
+    "howToUse": "월 평균임금과 휴업 일수 입력 시 산재 휴업급여 산출.",
+    "tips": [
+      "산재 휴업급여 = 평균임금 70% × 치료 기간. 월 300만 → 월 210만 지급.",
+      "치료비(요양급여)는 별도 100% 지급 — 병원비 본인 부담 0.",
+      "장해 등급(1~14급) 따라 일시급 또는 연금. 1급 1,474일분 평균임금.",
+      "출퇴근 사고도 산재 인정 (2018~). 단, 통상적 경로·방법.",
+      "근로복지공단 신청 — 사업주가 거부해도 근로자 직접 신청 가능.",
+      "신청 시한 = 사고 후 3년. 그 안에 신청 안 하면 권리 상실.",
+      "산재 인정 시 회사 보험료율 인상 가능 — 사업주가 인정 거부하는 이유."
+    ],
+    "tables": {
+      "산재유형별보상": [
+        {
+          "항목": "휴업급여",
+          "내용": "치료 기간 평균임금 70%",
+          "근거": "산재보험법 §52"
+        },
+        {
+          "항목": "장해급여",
+          "내용": "후유장해 등급별 일시·연금",
+          "근거": "—"
+        },
+        {
+          "항목": "유족급여",
+          "내용": "사망 시 유족 연금 (평균임금 47~67%)",
+          "근거": "—"
+        },
+        {
+          "항목": "요양급여",
+          "내용": "치료비 100% (병원비)",
+          "근거": "—"
+        },
+        {
+          "항목": "장의비",
+          "내용": "사망 시 (평균임금 120일분)",
+          "근거": "—"
+        }
+      ],
+      "휴업급여시뮬": [
+        {
+          "평균임금": "월 200만 (1일 6.7만)",
+          "1일 70%": "약 4.7만",
+          "월 (30일)": "약 140만",
+          "비고": "—"
+        },
+        {
+          "평균임금": "월 300만 (1일 10만)",
+          "1일 70%": "약 7만",
+          "월": "약 210만",
+          "비고": "—"
+        },
+        {
+          "평균임금": "월 500만 (1일 16.7만)",
+          "1일 70%": "약 11.7만",
+          "월": "약 350만",
+          "비고": "—"
+        },
+        {
+          "평균임금": "월 700만 (1일 23.3만)",
+          "1일 70%": "약 16.3만",
+          "월": "약 490만",
+          "비고": "상한 없음"
+        }
+      ],
+      "장해등급별일시급": [
+        {
+          "등급": "1급 (최중증)",
+          "평균임금 일수": "1,474일",
+          "월 300만 평균임금 시": "약 1.47억"
+        },
+        {
+          "등급": "5급 (중간)",
+          "평균임금 일수": "869일",
+          "월 300만 평균임금 시": "약 8,690만"
+        },
+        {
+          "등급": "10급 (경미)",
+          "평균임금 일수": "295일",
+          "월 300만 평균임금 시": "약 2,950만"
+        },
+        {
+          "등급": "14급 (최경미)",
+          "평균임금 일수": "55일",
+          "월 300만 평균임금 시": "약 550만"
+        }
+      ],
+      "신청절차": [
+        {
+          "단계": "1. 사고 발생 즉시 사업주 신고",
+          "비고": "—"
+        },
+        {
+          "단계": "2. 근로복지공단 신청",
+          "비고": "comwel.or.kr"
+        },
+        {
+          "단계": "3. 의료기관 진단서 + 사고 경위서",
+          "비고": "—"
+        },
+        {
+          "단계": "4. 승인 후 지급 시작",
+          "비고": "1~2개월"
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "산재 인정되면 얼마?",
+        "a": "휴업급여 평균임금 70% + 치료비 100% + 장해등급에 따라 일시급. 월 300만 근로자 6개월 치료 시 휴업급여 약 1,260만."
+      },
+      {
+        "q": "출퇴근 사고도 산재?",
+        "a": "2018년부터 인정. 단, 통상적 경로·방법. 출근길 카페 들렀다 사고는 X 가능. 일반 출퇴근은 ○."
+      },
+      {
+        "q": "사업주가 반대하면?",
+        "a": "근로자 직접 신청 가능. 근로복지공단(comwel.or.kr). 사업주 동의 X 필요."
+      },
+      {
+        "q": "정신 질환(우울증 등)도 산재?",
+        "a": "직장 내 괴롭힘·과로 입증 시 인정. 진단서 + 동료 진술 + 근무 기록 등. 입증 어려움."
+      },
+      {
+        "q": "장해 등급 어떻게?",
+        "a": "근로복지공단 의료자문위원회 판정. 신체 부위·장해 정도. 14급(최경미)~1급(최중증)."
+      },
+      {
+        "q": "산재 vs 일반 보험?",
+        "a": "산재 = 회사 부담 (정부 보험). 본인 부담 X. 보장 한도 ↑. 일반 의료보험은 본인부담 + 보장 한도 ↓."
+      },
+      {
+        "q": "자영업자도?",
+        "a": "임의가입 가능 (산재보험 자영업자 특례). 의무 X — 가입 시 동일 보장."
+      },
+      {
+        "q": "신청 시한?",
+        "a": "사고 후 3년 이내. 그 안에 신청. 일부 진폐증·직업병은 시효 X (장기 노출 인정)."
+      }
+    ]
+  },
+  "related": [
+    "unemployment-benefit",
+    "severance-pay"
+  ]
 }

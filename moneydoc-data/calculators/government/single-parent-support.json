@@ -1,27 +1,253 @@
 {
-  "id": "single-parent-support", "category": "government", "subCategory": "family",
-  "title": "한부모가족 자녀양육비 계산기", "subtitle": "중위소득 65% 이하 + 18세 미만 자녀 1인당 월 23만원",
-  "slug": "single-parent-support", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
-  "source": { "primary": { "agency": "여성가족부", "document": "한부모가족지원법", "year": 2026 } },
-  "constants": { "MONTHLY_SUPPORT": 230000 },
+  "id": "single-parent-support",
+  "category": "government",
+  "subCategory": "family",
+  "title": "한부모가족 자녀양육비 계산기",
+  "subtitle": "중위소득 65% 이하 + 18세 미만 자녀 1인당 월 23만원",
+  "slug": "single-parent-support",
+  "year": 2026,
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
+  "source": {
+    "primary": {
+      "agency": "여성가족부",
+      "document": "한부모가족지원법",
+      "year": 2026
+    }
+  },
+  "constants": {
+    "MONTHLY_SUPPORT": 230000
+  },
   "formula": [
-    { "step": 1, "name": "자격", "expr": "중위소득 65% 이하 + 자녀 18세 미만" },
-    { "step": 2, "name": "월 지원", "expr": "자녀 1인당 23만원" }
+    {
+      "step": 1,
+      "name": "자격",
+      "expr": "중위소득 65% 이하 + 자녀 18세 미만"
+    },
+    {
+      "step": 2,
+      "name": "월 지원",
+      "expr": "자녀 1인당 23만원"
+    }
   ],
   "inputs": [
-    { "id": "medianIncomePct", "label": "중위소득 비율 (%)", "type": "number", "min": 0, "max": 100, "default": 50 },
-    { "id": "childAge", "label": "자녀 나이", "type": "number", "min": 0, "max": 25, "default": 8 }
+    {
+      "id": "medianIncomePct",
+      "label": "중위소득 비율 (%)",
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "default": 50
+    },
+    {
+      "id": "childAge",
+      "label": "자녀 나이",
+      "type": "number",
+      "min": 0,
+      "max": 25,
+      "default": 8
+    }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-05-01", "method": "한부모가족지원법. 65% 이하 + 18세 미만 + 자녀 1인당 23만원.",
+    "verified": true,
+    "verifiedAt": "2026-05-01",
+    "method": "한부모가족지원법. 65% 이하 + 18세 미만 + 자녀 1인당 23만원.",
     "cases": [
-      { "name": "Case 1 — 50% / 8세 (자격 O)", "input": { "medianIncomePct": 50, "childAge": 8 }, "expected": { "isEligible": true, "monthlySupport": 230000, "annualSupport": 2760000 } },
-      { "name": "Case 2 — 70% / 10세 (소득 초과)", "input": { "medianIncomePct": 70, "childAge": 10 }, "expected": { "isEligible": false, "monthlySupport": 0, "annualSupport": 0 } },
-      { "name": "Case 3 — 30% / 5세", "input": { "medianIncomePct": 30, "childAge": 5 }, "expected": { "isEligible": true, "monthlySupport": 230000, "annualSupport": 2760000 } },
-      { "name": "Case 4 — 60% / 17세 (경계)", "input": { "medianIncomePct": 60, "childAge": 17 }, "expected": { "isEligible": true, "monthlySupport": 230000, "annualSupport": 2760000 } },
-      { "name": "Case 5 — 45% / 19세 (연령 초과)", "input": { "medianIncomePct": 45, "childAge": 19 }, "expected": { "isEligible": false, "monthlySupport": 0, "annualSupport": 0 } }
+      {
+        "name": "Case 1 — 50% / 8세 (자격 O)",
+        "input": {
+          "medianIncomePct": 50,
+          "childAge": 8
+        },
+        "expected": {
+          "isEligible": true,
+          "monthlySupport": 230000,
+          "annualSupport": 2760000
+        }
+      },
+      {
+        "name": "Case 2 — 70% / 10세 (소득 초과)",
+        "input": {
+          "medianIncomePct": 70,
+          "childAge": 10
+        },
+        "expected": {
+          "isEligible": false,
+          "monthlySupport": 0,
+          "annualSupport": 0
+        }
+      },
+      {
+        "name": "Case 3 — 30% / 5세",
+        "input": {
+          "medianIncomePct": 30,
+          "childAge": 5
+        },
+        "expected": {
+          "isEligible": true,
+          "monthlySupport": 230000,
+          "annualSupport": 2760000
+        }
+      },
+      {
+        "name": "Case 4 — 60% / 17세 (경계)",
+        "input": {
+          "medianIncomePct": 60,
+          "childAge": 17
+        },
+        "expected": {
+          "isEligible": true,
+          "monthlySupport": 230000,
+          "annualSupport": 2760000
+        }
+      },
+      {
+        "name": "Case 5 — 45% / 19세 (연령 초과)",
+        "input": {
+          "medianIncomePct": 45,
+          "childAge": 19
+        },
+        "expected": {
+          "isEligible": false,
+          "monthlySupport": 0,
+          "annualSupport": 0
+        }
+      }
     ]
   },
-  "guide": { "howToUse": "소득비율과 자녀 나이 입력 시 한부모 자녀양육비 산출.", "tips": ["청소년 한부모(만 24세 이하): 추가 지원.", "주민센터 신청.", "2026년 기준 월 23만원 (중위 65% 이하)."] },
-  "related": ["child-allowance"]
+  "guide": {
+    "howToUse": "소득비율과 자녀 나이 입력 시 한부모 자녀양육비 산출.",
+    "tips": [
+      "한부모가족 = 이혼·사별·미혼 한부모 + 18세 미만 자녀. 중위소득 60% 이하 (1인 144만, 2인 238만).",
+      "양육비 자녀 1명당 월 21만 — 2자녀 = 월 42만.",
+      "청소년 한부모(24세 이하)는 추가 월 5만 + 생활보조금.",
+      "학용품비 연 9.3만/자녀 (초·중·고).",
+      "공공임대주택 우선 입주 — LH·SH 청년·신혼·한부모 카테고리.",
+      "위기 시 한부모가족복지시설 무료 거주 6개월~3년.",
+      "신청 = 동주민센터 또는 복지로. 한부모가족증명서 발급 후 추가 혜택."
+    ],
+    "tables": {
+      "한부모가족자격": [
+        {
+          "항목": "가족 형태",
+          "내용": "한부모 (이혼·사별·미혼) + 18세 미만 자녀",
+          "근거": "한부모가족지원법"
+        },
+        {
+          "항목": "소득 기준",
+          "내용": "기준중위소득 60% 이하",
+          "근거": "—"
+        },
+        {
+          "항목": "재산 기준",
+          "내용": "대도시 1.4억 미만",
+          "근거": "—"
+        }
+      ],
+      "한부모지원금": [
+        {
+          "지원": "양육비 (만 18세 미만 자녀)",
+          "내용": "월 21만/자녀",
+          "비고": "—"
+        },
+        {
+          "지원": "추가 양육비 (조손가족·청소년 한부모)",
+          "내용": "월 5~10만 추가",
+          "비고": "—"
+        },
+        {
+          "지원": "학용품비 (초·중·고)",
+          "내용": "연 9.3만/자녀",
+          "비고": "—"
+        },
+        {
+          "지원": "생활보조금 (24세 이하 청소년 한부모)",
+          "내용": "월 5만",
+          "비고": "—"
+        },
+        {
+          "지원": "자녀 양육비 (35세 이상 미혼한부모)",
+          "내용": "월 21만",
+          "비고": "—"
+        }
+      ],
+      "한부모1인2자녀시뮬": [
+        {
+          "항목": "양육비 (자녀 2명 × 21만)",
+          "월액": "42만"
+        },
+        {
+          "항목": "학용품비 (자녀 2명 × 9.3만/12)",
+          "월액": "약 1.55만"
+        },
+        {
+          "항목": "총 월 지원",
+          "월액": "약 43.5만 + 일시 학용품비"
+        },
+        {
+          "항목": "1년 누적",
+          "월액": "약 540만 (양육비 504 + 학용품 18.6)"
+        }
+      ],
+      "추가복지": [
+        {
+          "지원": "공공임대주택 우선",
+          "내용": "한부모 가구 우선 입주",
+          "비고": "—"
+        },
+        {
+          "지원": "전세자금대출 우대",
+          "내용": "신혼·청년 동일 또는 우대",
+          "비고": "—"
+        },
+        {
+          "지원": "아이돌봄 서비스 우선",
+          "내용": "월 30시간 이상 우선",
+          "비고": "—"
+        },
+        {
+          "지원": "한부모가족복지시설 입소",
+          "내용": "위기 시 6개월~3년 무료 거주",
+          "비고": "—"
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "한부모 자격은?",
+        "a": "이혼·사별·미혼 한부모 + 18세 미만 자녀 + 중위소득 60% 이하. 재산 대도시 1.4억 미만."
+      },
+      {
+        "q": "월 얼마?",
+        "a": "양육비 자녀 1명당 21만. 2자녀 = 42만. + 학용품비 연 9.3만/자녀."
+      },
+      {
+        "q": "청소년 한부모면?",
+        "a": "24세 이하 = 양육비 + 추가 5~10만 + 생활보조금 5만. 자립 지원 강화."
+      },
+      {
+        "q": "공공임대주택 어떻게?",
+        "a": "LH·SH 청년·신혼·한부모 우선 카테고리. 한부모가족증명서로 자격 입증."
+      },
+      {
+        "q": "전 배우자에게 양육비 받는데도?",
+        "a": "양육비 = 소득으로 산정. 일정 한도 초과 시 한부모 자격 X. 받는 양육비 월 21만 미만이면 보통 자격 유지."
+      },
+      {
+        "q": "신청 어디?",
+        "a": "동주민센터 또는 복지로(bokjiro.go.kr). 가족관계증명서 + 소득 증빙."
+      },
+      {
+        "q": "한부모가족복지시설은?",
+        "a": "위기 한부모(가정폭력·경제적 위기)에 무료 거주 시설. 전국 약 130개. 6개월~3년 거주 가능."
+      },
+      {
+        "q": "자녀 18세 되면?",
+        "a": "양육비 종료. 단, 자녀가 대학생(만 22세까지) 또는 장애인이면 연장."
+      }
+    ]
+  },
+  "related": [
+    "child-allowance"
+  ]
 }
