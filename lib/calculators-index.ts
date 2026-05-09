@@ -20,7 +20,6 @@ import medicalInsurancePayout from "@/data/calculators/insurance/medical-insuran
 import annualLeaveAllowance from "@/data/calculators/law/annual-leave-allowance.json";
 import childSupport from "@/data/calculators/law/child-support.json";
 import divorceAlimony from "@/data/calculators/law/divorce-alimony.json";
-import inheritanceDeadline from "@/data/calculators/law/inheritance-deadline.json";
 import inheritanceShare from "@/data/calculators/law/inheritance-share.json";
 import severancePay from "@/data/calculators/law/severance-pay.json";
 import unpaidWages from "@/data/calculators/law/unpaid-wages.json";
@@ -128,7 +127,6 @@ const ALL_SPECS: { slug: string; category: string; title: string; subtitle: stri
   annualLeaveAllowance,
   childSupport,
   divorceAlimony,
-  inheritanceDeadline,
   inheritanceShare,
   severancePay,
   unpaidWages,

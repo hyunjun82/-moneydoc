@@ -1,0 +1,189 @@
+{
+  "label": "law",
+  "timestamp": "2026-05-09T05-59-59",
+  "pass": 30,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "annual-leave-allowance",
+      "case": "Case 1 — 월 300만 / 5일 미사용",
+      "ts": 1778306399355
+    },
+    {
+      "status": "pass",
+      "calc": "annual-leave-allowance",
+      "case": "Case 2 — 월 400만 / 10일",
+      "ts": 1778306399359
+    },
+    {
+      "status": "pass",
+      "calc": "annual-leave-allowance",
+      "case": "Case 3 — 월 250만 / 8일",
+      "ts": 1778306399359
+    },
+    {
+      "status": "pass",
+      "calc": "annual-leave-allowance",
+      "case": "Case 4 — 월 500만 / 15일",
+      "ts": 1778306399359
+    },
+    {
+      "status": "pass",
+      "calc": "annual-leave-allowance",
+      "case": "Case 5 — 월 350만 / 3일",
+      "ts": 1778306399359
+    },
+    {
+      "status": "pass",
+      "calc": "child-support",
+      "case": "Case 1 — 합산 250만, 자녀 5세",
+      "ts": 1778306399359
+    },
+    {
+      "status": "pass",
+      "calc": "child-support",
+      "case": "Case 2 — 합산 500만, 자녀 10세",
+      "ts": 1778306399359
+    },
+    {
+      "status": "pass",
+      "calc": "child-support",
+      "case": "Case 3 — 합산 800만, 자녀 16세",
+      "ts": 1778306399359
+    },
+    {
+      "status": "pass",
+      "calc": "child-support",
+      "case": "Case 4 — 합산 150만, 자녀 1세",
+      "ts": 1778306399360
+    },
+    {
+      "status": "pass",
+      "calc": "child-support",
+      "case": "Case 5 — 합산 1300만, 자녀 14세",
+      "ts": 1778306399360
+    },
+    {
+      "status": "pass",
+      "calc": "divorce-alimony",
+      "case": "Case 1 — 결혼 3년 / medium (1천만)",
+      "ts": 1778306399360
+    },
+    {
+      "status": "pass",
+      "calc": "divorce-alimony",
+      "case": "Case 2 — 결혼 8년 / high (3천만)",
+      "ts": 1778306399360
+    },
+    {
+      "status": "pass",
+      "calc": "divorce-alimony",
+      "case": "Case 3 — 결혼 15년 / medium (2천만)",
+      "ts": 1778306399360
+    },
+    {
+      "status": "pass",
+      "calc": "divorce-alimony",
+      "case": "Case 4 — 결혼 25년 / high (5천만, 보수 조정)",
+      "ts": 1778306399360
+    },
+    {
+      "status": "pass",
+      "calc": "divorce-alimony",
+      "case": "Case 5 — 결혼 12년 / low (1천만)",
+      "ts": 1778306399360
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 1 — 10억 / 배우자 + 자녀 2",
+      "ts": 1778306399360
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 2 — 5억 / 배우자 + 부모 2 (자녀 X)",
+      "ts": 1778306399360
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 3 — 20억 / 배우자 + 자녀 3",
+      "ts": 1778306399360
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 4 — 3억 / 자녀 1만 (배우자 X)",
+      "ts": 1778306399360
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 5 — 5억 / 형제 3 (배우자·자녀·부모 모두 X)",
+      "ts": 1778306399360
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 1 — 250만, 1년 (2024-01-01~2025-01-01)",
+      "ts": 1778306399361
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 2 — 300만+상여600만, 3년 (2022-01-01~2025-01-01)",
+      "ts": 1778306399361
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 3 — 400만+상여800만+연차80만, 5년 (2020-01-01~2025-01-01)",
+      "ts": 1778306399361
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 4 — 500만+상여1200만, 10년 (2015-01-01~2025-01-01)",
+      "ts": 1778306399361
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 5 — 350만, 7년 (2018-01-01~2025-01-01)",
+      "ts": 1778306399361
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 1 — 300만 / 30일",
+      "ts": 1778306399361
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 2 — 500만 / 90일",
+      "ts": 1778306399361
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 3 — 1천만 / 180일",
+      "ts": 1778306399361
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 4 — 200만 / 14일 (최소)",
+      "ts": 1778306399361
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 5 — 800만 / 365일",
+      "ts": 1778306399361
+    }
+  ]
+}
