@@ -16,8 +16,9 @@
     }
   },
   "constants": {
-    "GOV_DAILY_UPPER": 73333,
-    "DAILY_UPPER_LIMIT": 24444
+    "GOV_DAILY_UPPER_2026": 73333,
+    "GOV_MONTHLY_UPPER_2026": 2200000,
+    "NOTE": "고용보험법 §75 - 2026년 1월 1일 이후 휴가 시작 기준 (월 220만 인상)"
   },
   "formula": [
     {
@@ -54,6 +55,12 @@
       "label": "다태아 출산",
       "type": "boolean",
       "default": false
+    },
+    {
+      "id": "isSME",
+      "label": "우선지원대상기업(중소)",
+      "type": "checkbox",
+      "default": true
     }
   ],
   "verification": {
@@ -62,73 +69,78 @@
     "method": "고용보험법 §75. 첫 60일 회사 통상임금 100%, 후 30/60일 고용보험 (월 220만 상한).",
     "cases": [
       {
-        "name": "Case 1 — 월 250만 / 단태",
+        "name": "Case 1 — 월 250만 / 단태 / 중소",
         "input": {
           "monthlySalary": 2500000,
-          "isMultiple": false
+          "isMultiple": false,
+          "isSME": true
         },
         "expected": {
           "totalDays": 90,
-          "dailyWage": 83333,
-          "govPay": 2199990,
-          "companyPay": 4999980,
-          "total": 7199970
+          "dailyWage": 95694,
+          "govPay": 6599970,
+          "companyPay": 1341660,
+          "total": 7941630
         }
       },
       {
-        "name": "Case 2 — 월 350만 / 단태",
+        "name": "Case 2 — 월 350만 / 단태 / 중소",
         "input": {
           "monthlySalary": 3500000,
-          "isMultiple": false
+          "isMultiple": false,
+          "isSME": true
         },
         "expected": {
           "totalDays": 90,
-          "dailyWage": 116667,
-          "govPay": 2199990,
-          "companyPay": 7000020,
-          "total": 9200010
+          "dailyWage": 133971,
+          "govPay": 6599970,
+          "companyPay": 3638280,
+          "total": 10238250
         }
       },
       {
-        "name": "Case 3 — 월 400만 / 다태",
-        "input": {
-          "monthlySalary": 4000000,
-          "isMultiple": true
-        },
-        "expected": {
-          "totalDays": 120,
-          "dailyWage": 133333,
-          "govPay": 4399980,
-          "companyPay": 7999980,
-          "total": 12399960
-        }
-      },
-      {
-        "name": "Case 4 — 월 200만 / 단태 (상한 미만)",
-        "input": {
-          "monthlySalary": 2000000,
-          "isMultiple": false
-        },
-        "expected": {
-          "totalDays": 90,
-          "dailyWage": 66667,
-          "govPay": 2000010,
-          "companyPay": 4000020,
-          "total": 6000030
-        }
-      },
-      {
-        "name": "Case 5 — 월 500만 / 다태 (상한)",
+        "name": "Case 3 — 월 500만 / 단태 / 대기업",
         "input": {
           "monthlySalary": 5000000,
-          "isMultiple": true
+          "isMultiple": false,
+          "isSME": false
+        },
+        "expected": {
+          "totalDays": 90,
+          "dailyWage": 191388,
+          "govPay": 2199990,
+          "companyPay": 11483280,
+          "total": 13683270
+        }
+      },
+      {
+        "name": "Case 4 — 월 200만 / 다태 / 중소",
+        "input": {
+          "monthlySalary": 2000000,
+          "isMultiple": true,
+          "isSME": true
         },
         "expected": {
           "totalDays": 120,
-          "dailyWage": 166667,
+          "dailyWage": 76555,
+          "govPay": 8799960,
+          "companyPay": 193320,
+          "total": 8993280
+        }
+      },
+      {
+        "name": "Case 5 — 월 400만 / 다태 / 대기업",
+        "input": {
+          "monthlySalary": 4000000,
+          "isMultiple": true,
+          "isSME": false
+        },
+        "expected": {
+          "totalDays": 120,
+          "dailyWage": 153110,
           "govPay": 4399980,
-          "companyPay": 10000020,
-          "total": 14400000
+          "companyPay": 9186600,
+          "total": 13586580
         }
       }
     ]
