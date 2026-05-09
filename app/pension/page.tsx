@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "연금 계산기 — 4종 | MoneyDoc",
-  description: "국민연금 예상수령액·퇴직연금 DB/DC·IRP·연금저축·기초연금·노령연금·세액공제 한도 — 국민연금공단 + 소득세법 §59-3 표준 산식",
+  description: "국민연금 예상수령액·국민연금 조기수령 감액·IRP·연금저축 세액공제·노란우산공제 절세 — 국민연금공단 + 소득세법 §59-3 + 조세특례제한법 §86의3 표준 산식",
   alternates: { canonical: "/pension/" },
 };
 
@@ -55,9 +55,4 @@ export default function Page() {
           </div>
         </a>
         </div>
-      </section>
-
-      <Footer />
-    </>
-  );
-}
+      </sect
