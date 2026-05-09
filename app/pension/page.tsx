@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "연금 계산기 — 7종 | MoneyDoc",
+  title: "연금 계산기 — 4종 | MoneyDoc",
   description: "국민연금 예상수령액·퇴직연금 DB/DC·IRP·연금저축·기초연금·노령연금·세액공제 한도 — 국민연금공단 + 소득세법 §59-3 표준 산식",
   alternates: { canonical: "/pension/" },
 };
@@ -51,27 +51,6 @@ export default function Page() {
           <div className="cat-body">
             <h3 className="cat-name">노란우산공제 절세 계산기</h3>
             <p className="cat-desc">사업소득 한계세율 × 납입액 절세효과</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
-        <a href="/pension/public-officer-pension/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">공무원연금 시뮬레이터</h3>
-            <p className="cat-desc">평균 기준소득월액 × 재직기간 × 1.7%</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
-        <a href="/pension/retirement-pension-db/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">퇴직연금 DB형 계산기</h3>
-            <p className="cat-desc">마지막 평균임금 × 30 × 근속연수 (퇴직금과 동일)</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
-        <a href="/pension/retirement-pension-dc/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">퇴직연금 DC형 시뮬레이터</h3>
-            <p className="cat-desc">연봉 1/12 회사 부담 + 운용수익 누적</p>
             <span className="cat-count">정부 공식 산식</span>
           </div>
         </a>

@@ -37,9 +37,6 @@ import irpTaxCredit from "@/data/calculators/pension/irp-tax-credit.json";
 import nationalPensionEarly from "@/data/calculators/pension/national-pension-early.json";
 import nationalPension from "@/data/calculators/pension/national-pension.json";
 import noranumbrellaTaxSaving from "@/data/calculators/pension/noranumbrella-tax-saving.json";
-import publicOfficerPension from "@/data/calculators/pension/public-officer-pension.json";
-import retirementPensionDb from "@/data/calculators/pension/retirement-pension-db.json";
-import retirementPensionDc from "@/data/calculators/pension/retirement-pension-dc.json";
 import acquisitionTax from "@/data/calculators/realestate/acquisition-tax.json";
 import brokerageFee from "@/data/calculators/realestate/brokerage-fee.json";
 import comprehensiveRealEstateTax from "@/data/calculators/realestate/comprehensive-real-estate-tax.json";
@@ -148,9 +145,6 @@ const ALL_SPECS: { slug: string; category: string; title: string; subtitle: stri
   nationalPensionEarly,
   nationalPension,
   noranumbrellaTaxSaving,
-  publicOfficerPension,
-  retirementPensionDb,
-  retirementPensionDc,
   acquisitionTax,
   brokerageFee,
   comprehensiveRealEstateTax,
