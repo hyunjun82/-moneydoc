@@ -55,4 +55,9 @@ export default function Page() {
           </div>
         </a>
         </div>
-      </sect
+      </section>
+
+      <Footer />
+    </>
+  );
+}
