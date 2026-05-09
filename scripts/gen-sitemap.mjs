@@ -12,6 +12,10 @@ const PUBLIC_DIR = path.join(ROOT, "public");
 const today = new Date().toISOString().split("T")[0];
 const urls = [`${SITE}/`];
 
+// 정적 페이지 (About / Contact / Privacy / Terms / Calculators 인덱스)
+const STATIC_PAGES = ["about", "contact", "privacy", "terms", "calculators"];
+for (const p of STATIC_PAGES) urls.push(`${SITE}/${p}/`);
+
 for (const cat of fs.readdirSync(CALC_DIR).sort()) {
   const catDir = path.join(CALC_DIR, cat);
   if (!fs.statSync(catDir).isDirectory()) continue;

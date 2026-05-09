@@ -14,7 +14,7 @@ export default function Page() {
       <Header />
       <header className="page-head">
         <h1 className="page-title">개인정보처리방침</h1>
-        <p className="page-sub">마지막 업데이트: 2026년 5월 1일</p>
+        <p className="page-sub">마지막 업데이트: 2026년 5월 9일</p>
       </header>
       <section className="guide-section">
         <div className="guide-list" style={{ padding: "32px 36px" }}>

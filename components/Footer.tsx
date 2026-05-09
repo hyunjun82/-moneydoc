@@ -31,7 +31,6 @@ export function Footer() {
             <h4>회사</h4>
             <ul>
               <li><a href="/about/">소개</a></li>
-              <li><a href="/editorial/">에디터 정책</a></li>
               <li><a href="/contact/">문의하기</a></li>
             </ul>
           </div>
@@ -41,7 +40,6 @@ export function Footer() {
           <div className="footer-legal">
             <a href="/terms/">이용약관</a>
             <a href="/privacy/">개인정보처리방침</a>
-            <a href="/ad-policy/">광고정책</a>
           </div>
         </div>
       </div>
