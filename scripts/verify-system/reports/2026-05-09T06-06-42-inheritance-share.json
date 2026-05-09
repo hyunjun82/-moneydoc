@@ -1,0 +1,39 @@
+{
+  "label": "inheritance-share",
+  "timestamp": "2026-05-09T06-06-42",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 1 — 10억 / 배우자 + 자녀 2",
+      "ts": 1778306802567
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 2 — 5억 / 배우자 + 부모 2 (자녀 X)",
+      "ts": 1778306802572
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 3 — 20억 / 배우자 + 자녀 3",
+      "ts": 1778306802572
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 4 — 3억 / 자녀 1만 (배우자 X)",
+      "ts": 1778306802572
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 5 — 5억 / 형제 3 (배우자·자녀·부모 모두 X)",
+      "ts": 1778306802572
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "label": "unpaid-wages",
+  "timestamp": "2026-05-09T06-06-42",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 1 — 300만 / 30일",
+      "ts": 1778306802947
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 2 — 500만 / 90일",
+      "ts": 1778306802954
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 3 — 1천만 / 180일",
+      "ts": 1778306802954
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 4 — 200만 / 14일 (최소)",
+      "ts": 1778306802954
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 5 — 800만 / 365일",
+      "ts": 1778306802954
+    }
+  ]
+}
