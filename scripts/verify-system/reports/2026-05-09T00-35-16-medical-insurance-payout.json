@@ -1,0 +1,39 @@
+{
+  "label": "medical-insurance-payout",
+  "timestamp": "2026-05-09T00-35-16",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "medical-insurance-payout",
+      "case": "Case 1 — 의료비 100만 / 면책 10만 / 부담 20%",
+      "ts": 1778286916556
+    },
+    {
+      "status": "pass",
+      "calc": "medical-insurance-payout",
+      "case": "Case 2 — 의료비 50만 / 면책 3만 / 부담 30%",
+      "ts": 1778286916564
+    },
+    {
+      "status": "pass",
+      "calc": "medical-insurance-payout",
+      "case": "Case 3 — 의료비 500만 / 면책 10만 / 부담 20%",
+      "ts": 1778286916565
+    },
+    {
+      "status": "pass",
+      "calc": "medical-insurance-payout",
+      "case": "Case 4 — 의료비 10만 / 면책 3만 / 부담 30%",
+      "ts": 1778286916565
+    },
+    {
+      "status": "pass",
+      "calc": "medical-insurance-payout",
+      "case": "Case 5 — 의료비 1천만 / 면책 20만 / 부담 20%",
+      "ts": 1778286916565
+    }
+  ]
+}

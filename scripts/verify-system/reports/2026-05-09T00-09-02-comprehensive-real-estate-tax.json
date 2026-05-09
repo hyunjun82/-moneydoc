@@ -1,0 +1,39 @@
+{
+  "label": "comprehensive-real-estate-tax",
+  "timestamp": "2026-05-09T00-09-02",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "comprehensive-real-estate-tax",
+      "case": "Case 1 — 1주택 공시가 15억 (50세, 3년 — 추가공제 X)",
+      "ts": 1778285342866
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-real-estate-tax",
+      "case": "Case 2 — 1주택 공시가 30억 (65세, 10년 — 추가공제 70%)",
+      "ts": 1778285342868
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-real-estate-tax",
+      "case": "Case 3 — 다주택 공시가 20억 (추가공제 X)",
+      "ts": 1778285342868
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-real-estate-tax",
+      "case": "Case 4 — 다주택 공시가 40억 (추가공제 X)",
+      "ts": 1778285342868
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-real-estate-tax",
+      "case": "Case 5 — 1주택 공시가 8억 (70세, 15년 — 80%지만 공제 미달)",
+      "ts": 1778285342868
+    }
+  ]
+}

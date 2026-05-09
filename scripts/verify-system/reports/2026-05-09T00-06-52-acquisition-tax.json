@@ -1,0 +1,39 @@
+{
+  "label": "acquisition-tax",
+  "timestamp": "2026-05-09T00-06-52",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "acquisition-tax",
+      "case": "Case 1 — 5억 1주택 무주택자 전용 84㎡",
+      "ts": 1778285212650
+    },
+    {
+      "status": "pass",
+      "calc": "acquisition-tax",
+      "case": "Case 2 — 7억 1주택 무주택자 전용 84㎡ (구간 누진)",
+      "ts": 1778285212654
+    },
+    {
+      "status": "pass",
+      "calc": "acquisition-tax",
+      "case": "Case 3 — 10억 1주택 무주택자 전용 100㎡",
+      "ts": 1778285212654
+    },
+    {
+      "status": "pass",
+      "calc": "acquisition-tax",
+      "case": "Case 4 — 8억 2주택 조정대상지역 전용 84㎡",
+      "ts": 1778285212654
+    },
+    {
+      "status": "pass",
+      "calc": "acquisition-tax",
+      "case": "Case 5 — 5억 3주택 조정대상지역 전용 100㎡",
+      "ts": 1778285212654
+    }
+  ]
+}

@@ -3,74 +3,483 @@
   "category": "realestate",
   "subCategory": "tax",
   "title": "재산세 계산기",
-  "searchAliases": ["재산세 계산기", "주택 재산세 계산"],
+  "searchAliases": [
+    "재산세 계산기",
+    "주택 재산세 계산"
+  ],
   "subtitle": "지방세법 §111 주택 재산세 + 지방교육세 (1주택 9억 이하 특례 지원)",
   "slug": "property-tax",
   "year": 2026,
-  "lastUpdated": "2026-05-01",
+  "lastUpdated": "2026-05-09",
   "lastVerified": "2026-05-01",
   "source": {
     "primary": {
       "agency": "행정안전부",
       "document": "지방세법",
       "year": 2026,
-      "laws": ["지방세법 제111조 (재산세 표준세율)", "지방세법 제111조의2 (1세대1주택 특례세율)", "지방세법 제151조 (지방교육세)"]
+      "laws": [
+        "지방세법 제111조 (재산세 표준세율)",
+        "지방세법 제111조의2 (1세대1주택 특례세율)",
+        "지방세법 제151조 (지방교육세)"
+      ]
     }
   },
-  "constants": { "FAIR_MARKET_RATIO": 0.60, "FAIR_MARKET_RATIO_ONE_HOME_UNDER_9EOK": 0.43, "EDUCATION_TAX_RATE": 0.20 },
+  "constants": {
+    "FAIR_MARKET_RATIO": 0.6,
+    "FAIR_MARKET_RATIO_ONE_HOME_UNDER_9EOK": 0.43,
+    "EDUCATION_TAX_RATE": 0.2
+  },
   "tables": {
     "brackets": {
       "description": "주택 재산세 표준 누진세율 (과세표준 = 공시가 × 60%)",
       "brackets": [
-        { "upperBound": 60000000, "rate": 0.001, "progressiveDeduction": 0 },
-        { "upperBound": 150000000, "rate": 0.0015, "progressiveDeduction": 30000 },
-        { "upperBound": 300000000, "rate": 0.0025, "progressiveDeduction": 180000 },
-        { "upperBound": null, "rate": 0.004, "progressiveDeduction": 630000 }
+        {
+          "upperBound": 60000000,
+          "rate": 0.001,
+          "progressiveDeduction": 0
+        },
+        {
+          "upperBound": 150000000,
+          "rate": 0.0015,
+          "progressiveDeduction": 30000
+        },
+        {
+          "upperBound": 300000000,
+          "rate": 0.0025,
+          "progressiveDeduction": 180000
+        },
+        {
+          "upperBound": null,
+          "rate": 0.004,
+          "progressiveDeduction": 630000
+        }
       ]
     },
     "bracketsOneHomeUnder9Eok": {
       "description": "1세대1주택 시가표준 9억 이하 특례세율 (지방세법 §111의2). 공정시장가액비율 43% 적용.",
       "brackets": [
-        { "upperBound": 60000000, "rate": 0.0005, "progressiveDeduction": 0 },
-        { "upperBound": 150000000, "rate": 0.001, "progressiveDeduction": 30000 },
-        { "upperBound": 300000000, "rate": 0.002, "progressiveDeduction": 180000 },
-        { "upperBound": null, "rate": 0.0035, "progressiveDeduction": 630000 }
+        {
+          "upperBound": 60000000,
+          "rate": 0.0005,
+          "progressiveDeduction": 0
+        },
+        {
+          "upperBound": 150000000,
+          "rate": 0.001,
+          "progressiveDeduction": 30000
+        },
+        {
+          "upperBound": 300000000,
+          "rate": 0.002,
+          "progressiveDeduction": 180000
+        },
+        {
+          "upperBound": null,
+          "rate": 0.0035,
+          "progressiveDeduction": 630000
+        }
       ]
     }
   },
   "formula": [
-    { "step": 1, "name": "공정시장가액비율", "expr": "isOneHomeUnder9Eok ? 43% : 60%" },
-    { "step": 2, "name": "과세표준", "expr": "round(공시가 × 비율)" },
-    { "step": 3, "name": "재산세", "expr": "lookup (1주택9억이하 특례 or 표준 brackets)" },
-    { "step": 4, "name": "지방교육세", "expr": "재산세 × 20%" },
-    { "step": 5, "name": "총 납부", "expr": "재산세 + 지방교육세" }
+    {
+      "step": 1,
+      "name": "공정시장가액비율",
+      "expr": "isOneHomeUnder9Eok ? 43% : 60%"
+    },
+    {
+      "step": 2,
+      "name": "과세표준",
+      "expr": "round(공시가 × 비율)"
+    },
+    {
+      "step": 3,
+      "name": "재산세",
+      "expr": "lookup (1주택9억이하 특례 or 표준 brackets)"
+    },
+    {
+      "step": 4,
+      "name": "지방교육세",
+      "expr": "재산세 × 20%"
+    },
+    {
+      "step": 5,
+      "name": "총 납부",
+      "expr": "재산세 + 지방교육세"
+    }
   ],
   "inputs": [
-    { "id": "publicValue", "label": "주택공시가", "type": "currency", "min": 0, "default": 500000000 },
-    { "id": "isOneHomeUnder9Eok", "label": "1세대1주택 시가표준 9억 이하", "type": "boolean", "default": false, "hint": "공정시장가액비율 43% + 특례세율(0.05/0.1/0.2/0.35%) 적용" }
+    {
+      "id": "publicValue",
+      "label": "주택공시가",
+      "type": "currency",
+      "min": 0,
+      "default": 500000000
+    },
+    {
+      "id": "isOneHomeUnder9Eok",
+      "label": "1세대1주택 시가표준 9억 이하",
+      "type": "boolean",
+      "default": false,
+      "hint": "공정시장가액비율 43% + 특례세율(0.05/0.1/0.2/0.35%) 적용"
+    }
   ],
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-01",
     "method": "지방세법 §111 (표준세율) + §111의2 (1주택 9억 이하 특례) + §151 적용. 1주택 특례: 공정시장가액비율 43%, 세율 0.05/0.1/0.2/0.35%. 도시지역분 미포함.",
     "cases": [
-      { "name": "Case 1 — 공시가 3억 (일반)", "input": { "publicValue": 300000000, "isOneHomeUnder9Eok": false }, "expected": { "taxableBase": 180000000, "propertyTax": 270000, "educationTax": 54000, "totalTax": 324000 } },
-      { "name": "Case 2 — 공시가 5억 (일반)", "input": { "publicValue": 500000000, "isOneHomeUnder9Eok": false }, "expected": { "taxableBase": 300000000, "propertyTax": 570000, "educationTax": 114000, "totalTax": 684000 } },
-      { "name": "Case 3 — 공시가 8억 (일반)", "input": { "publicValue": 800000000, "isOneHomeUnder9Eok": false }, "expected": { "taxableBase": 480000000, "propertyTax": 1290000, "educationTax": 258000, "totalTax": 1548000 } },
-      { "name": "Case 4 — 공시가 1억 (일반)", "input": { "publicValue": 100000000, "isOneHomeUnder9Eok": false }, "expected": { "taxableBase": 60000000, "propertyTax": 60000, "educationTax": 12000, "totalTax": 72000 } },
-      { "name": "Case 5 — 공시가 2억 (일반)", "input": { "publicValue": 200000000, "isOneHomeUnder9Eok": false }, "expected": { "taxableBase": 120000000, "propertyTax": 150000, "educationTax": 30000, "totalTax": 180000 } },
-      { "name": "Case 6 — 공시가 3억 (1주택 9억 이하 특례)", "input": { "publicValue": 300000000, "isOneHomeUnder9Eok": true }, "expected": { "taxableBase": 129000000, "propertyTax": 99000, "educationTax": 19800, "totalTax": 118800 } },
-      { "name": "Case 7 — 공시가 5억 (1주택 9억 이하 특례)", "input": { "publicValue": 500000000, "isOneHomeUnder9Eok": true }, "expected": { "taxableBase": 215000000, "propertyTax": 250000, "educationTax": 50000, "totalTax": 300000 } },
-      { "name": "Case 8 — 공시가 8억 (1주택 9억 이하 특례)", "input": { "publicValue": 800000000, "isOneHomeUnder9Eok": true }, "expected": { "taxableBase": 344000000, "propertyTax": 574000, "educationTax": 114800, "totalTax": 688800 } }
+      {
+        "name": "Case 1 — 공시가 3억 (일반)",
+        "input": {
+          "publicValue": 300000000,
+          "isOneHomeUnder9Eok": false
+        },
+        "expected": {
+          "taxableBase": 180000000,
+          "propertyTax": 270000,
+          "educationTax": 54000,
+          "totalTax": 324000
+        }
+      },
+      {
+        "name": "Case 2 — 공시가 5억 (일반)",
+        "input": {
+          "publicValue": 500000000,
+          "isOneHomeUnder9Eok": false
+        },
+        "expected": {
+          "taxableBase": 300000000,
+          "propertyTax": 570000,
+          "educationTax": 114000,
+          "totalTax": 684000
+        }
+      },
+      {
+        "name": "Case 3 — 공시가 8억 (일반)",
+        "input": {
+          "publicValue": 800000000,
+          "isOneHomeUnder9Eok": false
+        },
+        "expected": {
+          "taxableBase": 480000000,
+          "propertyTax": 1290000,
+          "educationTax": 258000,
+          "totalTax": 1548000
+        }
+      },
+      {
+        "name": "Case 4 — 공시가 1억 (일반)",
+        "input": {
+          "publicValue": 100000000,
+          "isOneHomeUnder9Eok": false
+        },
+        "expected": {
+          "taxableBase": 60000000,
+          "propertyTax": 60000,
+          "educationTax": 12000,
+          "totalTax": 72000
+        }
+      },
+      {
+        "name": "Case 5 — 공시가 2억 (일반)",
+        "input": {
+          "publicValue": 200000000,
+          "isOneHomeUnder9Eok": false
+        },
+        "expected": {
+          "taxableBase": 120000000,
+          "propertyTax": 150000,
+          "educationTax": 30000,
+          "totalTax": 180000
+        }
+      },
+      {
+        "name": "Case 6 — 공시가 3억 (1주택 9억 이하 특례)",
+        "input": {
+          "publicValue": 300000000,
+          "isOneHomeUnder9Eok": true
+        },
+        "expected": {
+          "taxableBase": 129000000,
+          "propertyTax": 99000,
+          "educationTax": 19800,
+          "totalTax": 118800
+        }
+      },
+      {
+        "name": "Case 7 — 공시가 5억 (1주택 9억 이하 특례)",
+        "input": {
+          "publicValue": 500000000,
+          "isOneHomeUnder9Eok": true
+        },
+        "expected": {
+          "taxableBase": 215000000,
+          "propertyTax": 250000,
+          "educationTax": 50000,
+          "totalTax": 300000
+        }
+      },
+      {
+        "name": "Case 8 — 공시가 8억 (1주택 9억 이하 특례)",
+        "input": {
+          "publicValue": 800000000,
+          "isOneHomeUnder9Eok": true
+        },
+        "expected": {
+          "taxableBase": 344000000,
+          "propertyTax": 574000,
+          "educationTax": 114800,
+          "totalTax": 688800
+        }
+      }
     ]
   },
   "guide": {
-    "howToUse": "주택공시가를 입력하면 재산세 + 지방교육세가 산출됩니다. 1세대1주택 + 시가표준 9억 이하인 경우 「1주택 9억 이하 특례」 옵션을 켜면 공정시장가액비율 43% + 특례세율(0.05/0.1/0.2/0.35%)이 적용됩니다. 도시지역분(과세표준 × 0.14%)은 별도 부과.",
+    "howToUse": "주택공시가격(매년 4월 발표) 입력 시 재산세 + 지방교육세 자동 계산. 1세대 1주택 + 시가표준 9억 이하면 특례옵션 켜기 (공정시장가액비율 43% + 특례세율 적용). 매년 6월 1일 기준, 7월(½)·9월(½) 분납.",
     "tips": [
-      "과세기준일 6월 1일, 7월·9월 분납.",
-      "1세대1주택자 시가표준 9억 이하: 공정시장가액비율 43% + 특례세율 적용 (지방세법 §111의2).",
-      "다주택자·법인은 표준세율 + 공정시장가액비율 60%."
+      "💡 **과세기준일 = 매년 6월 1일**: 6월 1일 기준 소유자가 1년 재산세 부담. 5월 31일 매도하면 매수자가, 6월 2일 매도하면 매도자가 부담. 거래 시 절세 포인트.",
+      "💡 **분납 7월(½) + 9월(½)**: 7월에 절반, 9월에 절반. 한 번에 다 안 내도 됨. 카드 결제·계좌이체 모두 가능.",
+      "💡 **1세대 1주택 + 공시가 9억 이하 특례**: 공정시장가액비율 60% → 43%, 세율 50% 인하. 보통 50~60% 절세. 세대원 모두 무주택 + 본인 1주택 요건.",
+      "💡 **공시가 9억 초과 시 특례 X**: 9억 초과면 일반 세율 적용. 공시가 8.99억 vs 9.01억 차이 큼.",
+      "💡 **도시지역분 별도 부과**: 과세표준 × 0.14% (지방세법 §112). 본 계산기는 미반영, 실제 납부서는 더 큼.",
+      "💡 **공시가 ≠ 시가**: 공시가는 시가의 70~80% 수준. 매년 4월 발표 (국토부 부동산공시가격알리미 사이트).",
+      "💡 **세부담 상한**: 작년 대비 105~150% 한도 (공시가 인상해도 급격한 부담 증가 방지). 공시가 3억 이하 105%, 6억 이하 110%, 6억 초과 130%."
+    ],
+    "tables": [
+      {
+        "title": "재산세 산식 (지방세법 §111, §111의2)",
+        "headers": [
+          "항목",
+          "일반 (다주택)",
+          "1세대1주택 9억 이하 특례"
+        ],
+        "rows": [
+          [
+            "공정시장가액비율",
+            "60%",
+            "43%"
+          ],
+          [
+            "과세표준",
+            "공시가 × 60%",
+            "공시가 × 43%"
+          ],
+          [
+            "6천만 이하",
+            "0.1%",
+            "0.05%"
+          ],
+          [
+            "6천만~1.5억",
+            "6만 + 초과 0.15%",
+            "3만 + 초과 0.1%"
+          ],
+          [
+            "1.5억~3억",
+            "19.5만 + 초과 0.25%",
+            "12만 + 초과 0.2%"
+          ],
+          [
+            "3억 초과",
+            "57만 + 초과 0.4%",
+            "42만 + 초과 0.35%"
+          ],
+          [
+            "지방교육세",
+            "재산세 × 20%",
+            "재산세 × 20%"
+          ]
+        ]
+      },
+      {
+        "title": "내 재산세 즉답표 — 일반(다주택) 케이스 (단위: 원)",
+        "headers": [
+          "공시가",
+          "과세표준",
+          "재산세",
+          "지방교육세",
+          "총 납부"
+        ],
+        "rows": [
+          [
+            "1억",
+            "60,000,000",
+            "60,000",
+            "12,000",
+            "72,000"
+          ],
+          [
+            "2억",
+            "120,000,000",
+            "150,000",
+            "30,000",
+            "180,000"
+          ],
+          [
+            "3억",
+            "180,000,000",
+            "270,000",
+            "54,000",
+            "324,000"
+          ],
+          [
+            "5억",
+            "300,000,000",
+            "570,000",
+            "114,000",
+            "684,000"
+          ],
+          [
+            "7억",
+            "420,000,000",
+            "1,050,000",
+            "210,000",
+            "1,260,000"
+          ],
+          [
+            "10억",
+            "600,000,000",
+            "1,770,000",
+            "354,000",
+            "2,124,000"
+          ],
+          [
+            "15억 (고가)",
+            "900,000,000",
+            "2,970,000",
+            "594,000",
+            "3,564,000"
+          ]
+        ]
+      },
+      {
+        "title": "1세대1주택 9억 이하 특례 적용 (단위: 원)",
+        "headers": [
+          "공시가",
+          "과세표준 (43%)",
+          "재산세 (특례)",
+          "지방교육세",
+          "총 납부"
+        ],
+        "rows": [
+          [
+            "1억",
+            "43,000,000",
+            "21,500",
+            "4,300",
+            "25,800"
+          ],
+          [
+            "2억",
+            "86,000,000",
+            "56,000",
+            "11,200",
+            "67,200"
+          ],
+          [
+            "3억",
+            "129,000,000",
+            "99,000",
+            "19,800",
+            "118,800"
+          ],
+          [
+            "5억",
+            "215,000,000",
+            "250,000",
+            "50,000",
+            "300,000"
+          ],
+          [
+            "7억",
+            "301,000,000",
+            "423,500",
+            "84,700",
+            "508,200"
+          ],
+          [
+            "9억 (특례 한도)",
+            "387,000,000",
+            "724,500",
+            "144,900",
+            "869,400"
+          ]
+        ]
+      },
+      {
+        "title": "1주택 특례 vs 일반 절세 효과 (공시가별)",
+        "headers": [
+          "공시가",
+          "일반 총 납부",
+          "특례 총 납부",
+          "절세액"
+        ],
+        "rows": [
+          [
+            "3억",
+            "324,000",
+            "118,800",
+            "−205,200 (63%↓)"
+          ],
+          [
+            "5억",
+            "684,000",
+            "300,000",
+            "−384,000 (56%↓)"
+          ],
+          [
+            "7억",
+            "1,260,000",
+            "508,200",
+            "−751,800 (60%↓)"
+          ],
+          [
+            "9억",
+            "1,836,000",
+            "869,400",
+            "−966,600 (53%↓)"
+          ]
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": "공시가 5억 아파트 1채 가지고 있는데 재산세 얼마?",
+        "a": "**1주택 9억 이하 특례 적용 시 약 30만원** (재산세 25만 + 지방교육세 5만). 일반 세율이라면 약 68만원. 매년 7월·9월 절반씩 분납. 공시가는 매년 4월 변동되므로 정확한 금액은 변동 가능."
+      },
+      {
+        "q": "1세대 1주택 특례는 어떻게 받나요?",
+        "a": "**자동 적용** (별도 신청 X). 6월 1일 기준 본인+배우자+세대원 합산 1주택, 공시가 9억 이하면 자동. 단 지자체 검증 시 위장 1주택(가족 명의 분리) 적발되면 5년 소급 추징."
+      },
+      {
+        "q": "지방교육세는 또 따로 내나요?",
+        "a": "**재산세에 자동 합산 부과**. 재산세 × 20%가 지방교육세. 별도 청구서 없음. 7월·9월 분납 시 지방교육세도 같이 분납됨. 시·군·구가 동시 부과."
+      },
+      {
+        "q": "공시가는 어디서 확인하나요?",
+        "a": "**부동산공시가격알리미 (realtyprice.kr)**: 주소 입력 → 매년 4월 갱신. 또는 위택스(wetax.go.kr) 본인 명의 부동산 자동 조회. 공시가는 시세보다 보통 70~80% 낮음."
+      },
+      {
+        "q": "재산세 안 내면 어떻게 되나요?",
+        "a": "**미납 가산세 3% (1차) + 매월 0.75% (최대 60개월)**. 60일 초과 시 압류 가능 (예금·급여). 실제로 공시가 3억 재산세 32만 + 5년 미납 = 약 65만 → 최악의 경우 부동산 압류·공매."
+      },
+      {
+        "q": "도시지역분 0.14%는 추가로 내나요?",
+        "a": "**네, 별도 부과** (본 계산기 미반영). 과세표준 × 0.14%. 공시가 5억 일반 = 30만 + 도시 42만 = 약 72만. 도시지역(시 단위 모든 곳) 거주자만 부담. 군 단위는 없음."
+      },
+      {
+        "q": "재산세 vs 종부세 차이?",
+        "a": "**재산세** = 모든 주택 소유자 (지자체 부과, 7·9월). **종합부동산세** = 1주택 9억 초과 / 다주택 합산 6억 초과만 (국세, 12월). 둘 다 6월 1일 기준. 공시가 9억 이하 1주택은 재산세만 내고 종부세 X."
+      },
+      {
+        "q": "공시가 인상되면 재산세 매년 폭등?",
+        "a": "**세부담 상한 있음** (지방세법 §122). 작년 대비 105~150% 한도 (공시가 3억 이하 105%, 6억 이하 110%, 그 외 130%). 공시가 30% 올라도 재산세는 5~30%만 증가. 급격한 부담 방지."
+      }
     ]
   },
-  "related": ["acquisition-tax", "comprehensive-real-estate-tax"]
+  "related": [
+    "acquisition-tax",
+    "comprehensive-real-estate-tax"
+  ]
 }

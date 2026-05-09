@@ -1,0 +1,39 @@
+{
+  "label": "freelancer-tax",
+  "timestamp": "2026-05-08T23-10-44",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 1 — 100만",
+      "ts": 1778281844443
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 2 — 300만",
+      "ts": 1778281844448
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 3 — 500만",
+      "ts": 1778281844448
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 4 — 1천만",
+      "ts": 1778281844448
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 5 — 50만",
+      "ts": 1778281844448
+    }
+  ]
+}

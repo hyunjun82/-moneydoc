@@ -1,0 +1,39 @@
+{
+  "label": "vat-general",
+  "timestamp": "2026-05-08T23-41-10",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 1 — 매출 100만 / 매입 30만",
+      "ts": 1778283670255
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 2 — 매출 500만 / 매입 200만",
+      "ts": 1778283670260
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 3 — 매출 1천만 / 매입 500만",
+      "ts": 1778283670260
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 4 — 매출 200만 / 매입 250만 (환급)",
+      "ts": 1778283670260
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 5 — 매출 5천만 / 매입 3천만",
+      "ts": 1778283670260
+    }
+  ]
+}

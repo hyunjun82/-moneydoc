@@ -15,7 +15,7 @@ import unemploymentBenefitDays from "@/data/calculators/government/unemployment-
 import unemploymentBenefit from "@/data/calculators/government/unemployment-benefit.json";
 import youthHousingAllowance from "@/data/calculators/government/youth-housing-allowance.json";
 import youthRentSupport from "@/data/calculators/government/youth-rent-support.json";
-import autoInsurance from "@/data/calculators/insurance/auto-insurance.json";
+import autoTax from "@/data/calculators/insurance/auto-tax.json";
 import medicalInsurancePayout from "@/data/calculators/insurance/medical-insurance-payout.json";
 import annualLeaveAllowance from "@/data/calculators/law/annual-leave-allowance.json";
 import childSupport from "@/data/calculators/law/child-support.json";
@@ -60,26 +60,22 @@ import childTaxCredit from "@/data/calculators/tax/child-tax-credit.json";
 import comprehensiveIncomeTax from "@/data/calculators/tax/comprehensive-income-tax.json";
 import cryptoTransferTax from "@/data/calculators/tax/crypto-transfer-tax.json";
 import dailyWageTax from "@/data/calculators/tax/daily-wage-tax.json";
-import fourMajorInsuranceEmployer from "@/data/calculators/tax/four-major-insurance-employer.json";
 import fourMajorInsurance from "@/data/calculators/tax/four-major-insurance.json";
 import freelancerTax from "@/data/calculators/tax/freelancer-tax.json";
 import giftTax from "@/data/calculators/tax/gift-tax.json";
 import inheritanceTax from "@/data/calculators/tax/inheritance-tax.json";
 import otherIncomeTax from "@/data/calculators/tax/other-income-tax.json";
-import overseasStockTax from "@/data/calculators/tax/overseas-stock-tax.json";
 import retirementIncomeTax from "@/data/calculators/tax/retirement-income-tax.json";
 import salaryNetPay from "@/data/calculators/tax/salary-net-pay.json";
 import stockTransferTax from "@/data/calculators/tax/stock-transfer-tax.json";
 import vatGeneral from "@/data/calculators/tax/vat-general.json";
 import vatSimplified from "@/data/calculators/tax/vat-simplified.json";
-import yearEndTaxRefund from "@/data/calculators/tax/year-end-tax-refund.json";
 import ageCalculator from "@/data/calculators/util/age-calculator.json";
 import cashServiceFee from "@/data/calculators/util/cash-service-fee.json";
 import dateCalculator from "@/data/calculators/util/date-calculator.json";
 import installmentFee from "@/data/calculators/util/installment-fee.json";
 import percentCalculator from "@/data/calculators/util/percent-calculator.json";
 
-const ALL_SPECS = [basicLivelihoodEligibility, basicPension, birthChildcareSupport, childAllowance, durunuriSupport, earnedIncomeTaxCredit, industrialAccidentPay, maternityLeavePay, medianIncome, nationalScholarship, nearPoorEligibility, parentalLeavePay, singleParentSupport, unemploymentBenefitDays, unemploymentBenefit, youthHousingAllowance, youthRentSupport, autoInsurance, medicalInsurancePayout, annualLeaveAllowance, childSupport, divorceAlimony, inheritanceDeadline, inheritanceShare, severancePay, unpaidWages, creditLoan, dsrLimit, dtiLimit, jeonseLoan, loanAmortization, loanRefinance, ltvLimit, mortgageLoanLimit, prepaymentFee, irpTaxCredit, nationalPensionEarly, nationalPension, noranumbrellaTaxSaving, pensionSavingsCredit, publicOfficerPension, retirementPensionDb, retirementPensionDc, acquisitionTax, brokerageFee, comprehensiveRealEstateTax, holdingTaxTotal, housingSubscriptionScore, jeonseMonthlyConversion, propertyTax, realEstateRoi, rentalYield, transferTax,     fixedDeposit, freeSavings, installmentSavings, isaTaxSaving, businessIncomeTaxSimple, childTaxCredit, comprehensiveIncomeTax, cryptoTransferTax, dailyWageTax, fourMajorInsuranceEmployer, fourMajorInsurance, freelancerTax, giftTax, inheritanceTax, otherIncomeTax, overseasStockTax, retirementIncomeTax, salaryNetPay, stockTransferTax, vatGeneral, vatSimplified, yearEndTaxRefund, ageCalculator, cashServiceFee, dateCalculator, installmentFee, percentCalculator] as const;
 
 export type CategorySlug =
   | "savings"
@@ -173,3 +169,4 @@ export const GUIDE_TABLE_TITLES: Record<string, string> = {
   summary: "한눈에 보는 세금·보호 한도",
   eligibility: "비과세종합저축 가입 자격 (8개)",
 };
+                                                                                           

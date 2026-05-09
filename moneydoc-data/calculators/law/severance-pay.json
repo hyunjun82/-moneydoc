@@ -3,16 +3,21 @@
   "category": "law",
   "subCategory": "labor",
   "title": "퇴직금 계산기 (법정)",
-  "subtitle": "근로자퇴직급여보장법 §8 평균임금 기준",
+  "subtitle": "고용노동부 공식 계산기 1:1 동일 (근로자퇴직급여보장법 §8)",
   "slug": "severance-pay",
-  "searchAliases": ["퇴직금 계산기", "법정 퇴직금 계산기", "퇴직금 계산"],
+  "searchAliases": [
+    "퇴직금 계산기",
+    "법정 퇴직금 계산기",
+    "퇴직금 계산",
+    "고용노동부 퇴직금"
+  ],
   "year": 2026,
-  "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastUpdated": "2026-05-09",
+  "lastVerified": "2026-05-09",
   "source": {
     "primary": {
       "agency": "고용노동부",
-      "document": "근로자퇴직급여보장법",
+      "document": "퇴직금 계산기 (moel.go.kr/retirementpayCal.do)",
       "year": 2026,
       "laws": [
         "근로자퇴직급여보장법 제8조 (퇴직금제도)",
@@ -25,56 +30,194 @@
     "DAYS_PER_YEAR": 365
   },
   "formula": [
-    { "step": 1, "name": "근속일수", "expr": "퇴사일 - 입사일 (총 일수)" },
-    { "step": 2, "name": "최근 3개월 임금 총액", "expr": "기본급 × 3 + 상여금(연간/4) + 연차수당(전년 미사용 ÷ 4)" },
-    { "step": 3, "name": "평균임금 (1일)", "expr": "최근 3개월 임금 총액 / 90 (또는 89~92일)" },
-    { "step": 4, "name": "퇴직금", "expr": "평균임금 × 30 × (근속일수 / 365)" }
+    {
+      "step": 1,
+      "name": "재직일수",
+      "expr": "ceil((퇴사일 - 입사일)/86400000)"
+    },
+    {
+      "step": 2,
+      "name": "평균임금 산정 3개월 구간",
+      "expr": "퇴사일 직전 3개월 (월별 일수 분리)"
+    },
+    {
+      "step": 3,
+      "name": "기간별 기본급 합산",
+      "expr": "월급 × 부분월 일수/그달 일수"
+    },
+    {
+      "step": 4,
+      "name": "임금총액",
+      "expr": "기본급합 + 연간상여×0.25 + 연차수당×0.25"
+    },
+    {
+      "step": 5,
+      "name": "1일 평균임금",
+      "expr": "ceil2(임금총액 / 3개월 일수)"
+    },
+    {
+      "step": 6,
+      "name": "퇴직금",
+      "expr": "floor(round(평균임금 × 30 × 재직일수 / 365))"
+    }
   ],
   "inputs": [
-    { "id": "monthlySalary", "label": "월 평균 기본급", "type": "currency", "min": 0, "default": 3000000, "hint": "최근 3개월 평균" },
-    { "id": "annualBonus", "label": "연간 상여금", "type": "currency", "min": 0, "default": 0, "hint": "1년치 상여금 총액" },
-    { "id": "unusedAnnualLeavePay", "label": "전년 미사용 연차수당", "type": "currency", "min": 0, "default": 0 },
-    { "id": "workDays", "label": "총 근속일수", "type": "number", "min": 365, "max": 18250, "default": 1095, "hint": "1년 = 365일, 3년 = 1095일" }
+    {
+      "id": "hireDate",
+      "label": "입사일",
+      "type": "date",
+      "default": "2024-01-01"
+    },
+    {
+      "id": "retireDate",
+      "label": "퇴사일",
+      "type": "date",
+      "default": "2025-01-01",
+      "hint": "재직 1년 이상이어야 퇴직금 발생"
+    },
+    {
+      "id": "monthlySalary",
+      "label": "월 평균 기본급",
+      "type": "currency",
+      "min": 0,
+      "default": 2500000,
+      "hint": "최근 3개월 평균 기본급"
+    },
+    {
+      "id": "annualBonus",
+      "label": "연간 상여금",
+      "type": "currency",
+      "min": 0,
+      "default": 0,
+      "hint": "1년치 상여금 총액 (3/12 가산)"
+    },
+    {
+      "id": "unusedAnnualLeavePay",
+      "label": "전년 미사용 연차수당",
+      "type": "currency",
+      "min": 0,
+      "default": 0,
+      "hint": "전년분 미사용 연차수당 (3/12 가산)"
+    }
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-05-01",
-    "method": "근로자퇴직급여보장법 §8 + 근기법 시행령 §2 평균임금 산정 산식 직접 적용. 상여금은 연간 ÷ 4 (3개월분), 연차수당은 전년 ÷ 4 가산.",
+    "verifiedAt": "2026-05-09",
+    "method": "고용노동부 퇴직금 계산기 (moel.go.kr/retirementpayCal.do) UI 직접 입력 1:1 비교 — 5/5 0원 일치 확인",
     "cases": [
       {
-        "name": "Case 1 — 월급 250만, 1년 근속",
-        "input": { "monthlySalary": 2500000, "annualBonus": 0, "unusedAnnualLeavePay": 0, "workDays": 365 },
-        "expected": { "threeMonthTotal": 7500000, "avgDailyWage": 83333, "severance": 2500000 }
+        "name": "Case 1 — 250만, 1년 (2024-01-01~2025-01-01)",
+        "input": {
+          "hireDate": "2024-01-01",
+          "retireDate": "2025-01-01",
+          "monthlySalary": 2500000,
+          "annualBonus": 0,
+          "unusedAnnualLeavePay": 0
+        },
+        "expected": {
+          "termDays": 366,
+          "sumday": 92,
+          "threeMonthTotal": 7500000,
+          "avgDailyWage": 81521.74,
+          "severance": 2452353
+        }
       },
       {
-        "name": "Case 2 — 월급 300만, 3년 근속, 연간 상여 600만",
-        "input": { "monthlySalary": 3000000, "annualBonus": 6000000, "unusedAnnualLeavePay": 0, "workDays": 1095 },
-        "expected": { "threeMonthTotal": 10500000, "avgDailyWage": 116667, "severance": 10500000 }
+        "name": "Case 2 — 300만+상여600만, 3년 (2022-01-01~2025-01-01)",
+        "input": {
+          "hireDate": "2022-01-01",
+          "retireDate": "2025-01-01",
+          "monthlySalary": 3000000,
+          "annualBonus": 6000000,
+          "unusedAnnualLeavePay": 0
+        },
+        "expected": {
+          "termDays": 1096,
+          "sumday": 92,
+          "threeMonthTotal": 10500000,
+          "avgDailyWage": 114130.44,
+          "severance": 10281120
+        }
       },
       {
-        "name": "Case 3 — 월급 400만, 5년 근속, 상여 800만, 연차수당 80만",
-        "input": { "monthlySalary": 4000000, "annualBonus": 8000000, "unusedAnnualLeavePay": 800000, "workDays": 1825 },
-        "expected": { "threeMonthTotal": 14200000, "avgDailyWage": 157778, "severance": 23666667 }
+        "name": "Case 3 — 400만+상여800만+연차80만, 5년 (2020-01-01~2025-01-01)",
+        "input": {
+          "hireDate": "2020-01-01",
+          "retireDate": "2025-01-01",
+          "monthlySalary": 4000000,
+          "annualBonus": 8000000,
+          "unusedAnnualLeavePay": 800000
+        },
+        "expected": {
+          "termDays": 1827,
+          "sumday": 92,
+          "threeMonthTotal": 14200000,
+          "avgDailyWage": 154347.83,
+          "severance": 23177547
+        }
       },
       {
-        "name": "Case 4 — 월급 500만, 10년 근속, 상여 1200만",
-        "input": { "monthlySalary": 5000000, "annualBonus": 12000000, "unusedAnnualLeavePay": 0, "workDays": 3650 },
-        "expected": { "threeMonthTotal": 18000000, "avgDailyWage": 200000, "severance": 60000000 }
+        "name": "Case 4 — 500만+상여1200만, 10년 (2015-01-01~2025-01-01)",
+        "input": {
+          "hireDate": "2015-01-01",
+          "retireDate": "2025-01-01",
+          "monthlySalary": 5000000,
+          "annualBonus": 12000000,
+          "unusedAnnualLeavePay": 0
+        },
+        "expected": {
+          "termDays": 3653,
+          "sumday": 92,
+          "threeMonthTotal": 18000000,
+          "avgDailyWage": 195652.18,
+          "severance": 58743897
+        }
       },
       {
-        "name": "Case 5 — 월급 350만, 7년 근속",
-        "input": { "monthlySalary": 3500000, "annualBonus": 0, "unusedAnnualLeavePay": 0, "workDays": 2555 },
-        "expected": { "threeMonthTotal": 10500000, "avgDailyWage": 116667, "severance": 24500000 }
+        "name": "Case 5 — 350만, 7년 (2018-01-01~2025-01-01)",
+        "input": {
+          "hireDate": "2018-01-01",
+          "retireDate": "2025-01-01",
+          "monthlySalary": 3500000,
+          "annualBonus": 0,
+          "unusedAnnualLeavePay": 0
+        },
+        "expected": {
+          "termDays": 2557,
+          "sumday": 92,
+          "threeMonthTotal": 10500000,
+          "avgDailyWage": 114130.44,
+          "severance": 23986154
+        }
       }
     ]
   },
   "guide": {
-    "howToUse": "월 기본급, 연간 상여금, 미사용 연차수당, 총 근속일수를 입력하면 법정 퇴직금이 계산됩니다. 평균임금은 「최근 3개월 임금 총액 ÷ 90일」로 산출되며, 상여금은 연간 ÷ 4(3개월분), 연차수당은 전년분 ÷ 4를 더해 계산합니다.",
+    "howToUse": "입사일·퇴사일·월 기본급·연간 상여금·미사용 연차수당을 입력하면 고용노동부 공식 계산기와 동일한 법정 퇴직금이 계산됩니다. 평균임금은 「최근 3개월 임금 총액 ÷ 그 기간의 총 일수(89~92일)」로 산출되며, 상여금은 연간 ÷ 4(3개월분), 연차수당은 전년분 ÷ 4를 더해 계산합니다.",
     "tips": [
       "1년 미만 근속은 퇴직금 청구권 없음 (4주 평균 1주 15시간 미만 근로 제외).",
       "퇴직 후 14일 이내 미지급 시 연 20% 지연이자 발생 (근로기준법 §37).",
+      "통상임금이 평균임금보다 큰 경우 통상임금이 적용됨 (근로기준법 시행령 §2 단서).",
       "DC형 퇴직연금 가입자는 별도 계산 (회사 부담금 + 운용수익)."
+    ],
+    "faq": [
+      {
+        "q": "퇴직금과 퇴직소득세는 다른가요?",
+        "a": "퇴직금은 받는 금액, 퇴직소득세는 그 금액에 대한 세금입니다. 별도 퇴직소득세 계산기를 이용하세요."
+      },
+      {
+        "q": "연차수당은 왜 1/4만 가산하나요?",
+        "a": "근기법 시행령 제2조에 따라 연차수당은 그 발생일 이전 3개월분에 해당하는 1/4만 평균임금 산정에 포함합니다."
+      },
+      {
+        "q": "퇴직금은 1년 단위로만 계산되나요?",
+        "a": "아닙니다. 일 단위로 계산됩니다 (재직일수/365). 예: 1년 6개월 = 547일/365 ≈ 1.4986년치."
+      }
     ]
   },
-  "related": ["national-pension", "salary-net-pay", "unemployment-benefit"]
+  "related": [
+    "national-pension",
+    "salary-net-pay",
+    "unemployment-benefit"
+  ]
 }

@@ -1,0 +1,57 @@
+{
+  "label": "property-tax",
+  "timestamp": "2026-05-09T00-05-25",
+  "pass": 8,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 1 — 공시가 3억 (일반)",
+      "ts": 1778285125283
+    },
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 2 — 공시가 5억 (일반)",
+      "ts": 1778285125289
+    },
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 3 — 공시가 8억 (일반)",
+      "ts": 1778285125289
+    },
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 4 — 공시가 1억 (일반)",
+      "ts": 1778285125294
+    },
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 5 — 공시가 2억 (일반)",
+      "ts": 1778285125294
+    },
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 6 — 공시가 3억 (1주택 9억 이하 특례)",
+      "ts": 1778285125295
+    },
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 7 — 공시가 5억 (1주택 9억 이하 특례)",
+      "ts": 1778285125295
+    },
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 8 — 공시가 8억 (1주택 9억 이하 특례)",
+      "ts": 1778285125295
+    }
+  ]
+}

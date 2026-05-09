@@ -1,0 +1,111 @@
+{
+  "label": "transfer-tax",
+  "timestamp": "2026-05-09T00-11-09",
+  "pass": 17,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[1home] Case 1 — 1세대1주택 비과세 (양도 10억, 취득 5억, 보유5년, 거주5년)",
+      "ts": 1778285469444
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[1home] Case 2 — 1세대1주택 12억 초과 (양도 15억, 보유10년, 거주10년)",
+      "ts": 1778285469447
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[1home] Case 3 — 1세대1주택 거주 짧음 (양도 20억, 취득 10억, 보유5년, 거주3년)",
+      "ts": 1778285469447
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[1home] Case 4 — 1세대1주택 거주 미달 (양도 9억, 취득 6억, 보유3년, 거주0년 → 비과세 X, 일반 LBC)",
+      "ts": 1778285469447
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[1home] Case 5 — 다주택자 (양도 8억, 취득 5억, 보유5년)",
+      "ts": 1778285469447
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[1home] Case 6 — 단기 1년 미만 (1세대1주택 70%)",
+      "ts": 1778285469447
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[1home] Case 7 — 단기 1-2년 (60%)",
+      "ts": 1778285469447
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[multi] Case 1 — 다주택 양도 5억, 취득 3억, 보유 5년",
+      "ts": 1778285469447
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[multi] Case 2 — 다주택 양도 8억, 취득 5억, 보유 10년",
+      "ts": 1778285469447
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[multi] Case 3 — 단기 양도 10억, 취득 7억, 보유 1년 (단기 60%)",
+      "ts": 1778285469448
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[multi] Case 4 — 다주택 양도 6억, 취득 4억, 보유 3년",
+      "ts": 1778285469448
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[multi] Case 5 — 다주택 양도 12억, 취득 8억, 보유 15년 (LBC 30%)",
+      "ts": 1778285469448
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[adjusted] Case 1 — 양도 8억 / 취득 5억 / 보유 5년 / 2주택",
+      "ts": 1778285469448
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[adjusted] Case 2 — 양도 10억 / 취득 6억 / 보유 10년 / 3주택",
+      "ts": 1778285469448
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[adjusted] Case 3 — 양도 6억 / 취득 4억 / 보유 3년 / 2주택",
+      "ts": 1778285469448
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[adjusted] Case 4 — 양도 15억 / 취득 8억 / 보유 15년 / 3주택",
+      "ts": 1778285469448
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[adjusted] Case 5 — 양도 5억 / 취득 3억 / 보유 5년 / 4주택",
+      "ts": 1778285469448
+    }
+  ]
+}

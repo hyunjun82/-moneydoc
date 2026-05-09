@@ -1,0 +1,39 @@
+{
+  "label": "other-income-tax",
+  "timestamp": "2026-05-08T23-34-58",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 1 — 50만",
+      "ts": 1778283298173
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 2 — 100만",
+      "ts": 1778283298176
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 3 — 300만",
+      "ts": 1778283298176
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 4 — 500만",
+      "ts": 1778283298176
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 5 — 10만 (과세최저한 적용 비과세)",
+      "ts": 1778283298176
+    }
+  ]
+}

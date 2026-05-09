@@ -1,0 +1,39 @@
+{
+  "label": "daily-wage-tax",
+  "timestamp": "2026-05-08T23-14-49",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 1 — 일급 15만 (비과세 한도)",
+      "ts": 1778282089788
+    },
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 2 — 일급 20만",
+      "ts": 1778282089793
+    },
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 3 — 일급 30만",
+      "ts": 1778282089793
+    },
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 4 — 일급 25만",
+      "ts": 1778282089793
+    },
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 5 — 일급 50만",
+      "ts": 1778282089793
+    }
+  ]
+}

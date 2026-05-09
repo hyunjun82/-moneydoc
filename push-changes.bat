@@ -2,7 +2,7 @@
 cd /d "%~dp0"
 
 echo ===============================================
-echo  MoneyDoc - Push (loan-amortization #1)
+echo  MoneyDoc - Push (calculators full overhaul)
 echo ===============================================
 echo.
 
@@ -15,7 +15,7 @@ git add -A
 
 echo.
 echo [2/3] Commit...
-git --no-pager commit -m "feat(loan-amortization): korean-standard PMT 0won match + verify-system + new guide tables"
+git --no-pager commit -m "feat: 7 external 1:1 verifications + auto-tax new + insurance cleanup + 41 user-centric guides"
 
 echo.
 echo [3/3] Push...

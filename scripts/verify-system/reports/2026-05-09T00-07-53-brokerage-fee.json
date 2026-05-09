@@ -1,0 +1,39 @@
+{
+  "label": "brokerage-fee",
+  "timestamp": "2026-05-09T00-07-53",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "brokerage-fee",
+      "case": "Case 1 — 매매 4천만 (5천 미만, 0.6% / 한도 25만)",
+      "ts": 1778285273624
+    },
+    {
+      "status": "pass",
+      "calc": "brokerage-fee",
+      "case": "Case 2 — 매매 1억 (5천~2억, 0.5% / 한도 80만)",
+      "ts": 1778285273627
+    },
+    {
+      "status": "pass",
+      "calc": "brokerage-fee",
+      "case": "Case 3 — 매매 5억 (2억~9억, 0.4%)",
+      "ts": 1778285273627
+    },
+    {
+      "status": "pass",
+      "calc": "brokerage-fee",
+      "case": "Case 4 — 매매 10억 (9억~12억, 0.5%)",
+      "ts": 1778285273627
+    },
+    {
+      "status": "pass",
+      "calc": "brokerage-fee",
+      "case": "Case 5 — 매매 13억 (12억~15억, 0.6%)",
+      "ts": 1778285273627
+    }
+  ]
+}

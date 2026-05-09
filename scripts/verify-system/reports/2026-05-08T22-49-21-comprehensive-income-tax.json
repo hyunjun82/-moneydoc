@@ -1,0 +1,39 @@
+{
+  "label": "comprehensive-income-tax",
+  "timestamp": "2026-05-08T22-49-21",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 1 — 사업소득 3천만, 부양 1, 자녀 0",
+      "ts": 1778280561029
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 2 — 임대소득 5천만, 부양 2, 자녀 0",
+      "ts": 1778280561031
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 3 — 사업소득 1억, 부양 4, 자녀 2",
+      "ts": 1778280561031
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 4 — 종합 1.5억, 부양 1",
+      "ts": 1778280561031
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 5 — 고소득 5억, 부양 4, 자녀 0",
+      "ts": 1778280561031
+    }
+  ]
+}

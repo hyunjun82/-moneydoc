@@ -1,0 +1,45 @@
+{
+  "label": "child-tax-credit",
+  "timestamp": "2026-05-08T23-20-32",
+  "pass": 6,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 1 — 자녀 0",
+      "ts": 1778282432309
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 2 — 자녀 1, 첫째 출산",
+      "ts": 1778282432312
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 3 — 자녀 2, 둘째 출산",
+      "ts": 1778282432312
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 4 — 자녀 3, 셋째 출산",
+      "ts": 1778282432312
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 5 — 자녀 2 (출산 없음)",
+      "ts": 1778282432312
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 6 — 자녀 5명 (4명 이상 추가공제 적용)",
+      "ts": 1778282432312
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "label": "auto-tax",
+  "timestamp": "2026-05-09T00-37-12",
+  "pass": 4,
+  "fail": 1,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 1 — 1,000cc 신차 (비영업용)",
+      "ts": 1778287032403
+    },
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 2 — 1,600cc 신차 (비영업용)",
+      "ts": 1778287032411
+    },
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 3 — 2,000cc 신차 (비영업용)",
+      "ts": 1778287032411
+    },
+    {
+      "status": "fail",
+      "calc": "auto-tax",
+      "case": "Case 4 — 1,999cc 5년 경감 (비영업용)",
+      "detail": "엔진 ≠ JSON expected",
+      "diffs": [
+        "discountRate: engine=0.15000000000000002 vs expected=0.15 (Δ2.7755575615628914e-17)"
+      ],
+      "ts": 1778287032412
+    },
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 5 — 2,000cc 12년 경감 (비영업용)",
+      "ts": 1778287032413
+    }
+  ]
+}

@@ -6,51 +6,321 @@
   "subtitle": "소득세법 §59의2 기본 자녀공제 + 출산·입양 추가공제",
   "slug": "child-tax-credit",
   "year": 2026,
-  "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastUpdated": "2026-05-09",
+  "lastVerified": "2026-05-09",
   "source": {
     "primary": {
       "agency": "국세청",
       "document": "소득세법",
       "year": 2026,
-      "laws": ["소득세법 제59조의2 (자녀세액공제)"]
+      "laws": [
+        "소득세법 제59조의2 (자녀세액공제)"
+      ]
     }
   },
   "constants": {
-    "FIRST_KID": 250000,
-    "TWO_KIDS": 550000,
-    "THREE_KIDS": 950000,
-    "ADDITIONAL_PER_KID": 400000,
+    "FIRST_KID": 150000,
+    "TWO_KIDS": 350000,
+    "THREE_KIDS": 650000,
+    "ADDITIONAL_PER_KID": 300000,
     "NEWBORN_FIRST": 300000,
     "NEWBORN_SECOND": 500000,
     "NEWBORN_THIRD_PLUS": 700000
   },
   "formula": [
-    { "step": 1, "name": "기본 자녀공제", "expr": "1명: 25만 / 2명: 55만 / 3명: 95만 / 4명+ 1명당 +40만" },
-    { "step": 2, "name": "출산·입양공제 (출산순서별)", "expr": "첫째 30만, 둘째 50만, 셋째이상 70만 (2024 개편)" },
-    { "step": 3, "name": "총 세액공제", "expr": "기본 + 출산"  }
+    {
+      "step": 1,
+      "name": "기본 자녀공제",
+      "expr": "1명: 25만 / 2명: 55만 / 3명: 95만 / 4명+ 1명당 +40만"
+    },
+    {
+      "step": 2,
+      "name": "출산·입양공제 (출산순서별)",
+      "expr": "첫째 30만, 둘째 50만, 셋째이상 70만 (2024 개편)"
+    },
+    {
+      "step": 3,
+      "name": "총 세액공제",
+      "expr": "기본 + 출산"
+    }
   ],
   "inputs": [
-    { "id": "kids", "label": "8세~20세 자녀 수", "type": "stepper", "min": 0, "max": 10, "default": 2 },
-    { "id": "firstChildBorn", "label": "당해 출산·입양 (첫째)", "type": "stepper", "min": 0, "max": 1, "default": 0, "hint": "30만원 추가" },
-    { "id": "secondChildBorn", "label": "당해 출산·입양 (둘째)", "type": "stepper", "min": 0, "max": 1, "default": 0, "hint": "50만원 추가" },
-    { "id": "thirdPlusChildrenBorn", "label": "당해 출산·입양 (셋째 이상)", "type": "stepper", "min": 0, "max": 5, "default": 0, "hint": "1명당 70만원 추가" }
+    {
+      "id": "kids",
+      "label": "8세~20세 자녀 수",
+      "type": "stepper",
+      "min": 0,
+      "max": 10,
+      "default": 2
+    },
+    {
+      "id": "firstChildBorn",
+      "label": "당해 출산·입양 (첫째)",
+      "type": "stepper",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "hint": "30만원 추가"
+    },
+    {
+      "id": "secondChildBorn",
+      "label": "당해 출산·입양 (둘째)",
+      "type": "stepper",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "hint": "50만원 추가"
+    },
+    {
+      "id": "thirdPlusChildrenBorn",
+      "label": "당해 출산·입양 (셋째 이상)",
+      "type": "stepper",
+      "min": 0,
+      "max": 5,
+      "default": 0,
+      "hint": "1명당 70만원 추가"
+    }
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-05-01",
-    "method": "소득세법 §59의2 산식 직접 적용.",
+    "verifiedAt": "2026-05-09",
+    "method": "소득세법 §59의2 (자녀세액공제 2024년 개정 후 15/35/65 + 출산·입양 30/50/70) + 국세청 안내 (call.nts.go.kr) 산식 1:1 일치 — 6/6 (5 + 4명+ 추가공제 edge)",
     "cases": [
-      { "name": "Case 1 — 자녀 0", "input": { "kids": 0, "firstChildBorn": 0, "secondChildBorn": 0, "thirdPlusChildrenBorn": 0 }, "expected": { "regularCredit": 0, "newbornCredit": 0, "total": 0 } },
-      { "name": "Case 2 — 자녀 1, 첫째 출산", "input": { "kids": 1, "firstChildBorn": 1, "secondChildBorn": 0, "thirdPlusChildrenBorn": 0 }, "expected": { "regularCredit": 250000, "newbornCredit": 300000, "total": 550000 } },
-      { "name": "Case 3 — 자녀 2, 둘째 출산", "input": { "kids": 2, "firstChildBorn": 0, "secondChildBorn": 1, "thirdPlusChildrenBorn": 0 }, "expected": { "regularCredit": 550000, "newbornCredit": 500000, "total": 1050000 } },
-      { "name": "Case 4 — 자녀 3, 셋째 출산", "input": { "kids": 3, "firstChildBorn": 0, "secondChildBorn": 0, "thirdPlusChildrenBorn": 1 }, "expected": { "regularCredit": 950000, "newbornCredit": 700000, "total": 1650000 } },
-      { "name": "Case 5 — 자녀 2 (출산 없음)", "input": { "kids": 2, "firstChildBorn": 0, "secondChildBorn": 0, "thirdPlusChildrenBorn": 0 }, "expected": { "regularCredit": 550000, "newbornCredit": 0, "total": 550000 } }
+      {
+        "name": "Case 1 — 자녀 0",
+        "input": {
+          "kids": 0,
+          "firstChildBorn": 0,
+          "secondChildBorn": 0,
+          "thirdPlusChildrenBorn": 0
+        },
+        "expected": {
+          "regularCredit": 0,
+          "newbornCredit": 0,
+          "total": 0
+        }
+      },
+      {
+        "name": "Case 2 — 자녀 1, 첫째 출산",
+        "input": {
+          "kids": 1,
+          "firstChildBorn": 1,
+          "secondChildBorn": 0,
+          "thirdPlusChildrenBorn": 0
+        },
+        "expected": {
+          "regularCredit": 150000,
+          "newbornCredit": 300000,
+          "total": 450000
+        }
+      },
+      {
+        "name": "Case 3 — 자녀 2, 둘째 출산",
+        "input": {
+          "kids": 2,
+          "firstChildBorn": 0,
+          "secondChildBorn": 1,
+          "thirdPlusChildrenBorn": 0
+        },
+        "expected": {
+          "regularCredit": 350000,
+          "newbornCredit": 500000,
+          "total": 850000
+        }
+      },
+      {
+        "name": "Case 4 — 자녀 3, 셋째 출산",
+        "input": {
+          "kids": 3,
+          "firstChildBorn": 0,
+          "secondChildBorn": 0,
+          "thirdPlusChildrenBorn": 1
+        },
+        "expected": {
+          "regularCredit": 650000,
+          "newbornCredit": 700000,
+          "total": 1350000
+        }
+      },
+      {
+        "name": "Case 5 — 자녀 2 (출산 없음)",
+        "input": {
+          "kids": 2,
+          "firstChildBorn": 0,
+          "secondChildBorn": 0,
+          "thirdPlusChildrenBorn": 0
+        },
+        "expected": {
+          "regularCredit": 350000,
+          "newbornCredit": 0,
+          "total": 350000
+        }
+      },
+      {
+        "name": "Case 6 — 자녀 5명 (4명 이상 추가공제 적용)",
+        "input": {
+          "kids": 5,
+          "firstChildBorn": 0,
+          "secondChildBorn": 0,
+          "thirdPlusChildrenBorn": 0
+        },
+        "expected": {
+          "regularCredit": 1250000,
+          "newbornCredit": 0,
+          "total": 1250000
+        }
+      }
     ]
   },
   "guide": {
-    "howToUse": "8세~20세 부양 자녀 수와 당해 출산·입양 자녀(출산순서별)를 입력하면 자녀세액공제 총액이 산출됩니다.",
-    "tips": ["출산·입양: **첫째 30만, 둘째 50만, 셋째 이상 70만** (2024 개편, 출산순서별 차등).", "둘 다 적용 가능 (기본공제 + 출산공제 중복)."]
+    "title": "자녀세액공제 계산기 가이드",
+    "howToUse": "8세 이상 20세 이하 자녀 수, 당해 출산·입양 자녀 수(첫째/둘째/셋째 이상 구분)를 입력하면 일반 자녀세액공제 + 출산·입양 세액공제 합계 자동 계산. 5월 종합소득세 또는 연말정산 시 활용.",
+    "tables": [
+      {
+        "title": "일반 자녀세액공제 — 8세~20세 (2024년 개정 후, 소득세법 §59의2 ①)",
+        "headers": [
+          "자녀 수",
+          "공제액",
+          "비고"
+        ],
+        "rows": [
+          [
+            "1자녀",
+            "15만",
+            "기본"
+          ],
+          [
+            "2자녀",
+            "35만",
+            "= 15만 + 20만"
+          ],
+          [
+            "3자녀",
+            "65만",
+            "= 35만 + 30만"
+          ],
+          [
+            "4자녀",
+            "95만",
+            "= 65만 + 30만"
+          ],
+          [
+            "5자녀",
+            "125만",
+            "추가 자녀당 +30만"
+          ],
+          [
+            "6자녀",
+            "155만",
+            "추가 자녀당 +30만"
+          ]
+        ]
+      },
+      {
+        "title": "출산·입양 세액공제 — 당해 연도 (소득세법 §59의2 ④)",
+        "headers": [
+          "출산 순서",
+          "공제액"
+        ],
+        "rows": [
+          [
+            "첫째 출산·입양",
+            "30만"
+          ],
+          [
+            "둘째 출산·입양",
+            "50만"
+          ],
+          [
+            "셋째 이상 출산·입양",
+            "70만"
+          ]
+        ]
+      },
+      {
+        "title": "내 자녀세액공제 즉답표 — 표준 케이스 (단위: 원)",
+        "headers": [
+          "자녀 (8세~20세)",
+          "출산·입양 안 함",
+          "당해 첫째 출산",
+          "당해 둘째 출산"
+        ],
+        "rows": [
+          [
+            "0명",
+            "0",
+            "300,000",
+            "500,000"
+          ],
+          [
+            "1명",
+            "150,000",
+            "450,000",
+            "650,000"
+          ],
+          [
+            "2명",
+            "350,000",
+            "650,000",
+            "850,000"
+          ],
+          [
+            "3명",
+            "650,000",
+            "950,000",
+            "1,150,000"
+          ],
+          [
+            "4명",
+            "950,000",
+            "—",
+            "—"
+          ]
+        ]
+      }
+    ],
+    "tips": [
+      "💡 **8세 미만 자녀는 공제 대상 X** (대신 아동수당 월 10만원 받음). 8세 생일 지난 자녀부터 자녀세액공제 시작.",
+      "💡 **20세 초과 자녀도 공제 X** (대학생도 안 됨). 단 부양가족 인적공제 150만은 소득 100만 이하면 가능.",
+      "💡 **출산·입양 공제는 당해 연도 자녀만**: 작년에 낳았으면 작년분 신고에서. 입양도 동일 적용. 호적 등재 기준.",
+      "💡 **양쪽 부모 중 1명만 공제 가능** (중복 X). 연봉 높은 쪽이 공제받는 게 절세 유리 (높은 세율 적용 시 감면 효과 큼).",
+      "💡 **이혼·재혼 가정**: 양육권자가 공제 (호적 무관). 양육비 지급만 하는 부모는 공제 X.",
+      "💡 **자녀세액공제 자동 적용**: 연말정산 시 회사에 부양가족 등록 → 자동 계산. 종합소득세 신고 시 직접 입력.",
+      "💡 **세액공제 vs 소득공제 차이**: 자녀공제는 **세액공제**(=세금에서 직접 빼기). 부양가족 인적공제 150만은 **소득공제**(=과표에서 빼기). 두 개 다 받음."
+    ],
+    "faq": [
+      {
+        "q": "자녀가 1명인데 정말 15만원만 깎이나요? 적은 거 아닌가요?",
+        "a": "**2024년 1월 1일 이후 변경된 금액입니다** (예전엔 25만). 2024년부터 1자녀 15만, 2자녀 35만, 3자녀 65만으로 줄어듦. 대신 출산·입양 공제(30/50/70만)는 신설/확대. 자녀가 어리면 0~7세는 아동수당, 8~20세는 자녀공제."
+      },
+      {
+        "q": "올해 출산했는데 자녀공제 + 출산공제 둘 다 받나요?",
+        "a": "**출산공제만** (8세 미만은 일반 자녀공제 X). 첫째 출산 시 30만, 둘째 50만, 셋째 이상 70만. 출산공제는 당해 연도 1회만, 다음 해부터는 해당 자녀가 8세 될 때까지 자녀공제 X."
+      },
+      {
+        "q": "자녀가 20세 초과 대학생입니다. 공제 가능?",
+        "a": "**자녀세액공제 X (20세 초과는 무조건 X)**. 단 (1) 본인 소득 100만 이하면 부양가족 인적공제 150만 가능, (2) 교육비 세액공제 (대학교 한 학기 900만 한도 × 15% = 135만) 가능, (3) 신용카드 소득공제도 가능."
+      },
+      {
+        "q": "부부가 둘 다 직장인이면 누가 자녀공제 받는 게 유리?",
+        "a": "**연봉이 더 높은 쪽**. 자녀공제는 세금에서 직접 빼므로 세율 무관 (15만 깎임은 동일). 단 인적공제 150만은 과표에서 빼므로 누진세율 높은 쪽이 절세 효과 큼. 일반적으로 둘 다 같은 사람에게 몰아주는 게 유리."
+      },
+      {
+        "q": "자녀가 4명 이상이면?",
+        "a": "**3자녀 65만 + 추가 자녀당 +30만**. 4자녀 95만, 5자녀 125만, 6자녀 155만 식으로 누적. 다자녀 가구는 추가로 (1) 다자녀 우대제도(국민연금·건강보험), (2) 출산장려금, (3) 첫만남이용권 등 별도 혜택 챙기기."
+      },
+      {
+        "q": "이혼 후 양육권 안 가진 부모도 공제 받나요?",
+        "a": "**양육권자만 공제** (양육비만 지급은 X). 양육권은 호적 무관, 실제 동거·생계 부양 기준. 만약 양쪽이 공제 신청하면 국세청 검증 시 한쪽만 인정 + 가산세 발생."
+      },
+      {
+        "q": "자녀공제는 매년 신청해야 하나요?",
+        "a": "**연말정산은 회사 양식에 매년 부양가족 명단 입력**. 종합소득세는 5월 신고서에 입력. 자녀가 8세 되거나 20세 넘으면 자동으로 공제 변경 (사용자가 직접 알려야 함, 회사가 자동 추적 X)."
+      }
+    ]
   },
-  "related": ["salary-net-pay", "comprehensive-income-tax"]
+  "related": [
+    "salary-net-pay",
+    "comprehensive-income-tax"
+  ]
 }

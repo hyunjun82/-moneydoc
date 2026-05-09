@@ -1,0 +1,39 @@
+{
+  "label": "severance-pay",
+  "timestamp": "2026-05-08T22-26-26",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 1 — 250만, 1년 (2024-01-01~2025-01-01)",
+      "ts": 1778279186528
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 2 — 300만+상여600만, 3년 (2022-01-01~2025-01-01)",
+      "ts": 1778279186531
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 3 — 400만+상여800만+연차80만, 5년 (2020-01-01~2025-01-01)",
+      "ts": 1778279186531
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 4 — 500만+상여1200만, 10년 (2015-01-01~2025-01-01)",
+      "ts": 1778279186531
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 5 — 350만, 7년 (2018-01-01~2025-01-01)",
+      "ts": 1778279186531
+    }
+  ]
+}

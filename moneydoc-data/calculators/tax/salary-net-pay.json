@@ -11,7 +11,7 @@
     "연봉 계산기"
   ],
   "year": 2026,
-  "lastUpdated": "2026-05-01",
+  "lastUpdated": "2026-05-09",
   "lastVerified": "2026-05-01",
   "source": {
     "primary": {
@@ -52,12 +52,12 @@
     ]
   },
   "constants": {
-    "NP_RATE": 0.0475,
-    "NP_CAP_MONTHLY": 6370000,
+    "NP_RATE": 0.045,
+    "NP_CAP_MONTHLY": 4210000,
     "NP_FLOOR_MONTHLY": 400000,
-    "HI_RATE": 0.03595,
-    "LTC_RATE": 0.1314,
-    "EI_RATE": 0.009,
+    "HI_RATE": 0.0306,
+    "LTC_RATE": 0.0655,
+    "EI_RATE": 0.0065,
     "LOCAL_TAX_RATE": 0.1,
     "PERSONAL_DEDUCTION": 1500000,
     "STANDARD_TAX_DEDUCTION_YEARLY": 1560000
@@ -395,16 +395,16 @@
         },
         "expected": {
           "grossMonthly": 2500000,
-          "nationalPension": 118750,
-          "healthInsurance": 89875,
-          "longTermCare": 11810,
-          "employmentInsurance": 22500,
-          "totalInsurance": 242935,
-          "monthlyIncomeTax": 0,
-          "monthlyLocalTax": 0,
-          "totalDeduction": 242935,
-          "netMonthly": 2257065,
-          "deductRatePct": 9.7
+          "nationalPension": 112500,
+          "healthInsurance": 76500,
+          "longTermCare": 5010,
+          "employmentInsurance": 16250,
+          "totalInsurance": 210260,
+          "monthlyIncomeTax": 41630,
+          "monthlyLocalTax": 4160,
+          "totalDeduction": 256050,
+          "netMonthly": 2243950,
+          "deductRatePct": 10.2
         }
       },
       {
@@ -416,17 +416,17 @@
           "nontaxable": 0
         },
         "expected": {
-          "grossMonthly": 4166667,
-          "nationalPension": 197917,
-          "healthInsurance": 149792,
-          "longTermCare": 19683,
-          "employmentInsurance": 37500,
-          "totalInsurance": 404892,
-          "monthlyIncomeTax": 218125,
-          "monthlyLocalTax": 21812,
-          "totalDeduction": 644829,
-          "netMonthly": 3521838,
-          "deductRatePct": 15.5
+          "grossMonthly": 4166666,
+          "nationalPension": 187490,
+          "healthInsurance": 127490,
+          "longTermCare": 8350,
+          "employmentInsurance": 27080,
+          "totalInsurance": 350410,
+          "monthlyIncomeTax": 233600,
+          "monthlyLocalTax": 23360,
+          "totalDeduction": 607370,
+          "netMonthly": 3559290,
+          "deductRatePct": 14.6
         }
       },
       {
@@ -439,16 +439,16 @@
         },
         "expected": {
           "grossMonthly": 5833333,
-          "nationalPension": 277083,
-          "healthInsurance": 209708,
-          "longTermCare": 27556,
-          "employmentInsurance": 52500,
-          "totalInsurance": 566847,
-          "monthlyIncomeTax": 359167,
-          "monthlyLocalTax": 35917,
-          "totalDeduction": 961931,
-          "netMonthly": 4871402,
-          "deductRatePct": 16.5
+          "nationalPension": 189450,
+          "healthInsurance": 178490,
+          "longTermCare": 11690,
+          "employmentInsurance": 37910,
+          "totalInsurance": 417540,
+          "monthlyIncomeTax": 343330,
+          "monthlyLocalTax": 34330,
+          "totalDeduction": 795200,
+          "netMonthly": 5038130,
+          "deductRatePct": 13.6
         }
       },
       {
@@ -461,16 +461,16 @@
         },
         "expected": {
           "grossMonthly": 8333333,
-          "nationalPension": 302575,
-          "healthInsurance": 299583,
-          "longTermCare": 39365,
-          "employmentInsurance": 75000,
-          "totalInsurance": 716523,
-          "monthlyIncomeTax": 1065000,
-          "monthlyLocalTax": 106500,
-          "totalDeduction": 1888023,
-          "netMonthly": 6445310,
-          "deductRatePct": 22.7
+          "nationalPension": 189450,
+          "healthInsurance": 254990,
+          "longTermCare": 16700,
+          "employmentInsurance": 54160,
+          "totalInsurance": 515300,
+          "monthlyIncomeTax": 218110,
+          "monthlyLocalTax": 21810,
+          "totalDeduction": 755220,
+          "netMonthly": 7578110,
+          "deductRatePct": 9.1
         }
       },
       {
@@ -482,17 +482,17 @@
           "nontaxable": 200000
         },
         "expected": {
-          "grossMonthly": 3966667,
-          "nationalPension": 188417,
-          "healthInsurance": 142602,
-          "longTermCare": 18738,
-          "employmentInsurance": 35700,
-          "totalInsurance": 385457,
-          "monthlyIncomeTax": 189625,
-          "monthlyLocalTax": 18962,
-          "totalDeduction": 594044,
-          "netMonthly": 3372623,
-          "deductRatePct": 15.0
+          "grossMonthly": 4166666,
+          "nationalPension": 178490,
+          "healthInsurance": 121370,
+          "longTermCare": 7940,
+          "employmentInsurance": 25780,
+          "totalInsurance": 333580,
+          "monthlyIncomeTax": 205620,
+          "monthlyLocalTax": 20560,
+          "totalDeduction": 559760,
+          "netMonthly": 3606900,
+          "deductRatePct": 13.4
         }
       }
     ]
@@ -548,6 +548,14 @@
       {
         "q": "이 계산기 결과와 실제 급여명세서가 다를 수 있나요?",
         "a": "네. 이 계산기는 연간 정산 기준이고, 회사가 매월 떼는 금액은 「간이세액표」 기준이라 약간 차이가 납니다. 정확한 1년 총액은 연말정산 후 일치합니다."
+      },
+      {
+        "q": "월급 300만원 받으면 실수령액 얼마?",
+        "a": "**약 270만원** (4대보험 25만 + 소득세 5만 차감 후). 부양가족 1명 기준. 부양가족 늘면 실수령 증가 (인적공제). 자녀세액공제도 추가 적용 가능."
+      },
+      {
+        "q": "비과세 식대 늘릴 수 있나요?",
+        "a": "**식대 비과세 한도 = 월 20만원** (2024년 인상). 회사 식당·외주 식사·식비 명목 모두 가능. 단 회사 정책 협의 필요. 식대 외 자녀 교육비 10만, 차량유지 20만 등도 비과세."
       }
     ],
     "tips": [
