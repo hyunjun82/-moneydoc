@@ -131,12 +131,6 @@ export default function Page() {
             <span className="cat-count">정부 공식 산식</span>
           </div>
         </a>
-          <div className="cat-body">
-            <h3 className="cat-name">연말정산 환급 시뮬레이터</h3>
-            <p className="cat-desc">결정세액 vs 매월 떼인 세액 → 환급/추가납부</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
         </div>
       </section>
 
