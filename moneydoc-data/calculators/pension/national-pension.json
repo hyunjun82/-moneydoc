@@ -75,63 +75,63 @@
     "method": "국민연금법 §51 산식 직접 적용. 비례상수 1.29 (2026 소득대체율 43%) + A값 3,193,511원 (2026 발표). 산식 결과는 추정치, 실제 수령액과 ±5% 차이 가능.",
     "cases": [
       {
-        "name": "Case 1 — 가입 20년 (240개월), 평균소득 200만원",
+        "name": "Case 1 — 가입 20년, 평균소득 200만",
         "input": {
           "monthsContributed": 240,
           "avgIncome": 2000000
         },
         "expected": {
-          "P": 1.0,
-          "monthlyPension": 558302,
-          "annualPension": 6699624
+          "P": 1,
+          "monthlyPension": 558300,
+          "annualPension": 6699600
         }
       },
       {
-        "name": "Case 2 — 가입 30년 (360개월), 평균소득 300만원",
+        "name": "Case 2 — 가입 30년, 평균소득 300만",
         "input": {
           "monthsContributed": 360,
           "avgIncome": 3000000
         },
         "expected": {
           "P": 1.5,
-          "monthlyPension": 998704,
-          "annualPension": 11984448
+          "monthlyPension": 998700,
+          "annualPension": 11984400
         }
       },
       {
-        "name": "Case 3 — 가입 40년 (480개월), 평균소득 400만원",
+        "name": "Case 3 — 가입 40년, 평균소득 400만",
         "input": {
           "monthsContributed": 480,
           "avgIncome": 4000000
         },
         "expected": {
-          "P": 2.0,
-          "monthlyPension": 1546605,
-          "annualPension": 18559260
+          "P": 2,
+          "monthlyPension": 1546600,
+          "annualPension": 18559200
         }
       },
       {
-        "name": "Case 4 — 가입 10년 (120개월), 평균소득 200만원",
+        "name": "Case 4 — 가입 10년, 평균소득 200만",
         "input": {
           "monthsContributed": 120,
           "avgIncome": 2000000
         },
         "expected": {
           "P": 0.5,
-          "monthlyPension": 279151,
-          "annualPension": 3349812
+          "monthlyPension": 279150,
+          "annualPension": 3349800
         }
       },
       {
-        "name": "Case 5 — 가입 25년 (300개월), 평균소득 250만원",
+        "name": "Case 5 — 가입 25년, 평균소득 250만",
         "input": {
           "monthsContributed": 300,
           "avgIncome": 2500000
         },
         "expected": {
           "P": 1.25,
-          "monthlyPension": 765066,
-          "annualPension": 9180792
+          "monthlyPension": 765060,
+          "annualPension": 9180720
         }
       }
     ]
