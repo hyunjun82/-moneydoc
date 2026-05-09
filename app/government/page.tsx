@@ -28,7 +28,7 @@ export default function Page() {
         <div className="cats">
         <a href="/government/basic-livelihood-eligibility/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
-            <h3 className="cat-name">기초생활수급자 자격 모의계산</h3>
+            <h3 className="cat-name">기초생활수급자 모의계산</h3>
             <p className="cat-desc">생계 30% / 의료 40% / 주거 47% / 교육 50% 4종 급여 자격</p>
             <span className="cat-count">정부 공식 산식</span>
           </div>
