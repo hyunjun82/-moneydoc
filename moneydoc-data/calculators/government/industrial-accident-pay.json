@@ -3,7 +3,7 @@
   "category": "government",
   "subCategory": "labor",
   "title": "산재 휴업급여 계산기",
-  "subtitle": "평균임금의 70% × 휴업 일수",
+  "subtitle": "평균임금의 70% × 휴업일수 (최저 82,560원/일)",
   "slug": "industrial-accident-pay",
   "year": 2026,
   "lastUpdated": "2026-05-01",
@@ -17,7 +17,8 @@
   },
   "constants": {
     "BENEFIT_RATE": 0.7,
-    "_NOTE": "단순 70% 모델. 저소득 90% 보장·최저보상기준은 별도 적용."
+    "DAILY_MIN_2026": 82560,
+    "_NOTE": "평균임금 × 70%, 최저보상 82,560원/일 적용 (2026 최저시급 10,320 × 8시간)"
   },
   "formula": [
     {
@@ -27,13 +28,13 @@
     },
     {
       "step": 2,
-      "name": "일 휴업급여",
-      "expr": "round(일급 × 70%)"
+      "name": "1일 휴업급여",
+      "expr": "max(round(일평균임금 × 70%), 82,560원)"
     },
     {
       "step": 3,
       "name": "총 급여",
-      "expr": "일급여 × 휴업일수"
+      "expr": "1일 휴업급여 × 휴업일수"
     }
   ],
   "inputs": [
@@ -56,7 +57,7 @@
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-01",
-    "method": "산재보험법 §52. 평균임금의 70% × 일수. 휴업 4일 이상 지급.",
+    "method": "산재보험법 §52. 평균임금 × 70%, 최저보상 82,560원/일 (2026) 적용.",
     "cases": [
       {
         "name": "Case 1 — 월 300만 / 30일",
@@ -66,8 +67,8 @@
         },
         "expected": {
           "dailyAvgWage": 100000,
-          "dailyBenefit": 70000,
-          "totalBenefit": 2100000
+          "dailyBenefit": 82560,
+          "totalBenefit": 2476800
         }
       },
       {
@@ -90,8 +91,8 @@
         },
         "expected": {
           "dailyAvgWage": 83333,
-          "dailyBenefit": 58333,
-          "totalBenefit": 3499980
+          "dailyBenefit": 82560,
+          "totalBenefit": 4953600
         }
       },
       {
