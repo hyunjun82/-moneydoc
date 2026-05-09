@@ -1,0 +1,69 @@
+{
+  "label": "insurance",
+  "timestamp": "2026-05-09T07-09-22",
+  "pass": 10,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 1 — 1,000cc 신차 (비영업용)",
+      "ts": 1778310562928
+    },
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 2 — 1,600cc 신차 (비영업용)",
+      "ts": 1778310562935
+    },
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 3 — 2,000cc 신차 (비영업용)",
+      "ts": 1778310562935
+    },
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 4 — 1,999cc 5년 경감 (비영업용)",
+      "ts": 1778310562935
+    },
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 5 — 2,000cc 12년 경감 (비영업용)",
+      "ts": 1778310562935
+    },
+    {
+      "status": "pass",
+      "calc": "medical-insurance-payout",
+      "case": "Case 1 — 의료비 100만 / 면책 10만 / 부담 20%",
+      "ts": 1778310562936
+    },
+    {
+      "status": "pass",
+      "calc": "medical-insurance-payout",
+      "case": "Case 2 — 의료비 50만 / 면책 3만 / 부담 30%",
+      "ts": 1778310562936
+    },
+    {
+      "status": "pass",
+      "calc": "medical-insurance-payout",
+      "case": "Case 3 — 의료비 500만 / 면책 10만 / 부담 20%",
+      "ts": 1778310562936
+    },
+    {
+      "status": "pass",
+      "calc": "medical-insurance-payout",
+      "case": "Case 4 — 의료비 10만 / 면책 3만 / 부담 30%",
+      "ts": 1778310562936
+    },
+    {
+      "status": "pass",
+      "calc": "medical-insurance-payout",
+      "case": "Case 5 — 의료비 1천만 / 면책 20만 / 부담 20%",
+      "ts": 1778310562937
+    }
+  ]
+}

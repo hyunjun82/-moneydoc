@@ -78,9 +78,9 @@
         "expected": {
           "totalDays": 90,
           "dailyWage": 95694,
-          "govPay": 6599970,
-          "companyPay": 1341660,
-          "total": 7941630
+          "govPay": 6600000,
+          "companyPay": 600000,
+          "total": 7200000
         }
       },
       {
@@ -93,9 +93,9 @@
         "expected": {
           "totalDays": 90,
           "dailyWage": 133971,
-          "govPay": 6599970,
-          "companyPay": 3638280,
-          "total": 10238250
+          "govPay": 6600000,
+          "companyPay": 2600000,
+          "total": 9200000
         }
       },
       {
@@ -108,9 +108,9 @@
         "expected": {
           "totalDays": 90,
           "dailyWage": 191388,
-          "govPay": 2199990,
-          "companyPay": 11483280,
-          "total": 13683270
+          "govPay": 2200000,
+          "companyPay": 10000000,
+          "total": 12200000
         }
       },
       {
@@ -123,9 +123,9 @@
         "expected": {
           "totalDays": 120,
           "dailyWage": 76555,
-          "govPay": 8799960,
-          "companyPay": 193320,
-          "total": 8993280
+          "govPay": 8000000,
+          "companyPay": 0,
+          "total": 8000000
         }
       },
       {
@@ -138,9 +138,9 @@
         "expected": {
           "totalDays": 120,
           "dailyWage": 153110,
-          "govPay": 4399980,
-          "companyPay": 9186600,
-          "total": 13586580
+          "govPay": 4400000,
+          "companyPay": 8000000,
+          "total": 12400000
         }
       }
     ]
