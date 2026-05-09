@@ -25,14 +25,20 @@
     "limits": {
       "single": {
         "income": 22000000,
+        "phaseIn": 4000000,
+        "phaseFlatEnd": 9000000,
         "max": 1650000
       },
       "single_earner": {
         "income": 32000000,
+        "phaseIn": 7000000,
+        "phaseFlatEnd": 14000000,
         "max": 2850000
       },
       "dual_earner": {
         "income": 44000000,
+        "phaseIn": 8000000,
+        "phaseFlatEnd": 17000000,
         "max": 3300000
       }
     }
@@ -98,7 +104,7 @@
           "limit": 22000000,
           "maxAmount": 1650000,
           "isEligible": true,
-          "estimatedAmount": 1500000
+          "estimatedAmount": 1523077
         }
       },
       {
@@ -111,7 +117,7 @@
           "limit": 32000000,
           "maxAmount": 2850000,
           "isEligible": true,
-          "estimatedAmount": 1246875
+          "estimatedAmount": 1108333
         }
       },
       {
@@ -124,7 +130,7 @@
           "limit": 44000000,
           "maxAmount": 3300000,
           "isEligible": true,
-          "estimatedAmount": 2100000
+          "estimatedAmount": 1711111
         }
       },
       {
@@ -150,7 +156,7 @@
           "limit": 44000000,
           "maxAmount": 3300000,
           "isEligible": true,
-          "estimatedAmount": 2250000
+          "estimatedAmount": 3300000
         }
       }
     ]
