@@ -2,7 +2,7 @@
   "id": "unpaid-wages",
   "category": "law",
   "subCategory": "labor",
-  "title": "임금체불 미지급금 계산기",
+  "title": "임금체불 계산기",
   "subtitle": "미지급액 + 연 20% 지연이자",
   "slug": "unpaid-wages",
   "year": 2026,

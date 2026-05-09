@@ -63,7 +63,7 @@ export default function Page() {
         </a>
         <a href="/law/unpaid-wages/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
-            <h3 className="cat-name">임금체불 미지급금 계산기</h3>
+            <h3 className="cat-name">임금체불 계산기</h3>
             <p className="cat-desc">미지급액 + 연 20% 지연이자</p>
             <span className="cat-count">정부 공식 산식</span>
           </div>
