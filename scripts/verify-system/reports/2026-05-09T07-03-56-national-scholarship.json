@@ -1,0 +1,39 @@
+{
+  "label": "national-scholarship",
+  "timestamp": "2026-05-09T07-03-56",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 1 — 1분위 / 등록금 400만",
+      "ts": 1778310236183
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 2 — 4분위 / 등록금 500만",
+      "ts": 1778310236192
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 3 — 7분위 / 등록금 450만",
+      "ts": 1778310236193
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 4 — 9분위 (지원 X)",
+      "ts": 1778310236193
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 5 — 3분위 / 등록금 600만",
+      "ts": 1778310236193
+    }
+  ]
+}
