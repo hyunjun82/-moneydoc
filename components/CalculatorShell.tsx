@@ -55,7 +55,16 @@ export function CalculatorShell({
     ],
   };
 
-  const faqs: { q: string; a: string }[] = spec.guide?.faq ?? [];
+  // FAQ 추출: 옛 guide.faq 또는 새 guide.sections[].items (type='faq')
+  const faqs: { q: string; a: string }[] = (() => {
+    if (Array.isArray(spec.guide?.faq) && spec.guide.faq.length > 0) return spec.guide.faq;
+    const sections = spec.guide?.sections;
+    if (Array.isArray(sections)) {
+      const faqSec = sections.find((s: { type?: string }) => s?.type === "faq") as { items?: { q: string; a: string }[] } | undefined;
+      if (faqSec && Array.isArray(faqSec.items)) return faqSec.items;
+    }
+    return [];
+  })();
   const faqJsonLd =
     faqs.length > 0
       ? {
