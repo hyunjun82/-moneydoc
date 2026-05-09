@@ -1,0 +1,57 @@
+{
+  "label": "loan-amortization",
+  "timestamp": "2026-05-09T01-41-07",
+  "pass": 8,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 1 — 1억 / 30년 / 4% / 원리금균등",
+      "ts": 1778290867402
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 2 — 2억 / 20년 / 4.5% / 원리금균등",
+      "ts": 1778290867407
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 3 — 1억 / 30년 / 4% / 원금균등",
+      "ts": 1778290867408
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 4 — 2억 / 20년 / 4.5% / 원금균등",
+      "ts": 1778290867408
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 5 — 1억 / 5년 / 5% / 만기일시",
+      "ts": 1778290867408
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 6 — 2억 / 3년 / 4.5% / 만기일시",
+      "ts": 1778290867408
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 7 — 1억 / 30년 (거치 3년 + 상환 27년) / 4% / 거치식",
+      "ts": 1778290867408
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 8 — 2억 / 20년 (거치 2년 + 상환 18년) / 4.5% / 거치식",
+      "ts": 1778290867408
+    }
+  ]
+}

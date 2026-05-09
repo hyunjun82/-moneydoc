@@ -1,0 +1,2493 @@
+{
+  "label": "all",
+  "timestamp": "2026-05-09T01-45-01",
+  "pass": 414,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "basic-livelihood-eligibility",
+      "case": "Case 1 — 1인 / 60만 (4종 모두)",
+      "ts": 1778291101934
+    },
+    {
+      "status": "pass",
+      "calc": "basic-livelihood-eligibility",
+      "case": "Case 2 — 2인 / 110만 (4종)",
+      "ts": 1778291101935
+    },
+    {
+      "status": "pass",
+      "calc": "basic-livelihood-eligibility",
+      "case": "Case 3 — 3인 / 150만 (4종 모두 — 생계 한도 171만)",
+      "ts": 1778291101936
+    },
+    {
+      "status": "pass",
+      "calc": "basic-livelihood-eligibility",
+      "case": "Case 4 — 4인 / 270만 (주거·교육만 O)",
+      "ts": 1778291101936
+    },
+    {
+      "status": "pass",
+      "calc": "basic-livelihood-eligibility",
+      "case": "Case 5 — 4인 / 350만 (모두 X)",
+      "ts": 1778291101936
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 1 — 단독, 소득 100만 (자격 O)",
+      "ts": 1778291101936
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 2 — 단독, 소득 250만 (자격 X — 247만 초과)",
+      "ts": 1778291101936
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 3 — 부부, 소득 200만 (자격 O)",
+      "ts": 1778291101936
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 4 — 단독, 소득 247만 (경계, 자격 O)",
+      "ts": 1778291101936
+    },
+    {
+      "status": "pass",
+      "calc": "basic-pension",
+      "case": "Case 5 — 부부, 소득 400만 (자격 X — 395.2만 초과)",
+      "ts": 1778291101936
+    },
+    {
+      "status": "pass",
+      "calc": "birth-childcare-support",
+      "case": "Case 1 — 0세 / 첫째",
+      "ts": 1778291101936
+    },
+    {
+      "status": "pass",
+      "calc": "birth-childcare-support",
+      "case": "Case 2 — 0세 / 둘째 이상",
+      "ts": 1778291101936
+    },
+    {
+      "status": "pass",
+      "calc": "birth-childcare-support",
+      "case": "Case 3 — 1세 / 둘째 이상",
+      "ts": 1778291101936
+    },
+    {
+      "status": "pass",
+      "calc": "birth-childcare-support",
+      "case": "Case 4 — 7세 / 첫째",
+      "ts": 1778291101936
+    },
+    {
+      "status": "pass",
+      "calc": "birth-childcare-support",
+      "case": "Case 5 — 10세 / 첫째 (아동수당 X)",
+      "ts": 1778291101936
+    },
+    {
+      "status": "pass",
+      "calc": "child-allowance",
+      "case": "Case 1 — 3천만 / 자녀 2",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "child-allowance",
+      "case": "Case 2 — 5천만 / 자녀 1",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "child-allowance",
+      "case": "Case 3 — 7천만 / 자녀 3 (경계)",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "child-allowance",
+      "case": "Case 4 — 8천만 (한도 초과)",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "child-allowance",
+      "case": "Case 5 — 2천만 / 자녀 4",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "durunuri-support",
+      "case": "Case 1 — 월 200만 / 3인",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "durunuri-support",
+      "case": "Case 2 — 월 250만 / 4인",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "durunuri-support",
+      "case": "Case 3 — 월 280만 (소득 초과)",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "durunuri-support",
+      "case": "Case 4 — 월 180만 / 7인 (10인 미만 자격 O)",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "durunuri-support",
+      "case": "Case 5 — 월 220만 / 2인",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "earned-income-tax-credit",
+      "case": "Case 1 — 단독 / 1천만",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "earned-income-tax-credit",
+      "case": "Case 2 — 외벌이 / 2,500만",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "earned-income-tax-credit",
+      "case": "Case 3 — 맞벌이 / 3천만",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "earned-income-tax-credit",
+      "case": "Case 4 — 단독 / 2,500만 (한도 초과)",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "earned-income-tax-credit",
+      "case": "Case 5 — 맞벌이 / 1,500만",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "industrial-accident-pay",
+      "case": "Case 1 — 월 300만 / 30일",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "industrial-accident-pay",
+      "case": "Case 2 — 월 400만 / 90일",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "industrial-accident-pay",
+      "case": "Case 3 — 월 250만 / 60일",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "industrial-accident-pay",
+      "case": "Case 4 — 월 500만 / 180일",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "industrial-accident-pay",
+      "case": "Case 5 — 월 600만 / 365일",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 1 — 월 250만 / 단태",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 2 — 월 350만 / 단태",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 3 — 월 400만 / 다태",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 4 — 월 200만 / 단태 (상한 미만)",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 5 — 월 500만 / 다태 (상한)",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "median-income",
+      "case": "Case 1 — 1인 / 100만",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "median-income",
+      "case": "Case 2 — 2인 / 200만",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "median-income",
+      "case": "Case 3 — 3인 / 400만",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "median-income",
+      "case": "Case 4 — 4인 / 600만",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "median-income",
+      "case": "Case 5 — 1인 / 50만",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 1 — 1분위 / 등록금 400만",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 2 — 4분위 / 등록금 500만",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 3 — 7분위 / 등록금 450만",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 4 — 9분위 (지원 X)",
+      "ts": 1778291101937
+    },
+    {
+      "status": "pass",
+      "calc": "national-scholarship",
+      "case": "Case 5 — 3분위 / 등록금 600만",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "near-poor-eligibility",
+      "case": "Case 1 — 1인 / 80만 (자격 O)",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "near-poor-eligibility",
+      "case": "Case 2 — 2인 / 150만",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "near-poor-eligibility",
+      "case": "Case 3 — 3인 / 250만 (자격 O)",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "near-poor-eligibility",
+      "case": "Case 4 — 4인 / 300만 (자격 O — 2026 인상으로 변경)",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "near-poor-eligibility",
+      "case": "Case 5 — 4인 / 400만 (자격 X)",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 1 — 통상 200만 × 6개월",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 2 — 통상 300만 × 12개월 (상한 적용)",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 3 — 통상 150만 × 12개월",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 4 — 통상 80만 × 12개월 (하한 적용)",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 5 — 통상 500만 × 9개월 (상한 적용)",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 1 — 50% / 8세 (자격 O)",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 2 — 70% / 10세 (소득 초과)",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 3 — 30% / 5세",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 4 — 60% / 17세 (경계)",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 5 — 45% / 19세 (연령 초과)",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit-days",
+      "case": "Case 1 — 0.5년 / 일반",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit-days",
+      "case": "Case 2 — 2년 / 일반",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit-days",
+      "case": "Case 3 — 4년 / 일반",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit-days",
+      "case": "Case 4 — 7년 / 50세+",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit-days",
+      "case": "Case 5 — 15년 / 50세+",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit",
+      "case": "Case 1 — 월급 200만, 가입 2년, 50세 미만 (하한 적용)",
+      "ts": 1778291101938
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit",
+      "case": "Case 2 — 월급 300만, 가입 5년 (정확히), 50세 미만 (하한 적용)",
+      "ts": 1778291101939
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit",
+      "case": "Case 3 — 월급 500만, 가입 10년, 50세 미만 (상한 적용)",
+      "ts": 1778291101939
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit",
+      "case": "Case 4 — 월급 250만, 가입 1년 (정확히), 50세 미만 (하한 적용)",
+      "ts": 1778291101939
+    },
+    {
+      "status": "pass",
+      "calc": "unemployment-benefit",
+      "case": "Case 5 — 월급 400만, 가입 8년, 50세 이상 (상한 + 가산일)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "youth-housing-allowance",
+      "case": "Case 1 — 1인 / 50만",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "youth-housing-allowance",
+      "case": "Case 2 — 1인 / 100만",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "youth-housing-allowance",
+      "case": "Case 3 — 4인 / 150만",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "youth-housing-allowance",
+      "case": "Case 4 — 4인 / 250만",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "youth-housing-allowance",
+      "case": "Case 5 — 1인 / 200만 (자격 X)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "youth-rent-support",
+      "case": "Case 1 — 25세 / 무주택 / 50% / 월세 50만 (자격 O)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "youth-rent-support",
+      "case": "Case 2 — 30세 / 70% (소득 초과)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "youth-rent-support",
+      "case": "Case 3 — 22세 / 무주택 / 40% / 월세 15만",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "youth-rent-support",
+      "case": "Case 4 — 35세 (연령 초과)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "youth-rent-support",
+      "case": "Case 5 — 28세 / 유주택 (X)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 1 — 1,000cc 신차 (비영업용)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 2 — 1,600cc 신차 (비영업용)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 3 — 2,000cc 신차 (비영업용)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 4 — 1,999cc 5년 경감 (비영업용)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 5 — 2,000cc 12년 경감 (비영업용)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "medical-insurance-payout",
+      "case": "Case 1 — 의료비 100만 / 면책 10만 / 부담 20%",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "medical-insurance-payout",
+      "case": "Case 2 — 의료비 50만 / 면책 3만 / 부담 30%",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "medical-insurance-payout",
+      "case": "Case 3 — 의료비 500만 / 면책 10만 / 부담 20%",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "medical-insurance-payout",
+      "case": "Case 4 — 의료비 10만 / 면책 3만 / 부담 30%",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "medical-insurance-payout",
+      "case": "Case 5 — 의료비 1천만 / 면책 20만 / 부담 20%",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "annual-leave-allowance",
+      "case": "Case 1 — 월 300만 / 5일 미사용",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "annual-leave-allowance",
+      "case": "Case 2 — 월 400만 / 10일",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "annual-leave-allowance",
+      "case": "Case 3 — 월 250만 / 8일",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "annual-leave-allowance",
+      "case": "Case 4 — 월 500만 / 15일",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "annual-leave-allowance",
+      "case": "Case 5 — 월 350만 / 3일",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "child-support",
+      "case": "Case 1 — 합산 250만, 자녀 5세",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "child-support",
+      "case": "Case 2 — 합산 500만, 자녀 10세",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "child-support",
+      "case": "Case 3 — 합산 800만, 자녀 16세",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "child-support",
+      "case": "Case 4 — 합산 150만, 자녀 1세",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "child-support",
+      "case": "Case 5 — 합산 1300만, 자녀 14세",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "divorce-alimony",
+      "case": "Case 1 — 결혼 3년 / medium (1천만)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "divorce-alimony",
+      "case": "Case 2 — 결혼 8년 / high (3천만)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "divorce-alimony",
+      "case": "Case 3 — 결혼 15년 / medium (2천만)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "divorce-alimony",
+      "case": "Case 4 — 결혼 25년 / high (5천만, 보수 조정)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "divorce-alimony",
+      "case": "Case 5 — 결혼 12년 / low (1천만)",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-deadline",
+      "case": "Case 1 — 상속개시를 안 날 2026-04-01 / 오늘 2026-05-01",
+      "ts": 1778291101940
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-deadline",
+      "case": "Case 2 — 상속개시를 안 날 2026-01-15 (만료)",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-deadline",
+      "case": "Case 3 — 상속개시를 안 날 2026-05-01 (오늘)",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-deadline",
+      "case": "Case 4 — 상속개시를 안 날 2026-03-01",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-deadline",
+      "case": "Case 5 — 상속개시를 안 날 2026-02-15",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 1 — 10억 / 배우자 + 자녀 2",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 2 — 5억 / 배우자 + 부모 2 (자녀 X)",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 3 — 20억 / 배우자 + 자녀 3",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 4 — 3억 / 자녀 1만 (배우자 X)",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-share",
+      "case": "Case 5 — 5억 / 형제 3 (배우자·자녀·부모 모두 X)",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 1 — 250만, 1년 (2024-01-01~2025-01-01)",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 2 — 300만+상여600만, 3년 (2022-01-01~2025-01-01)",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 3 — 400만+상여800만+연차80만, 5년 (2020-01-01~2025-01-01)",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 4 — 500만+상여1200만, 10년 (2015-01-01~2025-01-01)",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "severance-pay",
+      "case": "Case 5 — 350만, 7년 (2018-01-01~2025-01-01)",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 1 — 300만 / 30일",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 2 — 500만 / 90일",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 3 — 1천만 / 180일",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 4 — 200만 / 14일 (최소)",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "unpaid-wages",
+      "case": "Case 5 — 800만 / 365일",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "credit-loan",
+      "case": "Case 1 — 연 3천만 / 1.0배 (보수적)",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "credit-loan",
+      "case": "Case 2 — 연 5천만 / 1.5배 (관행)",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "credit-loan",
+      "case": "Case 3 — 연 7천만 / 1.5배",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "credit-loan",
+      "case": "Case 4 — 연 1억 / 2.0배 (고소득·우량)",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "credit-loan",
+      "case": "Case 5 — 연 2억 / 2.0배",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "dsr-limit",
+      "case": "Case 1 — 연 5천만 / 기존 0 / 30년 / 4% / DSR 40% / 미적용",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "dsr-limit",
+      "case": "Case 2 — 연 7천만 / 기존 50만 / 30년 / 4% / DSR 40% / 3단계 (가산 1.5%)",
+      "ts": 1778291101941
+    },
+    {
+      "status": "pass",
+      "calc": "dsr-limit",
+      "case": "Case 3 — 연 1억 / 기존 100만 / 30년 / 4.5% / DSR 40% / 3단계",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "dsr-limit",
+      "case": "Case 4 — 연 5천만 / 기존 0 / 30년 / 4% / DSR 50% (2금융권) / 미적용",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "dsr-limit",
+      "case": "Case 5 — 연 1억 / 기존 200만 / 20년 / 5% / DSR 40% / 3단계",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "dti-limit",
+      "case": "Case 1 — 연 5천만 / 기존이자 0 / 30년 / 4% / DTI 50% / 미적용",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "dti-limit",
+      "case": "Case 2 — 연 7천만 / 기존이자 10만 / 30년 / 4.5% / DTI 40% / 미적용",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "dti-limit",
+      "case": "Case 3 — 연 1억 / 기존이자 50만 / 30년 / 4.5% / DTI 60% / 3단계",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "dti-limit",
+      "case": "Case 4 — 연 5천만 / 기존이자 20만 / 20년 / 5% / DTI 40% / 미적용",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "dti-limit",
+      "case": "Case 5 — 연 8천만 / 기존이자 30만 / 25년 / 4.2% / DTI 50% / 3단계",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "jeonse-loan",
+      "case": "Case 1 — 전세 3억 / HF 80% / 한도 4.5억",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "jeonse-loan",
+      "case": "Case 2 — 전세 5억 / HUG 80% / 한도 4억",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "jeonse-loan",
+      "case": "Case 3 — 전세 1억 / HF 80% / 한도 4.5억",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "jeonse-loan",
+      "case": "Case 4 — 전세 6억 / 청년 80% / 한도 2억",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "jeonse-loan",
+      "case": "Case 5 — 전세 2억 / 일반 70% / 한도 4억",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 1 — 1억 / 30년 / 4% / 원리금균등",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 2 — 2억 / 20년 / 4.5% / 원리금균등",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 3 — 1억 / 30년 / 4% / 원금균등",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 4 — 2억 / 20년 / 4.5% / 원금균등",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 5 — 1억 / 5년 / 5% / 만기일시",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 6 — 2억 / 3년 / 4.5% / 만기일시",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 7 — 1억 / 30년 (거치 3년 + 상환 27년) / 4% / 거치식",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 8 — 2억 / 20년 (거치 2년 + 상환 18년) / 4.5% / 거치식",
+      "ts": 1778291101942
+    },
+    {
+      "status": "pass",
+      "calc": "loan-refinance",
+      "case": "Case 1 — 잔액 1억 / 5%→4% / 25년",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "loan-refinance",
+      "case": "Case 2 — 잔액 2억 / 6%→4.5% / 20년",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "loan-refinance",
+      "case": "Case 3 — 잔액 3억 / 5.5%→4.2% / 28년",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "loan-refinance",
+      "case": "Case 4 — 잔액 5천만 / 7%→5.5% / 10년",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "loan-refinance",
+      "case": "Case 5 — 잔액 5억 / 4.5%→3.8% / 30년",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 1 — 5억 무주택자 기타지역 (70%, 방공제 X 아파트)",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 2 — 5억 무주택자 수도권 규제 (40%, cap 6억)",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 3 — 15억 1주택자 수도권 규제 (lowIncome 70%, cap 6억)",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 4 — 5억 생애최초 기타 (80%)",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 5 — 10억 다주택 수도권 규제 (불가)",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 6 — 30억 무주택 수도권 규제 (40%, 25억 초과 cap 8억)",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 7 — 5억 무주택 서울 + 임차 5천만 + 방공제 (방3)",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 8 — 5억 무주택 서울 MCI 방공제 X",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "mortgage-loan-limit",
+      "case": "Case 1 — 5억/LTV 70%/연 7천만/기존 0/DSR 40%/30년/4%/일반/미적용",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "mortgage-loan-limit",
+      "case": "Case 2 — 8억/LTV 60%/연 8천만/기존 0/DSR 40%/30년/4.5%/일반/미적용",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "mortgage-loan-limit",
+      "case": "Case 3 — 10억/LTV 40%/연 1억/기존 50만/DSR 40%/30년/4.5%/수도권 규제·조정/3단계",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "mortgage-loan-limit",
+      "case": "Case 4 — 30억/LTV 50%/연 2억/기존 0/DSR 40%/30년/5%/수도권 규제·조정/3단계 (cap 8억)",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "mortgage-loan-limit",
+      "case": "Case 5 — 5억/LTV 80% 생애최초/연 6천만/기존 0/DSR 40%/30년/4%/일반/3단계",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "mortgage-loan-limit",
+      "case": "Case 6 — 7억/LTV 70%/연 9천만/기존 30만/DSR 40%/30년/4.5%/수도권 비규제/3단계 (cap 6억)",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "prepayment-fee",
+      "case": "Case 1 — 잔액 1억 / 총 36개월 / 잔여 18개월 / 1.2%",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "prepayment-fee",
+      "case": "Case 2 — 잔액 2억 / 총 36개월 / 잔여 24개월 / 1.4%",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "prepayment-fee",
+      "case": "Case 3 — 잔액 3억 / 총 36개월 / 잔여 12개월 / 1.4%",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "prepayment-fee",
+      "case": "Case 4 — 잔액 5천만 / 총 36개월 / 잔여 6개월 / 1.0%",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "prepayment-fee",
+      "case": "Case 5 — 잔액 5억 / 총 36개월 / 잔여 30개월 / 1.4%",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "irp-tax-credit",
+      "case": "Case 1 — IRP 300, 연금저축 300, 총급여 5천만 (16.5%)",
+      "ts": 1778291101943
+    },
+    {
+      "status": "pass",
+      "calc": "irp-tax-credit",
+      "case": "Case 2 — IRP 700, 연금저축 0, 총급여 8천만 (13.2%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "irp-tax-credit",
+      "case": "Case 3 — IRP 200, 연금저축 600, 총급여 4천만 (16.5%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "irp-tax-credit",
+      "case": "Case 4 — IRP 500, 연금저축 0, 총급여 3천만 (16.5%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "irp-tax-credit",
+      "case": "Case 5 — IRP 1000(한도 900), 총급여 1억 (13.2%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension-early",
+      "case": "Case 1 — 정상 100만 / 60세 (5년 일찍, 30% 감액)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension-early",
+      "case": "Case 2 — 정상 80만 / 62세",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension-early",
+      "case": "Case 3 — 정상 150만 / 60세",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension-early",
+      "case": "Case 4 — 정상 60만 / 64세 (1년)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension-early",
+      "case": "Case 5 — 정상 200만 / 61세",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension",
+      "case": "Case 1 — 가입 20년 (240개월), 평균소득 200만원",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension",
+      "case": "Case 2 — 가입 30년 (360개월), 평균소득 300만원",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension",
+      "case": "Case 3 — 가입 40년 (480개월), 평균소득 400만원",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension",
+      "case": "Case 4 — 가입 10년 (120개월), 평균소득 200만원",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension",
+      "case": "Case 5 — 가입 25년 (300개월), 평균소득 250만원",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "noranumbrella-tax-saving",
+      "case": "Case 1 — 납입 500만 / 사업 3천만 (한도 600만, 15%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "noranumbrella-tax-saving",
+      "case": "Case 2 — 납입 300만 / 사업 8천만 (한도 400만, 24%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "noranumbrella-tax-saving",
+      "case": "Case 3 — 납입 200만 / 사업 2억 (한도 200만, 38%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "noranumbrella-tax-saving",
+      "case": "Case 4 — 납입 500만 / 사업 6천만 (한도 500만 신설, 24%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "noranumbrella-tax-saving",
+      "case": "Case 5 — 납입 100만 / 사업 4천만 (한도 600만, 15%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "pension-savings-credit",
+      "case": "Case 1 — 연 600만 / 5천만 (16.5%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "pension-savings-credit",
+      "case": "Case 2 — 연 400만 / 8천만 (13.2%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "pension-savings-credit",
+      "case": "Case 3 — 연 600만 / 5,500만 (경계, 16.5%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "pension-savings-credit",
+      "case": "Case 4 — 연 300만 / 4천만 (16.5%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "pension-savings-credit",
+      "case": "Case 5 — 연 800만(한도) / 1억",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "public-officer-pension",
+      "case": "Case 1 — 평균 400만 / 30년 / 1990 입사 (1.9%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "public-officer-pension",
+      "case": "Case 2 — 평균 550만 / 35년 / 2000 입사 (1.85%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "public-officer-pension",
+      "case": "Case 3 — 평균 350만 / 25년 / 2012 입사 (1.78%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "public-officer-pension",
+      "case": "Case 4 — 평균 600만 / 30년 / 2018 입사 (1.7%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "public-officer-pension",
+      "case": "Case 5 — 평균 450만 / 28년 / 1995 입사 (1.9%)",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-db",
+      "case": "Case 1 — 월 300만 / 5년",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-db",
+      "case": "Case 2 — 월 500만 / 10년",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-db",
+      "case": "Case 3 — 월 700만 / 20년",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-db",
+      "case": "Case 4 — 월 400만 / 15년",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-db",
+      "case": "Case 5 — 월 600만 / 25년",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-dc",
+      "case": "Case 1 — 연 5천만 / 10년 / 4%",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-dc",
+      "case": "Case 2 — 연 7천만 / 20년 / 4%",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-dc",
+      "case": "Case 3 — 연 1억 / 30년 / 5%",
+      "ts": 1778291101944
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-dc",
+      "case": "Case 4 — 연 4천만 / 5년 / 3%",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-dc",
+      "case": "Case 5 — 연 8천만 / 25년 / 4.5%",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "acquisition-tax",
+      "case": "Case 1 — 5억 1주택 무주택자 전용 84㎡",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "acquisition-tax",
+      "case": "Case 2 — 7억 1주택 무주택자 전용 84㎡ (구간 누진)",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "acquisition-tax",
+      "case": "Case 3 — 10억 1주택 무주택자 전용 100㎡",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "acquisition-tax",
+      "case": "Case 4 — 8억 2주택 조정대상지역 전용 84㎡",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "acquisition-tax",
+      "case": "Case 5 — 5억 3주택 조정대상지역 전용 100㎡",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "brokerage-fee",
+      "case": "Case 1 — 매매 4천만 (5천 미만, 0.6% / 한도 25만)",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "brokerage-fee",
+      "case": "Case 2 — 매매 1억 (5천~2억, 0.5% / 한도 80만)",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "brokerage-fee",
+      "case": "Case 3 — 매매 5억 (2억~9억, 0.4%)",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "brokerage-fee",
+      "case": "Case 4 — 매매 10억 (9억~12억, 0.5%)",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "brokerage-fee",
+      "case": "Case 5 — 매매 13억 (12억~15억, 0.6%)",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-real-estate-tax",
+      "case": "Case 1 — 1주택 공시가 15억 (50세, 3년 — 추가공제 X)",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-real-estate-tax",
+      "case": "Case 2 — 1주택 공시가 30억 (65세, 10년 — 추가공제 70%)",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-real-estate-tax",
+      "case": "Case 3 — 다주택 공시가 20억 (추가공제 X)",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-real-estate-tax",
+      "case": "Case 4 — 다주택 공시가 40억 (추가공제 X)",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-real-estate-tax",
+      "case": "Case 5 — 1주택 공시가 8억 (70세, 15년 — 80%지만 공제 미달)",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "holding-tax-total",
+      "case": "Case 1 — 1주택 공시가 15억",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "holding-tax-total",
+      "case": "Case 2 — 다주택 공시가 20억",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "holding-tax-total",
+      "case": "Case 3 — 1주택 공시가 8억 (종부세 X)",
+      "ts": 1778291101945
+    },
+    {
+      "status": "pass",
+      "calc": "holding-tax-total",
+      "case": "Case 4 — 1주택 공시가 30억",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "holding-tax-total",
+      "case": "Case 5 — 다주택 공시가 40억",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "housing-subscription-score",
+      "case": "Case 1 — 무주택 5년 / 부양 2 / 통장 5년",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "housing-subscription-score",
+      "case": "Case 2 — 무주택 15년 / 부양 4 / 통장 15년",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "housing-subscription-score",
+      "case": "Case 3 — 무주택 10년 / 부양 3 / 통장 10년",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "housing-subscription-score",
+      "case": "Case 4 — 무주택 0년 / 부양 0 / 통장 2년",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "housing-subscription-score",
+      "case": "Case 5 — 무주택 8년 / 부양 5 / 통장 12년",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "jeonse-monthly-conversion",
+      "case": "Case 1 — 전세 3억 → 보증 1억 (4.5%)",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "jeonse-monthly-conversion",
+      "case": "Case 2 — 전세 5억 → 보증 2억 (4.5%)",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "jeonse-monthly-conversion",
+      "case": "Case 3 — 전세 1억 → 무보증 (4.5%)",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "jeonse-monthly-conversion",
+      "case": "Case 4 — 전세 8억 → 보증 3억 (4.5%)",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "jeonse-monthly-conversion",
+      "case": "Case 5 — 전세 2억 → 보증 5천 (4.5%)",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 1 — 공시가 3억 (일반)",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 2 — 공시가 5억 (일반)",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 3 — 공시가 8억 (일반)",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 4 — 공시가 1억 (일반)",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 5 — 공시가 2억 (일반)",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 6 — 공시가 3억 (1주택 9억 이하 특례)",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 7 — 공시가 5억 (1주택 9억 이하 특례)",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "property-tax",
+      "case": "Case 8 — 공시가 8억 (1주택 9억 이하 특례)",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "real-estate-roi",
+      "case": "Case 1 — 투자 3억 / 임대 6천 / 자본 2억 / 5년",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "real-estate-roi",
+      "case": "Case 2 — 투자 5억 / 임대 1.2억 / 자본 3억 / 10년",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "real-estate-roi",
+      "case": "Case 3 — 투자 2억 / 임대 3천 / 자본 5천 / 3년",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "real-estate-roi",
+      "case": "Case 4 — 투자 10억 / 임대 1.5억 / 자본 5억 / 7년",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "real-estate-roi",
+      "case": "Case 5 — 투자 4억 / 임대 8천 / 자본 1억 / 5년",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "rental-yield",
+      "case": "Case 1 — 매매 3억 / 보증 5천 / 월세 100만 / 비용 120만",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "rental-yield",
+      "case": "Case 2 — 매매 5억 / 보증 1억 / 월세 150만 / 비용 240만",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "rental-yield",
+      "case": "Case 3 — 매매 2억 / 보증 3천 / 월세 80만 / 비용 80만",
+      "ts": 1778291101946
+    },
+    {
+      "status": "pass",
+      "calc": "rental-yield",
+      "case": "Case 4 — 매매 8억 / 보증 2억 / 월세 250만 / 비용 360만",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "rental-yield",
+      "case": "Case 5 — 매매 4억 / 무보증 / 월세 130만 / 비용 200만",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[1home] Case 1 — 1세대1주택 비과세 (양도 10억, 취득 5억, 보유5년, 거주5년)",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[1home] Case 2 — 1세대1주택 12억 초과 (양도 15억, 보유10년, 거주10년)",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[1home] Case 3 — 1세대1주택 거주 짧음 (양도 20억, 취득 10억, 보유5년, 거주3년)",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[1home] Case 4 — 1세대1주택 거주 미달 (양도 9억, 취득 6억, 보유3년, 거주0년 → 비과세 X, 일반 LBC)",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[1home] Case 5 — 다주택자 (양도 8억, 취득 5억, 보유5년)",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[1home] Case 6 — 단기 1년 미만 (1세대1주택 70%)",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[1home] Case 7 — 단기 1-2년 (60%)",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[multi] Case 1 — 다주택 양도 5억, 취득 3억, 보유 5년",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[multi] Case 2 — 다주택 양도 8억, 취득 5억, 보유 10년",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[multi] Case 3 — 단기 양도 10억, 취득 7억, 보유 1년 (단기 60%)",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[multi] Case 4 — 다주택 양도 6억, 취득 4억, 보유 3년",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[multi] Case 5 — 다주택 양도 12억, 취득 8억, 보유 15년 (LBC 30%)",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[adjusted] Case 1 — 양도 8억 / 취득 5억 / 보유 5년 / 2주택",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[adjusted] Case 2 — 양도 10억 / 취득 6억 / 보유 10년 / 3주택",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[adjusted] Case 3 — 양도 6억 / 취득 4억 / 보유 3년 / 2주택",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[adjusted] Case 4 — 양도 15억 / 취득 8억 / 보유 15년 / 3주택",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "transfer-tax",
+      "case": "[adjusted] Case 5 — 양도 5억 / 취득 3억 / 보유 5년 / 4주택",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "fixed-deposit",
+      "case": "Case 1 — 1천만 × 1년 × 3.5% (단리)",
+      "ts": 1778291101947
+    },
+    {
+      "status": "pass",
+      "calc": "fixed-deposit",
+      "case": "Case 2 — 3천만 × 2년 × 4.0% (단리)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "fixed-deposit",
+      "case": "Case 3 — 1억 × 3년 × 4.5% (단리)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "fixed-deposit",
+      "case": "Case 4 — 5천만 × 1년 × 4.0% (단리, 비과세)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "fixed-deposit",
+      "case": "Case 5 — 3억 × 5년 × 5.0% (단리)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "free-savings",
+      "case": "Case 1 — 월 평균 100만 × 24개월 × 3.5%",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "free-savings",
+      "case": "Case 2 — 월 평균 50만 × 60개월 × 4.0%",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "free-savings",
+      "case": "Case 3 — 월 평균 200만 × 12개월 × 4.5%",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "free-savings",
+      "case": "Case 4 — 월 평균 30만 × 36개월 × 3.5% (비과세)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "free-savings",
+      "case": "Case 5 — 월 평균 70만 × 48개월 × 4.2%",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "installment-savings",
+      "case": "Case 1 — 월 30만 × 12개월 × 3.5% (단리)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "installment-savings",
+      "case": "Case 2 — 월 50만 × 24개월 × 4.0% (복리)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "installment-savings",
+      "case": "Case 3 — 월 100만 × 60개월 × 4.5% (복리)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "installment-savings",
+      "case": "Case 4 — 월 50만 × 24개월 × 4.0% (단리)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "installment-savings",
+      "case": "Case 5 — 월 30만 × 12개월 × 3.5% (단리, 비과세)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "isa-tax-saving",
+      "case": "Case 1 — 일반형 / 이자 100만 (한도 내)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "isa-tax-saving",
+      "case": "Case 2 — 일반형 / 이자 300만",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "isa-tax-saving",
+      "case": "Case 3 — 일반형 / 이자 1천만",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "isa-tax-saving",
+      "case": "Case 4 — 서민형 / 이자 300만 (한도 내)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "isa-tax-saving",
+      "case": "Case 5 — 서민형 / 이자 1천만",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "tax-free-savings",
+      "case": "Case 1 — 월 30만 × 60개월 × 3.5% (단리)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "tax-free-savings",
+      "case": "Case 2 — 월 100만 × 36개월 × 4.0% (단리)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "tax-free-savings",
+      "case": "Case 3 — 월 50만 × 24개월 × 3.0% (단리)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "tax-free-savings",
+      "case": "Case 4 — 월 100만 × 48개월 × 4.0% (월복리)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "tax-free-savings",
+      "case": "Case 5 — 월 200만 × 24개월 × 4.5% (단리)",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 1 — 매출 3천만 / 경비 80% / 1인",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 2 — 매출 5천만 / 경비 65% / 2인",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 3 — 매출 1억 / 경비 50% / 4인",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 4 — 매출 2천만 / 경비 85% / 1인",
+      "ts": 1778291101948
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 5 — 매출 2억 / 경비 60% / 1인",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 1 — 자녀 0",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 2 — 자녀 1, 첫째 출산",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 3 — 자녀 2, 둘째 출산",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 4 — 자녀 3, 셋째 출산",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 5 — 자녀 2 (출산 없음)",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 6 — 자녀 5명 (4명 이상 추가공제 적용)",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 1 — 사업소득 3천만, 부양 1, 자녀 0",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 2 — 임대소득 5천만, 부양 2, 자녀 0",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 3 — 사업소득 1억, 부양 4, 자녀 2",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 4 — 종합 1.5억, 부양 1",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 5 — 고소득 5억, 부양 4, 자녀 0",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "crypto-transfer-tax",
+      "case": "Case 1 — 차익 500만",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "crypto-transfer-tax",
+      "case": "Case 2 — 차익 3천만",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "crypto-transfer-tax",
+      "case": "Case 3 — 차익 1억",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "crypto-transfer-tax",
+      "case": "Case 4 — 차익 20만 (공제 미달)",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "crypto-transfer-tax",
+      "case": "Case 5 — 차익 5억",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 1 — 일급 15만 (비과세 한도)",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 2 — 일급 20만",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 3 — 일급 30만",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 4 — 일급 25만",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 5 — 일급 50만",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 1 — 월 보수 200만",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 2 — 월 보수 300만",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 3 — 월 보수 500만",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 4 — 월 보수 700만 (NP 상한 적용)",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 5 — 월 보수 1000만 (NP 상한)",
+      "ts": 1778291101949
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 1 — 100만",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 2 — 300만",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 3 — 500만",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 4 — 1천만",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 5 — 50만",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 1 — 1억 자녀(성인) (공제 5천만)",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 2 — 5억 자녀(성인)",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 3 — 10억 배우자 (공제 6억)",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 4 — 3억 부모(성인 직계존속)",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 5 — 1억 형제 (공제 1천만)",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-tax",
+      "case": "Case 1 — 5억, 배우자 X, 자녀 2 (인적공제 0)",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-tax",
+      "case": "Case 2 — 10억, 배우자 O, 자녀 2 (배우자공제 5억 최소)",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-tax",
+      "case": "Case 3 — 15억, 배우자 O, 자녀 2 (배우자 6.43억)",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-tax",
+      "case": "Case 4 — 30억, 배우자 O, 자녀 2 (배우자 12.86억)",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-tax",
+      "case": "Case 5 — 50억, 배우자 O, 자녀 2 (배우자 21.43억)",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 1 — 50만",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 2 — 100만",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 3 — 300만",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 4 — 500만",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 5 — 10만 (과세최저한 적용 비과세)",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-income-tax",
+      "case": "Case 1 — 퇴직금 3천만 / 5년",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-income-tax",
+      "case": "Case 2 — 퇴직금 1억 / 15년",
+      "ts": 1778291101950
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-income-tax",
+      "case": "Case 3 — 퇴직금 5천만 / 10년",
+      "ts": 1778291101951
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-income-tax",
+      "case": "Case 4 — 퇴직금 2억 / 25년",
+      "ts": 1778291101951
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-income-tax",
+      "case": "Case 5 — 퇴직금 8천만 / 20년",
+      "ts": 1778291101951
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 1 — 신입사원 (연봉 3천만, 부양 1명, 자녀 0, 비과세 0)",
+      "ts": 1778291101951
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 2 — 평균 직장인 (연봉 5천만, 부양 1명, 자녀 0, 비과세 0)",
+      "ts": 1778291101951
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 3 — 4인 가족 (연봉 7천만, 부양 4명, 자녀 2, 비과세 0)",
+      "ts": 1778291101951
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 4 — 고연봉 미혼 (연봉 1억, 부양 1명, 자녀 0, 비과세 0)",
+      "ts": 1778291101951
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 5 — 비과세 적용 (연봉 5천만, 부양 1명, 자녀 0, 비과세 월 20만)",
+      "ts": 1778291101951
+    },
+    {
+      "status": "pass",
+      "calc": "stock-transfer-tax",
+      "case": "Case 1 — 국내 비대주주 차익 500만 (22%)",
+      "ts": 1778291101951
+    },
+    {
+      "status": "pass",
+      "calc": "stock-transfer-tax",
+      "case": "Case 2 — 국내 비대주주 차익 5천만 (22%)",
+      "ts": 1778291101951
+    },
+    {
+      "status": "pass",
+      "calc": "stock-transfer-tax",
+      "case": "Case 3 — 국내 대주주 차익 5억 (3억 초과분 27.5%)",
+      "ts": 1778291101951
+    },
+    {
+      "status": "pass",
+      "calc": "stock-transfer-tax",
+      "case": "Case 4 — 해외주식 차익 3천만 (22%)",
+      "ts": 1778291101951
+    },
+    {
+      "status": "pass",
+      "calc": "stock-transfer-tax",
+      "case": "Case 5 — 해외주식 차익 1억 (22%)",
+      "ts": 1778291101951
+    },
+    {
+      "status": "pass",
+      "calc": "stock-transfer-tax",
+      "case": "Case 6 — 차익 250만 이하 (공제로 0)",
+      "ts": 1778291101951
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 1 — 매출 100만 / 매입 30만",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 2 — 매출 500만 / 매입 200만",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 3 — 매출 1천만 / 매입 500만",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 4 — 매출 200만 / 매입 250만 (환급)",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 5 — 매출 5천만 / 매입 3천만",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "vat-simplified",
+      "case": "Case 1 — 매출 3천만 / 음식점 15%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "vat-simplified",
+      "case": "Case 2 — 매출 5천만 / 제조 20%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "vat-simplified",
+      "case": "Case 3 — 매출 8천만 / 소매 15%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "vat-simplified",
+      "case": "Case 4 — 매출 2천만 / 건설 30%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "vat-simplified",
+      "case": "Case 5 — 매출 1억 / 숙박 25%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "age-calculator",
+      "case": "Case 1 — 1990-05-15 / 2026-04-30",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "age-calculator",
+      "case": "Case 2 — 2000-12-25 / 2026-04-30",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "age-calculator",
+      "case": "Case 3 — 1985-03-10 / 2026-04-30",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "age-calculator",
+      "case": "Case 4 — 1972-07-08 / 2026-04-30",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "age-calculator",
+      "case": "Case 5 — 2010-11-22 / 2026-04-30",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "cash-service-fee",
+      "case": "Case 1 — 50만 / 30일 / 18%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "cash-service-fee",
+      "case": "Case 2 — 100만 / 60일 / 20%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "cash-service-fee",
+      "case": "Case 3 — 300만 / 90일 / 22%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "cash-service-fee",
+      "case": "Case 4 — 20만 / 7일 / 15%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "cash-service-fee",
+      "case": "Case 5 — 500만 / 180일 / 24%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "date-calculator",
+      "case": "Case 1 — 4개월",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "date-calculator",
+      "case": "Case 2 — 2년 4개월",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "date-calculator",
+      "case": "Case 3 — 8개월",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "date-calculator",
+      "case": "Case 4 — 6년",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "date-calculator",
+      "case": "Case 5 — 정확히 1년",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "installment-fee",
+      "case": "Case 1 — 100만 / 6개월 / 10%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "installment-fee",
+      "case": "Case 2 — 300만 / 12개월 / 13%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "installment-fee",
+      "case": "Case 3 — 500만 / 24개월 / 15%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "installment-fee",
+      "case": "Case 4 — 50만 / 3개월 / 8%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "installment-fee",
+      "case": "Case 5 — 1천만 / 36개월 / 18%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "percent-calculator",
+      "case": "Case 1 — 5만의 15%",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "percent-calculator",
+      "case": "Case 2 — 3만은 20만의 몇 %",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "percent-calculator",
+      "case": "Case 3 — 10만 → 13만 증감률",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "percent-calculator",
+      "case": "Case 4 — 10만에서 25% 증가",
+      "ts": 1778291101952
+    },
+    {
+      "status": "pass",
+      "calc": "percent-calculator",
+      "case": "Case 5 — 100만의 7.5%",
+      "ts": 1778291101952
+    }
+  ]
+}

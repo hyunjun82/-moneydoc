@@ -1,28 +1,133 @@
 {
-  "id": "inheritance-deadline", "category": "law", "subCategory": "estate",
-  "title": "상속포기·한정승인 기한 계산기", "subtitle": "사망일로부터 3개월 (민법 §1019)",
-  "slug": "inheritance-deadline", "year": 2026, "lastUpdated": "2026-05-01", "lastVerified": "2026-05-01",
-  "source": { "primary": { "agency": "대법원", "document": "민법 §1019 (승인·포기 기간)", "year": 2026 } },
-  "constants": { "MONTHS_LIMIT": 3 },
+  "id": "inheritance-deadline",
+  "category": "law",
+  "subCategory": "estate",
+  "title": "상속포기·한정승인 기한 계산기",
+  "subtitle": "사망일로부터 3개월 (민법 §1019)",
+  "slug": "inheritance-deadline",
+  "year": 2026,
+  "lastUpdated": "2026-05-01",
+  "lastVerified": "2026-05-01",
+  "source": {
+    "primary": {
+      "agency": "대법원",
+      "document": "민법 §1019 (승인·포기 기간)",
+      "year": 2026
+    }
+  },
+  "constants": {
+    "MONTHS_LIMIT": 3
+  },
   "formula": [
-    { "step": 1, "name": "기한", "expr": "사망일 + 3개월" },
-    { "step": 2, "name": "잔여 일수", "expr": "기한 - 오늘" },
-    { "step": 3, "name": "만료 여부", "expr": "잔여 < 0이면 만료" }
+    {
+      "step": 1,
+      "name": "기한",
+      "expr": "사망일 + 3개월"
+    },
+    {
+      "step": 2,
+      "name": "잔여 일수",
+      "expr": "기한 - 오늘"
+    },
+    {
+      "step": 3,
+      "name": "만료 여부",
+      "expr": "잔여 < 0이면 만료"
+    }
   ],
   "inputs": [
-    { "id": "deathDate", "label": "상속개시를 안 날", "type": "date", "default": "2026-04-01", "hint": "민법 §1019 — 상속개시(피상속인 사망) 사실을 안 날 기준" },
-    { "id": "todayDate", "label": "기준일 (오늘)", "type": "date", "default": "2026-05-01" }
+    {
+      "id": "deathDate",
+      "label": "상속개시를 안 날",
+      "type": "date",
+      "default": "2026-04-01",
+      "hint": "민법 §1019 — 상속개시(피상속인 사망) 사실을 안 날 기준"
+    },
+    {
+      "id": "todayDate",
+      "label": "기준일 (오늘)",
+      "type": "date",
+      "default": "2026-05-01"
+    }
   ],
   "verification": {
-    "verified": true, "verifiedAt": "2026-05-01", "method": "민법 §1019. 사망일로부터 3개월. 단, 상속개시 사실을 안 날부터 기산.",
+    "verified": true,
+    "verifiedAt": "2026-05-01",
+    "method": "민법 §1019. 사망일로부터 3개월. 단, 상속개시 사실을 안 날부터 기산.",
     "cases": [
-      { "name": "Case 1 — 상속개시를 안 날 2026-04-01 / 오늘 2026-05-01", "input": { "deathDate": "2026-04-01", "todayDate": "2026-05-01" }, "expected": { "deadline": "2026-07-01", "remainingDays": 61, "isExpired": false } },
-      { "name": "Case 2 — 상속개시를 안 날 2026-01-15 (만료)", "input": { "deathDate": "2026-01-15", "todayDate": "2026-05-01" }, "expected": { "deadline": "2026-04-15", "remainingDays": -16, "isExpired": true } },
-      { "name": "Case 3 — 상속개시를 안 날 2026-05-01 (오늘)", "input": { "deathDate": "2026-05-01", "todayDate": "2026-05-01" }, "expected": { "deadline": "2026-08-01", "remainingDays": 92, "isExpired": false } },
-      { "name": "Case 4 — 상속개시를 안 날 2026-03-01", "input": { "deathDate": "2026-03-01", "todayDate": "2026-05-01" }, "expected": { "deadline": "2026-06-01", "remainingDays": 31, "isExpired": false } },
-      { "name": "Case 5 — 상속개시를 안 날 2026-02-15", "input": { "deathDate": "2026-02-15", "todayDate": "2026-05-01" }, "expected": { "deadline": "2026-05-15", "remainingDays": 14, "isExpired": false } }
+      {
+        "name": "Case 1 — 상속개시를 안 날 2026-04-01 / 오늘 2026-05-01",
+        "input": {
+          "deathDate": "2026-04-01",
+          "todayDate": "2026-05-01"
+        },
+        "expected": {
+          "deadline": "2026-07-01",
+          "remainingDays": 61,
+          "isExpired": false
+        }
+      },
+      {
+        "name": "Case 2 — 상속개시를 안 날 2026-01-15 (만료)",
+        "input": {
+          "deathDate": "2026-01-15",
+          "todayDate": "2026-05-01"
+        },
+        "expected": {
+          "deadline": "2026-04-15",
+          "remainingDays": -16,
+          "isExpired": true
+        }
+      },
+      {
+        "name": "Case 3 — 상속개시를 안 날 2026-05-01 (오늘)",
+        "input": {
+          "deathDate": "2026-05-01",
+          "todayDate": "2026-05-01"
+        },
+        "expected": {
+          "deadline": "2026-08-01",
+          "remainingDays": 92,
+          "isExpired": false
+        }
+      },
+      {
+        "name": "Case 4 — 상속개시를 안 날 2026-03-01",
+        "input": {
+          "deathDate": "2026-03-01",
+          "todayDate": "2026-05-01"
+        },
+        "expected": {
+          "deadline": "2026-06-01",
+          "remainingDays": 31,
+          "isExpired": false
+        }
+      },
+      {
+        "name": "Case 5 — 상속개시를 안 날 2026-02-15",
+        "input": {
+          "deathDate": "2026-02-15",
+          "todayDate": "2026-05-01"
+        },
+        "expected": {
+          "deadline": "2026-05-15",
+          "remainingDays": 14,
+          "isExpired": false
+        }
+      }
     ]
   },
-  "guide": { "howToUse": "상속개시를 안 날과 기준일 입력 시 한정승인·상속포기 기한 산출.", "tips": ["**기산일: 「상속개시 있음을 안 날」** (민법 §1019) — 단순 사망일이 아니라 상속인이 사망 사실을 안 날.", "3개월 경과 후 단순승인 의제 (모든 채무 상속).", "특별한정승인: 채무가 적극재산 초과 사실을 안 날부터 3개월.", "가정법원 신고로 진행."] },
-  "related": ["inheritance-tax", "inheritance-share"]
+  "guide": {
+    "howToUse": "상속개시를 안 날과 기준일 입력 시 한정승인·상속포기 기한 산출.",
+    "tips": [
+      "기산일: 「상속개시 있음을 안 날」 (민법 §1019) — 단순 사망일이 아니라 상속인이 사망 사실을 안 날.",
+      "3개월 경과 후 단순승인 의제 (모든 채무 상속).",
+      "특별한정승인: 채무가 적극재산 초과 사실을 안 날부터 3개월.",
+      "가정법원 신고로 진행."
+    ]
+  },
+  "related": [
+    "inheritance-tax",
+    "inheritance-share"
+  ]
 }
