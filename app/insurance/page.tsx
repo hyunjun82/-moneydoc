@@ -40,4 +40,10 @@ export default function Page() {
             <span className="cat-count">행정안전부 표준 (지방세법 §127)</span>
           </div>
         </a>
-        
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}
