@@ -1,0 +1,39 @@
+{
+  "label": "retirement-pension-dc",
+  "timestamp": "2026-05-09T05-41-59",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "retirement-pension-dc",
+      "case": "Case 1 — 연 5천만 / 10년 / 4%",
+      "ts": 1778305319705
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-dc",
+      "case": "Case 2 — 연 7천만 / 20년 / 4%",
+      "ts": 1778305319712
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-dc",
+      "case": "Case 3 — 연 1억 / 30년 / 5%",
+      "ts": 1778305319713
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-dc",
+      "case": "Case 4 — 연 4천만 / 5년 / 3%",
+      "ts": 1778305319713
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-dc",
+      "case": "Case 5 — 연 8천만 / 25년 / 4.5%",
+      "ts": 1778305319713
+    }
+  ]
+}

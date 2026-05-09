@@ -1,0 +1,39 @@
+{
+  "label": "retirement-pension-db",
+  "timestamp": "2026-05-09T05-41-59",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "retirement-pension-db",
+      "case": "Case 1 — 월 300만 / 5년",
+      "ts": 1778305319386
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-db",
+      "case": "Case 2 — 월 500만 / 10년",
+      "ts": 1778305319391
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-db",
+      "case": "Case 3 — 월 700만 / 20년",
+      "ts": 1778305319391
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-db",
+      "case": "Case 4 — 월 400만 / 15년",
+      "ts": 1778305319391
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-pension-db",
+      "case": "Case 5 — 월 600만 / 25년",
+      "ts": 1778305319391
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "label": "national-pension",
+  "timestamp": "2026-05-09T05-36-49",
+  "pass": 0,
+  "fail": 0,
+  "error": 5,
+  "results": [
+    {
+      "status": "error",
+      "calc": "national-pension",
+      "detail": "엔진 throw: Cannot destructure property 'monthsContributed' of 'input' as it is undefined.",
+      "ts": 1778305009618
+    },
+    {
+      "status": "error",
+      "calc": "national-pension",
+      "detail": "엔진 throw: Cannot destructure property 'monthsContributed' of 'input' as it is undefined.",
+      "ts": 1778305009626
+    },
+    {
+      "status": "error",
+      "calc": "national-pension",
+      "detail": "엔진 throw: Cannot destructure property 'monthsContributed' of 'input' as it is undefined.",
+      "ts": 1778305009626
+    },
+    {
+      "status": "error",
+      "calc": "national-pension",
+      "detail": "엔진 throw: Cannot destructure property 'monthsContributed' of 'input' as it is undefined.",
+      "ts": 1778305009626
+    },
+    {
+      "status": "error",
+      "calc": "national-pension",
+      "detail": "엔진 throw: Cannot destructure property 'monthsContributed' of 'input' as it is undefined.",
+      "ts": 1778305009626
+    }
+  ]
+}

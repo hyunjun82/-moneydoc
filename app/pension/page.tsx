@@ -54,13 +54,6 @@ export default function Page() {
             <span className="cat-count">정부 공식 산식</span>
           </div>
         </a>
-        <a href="/pension/pension-savings-credit/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">연금저축 환급 계산기</h3>
-            <p className="cat-desc">연 600만 한도 + 16.5%/13.2% 세액공제</p>
-            <span className="cat-count">정부 공식 산식</span>
-          </div>
-        </a>
         <a href="/pension/public-officer-pension/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">공무원연금 시뮬레이터</h3>

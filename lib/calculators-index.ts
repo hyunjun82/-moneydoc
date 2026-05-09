@@ -37,7 +37,6 @@ import irpTaxCredit from "@/data/calculators/pension/irp-tax-credit.json";
 import nationalPensionEarly from "@/data/calculators/pension/national-pension-early.json";
 import nationalPension from "@/data/calculators/pension/national-pension.json";
 import noranumbrellaTaxSaving from "@/data/calculators/pension/noranumbrella-tax-saving.json";
-import pensionSavingsCredit from "@/data/calculators/pension/pension-savings-credit.json";
 import publicOfficerPension from "@/data/calculators/pension/public-officer-pension.json";
 import retirementPensionDb from "@/data/calculators/pension/retirement-pension-db.json";
 import retirementPensionDc from "@/data/calculators/pension/retirement-pension-dc.json";
@@ -149,7 +148,6 @@ const ALL_SPECS: { slug: string; category: string; title: string; subtitle: stri
   nationalPensionEarly,
   nationalPension,
   noranumbrellaTaxSaving,
-  pensionSavingsCredit,
   publicOfficerPension,
   retirementPensionDb,
   retirementPensionDc,

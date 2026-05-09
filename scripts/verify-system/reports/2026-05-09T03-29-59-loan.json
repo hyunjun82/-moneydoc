@@ -1,0 +1,321 @@
+{
+  "label": "loan",
+  "timestamp": "2026-05-09T03-29-59",
+  "pass": 52,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "credit-loan",
+      "case": "Case 1 — 연 3천만 / 1.0배 (보수적)",
+      "ts": 1778297399784
+    },
+    {
+      "status": "pass",
+      "calc": "credit-loan",
+      "case": "Case 2 — 연 5천만 / 1.5배 (관행)",
+      "ts": 1778297399789
+    },
+    {
+      "status": "pass",
+      "calc": "credit-loan",
+      "case": "Case 3 — 연 7천만 / 1.5배",
+      "ts": 1778297399790
+    },
+    {
+      "status": "pass",
+      "calc": "credit-loan",
+      "case": "Case 4 — 연 1억 / 2.0배 (고소득·우량)",
+      "ts": 1778297399790
+    },
+    {
+      "status": "pass",
+      "calc": "credit-loan",
+      "case": "Case 5 — 연 2억 / 2.0배",
+      "ts": 1778297399790
+    },
+    {
+      "status": "pass",
+      "calc": "dsr-limit",
+      "case": "Case 1 — 연 5천만 / 기존 0 / 30년 / 4% / DSR 40% / 미적용",
+      "ts": 1778297399790
+    },
+    {
+      "status": "pass",
+      "calc": "dsr-limit",
+      "case": "Case 2 — 연 7천만 / 기존 50만 / 30년 / 4% / DSR 40% / 3단계 (가산 1.5%)",
+      "ts": 1778297399790
+    },
+    {
+      "status": "pass",
+      "calc": "dsr-limit",
+      "case": "Case 3 — 연 1억 / 기존 100만 / 30년 / 4.5% / DSR 40% / 3단계",
+      "ts": 1778297399791
+    },
+    {
+      "status": "pass",
+      "calc": "dsr-limit",
+      "case": "Case 4 — 연 5천만 / 기존 0 / 30년 / 4% / DSR 50% (2금융권) / 미적용",
+      "ts": 1778297399791
+    },
+    {
+      "status": "pass",
+      "calc": "dsr-limit",
+      "case": "Case 5 — 연 1억 / 기존 200만 / 20년 / 5% / DSR 40% / 3단계",
+      "ts": 1778297399791
+    },
+    {
+      "status": "pass",
+      "calc": "dti-limit",
+      "case": "Case 1 — 연 5천만 / 기존이자 0 / 30년 / 4% / DTI 50% / 미적용",
+      "ts": 1778297399791
+    },
+    {
+      "status": "pass",
+      "calc": "dti-limit",
+      "case": "Case 2 — 연 7천만 / 기존이자 10만 / 30년 / 4.5% / DTI 40% / 미적용",
+      "ts": 1778297399792
+    },
+    {
+      "status": "pass",
+      "calc": "dti-limit",
+      "case": "Case 3 — 연 1억 / 기존이자 50만 / 30년 / 4.5% / DTI 60% / 3단계",
+      "ts": 1778297399792
+    },
+    {
+      "status": "pass",
+      "calc": "dti-limit",
+      "case": "Case 4 — 연 5천만 / 기존이자 20만 / 20년 / 5% / DTI 40% / 미적용",
+      "ts": 1778297399792
+    },
+    {
+      "status": "pass",
+      "calc": "dti-limit",
+      "case": "Case 5 — 연 8천만 / 기존이자 30만 / 25년 / 4.2% / DTI 50% / 3단계",
+      "ts": 1778297399792
+    },
+    {
+      "status": "pass",
+      "calc": "jeonse-loan",
+      "case": "Case 1 — 전세 3억 / HF 80% / 한도 4.5억",
+      "ts": 1778297399792
+    },
+    {
+      "status": "pass",
+      "calc": "jeonse-loan",
+      "case": "Case 2 — 전세 5억 / HUG 80% / 한도 4억",
+      "ts": 1778297399792
+    },
+    {
+      "status": "pass",
+      "calc": "jeonse-loan",
+      "case": "Case 3 — 전세 1억 / HF 80% / 한도 4.5억",
+      "ts": 1778297399794
+    },
+    {
+      "status": "pass",
+      "calc": "jeonse-loan",
+      "case": "Case 4 — 전세 6억 / 청년 80% / 한도 2억",
+      "ts": 1778297399794
+    },
+    {
+      "status": "pass",
+      "calc": "jeonse-loan",
+      "case": "Case 5 — 전세 2억 / 일반 70% / 한도 4억",
+      "ts": 1778297399794
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 1 — 1억 / 30년 / 4% / 원리금균등",
+      "ts": 1778297399795
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 2 — 2억 / 20년 / 4.5% / 원리금균등",
+      "ts": 1778297399795
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 3 — 1억 / 30년 / 4% / 원금균등",
+      "ts": 1778297399795
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 4 — 2억 / 20년 / 4.5% / 원금균등",
+      "ts": 1778297399795
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 5 — 1억 / 5년 / 5% / 만기일시",
+      "ts": 1778297399795
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 6 — 2억 / 3년 / 4.5% / 만기일시",
+      "ts": 1778297399795
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 7 — 1억 / 30년 (거치 3년 + 상환 27년) / 4% / 거치식",
+      "ts": 1778297399795
+    },
+    {
+      "status": "pass",
+      "calc": "loan-amortization",
+      "case": "Case 8 — 2억 / 20년 (거치 2년 + 상환 18년) / 4.5% / 거치식",
+      "ts": 1778297399795
+    },
+    {
+      "status": "pass",
+      "calc": "loan-refinance",
+      "case": "Case 1 — 잔액 1억 / 5%→4% / 25년",
+      "ts": 1778297399795
+    },
+    {
+      "status": "pass",
+      "calc": "loan-refinance",
+      "case": "Case 2 — 잔액 2억 / 6%→4.5% / 20년",
+      "ts": 1778297399796
+    },
+    {
+      "status": "pass",
+      "calc": "loan-refinance",
+      "case": "Case 3 — 잔액 3억 / 5.5%→4.2% / 28년",
+      "ts": 1778297399796
+    },
+    {
+      "status": "pass",
+      "calc": "loan-refinance",
+      "case": "Case 4 — 잔액 5천만 / 7%→5.5% / 10년",
+      "ts": 1778297399796
+    },
+    {
+      "status": "pass",
+      "calc": "loan-refinance",
+      "case": "Case 5 — 잔액 5억 / 4.5%→3.8% / 30년",
+      "ts": 1778297399796
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 1 — 5억 무주택자 기타지역 (70%, 방공제 X 아파트)",
+      "ts": 1778297399796
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 2 — 5억 무주택자 수도권 규제 (40%, cap 6억)",
+      "ts": 1778297399796
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 3 — 15억 1주택자 수도권 규제 (lowIncome 70%, cap 6억)",
+      "ts": 1778297399796
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 4 — 5억 생애최초 기타 (80%)",
+      "ts": 1778297399796
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 5 — 10억 다주택 수도권 규제 (불가)",
+      "ts": 1778297399796
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 6 — 30억 무주택 수도권 규제 (40%, 25억 초과 cap 8억)",
+      "ts": 1778297399796
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 7 — 5억 무주택 서울 + 임차 5천만 + 방공제 (방3)",
+      "ts": 1778297399796
+    },
+    {
+      "status": "pass",
+      "calc": "ltv-limit",
+      "case": "Case 8 — 5억 무주택 서울 MCI 방공제 X",
+      "ts": 1778297399796
+    },
+    {
+      "status": "pass",
+      "calc": "mortgage-loan-limit",
+      "case": "Case 1 — 5억/LTV 70%/연 7천만/기존 0/DSR 40%/30년/4%/일반/미적용",
+      "ts": 1778297399797
+    },
+    {
+      "status": "pass",
+      "calc": "mortgage-loan-limit",
+      "case": "Case 2 — 8억/LTV 60%/연 8천만/기존 0/DSR 40%/30년/4.5%/일반/미적용",
+      "ts": 1778297399797
+    },
+    {
+      "status": "pass",
+      "calc": "mortgage-loan-limit",
+      "case": "Case 3 — 10억/LTV 40%/연 1억/기존 50만/DSR 40%/30년/4.5%/수도권 규제·조정/3단계",
+      "ts": 1778297399797
+    },
+    {
+      "status": "pass",
+      "calc": "mortgage-loan-limit",
+      "case": "Case 4 — 30억/LTV 50%/연 2억/기존 0/DSR 40%/30년/5%/수도권 규제·조정/3단계 (cap 8억)",
+      "ts": 1778297399797
+    },
+    {
+      "status": "pass",
+      "calc": "mortgage-loan-limit",
+      "case": "Case 5 — 5억/LTV 80% 생애최초/연 6천만/기존 0/DSR 40%/30년/4%/일반/3단계",
+      "ts": 1778297399797
+    },
+    {
+      "status": "pass",
+      "calc": "mortgage-loan-limit",
+      "case": "Case 6 — 7억/LTV 70%/연 9천만/기존 30만/DSR 40%/30년/4.5%/수도권 비규제/3단계 (cap 6억)",
+      "ts": 1778297399797
+    },
+    {
+      "status": "pass",
+      "calc": "prepayment-fee",
+      "case": "Case 1 — 잔액 1억 / 총 36개월 / 잔여 18개월 / 1.2%",
+      "ts": 1778297399797
+    },
+    {
+      "status": "pass",
+      "calc": "prepayment-fee",
+      "case": "Case 2 — 잔액 2억 / 총 36개월 / 잔여 24개월 / 1.4%",
+      "ts": 1778297399797
+    },
+    {
+      "status": "pass",
+      "calc": "prepayment-fee",
+      "case": "Case 3 — 잔액 3억 / 총 36개월 / 잔여 12개월 / 1.4%",
+      "ts": 1778297399797
+    },
+    {
+      "status": "pass",
+      "calc": "prepayment-fee",
+      "case": "Case 4 — 잔액 5천만 / 총 36개월 / 잔여 6개월 / 1.0%",
+      "ts": 1778297399797
+    },
+    {
+      "status": "pass",
+      "calc": "prepayment-fee",
+      "case": "Case 5 — 잔액 5억 / 총 36개월 / 잔여 30개월 / 1.4%",
+      "ts": 1778297399797
+    }
+  ]
+}

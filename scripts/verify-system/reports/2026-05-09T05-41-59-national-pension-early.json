@@ -1,0 +1,39 @@
+{
+  "label": "national-pension-early",
+  "timestamp": "2026-05-09T05-41-59",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "national-pension-early",
+      "case": "Case 1 — 정상 100만 / 60세 (5년 일찍, 30% 감액)",
+      "ts": 1778305319038
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension-early",
+      "case": "Case 2 — 정상 80만 / 62세",
+      "ts": 1778305319043
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension-early",
+      "case": "Case 3 — 정상 150만 / 60세",
+      "ts": 1778305319043
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension-early",
+      "case": "Case 4 — 정상 60만 / 64세 (1년)",
+      "ts": 1778305319043
+    },
+    {
+      "status": "pass",
+      "calc": "national-pension-early",
+      "case": "Case 5 — 정상 200만 / 61세",
+      "ts": 1778305319043
+    }
+  ]
+}
