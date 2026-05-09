@@ -3,8 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "세금 계산기 — 18종 | MoneyDoc",
-  description: "연봉 실수령·종합소득세·연말정산 — 국세청 2026 간이세액표 + 누진세율",
+  title: "세금 계산기 — 15종 | MoneyDoc",
+  description: "연봉 실수령·종합소득세·증여세·상속세·퇴직소득세·주식양도세·부가세·자녀세액공제·일용직 원천징수 — 국세청 2026 간이세액표 + 소득세법 §55 누진세율",
   alternates: { canonical: "/tax/" },
 };
 
