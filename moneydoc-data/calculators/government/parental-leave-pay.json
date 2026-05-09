@@ -24,7 +24,7 @@
     "PHASE1_RATE": 1.0,
     "PHASE1_UPPER": 2500000,
     "PHASE2_RATE": 1.0,
-    "PHASE2_UPPER": 2200000,
+    "PHASE2_UPPER": 2000000,
     "PHASE3_RATE": 0.8,
     "PHASE3_UPPER": 1600000,
     "MIN_PAY": 700000,
@@ -97,9 +97,9 @@
         },
         "expected": {
           "phase1Monthly": 2500000,
-          "phase2Monthly": 2200000,
+          "phase2Monthly": 2000000,
           "phase3Monthly": 1600000,
-          "totalPay": 23700000
+          "totalPay": 23100000
         }
       },
       {
@@ -136,9 +136,9 @@
         },
         "expected": {
           "phase1Monthly": 2500000,
-          "phase2Monthly": 2200000,
+          "phase2Monthly": 2000000,
           "phase3Monthly": 1600000,
-          "totalPay": 18900000
+          "totalPay": 18300000
         }
       }
     ]
