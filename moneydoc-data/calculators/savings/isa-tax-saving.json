@@ -37,7 +37,7 @@
     {
       "step": 1,
       "name": "일반과세",
-      "expr": "interest × 15.4%"
+      "expr": "이자 × 15.4%"
     },
     {
       "step": 2,
@@ -47,7 +47,7 @@
     {
       "step": 3,
       "name": "ISA 과세",
-      "expr": "max(0, (interest − 한도)) × 9.9%"
+      "expr": "max(0, (이자 − 한도)) × 9.9%"
     },
     {
       "step": 4,

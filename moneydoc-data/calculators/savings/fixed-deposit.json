@@ -41,17 +41,17 @@
     {
       "step": 1,
       "name": "이자 (단리)",
-      "expr": "principal × rate × years"
+      "expr": "원금 × 이자율 × 년수"
     },
     {
       "step": 2,
       "name": "이자소득세",
-      "expr": "interest × 0.154 (비과세 시 0)"
+      "expr": "이자 × 0.154 (비과세 시 0)"
     },
     {
       "step": 3,
       "name": "만기 세후 수령액",
-      "expr": "principal + interest - tax"
+      "expr": "원금 + 이자 - 세금"
     }
   ],
   "inputs": [

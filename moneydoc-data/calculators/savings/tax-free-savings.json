@@ -34,17 +34,17 @@
     {
       "step": 1,
       "name": "원금",
-      "expr": "monthlyDeposit × months"
+      "expr": "월납입금 × 개월수"
     },
     {
       "step": 2,
       "name": "이자 (단리)",
-      "expr": "monthly × (r/12) × n(n+1)/2"
+      "expr": "월납입금 × (이자율/12) × 개월수(개월수+1)/2"
     },
     {
       "step": 3,
       "name": "이자 (월복리)",
-      "expr": "annuity-due 월복리"
+      "expr": "월초 납입 월복리"
     },
     {
       "step": 4,
