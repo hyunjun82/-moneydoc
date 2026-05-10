@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <CalculatorShell
       spec={spec}
-      sourceBadge="HF·HUG 보증 기준 · 5케이스 검증"
+      sourceBadge="HF·HUG 보증 한도 기준 · 5케이스 검증"
       description="보증금 80% (HF·HUG·청년) + 한도 차등"
     >
       <GenericCalculator spec={spec} />

@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <CalculatorShell
       spec={spec}
-      sourceBadge="대환대출 인프라 · 5케이스 검증"
+      sourceBadge="대환대출 인프라 표준 산식 · 5케이스 검증"
       description="기존 대출 vs 신규 대출 월 상환·총 상환 비교"
     >
       <GenericCalculator spec={spec} />

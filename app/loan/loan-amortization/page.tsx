@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <CalculatorShell
       spec={spec}
-      sourceBadge="금감원 PMT 표준 산식 · 8케이스 검증"
+      sourceBadge="원리금균등·원금균등 한국 표준 산식 · 8케이스 자체 검증"
       description="원리금균등·원금균등·만기일시·거치식 4가지 상환방식 통합"
     >
       <GenericCalculator spec={spec} />

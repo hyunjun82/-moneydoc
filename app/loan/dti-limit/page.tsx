@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <CalculatorShell
       spec={spec}
-      sourceBadge="금감원 가이드라인 · 5케이스 검증"
+      sourceBadge="주담대 DTI 산정 기준 · 5케이스 검증"
       description="총부채상환비율 기준 신규 주담대 한도"
     >
       <GenericCalculator spec={spec} />

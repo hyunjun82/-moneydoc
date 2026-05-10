@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <CalculatorShell
       spec={spec}
-      sourceBadge="국토부·금감원 + 주임법 시행령 · 8케이스 검증"
+      sourceBadge="국토부·금감원 LTV 한도 · 8케이스 검증"
       description="주택담보비율 + 방공제 + 임차보증금 + 절대한도 (수도권 규제 6억, 25억 초과 8억) 통합"
     >
       <GenericCalculator spec={spec} />

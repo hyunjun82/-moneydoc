@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <CalculatorShell
       spec={spec}
-      sourceBadge="금감원·금융위 + 2025.6.27 가계부채 강화 · 5케이스 검증"
+      sourceBadge="금감원·금융위 가계부채 강화 · 5케이스 검증"
       description="LTV·DSR 통합 — 두 한도 중 작은 것 + 6억 cap"
     >
       <GenericCalculator spec={spec} />
