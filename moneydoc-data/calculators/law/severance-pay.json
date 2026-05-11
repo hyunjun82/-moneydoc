@@ -17,7 +17,7 @@
   "source": {
     "primary": {
       "agency": "고용노동부",
-      "document": "퇴직금 계산기 (moel.go.kr/retirementpayCal.do)",
+      "document": "퇴직금 계산기 (고용노동부(moel.go.kr).go.kr/retirementpayCal.do)",
       "year": 2026,
       "laws": [
         "근로자퇴직급여보장법 제8조 (퇴직금제도)",
@@ -103,7 +103,7 @@
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-09",
-    "method": "고용노동부 퇴직금 계산기 (moel.go.kr/retirementpayCal.do) UI 직접 입력 1:1 비교 — 5/5 0원 일치 확인",
+    "method": "고용노동부 퇴직금 계산기 (고용노동부(moel.go.kr).go.kr/retirementpayCal.do) UI 직접 입력 1:1 비교 — 5/5 0원 일치 확인",
     "cases": [
       {
         "name": "Case 1 — 250만, 1년 (2024-01-01~2025-01-01)",
@@ -234,7 +234,7 @@
       },
       {
         "q": "퇴직금 계산기 정확한가요?",
-        "a": "moel.go.kr(고용노동부) 공식 계산기와 동일 산식 사용. 평균임금 정확 입력 시 1원 단위 일치. 다만 회사 약관(임금피크 등) 반영 안됨."
+        "a": "고용노동부(moel.go.kr).go.kr(고용노동부) 공식 계산기와 동일 산식 사용. 평균임금 정확 입력 시 1원 단위 일치. 다만 회사 약관(임금피크 등) 반영 안됨."
       }
     ],
     "tables": {
