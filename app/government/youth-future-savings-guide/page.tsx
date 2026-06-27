@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { meta, css, bodyHtml, faqLd } from "@/data/articles/government/youth-future-savings";
+import { meta, bodyHtml, faqLd } from "@/data/articles/government/youth-future-savings";
+import "@/components/cardnews.css";
 
 const PAGE_URL = "https://moneydoc.kr/government/youth-future-savings-guide/";
 
@@ -32,6 +33,16 @@ const articleLd = {
   ...(meta.ogImage ? { image: [meta.ogImage] } : {}),
 };
 
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "홈", item: "https://moneydoc.kr/" },
+    { "@type": "ListItem", position: 2, name: "정부지원금", item: "https://moneydoc.kr/government/" },
+    { "@type": "ListItem", position: 3, name: "청년미래적금 총정리", item: PAGE_URL },
+  ],
+};
+
 export default function Page() {
   return (
     <>
@@ -43,7 +54,6 @@ export default function Page() {
         <span className="sep">›</span>
         <span>청년미래적금 총정리</span>
       </nav>
-      <style dangerouslySetInnerHTML={{ __html: css }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
@@ -51,6 +61,10 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <div className="cardnews" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
       <Footer />
