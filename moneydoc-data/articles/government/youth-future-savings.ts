@@ -289,6 +289,15 @@ export const css = `
 .cardnews .warn .wi .ic{ flex:none; font-size:16px; line-height:1.5; }
 .cardnews .warn .wi .wt{ font-size:var(--fs-caption); color:var(--text-body); word-break:keep-all; line-height:var(--lh-snug); }
 .cardnews .warn .wi .wt b{ color:var(--text-strong); }
+
+/* ── 관련 계산기 클러스터 ── */
+.cardnews .rellinks{ display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-4); margin-top:var(--sp-5); }
+@media (max-width:600px){ .cardnews .rellinks{ grid-template-columns:1fr; } }
+.cardnews .rel{ display:flex; flex-direction:column; gap:4px; padding:var(--sp-5); border:1px solid var(--border-card);
+  border-radius:var(--r-md); background:var(--bg-card); text-decoration:none; transition:border-color .12s ease, transform .12s ease; }
+.cardnews .rel:hover{ border-color:var(--accent); transform:translateY(-1px); }
+.cardnews .rel .rt{ font-size:var(--fs-body); font-weight:var(--fw-bold); color:var(--accent); }
+.cardnews .rel .rd{ font-size:var(--fs-caption); color:var(--text-muted); word-break:keep-all; line-height:var(--lh-snug); }
 .cardnews .applybar .t {font-size: var(--fs-lead); font-weight: var(--fw-extrabold); letter-spacing: var(--ls-tight);}
 .cardnews .applybar .t small {display: block; font-size: var(--fs-caption); font-weight: var(--fw-medium);
     color: rgba(255,255,255,.82); margin-top: 5px; letter-spacing: 0;}
@@ -348,7 +357,7 @@ export const bodyHtml = `
     <!-- 히어로 -->
     <section class="card hero">
       <span class="tag">미래를 채우는 첫 시작 · 청년 자산형성</span>
-      <h1>청년미래적금 6월 22일 출시<br>가입조건·정부기여금 총정리</h1>
+      <h1>청년미래적금 6월 22일 출시 <br>가입조건·정부기여금 총정리</h1>
       <p class="lead">소득·가구요건부터 정부기여금, 우대형 조건까지 자주 묻는 궁금증을 한 번에 정리했어요.</p>
       <div class="topics">
         <span>소득·가구요건</span>
@@ -482,6 +491,11 @@ export const bodyHtml = `
           </div>
         </li>
       </ul>
+
+      <a class="calcbar" href="/government/median-income/">
+        <span class="ct">내 가구가 중위소득 200% 이하인지 먼저 확인하기</span>
+        <span class="cbtn">중위소득 계산기 →</span>
+      </a>
     </section>
 
     <!-- 구간 2: 정부기여금 -->
@@ -546,7 +560,7 @@ export const bodyHtml = `
           <tr><td>30만 원</td><td>일반형 6%</td><td>1,080만</td><td>64.8만</td><td class="em">1,144.8만</td></tr>
         </tbody>
       </table>
-      <div class="subnote" style="margin-top:var(--sp-4)"><b>계산 기준</b> = 매월 납입금 × 매칭률 × 36개월. 여기에 <b>은행 이자(전액 비과세)</b>가 더해지며, 이자는 가입 은행·금리에 따라 달라 위 표에는 넣지 않았어요.</div>
+      <div class="subnote" style="margin-top:var(--sp-4)"><b>계산 기준</b> = 매월 납입금 × 매칭률 × 36개월. 여기에 <b>은행 이자(전액 비과세)</b>가 더해져요. 예로 <b>우대형 월 50만 원</b>은 은행 우대금리(연 8% 가정) 적용 시 이자 약 239만 원이 붙어 <b>총 약 2,255만 원</b>까지 받을 수 있어요. 이자는 가입 은행·금리에 따라 달라 위 표에는 넣지 않았어요.</div>
 
       <a class="calcbar" href="/savings/free-savings/">
         <span class="ct">내 월 납입·금리로 만기 수령액 계산하기</span>
@@ -731,6 +745,18 @@ export const bodyHtml = `
           <summary><span class="q">Q.</span><span>중간에 해지하면 정부 기여금은 어떻게 되나요?</span><span class="plus">+</span></summary>
           <div class="ans">중도해지 시 그동안 받은 <b>정부 기여금은 반환</b>해야 하고, 원금과 은행 이자만 돌려받아요. 3년 만기까지 유지하는 것이 가장 유리해요.</div>
         </details>
+      </div>
+    </section>
+
+    <!-- 관련 계산기 -->
+    <section class="card" id="sec-related">
+      <div class="seclabel"><span class="num">↗</span><span class="txt">관련 계산기</span></div>
+      <h2>가입 전, 내 숫자로 미리 계산해 보세요</h2>
+      <p class="secteaser">자격 판단부터 만기 수령액까지, 머니닥 계산기로 바로 확인할 수 있어요.</p>
+      <div class="rellinks">
+        <a class="rel" href="/government/median-income/"><span class="rt">중위소득 계산기 →</span><span class="rd">내 가구 중위소득 % 확인 (자격 핵심 조건)</span></a>
+        <a class="rel" href="/savings/free-savings/"><span class="rt">자유적금 계산기 →</span><span class="rd">월 납입·금리별 3년 만기 수령액</span></a>
+        <a class="rel" href="/savings/installment-savings/"><span class="rt">정기적금 계산기 →</span><span class="rd">매월 정액 적립 시 이자·실수령액</span></a>
       </div>
     </section>
 
