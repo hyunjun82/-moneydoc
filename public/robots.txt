@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://moneydoc.kr/sitemap.xml
+
+#DaumWebMasterTool:ab346b381a460f254a36331199b53c054f10e8ab13fdc3ec1e0ed7ed114d1ba4:wmGoVXOE53jpE6rzXrmr2w==

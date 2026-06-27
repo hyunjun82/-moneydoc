@@ -27,6 +27,20 @@ for (const cat of fs.readdirSync(CALC_DIR).sort()) {
   }
 }
 
+// 콘텐츠 글 가이드 (moneydoc-data/articles/{cat}/{slug}.ts → /{cat}/{slug}-guide/)
+const ARTICLES_DIR = path.join(ROOT, "moneydoc-data", "articles");
+if (fs.existsSync(ARTICLES_DIR)) {
+  for (const cat of fs.readdirSync(ARTICLES_DIR).sort()) {
+    const catDir = path.join(ARTICLES_DIR, cat);
+    if (!fs.statSync(catDir).isDirectory()) continue;
+    for (const file of fs.readdirSync(catDir).sort()) {
+      if (!file.endsWith(".ts")) continue;
+      const slug = file.replace(/\.ts$/, "");
+      urls.push(`${SITE}/${cat}/${slug}-guide/`);
+    }
+  }
+}
+
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
@@ -46,6 +60,8 @@ const robots = `User-agent: *
 Allow: /
 
 Sitemap: ${SITE}/sitemap.xml
+
+#DaumWebMasterTool:ab346b381a460f254a36331199b53c054f10e8ab13fdc3ec1e0ed7ed114d1ba4:wmGoVXOE53jpE6rzXrmr2w==
 `;
 fs.writeFileSync(path.join(PUBLIC_DIR, "robots.txt"), robots, "utf-8");
 
