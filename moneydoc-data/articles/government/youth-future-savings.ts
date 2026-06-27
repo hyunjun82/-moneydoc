@@ -224,6 +224,55 @@ export const css = `
     text-decoration: none; cursor: pointer; transition: transform .12s ease, box-shadow .12s ease;}
 .cardnews .applybar:hover {transform: translateY(-1px); box-shadow: 0 8px 26px rgba(31,78,121,.28);}
 .cardnews .applybar:hover .btn {transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.18);}
+
+/* ── 상단 고정 신청바 ── */
+.cardnews .applysticky{ position:sticky; top:72px; z-index:40; display:flex; align-items:center; gap:var(--sp-3);
+  background:var(--accent); color:#fff; padding:10px 16px; border-radius:var(--r-pill);
+  box-shadow:0 6px 20px rgba(31,78,121,.28); text-decoration:none; margin-bottom:var(--sp-5); }
+.cardnews .applysticky .as-t{ font-weight:var(--fw-extrabold); font-size:var(--fs-body); white-space:nowrap; }
+.cardnews .applysticky .as-d{ font-size:var(--fs-caption); color:rgba(255,255,255,.82); white-space:nowrap; }
+.cardnews .applysticky .as-btn{ margin-left:auto; flex:none; background:#fff; color:var(--accent);
+  font-weight:var(--fw-extrabold); font-size:var(--fs-caption); padding:8px 16px; border-radius:var(--r-pill); white-space:nowrap; }
+@media (max-width:520px){ .cardnews .applysticky{ top:60px; padding:9px 12px; } .cardnews .applysticky .as-d{ display:none; } }
+
+/* ── 케이스별 수령액 표 ── */
+.cardnews .calc-tbl{ width:100%; border-collapse:collapse; margin-top:var(--sp-5); font-size:var(--fs-caption); }
+.cardnews .calc-tbl th,.cardnews .calc-tbl td{ border:1px solid var(--border-card); padding:11px 10px; text-align:center; word-break:keep-all; }
+.cardnews .calc-tbl thead th{ background:var(--bg-inset); color:var(--text-strong); font-weight:var(--fw-bold); }
+.cardnews .calc-tbl td:first-child,.cardnews .calc-tbl th:first-child{ text-align:left; font-weight:var(--fw-semibold); color:var(--text-strong); }
+.cardnews .calc-tbl .em{ color:var(--accent); font-weight:var(--fw-extrabold); }
+@media (max-width:520px){ .cardnews .calc-tbl{ font-size:13px; } .cardnews .calc-tbl th,.cardnews .calc-tbl td{ padding:8px 6px; } }
+
+/* ── How-to 단계 ── */
+.cardnews .steps{ display:flex; flex-direction:column; gap:var(--sp-4); margin-top:var(--sp-5); }
+.cardnews .steps .st{ display:flex; gap:var(--sp-4); align-items:flex-start; }
+.cardnews .steps .st .sn{ flex:none; width:32px; height:32px; border-radius:var(--r-pill); background:var(--accent); color:#fff;
+  display:grid; place-items:center; font-weight:var(--fw-bold); font-size:15px; }
+.cardnews .steps .st .sb{ font-size:var(--fs-body); color:var(--text-body); word-break:keep-all; }
+.cardnews .steps .st .sb b{ color:var(--text-strong); }
+.cardnews .steps .st .sb b:first-child{ display:block; margin-bottom:2px; }
+.cardnews .steps .st .sb a{ color:var(--accent); }
+
+/* ── 준비 서류 체크 ── */
+.cardnews .docs{ list-style:none; display:flex; flex-direction:column; gap:var(--sp-2); margin-top:var(--sp-4);
+  background:var(--bg-inset); border-radius:var(--r-md); padding:var(--sp-5) var(--sp-6); }
+.cardnews .docs li{ display:flex; gap:var(--sp-2); font-size:var(--fs-caption); color:var(--text-body); word-break:keep-all; }
+.cardnews .docs li::before{ content:"✓"; color:var(--good); font-weight:var(--fw-bold); flex:none; }
+
+/* ── 5부제 표 ── */
+.cardnews .quota{ display:grid; grid-template-columns:repeat(5,1fr); gap:var(--sp-2); margin-top:var(--sp-4); }
+@media (max-width:520px){ .cardnews .quota{ grid-template-columns:repeat(2,1fr); } }
+.cardnews .quota .q{ background:var(--bg-inset); border:1px solid var(--border-card); border-radius:var(--r-sm); padding:10px; text-align:center; }
+.cardnews .quota .q .day{ font-size:var(--fs-caption); font-weight:var(--fw-bold); color:var(--accent); }
+.cardnews .quota .q .yr{ font-size:13px; color:var(--text-body); margin-top:3px; }
+
+/* ── 내부 계산기 링크바 ── */
+.cardnews .calcbar{ display:flex; align-items:center; gap:var(--sp-4); justify-content:space-between; flex-wrap:wrap;
+  background:var(--accent-bg); border:1px solid #D6E3F0; border-radius:var(--r-md); padding:var(--sp-5) var(--sp-6);
+  margin-top:var(--sp-5); text-decoration:none; }
+.cardnews .calcbar .ct{ font-size:var(--fs-body); font-weight:var(--fw-bold); color:var(--accent); word-break:keep-all; }
+.cardnews .calcbar .cbtn{ flex:none; background:var(--accent); color:#fff; font-weight:var(--fw-bold);
+  font-size:var(--fs-caption); padding:10px 20px; border-radius:var(--r-pill); white-space:nowrap; }
 .cardnews .applybar .t {font-size: var(--fs-lead); font-weight: var(--fw-extrabold); letter-spacing: var(--ls-tight);}
 .cardnews .applybar .t small {display: block; font-size: var(--fs-caption); font-weight: var(--fw-medium);
     color: rgba(255,255,255,.82); margin-top: 5px; letter-spacing: 0;}
@@ -267,6 +316,13 @@ export const css = `
 
 export const bodyHtml = `
 <article class="wrap">
+
+    <!-- 상단 고정 신청바 -->
+    <a class="applysticky" href="https://fill4young.kinfa.or.kr/yfs/main" target="_blank" rel="noopener">
+      <span class="as-t">청년미래적금 신청하기</span>
+      <span class="as-d">신청 ~7월 3일 · 첫 주 5부제</span>
+      <span class="as-btn">신청 바로가기 →</span>
+    </a>
 
     <div class="masthead">
       <div class="kicker">금융위원회 · 서민금융진흥원</div>
@@ -313,6 +369,7 @@ export const bodyHtml = `
         <a href="#sec-join">청년미래적금 가입조건 (소득·가구요건)</a>
         <a href="#sec-gov">청년미래적금 정부기여금, 얼마나 받나? (6% vs 12%)</a>
         <a href="#sec-type">청년미래적금, 나에게 맞는 유형은?</a>
+        <a href="#sec-apply">청년미래적금 신청 방법·준비 서류</a>
         <a href="#sec-compare">청년미래적금 vs 청년도약계좌, 뭐가 다를까?</a>
         <a href="#sec-sme">청년미래적금 중소기업 우대형 조건</a>
         <a href="#sec-owner">청년미래적금 소상공인 가입 조건</a>
@@ -458,6 +515,23 @@ export const bodyHtml = `
         <li><span class="tri">▲</span><div class="body"><b class="hl">우대형은 '현재 재직'이 조건</b>중소기업 우대형(재직자·신규 취업자)은 <b>지금 중소기업에 다니고 있어야</b> 가입할 수 있어요.</div></li>
         <li><span class="tri">▲</span><div class="body"><b class="hl">연봉 올라도 그대로</b>가입 후 소득이 늘어도 정부기여금 <b>매칭비율은 바뀌지 않아요.</b></div></li>
       </ul>
+
+      <h3 style="margin-top:var(--sp-8);font-size:var(--fs-h3);font-weight:var(--fw-bold);color:var(--text-strong)">월 납입·유형별 3년 만기 수령액</h3>
+      <table class="calc-tbl">
+        <thead><tr><th>월 납입</th><th>유형</th><th>원금(36개월)</th><th>정부기여금</th><th>원금+기여금</th></tr></thead>
+        <tbody>
+          <tr><td>50만 원</td><td>우대형 12%</td><td>1,800만</td><td>216만</td><td class="em">2,016만</td></tr>
+          <tr><td>50만 원</td><td>일반형 6%</td><td>1,800만</td><td>108만</td><td class="em">1,908만</td></tr>
+          <tr><td>30만 원</td><td>우대형 12%</td><td>1,080만</td><td>129.6만</td><td class="em">1,209.6만</td></tr>
+          <tr><td>30만 원</td><td>일반형 6%</td><td>1,080만</td><td>64.8만</td><td class="em">1,144.8만</td></tr>
+        </tbody>
+      </table>
+      <div class="subnote" style="margin-top:var(--sp-4)"><b>계산 기준</b> = 매월 납입금 × 매칭률 × 36개월. 여기에 <b>은행 이자(전액 비과세)</b>가 더해지며, 이자는 가입 은행·금리에 따라 달라 위 표에는 넣지 않았어요.</div>
+
+      <a class="calcbar" href="/savings/free-savings/">
+        <span class="ct">내 월 납입·금리로 만기 수령액 계산하기</span>
+        <span class="cbtn">자유적금 계산기 →</span>
+      </a>
     </section>
 
     <!-- 내 유형 찾기 -->
@@ -487,6 +561,37 @@ export const bodyHtml = `
           <div class="rec"><span class="lab">추천</span><span class="badge n">비과세형</span></div>
         </div>
       </div>
+    </section>
+
+    <!-- 신청 방법 (How-to) -->
+    <section class="card" id="sec-apply">
+      <div class="seclabel"><span class="num">→</span><span class="txt">신청 방법</span></div>
+      <h2>청년미래적금 신청 방법 (3단계)</h2>
+      <p class="secteaser">대부분 비대면·자동 심사라 절차가 간단해요. 아래 순서대로만 따라 하면 됩니다.</p>
+      <div class="steps">
+        <div class="st"><span class="sn">1</span><div class="sb"><b>취급은행 앱 또는 서민금융진흥원에서 신청</b>취급은행 앱이나 <a href="https://fill4young.kinfa.or.kr/yfs/main" target="_blank" rel="noopener">서민금융진흥원 청년금융(fill4young.kinfa.or.kr)</a>에서 비대면으로 신청해요.</div></div>
+        <div class="st"><span class="sn">2</span><div class="sb"><b>소득·가구 요건 자동 심사</b>따로 서류를 내지 않아도 서민금융진흥원이 국세청·행정정보로 소득과 가구 중위소득을 확인하고, <b>일반형·우대형 유형을 자동으로 정해</b> 알려줘요.</div></div>
+        <div class="st"><span class="sn">3</span><div class="sb"><b>적금 개설 후 납입 시작</b>승인되면 적금 계좌를 만들고 <b>월 최대 50만 원</b>을 자유롭게 넣으면 끝. 3년 뒤 원금 + 정부기여금 + 비과세 이자를 받아요.</div></div>
+      </div>
+
+      <h3 style="margin-top:var(--sp-8);font-size:var(--fs-h3);font-weight:var(--fw-bold);color:var(--text-strong)">신청 첫 주는 '출생연도 끝자리' 5부제</h3>
+      <p class="secteaser" style="margin-top:var(--sp-2)">신청 첫 주(6월 22일~)는 출생연도 끝자리에 따라 신청 요일이 나뉘어요. 둘째 주부터는 끝자리와 상관없이 신청할 수 있어요.</p>
+      <div class="quota">
+        <div class="q"><div class="day">월요일</div><div class="yr">끝자리 1·6</div></div>
+        <div class="q"><div class="day">화요일</div><div class="yr">끝자리 2·7</div></div>
+        <div class="q"><div class="day">수요일</div><div class="yr">끝자리 3·8</div></div>
+        <div class="q"><div class="day">목요일</div><div class="yr">끝자리 4·9</div></div>
+        <div class="q"><div class="day">금요일</div><div class="yr">끝자리 5·0</div></div>
+      </div>
+
+      <h3 style="margin-top:var(--sp-8);font-size:var(--fs-h3);font-weight:var(--fw-bold);color:var(--text-strong)">미리 챙기면 좋은 준비물</h3>
+      <ul class="docs">
+        <li><span><b>신분증</b> — 본인 확인용</span></li>
+        <li><span><b>소득 증빙은 대부분 자동</b> — 국세청에 잡힌 2025년 소득으로 자동 확인돼 따로 낼 게 없어요.</span></li>
+        <li><span><b>(조부모 부양 시)</b> 가족관계증명서·부양 사실 증빙</span></li>
+        <li><span><b>(소상공인)</b> 사업자등록증·매출(부가세 신고) 증빙</span></li>
+        <li><span><b>(군필 연령 연장)</b> 병적증명서 — 병역 기간만큼 나이 한도가 늘어요.</span></li>
+      </ul>
     </section>
 
     <!-- 청년미래적금 vs 청년도약계좌 비교 -->
