@@ -6,7 +6,7 @@ export const meta = {
   description: "청년미래적금 6월 22일 출시. 가입조건(소득·가구요건), 정부기여금 6% vs 12%, 중소기업·소상공인 우대형 조건, 신청기간(~7/3), 자주 묻는 질문 FAQ까지 한눈에 정리했어요.",
   ogImage: "https://www.korea.kr/newsWeb/resources/attaches/2026.06/19/530fc8f08bdcb738a12044439f0130e2.jpg",
   datePublished: "2026-06-19",
-  dateModified: "2026-06-20",
+  dateModified: "2026-06-27",
 };
 
 export const css = `
@@ -273,6 +273,22 @@ export const css = `
 .cardnews .calcbar .ct{ font-size:var(--fs-body); font-weight:var(--fw-bold); color:var(--accent); word-break:keep-all; }
 .cardnews .calcbar .cbtn{ flex:none; background:var(--accent); color:#fff; font-weight:var(--fw-bold);
   font-size:var(--fs-caption); padding:10px 20px; border-radius:var(--r-pill); white-space:nowrap; }
+
+/* ── 시점 안내 ── */
+.cardnews .notice{ display:flex; gap:var(--sp-3); align-items:flex-start; background:var(--accent-bg);
+  border:1px solid #D6E3F0; border-radius:var(--r-md); padding:var(--sp-4) var(--sp-5); margin-bottom:var(--sp-6);
+  font-size:var(--fs-caption); color:var(--text-body); word-break:keep-all; line-height:var(--lh-snug); }
+.cardnews .notice .ic{ flex:none; color:var(--accent); font-weight:var(--fw-bold); }
+.cardnews .notice b{ color:var(--accent); }
+.cardnews .notice a{ color:var(--accent); font-weight:var(--fw-semibold); }
+
+/* ── 감액·탈락 주의 박스 ── */
+.cardnews .warn{ display:flex; flex-direction:column; gap:var(--sp-3); margin-top:var(--sp-5); }
+.cardnews .warn .wi{ display:flex; gap:var(--sp-3); align-items:flex-start; background:var(--tag-bg);
+  border:1px solid #EADFC2; border-radius:var(--r-md); padding:var(--sp-4) var(--sp-5); }
+.cardnews .warn .wi .ic{ flex:none; font-size:16px; line-height:1.5; }
+.cardnews .warn .wi .wt{ font-size:var(--fs-caption); color:var(--text-body); word-break:keep-all; line-height:var(--lh-snug); }
+.cardnews .warn .wi .wt b{ color:var(--text-strong); }
 .cardnews .applybar .t {font-size: var(--fs-lead); font-weight: var(--fw-extrabold); letter-spacing: var(--ls-tight);}
 .cardnews .applybar .t small {display: block; font-size: var(--fs-caption); font-weight: var(--fw-medium);
     color: rgba(255,255,255,.82); margin-top: 5px; letter-spacing: 0;}
@@ -325,8 +341,8 @@ export const bodyHtml = `
     </a>
 
     <div class="masthead">
-      <div class="kicker">금융위원회 · 서민금융진흥원</div>
-      <div class="src">정책카드뉴스 · 청년 자산형성 지원</div>
+      <div class="kicker">MoneyDoc · 청년 자산형성 가이드</div>
+      <div class="src">자료 출처: 정책브리핑(korea.kr) · 서민금융진흥원</div>
     </div>
 
     <!-- 히어로 -->
@@ -349,7 +365,7 @@ export const bodyHtml = `
       </div>
       <div class="dates">
         <span>작성일 <time datetime="2026-06-19">2026. 06. 19.</time></span>
-        <span>수정일 <time datetime="2026-06-20">2026. 06. 20.</time></span>
+        <span>수정일 <time datetime="2026-06-27">2026. 06. 27.</time></span>
       </div>
     </div>
 
@@ -359,6 +375,9 @@ export const bodyHtml = `
       <div class="f"><div class="k">가입 신청</div><div class="v">~ 7월 3일</div></div>
       <div class="f"><div class="k">콜센터</div><a class="v" href="tel:1397" style="text-decoration:none">☎ 1397 → 3</a></div>
     </div>
+
+    <!-- 시점 안내 -->
+    <div class="notice"><span class="ic">ⓘ</span><span>이 글은 <b>2026년 1차 신청(6월 22일~7월 3일)</b> 기준으로 정리했어요. 신청 기간이 지난 뒤 보신다면 다음 회차 일정과 최신 조건을 <a href="https://fill4young.kinfa.or.kr/yfs/main" target="_blank" rel="noopener">서민금융진흥원</a>에서 확인하세요.</span></div>
 
     <!-- 목차 (접이식) -->
     <details class="toc" open>
@@ -373,6 +392,7 @@ export const bodyHtml = `
         <a href="#sec-compare">청년미래적금 vs 청년도약계좌, 뭐가 다를까?</a>
         <a href="#sec-sme">청년미래적금 중소기업 우대형 조건</a>
         <a href="#sec-owner">청년미래적금 소상공인 가입 조건</a>
+        <a href="#sec-caution">신청 전 꼭 확인할 주의사항 (감액·탈락)</a>
         <a href="#sec-faq">청년미래적금 자주 묻는 질문 (FAQ)</a>
       </nav>
     </details>
@@ -648,6 +668,20 @@ export const bodyHtml = `
       </ul>
     </section>
 
+    <!-- 감액·탈락 주의 -->
+    <section class="card" id="sec-caution">
+      <div class="seclabel"><span class="num">!</span><span class="txt">감액·탈락 주의</span></div>
+      <h2>신청 전 꼭 확인할 주의사항</h2>
+      <p class="secteaser">아래 경우엔 혜택이 줄거나 가입이 안 될 수 있어요. 손해 보지 않게 미리 체크하세요.</p>
+      <div class="warn">
+        <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>중도해지하면 정부기여금은 전액 반환</b> — 3년 만기 전에 깨면 그동안 받은 정부기여금을 토해내고, 원금과 은행 이자만 돌려받아요.</div></div>
+        <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>청년도약계좌와 중복 불가</b> — 둘 중 하나만 가입할 수 있어요. 갈아타기는 2026년 6월 신청 기간에 단 한 번만 가능해요.</div></div>
+        <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>중소기업 우대형, 29개월 미만 퇴사 시 감액</b> — 만기 한 달 전까지 재직이 29개월 미만이면 전 기간이 일반형(6%)으로 적용돼 정부기여금이 절반으로 줄어요.</div></div>
+        <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>공무원·공공기관·사립학교는 우대형 불가</b> — 중소기업기본법상 중소기업이 아니라, 소득요건을 채워도 중소기업 우대형은 안 돼요.</div></div>
+        <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>2025년 소득이 안 잡히면 가입 불가</b> — 직전연도(2025년) 국세청에 신고된 소득이 있어야 신청할 수 있어요.</div></div>
+      </div>
+    </section>
+
     <!-- FAQ -->
     <section class="card" id="sec-faq">
       <div class="seclabel"><span class="num">?</span><span class="txt">자주 묻는 질문 FAQ</span></div>
@@ -711,8 +745,8 @@ export const bodyHtml = `
     </div>
 
     <div class="foot">
-      <div class="org">금융위원회 · 서민금융진흥원</div>
-      <div style="margin-top:6px">자료출처 = 정책브리핑 www.korea.kr</div>
+      <div class="org">MoneyDoc 편집팀</div>
+      <div style="margin-top:6px">자료 출처: 정책브리핑(korea.kr) · 서민금융진흥원 · 금융위원회 — 정책은 변동될 수 있으니 신청 전 공식 채널에서 확인하세요.</div>
     </div>
 
   </article>
