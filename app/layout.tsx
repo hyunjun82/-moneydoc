@@ -25,6 +25,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: "qa5MxoeesZJO5rfcOhS8Qjfq9VOk4gU7lo_Y7uxuGLk",
+    other: {
+      "naver-site-verification": "cd862e67bcc5f9630e53977d9da278a2959d24e6",
+    },
+  },
 };
 
 const websiteJsonLd = {
