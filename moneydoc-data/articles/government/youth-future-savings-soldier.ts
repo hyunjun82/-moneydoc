@@ -28,7 +28,7 @@ export const bodyHtml = `
     <section class="card hero">
       <span class="tag">청년 자산형성 · 군인 편</span>
       <h1>군인도 청년미래적금 가입되나요? <br>군장병급여만 있어도 OK</h1>
-      <p class="lead">현역 병사·간부, 훈련소 입영 중인 청년까지 — 가입 가능 여부부터 신청 방법, 유형(6%), 만기 수령액, 중복가입까지 군인 입장에서 끝까지 정리했어요.</p>
+      <p class="lead">군인도 가입됩니다. 직전연도 소득이 없는 병사도 군장병급여만 있으면 되고, 입영해 훈련소에 있어도 신청할 수 있어요.</p>
       <div class="topics">
         <span>군장병급여 인정</span>
         <span>훈련소 가입</span>
