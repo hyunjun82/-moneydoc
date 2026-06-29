@@ -1,0 +1,159 @@
+{
+  "label": "savings",
+  "timestamp": "2026-05-10T23-51-35",
+  "pass": 25,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "fixed-deposit",
+      "case": "Case 1 — 1천만 × 1년 × 3.5% (단리)",
+      "ts": 1778457095327
+    },
+    {
+      "status": "pass",
+      "calc": "fixed-deposit",
+      "case": "Case 2 — 3천만 × 2년 × 4.0% (단리)",
+      "ts": 1778457095330
+    },
+    {
+      "status": "pass",
+      "calc": "fixed-deposit",
+      "case": "Case 3 — 1억 × 3년 × 4.5% (단리)",
+      "ts": 1778457095330
+    },
+    {
+      "status": "pass",
+      "calc": "fixed-deposit",
+      "case": "Case 4 — 5천만 × 1년 × 4.0% (단리, 비과세)",
+      "ts": 1778457095330
+    },
+    {
+      "status": "pass",
+      "calc": "fixed-deposit",
+      "case": "Case 5 — 3억 × 5년 × 5.0% (단리)",
+      "ts": 1778457095330
+    },
+    {
+      "status": "pass",
+      "calc": "free-savings",
+      "case": "Case 1 — 월 평균 100만 × 24개월 × 3.5%",
+      "ts": 1778457095331
+    },
+    {
+      "status": "pass",
+      "calc": "free-savings",
+      "case": "Case 2 — 월 평균 50만 × 60개월 × 4.0%",
+      "ts": 1778457095331
+    },
+    {
+      "status": "pass",
+      "calc": "free-savings",
+      "case": "Case 3 — 월 평균 200만 × 12개월 × 4.5%",
+      "ts": 1778457095331
+    },
+    {
+      "status": "pass",
+      "calc": "free-savings",
+      "case": "Case 4 — 월 평균 30만 × 36개월 × 3.5% (비과세)",
+      "ts": 1778457095331
+    },
+    {
+      "status": "pass",
+      "calc": "free-savings",
+      "case": "Case 5 — 월 평균 70만 × 48개월 × 4.2%",
+      "ts": 1778457095331
+    },
+    {
+      "status": "pass",
+      "calc": "installment-savings",
+      "case": "Case 1 — 월 30만 × 12개월 × 3.5% (단리)",
+      "ts": 1778457095331
+    },
+    {
+      "status": "pass",
+      "calc": "installment-savings",
+      "case": "Case 2 — 월 50만 × 24개월 × 4.0% (복리)",
+      "ts": 1778457095331
+    },
+    {
+      "status": "pass",
+      "calc": "installment-savings",
+      "case": "Case 3 — 월 100만 × 60개월 × 4.5% (복리)",
+      "ts": 1778457095331
+    },
+    {
+      "status": "pass",
+      "calc": "installment-savings",
+      "case": "Case 4 — 월 50만 × 24개월 × 4.0% (단리)",
+      "ts": 1778457095331
+    },
+    {
+      "status": "pass",
+      "calc": "installment-savings",
+      "case": "Case 5 — 월 30만 × 12개월 × 3.5% (단리, 비과세)",
+      "ts": 1778457095331
+    },
+    {
+      "status": "pass",
+      "calc": "isa-tax-saving",
+      "case": "Case 1 — 일반형 / 이자 100만 (한도 내)",
+      "ts": 1778457095331
+    },
+    {
+      "status": "pass",
+      "calc": "isa-tax-saving",
+      "case": "Case 2 — 일반형 / 이자 300만",
+      "ts": 1778457095331
+    },
+    {
+      "status": "pass",
+      "calc": "isa-tax-saving",
+      "case": "Case 3 — 일반형 / 이자 1천만",
+      "ts": 1778457095331
+    },
+    {
+      "status": "pass",
+      "calc": "isa-tax-saving",
+      "case": "Case 4 — 서민형 / 이자 300만 (한도 내)",
+      "ts": 1778457095331
+    },
+    {
+      "status": "pass",
+      "calc": "isa-tax-saving",
+      "case": "Case 5 — 서민형 / 이자 1천만",
+      "ts": 1778457095331
+    },
+    {
+      "status": "pass",
+      "calc": "tax-free-savings",
+      "case": "Case 1 — 월 30만 × 60개월 × 3.5% (단리)",
+      "ts": 1778457095332
+    },
+    {
+      "status": "pass",
+      "calc": "tax-free-savings",
+      "case": "Case 2 — 월 100만 × 36개월 × 4.0% (단리)",
+      "ts": 1778457095332
+    },
+    {
+      "status": "pass",
+      "calc": "tax-free-savings",
+      "case": "Case 3 — 월 50만 × 24개월 × 3.0% (단리)",
+      "ts": 1778457095332
+    },
+    {
+      "status": "pass",
+      "calc": "tax-free-savings",
+      "case": "Case 4 — 월 100만 × 48개월 × 4.0% (월복리)",
+      "ts": 1778457095332
+    },
+    {
+      "status": "pass",
+      "calc": "tax-free-savings",
+      "case": "Case 5 — 월 200만 × 24개월 × 4.5% (단리)",
+      "ts": 1778457095332
+    }
+  ]
+}

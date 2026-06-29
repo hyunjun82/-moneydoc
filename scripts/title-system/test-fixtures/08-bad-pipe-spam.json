@@ -1,0 +1,52 @@
+{
+  "keyword": "전세보증금",
+  "_expect": "FAIL",
+  "_reason": "ㅣ 남발 + 포맷 쏠림",
+  "spokes": [
+    {
+      "slug": "return",
+      "format": "pipe",
+      "title": "전세보증금 반환ㅣ집주인이 안 줄 때 대처법",
+      "mustInclude": [
+        "전세보증금",
+        "반환"
+      ]
+    },
+    {
+      "slug": "protect",
+      "format": "pipe",
+      "title": "전세보증금 보호ㅣ확정일자·전입신고 총정리",
+      "mustInclude": [
+        "전세보증금",
+        "보호"
+      ]
+    },
+    {
+      "slug": "loan",
+      "format": "pipe",
+      "title": "전세보증금 대출ㅣ버팀목 조건과 한도",
+      "mustInclude": [
+        "전세보증금",
+        "대출"
+      ]
+    },
+    {
+      "slug": "keep",
+      "format": "pipe",
+      "title": "전세보증금 지키기ㅣ전세권 설정 방법",
+      "mustInclude": [
+        "전세보증금",
+        "전세권"
+      ]
+    },
+    {
+      "slug": "insure",
+      "format": "pipe",
+      "title": "전세보증금 보증보험ㅣ가입 방법과 보험료",
+      "mustInclude": [
+        "전세보증금",
+        "보증보험"
+      ]
+    }
+  ]
+}

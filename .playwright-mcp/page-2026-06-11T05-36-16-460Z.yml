@@ -1,0 +1,314 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "MoneyDoc" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img [ref=e6]
+        - text: MoneyDoc
+      - navigation [ref=e8]:
+        - link "저축" [ref=e9] [cursor=pointer]:
+          - /url: /savings/
+        - link "대출" [ref=e10] [cursor=pointer]:
+          - /url: /loan/
+        - link "부동산" [ref=e11] [cursor=pointer]:
+          - /url: /realestate/
+        - link "세금" [ref=e12] [cursor=pointer]:
+          - /url: /tax/
+        - link "보험" [ref=e13] [cursor=pointer]:
+          - /url: /insurance/
+        - link "연금" [ref=e14] [cursor=pointer]:
+          - /url: /pension/
+        - link "법률" [ref=e15] [cursor=pointer]:
+          - /url: /law/
+        - link "정부지원금" [ref=e16] [cursor=pointer]:
+          - /url: /government/
+  - navigation [ref=e17]:
+    - link "홈" [ref=e18] [cursor=pointer]:
+      - /url: /
+    - text: ›
+    - link "세금" [ref=e19] [cursor=pointer]:
+      - /url: /tax/
+    - text: ›연봉 실수령액
+  - banner [ref=e20]:
+    - generic [ref=e21]: 국세청 2026 간이세액표 · 5케이스 검증 완료
+    - heading "연봉 실수령액 계산기" [level=1] [ref=e23]
+    - paragraph [ref=e24]: 4대보험과 소득세를 정확히 차감해, 통장에 실제로 찍히는 금액을 알려드려요. 부양가족과 자녀 수에 따른 세액공제까지 자동 반영됩니다.
+  - generic [ref=e26]:
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - img [ref=e31]
+          - heading "정보 입력" [level=2] [ref=e33]
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - generic [ref=e36]: 연봉
+            - generic [ref=e37]: 세전 기준 (식대·차량유지비 등 비과세 제외)
+          - generic [ref=e38]:
+            - textbox [ref=e39]: 50,000,000
+            - generic: 원
+          - slider [ref=e40]: "50000000"
+          - generic [ref=e41]:
+            - button "3천만" [ref=e42] [cursor=pointer]
+            - button "5천만" [ref=e43] [cursor=pointer]
+            - button "7천만" [ref=e44] [cursor=pointer]
+            - button "1억" [ref=e45] [cursor=pointer]
+            - button "1.5억" [ref=e46] [cursor=pointer]
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - generic [ref=e51]: 부양가족 수
+              - generic [ref=e52]: 본인 포함
+            - generic [ref=e53]:
+              - button "−" [ref=e54] [cursor=pointer]
+              - generic [ref=e55]: "1"
+              - button "+" [ref=e56] [cursor=pointer]
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - generic [ref=e59]: 8세~20세 자녀
+              - generic [ref=e60]: 세액공제
+            - generic [ref=e61]:
+              - button "−" [ref=e62] [cursor=pointer]
+              - generic [ref=e63]: "0"
+              - button "+" [ref=e64] [cursor=pointer]
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - generic [ref=e67]: 비과세액 (월)
+            - generic [ref=e68]: 식대·차량유지비 등, 일반적으로 0~20만
+          - generic [ref=e69]:
+            - textbox [ref=e70]: "0"
+            - generic: 원
+      - generic [ref=e71]:
+        - generic [ref=e72]: 한눈에 보는 공제 비율
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - img [ref=e75]
+            - generic [ref=e78]:
+              - generic [ref=e79]: 85.8%
+              - generic [ref=e80]: 실수령 비율
+          - generic [ref=e81]:
+            - generic [ref=e82]:
+              - generic [ref=e83]: 실수령
+              - generic [ref=e85]: 3,576,295
+            - generic [ref=e86]:
+              - generic [ref=e87]: 4대보험
+              - generic [ref=e89]: −350,434
+            - generic [ref=e90]:
+              - generic [ref=e91]: 소득세·지방세
+              - generic [ref=e93]: −239,938
+    - generic [ref=e94]:
+      - generic [ref=e95]:
+        - img [ref=e97]
+        - heading "계산 결과" [level=2] [ref=e100]
+      - generic [ref=e101]:
+        - generic [ref=e102]: 월 실수령액 (간이세액표 §134 · 명세서 기준)
+        - generic [ref=e103]: 3,576,295원
+        - generic [ref=e104]: 연 환산 42,915,540원 · 공제율 14.2%
+        - generic [ref=e105]:
+          - text: "참고: 1년 정확 환산(소득세법 §55)"
+          - generic [ref=e106]: 3,493,795원
+          - text: · 차이는 연말정산 후 일치
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - generic [ref=e109]: 월 세전 급여
+          - generic [ref=e110]: 4,166,667
+        - generic [ref=e111]:
+          - generic [ref=e112]:
+            - text: 국민연금
+            - generic [ref=e113]: −4.5%
+          - generic [ref=e114]: −187,500
+        - generic [ref=e115]:
+          - generic [ref=e116]:
+            - text: 건강보험
+            - generic [ref=e117]: −3.545%
+          - generic [ref=e118]: −127,500
+        - generic [ref=e119]:
+          - generic [ref=e120]:
+            - text: 장기요양
+            - generic [ref=e121]: −건보의 12.95%
+          - generic [ref=e122]: −8,351
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - text: 고용보험
+            - generic [ref=e125]: −0.9%
+          - generic [ref=e126]: −27,083
+        - generic [ref=e127]:
+          - generic [ref=e128]:
+            - text: 소득세
+            - generic [ref=e129]: 간이세액표 §134
+          - generic [ref=e130]: −218,125
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - text: 지방소득세
+            - generic [ref=e133]: −소득세의 10%
+          - generic [ref=e134]: −21,813
+        - generic [ref=e135]:
+          - generic [ref=e136]: 총 공제액
+          - generic [ref=e137]: −590,372
+  - generic [ref=e138]:
+    - heading "계산이 이렇게 진행됩니다" [level=3] [ref=e139]
+    - generic [ref=e140]:
+      - generic [ref=e141]:
+        - generic [ref=e142]: 월 급여
+        - generic [ref=e143]: 4,166,667
+        - text: →
+      - generic [ref=e144]:
+        - generic [ref=e145]: 4대보험 차감
+        - generic [ref=e146]: −350,434
+        - text: →
+      - generic [ref=e147]:
+        - generic [ref=e148]: 과세 표준 (월)
+        - generic [ref=e149]: 3,816,233
+        - text: →
+      - generic [ref=e150]:
+        - generic [ref=e151]: 소득세·지방세 차감
+        - generic [ref=e152]: −239,938
+        - text: →
+      - generic [ref=e153]:
+        - generic [ref=e154]: 실수령액
+        - generic [ref=e155]: 3,576,295
+  - generic [ref=e156]:
+    - heading "계산기 가이드" [level=2] [ref=e158]
+    - generic [ref=e159]:
+      - group [ref=e160]:
+        - generic "01 이 계산기는 어떻게 쓰나요?" [ref=e161] [cursor=pointer]:
+          - generic [ref=e162]:
+            - generic [ref=e163]: "01"
+            - text: 이 계산기는 어떻게 쓰나요?
+          - img [ref=e164]
+        - paragraph [ref=e167]: 세전 연봉, 부양가족 수, 자녀 수만 입력하면 매월 통장에 들어오는 실수령액이 자동으로 계산됩니다. 연봉은 식대·차량유지비 같은 비과세 항목을 제외한 금액으로 입력하세요. 부양가족은 본인을 포함하며, 자녀는 만 8세 이상~만 20세 이하만 자녀세액공제 대상입니다.
+      - group [ref=e168]:
+        - generic "02 계산이 이렇게 진행됩니다" [ref=e169] [cursor=pointer]:
+          - generic [ref=e170]:
+            - generic [ref=e171]: "02"
+            - text: 계산이 이렇게 진행됩니다
+          - img [ref=e172]
+      - group [ref=e174]:
+        - generic "03 연봉별실수령" [ref=e175] [cursor=pointer]:
+          - generic [ref=e176]:
+            - generic [ref=e177]: "03"
+            - text: 연봉별실수령
+          - img [ref=e178]
+      - group [ref=e180]:
+        - generic "04 공제내역5000만" [ref=e181] [cursor=pointer]:
+          - generic [ref=e182]:
+            - generic [ref=e183]: "04"
+            - text: 공제내역5000만
+          - img [ref=e184]
+      - group [ref=e186]:
+        - generic "05 맞벌이부양가족효과" [ref=e187] [cursor=pointer]:
+          - generic [ref=e188]:
+            - generic [ref=e189]: "05"
+            - text: 맞벌이부양가족효과
+          - img [ref=e190]
+      - group [ref=e192]:
+        - generic "06 회사명세서vs실수령" [ref=e193] [cursor=pointer]:
+          - generic [ref=e194]:
+            - generic [ref=e195]: "06"
+            - text: 회사명세서vs실수령
+          - img [ref=e196]
+      - group [ref=e198]:
+        - generic "07 활용 팁" [ref=e199] [cursor=pointer]:
+          - generic [ref=e200]:
+            - generic [ref=e201]: "07"
+            - text: 활용 팁
+          - img [ref=e202]
+      - group [ref=e204]:
+        - generic "08 자주 묻는 질문" [ref=e205] [cursor=pointer]:
+          - generic [ref=e206]:
+            - generic [ref=e207]: "08"
+            - text: 자주 묻는 질문
+          - img [ref=e208]
+  - generic [ref=e211]:
+    - img [ref=e212]
+    - generic [ref=e215]:
+      - heading "이 계산기의 출처" [level=4] [ref=e216]
+      - paragraph [ref=e217]:
+        - strong [ref=e218]: 국세청 「소득세법 / 근로소득 간이세액표」 2026
+        - text: "· 근거: 소득세법 제55조 (종합소득세율), 소득세법 제47조 (근로소득공제), 소득세법 제50조 (인적공제), 소득세법 제59조 (근로소득세액공제), 소득세법 제59조의2 (자녀세액공제), 소득세법 제134조 (간이세액표) /"
+        - generic [ref=e219]:
+          - strong [ref=e220]: 국민연금공단 국민연금 보험료율 고시 (9.5% (본인 4.75%, 2026.1.1~))
+          - text: ","
+        - generic [ref=e221]:
+          - strong [ref=e222]: 건강보험공단 건강보험료율 고시 (7.19% (본인 3.595%, 2026))
+          - text: ","
+        - generic [ref=e223]:
+          - strong [ref=e224]: 건강보험공단 장기요양보험료율 고시 (건강보험료의 13.14% (소득 0.9448%, 2026))
+          - text: ","
+        - strong [ref=e226]: 고용노동부 고용보험료율 고시 (1.8% (본인 0.9%, 실업급여))
+        - text: 결과는 정부 공식 산식 기반 참고용입니다. 요율·세율은 매년 변경되며, 변경 시 즉시 반영됩니다.
+  - generic [ref=e228]:
+    - generic [ref=e229]:
+      - heading "함께 보면 좋은 계산기" [level=2] [ref=e230]
+      - paragraph [ref=e231]: 이 계산기와 자주 같이 쓰는 도구
+    - generic [ref=e232]:
+      - link "세금 종합소득세 계산기 사업소득·임대소득·기타소득 합산 종합소득세" [ref=e233] [cursor=pointer]:
+        - /url: /tax/comprehensive-income-tax/
+        - generic [ref=e234]: 세금
+        - heading "종합소득세 계산기" [level=3] [ref=e235]
+        - paragraph [ref=e236]: 사업소득·임대소득·기타소득 합산 종합소득세
+      - link "연금 국민연금 예상수령액 계산기 국민연금공단 공식 산식 — 비례상수 1.29, A값 3,193,511원 (2026)" [ref=e237] [cursor=pointer]:
+        - /url: /pension/national-pension/
+        - generic [ref=e238]: 연금
+        - heading "국민연금 예상수령액 계산기" [level=3] [ref=e239]
+        - paragraph [ref=e240]: 국민연금공단 공식 산식 — 비례상수 1.29, A값 3,193,511원 (2026)
+      - link "법률 퇴직금 계산기 고용노동부 공식 계산기 1:1 동일 (근로자퇴직급여보장법 §8)" [ref=e241] [cursor=pointer]:
+        - /url: /law/severance-pay/
+        - generic [ref=e242]: 법률
+        - heading "퇴직금 계산기" [level=3] [ref=e243]
+        - paragraph [ref=e244]: 고용노동부 공식 계산기 1:1 동일 (근로자퇴직급여보장법 §8)
+  - contentinfo [ref=e245]:
+    - generic [ref=e246]:
+      - generic [ref=e247]:
+        - generic [ref=e248]:
+          - link "MoneyDoc" [ref=e249] [cursor=pointer]:
+            - /url: /
+            - img [ref=e251]
+            - text: MoneyDoc
+          - paragraph [ref=e253]: 복잡한 금융·법률·세금 이야기를 누구나 이해할 수 있게 풀어내는 머니 가이드.
+        - generic [ref=e254]:
+          - heading "카테고리" [level=4] [ref=e255]
+          - list [ref=e256]:
+            - listitem [ref=e257]:
+              - link "저축" [ref=e258] [cursor=pointer]:
+                - /url: /savings/
+            - listitem [ref=e259]:
+              - link "대출" [ref=e260] [cursor=pointer]:
+                - /url: /loan/
+            - listitem [ref=e261]:
+              - link "부동산" [ref=e262] [cursor=pointer]:
+                - /url: /realestate/
+            - listitem [ref=e263]:
+              - link "세금" [ref=e264] [cursor=pointer]:
+                - /url: /tax/
+        - generic [ref=e265]:
+          - heading "둘러보기" [level=4] [ref=e266]
+          - list [ref=e267]:
+            - listitem [ref=e268]:
+              - link "보험" [ref=e269] [cursor=pointer]:
+                - /url: /insurance/
+            - listitem [ref=e270]:
+              - link "연금" [ref=e271] [cursor=pointer]:
+                - /url: /pension/
+            - listitem [ref=e272]:
+              - link "법률" [ref=e273] [cursor=pointer]:
+                - /url: /law/
+            - listitem [ref=e274]:
+              - link "정부지원금" [ref=e275] [cursor=pointer]:
+                - /url: /government/
+        - generic [ref=e276]:
+          - heading "회사" [level=4] [ref=e277]
+          - list [ref=e278]:
+            - listitem [ref=e279]:
+              - link "소개" [ref=e280] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e281]:
+              - link "문의하기" [ref=e282] [cursor=pointer]:
+                - /url: /contact/
+      - generic [ref=e283]:
+        - paragraph [ref=e284]: © 2026 MoneyDoc. 모든 계산은 정부 공식 자료 기준.
+        - generic [ref=e285]:
+          - link "이용약관" [ref=e286] [cursor=pointer]:
+            - /url: /terms/
+          - link "개인정보처리방침" [ref=e287] [cursor=pointer]:
+            - /url: /privacy/
+  - alert [ref=e288]

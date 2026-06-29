@@ -1,0 +1,157 @@
+{
+  "keyword": "청년미래적금",
+  "hub": {
+    "title": "청년미래적금 가입조건·정부기여금 총정리 (2026년 기준)",
+    "route": "/government/youth-future-savings-guide/"
+  },
+  "calculator": {
+    "title": "자유적금 계산기 (월 납입·금리별 만기 수령액)",
+    "route": "/savings/free-savings/"
+  },
+  "spokeCount": 11,
+  "spokes": [
+    {
+      "slug": "soldier-eligibility",
+      "cluster": "A 군인·병역",
+      "title": "현역 군인·병사도 청년미래적금 가입되나요? 군장병급여만 있어도 OK",
+      "format": "question",
+      "route": "/government/youth-future-savings-soldier-eligibility/",
+      "dataFile": "moneydoc-data/articles/government/youth-future-savings-soldier-eligibility.ts",
+      "pageFile": "app/government/youth-future-savings-soldier-eligibility/page.tsx",
+      "funnel": {
+        "hub": "/government/youth-future-savings-guide/",
+        "calculator": "/savings/free-savings/"
+      }
+    },
+    {
+      "slug": "boot-camp-signup",
+      "cluster": "A 군인·병역",
+      "title": "청년미래적금 군 훈련소 가입 방법, 기초군사훈련 중 비대면 신청",
+      "format": "list-comma",
+      "route": "/government/youth-future-savings-boot-camp-signup/",
+      "dataFile": "moneydoc-data/articles/government/youth-future-savings-boot-camp-signup.ts",
+      "pageFile": "app/government/youth-future-savings-boot-camp-signup/page.tsx",
+      "funnel": {
+        "hub": "/government/youth-future-savings-guide/",
+        "calculator": "/savings/free-savings/"
+      }
+    },
+    {
+      "slug": "military-savings-overlap",
+      "cluster": "A 군인·병역",
+      "title": "장병내일준비적금과 청년미래적금 중복가입 되나요? 둘 다 받는 법",
+      "format": "question",
+      "route": "/government/youth-future-savings-military-savings-overlap/",
+      "dataFile": "moneydoc-data/articles/government/youth-future-savings-military-savings-overlap.ts",
+      "pageFile": "app/government/youth-future-savings-military-savings-overlap/page.tsx",
+      "funnel": {
+        "hub": "/government/youth-future-savings-guide/",
+        "calculator": "/savings/free-savings/"
+      }
+    },
+    {
+      "slug": "veteran-age-extension",
+      "cluster": "A 군인·병역",
+      "title": "군필자 청년미래적금 나이 계산, 병역기간 빼면 만 40세까지",
+      "format": "list-comma",
+      "route": "/government/youth-future-savings-veteran-age-extension/",
+      "dataFile": "moneydoc-data/articles/government/youth-future-savings-veteran-age-extension.ts",
+      "pageFile": "app/government/youth-future-savings-veteran-age-extension/page.tsx",
+      "funnel": {
+        "hub": "/government/youth-future-savings-guide/",
+        "calculator": "/savings/free-savings/"
+      }
+    },
+    {
+      "slug": "career-soldier",
+      "cluster": "A 군인·병역",
+      "title": "직업군인 청년미래적금 가입조건: 장기간부도약적금 중복까지",
+      "format": "total-colon",
+      "route": "/government/youth-future-savings-career-soldier/",
+      "dataFile": "moneydoc-data/articles/government/youth-future-savings-career-soldier.ts",
+      "pageFile": "app/government/youth-future-savings-career-soldier/page.tsx",
+      "funnel": {
+        "hub": "/government/youth-future-savings-guide/",
+        "calculator": "/savings/free-savings/"
+      }
+    },
+    {
+      "slug": "apply-period",
+      "cluster": "B 가입·신청",
+      "title": "청년미래적금 가입 시기, 1차 신청 6월 22일~7월 3일 5부제 일정",
+      "format": "list-comma",
+      "route": "/government/youth-future-savings-apply-period/",
+      "dataFile": "moneydoc-data/articles/government/youth-future-savings-apply-period.ts",
+      "pageFile": "app/government/youth-future-savings-apply-period/page.tsx",
+      "funnel": {
+        "hub": "/government/youth-future-savings-guide/",
+        "calculator": "/savings/free-savings/"
+      }
+    },
+    {
+      "slug": "how-to-apply",
+      "cluster": "B 가입·신청",
+      "title": "청년미래적금 신청 방법: 취급은행 앱부터 서민금융진흥원까지",
+      "format": "total-colon",
+      "route": "/government/youth-future-savings-how-to-apply/",
+      "dataFile": "moneydoc-data/articles/government/youth-future-savings-how-to-apply.ts",
+      "pageFile": "app/government/youth-future-savings-how-to-apply/page.tsx",
+      "funnel": {
+        "hub": "/government/youth-future-savings-guide/",
+        "calculator": "/savings/free-savings/"
+      }
+    },
+    {
+      "slug": "maturity-payout",
+      "cluster": "C 금액·수령액",
+      "title": "청년미래적금 만기 수령액, 월 50만원 3년이면 얼마 받나?",
+      "format": "question",
+      "route": "/government/youth-future-savings-maturity-payout/",
+      "dataFile": "moneydoc-data/articles/government/youth-future-savings-maturity-payout.ts",
+      "pageFile": "app/government/youth-future-savings-maturity-payout/page.tsx",
+      "funnel": {
+        "hub": "/government/youth-future-savings-guide/",
+        "calculator": "/savings/free-savings/"
+      }
+    },
+    {
+      "slug": "gov-contribution-explained",
+      "cluster": "C 금액·수령액",
+      "title": "청년미래적금 정부기여금이란? 일반형 6%·우대형 12% 차이",
+      "format": "definition",
+      "route": "/government/youth-future-savings-gov-contribution-explained/",
+      "dataFile": "moneydoc-data/articles/government/youth-future-savings-gov-contribution-explained.ts",
+      "pageFile": "app/government/youth-future-savings-gov-contribution-explained/page.tsx",
+      "funnel": {
+        "hub": "/government/youth-future-savings-guide/",
+        "calculator": "/savings/free-savings/"
+      }
+    },
+    {
+      "slug": "vs-leap-account",
+      "cluster": "D 비교·전환",
+      "title": "청년미래적금 vs 청년도약계좌 갈아타기, 6월 단 한 번 연계가입",
+      "format": "list-comma",
+      "route": "/government/youth-future-savings-vs-leap-account/",
+      "dataFile": "moneydoc-data/articles/government/youth-future-savings-vs-leap-account.ts",
+      "pageFile": "app/government/youth-future-savings-vs-leap-account/page.tsx",
+      "funnel": {
+        "hub": "/government/youth-future-savings-guide/",
+        "calculator": "/savings/free-savings/"
+      }
+    },
+    {
+      "slug": "early-termination",
+      "cluster": "E 주의",
+      "title": "청년미래적금 중도해지하면 정부기여금 반환되나요? 특별중도해지",
+      "format": "question",
+      "route": "/government/youth-future-savings-early-termination/",
+      "dataFile": "moneydoc-data/articles/government/youth-future-savings-early-termination.ts",
+      "pageFile": "app/government/youth-future-savings-early-termination/page.tsx",
+      "funnel": {
+        "hub": "/government/youth-future-savings-guide/",
+        "calculator": "/savings/free-savings/"
+      }
+    }
+  ]
+}

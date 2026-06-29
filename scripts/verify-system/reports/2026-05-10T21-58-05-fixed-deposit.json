@@ -1,0 +1,39 @@
+{
+  "label": "fixed-deposit",
+  "timestamp": "2026-05-10T21-58-05",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "fixed-deposit",
+      "case": "Case 1 — 1천만 × 1년 × 3.5% (단리)",
+      "ts": 1778450285922
+    },
+    {
+      "status": "pass",
+      "calc": "fixed-deposit",
+      "case": "Case 2 — 3천만 × 2년 × 4.0% (단리)",
+      "ts": 1778450285927
+    },
+    {
+      "status": "pass",
+      "calc": "fixed-deposit",
+      "case": "Case 3 — 1억 × 3년 × 4.5% (단리)",
+      "ts": 1778450285927
+    },
+    {
+      "status": "pass",
+      "calc": "fixed-deposit",
+      "case": "Case 4 — 5천만 × 1년 × 4.0% (단리, 비과세)",
+      "ts": 1778450285927
+    },
+    {
+      "status": "pass",
+      "calc": "fixed-deposit",
+      "case": "Case 5 — 3억 × 5년 × 5.0% (단리)",
+      "ts": 1778450285927
+    }
+  ]
+}

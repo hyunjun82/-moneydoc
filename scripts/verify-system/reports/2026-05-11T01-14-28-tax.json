@@ -1,0 +1,471 @@
+{
+  "label": "tax",
+  "timestamp": "2026-05-11T01-14-28",
+  "pass": 77,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 1 — 매출 3천만 / 경비 80% / 1인",
+      "ts": 1778462068864
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 2 — 매출 5천만 / 경비 65% / 2인",
+      "ts": 1778462068868
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 3 — 매출 1억 / 경비 50% / 4인",
+      "ts": 1778462068868
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 4 — 매출 2천만 / 경비 85% / 1인",
+      "ts": 1778462068868
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 5 — 매출 2억 / 경비 60% / 1인",
+      "ts": 1778462068868
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 1 — 자녀 0",
+      "ts": 1778462068868
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 2 — 자녀 1, 첫째 출산",
+      "ts": 1778462068868
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 3 — 자녀 2, 둘째 출산",
+      "ts": 1778462068868
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 4 — 자녀 3, 셋째 출산",
+      "ts": 1778462068869
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 5 — 자녀 2 (출산 없음)",
+      "ts": 1778462068869
+    },
+    {
+      "status": "pass",
+      "calc": "child-tax-credit",
+      "case": "Case 6 — 자녀 5명 (4명 이상 추가공제 적용)",
+      "ts": 1778462068869
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 1 — 사업소득 3천만, 부양 1, 자녀 0",
+      "ts": 1778462068869
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 2 — 임대소득 5천만, 부양 2, 자녀 0",
+      "ts": 1778462068869
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 3 — 사업소득 1억, 부양 4, 자녀 2",
+      "ts": 1778462068869
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 4 — 종합 1.5억, 부양 1",
+      "ts": 1778462068870
+    },
+    {
+      "status": "pass",
+      "calc": "comprehensive-income-tax",
+      "case": "Case 5 — 고소득 5억, 부양 4, 자녀 0",
+      "ts": 1778462068870
+    },
+    {
+      "status": "pass",
+      "calc": "crypto-transfer-tax",
+      "case": "Case 1 — 차익 500만",
+      "ts": 1778462068870
+    },
+    {
+      "status": "pass",
+      "calc": "crypto-transfer-tax",
+      "case": "Case 2 — 차익 3천만",
+      "ts": 1778462068870
+    },
+    {
+      "status": "pass",
+      "calc": "crypto-transfer-tax",
+      "case": "Case 3 — 차익 1억",
+      "ts": 1778462068870
+    },
+    {
+      "status": "pass",
+      "calc": "crypto-transfer-tax",
+      "case": "Case 4 — 차익 20만 (공제 미달)",
+      "ts": 1778462068870
+    },
+    {
+      "status": "pass",
+      "calc": "crypto-transfer-tax",
+      "case": "Case 5 — 차익 5억",
+      "ts": 1778462068870
+    },
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 1 — 일급 15만 (비과세 한도)",
+      "ts": 1778462068870
+    },
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 2 — 일급 20만",
+      "ts": 1778462068870
+    },
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 3 — 일급 30만",
+      "ts": 1778462068870
+    },
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 4 — 일급 25만",
+      "ts": 1778462068870
+    },
+    {
+      "status": "pass",
+      "calc": "daily-wage-tax",
+      "case": "Case 5 — 일급 50만",
+      "ts": 1778462068870
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 1 — 월 보수 200만",
+      "ts": 1778462068870
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 2 — 월 보수 300만",
+      "ts": 1778462068870
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 3 — 월 보수 500만",
+      "ts": 1778462068871
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 4 — 월 보수 700만 (NP 상한 적용)",
+      "ts": 1778462068871
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 5 — 월 보수 1000만 (NP 상한)",
+      "ts": 1778462068871
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 1 — 100만",
+      "ts": 1778462068871
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 2 — 300만",
+      "ts": 1778462068871
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 3 — 500만",
+      "ts": 1778462068871
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 4 — 1천만",
+      "ts": 1778462068871
+    },
+    {
+      "status": "pass",
+      "calc": "freelancer-tax",
+      "case": "Case 5 — 50만",
+      "ts": 1778462068871
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 1 — 1억 자녀(성인) (공제 5천만)",
+      "ts": 1778462068871
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 2 — 5억 자녀(성인)",
+      "ts": 1778462068871
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 3 — 10억 배우자 (공제 6억)",
+      "ts": 1778462068871
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 4 — 3억 부모(성인 직계존속)",
+      "ts": 1778462068871
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 5 — 1억 형제 (공제 1천만)",
+      "ts": 1778462068871
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-tax",
+      "case": "Case 1 — 5억, 배우자 X, 자녀 2 (인적공제 0)",
+      "ts": 1778462068871
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-tax",
+      "case": "Case 2 — 10억, 배우자 O, 자녀 2 (배우자공제 5억 최소)",
+      "ts": 1778462068871
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-tax",
+      "case": "Case 3 — 15억, 배우자 O, 자녀 2 (배우자 6.43억)",
+      "ts": 1778462068872
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-tax",
+      "case": "Case 4 — 30억, 배우자 O, 자녀 2 (배우자 12.86억)",
+      "ts": 1778462068872
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-tax",
+      "case": "Case 5 — 50억, 배우자 O, 자녀 2 (배우자 21.43억)",
+      "ts": 1778462068872
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 1 — 50만",
+      "ts": 1778462068872
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 2 — 100만",
+      "ts": 1778462068872
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 3 — 300만",
+      "ts": 1778462068872
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 4 — 500만",
+      "ts": 1778462068872
+    },
+    {
+      "status": "pass",
+      "calc": "other-income-tax",
+      "case": "Case 5 — 10만 (과세최저한 적용 비과세)",
+      "ts": 1778462068872
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-income-tax",
+      "case": "Case 1 — 퇴직금 3천만 / 5년",
+      "ts": 1778462068872
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-income-tax",
+      "case": "Case 2 — 퇴직금 1억 / 15년",
+      "ts": 1778462068872
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-income-tax",
+      "case": "Case 3 — 퇴직금 5천만 / 10년",
+      "ts": 1778462068872
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-income-tax",
+      "case": "Case 4 — 퇴직금 2억 / 25년",
+      "ts": 1778462068872
+    },
+    {
+      "status": "pass",
+      "calc": "retirement-income-tax",
+      "case": "Case 5 — 퇴직금 8천만 / 20년",
+      "ts": 1778462068872
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 1 — 신입사원 (연봉 3천만, 부양 1명, 자녀 0, 비과세 0)",
+      "ts": 1778462068873
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 2 — 평균 직장인 (연봉 5천만, 부양 1명, 자녀 0, 비과세 0)",
+      "ts": 1778462068873
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 3 — 4인 가족 (연봉 7천만, 부양 4명, 자녀 2, 비과세 0)",
+      "ts": 1778462068873
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 4 — 고연봉 미혼 (연봉 1억, 부양 1명, 자녀 0, 비과세 0)",
+      "ts": 1778462068873
+    },
+    {
+      "status": "pass",
+      "calc": "salary-net-pay",
+      "case": "Case 5 — 비과세 적용 (연봉 5천만, 부양 1명, 자녀 0, 비과세 월 20만)",
+      "ts": 1778462068873
+    },
+    {
+      "status": "pass",
+      "calc": "stock-transfer-tax",
+      "case": "Case 1 — 국내 비대주주 차익 500만 (22%)",
+      "ts": 1778462068873
+    },
+    {
+      "status": "pass",
+      "calc": "stock-transfer-tax",
+      "case": "Case 2 — 국내 비대주주 차익 5천만 (22%)",
+      "ts": 1778462068873
+    },
+    {
+      "status": "pass",
+      "calc": "stock-transfer-tax",
+      "case": "Case 3 — 국내 대주주 차익 5억 (3억 초과분 27.5%)",
+      "ts": 1778462068873
+    },
+    {
+      "status": "pass",
+      "calc": "stock-transfer-tax",
+      "case": "Case 4 — 해외주식 차익 3천만 (22%)",
+      "ts": 1778462068873
+    },
+    {
+      "status": "pass",
+      "calc": "stock-transfer-tax",
+      "case": "Case 5 — 해외주식 차익 1억 (22%)",
+      "ts": 1778462068873
+    },
+    {
+      "status": "pass",
+      "calc": "stock-transfer-tax",
+      "case": "Case 6 — 차익 250만 이하 (공제로 0)",
+      "ts": 1778462068873
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 1 — 매출 100만 / 매입 30만",
+      "ts": 1778462068874
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 2 — 매출 500만 / 매입 200만",
+      "ts": 1778462068874
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 3 — 매출 1천만 / 매입 500만",
+      "ts": 1778462068874
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 4 — 매출 200만 / 매입 250만 (환급)",
+      "ts": 1778462068874
+    },
+    {
+      "status": "pass",
+      "calc": "vat-general",
+      "case": "Case 5 — 매출 5천만 / 매입 3천만",
+      "ts": 1778462068874
+    },
+    {
+      "status": "pass",
+      "calc": "vat-simplified",
+      "case": "Case 1 — 매출 3천만 / 음식점 15%",
+      "ts": 1778462068874
+    },
+    {
+      "status": "pass",
+      "calc": "vat-simplified",
+      "case": "Case 2 — 매출 5천만 / 제조 20%",
+      "ts": 1778462068874
+    },
+    {
+      "status": "pass",
+      "calc": "vat-simplified",
+      "case": "Case 3 — 매출 8천만 / 소매 15%",
+      "ts": 1778462068874
+    },
+    {
+      "status": "pass",
+      "calc": "vat-simplified",
+      "case": "Case 4 — 매출 2천만 / 건설 30%",
+      "ts": 1778462068874
+    },
+    {
+      "status": "pass",
+      "calc": "vat-simplified",
+      "case": "Case 5 — 매출 1억 / 숙박 25%",
+      "ts": 1778462068874
+    }
+  ]
+}

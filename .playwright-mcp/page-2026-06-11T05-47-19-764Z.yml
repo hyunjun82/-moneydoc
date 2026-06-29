@@ -1,0 +1,196 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "MoneyDoc" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img [ref=e6]
+        - text: MoneyDoc
+      - navigation [ref=e8]:
+        - link "저축" [ref=e9] [cursor=pointer]:
+          - /url: /savings/
+        - link "대출" [ref=e10] [cursor=pointer]:
+          - /url: /loan/
+        - link "부동산" [ref=e11] [cursor=pointer]:
+          - /url: /realestate/
+        - link "세금" [ref=e12] [cursor=pointer]:
+          - /url: /tax/
+        - link "보험" [ref=e13] [cursor=pointer]:
+          - /url: /insurance/
+        - link "연금" [ref=e14] [cursor=pointer]:
+          - /url: /pension/
+        - link "법률" [ref=e15] [cursor=pointer]:
+          - /url: /law/
+        - link "정부지원금" [ref=e16] [cursor=pointer]:
+          - /url: /government/
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - img [ref=e20]
+      - text: 정부 공식 산식 검증 · 오차 0
+    - heading "돈 계산은, 정확하게" [level=1] [ref=e23]:
+      - text: 돈 계산은,
+      - emphasis [ref=e24]: 정확하게
+    - paragraph [ref=e25]: 연봉 실수령액부터 양도세·국민연금·실업급여까지. 정부 공식 산식으로 검증된 한국 금융·세금·법률 계산기 91종을 한 곳에서.
+  - generic [ref=e26]:
+    - generic [ref=e27]:
+      - heading "카테고리별 계산기" [level=2] [ref=e28]
+      - paragraph [ref=e29]: 관심 있는 주제부터 차근차근 살펴보세요
+    - generic [ref=e30]:
+      - link "저축 예금·적금, 어떤 게 나한테 더 유리할까 9개 계산기" [ref=e31] [cursor=pointer]:
+        - /url: /savings/
+        - img [ref=e33]
+        - generic [ref=e35]:
+          - heading "저축" [level=3] [ref=e36]
+          - paragraph [ref=e37]: 예금·적금, 어떤 게 나한테 더 유리할까
+          - generic [ref=e38]: 9개 계산기
+      - link "대출 한도·금리·중도상환수수료까지 한눈에 12개 계산기" [ref=e39] [cursor=pointer]:
+        - /url: /loan/
+        - img [ref=e41]
+        - generic [ref=e43]:
+          - heading "대출" [level=3] [ref=e44]
+          - paragraph [ref=e45]: 한도·금리·중도상환수수료까지 한눈에
+          - generic [ref=e46]: 12개 계산기
+      - link "부동산 전세·매매·임대차, 실수 없이 진행하기 14개 계산기" [ref=e47] [cursor=pointer]:
+        - /url: /realestate/
+        - img [ref=e49]
+        - generic [ref=e52]:
+          - heading "부동산" [level=3] [ref=e53]
+          - paragraph [ref=e54]: 전세·매매·임대차, 실수 없이 진행하기
+          - generic [ref=e55]: 14개 계산기
+      - link "세금 연말정산·양도세·종합소득세 한 번에 18개 계산기" [ref=e56] [cursor=pointer]:
+        - /url: /tax/
+        - img [ref=e58]
+        - generic [ref=e61]:
+          - heading "세금" [level=3] [ref=e62]
+          - paragraph [ref=e63]: 연말정산·양도세·종합소득세 한 번에
+          - generic [ref=e64]: 18개 계산기
+      - link "보험 실손·자동차, 실속 있게 고르는 법 2개 계산기" [ref=e65] [cursor=pointer]:
+        - /url: /insurance/
+        - img [ref=e67]
+        - generic [ref=e69]:
+          - heading "보험" [level=3] [ref=e70]
+          - paragraph [ref=e71]: 실손·자동차, 실속 있게 고르는 법
+          - generic [ref=e72]: 2개 계산기
+      - link "연금 국민·퇴직·개인연금, 내 노후 시뮬레이션 8개 계산기" [ref=e73] [cursor=pointer]:
+        - /url: /pension/
+        - img [ref=e75]
+        - generic [ref=e78]:
+          - heading "연금" [level=3] [ref=e79]
+          - paragraph [ref=e80]: 국민·퇴직·개인연금, 내 노후 시뮬레이션
+          - generic [ref=e81]: 8개 계산기
+      - link "법률 상속·이혼·근로, 분쟁 전에 알아둘 것 7개 계산기" [ref=e82] [cursor=pointer]:
+        - /url: /law/
+        - img [ref=e84]
+        - generic [ref=e86]:
+          - heading "법률" [level=3] [ref=e87]
+          - paragraph [ref=e88]: 상속·이혼·근로, 분쟁 전에 알아둘 것
+          - generic [ref=e89]: 7개 계산기
+      - link "정부지원금 놓치면 손해, 받을 수 있는 모든 혜택 17개 계산기" [ref=e90] [cursor=pointer]:
+        - /url: /government/
+        - img [ref=e92]
+        - generic [ref=e94]:
+          - heading "정부지원금" [level=3] [ref=e95]
+          - paragraph [ref=e96]: 놓치면 손해, 받을 수 있는 모든 혜택
+          - generic [ref=e97]: 17개 계산기
+  - generic [ref=e99]:
+    - generic [ref=e100]:
+      - heading "지금 가장 많이 쓰는 계산기" [level=2] [ref=e101]
+      - paragraph [ref=e102]: 실수령·세금·복지에서 검색량 최상위 6개
+    - generic [ref=e103]:
+      - link "01 세금 연봉 실수령액 계산기 국세청 2026 간이세액표 · 5케이스 검증" [ref=e104] [cursor=pointer]:
+        - /url: /tax/salary-net-pay/
+        - generic [ref=e105]: "01"
+        - generic [ref=e106]:
+          - generic [ref=e107]: 세금
+          - heading "연봉 실수령액 계산기" [level=3] [ref=e108]
+          - text: 국세청 2026 간이세액표 · 5케이스 검증
+      - link "02 세금 종합소득세 계산기 근로·사업·임대소득 합산" [ref=e109] [cursor=pointer]:
+        - /url: /tax/comprehensive-income-tax/
+        - generic [ref=e110]: "02"
+        - generic [ref=e111]:
+          - generic [ref=e112]: 세금
+          - heading "종합소득세 계산기" [level=3] [ref=e113]
+          - text: 근로·사업·임대소득 합산
+      - link "03 부동산 양도소득세 계산기 (1세대1주택) 소득세법 §89 · 비과세 요건 자동 판정" [ref=e114] [cursor=pointer]:
+        - /url: /realestate/transfer-tax-1home/
+        - generic [ref=e115]: "03"
+        - generic [ref=e116]:
+          - generic [ref=e117]: 부동산
+          - heading "양도소득세 계산기 (1세대1주택)" [level=3] [ref=e118]
+          - text: 소득세법 §89 · 비과세 요건 자동 판정
+      - link "04 부동산 취득세 계산기 지방세법 §11 · 면적·금액별 세율" [ref=e119] [cursor=pointer]:
+        - /url: /realestate/acquisition-tax/
+        - generic [ref=e120]: "04"
+        - generic [ref=e121]:
+          - generic [ref=e122]: 부동산
+          - heading "취득세 계산기" [level=3] [ref=e123]
+          - text: 지방세법 §11 · 면적·금액별 세율
+      - link "05 법률 퇴직금 계산기 (법정 기본) 근로자퇴직급여보장법 §8" [ref=e124] [cursor=pointer]:
+        - /url: /law/severance-pay/
+        - generic [ref=e125]: "05"
+        - generic [ref=e126]:
+          - generic [ref=e127]: 법률
+          - heading "퇴직금 계산기 (법정 기본)" [level=3] [ref=e128]
+          - text: 근로자퇴직급여보장법 §8
+      - link "06 정부지원금 실업급여 일액 계산기 고용보험법 §46" [ref=e129] [cursor=pointer]:
+        - /url: /government/unemployment-benefit/
+        - generic [ref=e130]: "06"
+        - generic [ref=e131]:
+          - generic [ref=e132]: 정부지원금
+          - heading "실업급여 일액 계산기" [level=3] [ref=e133]
+          - text: 고용보험법 §46
+  - contentinfo [ref=e134]:
+    - generic [ref=e135]:
+      - generic [ref=e136]:
+        - generic [ref=e137]:
+          - link "MoneyDoc" [ref=e138] [cursor=pointer]:
+            - /url: /
+            - img [ref=e140]
+            - text: MoneyDoc
+          - paragraph [ref=e142]: 복잡한 금융·법률·세금 이야기를 누구나 이해할 수 있게 풀어내는 머니 가이드.
+        - generic [ref=e143]:
+          - heading "카테고리" [level=4] [ref=e144]
+          - list [ref=e145]:
+            - listitem [ref=e146]:
+              - link "저축" [ref=e147] [cursor=pointer]:
+                - /url: /savings/
+            - listitem [ref=e148]:
+              - link "대출" [ref=e149] [cursor=pointer]:
+                - /url: /loan/
+            - listitem [ref=e150]:
+              - link "부동산" [ref=e151] [cursor=pointer]:
+                - /url: /realestate/
+            - listitem [ref=e152]:
+              - link "세금" [ref=e153] [cursor=pointer]:
+                - /url: /tax/
+        - generic [ref=e154]:
+          - heading "둘러보기" [level=4] [ref=e155]
+          - list [ref=e156]:
+            - listitem [ref=e157]:
+              - link "보험" [ref=e158] [cursor=pointer]:
+                - /url: /insurance/
+            - listitem [ref=e159]:
+              - link "연금" [ref=e160] [cursor=pointer]:
+                - /url: /pension/
+            - listitem [ref=e161]:
+              - link "법률" [ref=e162] [cursor=pointer]:
+                - /url: /law/
+            - listitem [ref=e163]:
+              - link "정부지원금" [ref=e164] [cursor=pointer]:
+                - /url: /government/
+        - generic [ref=e165]:
+          - heading "회사" [level=4] [ref=e166]
+          - list [ref=e167]:
+            - listitem [ref=e168]:
+              - link "소개" [ref=e169] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e170]:
+              - link "문의하기" [ref=e171] [cursor=pointer]:
+                - /url: /contact/
+      - generic [ref=e172]:
+        - paragraph [ref=e173]: © 2026 MoneyDoc. 모든 계산은 정부 공식 자료 기준.
+        - generic [ref=e174]:
+          - link "이용약관" [ref=e175] [cursor=pointer]:
+            - /url: /terms/
+          - link "개인정보처리방침" [ref=e176] [cursor=pointer]:
+            - /url: /privacy/
+  - alert [ref=e177]

@@ -1,0 +1,73 @@
+{
+  "keyword": "기초연금",
+  "_expect": "PASS",
+  "_reason": "정상 입력",
+  "spokes": [
+    {
+      "slug": "eligibility",
+      "format": "question",
+      "title": "기초연금 수급자격, 소득인정액 얼마 이하면 받나요?",
+      "mustInclude": [
+        "기초연금",
+        "수급자격"
+      ],
+      "sourceQuery": "기초연금 수급자격",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "amount",
+      "format": "question",
+      "title": "기초연금 금액, 2026년 단독·부부가구 최대 얼마?",
+      "mustInclude": [
+        "기초연금",
+        "금액"
+      ],
+      "sourceQuery": "기초연금 금액",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "income",
+      "format": "total-colon",
+      "title": "기초연금 소득인정액 계산법: 재산의 소득환산까지",
+      "mustInclude": [
+        "기초연금",
+        "소득인정액"
+      ],
+      "sourceQuery": "기초연금 소득인정액",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "apply",
+      "format": "list-comma",
+      "title": "기초연금 신청 방법과 필요 서류, 어디서 신청하나요?",
+      "mustInclude": [
+        "기초연금",
+        "신청 방법"
+      ],
+      "sourceQuery": "기초연금 신청 방법",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "nps-link",
+      "format": "list-comma",
+      "title": "기초연금 국민연금 연계 감액, 얼마나 줄어드나",
+      "mustInclude": [
+        "기초연금",
+        "국민연금"
+      ],
+      "sourceQuery": "기초연금 국민연금",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "appeal",
+      "format": "list-comma",
+      "title": "기초연금 탈락 사유와 이의신청 방법 총정리",
+      "mustInclude": [
+        "기초연금",
+        "이의신청"
+      ],
+      "sourceQuery": "기초연금 이의신청",
+      "sourcePlatform": "fixture"
+    }
+  ]
+}

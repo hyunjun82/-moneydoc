@@ -635,3 +635,107 @@ details[open] summary { background: var(--bg-soft); }
   .comp-divider { padding: 10px; }
   .timeline-item { grid-template-columns: 80px 1fr; }
 }
+
+
+/* ───────── ARTICLE (카테고리 롱리드 본문) ─────────
+   단일 컬러(--brand)만 사용. 메인 토큰 그대로. 본문은 펼쳐진 상태로 노출. */
+.article { background: var(--bg); border-top: 1px solid var(--line); }
+.article-inner { max-width: var(--read); margin: 0 auto; padding: 56px 24px 8px; }
+
+.article-meta-row { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--text-3); margin-bottom: 22px; font-variant-numeric: tabular-nums; }
+.article-meta-row .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--text-3); }
+
+.article-lead { font-size: 20px; line-height: 1.7; font-weight: 500; letter-spacing: -0.02em; color: var(--text); margin: 0 0 30px; }
+.article-lead strong { color: var(--brand); font-weight: 700; }
+
+.keypoints { background: var(--bg-card); border: 1px solid var(--line); border-left: 3px solid var(--brand); border-radius: var(--radius-sm); padding: 22px 24px; margin: 0 0 38px; box-shadow: var(--shadow-card); }
+.keypoints-title { font-size: 12px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--brand); margin-bottom: 14px; }
+.keypoints ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+.keypoints li { position: relative; padding-left: 24px; font-size: 15px; line-height: 1.6; color: var(--text-2); }
+.keypoints li::before { content: ''; position: absolute; left: 5px; top: 9px; width: 6px; height: 6px; border-radius: 50%; background: var(--brand); }
+.keypoints li strong { color: var(--text); font-weight: 600; }
+
+.toc { background: var(--bg-soft); border: 1px solid var(--line-soft); border-radius: var(--radius-sm); padding: 20px 24px; margin: 0 0 44px; }
+.toc-title { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); margin-bottom: 12px; }
+.toc ol { margin: 0; padding: 0; list-style: none; counter-reset: toc; display: flex; flex-direction: column; gap: 9px; }
+.toc li { counter-increment: toc; }
+.toc a { display: flex; align-items: baseline; gap: 12px; font-size: 15px; color: var(--text-2); transition: color 0.15s; }
+.toc a::before { content: counter(toc, decimal-leading-zero); color: var(--brand); font-weight: 700; font-variant-numeric: tabular-nums; font-size: 13px; }
+.toc a:hover { color: var(--brand); }
+
+.article-sec { margin: 0 0 46px; scroll-margin-top: 88px; }
+.sec-eyebrow { font-size: 12.5px; font-weight: 700; letter-spacing: 0.05em; color: var(--brand); margin-bottom: 10px; }
+.article-sec > h2 { font-size: 26px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.3; color: var(--text); margin: 0 0 18px; }
+.article-sec h3 { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: var(--text); margin: 30px 0 12px; }
+.article-sec p { font-size: 16.5px; line-height: 1.82; color: var(--text-2); margin: 0 0 18px; }
+.article-sec p strong { color: var(--text); font-weight: 600; }
+.article-sec > ul, .article-sec > ol { margin: 0 0 20px; padding-left: 4px; list-style: none; color: var(--text-2); font-size: 16px; line-height: 1.8; }
+.article-sec > ul > li, .article-sec > ol > li { position: relative; padding-left: 24px; margin-bottom: 10px; }
+.article-sec > ul > li::before { content: ''; position: absolute; left: 6px; top: 12px; width: 6px; height: 6px; border-radius: 50%; background: var(--brand); }
+.article-sec > ol { counter-reset: aol; }
+.article-sec > ol > li { counter-increment: aol; }
+.article-sec > ol > li::before { content: counter(aol); position: absolute; left: 0; top: 0; color: var(--brand); font-weight: 700; font-variant-numeric: tabular-nums; }
+.article-sec li strong { color: var(--text); font-weight: 600; }
+
+.article-sec table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 14.5px; }
+.article-sec th, .article-sec td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--line-soft); }
+.article-sec th { background: var(--bg-card); font-weight: 700; color: var(--text); font-size: 13.5px; }
+.article-sec td.num, .article-sec th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.table-note { font-size: 13px; color: var(--text-3); margin: -4px 0 0; line-height: 1.6; }
+
+.key-callout { background: var(--brand-soft); border-radius: var(--radius-sm); padding: 17px 20px; margin: 0 0 24px; font-size: 15.5px; line-height: 1.72; color: var(--brand-3); }
+.key-callout strong { color: var(--brand-2); font-weight: 700; }
+
+.article-quote { border-left: 3px solid var(--line); padding: 4px 0 4px 18px; margin: 4px 0 22px; font-size: 14px; color: var(--text-3); line-height: 1.7; }
+
+.article-faq { display: flex; flex-direction: column; }
+.afaq { padding: 22px 0; border-bottom: 1px solid var(--line-soft); }
+.afaq:last-child { border-bottom: none; }
+.afaq .q { font-size: 16.5px; font-weight: 700; color: var(--text); margin: 0 0 10px; display: flex; gap: 11px; align-items: baseline; line-height: 1.5; }
+.afaq .q .qmark { color: var(--brand); font-weight: 800; flex-shrink: 0; }
+.afaq .a { font-size: 15.5px; line-height: 1.78; color: var(--text-2); margin: 0; padding-left: 25px; }
+.afaq .a strong { color: var(--text); font-weight: 600; }
+
+@media (max-width: 560px) {
+  .article-inner { padding: 40px 20px 8px; }
+  .article-lead { font-size: 18px; }
+  .article-sec > h2 { font-size: 22px; }
+  .article-sec p { font-size: 16px; }
+}
+
+
+/* art-steps: 기존 .steps(5열 그리드)와 충돌 방지용 전용 클래스 */
+.art-steps { list-style: none; margin: 18px 0 22px; padding: 0; }
+.art-steps > li { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line-soft); }
+.art-steps > li:last-child { border-bottom: none; }
+.art-steps > li::before { content: none; }
+.art-step-num { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--brand); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; font-variant-numeric: tabular-nums; }
+.art-step-body { flex: 1; min-width: 0; }
+.art-step-body strong { display: block; font-size: 16.5px; color: var(--text); margin-bottom: 5px; font-weight: 700; }
+.art-step-body p { margin: 0; font-size: 15.5px; color: var(--text-2); line-height: 1.72; }
+
+
+/* article headline: 글(기사) 제목 — 계산기 제목과 별개 */
+.article-headline { font-size: clamp(26px, 3.4vw, 34px); font-weight: 800; letter-spacing: -0.035em; line-height: 1.28; color: var(--text); margin: 0 0 14px; }
+.article-intro { font-size: 16.5px; line-height: 1.8; color: var(--text-2); margin: 0 0 22px; }
+
+
+/* 표 정렬: 첫 열 좌측(라벨), 나머지 가운데. 헤더·셀 동일 정렬로 삐뚤어짐 방지 */
+.article-sec table { table-layout: fixed; }
+.article-sec table th, .article-sec table td { text-align: center; vertical-align: middle; }
+.article-sec table th:first-child, .article-sec table td:first-child { text-align: left; }
+.article-sec tbody tr:nth-child(even) { background: var(--bg); }
+
+
+/* 작성자/날짜 byline */
+.article-byline { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 13.5px; color: var(--text-3); margin: 0 0 28px; }
+.article-byline .byline-author { color: var(--text-2); font-weight: 600; }
+.article-byline .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--text-3); }
+
+/* 본문 인라인 링크 */
+.article-lead a, .article-sec a, .table-note a, .keypoints a { color: var(--brand); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+.article-lead a:hover, .article-sec a:hover, .table-note a:hover, .keypoints a:hover { color: var(--brand-2); }
+
+/* 관련 계산기 CTA */
+.article-cta { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 36px; padding: 13px 22px; background: var(--brand); color: #fff; border-radius: 10px; font-weight: 700; font-size: 15px; box-shadow: var(--shadow-card); transition: background 0.15s; }
+.article-cta:hover { background: var(--brand-2); color: #fff; }

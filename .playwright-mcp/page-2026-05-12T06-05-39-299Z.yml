@@ -1,0 +1,1640 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - link "메뉴 영역으로 바로가기" [ref=e2] [cursor=pointer]:
+      - /url: "#lnb"
+      - generic [ref=e3]: 메뉴 영역으로 바로가기
+    - link "본문 영역으로 바로가기" [ref=e4] [cursor=pointer]:
+      - /url: "#content"
+      - generic [ref=e5]: 본문 영역으로 바로가기
+  - generic [ref=e6]:
+    - generic [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e11]:
+          - heading "NAVER" [level=1] [ref=e12]:
+            - link "NAVER" [ref=e13] [cursor=pointer]:
+              - /url: https://www.naver.com
+              - generic [ref=e14]: NAVER
+          - search [ref=e15]:
+            - group "검색" [ref=e16]:
+              - combobox "검색어를 입력해 주세요." [ref=e18]:
+                - text: 근로장려금
+                - button "자동완성 레이어" [ref=e19] [cursor=pointer]:
+                  - generic [ref=e20]: 자동완성 레이어
+              - button "검색" [ref=e21] [cursor=pointer]:
+                - generic [ref=e22]: 검색
+              - button "한글 입력기" [ref=e24] [cursor=pointer]:
+                - generic [ref=e25]: 한글 입력기
+        - generic [ref=e26]:
+          - strong [ref=e27]: 사용자 링크
+          - list [ref=e28]:
+            - listitem [ref=e29]:
+              - link "로그인" [ref=e30] [cursor=pointer]:
+                - /url: https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fsearch.naver.com%2Fsearch.naver%3Fquery%3D%25EA%25B7%25BC%25EB%25A1%259C%25EC%259E%25A5%25EB%25A0%25A4%25EA%25B8%2588
+                - generic [ref=e33]: 로그인
+            - listitem [ref=e34]:
+              - link "서비스 더보기" [ref=e35] [cursor=pointer]:
+                - /url: javascript:;
+                - generic [ref=e36]: 서비스 더보기
+      - generic [ref=e38]:
+        - generic [ref=e40]:
+          - generic [ref=e42]:
+            - tablist [ref=e43]:
+              - tab "블로그" [ref=e44] [cursor=pointer]
+              - tab "카페" [ref=e45] [cursor=pointer]
+              - tab "이미지" [ref=e46] [cursor=pointer]
+              - tab "클립" [ref=e47] [cursor=pointer]
+              - tab "지식iN" [ref=e48] [cursor=pointer]
+              - tab "인플루언서" [ref=e49] [cursor=pointer]
+              - tab "동영상" [ref=e50] [cursor=pointer]
+              - tab "쇼핑" [ref=e51] [cursor=pointer]
+              - tab "뉴스" [ref=e52] [cursor=pointer]
+              - tab "숏텐츠" [ref=e53] [cursor=pointer]
+              - tab "어학사전" [ref=e54] [cursor=pointer]
+              - tab "지도" [ref=e55] [cursor=pointer]
+              - tab "도서" [ref=e56] [cursor=pointer]
+              - tab "지식백과" [ref=e57] [cursor=pointer]
+              - tab "학술정보" [ref=e58] [cursor=pointer]
+            - button "다음" [ref=e59] [cursor=pointer]:
+              - generic [ref=e61]: 다음
+          - button "더보기" [ref=e63] [cursor=pointer]:
+            - generic [ref=e64]: 더보기
+        - list [ref=e66]:
+          - listitem [ref=e67]:
+            - button "공유" [ref=e68] [cursor=pointer]
+    - main [ref=e69]:
+      - generic [ref=e70]:
+        - heading "근로장려금 검색 결과" [level=1] [ref=e71]
+        - generic [ref=e72]:
+          - generic [ref=e74]:
+            - generic [ref=e75]:
+              - generic [ref=e76]:
+                - heading "근로·자녀장려금" [level=2] [ref=e77]:
+                  - link "근로·자녀장려금" [ref=e78] [cursor=pointer]:
+                    - /url: https://www.gov.kr/portal/rcvfvrSvc/dtlEx/105100000001
+                    - strong [ref=e79]: 근로·자녀장려금
+                - generic [ref=e81]: 중앙부처 정책지원금
+              - button "문서 저장하기" [ref=e83] [cursor=pointer]:
+                - generic [ref=e84]: 문서 저장하기
+              - tablist [ref=e88]:
+                - tab "전체" [selected] [ref=e89]:
+                  - link "전체" [ref=e90] [cursor=pointer]:
+                    - /url: "?where=nexearch&sm=tab_etc&mra=bjFK&pkid=735&os=31692716&x_nqx=%7B%22theme%22%3A%22public_policy%22%2C%22pkid%22%3A%22735%22%2C%22os%22%3A%2231692716%22%7D&qvt=0&query=%EA%B7%BC%EB%A1%9C%C2%B7%EC%9E%90%EB%85%80%EC%9E%A5%EB%A0%A4%EA%B8%88"
+                    - generic [ref=e91]: 전체
+                - tab "지원내용" [ref=e92]:
+                  - link "지원내용" [ref=e93] [cursor=pointer]:
+                    - /url: "?where=nexearch&sm=tab_etc&mra=bjFK&pkid=735&os=31692716&x_nqx=%7B%22theme%22%3A%22public_policy%22%2C%22pkid%22%3A%22735%22%2C%22os%22%3A%2231692716%22%7D&qvt=0&query=%EA%B7%BC%EB%A1%9C%C2%B7%EC%9E%90%EB%85%80%EC%9E%A5%EB%A0%A4%EA%B8%88%20%EB%82%B4%EC%9A%A9"
+                    - generic [ref=e94]: 지원내용
+                - tab "지원대상" [ref=e95]:
+                  - link "지원대상" [ref=e96] [cursor=pointer]:
+                    - /url: "?where=nexearch&sm=tab_etc&mra=bjFK&pkid=735&os=31692716&x_nqx=%7B%22theme%22%3A%22public_policy%22%2C%22pkid%22%3A%22735%22%2C%22os%22%3A%2231692716%22%7D&qvt=0&query=%EA%B7%BC%EB%A1%9C%C2%B7%EC%9E%90%EB%85%80%EC%9E%A5%EB%A0%A4%EA%B8%88%20%EB%8C%80%EC%83%81"
+                    - generic [ref=e97]: 지원대상
+                - tab "신청" [ref=e98]:
+                  - link "신청" [ref=e99] [cursor=pointer]:
+                    - /url: "?where=nexearch&sm=tab_etc&mra=bjFK&pkid=735&os=31692716&x_nqx=%7B%22theme%22%3A%22public_policy%22%2C%22pkid%22%3A%22735%22%2C%22os%22%3A%2231692716%22%7D&qvt=0&query=%EA%B7%BC%EB%A1%9C%C2%B7%EC%9E%90%EB%85%80%EC%9E%A5%EB%A0%A4%EA%B8%88%20%EC%8B%A0%EC%B2%AD"
+                    - generic [ref=e100]: 신청
+            - generic [ref=e103]:
+              - generic [ref=e104]:
+                - generic [ref=e105]:
+                  - generic [ref=e106]:
+                    - term [ref=e107]: 소관기관
+                    - definition [ref=e109]: 국세청
+                  - generic [ref=e110]:
+                    - term [ref=e111]: 지원유형
+                    - definition [ref=e113]: 현금
+                - generic [ref=e114]:
+                  - text: 근로장려세제 - 저소득계층의 빈곤 탈출을 지원하고 사회안전망을 확충하기 위해 도입되었으며, 근로소득, 사업소득 또는 종교인소득에 따라 산정된 근로장려금을 환급 형태로 지급하여 저소득 계층의 근로를 유인하고 실질소득을 지원하기 위한 근로연계형 소...
+                  - link "더보기" [ref=e115] [cursor=pointer]:
+                    - /url: "?where=nexearch&sm=tab_etc&mra=bjFK&x_csa=%7B%22nqx_theme%22%3A%20%22public_policy%22%2C%20%22isOpen%22%20%3A%20%22true%22%2C%20%22pkid%22%3A%20%22735%22%7D&pkid=735&os=31692716&qvt=0&query=%EA%B7%BC%EB%A1%9C%C2%B7%EC%9E%90%EB%85%80%EC%9E%A5%EB%A0%A4%EA%B8%88%20%EB%82%B4%EC%9A%A9"
+              - list [ref=e118]:
+                - listitem [ref=e119]:
+                  - link "온라인 접수" [ref=e120] [cursor=pointer]:
+                    - /url: https://www.hometax.go.kr
+              - generic [ref=e122]:
+                - button "정보안내 정보확인 내용 열고 닫기" [ref=e123] [cursor=pointer]:
+                  - text: 정보안내
+                  - generic [ref=e126]: 정보확인 내용 열고 닫기
+                - generic [ref=e127]: 최종수정일 2026.05.02.
+          - generic [ref=e128]:
+            - generic [ref=e135]:
+              - generic [ref=e140]:
+                - generic [ref=e141]:
+                  - generic [ref=e142]:
+                    - generic [ref=e143]:
+                      - img [ref=e145]
+                      - heading "AI 브리핑" [level=2] [ref=e148]
+                    - generic [ref=e149]: 실험 단계로 정확하지 않을 수 있어요.
+                  - button [ref=e150] [cursor=pointer]:
+                    - img [ref=e151]
+                - button "Feedback 박스 열기" [ref=e157] [cursor=pointer]:
+                  - img [ref=e158]
+              - generic [ref=e175]:
+                - generic [ref=e176]:
+                  - 'link "2026년 3월 근로장려금 신청요건(2025년 하반기분) #근로장려금 #국세청 #지원금 국세청 YouTube" [ref=e179] [cursor=pointer]':
+                    - /url: https://www.youtube.com/watch?v=Mar8TyXXBIY
+                    - generic [ref=e181]:
+                      - img [ref=e183]
+                      - img [ref=e184]
+                      - generic [ref=e186]:
+                        - generic [ref=e187]: "2026년 3월 근로장려금 신청요건(2025년 하반기분) #근로장려금 #국세청 #지원금"
+                        - generic [ref=e188]:
+                          - generic [ref=e190]: 국세청
+                          - generic [ref=e193]: YouTube
+                  - 'link "25년 귀속 정기분 근로·자녀장려금 신청하세요!(40초ver) #근로장려금 #자녀장려금 #지원금 국세청 YouTube" [ref=e196] [cursor=pointer]':
+                    - /url: https://www.youtube.com/watch?v=9FHdg2KFOgg
+                    - generic [ref=e198]:
+                      - img [ref=e200]
+                      - img [ref=e201]
+                      - generic [ref=e203]:
+                        - generic [ref=e204]: "25년 귀속 정기분 근로·자녀장려금 신청하세요!(40초ver) #근로장려금 #자녀장려금 #지원금"
+                        - generic [ref=e205]:
+                          - generic [ref=e207]: 국세청
+                          - generic [ref=e210]: YouTube
+                  - 'link "25년 귀속 정기분 근로·자녀장려금 신청하세요!(20초ver) #근로장려금 #자녀장려금 #지원금 국세청 YouTube" [ref=e213] [cursor=pointer]':
+                    - /url: https://www.youtube.com/watch?v=gyfUFYaDTGU
+                    - generic [ref=e215]:
+                      - img [ref=e217]
+                      - img [ref=e218]
+                      - generic [ref=e220]:
+                        - generic [ref=e221]: "25년 귀속 정기분 근로·자녀장려금 신청하세요!(20초ver) #근로장려금 #자녀장려금 #지원금"
+                        - generic [ref=e222]:
+                          - generic [ref=e224]: 국세청
+                          - generic [ref=e227]: YouTube
+                  - 'link "2026년 3월 근로장려금 미안내자 신청방법(2025년 하반기분) #근로장려금 #국세청 #미안내자신청방법 국세청 YouTube" [ref=e230] [cursor=pointer]':
+                    - /url: https://www.youtube.com/watch?v=g1pnnFdpUXM
+                    - generic [ref=e232]:
+                      - img [ref=e234]
+                      - img [ref=e235]
+                      - generic [ref=e237]:
+                        - generic [ref=e238]: "2026년 3월 근로장려금 미안내자 신청방법(2025년 하반기분) #근로장려금 #국세청 #미안내자신청방법"
+                        - generic [ref=e239]:
+                          - generic [ref=e241]: 국세청
+                          - generic [ref=e244]: YouTube
+                  - link "2025년 9월 근로장려금 반기신청 신청요건 국세청 YouTube" [ref=e247] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=n-BFXlc8YzU
+                    - generic [ref=e249]:
+                      - img [ref=e251]
+                      - img [ref=e252]
+                      - generic [ref=e254]:
+                        - generic [ref=e255]: 2025년 9월 근로장려금 반기신청 신청요건
+                        - generic [ref=e256]:
+                          - generic [ref=e258]: 국세청
+                          - generic [ref=e261]: YouTube
+                  - 'link "일하는 시니어를 위한 근로장려금 안내 #근로장려금 #노인일자리 #시니어복지 국세청 YouTube" [ref=e264] [cursor=pointer]':
+                    - /url: https://www.youtube.com/watch?v=QUCddkj_P5w
+                    - generic [ref=e266]:
+                      - img [ref=e268]
+                      - img [ref=e269]
+                      - generic [ref=e271]:
+                        - generic [ref=e272]: "일하는 시니어를 위한 근로장려금 안내 #근로장려금 #노인일자리 #시니어복지"
+                        - generic [ref=e273]:
+                          - generic [ref=e275]: 국세청
+                          - generic [ref=e278]: YouTube
+                  - link "일한 만큼 지원받는 근로장려금, 미리 챙기세요~ 국세청 YouTube" [ref=e281] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=D_30QwDCjdM
+                    - generic [ref=e283]:
+                      - img [ref=e285]
+                      - img [ref=e286]
+                      - generic [ref=e288]:
+                        - generic [ref=e289]: 일한 만큼 지원받는 근로장려금, 미리 챙기세요~
+                        - generic [ref=e290]:
+                          - generic [ref=e292]: 국세청
+                          - generic [ref=e295]: YouTube
+                  - link "2025년 9월 근로장려금 반기신청 상반기분 미안내자 신청방법 국세청 YouTube" [ref=e298] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=8cjYcWRbuOM
+                    - generic [ref=e300]:
+                      - img [ref=e302]
+                      - img [ref=e303]
+                      - generic [ref=e305]:
+                        - generic [ref=e306]: 2025년 9월 근로장려금 반기신청 상반기분 미안내자 신청방법
+                        - generic [ref=e307]:
+                          - generic [ref=e309]: 국세청
+                          - generic [ref=e312]: YouTube
+                  - link "일하는 시니어를 위한 근로장려금 안내 국세청 YouTube" [ref=e315] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=PxUuG4N2mWE
+                    - generic [ref=e317]:
+                      - img [ref=e319]
+                      - img [ref=e320]
+                      - generic [ref=e322]:
+                        - generic [ref=e323]: 일하는 시니어를 위한 근로장려금 안내
+                        - generic [ref=e324]:
+                          - generic [ref=e326]: 국세청
+                          - generic [ref=e329]: YouTube
+                  - 'link "근로·자녀장려금 기한 후 신청 #근로장려금 #자녀장려금 국세청 YouTube" [ref=e332] [cursor=pointer]':
+                    - /url: https://www.youtube.com/watch?v=TJOc3CUma2c
+                    - generic [ref=e334]:
+                      - img [ref=e336]
+                      - img [ref=e337]
+                      - generic [ref=e339]:
+                        - generic [ref=e340]: "근로·자녀장려금 기한 후 신청 #근로장려금 #자녀장려금"
+                        - generic [ref=e341]:
+                          - generic [ref=e343]: 국세청
+                          - generic [ref=e346]: YouTube
+                - button "다음 버튼" [ref=e347] [cursor=pointer]:
+                  - img [ref=e349]
+            - generic [ref=e377]:
+              - generic [ref=e378]:
+                - heading "알기 쉬운 공공 정보" [level=2] [ref=e380]
+                - button "접기" [expanded] [ref=e381] [cursor=pointer]:
+                  - generic [ref=e383]: 접기
+              - generic [ref=e384]:
+                - generic [ref=e385]:
+                  - generic [ref=e386]:
+                    - generic [ref=e388]:
+                      - link [ref=e389] [cursor=pointer]:
+                        - /url: https://blog.naver.com/ntscafe/224060139767
+                      - generic [ref=e390]:
+                        - link "[보도] '24년 귀속분 근로·자녀장려금, 5월에 깜빡했다면12월 1일까지 꼭 신청하세요!" [ref=e391] [cursor=pointer]:
+                          - /url: https://blog.naver.com/ntscafe/224060139767
+                        - generic [ref=e392]:
+                          - generic [ref=e395]:
+                            - link "대한민국 국세청 공식 블로그" [ref=e396] [cursor=pointer]:
+                              - /url: https://blog.naver.com/ntscafe/224060139767
+                            - generic [ref=e398]: 인증
+                          - text: 2025.10.31.
+                    - generic [ref=e400]:
+                      - link [ref=e401] [cursor=pointer]:
+                        - /url: https://blog.naver.com/ntscafe/223992376202
+                      - generic [ref=e402]:
+                        - link "2025년 상반기 근로장려금 자주 묻는 질문 TOP 7" [ref=e403] [cursor=pointer]:
+                          - /url: https://blog.naver.com/ntscafe/223992376202
+                        - generic [ref=e404]:
+                          - generic [ref=e407]:
+                            - link "대한민국 국세청 공식 블로그" [ref=e408] [cursor=pointer]:
+                              - /url: https://blog.naver.com/ntscafe/223992376202
+                            - generic [ref=e410]: 인증
+                          - text: 2025.09.02.
+                    - generic [ref=e412]:
+                      - link [ref=e413] [cursor=pointer]:
+                        - /url: https://blog.naver.com/ntscafe/224205327408
+                      - generic [ref=e414]:
+                        - link "[보도] 근로장려금 반기신청 3월 16일까지, 잊지 말고 신청하세요!" [ref=e415] [cursor=pointer]:
+                          - /url: https://blog.naver.com/ntscafe/224205327408
+                        - generic [ref=e416]:
+                          - generic [ref=e419]:
+                            - link "대한민국 국세청 공식 블로그" [ref=e420] [cursor=pointer]:
+                              - /url: https://blog.naver.com/ntscafe/224205327408
+                            - generic [ref=e422]: 인증
+                          - text: 2026.03.05.
+                    - generic [ref=e424]:
+                      - link [ref=e425] [cursor=pointer]:
+                        - /url: https://blog.naver.com/meaning87/223867301253
+                      - generic [ref=e426]:
+                        - link "근로장려금 대상 (대상자 조회 및 확인 방법) ft. 금액 얼마주나" [ref=e427] [cursor=pointer]:
+                          - /url: https://blog.naver.com/meaning87/223867301253
+                        - generic [ref=e428]:
+                          - link "은퇴연구소" [ref=e432] [cursor=pointer]:
+                            - /url: https://blog.naver.com/meaning87/223867301253
+                          - text: 2025.05.16.
+                    - generic [ref=e434]:
+                      - link [ref=e435] [cursor=pointer]:
+                        - /url: https://blog.naver.com/kimwh253967/224270091868
+                      - generic [ref=e436]:
+                        - link "\"330만원 받아가세요\" 5월 반드시 신청해야 하는 2026 근로장려금 신청기간 대상 지급일" [ref=e437] [cursor=pointer]:
+                          - /url: https://blog.naver.com/kimwh253967/224270091868
+                        - generic [ref=e438]:
+                          - link "감히 부자가 되겠습니다" [ref=e442] [cursor=pointer]:
+                            - /url: https://blog.naver.com/kimwh253967/224270091868
+                          - text: 2026.04.30.
+                    - generic [ref=e444]:
+                      - link [ref=e445] [cursor=pointer]:
+                        - /url: https://blog.naver.com/healthtalkmentaltalk/223914011062
+                      - generic [ref=e446]:
+                        - link "근로장려금 환수통지서 및 환수액 이유 및 납부 방법은? (일시납, 분할납부)" [ref=e447] [cursor=pointer]:
+                          - /url: https://blog.naver.com/healthtalkmentaltalk/223914011062
+                        - generic [ref=e448]:
+                          - link "자꾸남의 복리 인생" [ref=e452] [cursor=pointer]:
+                            - /url: https://blog.naver.com/healthtalkmentaltalk/223914011062
+                          - text: 2025.06.27.
+                    - generic [ref=e454]:
+                      - link [ref=e455] [cursor=pointer]:
+                        - /url: https://blog.naver.com/hayth0121/223942672176
+                      - generic [ref=e456]:
+                        - link "2025 근로장려금 8월 지급일은 언제? 조회 방법까지 총정리" [ref=e457] [cursor=pointer]:
+                          - /url: https://blog.naver.com/hayth0121/223942672176
+                        - generic [ref=e458]:
+                          - link "매일 경제를 공부하는 워킹맘 부지런한 개미" [ref=e462] [cursor=pointer]:
+                            - /url: https://blog.naver.com/hayth0121/223942672176
+                          - text: 2025.07.22.
+                    - generic [ref=e464]:
+                      - link [ref=e465] [cursor=pointer]:
+                        - /url: https://blog.naver.com/ekdud0706/223866467227
+                      - generic [ref=e466]:
+                        - link "2025 근로장려금 신청 방법, 기간 대상 재산기준까지 모든 것!" [ref=e467] [cursor=pointer]:
+                          - /url: https://blog.naver.com/ekdud0706/223866467227
+                        - generic [ref=e468]:
+                          - link "찐주부J의 생활금융" [ref=e472] [cursor=pointer]:
+                            - /url: https://blog.naver.com/ekdud0706/223866467227
+                          - text: 2025.05.15.
+                    - generic [ref=e474]:
+                      - link [ref=e475] [cursor=pointer]:
+                        - /url: https://blog.naver.com/jkyun0621/223979458489
+                      - generic [ref=e476]:
+                        - link "근로장려금 8월 말 지급 시작… 자녀장려금은 언제?" [ref=e477] [cursor=pointer]:
+                          - /url: https://blog.naver.com/jkyun0621/223979458489
+                        - generic [ref=e478]:
+                          - link "경제현미경의 디테일한 시야" [ref=e482] [cursor=pointer]:
+                            - /url: https://blog.naver.com/jkyun0621/223979458489
+                          - text: 2025.08.22.
+                    - generic [ref=e484]:
+                      - link [ref=e485] [cursor=pointer]:
+                        - /url: https://blog.naver.com/jkyun0621/223868612035
+                      - generic [ref=e486]:
+                        - link "근로·자녀장려금 조건 대상, 자격·지급일·신청법까지 한눈에 정리" [ref=e487] [cursor=pointer]:
+                          - /url: https://blog.naver.com/jkyun0621/223868612035
+                        - generic [ref=e488]:
+                          - link "경제현미경의 디테일한 시야" [ref=e492] [cursor=pointer]:
+                            - /url: https://blog.naver.com/jkyun0621/223868612035
+                          - text: 2025.05.17.
+                    - generic [ref=e494]:
+                      - link [ref=e495] [cursor=pointer]:
+                        - /url: https://blog.naver.com/nasiba5083/224271757949
+                      - generic [ref=e496]:
+                        - link "단독가구도 최대 165만 원? 근로장려금 신청 오픈, 자격 요건 기준은" [ref=e497] [cursor=pointer]:
+                          - /url: https://blog.naver.com/nasiba5083/224271757949
+                        - generic [ref=e498]:
+                          - link "콘시토르의 경제 유니버스" [ref=e502] [cursor=pointer]:
+                            - /url: https://blog.naver.com/nasiba5083/224271757949
+                          - text: 2026.05.01.
+                    - generic [ref=e504]:
+                      - link [ref=e505] [cursor=pointer]:
+                        - /url: https://blog.naver.com/parangsae71/224267046139
+                      - generic [ref=e506]:
+                        - link "2026 근로장려금·자녀장려금 신청 총정리 (5월 1일 시작, 최대 330만원)" [ref=e507] [cursor=pointer]:
+                          - /url: https://blog.naver.com/parangsae71/224267046139
+                        - generic [ref=e508]:
+                          - link "강팰" [ref=e512] [cursor=pointer]:
+                            - /url: https://blog.naver.com/parangsae71/224267046139
+                          - text: 2026.04.27.
+                  - button "다음" [ref=e513] [cursor=pointer]:
+                    - generic [ref=e514]: 다음
+                - generic [ref=e516]:
+                  - text: 콘텐츠 안내
+                  - button "이 정보가 표시된 이유" [ref=e517] [cursor=pointer]:
+                    - generic [ref=e518]: 이 정보가 표시된 이유
+              - generic [ref=e519]:
+                - heading "한눈에 보는 네이버 공공 클립" [level=2] [ref=e521]
+                - button "접기" [expanded] [ref=e522] [cursor=pointer]:
+                  - generic [ref=e524]: 접기
+              - generic [ref=e525]:
+                - generic [ref=e526]:
+                  - generic [ref=e527]:
+                    - link "2025 근로장려금 반기 지급일 총정리! 달팽언니 생활경제" [ref=e529] [cursor=pointer]:
+                      - /url: https://tv.naver.com/h/79440835
+                      - generic [ref=e531]:
+                        - generic [ref=e532]: 2025 근로장려금 반기 지급일 총정리!
+                        - generic [ref=e533]: 달팽언니 생활경제
+                    - link "근로장려금 결과 확인! 지급일 바로 보기 달팽언니 생활경제" [ref=e535] [cursor=pointer]:
+                      - /url: https://tv.naver.com/h/82682636
+                      - generic [ref=e537]:
+                        - generic [ref=e538]: 근로장려금 결과 확인! 지급일 바로 보기
+                        - generic [ref=e539]: 달팽언니 생활경제
+                    - 'link "2026년 근로정려금 신청 조건 방법 최대 330만원 지급받는 방법에 대해서 꼼꼼하게 확인해보세요. 놓치면 못받는 근로장려금 + 자녀장려금 최대혜택 받는 방법 #근로장려금 #근로장려금신청 #2026년근로장려금 #근로장려금신청 #근로장려금조건 깐따의 재테크" [ref=e541] [cursor=pointer]':
+                      - /url: https://m.blog.naver.com/nabbeneye2/clip/14360923
+                      - generic [ref=e543]:
+                        - generic [ref=e544]: "2026년 근로정려금 신청 조건 방법 최대 330만원 지급받는 방법에 대해서 꼼꼼하게 확인해보세요. 놓치면 못받는 근로장려금 + 자녀장려금 최대혜택 받는 방법 #근로장려금 #근로장려금신청 #2026년근로장려금 #근로장려금신청 #근로장려금조건"
+                        - generic [ref=e545]: 깐따의 재테크
+                    - 'link "여러분! 혹시 285만원 그냥 버리고 계신 거 아니에요? ''근로''장려금이라 나랑 상관없다고 생각하셨죠? 개인사업자, 프리랜서, 자영업자 사장님들 모두! 11월 30일까지 ''기한후 신청''이 가능합니다! #정부지원 #민생회복지원금 ##클립챌린저 #클립크리에이터5기 #클립크리에이터 #네이버클립 #사업자근로장려금 #근로장려금 #근로장려금신청 #2025근로장려금 #소상공인지원금 #소상공인 #소상공인근로장려금 \"소피아진\"나를위로하는예술, Life is just one time." [ref=e547] [cursor=pointer]':
+                      - /url: https://m.blog.naver.com/sophyasophya/clip/11488303
+                      - generic [ref=e549]:
+                        - generic [ref=e550]: "여러분! 혹시 285만원 그냥 버리고 계신 거 아니에요? '근로'장려금이라 나랑 상관없다고 생각하셨죠? 개인사업자, 프리랜서, 자영업자 사장님들 모두! 11월 30일까지 '기한후 신청'이 가능합니다! #정부지원 #민생회복지원금 ##클립챌린저 #클립크리에이터5기 #클립크리에이터 #네이버클립 #사업자근로장려금 #근로장려금 #근로장려금신청 #2025근로장려금 #소상공인지원금 #소상공인 #소상공인근로장려금"
+                        - generic [ref=e551]: "\"소피아진\"나를위로하는예술, Life is just one time."
+                    - link "근로장려금, 자녀장려금 최대 330만원? 달팽언니 생활경제" [ref=e553] [cursor=pointer]:
+                      - /url: https://tv.naver.com/h/79282858
+                      - generic [ref=e555]:
+                        - generic [ref=e556]: 근로장려금, 자녀장려금 최대 330만원?
+                        - generic [ref=e557]: 달팽언니 생활경제
+                    - 'link "근로장려금 신청일이 다가오고 있어요. 필수 체크리스트 확인해보세요! #근로장려금 #지원금 #절세 #종합소득세 세무아나" [ref=e559] [cursor=pointer]':
+                      - /url: "https://m.naver.com/shorts?serviceType=CLIP&mediaType=VOD&seedMediaId=B24E2E892A5ED22943DF285572F2E8ADBC70&recType=CLIP_PC&recId={%22targetProfileId%22:%224WP0j4sl67WMzUOhtO7L%22,%22open%22:true}"
+                      - generic [ref=e561]:
+                        - generic [ref=e562]: "근로장려금 신청일이 다가오고 있어요. 필수 체크리스트 확인해보세요! #근로장려금 #지원금 #절세 #종합소득세"
+                        - generic [ref=e563]: 세무아나
+                    - 'link "2025 근로장려금 “더 넓어진 기준, 더 쉬워진 신청” 놓치지 말고 꼭 챙기세요! #정부지원 디디홈" [ref=e565] [cursor=pointer]':
+                      - /url: "https://m.naver.com/shorts?serviceType=CLIP&mediaType=VOD&seedMediaId=15DC83FF4695A42D09FEDC966184DC38CE2F&recType=CLIP_PC&recId={%22targetProfileId%22:%22lnv7nbqGogIPtDHst2ea%22,%22open%22:true}"
+                      - generic [ref=e567]:
+                        - generic [ref=e568]: "2025 근로장려금 “더 넓어진 기준, 더 쉬워진 신청” 놓치지 말고 꼭 챙기세요! #정부지원"
+                        - generic [ref=e569]: 디디홈
+                    - 'link "#정부지원 #근로장려금 #근로장려금확인 #클립크리에이터 #클립챌린저 감성1Ts" [ref=e571] [cursor=pointer]':
+                      - /url: "https://m.naver.com/shorts?serviceType=CLIP&mediaType=VOD&seedMediaId=60DC11B0BFDF9214AFB5C98FD4F0CB8CB292&recType=CLIP_PC&recId={%22targetProfileId%22:%22qmoEh-2IaBYv0e6xuYtj%22,%22open%22:true}"
+                      - generic [ref=e573]:
+                        - generic [ref=e574]: "#정부지원 #근로장려금 #근로장려금확인 #클립크리에이터 #클립챌린저"
+                        - generic [ref=e575]: 감성1Ts
+                    - 'link "🌟상반기 근로장려금 신청 9/15 까지 입니다🌟 2025년도 상반기 (6월까지) 근로소득만 있다면! 근로장려금 무조건 신청하세요🫶🏻 신청대상, 자주 묻는 질문 깔끔하게 정리해두었으니 게시물 피드 참고해주세요🤍 🖤도움이 되셨다면 좋아요&공유 부탁드립니다🫶🏻 🖤팔로우 하시고 돈 되는 세금 정보 받아가세요💸 #클립챌린저 #클립크리에이터 #정부지원 #근로장려금 #세무사 세무아나" [ref=e577] [cursor=pointer]':
+                      - /url: "https://m.naver.com/shorts?serviceType=CLIP&mediaType=VOD&seedMediaId=B4A2E7CB9C77BEDEE6FC4304CA058CC3AD52&recType=CLIP_PC&recId={%22targetProfileId%22:%224WP0j4sl67WMzUOhtO7L%22,%22open%22:true}"
+                      - generic [ref=e579]:
+                        - generic [ref=e580]: "🌟상반기 근로장려금 신청 9/15 까지 입니다🌟 2025년도 상반기 (6월까지) 근로소득만 있다면! 근로장려금 무조건 신청하세요🫶🏻 신청대상, 자주 묻는 질문 깔끔하게 정리해두었으니 게시물 피드 참고해주세요🤍 🖤도움이 되셨다면 좋아요&공유 부탁드립니다🫶🏻 🖤팔로우 하시고 돈 되는 세금 정보 받아가세요💸 #클립챌린저 #클립크리에이터 #정부지원 #근로장려금 #세무사"
+                        - generic [ref=e581]: 세무아나
+                    - 'link "근로장려금 반기 신청 시작! 신청 기간 및 자격 요건, 지급액에 대해 간단하게 알아봅니다. #근로장려금#근로장려금2026#근로장려금반기#근로장려금반기신청#근로장려금조건#근로장려금자격#근로장려금요건#근로장려금지급액#클립크리에이터#재테크#재테크비법 쏙쏘기" [ref=e583] [cursor=pointer]':
+                      - /url: "https://m.naver.com/shorts?serviceType=CLIP&mediaType=VOD&seedMediaId=6665AD63B936867B398F1C02FFD5076C6EFC&recType=CLIP_PC&recId={%22targetProfileId%22:%22qs0bxXQdne13ongJpjwD%22,%22open%22:true}"
+                      - generic [ref=e585]:
+                        - generic [ref=e586]: "근로장려금 반기 신청 시작! 신청 기간 및 자격 요건, 지급액에 대해 간단하게 알아봅니다. #근로장려금#근로장려금2026#근로장려금반기#근로장려금반기신청#근로장려금조건#근로장려금자격#근로장려금요건#근로장려금지급액#클립크리에이터#재테크#재테크비법"
+                        - generic [ref=e587]: 쏙쏘기
+                  - button "다음" [ref=e588] [cursor=pointer]:
+                    - generic [ref=e589]: 다음
+                - generic [ref=e591]:
+                  - text: 클립 콘텐츠 안내
+                  - button "이 정보가 표시된 이유" [ref=e592] [cursor=pointer]:
+                    - generic [ref=e593]: 이 정보가 표시된 이유
+          - generic [ref=e594]:
+            - generic [ref=e599]:
+              - generic [ref=e600]:
+                - generic [ref=e601]:
+                  - link "국세청 www.nts.go.kr›nts" [ref=e602] [cursor=pointer]:
+                    - /url: https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=238977&mi=40397
+                    - generic [ref=e604]:
+                      - generic [ref=e609]: 국세청
+                      - generic [ref=e613]: www.nts.go.kr›nts
+                  - button "옵션 메뉴 열기" [ref=e615] [cursor=pointer]:
+                    - img [ref=e616]
+                - generic [ref=e620]:
+                  - link "신청기간 및 방법" [ref=e622] [cursor=pointer]:
+                    - /url: https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=238977&mi=40397
+                    - generic [ref=e623]: 신청기간 및 방법
+                  - link "근로소득만 있는 자는 반기신청과 정기신청을 선택하여 신청할 수 있고, 사업 또는 종교인 소득이 있는 자는 정기신청을 하셔야 합니다." [ref=e625] [cursor=pointer]:
+                    - /url: https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=238977&mi=40397
+                    - generic [ref=e626]:
+                      - mark [ref=e627]: 근로
+                      - text: 소득만 있는 자는 반기신청과 정기신청을 선택하여 신청할 수 있고, 사업 또는 종교인 소득이 있는 자는 정기신청을 하셔야 합니다.
+              - generic [ref=e628]:
+                - generic [ref=e630]:
+                  - link "국세청&gt;국세정책/제도&gt;<mark>근로</mark>∙자녀<mark>장려금</mark>&gt;<mark>근로장려금</mark> 소개의 이미지" [ref=e631] [cursor=pointer]:
+                    - /url: https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7781&mi=2450
+                    - img "국세청&gt;국세정책/제도&gt;<mark>근로</mark>∙자녀<mark>장려금</mark>&gt;<mark>근로장려금</mark> 소개의 이미지" [ref=e633]
+                  - link "국세청>국세정책/제도>근로∙자녀장려금>근로장려금 소개" [ref=e635] [cursor=pointer]:
+                    - /url: https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7781&mi=2450
+                    - generic [ref=e636]:
+                      - text: 국세청>국세정책/제도>
+                      - mark [ref=e637]: 근로
+                      - text: ∙자녀
+                      - mark [ref=e638]: 장려금
+                      - text: ">"
+                      - mark [ref=e639]: 근로장려금
+                      - text: 소개
+                  - generic [ref=e641]:
+                    - text: 일은 하지만 소득이 적어 생활이 어려운
+                    - mark [ref=e642]: 근로
+                    - text: 자, 사업자(전문직 제외)가구에 대하여 가구원 구성과
+                    - mark [ref=e643]: 근로
+                    - text: 소득, 사업소득 또는 종교인소득에 따라 산정된
+                    - mark [ref=e644]: 근로장려금
+                    - text: 을 지급함으로써
+                    - mark [ref=e645]: 근로
+                    - text: 를
+                    - mark [ref=e646]: 장려
+                    - text: 하고 실질소득을
+                    - mark [ref=e647]: 지원
+                    - text: 하는
+                    - mark [ref=e648]: 근로
+                    - text: 연계형 소득
+                    - mark [ref=e649]: 지원
+                    - text: 제도입니다.
+                    - mark [ref=e650]: 근로장려금
+                    - text: 은 가구원 구성에 따라 정한 부부합산 총급여액 등을 기준으로 지급액을 산정합니다.
+                - link "관련문서 더보기" [ref=e652] [cursor=pointer]:
+                  - /url: "?page=2&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88+site%3Awww.nts.go.kr&qvt=0&ssc=tab.ur.all"
+                  - generic [ref=e653]: 관련문서 더보기
+                  - img [ref=e654]
+            - generic [ref=e661]:
+              - generic [ref=e662]:
+                - link "국세청 홈택스 hometax.go.kr" [ref=e663] [cursor=pointer]:
+                  - /url: https://hometax.go.kr/
+                  - generic [ref=e665]:
+                    - generic [ref=e670]: 국세청 홈택스
+                    - generic [ref=e674]: hometax.go.kr
+                - button "옵션 메뉴 열기" [ref=e676] [cursor=pointer]:
+                  - img [ref=e677]
+              - generic [ref=e681]:
+                - link "국세청 홈택스" [ref=e683] [cursor=pointer]:
+                  - /url: https://hometax.go.kr/
+                  - generic [ref=e684]: 국세청 홈택스
+                - link "조회·발급, 민원증명, 신청·제출, 신고·납부, 상담·제보, 연말정산, 전자세금계산서, 전자불복청구, 현금영수증." [ref=e686] [cursor=pointer]:
+                  - /url: https://hometax.go.kr/
+                  - generic [ref=e687]: 조회·발급, 민원증명, 신청·제출, 신고·납부, 상담·제보, 연말정산, 전자세금계산서, 전자불복청구, 현금영수증.
+            - generic [ref=e693]:
+              - generic [ref=e694]:
+                - link "나무위키 namu.wiki›근로장려세제" [ref=e695] [cursor=pointer]:
+                  - /url: https://namu.wiki/w/%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EC%84%B8%EC%A0%9C
+                  - generic [ref=e697]:
+                    - generic [ref=e702]: 나무위키
+                    - generic [ref=e706]: namu.wiki›근로장려세제
+                - button "옵션 메뉴 열기" [ref=e708] [cursor=pointer]:
+                  - img [ref=e709]
+              - generic [ref=e713]:
+                - link "근로장려세제 - 나무위키" [ref=e715] [cursor=pointer]:
+                  - /url: https://namu.wiki/w/%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EC%84%B8%EC%A0%9C
+                  - generic [ref=e716]:
+                    - mark [ref=e717]: 근로장려
+                    - text: 세제 - 나무위키
+                - link "勤勞奬勵稅制 / Earned Income Tax Credit(EITC) 흔히 근로장려금으로 불린다. 국가가 저소득층 근로자 가정에게 일정 기준에 따라 산정된 근로장려금을 지급함으로써 근로를 장려하고 생계를 지원하는 근로연계형 소득지원 제도이다." [ref=e719] [cursor=pointer]:
+                  - /url: https://namu.wiki/w/%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EC%84%B8%EC%A0%9C
+                  - generic [ref=e720]:
+                    - text: 勤勞奬勵稅制 / Earned Income Tax Credit(EITC) 흔히
+                    - mark [ref=e721]: 근로장려금
+                    - text: 으로 불린다. 국가가 저소득층
+                    - mark [ref=e722]: 근로
+                    - text: 자 가정에게 일정 기준에 따라 산정된
+                    - mark [ref=e723]: 근로장려금
+                    - text: 을 지급함으로써
+                    - mark [ref=e724]: 근로
+                    - text: 를
+                    - mark [ref=e725]: 장려
+                    - text: 하고 생계를
+                    - mark [ref=e726]: 지원
+                    - text: 하는
+                    - mark [ref=e727]: 근로
+                    - text: 연계형 소득
+                    - mark [ref=e728]: 지원
+                    - text: 제도이다.
+            - generic [ref=e734]:
+              - generic [ref=e735]:
+                - link "네이버 지식백과 terms.naver.com" [ref=e736] [cursor=pointer]:
+                  - /url: https://terms.naver.com/entry.naver?docId=931608&cid=43667&categoryId=43667
+                  - generic [ref=e738]:
+                    - generic [ref=e743]: 네이버 지식백과
+                    - generic [ref=e747]: terms.naver.com
+                - button "옵션 메뉴 열기" [ref=e749] [cursor=pointer]:
+                  - img [ref=e750]
+              - generic [ref=e754]:
+                - link "근로장려금 - 시사상식사전" [ref=e756] [cursor=pointer]:
+                  - /url: https://terms.naver.com/entry.naver?docId=931608&cid=43667&categoryId=43667
+                  - generic [ref=e757]:
+                    - mark [ref=e758]: 근로장려금
+                    - text: "- 시사상식사전"
+                - link "국가가 저소득 근로자 또는 사업자 가구에 대해 소득에 따라 산정된 장려금을 지원해 주는 근로연계형 소득지원제도로, 2009년부터 실시됐다. 일정 수준까지 근로·사업·종교인 소득이 증가하면 근로장려금도 증가하도록 설계되어 있어 제도 자체에 근로를 유인하는 기능이 내재되어 있다." [ref=e760] [cursor=pointer]:
+                  - /url: https://terms.naver.com/entry.naver?docId=931608&cid=43667&categoryId=43667
+                  - generic [ref=e761]:
+                    - text: 국가가 저소득
+                    - mark [ref=e762]: 근로
+                    - text: 자 또는 사업자 가구에 대해 소득에 따라 산정된
+                    - mark [ref=e763]: 장려금
+                    - text: 을
+                    - mark [ref=e764]: 지원
+                    - text: 해 주는
+                    - mark [ref=e765]: 근로
+                    - text: 연계형 소득
+                    - mark [ref=e766]: 지원
+                    - text: 제도로, 2009년부터 실시됐다. 일정 수준까지
+                    - mark [ref=e767]: 근로
+                    - text: ·사업·종교인 소득이 증가하면
+                    - mark [ref=e768]: 근로장려금
+                    - text: 도 증가하도록 설계되어 있어 제도 자체에
+                    - mark [ref=e769]: 근로
+                    - text: 를 유인하는 기능이 내재되어 있다.
+            - generic [ref=e775]:
+              - generic [ref=e776]:
+                - link "복지로 www.bokjiro.go.kr›ssis-tbu" [ref=e777] [cursor=pointer]:
+                  - /url: https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001148
+                  - generic [ref=e779]:
+                    - generic [ref=e784]: 복지로
+                    - generic [ref=e788]: www.bokjiro.go.kr›ssis-tbu
+                - button "옵션 메뉴 열기" [ref=e790] [cursor=pointer]:
+                  - img [ref=e791]
+              - generic [ref=e795]:
+                - link "근로·자녀장려금 - 복지로" [ref=e797] [cursor=pointer]:
+                  - /url: https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001148
+                  - generic [ref=e798]:
+                    - mark [ref=e799]: 근로
+                    - text: ·자녀
+                    - mark [ref=e800]: 장려금
+                    - text: "- 복지로"
+                - link "소득이 적어 생활이 어려운 자영업자 또는 근로자 가구에 근로장려금과 자녀장려금을 지급하여 근로 의욕을 더하고 소득과 자녀양육비를 지원합니다." [ref=e802] [cursor=pointer]:
+                  - /url: https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001148
+                  - generic [ref=e803]:
+                    - text: 소득이 적어 생활이 어려운 자영업자 또는
+                    - mark [ref=e804]: 근로
+                    - text: 자 가구에
+                    - mark [ref=e805]: 근로장려금
+                    - text: 과 자녀
+                    - mark [ref=e806]: 장려금
+                    - text: 을 지급하여
+                    - mark [ref=e807]: 근로
+                    - text: 의욕을 더하고 소득과 자녀양육비를
+                    - mark [ref=e808]: 지원
+                    - text: 합니다.
+            - generic [ref=e814]:
+              - generic [ref=e815]:
+                - generic [ref=e816]:
+                  - link "국세청" [ref=e818] [cursor=pointer]:
+                    - /url: https://www.youtube.com/channel/UCVTdK_EozBDQ7ICMPJdbpzQ
+                    - img "국세청" [ref=e821]
+                  - generic [ref=e822]:
+                    - link "국세청" [ref=e824] [cursor=pointer]:
+                      - /url: https://www.youtube.com/channel/UCVTdK_EozBDQ7ICMPJdbpzQ
+                      - generic [ref=e825]: 국세청
+                    - img [ref=e826]
+                  - generic [ref=e828]:
+                    - link "YouTube" [ref=e831] [cursor=pointer]:
+                      - /url: https://www.youtube.com
+                      - generic [ref=e832]: YouTube
+                    - generic [ref=e835]: 2026.02.26.
+                - button "옵션 메뉴 열기" [ref=e837] [cursor=pointer]:
+                  - img [ref=e838]
+              - generic [ref=e842]:
+                - generic [ref=e843]:
+                  - 'link "2026년 3월 근로장려금 신청요건(2025년 하반기분) #근로장려금 #국세청 #지원금" [ref=e844] [cursor=pointer]':
+                    - /url: https://www.youtube.com/watch?v=Mar8TyXXBIY
+                    - generic [ref=e845]:
+                      - text: 2026년 3월
+                      - mark [ref=e846]: 근로장려금
+                      - text: "신청요건(2025년 하반기분) #"
+                      - mark [ref=e847]: 근로장려금
+                      - text: "#국세청 #"
+                      - mark [ref=e848]: 지원금
+                  - link "근로장려금 반기신청 지급제도는 근로소득자에 한하여 해당연도 추정 및 발생소득을 기준으로 장려금을 미리 지급하고, 다음 해 연간소득으로 정산하는 제도입니다. 근로장려금 반기 신청기간은 3월 1일부터 3월 16일까지이며, 심사 후 6.25.(목) 지급예정입니다. 신청요건을 잘 확인하시고 신청하시기 바랍니다." [ref=e849] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=Mar8TyXXBIY
+                    - generic [ref=e850]:
+                      - mark [ref=e851]: 근로장려금
+                      - text: 반기신청 지급제도는
+                      - mark [ref=e852]: 근로
+                      - text: 소득자에 한하여 해당연도 추정 및 발생소득을 기준으로
+                      - mark [ref=e853]: 장려금
+                      - text: 을 미리 지급하고, 다음 해 연간소득으로 정산하는 제도입니다.
+                      - mark [ref=e854]: 근로장려금
+                      - text: 반기 신청기간은 3월 1일부터 3월 16일까지이며, 심사 후 6.25.(목) 지급예정입니다. 신청요건을 잘 확인하시고 신청하시기 바랍니다.
+                - 'link "2026년 3월 근로장려금 신청요건(2025년 하반기분) #근로장려금 #국세청 #지원금 04:30" [ref=e856] [cursor=pointer]':
+                  - /url: https://www.youtube.com/watch?v=Mar8TyXXBIY
+                  - 'img "2026년 3월 근로장려금 신청요건(2025년 하반기분) #근로장려금 #국세청 #지원금" [ref=e857]'
+                  - generic [ref=e858]:
+                    - img [ref=e860]
+                    - generic [ref=e863]: 04:30
+            - generic [ref=e869]:
+              - generic [ref=e870]:
+                - generic [ref=e871]:
+                  - link "국세청" [ref=e873] [cursor=pointer]:
+                    - /url: https://www.youtube.com/channel/UCVTdK_EozBDQ7ICMPJdbpzQ
+                    - img "국세청" [ref=e876]
+                  - generic [ref=e877]:
+                    - link "국세청" [ref=e879] [cursor=pointer]:
+                      - /url: https://www.youtube.com/channel/UCVTdK_EozBDQ7ICMPJdbpzQ
+                      - generic [ref=e880]: 국세청
+                    - img [ref=e881]
+                  - generic [ref=e883]:
+                    - link "YouTube" [ref=e886] [cursor=pointer]:
+                      - /url: https://www.youtube.com
+                      - generic [ref=e887]: YouTube
+                    - generic [ref=e890]: 2026.02.26.
+                - button "옵션 메뉴 열기" [ref=e892] [cursor=pointer]:
+                  - img [ref=e893]
+              - generic [ref=e897]:
+                - generic [ref=e898]:
+                  - 'link "2026년 3월 근로장려금 미안내자 신청방법(2025년 하반기분) #근로장려금 #국세청 #미안내자신청방법" [ref=e899] [cursor=pointer]':
+                    - /url: https://www.youtube.com/watch?v=g1pnnFdpUXM
+                    - generic [ref=e900]:
+                      - text: 2026년 3월
+                      - mark [ref=e901]: 근로장려금
+                      - text: "미안내자 신청방법(2025년 하반기분) #"
+                      - mark [ref=e902]: 근로장려금
+                      - text: "#국세청 #미안내자신청방법"
+                  - link "2026년 3월 근로장려금 반기신청(2025년 귀속 하반기분)에 대해 안내문을 받지 못한 경우 확인하시고 신청하시기 바랍니다. 0:00 미안내자 신청방법 안내 0:13 모바일앱(손택스) 신청방법 5:06 홈택스(PC) 신청방법 10:25 '근로소득 지급확인서' 관련 유의사항" [ref=e903] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=g1pnnFdpUXM
+                    - generic [ref=e904]:
+                      - text: 2026년 3월
+                      - mark [ref=e905]: 근로장려금
+                      - text: 반기신청(2025년 귀속 하반기분)에 대해 안내문을 받지 못한 경우 확인하시고 신청하시기 바랍니다. 0:00 미안내자 신청방법 안내 0:13 모바일앱(손택스) 신청방법 5:06 홈택스(PC) 신청방법 10:25 '
+                      - mark [ref=e906]: 근로
+                      - text: 소득 지급확인서' 관련 유의사항
+                - 'link "2026년 3월 근로장려금 미안내자 신청방법(2025년 하반기분) #근로장려금 #국세청 #미안내자신청방법 10:40" [ref=e908] [cursor=pointer]':
+                  - /url: https://www.youtube.com/watch?v=g1pnnFdpUXM
+                  - 'img "2026년 3월 근로장려금 미안내자 신청방법(2025년 하반기분) #근로장려금 #국세청 #미안내자신청방법" [ref=e909]'
+                  - generic [ref=e910]:
+                    - img [ref=e912]
+                    - generic [ref=e915]: 10:40
+            - generic [ref=e921]:
+              - generic [ref=e922]:
+                - generic [ref=e923]:
+                  - link [ref=e925] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/cafe1535
+                  - generic [ref=e928]:
+                    - link "복지 아는게 힘" [ref=e930] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/cafe1535
+                      - generic [ref=e931]: 복지 아는게 힘
+                    - img [ref=e932]
+                  - generic [ref=e937]: 2주 전
+                - button "옵션 메뉴 열기" [ref=e939] [cursor=pointer]:
+                  - img [ref=e940]
+              - generic [ref=e946]:
+                - link "근로장려금 예상 금액 어디서 봐요?" [ref=e947] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/cafe1535/1820852?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNhZmUxNTM1IiwiYXJ0aWNsZUlkIjoxODIwODUyLCJpc3N1ZWRBdCI6MTc3ODU2NTQzMjE4MH0.Oct5-BMo59crsA0rinrEeAqBwI0Ud3AzTFajx6Mc7IE
+                  - generic [ref=e948]:
+                    - mark [ref=e949]: 근로장려금
+                    - text: 예상 금액 어디서 봐요?
+                - link "- 가구원수 = 명 - 부양의무자 = - 재산(금융&일반,부동산) = 만원 - 소득(양육비포함) = 만원/월 - 소득발생자 나이 = - 부채 = 만원 - 자동차(배기량,연식,차량가액 등) = - 거주지역[1급지(서울)/2급지(경기)/3급지(광역·세종·창원)/4급지(그 외 지역) = - 현재 받고 있는 복지 또는 신청하려는 복지 = 근로장려금 카톡 안와서 국세청앱으로 확인하니 대상자로 뜨고 2025년 총수입..." [ref=e951] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/cafe1535/1820852?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNhZmUxNTM1IiwiYXJ0aWNsZUlkIjoxODIwODUyLCJpc3N1ZWRBdCI6MTc3ODU2NTQzMjE4MH0.Oct5-BMo59crsA0rinrEeAqBwI0Ud3AzTFajx6Mc7IE
+                  - generic [ref=e952]:
+                    - text: "- 가구원수 = 명 - 부양의무자 = - 재산(금융&일반,부동산) = 만원 - 소득(양육비포함) = 만원/월 - 소득발생자 나이 = - 부채 = 만원 - 자동차(배기량,연식,차량가액 등) = - 거주지역[1급지(서울)/2급지(경기)/3급지(광역·세종·창원)/4급지(그 외 지역) = - 현재 받고 있는 복지 또는 신청하려는 복지 ="
+                    - mark [ref=e953]: 근로장려금
+                    - text: 카톡 안와서 국세청앱으로 확인하니 대상자로 뜨고 2025년 총수입...
+              - generic [ref=e954]:
+                - generic [ref=e955]:
+                  - generic [ref=e957]:
+                    - link "RE 모바일 손택스 로그인 -> 좌측 하단 MY 홈텍스 클릭 -> 하단 스크롤 후 근로 .자녀장려금 , 학자금 상환 클릭 ->근로.자녀장려금 결정내역 클" [ref=e958] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/cafe1535/1820852?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNhZmUxNTM1IiwiYXJ0aWNsZUlkIjoxODIwODUyLCJpc3N1ZWRBdCI6MTc3ODU2NTQzMjE4MH0.Oct5-BMo59crsA0rinrEeAqBwI0Ud3AzTFajx6Mc7IE
+                      - generic [ref=e961]:
+                        - generic [ref=e962]: RE
+                        - generic [ref=e963]:
+                          - text: 모바일 손택스 로그인 -> 좌측 하단 MY 홈텍스 클릭 -> 하단 스크롤 후
+                          - mark [ref=e964]: 근로
+                          - text: .자녀
+                          - mark [ref=e965]: 장려금
+                          - text: ", 학자금 상환 클릭 ->"
+                          - mark [ref=e966]: 근로
+                          - text: .자녀
+                          - mark [ref=e967]: 장려금
+                          - text: 결정내역 클
+                    - link "RE 자동신청되서 홈택스들어가 신청조회해보니 근장 금액떠있더라고용" [ref=e968] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/cafe1535/1820852?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNhZmUxNTM1IiwiYXJ0aWNsZUlkIjoxODIwODUyLCJpc3N1ZWRBdCI6MTc3ODU2NTQzMjE4MH0.Oct5-BMo59crsA0rinrEeAqBwI0Ud3AzTFajx6Mc7IE
+                      - generic [ref=e971]:
+                        - generic [ref=e972]: RE
+                        - text: 자동신청되서 홈택스들어가 신청조회해보니 근장 금액떠있더라고용
+                    - link "RE 정기 장려금 신청하셨다는거죠? 저는 대상이 아니라떠요.. 기타소득 확인은 되는데.." [ref=e973] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/cafe1535/1820852?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNhZmUxNTM1IiwiYXJ0aWNsZUlkIjoxODIwODUyLCJpc3N1ZWRBdCI6MTc3ODU2NTQzMjE4MH0.Oct5-BMo59crsA0rinrEeAqBwI0Ud3AzTFajx6Mc7IE
+                      - generic [ref=e976]:
+                        - generic [ref=e977]: RE
+                        - generic [ref=e978]:
+                          - text: 정기
+                          - mark [ref=e979]: 장려금
+                          - text: 신청하셨다는거죠? 저는 대상이 아니라떠요.. 기타소득 확인은 되는데..
+                    - link "RE 그러게요 왜이렇게 차이나는지..금액 기준은 무슨법령에 나와잇다던데 뭔지모르겠고" [ref=e980] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/cafe1535/1820852?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNhZmUxNTM1IiwiYXJ0aWNsZUlkIjoxODIwODUyLCJpc3N1ZWRBdCI6MTc3ODU2NTQzMjE4MH0.Oct5-BMo59crsA0rinrEeAqBwI0Ud3AzTFajx6Mc7IE
+                      - generic [ref=e983]:
+                        - generic [ref=e984]: RE
+                        - text: 그러게요 왜이렇게 차이나는지..금액 기준은 무슨법령에 나와잇다던데 뭔지모르겠고
+                  - button "다음 버튼" [ref=e985] [cursor=pointer]:
+                    - img [ref=e987]
+                - generic [ref=e991]:
+                  - link "근로장려금 신청시 소득기준이 궁금해요" [ref=e992] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/cafe1535/1823829?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNhZmUxNTM1IiwiYXJ0aWNsZUlkIjoxODIzODI5LCJpc3N1ZWRBdCI6MTc3ODU2NTQzMjE4MH0.N9pCPabA0IvsNFvL4HyyLxErQ_tKimAddOf1qkEoo2I
+                    - generic [ref=e993]:
+                      - mark [ref=e994]: 근로장려금
+                      - text: 신청시 소득기준이 궁금해요
+                  - link "근로장려금 산정액 기준이요" [ref=e995] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/cafe1535/1822137?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNhZmUxNTM1IiwiYXJ0aWNsZUlkIjoxODIyMTM3LCJpc3N1ZWRBdCI6MTc3ODU2NTQzMjE4MH0.GBOZPnErYS7HtB3r52PcVy7Z67Re89v8S5zi6V1o8KY
+                    - generic [ref=e996]:
+                      - mark [ref=e997]: 근로장려금
+                      - text: 산정액 기준이요
+            - generic [ref=e1002]:
+              - generic [ref=e1003]:
+                - generic [ref=e1006]:
+                  - link "네이버 지식iN" [ref=e1008] [cursor=pointer]:
+                    - /url: https://kin.naver.com/qna/detail.naver?dirId=40301&docId=493203450&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI
+                    - img "네이버 지식iN" [ref=e1011]
+                  - link "네이버 지식iN" [ref=e1014] [cursor=pointer]:
+                    - /url: https://kin.naver.com/qna/detail.naver?dirId=40301&docId=493203450&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI
+                    - generic [ref=e1015]: 네이버 지식iN
+                  - generic [ref=e1018]: 1주 전
+                - button "옵션 메뉴 열기" [ref=e1021] [cursor=pointer]:
+                  - img [ref=e1022]
+              - generic [ref=e1026]:
+                - generic [ref=e1027]:
+                  - generic [ref=e1028]:
+                    - img [ref=e1029]
+                    - link "근로장려금 및 종합 소득세 신고" [ref=e1032] [cursor=pointer]:
+                      - /url: https://kin.naver.com/qna/detail.naver?dirId=40301&docId=493203450&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI
+                      - generic [ref=e1033]:
+                        - mark [ref=e1034]: 근로장려금
+                        - text: 및 종합 소득세 신고
+                  - link "해당 문자를 받았습니다. 1. 근로장려금 받으려면 종합 소득세 신고를 해야 하나요? 2. 종합 소득세 신고는 어디서 하나요? 3. 약국에서 일하고 월급말고 따로 수입은 없는데... 직장인 월급도 소득세 신고를 해야 하는 건가요?" [ref=e1035] [cursor=pointer]:
+                    - /url: https://kin.naver.com/qna/detail.naver?dirId=40301&docId=493203450&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI
+                    - generic [ref=e1036]:
+                      - text: 해당 문자를 받았습니다. 1.
+                      - mark [ref=e1037]: 근로장려금
+                      - text: 받으려면 종합 소득세 신고를 해야 하나요? 2. 종합 소득세 신고는 어디서 하나요? 3. 약국에서 일하고 월급말고 따로 수입은 없는데... 직장인 월급도 소득세 신고를 해야 하는 건가요?
+                - generic [ref=e1039]:
+                  - link [ref=e1041] [cursor=pointer]:
+                    - /url: https://kin.naver.com/qna/detail.naver?dirId=40301&docId=493203450&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI
+                    - img [ref=e1043]
+                  - link "안녕하세요, 네이버지식인 전문상담위원 신선호 세무사입니다. 사업소득자는 종합소득세신고해야 근로 장여금을 신청할 수 있지 만, 님은 근로소득자 이므로 국세청 알림 내용과 같이 5월1일 자동 신청되므로 국세청에서 심사하여 요건이 충족되면 8월 27 지급 합니다." [ref=e1044] [cursor=pointer]:
+                    - /url: https://kin.naver.com/qna/detail.naver?answerNo=3&dirId=40301&docId=493203450&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI#answer3
+                    - generic [ref=e1045]: 안녕하세요, 네이버지식인 전문상담위원 신선호 세무사입니다. 사업소득자는 종합소득세신고해야 근로 장여금을 신청할 수 있지 만, 님은 근로소득자 이므로 국세청 알림 내용과 같이 5월1일 자동 신청되므로 국세청에서 심사하여 요건이 충족되면 8월 27 지급 합니다.
+                  - generic [ref=e1047]:
+                    - link "alt" [ref=e1049] [cursor=pointer]:
+                      - /url: https://kin.naver.com/search/profileLink?answerNo=3&dirId=40301&docId=493203450&kinsrch_src=pc_nx_urb
+                      - img "alt" [ref=e1052]
+                    - generic [ref=e1053]:
+                      - link "신선호" [ref=e1055] [cursor=pointer]:
+                        - /url: https://kin.naver.com/search/profileLink?answerNo=3&dirId=40301&docId=493203450&kinsrch_src=pc_nx_urb
+                        - generic [ref=e1056]: 신선호
+                      - generic [ref=e1057]:
+                        - link "세무사" [ref=e1059] [cursor=pointer]:
+                          - /url: https://kin.naver.com/search/profileLink?answerNo=3&dirId=40301&docId=493203450&kinsrch_src=pc_nx_urb
+                          - generic [ref=e1060]: 세무사
+                        - generic [ref=e1061]: 세무사
+                    - generic [ref=e1064]: 1주 전
+            - generic [ref=e1069]:
+              - generic [ref=e1070]:
+                - generic [ref=e1073]:
+                  - link "네이버 지식iN" [ref=e1075] [cursor=pointer]:
+                    - /url: https://kin.naver.com/qna/detail.naver?dirId=40306&docId=493103042&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI
+                    - img "네이버 지식iN" [ref=e1078]
+                  - link "네이버 지식iN" [ref=e1081] [cursor=pointer]:
+                    - /url: https://kin.naver.com/qna/detail.naver?dirId=40306&docId=493103042&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI
+                    - generic [ref=e1082]: 네이버 지식iN
+                  - generic [ref=e1085]: 2주 전
+                - button "옵션 메뉴 열기" [ref=e1088] [cursor=pointer]:
+                  - img [ref=e1089]
+              - generic [ref=e1093]:
+                - generic [ref=e1094]:
+                  - generic [ref=e1095]:
+                    - img [ref=e1096]
+                    - link "근로장려금 받을 수 있을까요?" [ref=e1099] [cursor=pointer]:
+                      - /url: https://kin.naver.com/qna/detail.naver?dirId=40306&docId=493103042&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI
+                      - generic [ref=e1100]:
+                        - mark [ref=e1101]: 근로장려금
+                        - text: 받을 수 있을까요?
+                  - link "안녕하세요 제가 정식계약을 하지 않고 재택 하청 업무를 하고 있는데요 지인이 회사에 일을 받아서 그 일의 일부를 제가 하고 지인에게 돈을 받고 있는 구조입니다 1년정도 되었어요 지인이 제게 주는 돈은 따로 3.3퍼 신고를 하고 있지 않고 저도 안하고 있습니다 이걸 제가 5월 종소세때 신고하면 지인의 회사에 알려지나요?? 그리고 신고하려면 지인이 사업자 등록을 해야하나요?" [ref=e1102] [cursor=pointer]:
+                    - /url: https://kin.naver.com/qna/detail.naver?dirId=40306&docId=493103042&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI
+                    - generic [ref=e1103]: 안녕하세요 제가 정식계약을 하지 않고 재택 하청 업무를 하고 있는데요 지인이 회사에 일을 받아서 그 일의 일부를 제가 하고 지인에게 돈을 받고 있는 구조입니다 1년정도 되었어요 지인이 제게 주는 돈은 따로 3.3퍼 신고를 하고 있지 않고 저도 안하고 있습니다 이걸 제가 5월 종소세때 신고하면 지인의 회사에 알려지나요?? 그리고 신고하려면 지인이 사업자 등록을 해야하나요?
+                - generic [ref=e1105]:
+                  - link "안녕하세요, 네이버지식인 전문상담위원 신선호 세무사입니다. 3.3% 금액을 원천징수하는 사업소득자는 종합소득세확정신고 해야 근로장려금신청할 수 있습니다. 님과 같이 지급자가 3.3%금액을 원천징수하지않아 국세청에 소 득자료를 제출하지않으면 종합소득세신고하기가 어려워 근로장 려금신청도 어렵습니다." [ref=e1106] [cursor=pointer]:
+                    - /url: https://kin.naver.com/qna/detail.naver?answerNo=2&dirId=40306&docId=493103042&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI#answer2
+                    - generic [ref=e1107]: 안녕하세요, 네이버지식인 전문상담위원 신선호 세무사입니다. 3.3% 금액을 원천징수하는 사업소득자는 종합소득세확정신고 해야 근로장려금신청할 수 있습니다. 님과 같이 지급자가 3.3%금액을 원천징수하지않아 국세청에 소 득자료를 제출하지않으면 종합소득세신고하기가 어려워 근로장 려금신청도 어렵습니다.
+                  - generic [ref=e1109]:
+                    - link "alt" [ref=e1111] [cursor=pointer]:
+                      - /url: https://kin.naver.com/search/profileLink?answerNo=2&dirId=40306&docId=493103042&kinsrch_src=pc_nx_urb
+                      - img "alt" [ref=e1114]
+                    - generic [ref=e1115]:
+                      - link "신선호" [ref=e1117] [cursor=pointer]:
+                        - /url: https://kin.naver.com/search/profileLink?answerNo=2&dirId=40306&docId=493103042&kinsrch_src=pc_nx_urb
+                        - generic [ref=e1118]: 신선호
+                      - generic [ref=e1119]:
+                        - link "세무사" [ref=e1121] [cursor=pointer]:
+                          - /url: https://kin.naver.com/search/profileLink?answerNo=2&dirId=40306&docId=493103042&kinsrch_src=pc_nx_urb
+                          - generic [ref=e1122]: 세무사
+                        - generic [ref=e1123]: 세무사
+                    - generic [ref=e1126]: 2주 전
+            - generic [ref=e1131]:
+              - generic [ref=e1132]:
+                - generic [ref=e1135]:
+                  - link "네이버 지식iN" [ref=e1137] [cursor=pointer]:
+                    - /url: https://kin.naver.com/qna/detail.naver?dirId=60105&docId=493035140&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI
+                    - img "네이버 지식iN" [ref=e1140]
+                  - link "네이버 지식iN" [ref=e1143] [cursor=pointer]:
+                    - /url: https://kin.naver.com/qna/detail.naver?dirId=60105&docId=493035140&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI
+                    - generic [ref=e1144]: 네이버 지식iN
+                  - generic [ref=e1147]: 3주 전
+                - button "옵션 메뉴 열기" [ref=e1150] [cursor=pointer]:
+                  - img [ref=e1151]
+              - generic [ref=e1155]:
+                - generic [ref=e1156]:
+                  - generic [ref=e1157]:
+                    - img [ref=e1158]
+                    - link "근로장려금 신청대상에서 제외되는 고임금 근로자의 범위는 어떻게 되나요?" [ref=e1161] [cursor=pointer]:
+                      - /url: https://kin.naver.com/qna/detail.naver?dirId=60105&docId=493035140&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI
+                      - generic [ref=e1162]:
+                        - mark [ref=e1163]: 근로장려금
+                        - text: 신청대상에서 제외되는 고임금
+                        - mark [ref=e1164]: 근로
+                        - text: 자의 범위는 어떻게 되나요?
+                  - link "근로장려금 신청대상에서 제외되는 고임금 근로 자의 범위는 어떻게 되나요?" [ref=e1165] [cursor=pointer]:
+                    - /url: https://kin.naver.com/qna/detail.naver?dirId=60105&docId=493035140&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI
+                    - generic [ref=e1166]:
+                      - mark [ref=e1167]: 근로장려금
+                      - text: 신청대상에서 제외되는 고임금
+                      - mark [ref=e1168]: 근로
+                      - text: 자의 범위는 어떻게 되나요?
+                - generic [ref=e1170]:
+                  - 'link "항상 국세행정에 대한 관심에 감사드립니다. 귀하의 민원요지는 \"근로장려금 신청대상에서 제외되는 고임금 근로자의 범위\"에 대한 문의로 확인됩니다. 근로장려금 신청대상에서 제외(배우자 포함)되는 고임금 근로자란 해당 소득세 과세기간 종료일 현재 계속 근무하는 상용근로자(일용근로자 제외)로서, 월 평균 근로소득이 500만원 이상인 사람을 말합니다. 장려세제는 가구단위로 적용되므로 본인 또는 배우자가 고임금 근로자인 경우에는 둘 다 신청할 수 없습니다. 앞으로도 국세행정에 대한 지속적인 관심과 협조를 보내주시기 바라며, 궁금하신 사항은 국세청 세미래콜센터(국번없이 126)로 문의하시면 친절하게 상담해 드리도록 하겠습니다. 감사합니다. 관련법령 : 조세특례제한법 시행령 제100조의2(부양자녀의 범위 및 근로장려금의 신청대상) 작성부서 : 국세청 대구지방국세청 구미세무서 납세자보호담당관 | 126" [ref=e1171] [cursor=pointer]':
+                    - /url: https://kin.naver.com/qna/detail.naver?answerNo=1&dirId=60105&docId=493035140&kinsrch_src=pc_nx_urb&qb=6re866Gc7J6l66Ck6riI#answer1
+                    - generic [ref=e1172]: "항상 국세행정에 대한 관심에 감사드립니다. 귀하의 민원요지는 \"근로장려금 신청대상에서 제외되는 고임금 근로자의 범위\"에 대한 문의로 확인됩니다. 근로장려금 신청대상에서 제외(배우자 포함)되는 고임금 근로자란 해당 소득세 과세기간 종료일 현재 계속 근무하는 상용근로자(일용근로자 제외)로서, 월 평균 근로소득이 500만원 이상인 사람을 말합니다. 장려세제는 가구단위로 적용되므로 본인 또는 배우자가 고임금 근로자인 경우에는 둘 다 신청할 수 없습니다. 앞으로도 국세행정에 대한 지속적인 관심과 협조를 보내주시기 바라며, 궁금하신 사항은 국세청 세미래콜센터(국번없이 126)로 문의하시면 친절하게 상담해 드리도록 하겠습니다. 감사합니다. 관련법령 : 조세특례제한법 시행령 제100조의2(부양자녀의 범위 및 근로장려금의 신청대상) 작성부서 : 국세청 대구지방국세청 구미세무서 납세자보호담당관 | 126"
+                  - generic [ref=e1174]:
+                    - link "alt" [ref=e1176] [cursor=pointer]:
+                      - /url: https://kin.naver.com/search/profileLink?answerNo=1&dirId=60105&docId=493035140&kinsrch_src=pc_nx_urb
+                      - img "alt" [ref=e1179]
+                    - generic [ref=e1180]:
+                      - link "국민신문고" [ref=e1182] [cursor=pointer]:
+                        - /url: https://kin.naver.com/search/profileLink?answerNo=1&dirId=60105&docId=493035140&kinsrch_src=pc_nx_urb
+                        - generic [ref=e1183]: 국민신문고
+                      - link "지식파트너" [ref=e1186] [cursor=pointer]:
+                        - /url: https://kin.naver.com/search/profileLink?answerNo=1&dirId=60105&docId=493035140&kinsrch_src=pc_nx_urb
+                        - generic [ref=e1187]: 지식파트너
+                    - generic [ref=e1190]: 3주 전
+            - generic [ref=e1196]:
+              - generic [ref=e1197]:
+                - generic [ref=e1198]:
+                  - link [ref=e1200] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/ccrs5500
+                  - generic [ref=e1203]:
+                    - link "신용회복위원회 공식카페" [ref=e1205] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/ccrs5500
+                      - generic [ref=e1206]: 신용회복위원회 공식카페
+                    - img [ref=e1207]
+                  - generic [ref=e1212]: 2주 전
+                - button "옵션 메뉴 열기" [ref=e1214] [cursor=pointer]:
+                  - img [ref=e1215]
+              - generic [ref=e1220]:
+                - generic [ref=e1221]:
+                  - link "근로장려금 급여소득이 왜 다르게 나올까요" [ref=e1222] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/ccrs5500/743404?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNjcnM1NTAwIiwiYXJ0aWNsZUlkIjo3NDM0MDQsImlzc3VlZEF0IjoxNzc4NTY1NDMyMTgwfQ.nhfQmZtjKTywudrk4zFgqo6qBgD6kTO_ZMVG6SHHAq4
+                    - generic [ref=e1223]:
+                      - mark [ref=e1224]: 근로장려금
+                      - text: 급여소득이 왜 다르게 나올까요
+                  - link "근로장려금 예상금액이 십만원도 안나오길래 왜지?? 하고 소득액 확인해보니 사천만원이 넘게 찍혀있어서 저렇게 벌지를 못했는데ㅡㅡ;; 상세내용 클릭하니 거긴 또 이천만원대로 나와있네요 근로장려금 심사할때는 이천만원대로 제대로 확인해서 입금해주겠죠?ㅜㅜ 받을때쯤되면 회생중이라 돈도 없을것같은데 제발..." [ref=e1226] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/ccrs5500/743404?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNjcnM1NTAwIiwiYXJ0aWNsZUlkIjo3NDM0MDQsImlzc3VlZEF0IjoxNzc4NTY1NDMyMTgwfQ.nhfQmZtjKTywudrk4zFgqo6qBgD6kTO_ZMVG6SHHAq4
+                    - generic [ref=e1227]:
+                      - mark [ref=e1228]: 근로장려금
+                      - text: 예상금액이 십만원도 안나오길래 왜지?? 하고 소득액 확인해보니 사천만원이 넘게 찍혀있어서 저렇게 벌지를 못했는데ㅡㅡ;; 상세내용 클릭하니 거긴 또 이천만원대로 나와있네요
+                      - mark [ref=e1229]: 근로장려금
+                      - text: 심사할때는 이천만원대로 제대로 확인해서 입금해주겠죠?ㅜㅜ 받을때쯤되면 회생중이라 돈도 없을것같은데 제발...
+                - link "2" [ref=e1230] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/ccrs5500/743404?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNjcnM1NTAwIiwiYXJ0aWNsZUlkIjo3NDM0MDQsImlzc3VlZEF0IjoxNzc4NTY1NDMyMTgwfQ.nhfQmZtjKTywudrk4zFgqo6qBgD6kTO_ZMVG6SHHAq4
+                  - generic [ref=e1232]:
+                    - img [ref=e1233]
+                    - generic [ref=e1237]: "2"
+              - generic [ref=e1238]:
+                - generic [ref=e1240]:
+                  - link "RE * 간이지급명세서(거주자의 사업소득)와 거주자 사업소득지급명세서가 둘 다 제출된 경우 모두 표시되므로 수입금액이 중복될 수 있습니" [ref=e1241] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/ccrs5500/743404?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNjcnM1NTAwIiwiYXJ0aWNsZUlkIjo3NDM0MDQsImlzc3VlZEF0IjoxNzc4NTY1NDMyMTgwfQ.nhfQmZtjKTywudrk4zFgqo6qBgD6kTO_ZMVG6SHHAq4
+                    - generic [ref=e1244]:
+                      - generic [ref=e1245]: RE
+                      - text: "* 간이지급명세서(거주자의 사업소득)와 거주자 사업소득지급명세서가 둘 다 제출된 경우 모두 표시되므로 수입금액이 중복될 수 있습니"
+                  - link "RE 1인가구는 2200만원이 맥시멈입니다. (즉 그이후는 빵원이라는 의미) 거의 2200만원에 가까운 소득이라 그정도뿐이 안나온게 정상입니다." [ref=e1246] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/ccrs5500/743404?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNjcnM1NTAwIiwiYXJ0aWNsZUlkIjo3NDM0MDQsImlzc3VlZEF0IjoxNzc4NTY1NDMyMTgwfQ.nhfQmZtjKTywudrk4zFgqo6qBgD6kTO_ZMVG6SHHAq4
+                    - generic [ref=e1249]:
+                      - generic [ref=e1250]: RE
+                      - text: 1인가구는 2200만원이 맥시멈입니다. (즉 그이후는 빵원이라는 의미) 거의 2200만원에 가까운 소득이라 그정도뿐이 안나온게 정상입니다.
+                - button "다음 버튼" [ref=e1251] [cursor=pointer]:
+                  - img [ref=e1253]
+          - generic [ref=e1257]:
+            - generic [ref=e1259]:
+              - heading "뉴스" [level=2] [ref=e1261]
+              - generic [ref=e1263]:
+                - link "관련도순" [ref=e1264] [cursor=pointer]:
+                  - /url: "?nso=so%3Ar%2Cp%3Aall%2Ca%3Aall&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&sm=tab_smr&sort=0&ssc=tab.news.all"
+                  - generic [ref=e1265]:
+                    - img [ref=e1266]
+                    - generic [ref=e1268]: 관련도순
+                - link "최신순" [ref=e1269] [cursor=pointer]:
+                  - /url: "?nso=so%3Add%2Cp%3Aall%2Ca%3Aall&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&sm=tab_smr&sort=1&ssc=tab.news.all"
+                  - generic [ref=e1270]:
+                    - img [ref=e1271]
+                    - generic [ref=e1273]: 최신순
+                - link "모바일 메인 언론사" [ref=e1274] [cursor=pointer]:
+                  - /url: "?nso=so%3Ar%2Cp%3Aall%2Ca%3Aall&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&service_area=1&sm=tab_smr&sort=0&ssc=tab.news.all"
+                  - generic:
+                    - generic: 모바일 메인 언론사
+                    - img
+                    - switch "모바일 메인 언론사"
+            - generic [ref=e1275]:
+              - generic [ref=e1276]:
+                - generic [ref=e1277]:
+                  - generic [ref=e1278]:
+                    - link "연합뉴스의 프로필 이미지" [ref=e1280] [cursor=pointer]:
+                      - /url: https://media.naver.com/press/001
+                      - img "연합뉴스의 프로필 이미지" [ref=e1283]
+                    - link "연합뉴스" [ref=e1286] [cursor=pointer]:
+                      - /url: https://media.naver.com/press/001
+                      - generic [ref=e1287]: 연합뉴스
+                    - generic [ref=e1288]:
+                      - generic [ref=e1292]: 1일 전
+                      - link "네이버뉴스" [ref=e1295] [cursor=pointer]:
+                        - /url: https://n.news.naver.com/mnews/article/001/0016068893?sid=101
+                        - generic [ref=e1296]: 네이버뉴스
+                  - button "옵션 메뉴 열기" [ref=e1298] [cursor=pointer]:
+                    - img [ref=e1299]
+                - generic [ref=e1303]:
+                  - generic [ref=e1304]:
+                    - link "케이뱅크 계좌로 근로장려금 받는다…국고금 지급 서비스 시작" [ref=e1305] [cursor=pointer]:
+                      - /url: https://www.yna.co.kr/view/AKR20260511048200002?input=1195m
+                      - generic [ref=e1306]:
+                        - text: 케이뱅크 계좌로
+                        - mark [ref=e1307]: 근로장려금
+                        - text: 받는다…국고금 지급 서비스 시작
+                    - link "종합소득세, 부가세 환급금, 정부 지급 사업비, 근로·자녀장려금 등 대부분 국고금이 수령 대상이다. 케이뱅크는 지난 2024년 국고금 수납 업무를 시작하며 공과금 수납 서비스를 선보였다. 케이뱅크는 국고금 지급 서비스 개시를 기념해 세무 환급 플랫폼 '삼쩜삼'과 이달 말까지 이벤트를 진행한다고도..." [ref=e1308] [cursor=pointer]:
+                      - /url: https://www.yna.co.kr/view/AKR20260511048200002?input=1195m
+                      - generic [ref=e1309]:
+                        - text: 종합소득세, 부가세 환급금, 정부 지급 사업비,
+                        - mark [ref=e1310]: 근로
+                        - text: ·자녀
+                        - mark [ref=e1311]: 장려금
+                        - text: 등 대부분 국고금이 수령 대상이다. 케이뱅크는 지난 2024년 국고금 수납 업무를 시작하며 공과금 수납 서비스를 선보였다. 케이뱅크는 국고금 지급 서비스 개시를 기념해 세무 환급 플랫폼 '삼쩜삼'과 이달 말까지 이벤트를 진행한다고도...
+                  - link "케이뱅크 계좌로 <mark>근로장려금</mark> 받는다…국고금 지급 서비스 시작의 이미지" [ref=e1312] [cursor=pointer]:
+                    - /url: https://www.yna.co.kr/view/AKR20260511048200002?input=1195m
+                    - img "케이뱅크 계좌로 <mark>근로장려금</mark> 받는다…국고금 지급 서비스 시작의 이미지" [ref=e1314]
+                - generic [ref=e1319]:
+                  - link "케이뱅크 계좌로 근로장려금 받는다…국고금 지급업무 시작" [ref=e1320] [cursor=pointer]:
+                    - /url: https://biz.sbs.co.kr/article_hub/20000309588?division=NAVER
+                    - generic [ref=e1321]:
+                      - text: 케이뱅크 계좌로
+                      - mark [ref=e1322]: 근로장려금
+                      - text: 받는다…국고금 지급업무 시작
+                  - generic [ref=e1324]:
+                    - generic [ref=e1326]: SBS Biz
+                    - generic [ref=e1327]:
+                      - generic [ref=e1331]: 20시간 전
+                      - link "네이버뉴스" [ref=e1334] [cursor=pointer]:
+                        - /url: https://n.news.naver.com/mnews/article/374/0000509414?sid=101
+                        - generic [ref=e1335]: 네이버뉴스
+              - generic [ref=e1337]:
+                - generic [ref=e1338]:
+                  - generic [ref=e1339]:
+                    - link "강원일보의 프로필 이미지" [ref=e1341] [cursor=pointer]:
+                      - /url: https://media.naver.com/press/087
+                      - img "강원일보의 프로필 이미지" [ref=e1344]
+                    - link "강원일보" [ref=e1347] [cursor=pointer]:
+                      - /url: https://media.naver.com/press/087
+                      - generic [ref=e1348]: 강원일보
+                    - generic [ref=e1349]:
+                      - generic [ref=e1353]: 10면 1단
+                      - generic [ref=e1357]: 14시간 전
+                      - link "네이버뉴스" [ref=e1360] [cursor=pointer]:
+                        - /url: https://n.news.naver.com/mnews/article/087/0001192487?sid=102
+                        - generic [ref=e1361]: 네이버뉴스
+                  - button "옵션 메뉴 열기" [ref=e1363] [cursor=pointer]:
+                    - img [ref=e1364]
+                - generic [ref=e1368]:
+                  - generic [ref=e1369]:
+                    - link "홍천군, 중소기업 인력난 해소 ‘빈 일자리 채움 장려금’ 도입" [ref=e1370] [cursor=pointer]:
+                      - /url: https://www.kwnews.co.kr/page/view/2026051150043700000
+                      - generic [ref=e1371]:
+                        - text: 홍천군, 중소기업 인력난 해소 ‘빈 일자리 채움
+                        - mark [ref=e1372]: 장려금
+                        - text: ’ 도입
+                    - link "사업체가 정규직 근로자를 신규 채용하면 사업주에게는 고용장려금, 근로자에게는 근속장려금을 지원하며, 올해 16명을 지원할 계획이다. 고용장려금은 월 최대 80만원씩 6개월간, 근속장려금은 3회에 걸쳐 모두 100만원씩 지급된다. 고용 장려금 지원 대상인 중소기업은 홍천군에 주소를 두고, 상시 근로자가..." [ref=e1373] [cursor=pointer]:
+                      - /url: https://www.kwnews.co.kr/page/view/2026051150043700000
+                      - generic [ref=e1374]:
+                        - text: 사업체가 정규직
+                        - mark [ref=e1375]: 근로
+                        - text: 자를 신규 채용하면 사업주에게는 고용
+                        - mark [ref=e1376]: 장려금
+                        - text: ","
+                        - mark [ref=e1377]: 근로
+                        - text: 자에게는 근속
+                        - mark [ref=e1378]: 장려금
+                        - text: 을 지원하며, 올해 16명을 지원할 계획이다. 고용
+                        - mark [ref=e1379]: 장려금
+                        - text: 은 월 최대 80만원씩 6개월간, 근속
+                        - mark [ref=e1380]: 장려금
+                        - text: 은 3회에 걸쳐 모두 100만원씩 지급된다. 고용
+                        - mark [ref=e1381]: 장려금
+                        - text: 지원 대상인 중소기업은 홍천군에 주소를 두고, 상시
+                        - mark [ref=e1382]: 근로
+                        - text: 자가...
+                  - link "홍천군, 중소기업 인력난 해소 ‘빈 일자리 채움 <mark>장려금</mark>’ 도입의 이미지" [ref=e1383] [cursor=pointer]:
+                    - /url: https://www.kwnews.co.kr/page/view/2026051150043700000
+                    - img "홍천군, 중소기업 인력난 해소 ‘빈 일자리 채움 <mark>장려금</mark>’ 도입의 이미지" [ref=e1385]
+              - generic [ref=e1388]:
+                - generic [ref=e1389]:
+                  - generic [ref=e1390]:
+                    - link "뉴스워커의 프로필 이미지" [ref=e1392] [cursor=pointer]:
+                      - /url: http://www.newsworker.co.kr
+                      - img "뉴스워커의 프로필 이미지" [ref=e1395]
+                    - link "뉴스워커" [ref=e1398] [cursor=pointer]:
+                      - /url: http://www.newsworker.co.kr
+                      - generic [ref=e1399]: 뉴스워커
+                    - generic [ref=e1404]: 23시간 전
+                  - button "옵션 메뉴 열기" [ref=e1406] [cursor=pointer]:
+                    - img [ref=e1407]
+                - generic [ref=e1411]:
+                  - generic [ref=e1412]:
+                    - link "고흥군, '신중년 일자리장려금' 참여기업 더 받는다" [ref=e1413] [cursor=pointer]:
+                      - /url: http://www.newsworker.co.kr/news/articleView.html?idxno=425939
+                      - generic [ref=e1414]:
+                        - text: 고흥군, '신중년 일자리
+                        - mark [ref=e1415]: 장려금
+                        - text: "' 참여기업 더 받는다"
+                    - link "이번 사업은 중장년 신규 채용을 계획한 기업에 고용유지금을 지원하고, 채용된 근로자에게는 취업장려금을 지급하는 방식으로 운영된다. 고흥군은 안정적인 재취업과 기업 인력 확보를 함께 돕는 데 초점을 맞췄다. 지원 대상은 고흥군에 있는 상시근로자 5인 이상 300인 미만 중소기업이다. 전라남도에..." [ref=e1416] [cursor=pointer]:
+                      - /url: http://www.newsworker.co.kr/news/articleView.html?idxno=425939
+                      - generic [ref=e1417]:
+                        - text: 이번 사업은 중장년 신규 채용을 계획한 기업에 고용유지금을 지원하고, 채용된
+                        - mark [ref=e1418]: 근로
+                        - text: 자에게는 취업
+                        - mark [ref=e1419]: 장려금
+                        - text: 을 지급하는 방식으로 운영된다. 고흥군은 안정적인 재취업과 기업 인력 확보를 함께 돕는 데 초점을 맞췄다. 지원 대상은 고흥군에 있는 상시
+                        - mark [ref=e1420]: 근로
+                        - text: 자 5인 이상 300인 미만 중소기업이다. 전라남도에...
+                  - link "고흥군, '신중년 일자리<mark>장려금</mark>' 참여기업 더 받는다의 이미지" [ref=e1421] [cursor=pointer]:
+                    - /url: http://www.newsworker.co.kr/news/articleView.html?idxno=425939
+                    - img "고흥군, '신중년 일자리<mark>장려금</mark>' 참여기업 더 받는다의 이미지" [ref=e1423]
+              - generic [ref=e1426]:
+                - generic [ref=e1427]:
+                  - generic [ref=e1428]:
+                    - link "CBC뉴스의 프로필 이미지" [ref=e1430] [cursor=pointer]:
+                      - /url: http://www.cbci.co.kr
+                      - img "CBC뉴스의 프로필 이미지" [ref=e1433]
+                    - link "CBC뉴스" [ref=e1436] [cursor=pointer]:
+                      - /url: http://www.cbci.co.kr
+                      - generic [ref=e1437]: CBC뉴스
+                    - generic [ref=e1442]: 15시간 전
+                  - button "옵션 메뉴 열기" [ref=e1444] [cursor=pointer]:
+                    - img [ref=e1445]
+                - generic [ref=e1449]:
+                  - generic [ref=e1450]:
+                    - link "근로장려금 신청 시작…\"안내문 못 받아도 가능\" 대상·방법·주의사항..." [ref=e1451] [cursor=pointer]:
+                      - /url: https://www.cbci.co.kr/news/articleView.html?idxno=573718
+                      - generic [ref=e1452]:
+                        - mark [ref=e1453]: 근로장려금
+                        - text: 신청 시작…"안내문 못 받아도 가능" 대상·방법·주의사항...
+                    - link "5월 근로장려금 정기 신청이 본격 진행되면서 신청 대상과 지급 조건, 신청 방법에 대한 관심이 커지고 있다. 특히 올해는 모바일 안내문 발송이 확대되면서 카카오톡·네이버·국민비서 등을 통해 안내를 받는 사례가 늘고 있지만, 안내문을 받지 못했더라도 신청 요건을 충족하면 직접 신청이 가능하다는 점이..." [ref=e1454] [cursor=pointer]:
+                      - /url: https://www.cbci.co.kr/news/articleView.html?idxno=573718
+                      - generic [ref=e1455]:
+                        - text: 5월
+                        - mark [ref=e1456]: 근로장려금
+                        - text: 정기 신청이 본격 진행되면서 신청 대상과 지급 조건, 신청 방법에 대한 관심이 커지고 있다. 특히 올해는 모바일 안내문 발송이 확대되면서 카카오톡·네이버·국민비서 등을 통해 안내를 받는 사례가 늘고 있지만, 안내문을 받지 못했더라도 신청 요건을 충족하면 직접 신청이 가능하다는 점이...
+                  - link "<mark>근로장려금</mark> 신청 시작…&quot;안내문 못 받아도 가능&quot; 대상·방법·주의사항...의 이미지" [ref=e1457] [cursor=pointer]:
+                    - /url: https://www.cbci.co.kr/news/articleView.html?idxno=573718
+                    - img "<mark>근로장려금</mark> 신청 시작…&quot;안내문 못 받아도 가능&quot; 대상·방법·주의사항...의 이미지" [ref=e1459]
+            - link "뉴스 더보기" [ref=e1462] [cursor=pointer]:
+              - /url: "?nso=so%3Ar%2Cp%3Aall%2Ca%3Aall&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&sm=tab_smr&sort=0&ssc=tab.news.all"
+              - generic [ref=e1465]:
+                - generic [ref=e1467]:
+                  - generic [ref=e1468]: 뉴스
+                  - generic [ref=e1469]: 더보기
+                - img [ref=e1471]
+          - generic [ref=e1473]:
+            - generic [ref=e1479]:
+              - generic [ref=e1480]:
+                - generic [ref=e1481]:
+                  - link [ref=e1483] [cursor=pointer]:
+                    - /url: https://bluebeat.tistory.com/764
+                    - img [ref=e1487]
+                  - link "bluebeat" [ref=e1491] [cursor=pointer]:
+                    - /url: https://bluebeat.tistory.com/764
+                    - generic [ref=e1492]: bluebeat
+                  - generic [ref=e1495]: 11시간 전
+                - button "옵션 메뉴 열기" [ref=e1497] [cursor=pointer]:
+                  - img [ref=e1498]
+              - generic [ref=e1503]:
+                - generic [ref=e1504]:
+                  - link "근로장려금 신청 자격과 자녀장려금 함께 챙기는 방법" [ref=e1505] [cursor=pointer]:
+                    - /url: https://bluebeat.tistory.com/764
+                    - generic [ref=e1506]:
+                      - mark [ref=e1507]: 근로장려금
+                      - text: 신청 자격과 자녀
+                      - mark [ref=e1508]: 장려금
+                      - text: 함께 챙기는 방법
+                  - link "근로장려금과 자녀장려금, 동시에 신청할 수 있을까요? 네, 가능합니다! 두 제도 모두 저소득 가구를 위한 지원 제도이기 때문에, 신청 자격을 충족한다면 동시에 신청하여 두 가지 지원금을 모두 받을 수 있습니다. 다만, 각 제도의 신청 기준과 자격 요건을 모두 충족해야 하므로, 홈택스 사이트에서 자세한 내용을 확인하고 신청하는 것이 좋습니다. 두 제도를 함께 신청할..." [ref=e1510] [cursor=pointer]:
+                    - /url: https://bluebeat.tistory.com/764
+                    - generic [ref=e1511]:
+                      - mark [ref=e1512]: 근로장려금
+                      - text: 과 자녀
+                      - mark [ref=e1513]: 장려금
+                      - text: ", 동시에 신청할 수 있을까요? 네, 가능합니다! 두 제도 모두 저소득 가구를 위한"
+                      - mark [ref=e1514]: 지원
+                      - text: 제도이기 때문에, 신청 자격을 충족한다면 동시에 신청하여 두 가지
+                      - mark [ref=e1515]: 지원금
+                      - text: 을 모두 받을 수 있습니다. 다만, 각 제도의 신청 기준과 자격 요건을 모두 충족해야 하므로, 홈택스 사이트에서 자세한 내용을 확인하고 신청하는 것이 좋습니다. 두 제도를 함께 신청할...
+                - generic [ref=e1516]:
+                  - link [ref=e1517] [cursor=pointer]:
+                    - /url: https://bluebeat.tistory.com/764
+                    - img [ref=e1519]
+                  - link [ref=e1521] [cursor=pointer]:
+                    - /url: https://bluebeat.tistory.com/764
+                    - img [ref=e1523]
+                  - link [ref=e1525] [cursor=pointer]:
+                    - /url: https://bluebeat.tistory.com/764
+                    - img [ref=e1527]
+                  - link [ref=e1529] [cursor=pointer]:
+                    - /url: https://bluebeat.tistory.com/764
+                    - img [ref=e1531]
+                  - link [ref=e1533] [cursor=pointer]:
+                    - /url: https://bluebeat.tistory.com/764
+                    - img [ref=e1535]
+                  - generic [ref=e1537]: "7"
+              - link "2026 근로장려금 지급일 신청기간 및 신청 조건 대상 기준 산정표 정리" [ref=e1541] [cursor=pointer]:
+                - /url: https://rja49.tistory.com/1750
+                - generic [ref=e1542]:
+                  - text: "2026"
+                  - mark [ref=e1543]: 근로장려금
+                  - text: 지급일 신청기간 및 신청 조건 대상 기준 산정표 정리
+            - generic [ref=e1549]:
+              - generic [ref=e1550]:
+                - generic [ref=e1551]:
+                  - link [ref=e1553] [cursor=pointer]:
+                    - /url: https://blog.naver.com/choibrian
+                  - link "최용범 교수의 HRD 블로그" [ref=e1558] [cursor=pointer]:
+                    - /url: https://blog.naver.com/choibrian
+                    - generic [ref=e1559]: 최용범 교수의 HRD 블로그
+                  - generic [ref=e1562]: 2주 전
+                - button "옵션 메뉴 열기" [ref=e1564] [cursor=pointer]:
+                  - img [ref=e1565]
+              - generic [ref=e1570]:
+                - generic [ref=e1571]:
+                  - link "하루 늦으면 5% 깎입니다, 근로장려금 신청기간 총정리" [ref=e1572] [cursor=pointer]:
+                    - /url: https://blog.naver.com/choibrian/224270199459
+                    - generic [ref=e1573]:
+                      - text: 하루 늦으면 5% 깎입니다,
+                      - mark [ref=e1574]: 근로장려금
+                      - text: 신청기간 총정리
+                  - link "당장 내일부터 시작되는 근로장려금 신청기간을 앞두고, 자영업자가 반드시 챙겨야 할 핵심 자격과 주의사항을 숫자와 팩트로 명쾌하게 정리해 드립니다. ▲ 오픈 기념 등업 이벤트 진행중, 네이버카페 만렙사장 구경하고 기프티콘 받아가세요 ▲ '정기 신청'과 '기한 후 신청'의 뼈아픈 차이 근로장려금은 직장인들을 위한 '반기 신청'과 자영업자/프리랜서를..." [ref=e1576] [cursor=pointer]:
+                    - /url: https://blog.naver.com/choibrian/224270199459
+                    - generic [ref=e1577]:
+                      - text: 당장 내일부터 시작되는
+                      - mark [ref=e1578]: 근로장려금
+                      - text: 신청기간을 앞두고, 자영업자가 반드시 챙겨야 할 핵심 자격과 주의사항을 숫자와 팩트로 명쾌하게 정리해 드립니다. ▲ 오픈 기념 등업 이벤트 진행중, 네이버카페 만렙사장 구경하고 기프티콘 받아가세요 ▲ '정기 신청'과 '기한 후 신청'의 뼈아픈 차이
+                      - mark [ref=e1579]: 근로장려금
+                      - text: 은 직장인들을 위한 '반기 신청'과 자영업자/프리랜서를...
+                - link "5" [ref=e1580] [cursor=pointer]:
+                  - /url: https://blog.naver.com/choibrian/224270199459
+                  - generic [ref=e1582]:
+                    - img [ref=e1583]
+                    - generic [ref=e1587]: "5"
+            - generic [ref=e1593]:
+              - generic [ref=e1594]:
+                - generic [ref=e1595]:
+                  - link [ref=e1597] [cursor=pointer]:
+                    - /url: https://blog.naver.com/hi_pu-dding
+                  - link "다채로운 거리" [ref=e1602] [cursor=pointer]:
+                    - /url: https://blog.naver.com/hi_pu-dding
+                    - generic [ref=e1603]: 다채로운 거리
+                  - generic [ref=e1606]: 2주 전
+                - button "옵션 메뉴 열기" [ref=e1608] [cursor=pointer]:
+                  - img [ref=e1609]
+              - generic [ref=e1614]:
+                - generic [ref=e1615]:
+                  - link "근로장려금 금액 얼마? 단독·홑벌이·맞벌이 가구별 최대 지원금 정리" [ref=e1616] [cursor=pointer]:
+                    - /url: https://blog.naver.com/hi_pu-dding/224271661533
+                    - generic [ref=e1617]:
+                      - mark [ref=e1618]: 근로장려금
+                      - text: 금액 얼마? 단독·홑벌이·맞벌이 가구별 최대
+                      - mark [ref=e1619]: 지원금
+                      - text: 정리
+                  - link "근로장려금은 일은 하지만 소득이 적어 생활이 어려운 근로자·사업자·종교인 가구에 현금을 직접 지원하는 국가 복지 제도입니다. 단순한 복지 지원이 아닌, 일하는 사람에게 국가가 지급하는 '일 보너스'라고 생각하시면 쉽습니다. 소득이 기준에 못 미치더라도 꾸준히 일하고 있다면 신청 자격이 됩니다. 근로소득은 물론, 사업소득(자영업·프리랜서)과..." [ref=e1621] [cursor=pointer]:
+                    - /url: https://blog.naver.com/hi_pu-dding/224271661533
+                    - generic [ref=e1622]:
+                      - mark [ref=e1623]: 근로장려금
+                      - text: 은 일은 하지만 소득이 적어 생활이 어려운
+                      - mark [ref=e1624]: 근로
+                      - text: 자·사업자·종교인 가구에 현금을 직접
+                      - mark [ref=e1625]: 지원
+                      - text: 하는 국가 복지 제도입니다. 단순한 복지
+                      - mark [ref=e1626]: 지원
+                      - text: 이 아닌, 일하는 사람에게 국가가 지급하는 '일 보너스'라고 생각하시면 쉽습니다. 소득이 기준에 못 미치더라도 꾸준히 일하고 있다면 신청 자격이 됩니다.
+                      - mark [ref=e1627]: 근로
+                      - text: 소득은 물론, 사업소득(자영업·프리랜서)과...
+                - link "10" [ref=e1628] [cursor=pointer]:
+                  - /url: https://blog.naver.com/hi_pu-dding/224271661533
+                  - generic [ref=e1630]:
+                    - img [ref=e1631]
+                    - generic [ref=e1635]: "10"
+            - link "검색결과 더보기" [ref=e1637] [cursor=pointer]:
+              - /url: "?nso=&page=2&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&sm=tab_pge&ssc=tab.ur.all&start=1"
+              - generic [ref=e1638]: 검색결과
+              - generic [ref=e1639]: 더보기
+          - generic [ref=e1644]:
+            - generic [ref=e1646]:
+              - heading "이미지" [level=2] [ref=e1648]
+              - button "이미지 신고하기" [ref=e1651] [cursor=pointer]:
+                - generic [ref=e1652]: 이미지 신고하기
+            - generic [ref=e1653]:
+              - generic [ref=e1654]:
+                - generic [ref=e1655]:
+                  - link "신청" [ref=e1656] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88+%EC%8B%A0%EC%B2%AD&sm=tab_imt&where=image"
+                    - generic [ref=e1658]:
+                      - img [ref=e1660]
+                      - generic [ref=e1662]: 신청
+                  - link "지급일" [ref=e1663] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88+%EC%A7%80%EA%B8%89%EC%9D%BC&sm=tab_imt&where=image"
+                    - generic [ref=e1665]:
+                      - img [ref=e1667]
+                      - generic [ref=e1669]: 지급일
+                  - link "산정표" [ref=e1670] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88+%EC%82%B0%EC%A0%95%ED%91%9C&sm=tab_imt&where=image"
+                    - generic [ref=e1672]:
+                      - img [ref=e1674]
+                      - generic [ref=e1676]: 산정표
+                  - link "기준" [ref=e1677] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88+%EA%B8%B0%EC%A4%80&sm=tab_imt&where=image"
+                    - generic [ref=e1679]:
+                      - img [ref=e1681]
+                      - generic [ref=e1683]: 기준
+                  - link "대상" [ref=e1684] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88+%EB%8C%80%EC%83%81&sm=tab_imt&where=image"
+                    - generic [ref=e1686]:
+                      - img [ref=e1688]
+                      - generic [ref=e1690]: 대상
+                  - link "금액" [ref=e1691] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88+%EA%B8%88%EC%95%A1&sm=tab_imt&where=image"
+                    - generic [ref=e1693]:
+                      - img [ref=e1695]
+                      - generic [ref=e1697]: 금액
+                  - link "지급표" [ref=e1698] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88+%EC%A7%80%EA%B8%89%ED%91%9C&sm=tab_imt&where=image"
+                    - generic [ref=e1700]:
+                      - img [ref=e1702]
+                      - generic [ref=e1704]: 지급표
+                  - link "2026" [ref=e1705] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88+2026&sm=tab_imt&where=image"
+                    - generic [ref=e1707]:
+                      - img [ref=e1709]
+                      - generic [ref=e1711]: "2026"
+                  - link "2025" [ref=e1712] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=2025+%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&sm=tab_imt&where=image"
+                    - generic [ref=e1714]:
+                      - img [ref=e1716]
+                      - generic [ref=e1718]: "2025"
+                  - link "소득기준" [ref=e1719] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88+%EC%86%8C%EB%93%9D%EA%B8%B0%EC%A4%80&sm=tab_imt&where=image"
+                    - generic [ref=e1721]:
+                      - img [ref=e1723]
+                      - generic [ref=e1725]: 소득기준
+                  - link "조건" [ref=e1726] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88+%EC%A1%B0%EA%B1%B4&sm=tab_imt&where=image"
+                    - generic [ref=e1728]:
+                      - img [ref=e1730]
+                      - generic [ref=e1732]: 조건
+                  - link "표" [ref=e1733] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88+%ED%91%9C&sm=tab_imt&where=image"
+                    - generic [ref=e1735]:
+                      - img [ref=e1737]
+                      - generic [ref=e1739]: 표
+                  - link "기준표" [ref=e1740] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88+%EA%B8%B0%EC%A4%80%ED%91%9C&sm=tab_imt&where=image"
+                    - generic [ref=e1742]:
+                      - img [ref=e1744]
+                      - generic [ref=e1746]: 기준표
+                  - link "2024" [ref=e1747] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=2024+%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&sm=tab_imt&where=image"
+                    - generic [ref=e1749]:
+                      - img [ref=e1751]
+                      - generic [ref=e1753]: "2024"
+                  - link "심사진행상황" [ref=e1754] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88+%EC%8B%AC%EC%82%AC%EC%A7%84%ED%96%89%EC%83%81%ED%99%A9&sm=tab_imt&where=image"
+                    - generic [ref=e1756]:
+                      - img [ref=e1758]
+                      - generic [ref=e1760]: 심사진행상황
+                  - link "국세청" [ref=e1761] [cursor=pointer]:
+                    - /url: "?pq=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&query=%EA%B5%AD%EC%84%B8%EC%B2%AD+%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&sm=tab_imt&where=image"
+                    - generic [ref=e1763]:
+                      - img [ref=e1765]
+                      - generic [ref=e1767]: 국세청
+                - button [ref=e1768] [cursor=pointer]:
+                  - img [ref=e1769]
+              - generic [ref=e1771]:
+                - generic:
+                  - button "근로장려금 계산기 사용 방법, 지급일과 금액은":
+                    - img "근로장려금 계산기 사용 방법, 지급일과 금액은"
+                - generic:
+                  - button "2026년 청년 근로장려금 변경점어떻게바뀔까?":
+                    - img "2026년 청년 근로장려금 변경점어떻게바뀔까?"
+                - generic:
+                  - button "8월부터 통장에 돈 들어온다? 2025 근로 장려금 지급일 총정리":
+                    - img "8월부터 통장에 돈 들어온다? 2025 근로 장려금 지급일 총정리"
+                - generic:
+                  - button "근로장려금, 나도 받을 수 있을까?":
+                    - img "근로장려금, 나도 받을 수 있을까?"
+                - generic:
+                  - button "2025 근로장려금 맞벌이·단독가구 자격요건·지급액 비교표":
+                    - img "2025 근로장려금 맞벌이·단독가구 자격요건·지급액 비교표"
+                - generic:
+                  - button "2025년 부산 동래구 근로장려금 접수일자 대상 조건 및 지원 방식":
+                    - img "2025년 부산 동래구 근로장려금 접수일자 대상 조건 및 지원 방식"
+                - generic:
+                  - button "귀속 근로장려금 2025년 신청 완전정복!":
+                    - img "귀속 근로장려금 2025년 신청 완전정복!"
+                - generic:
+                  - button "2026 근로장려금 5월, 딱 한 달만 신청 가능! 놓치면 1년 후회합니다":
+                    - img "2026 근로장려금 5월, 딱 한 달만 신청 가능! 놓치면 1년 후회합니다"
+                - generic:
+                  - button "네이버 인플루언서 [네이버 인플루언서] 근로장려금 자녀장려금 긴급복지 생계지원금 지급 조건은?":
+                    - img "네이버 인플루언서 [네이버 인플루언서] 근로장려금 자녀장려금 긴급복지 생계지원금 지급 조건은?"
+                - generic:
+                  - button "근로자녀장려금 반기 신청자 주목! 지급일·최대 금액 총정리":
+                    - img "근로자녀장려금 반기 신청자 주목! 지급일·최대 금액 총정리"
+            - link "이미지 더보기" [ref=e1773] [cursor=pointer]:
+              - /url: "?nso=so%3Ar%2Cp%3Aall&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&sm=tab_nmr&ssc=tab.image.all&where=image"
+              - generic [ref=e1776]:
+                - generic [ref=e1778]:
+                  - generic [ref=e1779]: 이미지
+                  - generic [ref=e1780]: 더보기
+                - img [ref=e1782]
+          - generic [ref=e1786]:
+            - generic [ref=e1790]: 경제·비즈니스 인플루언서 콘텐츠
+            - generic [ref=e1791]:
+              - generic [ref=e1792]:
+                - generic [ref=e1795]:
+                  - generic [ref=e1796]:
+                    - link [ref=e1798] [cursor=pointer]:
+                      - /url: https://in.naver.com/foodtravel?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                      - generic [ref=e1799]:
+                        - img [ref=e1801]
+                        - img [ref=e1803]
+                    - link "날아라 일룡아" [ref=e1809] [cursor=pointer]:
+                      - /url: https://in.naver.com/foodtravel?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                    - generic [ref=e1812]: 4일 전
+                  - button "옵션 메뉴 열기" [ref=e1814] [cursor=pointer]:
+                    - img [ref=e1815]
+                - generic [ref=e1820]:
+                  - generic [ref=e1821]:
+                    - link "연소득 1800, 순자산 1억인데 탈락.. 근로장려금 신청 기준 어떻길래" [ref=e1822] [cursor=pointer]:
+                      - /url: https://in.naver.com/foodtravel/contents/internal/950022737062592?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                      - generic [ref=e1823]:
+                        - text: 연소득 1800, 순자산 1억인데 탈락..
+                        - mark [ref=e1824]: 근로장려금
+                        - text: 신청 기준 어떻길래
+                    - link "매년 5월, 근로장려금 정기 신청 기간이 되면 비슷한 불만이 여기저기서 나옵니다. 저 작년에 일해서 번 돈이 1,800만 원이고 순자산은 1억인데 왜 근로장려금을 못 받는 겁니까? 분명 소득, 재산 기준 모두 통과인데 왜 그럴까요? 근로장려금 지급 대상을 심사할 때 국세청이 가장 먼저 보는 기준은 바로 가구 유형에 따른 총소득입니다. 단독가구 2200만 원, 외벌이 가구..." [ref=e1826] [cursor=pointer]:
+                      - /url: https://in.naver.com/foodtravel/contents/internal/950022737062592?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                      - generic [ref=e1827]:
+                        - text: 매년 5월,
+                        - mark [ref=e1828]: 근로장려금
+                        - text: 정기 신청 기간이 되면 비슷한 불만이 여기저기서 나옵니다. 저 작년에 일해서 번 돈이 1,800만 원이고 순자산은 1억인데 왜
+                        - mark [ref=e1829]: 근로장려금
+                        - text: 을 못 받는 겁니까? 분명 소득, 재산 기준 모두 통과인데 왜 그럴까요?
+                        - mark [ref=e1830]: 근로장려금
+                        - text: 지급 대상을 심사할 때 국세청이 가장 먼저 보는 기준은 바로 가구 유형에 따른 총소득입니다. 단독가구 2200만 원, 외벌이 가구...
+                  - generic [ref=e1831]:
+                    - link [ref=e1832] [cursor=pointer]:
+                      - /url: https://in.naver.com/foodtravel/contents/internal/950022737062592?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                      - img [ref=e1834]
+                    - link [ref=e1835] [cursor=pointer]:
+                      - /url: https://in.naver.com/foodtravel/contents/internal/950022737062592?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                      - img [ref=e1837]
+                    - link [ref=e1838] [cursor=pointer]:
+                      - /url: https://in.naver.com/foodtravel/contents/internal/950022737062592?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                      - img [ref=e1840]
+                    - link [ref=e1841] [cursor=pointer]:
+                      - /url: https://in.naver.com/foodtravel/contents/internal/950022737062592?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                      - img [ref=e1843]
+                    - generic [ref=e1846]: "4"
+              - generic [ref=e1848]:
+                - generic [ref=e1851]:
+                  - generic [ref=e1852]:
+                    - link [ref=e1854] [cursor=pointer]:
+                      - /url: https://in.naver.com/rmsgud2007?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                      - generic [ref=e1855]:
+                        - img [ref=e1857]
+                        - img [ref=e1859]
+                    - link "방구석청년" [ref=e1865] [cursor=pointer]:
+                      - /url: https://in.naver.com/rmsgud2007?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                    - generic [ref=e1868]: 1주 전
+                  - button "옵션 메뉴 열기" [ref=e1870] [cursor=pointer]:
+                    - img [ref=e1871]
+                - generic [ref=e1876]:
+                  - generic [ref=e1877]:
+                    - link "\"330만 원 줄게요\" 5월 신청한 근로장려금 지급일 언제길래" [ref=e1878] [cursor=pointer]:
+                      - /url: https://in.naver.com/rmsgud2007/contents/internal/948483601639776?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                      - generic [ref=e1879]:
+                        - text: "\"330만 원 줄게요\" 5월 신청한"
+                        - mark [ref=e1880]: 근로장려금
+                        - text: 지급일 언제길래
+                    - link "이 때문에 국세청은 소득이 낮은 탓에 일을 해도 생계를 유지하기 어려운 사람들을 대상으로 장려금을 지급하고 있으니 오늘은 국세청의 보도자료를 토대로 25년 귀속 근로장려금 신청 기간 및 지급일에 대한 내용을 알려드릴까 한다. 먼저 25년 기준 근로장려금 신청 조건은 위와 같다. 가구의 형태에 따라 소득 조건이 달라지며 단독 가구의 경우 2,200만 원 미만..." [ref=e1882] [cursor=pointer]:
+                      - /url: https://in.naver.com/rmsgud2007/contents/internal/948483601639776?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                      - generic [ref=e1883]:
+                        - text: 이 때문에 국세청은 소득이 낮은 탓에 일을 해도 생계를 유지하기 어려운 사람들을 대상으로 장려금을 지급하고 있으니 오늘은 국세청의 보도자료를 토대로 25년 귀속
+                        - mark [ref=e1884]: 근로장려금
+                        - text: 신청 기간 및 지급일에 대한 내용을 알려드릴까 한다. 먼저 25년 기준
+                        - mark [ref=e1885]: 근로장려금
+                        - text: 신청 조건은 위와 같다. 가구의 형태에 따라 소득 조건이 달라지며 단독 가구의 경우 2,200만 원 미만...
+                  - link "4" [ref=e1886] [cursor=pointer]:
+                    - /url: https://in.naver.com/rmsgud2007/contents/internal/948483601639776?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                    - generic [ref=e1887]:
+                      - img [ref=e1889]
+                      - generic [ref=e1892]: "4"
+              - generic [ref=e1894]:
+                - generic [ref=e1897]:
+                  - generic [ref=e1898]:
+                    - link [ref=e1900] [cursor=pointer]:
+                      - /url: https://in.naver.com/ekdud0706?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                      - generic [ref=e1901]:
+                        - img [ref=e1903]
+                        - img [ref=e1905]
+                    - link "찐주부J" [ref=e1911] [cursor=pointer]:
+                      - /url: https://in.naver.com/ekdud0706?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                    - generic [ref=e1914]: 2일 전
+                  - button "옵션 메뉴 열기" [ref=e1916] [cursor=pointer]:
+                    - img [ref=e1917]
+                - generic [ref=e1922]:
+                  - generic [ref=e1923]:
+                    - link "근로·자녀장려금 최대 430만원 준다는데.. 나는 왜 적을까?" [ref=e1924] [cursor=pointer]:
+                      - /url: https://in.naver.com/ekdud0706/contents/internal/950664783678048?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                      - generic [ref=e1925]:
+                        - mark [ref=e1926]: 근로
+                        - text: ·자녀
+                        - mark [ref=e1927]: 장려금
+                        - text: 최대 430만원 준다는데.. 나는 왜 적을까?
+                    - link "최대 430만원 근로·자녀장려금 조건 드디어 2026 근로장려금 자녀장려금 신청이 시작되었다. 올해는 가구당 최대 430만원까지 받을 수 있어서 더 궁금해졌다. 근로·자녀장려금 혜택 조건 ✔️근로장려금 최대 330만원 일은 하지만 소득이 어려운 근로자, 사업자 가구에 대해 장려금을 지급한다. 총소득 기준 지원금액 단독가구 2,200만원 미만 최대 165만원..." [ref=e1929] [cursor=pointer]:
+                      - /url: https://in.naver.com/ekdud0706/contents/internal/950664783678048?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                      - generic [ref=e1930]:
+                        - text: 최대 430만원 근로·자녀장려금 조건 드디어 2026
+                        - mark [ref=e1931]: 근로장려금
+                        - text: 자녀장려금 신청이 시작되었다. 올해는 가구당 최대 430만원까지 받을 수 있어서 더 궁금해졌다. 근로·자녀장려금 혜택 조건 ✔️
+                        - mark [ref=e1932]: 근로장려금
+                        - text: 최대 330만원 일은 하지만 소득이 어려운 근로자, 사업자 가구에 대해 장려금을 지급한다. 총소득 기준 지원금액 단독가구 2,200만원 미만 최대 165만원...
+                  - link "7" [ref=e1933] [cursor=pointer]:
+                    - /url: https://in.naver.com/ekdud0706/contents/internal/950664783678048?areacode=itb_bas%2Af_challenge&query=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88
+                    - generic [ref=e1934]:
+                      - img [ref=e1936]
+                      - generic [ref=e1939]: "7"
+            - link "인플루언서 참여 콘텐츠 더보기" [ref=e1942] [cursor=pointer]:
+              - /url: https://search.naver.com/search.naver?query=근로장려금&sm=tab_nmr&where=influencer
+              - generic [ref=e1943]:
+                - generic [ref=e1944]:
+                  - generic [ref=e1945]: 인플루언서 참여 콘텐츠
+                  - generic [ref=e1946]: 더보기
+                - img [ref=e1947]
+          - generic [ref=e1950]:
+            - button "이전" [disabled] [ref=e1951]:
+              - generic [ref=e1952]: 이전
+            - generic [ref=e1953]:
+              - button "1" [pressed] [ref=e1954] [cursor=pointer]
+              - button "2" [ref=e1955] [cursor=pointer]
+              - button "3" [ref=e1956] [cursor=pointer]
+              - button "4" [ref=e1957] [cursor=pointer]
+              - button "5" [ref=e1958] [cursor=pointer]
+              - button "6" [ref=e1959] [cursor=pointer]
+              - button "7" [ref=e1960] [cursor=pointer]
+              - button "8" [ref=e1961] [cursor=pointer]
+              - button "9" [ref=e1962] [cursor=pointer]
+              - button "10" [ref=e1963] [cursor=pointer]
+            - button "다음" [ref=e1964] [cursor=pointer]:
+              - generic [ref=e1965]: 다음
+        - generic [ref=e1966]:
+          - generic [ref=e1969]:
+            - generic [ref=e1972]:
+              - heading "함께 보는 생활경제 숏텐츠" [level=2] [ref=e1973]:
+                - generic [ref=e1974]:
+                  - generic [ref=e1975]: 함께 보는
+                  - generic [ref=e1976]: 생활경제
+                  - generic [ref=e1977]: 숏텐츠
+              - button [ref=e1978] [cursor=pointer]:
+                - img [ref=e1979]
+            - generic [ref=e1983]:
+              - link "포스코 협력사 직고용 중노위 조정 포스코 '협력사 직고용' 중노위로…정규직 노조, 조정 신청 23시간 전" [ref=e1984] [cursor=pointer]:
+                - /url: "?mra=QkRS%5EU2JUX0NQbQ%3D%3D%5EU2xUX1NBeA%3D%3D%5ETk9DX1hJVQ%3D%3D%5EU3hUX0NQdA%3D%3D&mra2=U0RC%5EU3hUX0NQdA%3D%3D&query=%ED%8F%AC%EC%8A%A4%EC%BD%94+%ED%98%91%EB%A0%A5%EC%82%AC+%EC%A7%81%EA%B3%A0%EC%9A%A9+%EC%A4%91%EB%85%B8%EC%9C%84+%EC%A1%B0%EC%A0%95&qvt=0&sm=tab_sht.best&where=nexearch&x_cue=%7B%22act%22%3A%22resrch%22%2C%22from%22%3A%22shortents%22%7D&x_shortents=%7B%22category%22%3A%22%EC%83%9D%ED%99%9C%EA%B2%BD%EC%A0%9C%22%2C%22gdid%22%3A%2208138263_000000000000000008937737%22%7D"
+                - generic [ref=e1985]:
+                  - img [ref=e1986]
+                  - generic [ref=e1992]:
+                    - generic [ref=e1993]: 포스코 협력사 직고용 중노위 조정
+                    - img [ref=e1994]
+                - generic [ref=e1998]:
+                  - generic [ref=e1999]:
+                    - text: 포스코 '협력사 직고용' 중노위로…정규직 노조, 조정 신청
+                    - generic [ref=e2000]: 23시간 전
+                  - img [ref=e2002]
+              - link "새마을금고 연체 0%대 DNA 이식 '연체 0%대' 우량 DNA … 전국 1200개 새마을금고에 이식한다 21시간 전" [ref=e2003] [cursor=pointer]:
+                - /url: "?mra=QkRS%5EU2JUX0NQbQ%3D%3D%5EU2xUX1NBeA%3D%3D%5ETk9DX1hJVQ%3D%3D%5EU3hUX0NQdA%3D%3D&mra2=U0RC%5EU3hUX0NQdA%3D%3D&query=%EC%83%88%EB%A7%88%EC%9D%84%EA%B8%88%EA%B3%A0+%EC%97%B0%EC%B2%B4+0%25%EB%8C%80+DNA+%EC%9D%B4%EC%8B%9D&qvt=0&sm=tab_sht.best&where=nexearch&x_cue=%7B%22act%22%3A%22resrch%22%2C%22from%22%3A%22shortents%22%7D&x_shortents=%7B%22category%22%3A%22%EC%83%9D%ED%99%9C%EA%B2%BD%EC%A0%9C%22%2C%22gdid%22%3A%22880000BC_000000000000000005678336%22%7D"
+                - generic [ref=e2004]:
+                  - img [ref=e2005]
+                  - generic [ref=e2011]:
+                    - generic [ref=e2012]: 새마을금고 연체 0%대 DNA 이식
+                    - img [ref=e2013]
+                  - img [ref=e2021]
+                - generic [ref=e2022]:
+                  - generic [ref=e2023]:
+                    - text: "'연체 0%대' 우량 DNA … 전국 1200개 새마을금고에 이식한다"
+                    - generic [ref=e2024]: 21시간 전
+                  - img [ref=e2026]
+              - link "경기도민 35만원 자기계발비 경기도민 자기개발비 지원금, 35만 원 자기계발지원금 3일 전" [ref=e2027] [cursor=pointer]:
+                - /url: "?mra=QkRS%5EU2JUX0NQbQ%3D%3D%5EU2xUX1NBeA%3D%3D%5ETk9DX1hJVQ%3D%3D%5EU3hUX0NQdA%3D%3D&mra2=U0RC%5EU3hUX0NQdA%3D%3D&query=%EA%B2%BD%EA%B8%B0%EB%8F%84%EB%AF%BC+35%EB%A7%8C%EC%9B%90+%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%EB%B9%84&qvt=0&sm=tab_sht.best&where=nexearch&x_cue=%7B%22act%22%3A%22resrch%22%2C%22from%22%3A%22shortents%22%7D&x_shortents=%7B%22category%22%3A%22%EC%83%9D%ED%99%9C%EA%B2%BD%EC%A0%9C%22%2C%22gdid%22%3A%2290000003_0000000000000034381E3F34%22%7D"
+                - generic [ref=e2028]:
+                  - img [ref=e2029]
+                  - generic [ref=e2035]:
+                    - generic [ref=e2036]: 경기도민 35만원 자기계발비
+                    - img [ref=e2037]
+                  - img [ref=e2045]
+                - generic [ref=e2046]:
+                  - generic [ref=e2047]:
+                    - text: 경기도민 자기개발비 지원금, 35만 원 자기계발지원금
+                    - generic [ref=e2048]: 3일 전
+                  - img [ref=e2050]
+              - link "우리카드, 스타벅스 1만장 발급 [단독]독점깨진 스타벅스, 우리카드 초반 승기… 벌써 1만장 발급 22시간 전" [ref=e2051] [cursor=pointer]:
+                - /url: "?mra=QkRS%5EU2JUX0NQbQ%3D%3D%5EU2xUX1NBeA%3D%3D%5ETk9DX1hJVQ%3D%3D%5EU3hUX0NQdA%3D%3D&mra2=U0RC%5EU3hUX0NQdA%3D%3D&query=%EC%9A%B0%EB%A6%AC%EC%B9%B4%EB%93%9C%2C+%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4+1%EB%A7%8C%EC%9E%A5+%EB%B0%9C%EA%B8%89&qvt=0&sm=tab_sht.best&where=nexearch&x_cue=%7B%22act%22%3A%22resrch%22%2C%22from%22%3A%22shortents%22%7D&x_shortents=%7B%22category%22%3A%22%EC%83%9D%ED%99%9C%EA%B2%BD%EC%A0%9C%22%2C%22gdid%22%3A%22880000C2_000000000000000005355867%22%7D"
+                - generic [ref=e2052]:
+                  - img [ref=e2053]
+                  - generic [ref=e2059]:
+                    - generic [ref=e2060]: 우리카드, 스타벅스 1만장 발급
+                    - img [ref=e2061]
+                  - img [ref=e2069]
+                - generic [ref=e2070]:
+                  - generic [ref=e2071]:
+                    - text: "[단독]독점깨진 스타벅스, 우리카드 초반 승기… 벌써 1만장 발급"
+                    - generic [ref=e2072]: 22시간 전
+                  - img [ref=e2074]
+              - link "네이버 임금 5.3% 인상 잠정합의 네이버, 올해 임금 5.3% 인상 잠정합의...AI 화력 집중 20시간 전" [ref=e2075] [cursor=pointer]:
+                - /url: "?mra=QkRS%5EU2JUX0NQbQ%3D%3D%5EU2xUX1NBeA%3D%3D%5ETk9DX1hJVQ%3D%3D%5EU3hUX0NQdA%3D%3D&mra2=U0RC%5EU3hUX0NQdA%3D%3D&query=%EB%84%A4%EC%9D%B4%EB%B2%84+%EC%9E%84%EA%B8%88+5.3%25+%EC%9D%B8%EC%83%81+%EC%9E%A0%EC%A0%95%ED%95%A9%EC%9D%98&qvt=0&sm=tab_sht.best&where=nexearch&x_cue=%7B%22act%22%3A%22resrch%22%2C%22from%22%3A%22shortents%22%7D&x_shortents=%7B%22category%22%3A%22%EC%83%9D%ED%99%9C%EA%B2%BD%EC%A0%9C%22%2C%22gdid%22%3A%22880000E7_000000000000000006278627%22%7D"
+                - generic [ref=e2076]:
+                  - img [ref=e2077]
+                  - generic [ref=e2083]:
+                    - generic [ref=e2084]: 네이버 임금 5.3% 인상 잠정합의
+                    - img [ref=e2085]
+                  - img [ref=e2093]
+                - generic [ref=e2094]:
+                  - generic [ref=e2095]:
+                    - text: 네이버, 올해 임금 5.3% 인상 잠정합의...AI 화력 집중
+                    - generic [ref=e2096]: 20시간 전
+                  - img [ref=e2098]
+            - link "숏텐츠 더보기" [ref=e2101] [cursor=pointer]:
+              - /url: "?category=%EC%83%9D%ED%99%9C%EA%B2%BD%EC%A0%9C&query=%EC%83%9D%ED%99%9C%EA%B2%BD%EC%A0%9C+%EC%88%8F%ED%85%90%EC%B8%A0&sm=tab_tmr&ssc=tab.shortents.all"
+              - generic [ref=e2102]:
+                - generic [ref=e2103]:
+                  - generic [ref=e2104]: 숏텐츠
+                  - generic [ref=e2105]: 더보기
+                - img [ref=e2106]
+          - link "N인증서 발급하면 최대 1만 포인트 추첨으로 100만 포인트까지!" [ref=e2110] [cursor=pointer]:
+            - /url: https://naver.me/FoXW4a2i
+            - img "N인증서 발급하면 최대 1만 포인트 추첨으로 100만 포인트까지!" [ref=e2111]
+    - generic [ref=e2112]:
+      - link "맨위로" [ref=e2114] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e2115]: 맨위로
+      - generic [ref=e2117]:
+        - link "전체서비스" [ref=e2119] [cursor=pointer]:
+          - /url: https://www.naver.com/more.html
+        - link "이용약관" [ref=e2121] [cursor=pointer]:
+          - /url: https://policy.naver.com/policy/service.html
+        - link "개인정보처리방침" [ref=e2123] [cursor=pointer]:
+          - /url: https://policy.naver.com/policy/privacy.html
+          - strong [ref=e2124]: 개인정보처리방침
+        - link "검색 고객센터" [ref=e2126] [cursor=pointer]:
+          - /url: https://help.naver.com/alias/search/integration/main.naver
+        - link "© NAVER Corp." [ref=e2128] [cursor=pointer]:
+          - /url: https://www.navercorp.com/

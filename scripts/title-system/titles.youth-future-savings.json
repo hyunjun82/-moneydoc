@@ -1,0 +1,69 @@
+{
+  "keyword": "청년미래적금",
+  "category": "government",
+  "baseSlug": "youth-future-savings",
+  "hub": {
+    "title": "청년미래적금 가입조건·정부기여금 총정리 (2026년 기준)",
+    "route": "/government/youth-future-savings-guide/"
+  },
+  "calculator": {
+    "title": "자유적금 계산기 (월 납입·금리별 만기 수령액)",
+    "route": "/savings/free-savings/"
+  },
+  "researchSources": {
+    "collectedVia": "Claude in Chrome (google.com 직접 수집)",
+    "google_related_broad": [
+      "청년미래적금 2026 신청", "청년미래적금 가입 방법", "청년미래적금 가입 시기",
+      "청년미래적금 가입 조건", "청년미래적금 출시일", "청년미래적금 대학생",
+      "청년미래적금 전환", "청년미래적금 일반형"
+    ],
+    "google_related_military": [
+      "청년미래적금 군인 디시", "청년미래적금 군인 가입", "청년미래적금 만기 수령액"
+    ],
+    "naver_PAA_partial": ["청년미래적금 가입 조건은 무엇인가요"],
+    "naver_note": "연관검색어 전체는 화면 스크롤 캡처 대기(navigate 차단)",
+    "facts_for_body_only": "카카오뱅크 기본5%·최대7%, 공통우대 0.5%p+재무상담 0.2%p (본문 근거용, 타이틀 아님)"
+  },
+  "spokes": [
+    { "slug": "eligibility", "cluster": "A 가입·자격", "format": "list-comma",
+      "sourceQuery": "청년미래적금 가입 조건", "sourcePlatform": "google_related",
+      "title": "청년미래적금 가입 조건, 소득·가구·나이 요건 한눈에",
+      "mustInclude": ["청년미래적금", "가입 조건"] },
+    { "slug": "how-to-apply", "cluster": "A 가입·자격", "format": "total-colon",
+      "sourceQuery": "청년미래적금 가입 방법", "sourcePlatform": "google_related",
+      "title": "청년미래적금 가입 방법: 취급은행 앱·서민금융진흥원 비대면",
+      "mustInclude": ["청년미래적금", "가입 방법"] },
+    { "slug": "apply-timing", "cluster": "A 가입·자격", "format": "list-comma",
+      "sourceQuery": "청년미래적금 가입 시기", "sourcePlatform": "google_related",
+      "title": "청년미래적금 가입 시기, 1차 신청 6월 22일~7월 3일 일정",
+      "mustInclude": ["청년미래적금", "가입 시기"] },
+    { "slug": "apply-2026", "cluster": "A 가입·자격", "format": "list-comma",
+      "sourceQuery": "청년미래적금 2026 신청", "sourcePlatform": "google_related",
+      "title": "청년미래적금 2026 신청 기간, 5부제 미적용·7월 3일까지",
+      "mustInclude": ["청년미래적금", "2026 신청"] },
+    { "slug": "launch-date", "cluster": "A 가입·자격", "format": "question",
+      "sourceQuery": "청년미래적금 출시일", "sourcePlatform": "google_related",
+      "title": "청년미래적금 출시일은 언제? 6월 22일 출시·신청 일정",
+      "mustInclude": ["청년미래적금", "출시일"] },
+    { "slug": "university-student", "cluster": "B 대상별", "format": "question",
+      "sourceQuery": "청년미래적금 대학생", "sourcePlatform": "google_related",
+      "title": "대학생도 청년미래적금 가입되나요? 소득 없으면 못 받는 이유",
+      "mustInclude": ["청년미래적금", "대학생"] },
+    { "slug": "soldier", "cluster": "B 대상별", "format": "question",
+      "sourceQuery": "청년미래적금 군인 가입", "sourcePlatform": "google_related",
+      "title": "군인도 청년미래적금 가입되나요? 군장병급여만 있어도 OK",
+      "mustInclude": ["청년미래적금", "군인"] },
+    { "slug": "maturity-payout", "cluster": "C 금액", "format": "list-comma",
+      "sourceQuery": "청년미래적금 만기 수령액", "sourcePlatform": "google_related",
+      "title": "청년미래적금 만기 수령액, 월 50만원 3년 납입 기준 계산",
+      "mustInclude": ["청년미래적금", "만기 수령액"] },
+    { "slug": "general-type", "cluster": "C 금액", "format": "definition",
+      "sourceQuery": "청년미래적금 일반형", "sourcePlatform": "google_related",
+      "title": "청년미래적금 일반형이란? 우대형 12%와 6% 매칭 차이",
+      "mustInclude": ["청년미래적금", "일반형"] },
+    { "slug": "switch", "cluster": "D 전환", "format": "list-comma",
+      "sourceQuery": "청년미래적금 전환", "sourcePlatform": "google_related",
+      "title": "청년미래적금 전환, 청년도약계좌에서 6월 한 번 갈아타기",
+      "mustInclude": ["청년미래적금", "전환"] }
+  ]
+}

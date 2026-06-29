@@ -1,0 +1,51 @@
+{
+  "keyword": "자녀장려금",
+  "_expect": "PASS",
+  "_reason": "정상 입력",
+  "spokes": [
+    {
+      "slug": "eligible",
+      "format": "question",
+      "title": "자녀장려금 자격요건, 소득·재산 기준 얼마까지?",
+      "mustInclude": [
+        "자녀장려금",
+        "자격"
+      ],
+      "sourceQuery": "자녀장려금 자격",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "amount",
+      "format": "total-colon",
+      "title": "자녀장려금 지급액 계산: 홑벌이·맞벌이 차이까지",
+      "mustInclude": [
+        "자녀장려금",
+        "지급액"
+      ],
+      "sourceQuery": "자녀장려금 지급액",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "apply",
+      "format": "question",
+      "title": "자녀장려금 신청 방법과 기간, 놓치면 반만 받나요?",
+      "mustInclude": [
+        "자녀장려금",
+        "신청"
+      ],
+      "sourceQuery": "자녀장려금 신청",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "dup",
+      "format": "list-comma",
+      "title": "근로장려금 자녀장려금 중복, 같이 받을 수 있나",
+      "mustInclude": [
+        "자녀장려금",
+        "근로장려금"
+      ],
+      "sourceQuery": "자녀장려금 근로장려금",
+      "sourcePlatform": "fixture"
+    }
+  ]
+}

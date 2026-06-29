@@ -1,0 +1,43 @@
+{
+  "keyword": "실손보험",
+  "_expect": "FAIL",
+  "_reason": "키워드 누락 + 클릭베이트 금지어",
+  "spokes": [
+    {
+      "slug": "clickbait",
+      "format": "exclam",
+      "title": "이것만 알면 실손보험 끝! 안 보면 후회",
+      "mustInclude": [
+        "실손보험",
+        "청구"
+      ]
+    },
+    {
+      "slug": "ok1",
+      "format": "question",
+      "title": "실손보험 청구 방법, 모바일로 가능한가요?",
+      "mustInclude": [
+        "실손보험",
+        "청구"
+      ]
+    },
+    {
+      "slug": "ok2",
+      "format": "list-comma",
+      "title": "실손보험 세대별 차이, 1세대부터 4세대까지",
+      "mustInclude": [
+        "실손보험",
+        "세대"
+      ]
+    },
+    {
+      "slug": "ok3",
+      "format": "total-colon",
+      "title": "실손보험 전환 고민: 보험료와 보장 비교까지",
+      "mustInclude": [
+        "실손보험",
+        "전환"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "keyword": "국민연금",
+  "_expect": "PASS",
+  "_reason": "정상 입력",
+  "spokes": [
+    {
+      "slug": "expected",
+      "format": "question",
+      "title": "국민연금 예상수령액, 내 나이엔 얼마 받나요?",
+      "mustInclude": [
+        "국민연금",
+        "예상수령액"
+      ],
+      "sourceQuery": "국민연금 예상수령액",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "premium",
+      "format": "total-colon",
+      "title": "국민연금 납부액 계산: 기준소득월액 9%까지",
+      "mustInclude": [
+        "국민연금",
+        "납부액"
+      ],
+      "sourceQuery": "국민연금 납부액",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "age",
+      "format": "list-comma",
+      "title": "국민연금 수령나이, 출생연도별 개시연령표",
+      "mustInclude": [
+        "국민연금",
+        "수령나이"
+      ],
+      "sourceQuery": "국민연금 수령나이",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "voluntary",
+      "format": "list-comma",
+      "title": "국민연금 임의가입 조건과 보험료, 주부도 되나요?",
+      "mustInclude": [
+        "국민연금",
+        "임의가입"
+      ],
+      "sourceQuery": "국민연금 임의가입",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "early",
+      "format": "question",
+      "title": "국민연금 조기수령하면 얼마 깎이나? 감액률 정리",
+      "mustInclude": [
+        "국민연금",
+        "조기수령"
+      ],
+      "sourceQuery": "국민연금 조기수령",
+      "sourcePlatform": "fixture"
+    }
+  ]
+}

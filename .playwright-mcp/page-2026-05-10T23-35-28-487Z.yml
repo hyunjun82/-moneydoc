@@ -1,0 +1,410 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e6]: 2025-금감원-2877(대부중개업), 2025-금감원-2877(대부중개사이트영위업)
+    - generic [ref=e7]:
+      - link "이지론" [ref=e8] [cursor=pointer]:
+        - /url: https://ezloan.io/
+      - navigation [ref=e9]:
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - link "실시간 대출 문의" [ref=e12] [cursor=pointer]:
+              - /url: /rq
+              - generic [ref=e13]: 실시간 대출 문의
+          - listitem [ref=e15]:
+            - link "정식등록업체" [ref=e16] [cursor=pointer]:
+              - /url: /l
+              - generic [ref=e17]: 정식등록업체
+          - listitem [ref=e18]:
+            - link "커뮤니티" [ref=e19] [cursor=pointer]:
+              - /url: /b/tip
+              - generic [ref=e20]: 커뮤니티
+          - listitem [ref=e22]:
+            - link "대출계산기" [ref=e23] [cursor=pointer]:
+              - /url: /calc/loan
+              - generic [ref=e24]: 대출계산기
+          - listitem [ref=e25]:
+            - link "금융정보" [ref=e26] [cursor=pointer]:
+              - /url: /finlife
+              - generic [ref=e27]: 금융정보
+      - generic [ref=e28]:
+        - link "고객센터" [ref=e29] [cursor=pointer]:
+          - /url: /b/notice
+          - generic [ref=e30]: 고객센터
+        - link "대출위키" [ref=e31] [cursor=pointer]:
+          - /url: /wiki/
+          - generic [ref=e32]: 대출위키
+        - link "로그인" [ref=e33] [cursor=pointer]:
+          - /url: https://ezloan.io/m/login
+          - generic [ref=e34]: 로그인
+  - main [ref=e35]:
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - navigation "Breadcrumb" [ref=e38]:
+          - list [ref=e39]:
+            - listitem [ref=e40]:
+              - link "홈" [ref=e41] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e43]:
+              - link "대출계산기" [ref=e44] [cursor=pointer]:
+                - /url: /calc/loan
+            - listitem [ref=e46]:
+              - link "DSR 계산기" [ref=e47] [cursor=pointer]:
+                - /url: /calc/dsr
+        - heading "DSR 계산기" [level=1] [ref=e48]
+        - text: DSR 계산기
+      - generic [ref=e49]:
+        - heading "다른 계산기 더 보기" [level=2] [ref=e51]
+        - list [ref=e52]:
+          - listitem [ref=e53]:
+            - link "대출이자 계산기" [ref=e54] [cursor=pointer]:
+              - /url: /calc/loan
+              - paragraph [ref=e55]: 대출이자 계산기
+          - listitem [ref=e56]:
+            - link "중도상환 수수료 계산기" [ref=e57] [cursor=pointer]:
+              - /url: /calc/loan_prepayment
+              - paragraph [ref=e58]: 중도상환 수수료 계산기
+          - listitem [ref=e59]:
+            - link "예금 계산기" [ref=e60] [cursor=pointer]:
+              - /url: /calc/deposit
+              - paragraph [ref=e61]: 예금 계산기
+          - listitem [ref=e62]:
+            - link "연봉 계산기" [ref=e63] [cursor=pointer]:
+              - /url: /calc/salary
+              - paragraph [ref=e64]: 연봉 계산기
+          - listitem [ref=e65]:
+            - link "연봉 실수령액 표" [ref=e66] [cursor=pointer]:
+              - /url: /calc/salary_year
+              - paragraph [ref=e67]: 연봉 실수령액 표
+          - listitem [ref=e68]:
+            - link "월급 실수령액 표" [ref=e69] [cursor=pointer]:
+              - /url: /calc/salary_month
+              - paragraph [ref=e70]: 월급 실수령액 표
+          - listitem [ref=e71]:
+            - link "적금계산기" [ref=e72] [cursor=pointer]:
+              - /url: /calc/saving
+              - paragraph [ref=e73]: 적금계산기
+          - listitem [ref=e74]:
+            - link "평형 계산기" [ref=e75] [cursor=pointer]:
+              - /url: /calc/area_unit
+              - paragraph [ref=e76]: 평형 계산기
+          - listitem [ref=e77]:
+            - link "평당 가격 계산기" [ref=e78] [cursor=pointer]:
+              - /url: /calc/area
+              - paragraph [ref=e79]: 평당 가격 계산기
+          - listitem [ref=e80]:
+            - link "LTV 계산기" [ref=e81] [cursor=pointer]:
+              - /url: /calc/ltv
+              - paragraph [ref=e82]: LTV 계산기
+          - listitem [ref=e83]:
+            - link "신DTI 계산기" [ref=e84] [cursor=pointer]:
+              - /url: /calc/new_dti
+              - paragraph [ref=e85]: 신DTI 계산기
+          - listitem [ref=e86]:
+            - link "중개수수료 계산기" [ref=e87] [cursor=pointer]:
+              - /url: /calc/relay_fee
+              - paragraph [ref=e88]: 중개수수료 계산기
+          - listitem [ref=e89]:
+            - link "인지세 계산기" [ref=e90] [cursor=pointer]:
+              - /url: /calc/stamp_tax
+              - paragraph [ref=e91]: 인지세 계산기
+          - listitem [ref=e92]:
+            - link "국민주택채권 계산기" [ref=e93] [cursor=pointer]:
+              - /url: /calc/house_bond
+              - paragraph [ref=e94]: 국민주택채권 계산기
+          - listitem [ref=e95]:
+            - link "대출 갈아타기 계산기" [ref=e96] [cursor=pointer]:
+              - /url: /calc/loan_diff
+              - paragraph [ref=e97]: 대출 갈아타기 계산기
+          - listitem [ref=e98]:
+            - link "전세 vs 월세 계산기" [ref=e99] [cursor=pointer]:
+              - /url: /calc/rent_diff
+              - paragraph [ref=e100]: 전세 vs 월세 계산기
+          - listitem [ref=e101]:
+            - link "청년도약계좌 계산기" [ref=e102] [cursor=pointer]:
+              - /url: /calc/youth
+              - paragraph [ref=e103]: 청년도약계좌 계산기
+          - listitem [ref=e104]:
+            - link "적정 매수가 계산기" [ref=e105] [cursor=pointer]:
+              - /url: /calc/purchase
+              - paragraph [ref=e106]: 적정 매수가 계산기
+          - listitem [ref=e107]:
+            - link "주휴수당 계산기" [ref=e108] [cursor=pointer]:
+              - /url: /calc/weekly_allowance
+              - paragraph [ref=e109]: 주휴수당 계산기
+          - listitem [ref=e110]:
+            - link "날짜차이 계산기" [ref=e111] [cursor=pointer]:
+              - /url: /calc/time_diff
+              - paragraph [ref=e112]: 날짜차이 계산기
+          - listitem [ref=e113]:
+            - link "주택 연말정산 계산기" [ref=e114] [cursor=pointer]:
+              - /url: /calc/sm_house
+              - paragraph [ref=e115]: 주택 연말정산 계산기
+          - listitem [ref=e116]:
+            - link "카드/현금 연말정산 계산기" [ref=e117] [cursor=pointer]:
+              - /url: /calc/sm_cardcash
+              - paragraph [ref=e118]: 카드/현금 연말정산 계산기
+          - listitem [ref=e119]:
+            - link "연금/펀드 연말정산 계산기" [ref=e120] [cursor=pointer]:
+              - /url: /calc/sm_fund
+              - paragraph [ref=e121]: 연금/펀드 연말정산 계산기
+          - listitem [ref=e122]:
+            - link "주택연금 예상 월지급금 계산기" [ref=e123] [cursor=pointer]:
+              - /url: /finlife/hf_hmp
+              - paragraph [ref=e124]: 주택연금 예상 월지급금 계산기
+          - listitem [ref=e125]:
+            - link "임대 수익률 계산기" [ref=e126] [cursor=pointer]:
+              - /url: /calc/rental_income
+              - paragraph [ref=e127]: 임대 수익률 계산기
+          - listitem [ref=e128]:
+            - link "보유세(재산세, 종부세) 계산기" [ref=e129] [cursor=pointer]:
+              - /url: /calc/property_tax
+              - paragraph [ref=e130]: 보유세(재산세, 종부세) 계산기
+          - listitem [ref=e131]:
+            - link "양도소득세 계산기" [ref=e132] [cursor=pointer]:
+              - /url: /calc/capital_gains_tax
+              - paragraph [ref=e133]: 양도소득세 계산기
+          - listitem [ref=e134]:
+            - link "증여세 계산기" [ref=e135] [cursor=pointer]:
+              - /url: /calc/gift_tax
+              - paragraph [ref=e136]: 증여세 계산기
+          - listitem [ref=e137]:
+            - link "상속세 계산기" [ref=e138] [cursor=pointer]:
+              - /url: /calc/inheritance_tax
+              - paragraph [ref=e139]: 상속세 계산기
+    - generic [ref=e140]:
+      - generic [ref=e142]:
+        - heading "DSR" [level=3] [ref=e144]
+        - list [ref=e145]:
+          - listitem [ref=e146]:
+            - generic [ref=e147]: 연소득
+            - generic [ref=e148]:
+              - generic [ref=e149]:
+                - textbox [ref=e150]: 5,000
+                - generic [ref=e151]: 만 원
+                - link [ref=e152] [cursor=pointer]:
+                  - /url: javascript:void(0);
+              - generic [ref=e154]:
+                - link "+10만" [ref=e155] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e156]: +10만
+                - link "+50만" [ref=e157] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e158]: +50만
+                - link "+1백만" [ref=e159] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e160]: +1백만
+                - link "+3백만" [ref=e161] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e162]: +3백만
+                - link "+5백만" [ref=e163] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e164]: +5백만
+                - link "+1천만" [ref=e165] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e166]: +1천만
+                - link "+1억" [ref=e167] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e168]: +1억
+          - listitem [ref=e169]:
+            - list [ref=e170]:
+              - listitem [ref=e171]:
+                - 'heading "보유대출 #1" [level=4] [ref=e172]'
+                - list [ref=e173]:
+                  - listitem [ref=e174]:
+                    - generic [ref=e175]: 대출금액
+                    - generic [ref=e176]:
+                      - generic [ref=e177]:
+                        - textbox [ref=e178]: 50,000
+                        - generic [ref=e179]: 만 원
+                        - link [ref=e180] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - generic [ref=e182]:
+                        - link "+10만" [ref=e183] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e184]: +10만
+                        - link "+50만" [ref=e185] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e186]: +50만
+                        - link "+1백만" [ref=e187] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e188]: +1백만
+                        - link "+3백만" [ref=e189] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e190]: +3백만
+                        - link "+5백만" [ref=e191] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e192]: +5백만
+                        - link "+1천만" [ref=e193] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e194]: +1천만
+                        - link "+1억" [ref=e195] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e196]: +1억
+                  - listitem [ref=e197]:
+                    - generic [ref=e198]: 대출종류
+                    - generic [ref=e199]:
+                      - generic [ref=e200] [cursor=pointer]:
+                        - radio "신용 및 기타" [ref=e201]
+                        - generic [ref=e202]: 신용 및 기타
+                      - generic [ref=e203] [cursor=pointer]:
+                        - radio "주택담보" [checked] [ref=e204]
+                        - generic [ref=e205]: 주택담보
+                  - listitem [ref=e206]:
+                    - generic [ref=e207]: 상환방식
+                    - generic [ref=e208]:
+                      - generic [ref=e209] [cursor=pointer]:
+                        - radio "원리금 균등" [checked] [ref=e210]
+                        - generic [ref=e211]: 원리금 균등
+                      - generic [ref=e212] [cursor=pointer]:
+                        - radio "원금 균등" [ref=e213]
+                        - generic [ref=e214]: 원금 균등
+                      - generic [ref=e215] [cursor=pointer]:
+                        - radio "원금만기 일시상환" [ref=e216]
+                        - generic [ref=e217]: 원금만기 일시상환
+                  - listitem [ref=e218]:
+                    - generic [ref=e219]: 대출기간
+                    - generic [ref=e220]:
+                      - generic [ref=e221]:
+                        - textbox [ref=e222]: "360"
+                        - generic [ref=e223]: 개월
+                        - link [ref=e224] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - generic [ref=e226]:
+                        - link "1년" [ref=e227] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e228]: 1년
+                        - link "2년" [ref=e229] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e230]: 2년
+                        - link "3년" [ref=e231] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e232]: 3년
+                        - link "4년" [ref=e233] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e234]: 4년
+                        - link "5년" [ref=e235] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e236]: 5년
+                        - link "10년" [ref=e237] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e238]: 10년
+                        - link "15년" [ref=e239] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e240]: 15년
+                        - link "20년" [ref=e241] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e242]: 20년
+                        - link "30년" [ref=e243] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e244]: 30년
+                  - listitem [ref=e245]:
+                    - generic [ref=e246]: 이자
+                    - generic [ref=e247]:
+                      - generic [ref=e248]:
+                        - link "-" [ref=e249] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e250]: "-"
+                        - link "+" [ref=e251] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e252]: +
+                        - textbox [ref=e253]: "5"
+                        - generic [ref=e254]: "%"
+                        - link [ref=e255] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - generic [ref=e257]:
+                        - link "3%" [ref=e258] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e259]: 3%
+                        - link "4%" [ref=e260] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e261]: 4%
+                        - link "5%" [ref=e262] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e263]: 5%
+                        - link "6%" [ref=e264] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e265]: 6%
+                        - link "7%" [ref=e266] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e267]: 7%
+                        - link "10%" [ref=e268] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e269]: 10%
+                        - link "15%" [ref=e270] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e271]: 15%
+                        - link "20%" [ref=e272] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e273]: 20%
+                        - link "50%" [ref=e274] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e275]: 50%
+                  - listitem [ref=e276]:
+                    - generic [ref=e278] [cursor=pointer]: 추가
+        - button "계산하기" [ref=e281] [cursor=pointer]
+      - generic [ref=e282]:
+        - heading "DSR 계산결과" [level=3] [ref=e284]
+        - list [ref=e286]:
+          - listitem [ref=e287]:
+            - generic [ref=e288]: 총
+            - generic [ref=e291]: 1 건
+            - generic [ref=e292]: 의 대출이 있어요
+          - listitem [ref=e293]:
+            - generic [ref=e294]: 현재 DSR은
+            - generic [ref=e297]: 64.42%
+            - generic [ref=e298]: 입니다
+      - generic [ref=e299]:
+        - heading "추가 대출 예상 한도" [level=3] [ref=e301]
+        - list [ref=e303]:
+          - listitem [ref=e304]:
+            - generic [ref=e306]: 이자율
+            - combobox [ref=e309]:
+              - option "선택" [selected]
+              - option "1%"
+              - option "2%"
+              - option "3%"
+              - option "4%"
+              - option "5%"
+              - option "6%"
+              - option "7%"
+              - option "8%"
+              - option "9%"
+              - option "10%"
+              - option "11%"
+              - option "12%"
+              - option "13%"
+              - option "14%"
+              - option "15%"
+              - option "16%"
+              - option "17%"
+              - option "18%"
+              - option "19%"
+              - option "20%"
+          - listitem [ref=e310]:
+            - generic [ref=e312]: DSR 70% 기준
+          - listitem [ref=e313]:
+            - generic [ref=e315]: DSR 90% 기준
+      - generic [ref=e316]:
+        - heading "DSR 안내사항" [level=3] [ref=e318]
+        - list [ref=e319]:
+          - listitem [ref=e320]:
+            - generic [ref=e321]: DSR이란?
+            - generic [ref=e322]: DSR(총체적상환능력비율)은 연간 총 소득에서 전체 대출금의 원리금(원금+이자)이 차지하는 비율을 말합니다. 주택담보대출뿐 아니라 신용대출과 자동차담보대출 등 모든 대출금이 해당됩니다.
+          - listitem [ref=e323]:
+            - generic [ref=e324]: 원리금균등상환
+            - generic [ref=e325]: 원리금(원금+이자)을 매 기간 균등하게 갚는 방법입니다.
+          - listitem [ref=e326]:
+            - generic [ref=e327]: 원금균등상환
+            - generic [ref=e328]: 대출금을 약정기간으로 나눠 매달 원금이 균등히 상환되도록 하는 방법입니다.
+          - listitem [ref=e329]:
+            - generic [ref=e330]: 만기일시상환
+            - generic [ref=e331]: 약정기간 중에는 이자만 부담하다가 만기일에 대출 전액을 상환하는 방법입니다.
+          - listitem [ref=e332]:
+            - generic [ref=e333]: DSR 주의사항
+            - list [ref=e335]:
+              - listitem [ref=e336]: 신용이 좋아지면 금리를 낮출 수 있으며, 향후 대출 시 더 유리한 조건으로 거래할 수 있습니다.
+              - listitem [ref=e337]: DSR 계산기는 필수 정보값을 이용하여 추정치를 보여주는 참고용입니다.
+              - listitem [ref=e338]: 본인의 신용도와 입력 보유 대출의 상환방법, 상환기간 등 기타 상세한 정보에 따라서 결과값이 오차가 있을 수 있습니다.
+              - listitem [ref=e339]: 신용대출 DSR 상환기간 기준은 10년 입니다.
+              - listitem [ref=e340]: DSR 70% 부터 高DSR 위험 군으로 취급하고 있으며, 기준은 정부 규제에 따라 변경될 수 있습니다.
+              - listitem [ref=e341]: 각 금융기관의 정책과 취급 상품 속성에 따라 승인 및 한도가 달라집니다.

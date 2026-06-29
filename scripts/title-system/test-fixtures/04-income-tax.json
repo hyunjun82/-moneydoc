@@ -1,0 +1,62 @@
+{
+  "keyword": "종합소득세",
+  "_expect": "PASS",
+  "_reason": "정상 입력",
+  "spokes": [
+    {
+      "slug": "target",
+      "format": "question",
+      "title": "종합소득세 신고 대상, 나도 해당되나요?",
+      "mustInclude": [
+        "종합소득세",
+        "신고"
+      ],
+      "sourceQuery": "종합소득세 신고",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "rate",
+      "format": "list-comma",
+      "title": "종합소득세율 2026, 과세표준 구간별 세율표",
+      "mustInclude": [
+        "종합소득세",
+        "세율"
+      ],
+      "sourceQuery": "종합소득세 세율",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "how",
+      "format": "total-colon",
+      "title": "종합소득세 신고 방법: 홈택스 단계별 정리",
+      "mustInclude": [
+        "종합소득세",
+        "신고 방법"
+      ],
+      "sourceQuery": "종합소득세 신고 방법",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "expense",
+      "format": "list-comma",
+      "title": "프리랜서 종합소득세 경비처리, 어디까지 인정되나",
+      "mustInclude": [
+        "종합소득세",
+        "경비"
+      ],
+      "sourceQuery": "종합소득세 경비",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "refund",
+      "format": "question",
+      "title": "종합소득세 환급, 언제 얼마나 돌려받나요?",
+      "mustInclude": [
+        "종합소득세",
+        "환급"
+      ],
+      "sourceQuery": "종합소득세 환급",
+      "sourcePlatform": "fixture"
+    }
+  ]
+}

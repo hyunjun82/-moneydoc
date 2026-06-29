@@ -13,7 +13,7 @@ export const bodyHtml = `
 <article class="wrap">
 
     <!-- 상단 고정 신청바 -->
-    <a class="applysticky" href="https://fill4young.kinfa.or.kr/yfs/main" target="_blank" rel="noopener">
+    <a class="applysticky" href="https://fill4young.kinfa.or.kr/yfs/main">
       <span class="as-t">청년미래적금 신청하기</span>
       <span class="as-d">신청 ~7월 3일 · 첫 주 5부제</span>
       <span class="as-btn">신청 바로가기 →</span>
@@ -56,7 +56,7 @@ export const bodyHtml = `
     </div>
 
     <!-- 시점 안내 -->
-    <div class="notice"><span class="ic">ⓘ</span><span>이 글은 <b>2026년 1차 신청(6월 22일~7월 3일)</b> 기준으로 정리했어요. 신청 기간이 지난 뒤 보신다면 다음 회차 일정과 최신 조건을 <a href="https://fill4young.kinfa.or.kr/yfs/main" target="_blank" rel="noopener">서민금융진흥원</a>에서 확인하세요.</span></div>
+    <div class="notice"><span class="ic">ⓘ</span><span>이 글은 <b>2026년 1차 신청(6월 22일~7월 3일)</b> 기준으로 정리했어요. 신청 기간이 지난 뒤 보신다면 다음 회차 일정과 최신 조건을 <a href="https://fill4young.kinfa.or.kr/yfs/main">서민금융진흥원</a>에서 확인하세요.</span></div>
 
     <!-- 목차 (접이식) -->
     <details class="toc" open>
@@ -88,7 +88,7 @@ export const bodyHtml = `
     </section>
 
     <!-- 신청 바로가기 (전면 CTA) -->
-    <a class="applybar" href="https://fill4young.kinfa.or.kr/yfs/main" target="_blank" rel="noopener">
+    <a class="applybar" href="https://fill4young.kinfa.or.kr/yfs/main">
       <span class="t">지금 바로 신청하세요<small>신청 기간 6월 22일 ~ 7월 3일 (2주) · 첫 주는 출생연도 끝자리 5부제</small></span>
       <span class="btn">신청 바로가기 →</span>
     </a>
@@ -230,7 +230,7 @@ export const bodyHtml = `
           <tr><td>30만 원</td><td>일반형 6%</td><td>1,080만</td><td>64.8만</td><td class="em">1,144.8만</td></tr>
         </tbody>
       </table>
-      <div class="subnote" style="margin-top:var(--sp-4)"><b>계산 기준</b> = 매월 납입금 × 매칭률 × 36개월. 여기에 <b>은행 이자(전액 비과세)</b>가 더해져요. 예로 <b>우대형 월 50만 원</b>은 은행 우대금리(연 8% 가정) 적용 시 이자 약 239만 원이 붙어 <b>총 약 2,255만 원</b>까지 받을 수 있어요. 이자는 가입 은행·금리에 따라 달라 위 표에는 넣지 않았어요.</div>
+      <div class="subnote" style="margin-top:var(--sp-4)"><b>계산 기준</b> = 매월 납입금 × 매칭률 × 36개월. 여기에 <b>은행 이자(전액 비과세)</b>가 더해져요. 기본금리는 취급은행이 정하고, 여기에 <b>공통 우대금리 0.5%p</b>(총급여 3,600만 원 이하)와 <b>재무상담 이수 0.2%p</b>가 더해질 수 있어요. 최종 수령액은 가입 은행·금리에 따라 달라 위 표에는 이자를 넣지 않았어요.</div>
 
       <a class="calcbar" href="/savings/free-savings/">
         <span class="ct">내 월 납입·금리로 만기 수령액 계산하기</span>
@@ -240,7 +240,7 @@ export const bodyHtml = `
 
     <!-- 내 유형 찾기 -->
     <section class="card" id="sec-type">
-      <div class="seclabel"><span class="num">✓</span><span class="txt">내 유형 찾기</span></div>
+      <div class="seclabel"><span class="num">3</span><span class="txt">내 유형 찾기</span></div>
       <h2>청년미래적금, 나에게 맞는 유형은?</h2>
       <p class="secteaser">대표적인 경우로 빠르게 가늠해 보세요. (실제 유형은 서민금융진흥원 심사로 확정돼요.)</p>
       <div class="personas">
@@ -269,14 +269,30 @@ export const bodyHtml = `
 
     <!-- 신청 방법 (How-to) -->
     <section class="card" id="sec-apply">
-      <div class="seclabel"><span class="num">→</span><span class="txt">신청 방법</span></div>
+      <div class="seclabel"><span class="num">4</span><span class="txt">신청 방법</span></div>
       <h2>청년미래적금 신청 방법 (3단계)</h2>
       <p class="secteaser">대부분 비대면·자동 심사라 절차가 간단해요. 아래 순서대로만 따라 하면 됩니다.</p>
       <div class="steps">
-        <div class="st"><span class="sn">1</span><div class="sb"><b>취급은행 앱 또는 서민금융진흥원에서 신청</b>취급은행 앱이나 <a href="https://fill4young.kinfa.or.kr/yfs/main" target="_blank" rel="noopener">서민금융진흥원 청년금융(fill4young.kinfa.or.kr)</a>에서 비대면으로 신청해요.</div></div>
+        <div class="st"><span class="sn">1</span><div class="sb"><b>취급은행 앱 또는 서민금융진흥원에서 신청</b>취급은행 앱이나 <a href="https://fill4young.kinfa.or.kr/yfs/main">서민금융진흥원 청년금융(fill4young.kinfa.or.kr)</a>에서 비대면으로 신청해요.</div></div>
         <div class="st"><span class="sn">2</span><div class="sb"><b>소득·가구 요건 자동 심사</b>따로 서류를 내지 않아도 서민금융진흥원이 국세청·행정정보로 소득과 가구 중위소득을 확인하고, <b>일반형·우대형 유형을 자동으로 정해</b> 알려줘요.</div></div>
         <div class="st"><span class="sn">3</span><div class="sb"><b>적금 개설 후 납입 시작</b>승인되면 적금 계좌를 만들고 <b>월 최대 50만 원</b>을 자유롭게 넣으면 끝. 3년 뒤 원금 + 정부기여금 + 비과세 이자를 받아요.</div></div>
       </div>
+
+      <h3 style="margin-top:var(--sp-8);font-size:var(--fs-h3);font-weight:var(--fw-bold);color:var(--text-strong)">청년미래적금 1차 전체 일정 (6~8월)</h3>
+      <p class="secteaser" style="margin-top:var(--sp-2)">신청만 하면 끝이 아니에요. 요건 확인과 계좌개설까지 단계별로 진행돼요. (각 은행 운영시간 09:00~18:30)</p>
+      <div class="tbl-scroll">
+        <table class="cmp">
+          <thead>
+            <tr><th>단계</th><th class="p1">기간</th><th>무엇을 하나요</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="lab">① 가입신청</td><td class="hl1">6.22 ~ 7.3</td><td>첫 주는 출생연도 끝자리 5부제, <b>7.1부터 전원 신청 가능</b></td></tr>
+            <tr><td class="lab">② 가입요건 확인</td><td class="hl1">7.5 ~ 7.25</td><td>서민금융진흥원이 소득·가구 요건을 자동 심사</td></tr>
+            <tr><td class="lab">③ 계좌개설</td><td class="hl1">7.27 ~ 8.8</td><td>승인되면 적금 계좌를 만들고 납입 시작</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="secteaser" style="margin-top:var(--sp-3);font-size:var(--fs-caption)">※ 비과세소득(육아휴직급여·군장병급여) 증빙 대상자는 <b>7.1까지</b> 신청해야 해요. &nbsp;※ 취급기관 앱(농협·신한·우리·하나·기업·국민·수협·iM·부산·광주·전북·경남·카카오·우정사업본부)에서 신청.</p>
 
       <h3 style="margin-top:var(--sp-8);font-size:var(--fs-h3);font-weight:var(--fw-bold);color:var(--text-strong)">신청 첫 주는 '출생연도 끝자리' 5부제</h3>
       <p class="secteaser" style="margin-top:var(--sp-2)">신청 첫 주(6월 22일~)는 출생연도 끝자리에 따라 신청 요일이 나뉘어요. 둘째 주부터는 끝자리와 상관없이 신청할 수 있어요.</p>
@@ -300,7 +316,7 @@ export const bodyHtml = `
 
     <!-- 청년미래적금 vs 청년도약계좌 비교 -->
     <section class="card" id="sec-compare">
-      <div class="seclabel"><span class="num">vs</span><span class="txt">청년도약계좌와 비교</span></div>
+      <div class="seclabel"><span class="num">5</span><span class="txt">청년도약계좌와 비교</span></div>
       <h2>청년미래적금 vs 청년도약계좌, 뭐가 다를까?</h2>
       <p class="secteaser">둘 중 하나만 가입돼요. 기간이 짧고 매칭률이 높은 적금 vs 길고 큰 목돈의 계좌, 성향에 맞게 고르세요.</p>
       <div class="tbl-scroll">
@@ -324,7 +340,7 @@ export const bodyHtml = `
 
     <!-- 구간 3: 중소기업 우대형 -->
     <section class="card" id="sec-sme">
-      <div class="seclabel"><span class="num">3</span><span class="txt">중소기업 우대형</span></div>
+      <div class="seclabel"><span class="num">6</span><span class="txt">중소기업 우대형</span></div>
       <h2>청년미래적금 중소기업 우대형 조건</h2>
       <p class="secteaser">중소기업에 다닌다면 신청 전 이 6가지를 꼭 확인하세요.</p>
       <ul class="qa">
@@ -343,7 +359,7 @@ export const bodyHtml = `
 
     <!-- 구간 4: 소상공인 -->
     <section class="card" id="sec-owner">
-      <div class="seclabel"><span class="num">4</span><span class="txt">소상공인</span></div>
+      <div class="seclabel"><span class="num">7</span><span class="txt">소상공인</span></div>
       <h2>청년미래적금 소상공인 가입 조건</h2>
       <p class="secteaser">사장님이라면 근로자와 다른 이 점들을 챙기세요.</p>
       <ul class="qa">
@@ -354,11 +370,11 @@ export const bodyHtml = `
 
     <!-- 감액·탈락 주의 -->
     <section class="card" id="sec-caution">
-      <div class="seclabel"><span class="num">!</span><span class="txt">감액·탈락 주의</span></div>
+      <div class="seclabel"><span class="num">8</span><span class="txt">감액·탈락 주의</span></div>
       <h2>신청 전 꼭 확인할 주의사항</h2>
       <p class="secteaser">아래 경우엔 혜택이 줄거나 가입이 안 될 수 있어요. 손해 보지 않게 미리 체크하세요.</p>
       <div class="warn">
-        <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>중도해지하면 정부기여금은 전액 반환</b> — 3년 만기 전에 깨면 그동안 받은 정부기여금을 토해내고, 원금과 은행 이자만 돌려받아요.</div></div>
+        <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>중도해지하면 정부기여금은 원칙적으로 반환</b> — 3년 만기 전에 깨면 그동안 받은 정부기여금을 토해내고, 원금과 은행 이자만 돌려받아요. 다만 사망·해외이주 등 <b>특별중도해지</b> 사유는 예외로 혜택이 유지될 수 있어요.</div></div>
         <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>청년도약계좌와 중복 불가</b> — 둘 중 하나만 가입할 수 있어요. 갈아타기는 2026년 6월 신청 기간에 단 한 번만 가능해요.</div></div>
         <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>중소기업 우대형, 29개월 미만 퇴사 시 감액</b> — 만기 한 달 전까지 재직이 29개월 미만이면 전 기간이 일반형(6%)으로 적용돼 정부기여금이 절반으로 줄어요.</div></div>
         <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>공무원·공공기관·사립학교는 우대형 불가</b> — 중소기업기본법상 중소기업이 아니라, 소득요건을 채워도 중소기업 우대형은 안 돼요.</div></div>
@@ -413,7 +429,7 @@ export const bodyHtml = `
         </details>
         <details>
           <summary><span class="q">Q.</span><span>중간에 해지하면 정부 기여금은 어떻게 되나요?</span><span class="plus">+</span></summary>
-          <div class="ans">중도해지 시 그동안 받은 <b>정부 기여금은 반환</b>해야 하고, 원금과 은행 이자만 돌려받아요. 3년 만기까지 유지하는 것이 가장 유리해요.</div>
+          <div class="ans">중도해지 시 그동안 받은 <b>정부 기여금은 반환</b>해야 하고, 원금과 은행 이자만 돌려받아요. 다만 사망·해외이주 등 특별중도해지 사유는 예외로 혜택이 유지될 수 있어요. 3년 만기까지 유지하는 것이 가장 유리해요.</div>
         </details>
       </div>
     </section>
@@ -437,7 +453,7 @@ export const bodyHtml = `
       <div class="lines">
         <div class="line">청년금융 콜센터 <a href="tel:1397" style="color:#fff;font-weight:var(--fw-extrabold);text-decoration:none">☎ 1397 → 3</a></div>
       </div>
-      <a class="pillbtn" href="https://fill4young.kinfa.or.kr/yfs/main" target="_blank" rel="noopener">청년미래적금 홈페이지 →</a>
+      <a class="pillbtn" href="https://fill4young.kinfa.or.kr/yfs/main">청년미래적금 홈페이지 →</a>
     </div>
 
     <div class="foot">
@@ -462,6 +478,6 @@ export const faqLd = {
     { "@type": "Question", name: "일반형·우대형은 따로 신청해야 하나요?", acceptedAnswer: { "@type": "Answer", text: "아니요. 별도 신청 없이 서민금융진흥원이 가입요건을 확인해 유형을 자동으로 정해줘요." } },
     { "@type": "Question", name: "청년미래적금과 청년도약계좌, 무엇이 다른가요?", acceptedAnswer: { "@type": "Answer", text: "납입 한도(월 50만 원 vs 70만 원), 만기(3년 vs 5년), 정부 매칭(6·12% vs 6%), 최대 수령액(약 2,200만 원 vs 약 5,000만 원)이 달라요. 둘 중 하나만 가입할 수 있으며, 갈아타기는 2026년 6월에 단 한 번 가능해요." } },
     { "@type": "Question", name: "만 35세인데 청년미래적금에 가입할 수 있나요?", acceptedAnswer: { "@type": "Answer", text: "원칙적으로 만 19~34세가 대상이에요. 다만 병역 이행 기간(최대 6년)은 연령 계산에서 제외되어, 군필 남성은 최대 만 40세까지 가입할 수 있어요." } },
-    { "@type": "Question", name: "중간에 해지하면 정부 기여금은 어떻게 되나요?", acceptedAnswer: { "@type": "Answer", text: "중도해지 시 그동안 받은 정부 기여금은 반환해야 하며, 원금과 은행 이자만 돌려받아요. 3년 만기까지 유지하는 것이 가장 유리해요." } },
+    { "@type": "Question", name: "중간에 해지하면 정부 기여금은 어떻게 되나요?", acceptedAnswer: { "@type": "Answer", text: "중도해지 시 그동안 받은 정부 기여금은 반환해야 하며, 원금과 은행 이자만 돌려받아요. 다만 사망·해외이주 등 특별중도해지 사유는 예외로 혜택이 유지될 수 있어요. 3년 만기까지 유지하는 것이 가장 유리해요." } },
   ],
 };

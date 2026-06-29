@@ -1,0 +1,5 @@
+[    3614ms] [ERROR] Refused to get unsafe header "X-Sg-Cs" @ https://www.google.com/search?q=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&sei=K8ICaunYNMvLp84PkJ-FuA0:20
+[    3614ms] [ERROR] Refused to get unsafe header "X-Sorry-Redirect" @ https://www.google.com/search?q=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&sei=K8ICaunYNMvLp84PkJ-FuA0:20
+[    4788ms] [ERROR] Refused to get unsafe header "X-Sg-Cs" @ https://www.google.com/search?q=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&sei=K8ICaunYNMvLp84PkJ-FuA0:20
+[    4788ms] [ERROR] Refused to get unsafe header "X-Sorry-Redirect" @ https://www.google.com/search?q=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88&sei=K8ICaunYNMvLp84PkJ-FuA0:20
+[    6127ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://www.youtube.com') does not match the recipient window's origin ('https://www.google.com'). @ https://www.youtube.com/s/player/8fb635c2/www-widgetapi.vflset/www-widgetapi.js:209

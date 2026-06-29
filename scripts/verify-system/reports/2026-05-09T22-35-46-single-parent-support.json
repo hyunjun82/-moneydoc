@@ -1,0 +1,39 @@
+{
+  "label": "single-parent-support",
+  "timestamp": "2026-05-09T22-35-46",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 1 — 50% / 8세 (자격 O)",
+      "ts": 1778366146261
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 2 — 70% / 10세 (소득 초과)",
+      "ts": 1778366146272
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 3 — 30% / 5세",
+      "ts": 1778366146272
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 4 — 60% / 17세 (경계)",
+      "ts": 1778366146272
+    },
+    {
+      "status": "pass",
+      "calc": "single-parent-support",
+      "case": "Case 5 — 45% / 19세 (연령 초과)",
+      "ts": 1778366146272
+    }
+  ]
+}

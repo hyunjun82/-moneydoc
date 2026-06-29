@@ -1,0 +1,51 @@
+{
+  "keyword": "건강보험 피부양자",
+  "_expect": "PASS",
+  "_reason": "정상 입력",
+  "spokes": [
+    {
+      "slug": "cond",
+      "format": "question",
+      "title": "건강보험 피부양자 자격조건, 소득 얼마 넘으면 탈락?",
+      "mustInclude": [
+        "피부양자",
+        "자격"
+      ],
+      "sourceQuery": "피부양자 자격",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "income",
+      "format": "total-colon",
+      "title": "피부양자 소득요건 2026: 연 2천만원 기준 정리",
+      "mustInclude": [
+        "피부양자",
+        "소득요건"
+      ],
+      "sourceQuery": "피부양자 소득요건",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "asset",
+      "format": "question",
+      "title": "피부양자 재산기준, 과표 얼마부터 탈락하나요?",
+      "mustInclude": [
+        "피부양자",
+        "재산기준"
+      ],
+      "sourceQuery": "피부양자 재산기준",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "drop",
+      "format": "list-comma",
+      "title": "피부양자 탈락 시 지역가입자 보험료, 얼마나 오르나",
+      "mustInclude": [
+        "피부양자",
+        "지역가입자"
+      ],
+      "sourceQuery": "피부양자 지역가입자",
+      "sourcePlatform": "fixture"
+    }
+  ]
+}

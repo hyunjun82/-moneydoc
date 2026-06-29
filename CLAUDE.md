@@ -50,7 +50,8 @@ moneydoc-data/calculators/{cat}/{slug}.json   산식 + verification.cases (govSo
 lib/calc/engine.js                            모든 산식 (사이트가 import)
 components/GenericCalculator.tsx              UI
 app/{cat}/{slug}/page.tsx                     메타 + Shell
-scripts/verify-system/                        자동 검증
+scripts/verify-system/                        자동 검증 (계산기 수치)
+scripts/title-system/                         타이틀 생성 + 품질 게이트
 ```
 
 JSON case에 `govSource.govExpected` 자동 채움 (scrape-gov.mjs가 함, 손으로 X).
@@ -67,3 +68,20 @@ JSON case에 `govSource.govExpected` 자동 채움 (scrape-gov.mjs가 함, 손�
 3. truncation 체크
 4. push-changes.bat → Cloudflare 빌드 확인
 5. push 후 `verify-3way.mjs --all` (--no-gov 빼고) → 라이브+정부 일치 재확인
+
+## 8. 타이틀 생성 시스템 (콘텐츠 글 제목)
+
+계산기·허브·스포크 글 **제목은 직접 짓지 말고** 이 시스템으로 뽑는다.
+
+```bash
+# 1) 실측 수집: Claude in Chrome 으로 구글 PAA + 연관검색어
+#    https://www.google.com/search?q={키워드}&hl=ko&gl=kr   (네이버 전면 차단 → 사용자 복붙 폴백)
+# 2) titles.{slug}.json 작성 (KB Think 패턴, mustInclude 키워드 명시)
+node scripts/title-system/lint.mjs scripts/title-system/titles.{slug}.json   # PASS여야 진행
+node scripts/title-system/build-architecture.mjs scripts/title-system/titles.{slug}.json
+node scripts/title-system/test.mjs                                           # 회귀 10건 (10/10)
+```
+
+규칙·패턴: `scripts/title-system/README.md` + `pattern.json`.
+핵심: 검색 키워드 그대로 박기 / 클릭베이트 금지 / ㅣ≤15% / 포맷 다양(≥3종, 한 포맷≤55%).
+**lint PASS = 페이지 생성 가능. FAIL = 제목 다시.**

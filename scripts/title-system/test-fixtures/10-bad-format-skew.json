@@ -1,0 +1,61 @@
+{
+  "keyword": "연차수당",
+  "_expect": "FAIL",
+  "_reason": "포맷 100% 쏠림 + 포맷 다양성 부족",
+  "spokes": [
+    {
+      "slug": "calc",
+      "format": "question",
+      "title": "연차수당 계산법, 하루 얼마인가요?",
+      "mustInclude": [
+        "연차수당",
+        "계산"
+      ]
+    },
+    {
+      "slug": "std",
+      "format": "question",
+      "title": "연차수당 지급기준, 1년 미만도 받나요?",
+      "mustInclude": [
+        "연차수당",
+        "지급기준"
+      ]
+    },
+    {
+      "slug": "days",
+      "format": "question",
+      "title": "연차수당 발생기준 며칠인가요?",
+      "mustInclude": [
+        "연차수당",
+        "발생기준"
+      ]
+    },
+    {
+      "slug": "expire",
+      "format": "question",
+      "title": "연차수당 소멸시효 언제까지인가요?",
+      "mustInclude": [
+        "연차수당",
+        "소멸시효"
+      ]
+    },
+    {
+      "slug": "tax",
+      "format": "question",
+      "title": "연차수당 세금 얼마나 떼나요?",
+      "mustInclude": [
+        "연차수당",
+        "세금"
+      ]
+    },
+    {
+      "slug": "quit",
+      "format": "question",
+      "title": "연차수당 퇴사할 때 정산되나요?",
+      "mustInclude": [
+        "연차수당",
+        "정산"
+      ]
+    }
+  ]
+}

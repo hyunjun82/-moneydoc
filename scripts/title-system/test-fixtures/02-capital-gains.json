@@ -1,0 +1,73 @@
+{
+  "keyword": "양도소득세",
+  "_expect": "PASS",
+  "_reason": "정상 입력",
+  "spokes": [
+    {
+      "slug": "rate",
+      "format": "list-comma",
+      "title": "양도소득세율 2026, 보유기간별 세율표 한눈에",
+      "mustInclude": [
+        "양도소득세",
+        "세율"
+      ],
+      "sourceQuery": "양도소득세 세율",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "one-house",
+      "format": "total-colon",
+      "title": "1세대 1주택 양도세 비과세 조건: 보유·거주 2년 정리",
+      "mustInclude": [
+        "양도세",
+        "비과세",
+        "1주택"
+      ],
+      "sourceQuery": "양도세 비과세 1주택",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "calc",
+      "format": "question",
+      "title": "양도소득세 계산 방법, 취득가액·필요경비 어디까지?",
+      "mustInclude": [
+        "양도소득세",
+        "계산"
+      ],
+      "sourceQuery": "양도소득세 계산",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "temp-two",
+      "format": "question",
+      "title": "일시적 2주택 양도세 비과세, 처분기한 언제까지?",
+      "mustInclude": [
+        "2주택",
+        "양도세"
+      ],
+      "sourceQuery": "2주택 양도세",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "report",
+      "format": "question",
+      "title": "양도소득세 신고 방법과 납부기한, 안 하면 가산세?",
+      "mustInclude": [
+        "양도소득세",
+        "신고"
+      ],
+      "sourceQuery": "양도소득세 신고",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "ltd",
+      "format": "list-comma",
+      "title": "장기보유특별공제율, 표로 보는 공제 한도와 요건",
+      "mustInclude": [
+        "장기보유특별공제"
+      ],
+      "sourceQuery": "장기보유특별공제",
+      "sourcePlatform": "fixture"
+    }
+  ]
+}

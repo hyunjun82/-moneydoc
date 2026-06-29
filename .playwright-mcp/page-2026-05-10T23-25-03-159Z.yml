@@ -1,0 +1,747 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e6]: 2025-금감원-2877(대부중개업), 2025-금감원-2877(대부중개사이트영위업)
+    - generic [ref=e7]:
+      - link "이지론" [ref=e8] [cursor=pointer]:
+        - /url: https://ezloan.io/
+      - navigation [ref=e9]:
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - link "실시간 대출 문의" [ref=e12] [cursor=pointer]:
+              - /url: /rq
+              - generic [ref=e13]: 실시간 대출 문의
+          - listitem [ref=e15]:
+            - link "정식등록업체" [ref=e16] [cursor=pointer]:
+              - /url: /l
+              - generic [ref=e17]: 정식등록업체
+          - listitem [ref=e18]:
+            - link "커뮤니티" [ref=e19] [cursor=pointer]:
+              - /url: /b/tip
+              - generic [ref=e20]: 커뮤니티
+          - listitem [ref=e22]:
+            - link "대출계산기" [ref=e23] [cursor=pointer]:
+              - /url: /calc/loan
+              - generic [ref=e24]: 대출계산기
+          - listitem [ref=e25]:
+            - link "금융정보" [ref=e26] [cursor=pointer]:
+              - /url: /finlife
+              - generic [ref=e27]: 금융정보
+      - generic [ref=e28]:
+        - link "고객센터" [ref=e29] [cursor=pointer]:
+          - /url: /b/notice
+          - generic [ref=e30]: 고객센터
+        - link "대출위키" [ref=e31] [cursor=pointer]:
+          - /url: /wiki/
+          - generic [ref=e32]: 대출위키
+        - link "로그인" [ref=e33] [cursor=pointer]:
+          - /url: https://ezloan.io/m/login
+          - generic [ref=e34]: 로그인
+  - main [ref=e35]:
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - navigation "Breadcrumb" [ref=e38]:
+          - list [ref=e39]:
+            - listitem [ref=e40]:
+              - link "홈" [ref=e41] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e43]:
+              - link "대출계산기" [ref=e44] [cursor=pointer]:
+                - /url: /calc/loan
+            - listitem [ref=e46]:
+              - link "DSR 계산기" [ref=e47] [cursor=pointer]:
+                - /url: /calc/dsr
+        - heading "DSR 계산기" [level=1] [ref=e48]
+        - text: DSR 계산기
+      - generic [ref=e49]:
+        - heading "다른 계산기 더 보기" [level=2] [ref=e51]
+        - list [ref=e52]:
+          - listitem [ref=e53]:
+            - link "대출이자 계산기" [ref=e54] [cursor=pointer]:
+              - /url: /calc/loan
+              - paragraph [ref=e55]: 대출이자 계산기
+          - listitem [ref=e56]:
+            - link "중도상환 수수료 계산기" [ref=e57] [cursor=pointer]:
+              - /url: /calc/loan_prepayment
+              - paragraph [ref=e58]: 중도상환 수수료 계산기
+          - listitem [ref=e59]:
+            - link "예금 계산기" [ref=e60] [cursor=pointer]:
+              - /url: /calc/deposit
+              - paragraph [ref=e61]: 예금 계산기
+          - listitem [ref=e62]:
+            - link "연봉 계산기" [ref=e63] [cursor=pointer]:
+              - /url: /calc/salary
+              - paragraph [ref=e64]: 연봉 계산기
+          - listitem [ref=e65]:
+            - link "연봉 실수령액 표" [ref=e66] [cursor=pointer]:
+              - /url: /calc/salary_year
+              - paragraph [ref=e67]: 연봉 실수령액 표
+          - listitem [ref=e68]:
+            - link "월급 실수령액 표" [ref=e69] [cursor=pointer]:
+              - /url: /calc/salary_month
+              - paragraph [ref=e70]: 월급 실수령액 표
+          - listitem [ref=e71]:
+            - link "적금계산기" [ref=e72] [cursor=pointer]:
+              - /url: /calc/saving
+              - paragraph [ref=e73]: 적금계산기
+          - listitem [ref=e74]:
+            - link "평형 계산기" [ref=e75] [cursor=pointer]:
+              - /url: /calc/area_unit
+              - paragraph [ref=e76]: 평형 계산기
+          - listitem [ref=e77]:
+            - link "평당 가격 계산기" [ref=e78] [cursor=pointer]:
+              - /url: /calc/area
+              - paragraph [ref=e79]: 평당 가격 계산기
+          - listitem [ref=e80]:
+            - link "LTV 계산기" [ref=e81] [cursor=pointer]:
+              - /url: /calc/ltv
+              - paragraph [ref=e82]: LTV 계산기
+          - listitem [ref=e83]:
+            - link "신DTI 계산기" [ref=e84] [cursor=pointer]:
+              - /url: /calc/new_dti
+              - paragraph [ref=e85]: 신DTI 계산기
+          - listitem [ref=e86]:
+            - link "중개수수료 계산기" [ref=e87] [cursor=pointer]:
+              - /url: /calc/relay_fee
+              - paragraph [ref=e88]: 중개수수료 계산기
+          - listitem [ref=e89]:
+            - link "인지세 계산기" [ref=e90] [cursor=pointer]:
+              - /url: /calc/stamp_tax
+              - paragraph [ref=e91]: 인지세 계산기
+          - listitem [ref=e92]:
+            - link "국민주택채권 계산기" [ref=e93] [cursor=pointer]:
+              - /url: /calc/house_bond
+              - paragraph [ref=e94]: 국민주택채권 계산기
+          - listitem [ref=e95]:
+            - link "대출 갈아타기 계산기" [ref=e96] [cursor=pointer]:
+              - /url: /calc/loan_diff
+              - paragraph [ref=e97]: 대출 갈아타기 계산기
+          - listitem [ref=e98]:
+            - link "전세 vs 월세 계산기" [ref=e99] [cursor=pointer]:
+              - /url: /calc/rent_diff
+              - paragraph [ref=e100]: 전세 vs 월세 계산기
+          - listitem [ref=e101]:
+            - link "청년도약계좌 계산기" [ref=e102] [cursor=pointer]:
+              - /url: /calc/youth
+              - paragraph [ref=e103]: 청년도약계좌 계산기
+          - listitem [ref=e104]:
+            - link "적정 매수가 계산기" [ref=e105] [cursor=pointer]:
+              - /url: /calc/purchase
+              - paragraph [ref=e106]: 적정 매수가 계산기
+          - listitem [ref=e107]:
+            - link "주휴수당 계산기" [ref=e108] [cursor=pointer]:
+              - /url: /calc/weekly_allowance
+              - paragraph [ref=e109]: 주휴수당 계산기
+          - listitem [ref=e110]:
+            - link "날짜차이 계산기" [ref=e111] [cursor=pointer]:
+              - /url: /calc/time_diff
+              - paragraph [ref=e112]: 날짜차이 계산기
+          - listitem [ref=e113]:
+            - link "주택 연말정산 계산기" [ref=e114] [cursor=pointer]:
+              - /url: /calc/sm_house
+              - paragraph [ref=e115]: 주택 연말정산 계산기
+          - listitem [ref=e116]:
+            - link "카드/현금 연말정산 계산기" [ref=e117] [cursor=pointer]:
+              - /url: /calc/sm_cardcash
+              - paragraph [ref=e118]: 카드/현금 연말정산 계산기
+          - listitem [ref=e119]:
+            - link "연금/펀드 연말정산 계산기" [ref=e120] [cursor=pointer]:
+              - /url: /calc/sm_fund
+              - paragraph [ref=e121]: 연금/펀드 연말정산 계산기
+          - listitem [ref=e122]:
+            - link "주택연금 예상 월지급금 계산기" [ref=e123] [cursor=pointer]:
+              - /url: /finlife/hf_hmp
+              - paragraph [ref=e124]: 주택연금 예상 월지급금 계산기
+          - listitem [ref=e125]:
+            - link "임대 수익률 계산기" [ref=e126] [cursor=pointer]:
+              - /url: /calc/rental_income
+              - paragraph [ref=e127]: 임대 수익률 계산기
+          - listitem [ref=e128]:
+            - link "보유세(재산세, 종부세) 계산기" [ref=e129] [cursor=pointer]:
+              - /url: /calc/property_tax
+              - paragraph [ref=e130]: 보유세(재산세, 종부세) 계산기
+          - listitem [ref=e131]:
+            - link "양도소득세 계산기" [ref=e132] [cursor=pointer]:
+              - /url: /calc/capital_gains_tax
+              - paragraph [ref=e133]: 양도소득세 계산기
+          - listitem [ref=e134]:
+            - link "증여세 계산기" [ref=e135] [cursor=pointer]:
+              - /url: /calc/gift_tax
+              - paragraph [ref=e136]: 증여세 계산기
+          - listitem [ref=e137]:
+            - link "상속세 계산기" [ref=e138] [cursor=pointer]:
+              - /url: /calc/inheritance_tax
+              - paragraph [ref=e139]: 상속세 계산기
+    - generic [ref=e140]:
+      - generic [ref=e142]:
+        - heading "DSR" [level=3] [ref=e144]
+        - list [ref=e145]:
+          - listitem [ref=e146]:
+            - generic [ref=e147]: 연소득
+            - generic [ref=e148]:
+              - generic [ref=e149]:
+                - textbox [ref=e150]
+                - generic [ref=e151]: 만 원
+                - link:
+                  - /url: javascript:void(0);
+              - generic [ref=e152]:
+                - link "+10만" [ref=e153] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e154]: +10만
+                - link "+50만" [ref=e155] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e156]: +50만
+                - link "+1백만" [ref=e157] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e158]: +1백만
+                - link "+3백만" [ref=e159] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e160]: +3백만
+                - link "+5백만" [ref=e161] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e162]: +5백만
+                - link "+1천만" [ref=e163] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e164]: +1천만
+                - link "+1억" [ref=e165] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e166]: +1억
+          - listitem [ref=e167]:
+            - list [ref=e168]:
+              - listitem [ref=e169]:
+                - 'heading "보유대출 #1" [level=4] [ref=e170]'
+                - list [ref=e171]:
+                  - listitem [ref=e172]:
+                    - generic [ref=e173]: 대출금액
+                    - generic [ref=e174]:
+                      - generic [ref=e175]:
+                        - textbox [ref=e176]
+                        - generic [ref=e177]: 만 원
+                        - link:
+                          - /url: javascript:void(0);
+                      - generic [ref=e178]:
+                        - link "+10만" [ref=e179] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e180]: +10만
+                        - link "+50만" [ref=e181] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e182]: +50만
+                        - link "+1백만" [ref=e183] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e184]: +1백만
+                        - link "+3백만" [ref=e185] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e186]: +3백만
+                        - link "+5백만" [ref=e187] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e188]: +5백만
+                        - link "+1천만" [ref=e189] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e190]: +1천만
+                        - link "+1억" [ref=e191] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e192]: +1억
+                  - listitem [ref=e193]:
+                    - generic [ref=e194]: 대출종류
+                    - generic [ref=e195]:
+                      - generic [ref=e197] [cursor=pointer]:
+                        - radio "신용 및 기타" [ref=e198]
+                        - generic [ref=e199]: 신용 및 기타
+                      - generic [ref=e202] [cursor=pointer]:
+                        - radio "주택담보" [ref=e203]
+                        - generic [ref=e204]: 주택담보
+                  - listitem [ref=e206]:
+                    - generic [ref=e207]: 상환방식
+                    - generic [ref=e208]:
+                      - generic [ref=e210] [cursor=pointer]:
+                        - radio "원리금 균등" [ref=e211]
+                        - generic [ref=e212]: 원리금 균등
+                      - generic [ref=e215] [cursor=pointer]:
+                        - radio "원금 균등" [ref=e216]
+                        - generic [ref=e217]: 원금 균등
+                      - generic [ref=e220] [cursor=pointer]:
+                        - radio "원금만기 일시상환" [ref=e221]
+                        - generic [ref=e222]: 원금만기 일시상환
+                  - listitem [ref=e224]:
+                    - generic [ref=e225]: 대출기간
+                    - generic [ref=e226]:
+                      - generic [ref=e227]:
+                        - textbox [ref=e228]
+                        - generic [ref=e229]: 개월
+                        - link:
+                          - /url: javascript:void(0);
+                      - generic [ref=e230]:
+                        - link "1년" [ref=e231] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e232]: 1년
+                        - link "2년" [ref=e233] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e234]: 2년
+                        - link "3년" [ref=e235] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e236]: 3년
+                        - link "4년" [ref=e237] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e238]: 4년
+                        - link "5년" [ref=e239] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e240]: 5년
+                        - link "10년" [ref=e241] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e242]: 10년
+                        - link "15년" [ref=e243] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e244]: 15년
+                        - link "20년" [ref=e245] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e246]: 20년
+                        - link "30년" [ref=e247] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e248]: 30년
+                  - listitem [ref=e249]:
+                    - generic [ref=e250]: 이자
+                    - generic [ref=e251]:
+                      - generic [ref=e252]:
+                        - link "-" [ref=e253] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e254]: "-"
+                        - link "+" [ref=e255] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e256]: +
+                        - textbox [ref=e257]
+                        - generic [ref=e258]: "%"
+                        - link:
+                          - /url: javascript:void(0);
+                      - generic [ref=e259]:
+                        - link "3%" [ref=e260] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e261]: 3%
+                        - link "4%" [ref=e262] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e263]: 4%
+                        - link "5%" [ref=e264] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e265]: 5%
+                        - link "6%" [ref=e266] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e267]: 6%
+                        - link "7%" [ref=e268] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e269]: 7%
+                        - link "10%" [ref=e270] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e271]: 10%
+                        - link "15%" [ref=e272] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e273]: 15%
+                        - link "20%" [ref=e274] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e275]: 20%
+                        - link "50%" [ref=e276] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=e277]: 50%
+                  - listitem [ref=e278]:
+                    - generic [ref=e280] [cursor=pointer]: 추가
+        - button "계산하기" [ref=e283] [cursor=pointer]
+      - generic [ref=e284]:
+        - heading "DSR 안내사항" [level=3] [ref=e286]
+        - list [ref=e287]:
+          - listitem [ref=e288]:
+            - generic [ref=e289]: DSR이란?
+            - generic [ref=e290]: DSR(총체적상환능력비율)은 연간 총 소득에서 전체 대출금의 원리금(원금+이자)이 차지하는 비율을 말합니다. 주택담보대출뿐 아니라 신용대출과 자동차담보대출 등 모든 대출금이 해당됩니다.
+          - listitem [ref=e291]:
+            - generic [ref=e292]: 원리금균등상환
+            - generic [ref=e293]: 원리금(원금+이자)을 매 기간 균등하게 갚는 방법입니다.
+          - listitem [ref=e294]:
+            - generic [ref=e295]: 원금균등상환
+            - generic [ref=e296]: 대출금을 약정기간으로 나눠 매달 원금이 균등히 상환되도록 하는 방법입니다.
+          - listitem [ref=e297]:
+            - generic [ref=e298]: 만기일시상환
+            - generic [ref=e299]: 약정기간 중에는 이자만 부담하다가 만기일에 대출 전액을 상환하는 방법입니다.
+          - listitem [ref=e300]:
+            - generic [ref=e301]: DSR 주의사항
+            - list [ref=e303]:
+              - listitem [ref=e304]: 신용이 좋아지면 금리를 낮출 수 있으며, 향후 대출 시 더 유리한 조건으로 거래할 수 있습니다.
+              - listitem [ref=e305]: DSR 계산기는 필수 정보값을 이용하여 추정치를 보여주는 참고용입니다.
+              - listitem [ref=e306]: 본인의 신용도와 입력 보유 대출의 상환방법, 상환기간 등 기타 상세한 정보에 따라서 결과값이 오차가 있을 수 있습니다.
+              - listitem [ref=e307]: 신용대출 DSR 상환기간 기준은 10년 입니다.
+              - listitem [ref=e308]: DSR 70% 부터 高DSR 위험 군으로 취급하고 있으며, 기준은 정부 규제에 따라 변경될 수 있습니다.
+              - listitem [ref=e309]: 각 금융기관의 정책과 취급 상품 속성에 따라 승인 및 한도가 달라집니다.
+  - complementary [ref=e310]:
+    - generic [ref=e312]:
+      - heading "최근계산" [level=3] [ref=e314]:
+        - generic [ref=e315]: 최근계산
+      - generic [ref=e316]:
+        - generic [ref=e317]:
+          - generic [ref=e318]: 급여액
+          - generic [ref=e319]: 총대출 건수
+          - generic [ref=e320]: DSR
+        - list [ref=e321]:
+          - listitem [ref=e322]:
+            - link "3,780만 1건 68.17%" [ref=e323] [cursor=pointer]:
+              - /url: /calc/dsr/140513
+              - generic [ref=e324]: 3,780만
+              - generic [ref=e325]: 1건
+              - generic [ref=e326]: 68.17%
+          - listitem [ref=e327]:
+            - link "3,780만 1건 85.21%" [ref=e328] [cursor=pointer]:
+              - /url: /calc/dsr/140512
+              - generic [ref=e329]: 3,780만
+              - generic [ref=e330]: 1건
+              - generic [ref=e331]: 85.21%
+          - listitem [ref=e332]:
+            - link "8,300만 3건 26.16%" [ref=e333] [cursor=pointer]:
+              - /url: /calc/dsr/140511
+              - generic [ref=e334]: 8,300만
+              - generic [ref=e335]: 3건
+              - generic [ref=e336]: 26.16%
+          - listitem [ref=e337]:
+            - link "8,300만 2건 12.57%" [ref=e338] [cursor=pointer]:
+              - /url: /calc/dsr/140510
+              - generic [ref=e339]: 8,300만
+              - generic [ref=e340]: 2건
+              - generic [ref=e341]: 12.57%
+          - listitem [ref=e342]:
+            - link "1억 3,000만 2건 44.11%" [ref=e343] [cursor=pointer]:
+              - /url: /calc/dsr/140509
+              - generic [ref=e344]: 1억 3,000만
+              - generic [ref=e345]: 2건
+              - generic [ref=e346]: 44.11%
+          - listitem [ref=e347]:
+            - link "1억 3,000만 1건 38.73%" [ref=e348] [cursor=pointer]:
+              - /url: /calc/dsr/140508
+              - generic [ref=e349]: 1억 3,000만
+              - generic [ref=e350]: 1건
+              - generic [ref=e351]: 38.73%
+          - listitem [ref=e352]:
+            - link "1억 3,000만 1건 28.06%" [ref=e353] [cursor=pointer]:
+              - /url: /calc/dsr/140507
+              - generic [ref=e354]: 1억 3,000만
+              - generic [ref=e355]: 1건
+              - generic [ref=e356]: 28.06%
+          - listitem [ref=e357]:
+            - link "3,500만 1건 20.00%" [ref=e358] [cursor=pointer]:
+              - /url: /calc/dsr/140506
+              - generic [ref=e359]: 3,500만
+              - generic [ref=e360]: 1건
+              - generic [ref=e361]: 20.00%
+          - listitem [ref=e362]:
+            - link "2,000만 1건 35.00%" [ref=e363] [cursor=pointer]:
+              - /url: /calc/dsr/140505
+              - generic [ref=e364]: 2,000만
+              - generic [ref=e365]: 1건
+              - generic [ref=e366]: 35.00%
+    - generic [ref=e367]:
+      - generic [ref=e368]:
+        - generic [ref=e369] [cursor=pointer]: 실시간 인기 업체
+        - generic [ref=e370] [cursor=pointer]: 최근 본 업체
+      - generic [ref=e372]:
+        - list [ref=e374]:
+          - listitem [ref=e375]:
+            - link "실속신용대부중개 당일100부터 3천까지 자율상환 달마다납부가능 직업소득상관없음x 개인돈 폰테크x" [ref=e376] [cursor=pointer]:
+              - /url: /l/66
+              - heading "실속신용대부중개" [level=3] [ref=e377]
+              - paragraph [ref=e378]: 당일100부터 3천까지 자율상환 달마다납부가능 직업소득상관없음x 개인돈 폰테크x
+          - listitem [ref=e379]:
+            - link "365저금리대부 Premium 정식업체 소액유도X월변전문입니다 당일송금자영업사업자우대 담보비대면급전월변전문" [ref=e380] [cursor=pointer]:
+              - /url: /l/339
+              - heading "365저금리대부" [level=3] [ref=e381]
+              - paragraph [ref=e382]: Premium 정식업체 소액유도X월변전문입니다 당일송금자영업사업자우대 담보비대면급전월변전문
+          - listitem [ref=e383]:
+            - link "옥자대부 24시365일 당일가능 무직 주부 일용직 학생 무서류 비상금대출 신용 낮아도 무조건 OK !" [ref=e384] [cursor=pointer]:
+              - /url: /l/436
+              - heading "옥자대부" [level=3] [ref=e385]
+              - paragraph [ref=e386]: 24시365일 당일가능 무직 주부 일용직 학생 무서류 비상금대출 신용 낮아도 무조건 OK !
+          - listitem [ref=e387]:
+            - link "민생대부 BEST 등록 업체 01039207585 당일심사 당일진행OK 친절상담 간편서류OK" [ref=e388] [cursor=pointer]:
+              - /url: /l/395
+              - heading "민생대부" [level=3] [ref=e389]
+              - paragraph [ref=e390]: BEST 등록 업체 01039207585 당일심사 당일진행OK 친절상담 간편서류OK
+          - listitem [ref=e391]:
+            - link "에이엘 파이낸셜 대부 새 출발을 도와드립니다 월변으로 대환대출 개인돈 월변 대환대출 전문 업체입니다." [ref=e392] [cursor=pointer]:
+              - /url: /l/285
+              - heading "에이엘 파이낸셜 대부" [level=3] [ref=e393]
+              - paragraph [ref=e394]: 새 출발을 도와드립니다 월변으로 대환대출 개인돈 월변 대환대출 전문 업체입니다.
+          - listitem [ref=e395]:
+            - link "이스트파이낸셜대부 월변 당일 대출 최대60개월 연20프로 당일승인 24시간상담 간단심사 누구나OK" [ref=e396] [cursor=pointer]:
+              - /url: /l/325
+              - heading "이스트파이낸셜대부" [level=3] [ref=e397]
+              - paragraph [ref=e398]: 월변 당일 대출 최대60개월 연20프로 당일승인 24시간상담 간단심사 누구나OK
+          - listitem [ref=e399]:
+            - link "전국한마음대부중개 24 당일 바로 입금 연중무휴 필요할땐언제나 전지역 전직업 간편상담 상담은 공짜! 부담없이" [ref=e400] [cursor=pointer]:
+              - /url: /l/310
+              - heading "전국한마음대부중개" [level=3] [ref=e401]
+              - paragraph [ref=e402]: 24 당일 바로 입금 연중무휴 필요할땐언제나 전지역 전직업 간편상담 상담은 공짜! 부담없이
+          - listitem [ref=e403]:
+            - link "쉽고빠르게대부중개 24시 급한돈 즉시해결 월변 당일승인 전문업체 간단한심사로 쉽고빠르게 한국대부금융협 정식등록" [ref=e404] [cursor=pointer]:
+              - /url: /l/535
+              - heading "쉽고빠르게대부중개" [level=3] [ref=e405]
+              - paragraph [ref=e406]: 24시 급한돈 즉시해결 월변 당일승인 전문업체 간단한심사로 쉽고빠르게 한국대부금융협 정식등록
+          - listitem [ref=e407]:
+            - link "더안심대부 당일 첫거래 1억까지 은행과 동일한 월변제 조회X 기록X 고객맞춤 신뢰와믿음으로 높은승인" [ref=e408] [cursor=pointer]:
+              - /url: /l/276
+              - heading "더안심대부" [level=3] [ref=e409]
+              - paragraph [ref=e410]: 당일 첫거래 1억까지 은행과 동일한 월변제 조회X 기록X 고객맞춤 신뢰와믿음으로 높은승인
+          - listitem [ref=e411]:
+            - link "햇빛대부중개 비대면 월변 당일대출! 은행권 최저금리 진행! 수수료X 무직자OK 한국대부금융협회 등록" [ref=e412] [cursor=pointer]:
+              - /url: /l/355
+              - heading "햇빛대부중개" [level=3] [ref=e413]
+              - paragraph [ref=e414]: 비대면 월변 당일대출! 은행권 최저금리 진행! 수수료X 무직자OK 한국대부금융협회 등록
+        - list [ref=e416]:
+          - listitem [ref=e417]:
+            - paragraph [ref=e418]: 최근 본 업체가 없습니다
+    - generic [ref=e419]:
+      - link "금융 팁" [ref=e421] [cursor=pointer]:
+        - /url: https://ezloan.io/b/tip
+        - heading "금융 팁" [level=2] [ref=e422]
+      - list [ref=e424]:
+        - listitem [ref=e425]:
+          - link "저축은행 모임통장 활용하기 26.04.30" [ref=e426] [cursor=pointer]:
+            - /url: https://ezloan.io/b/tip/3725
+            - generic [ref=e428]: 저축은행 모임통장 활용하기
+            - generic [ref=e429]: 26.04.30
+        - listitem [ref=e430]:
+          - link "일상생활배상책임보험 백배 활용하기! 26.04.30" [ref=e431] [cursor=pointer]:
+            - /url: https://ezloan.io/b/tip/3724
+            - generic [ref=e433]: 일상생활배상책임보험 백배 활용하기!
+            - generic [ref=e434]: 26.04.30
+        - listitem [ref=e435]:
+          - link "'할부항변권'을 기억하세요 25.12.23" [ref=e436] [cursor=pointer]:
+            - /url: https://ezloan.io/b/tip/3373
+            - generic [ref=e438]: "'할부항변권'을 기억하세요"
+            - generic [ref=e439]: 25.12.23
+        - listitem [ref=e440]:
+          - link "내 사망보험금, 이제 생전에 활용하세요 25.12.23" [ref=e441] [cursor=pointer]:
+            - /url: https://ezloan.io/b/tip/3372
+            - generic [ref=e443]: 내 사망보험금, 이제 생전에 활용하세요
+            - generic [ref=e444]: 25.12.23
+        - listitem [ref=e445]:
+          - link "금융상품 핵심정보를 쉽고 편하게 비교하세요! 25.12.23" [ref=e446] [cursor=pointer]:
+            - /url: https://ezloan.io/b/tip/3371
+            - generic [ref=e448]: 금융상품 핵심정보를 쉽고 편하게 비교하세요!
+            - generic [ref=e449]: 25.12.23
+    - generic [ref=e450]:
+      - link "금융 뉴스" [ref=e452] [cursor=pointer]:
+        - /url: https://ezloan.io/b/news
+        - heading "금융 뉴스" [level=2] [ref=e453]
+      - list [ref=e455]:
+        - listitem [ref=e456]:
+          - link "정책자금을 이용한 가맹본부의 고금리 부당대출 구조를 차단하고 가맹점주 보호를 강화하겠습니다. 26.05.10" [ref=e457] [cursor=pointer]:
+            - /url: https://ezloan.io/b/news/3746
+            - generic [ref=e460]: 정책자금을 이용한 가맹본부의 고금리 부당대출 구조를 차단하고 가맹점주 보호를 강화하겠습니다.
+            - generic [ref=e461]: 26.05.10
+        - listitem [ref=e462]:
+          - link "금융감독정보(2026-1 통권 1130호) 발간_26.1~3월 26.05.09" [ref=e463] [cursor=pointer]:
+            - /url: https://ezloan.io/b/news/3745
+            - generic [ref=e465]: 금융감독정보(2026-1 통권 1130호) 발간_26.1~3월
+            - generic [ref=e466]: 26.05.09
+        - listitem [ref=e467]:
+          - link "사회연대경제조직에 대한 금융지원 확대로 금융의 포용성을 강화하겠습니다. 26.05.08" [ref=e468] [cursor=pointer]:
+            - /url: https://ezloan.io/b/news/3744
+            - generic [ref=e470]: 사회연대경제조직에 대한 금융지원 확대로 금융의 포용성을 강화하겠습니다.
+            - generic [ref=e471]: 26.05.08
+        - listitem [ref=e472]:
+          - link "재난, 재해, 사이버 침해사고 등 비상상황 발생에 대비한 금융감독 정보시스템 비상대응 모의훈련 실시 26.05.08" [ref=e473] [cursor=pointer]:
+            - /url: https://ezloan.io/b/news/3743
+            - generic [ref=e475]: 재난, 재해, 사이버 침해사고 등 비상상황 발생에 대비한 금융감독 정보시스템 비상대응 모의훈련 실시
+            - generic [ref=e476]: 26.05.08
+        - listitem [ref=e477]:
+          - link "나프타 수급 안정을 위한 금융권 공동지원 첫 사례로 여천NCC 지원 26.05.07" [ref=e478] [cursor=pointer]:
+            - /url: https://ezloan.io/b/news/3742
+            - generic [ref=e480]: 나프타 수급 안정을 위한 금융권 공동지원 첫 사례로 여천NCC 지원
+            - generic [ref=e481]: 26.05.07
+    - generic [ref=e482]:
+      - link "공지사항" [ref=e484] [cursor=pointer]:
+        - /url: https://ezloan.io/b/notice
+        - heading "공지사항" [level=2] [ref=e485]
+      - list [ref=e487]:
+        - listitem [ref=e488]:
+          - link "2026년 5월 5일 어린이날 휴무 안내 26.04.28" [ref=e489] [cursor=pointer]:
+            - /url: https://ezloan.io/b/notice/3710
+            - generic [ref=e491]: 2026년 5월 5일 어린이날 휴무 안내
+            - generic [ref=e492]: 26.04.28
+        - listitem [ref=e493]:
+          - link "2026년 5월 1일 노동절 휴무 안내 26.04.27" [ref=e494] [cursor=pointer]:
+            - /url: https://ezloan.io/b/notice/3702
+            - generic [ref=e496]: 2026년 5월 1일 노동절 휴무 안내
+            - generic [ref=e497]: 26.04.27
+        - listitem [ref=e498]:
+          - link "2026년 3월 2일 대체 공휴일 휴무 안내 26.02.23" [ref=e499] [cursor=pointer]:
+            - /url: https://ezloan.io/b/notice/3506
+            - generic [ref=e501]: 2026년 3월 2일 대체 공휴일 휴무 안내
+            - generic [ref=e502]: 26.02.23
+        - listitem [ref=e503]:
+          - link "2026년 설 연휴 휴무안내 26.02.12" [ref=e504] [cursor=pointer]:
+            - /url: https://ezloan.io/b/notice/3496
+            - generic [ref=e506]: 2026년 설 연휴 휴무안내
+            - generic [ref=e507]: 26.02.12
+        - listitem [ref=e508]:
+          - link "메인 배너 광고 표기 방식 변경 안내 26.01.16" [ref=e509] [cursor=pointer]:
+            - /url: https://ezloan.io/b/notice/3430
+            - generic [ref=e511]: 메인 배너 광고 표기 방식 변경 안내
+            - generic [ref=e512]: 26.01.16
+  - contentinfo [ref=e513]:
+    - generic [ref=e514]:
+      - list [ref=e516]:
+        - listitem [ref=e517]:
+          - generic [ref=e519] [cursor=pointer]: 대출 중개 플랫폼
+          - definition [ref=e523]:
+            - generic [ref=e524]: 대출 중개 플랫폼, 이지론
+            - generic [ref=e525]:
+              - paragraph [ref=e526]: 이지론은 광고 플랫폼만 제공할 뿐 직접적인 대출 및 중개를 하지 않습니다. 이지론은 한국대부금융협회 지자체 정식허가 업체만 등록이 가능합니다. 이지론에 기재된 광고 내용은 대부(중개)업체가 제공하는 정보로 이를 신뢰하여 취한 조치에 대하여 어떠한 책임을 지지 않습니다.
+              - paragraph [ref=e527]: 과도한 빚은 당신에게 큰 불행을 안겨줄 수 있습니다. 중개수수료를 요구하거나 받는 것은 불법입니다. 대출시 귀하의 신용 등급 또는 개인신용평점이 하락할 수 있습니다.
+        - listitem [ref=e528]:
+          - generic [ref=e530] [cursor=pointer]: 금리 및 상환안내
+          - definition [ref=e534]:
+            - generic [ref=e535]: 금리 및 상환안내
+            - generic [ref=e536]:
+              - paragraph [ref=e537]: 금리 연20% 이내, 연체이자율 20% 이내 (단, 2021. 7. 7부터 체결, 갱신, 연장되는 계약에 한함), 취급수수료 없음, 상환기간 12개월 ~ 60개월, 중도상환 수수료 없음, 중개수수료 없음, 추가비용 없음.
+              - paragraph [ref=e538]: "총 대출 비용 예시 : 100만원을 12개월 기간 동안 최대 금리 연20% 적용하여 원리금균등상환방법으로 이용하는 경우 총 상환금액 1,111,614원 (단, 대출상품 및 상환방법 등 대출계약 내용에 따라 달라질 수 있습니다.) 채무의 조기상환수수료율 등 조기상환조건 없음."
+        - listitem [ref=e539]:
+          - generic [ref=e541] [cursor=pointer]: 고객센터
+          - definition [ref=e545]:
+            - generic [ref=e546]: 고객센터
+            - generic [ref=e547]:
+              - generic "고객센터" [ref=e548] [cursor=pointer]: 1544-2169
+              - generic [ref=e549]:
+                - generic [ref=e550]:
+                  - generic [ref=e551]: 오픈시간
+                  - generic [ref=e552]: 09:00-18:00
+                - generic [ref=e553]:
+                  - generic [ref=e554]: 점심시간
+                  - generic [ref=e555]: 12:00-13:00
+                - generic [ref=e557]: (주말 및 공휴일 휴무)
+                - generic [ref=e559]:
+                  - link "1:1문의 바로가기" [ref=e560] [cursor=pointer]:
+                    - /url: /c/qna
+                  - text: (24시간 연중무휴)
+        - listitem [ref=e561]:
+          - generic [ref=e563] [cursor=pointer]: 계좌번호 안내
+          - definition [ref=e567]:
+            - generic [ref=e568]: 계좌번호
+            - generic [ref=e569]:
+              - generic [ref=e570] [cursor=pointer]: 873801-01-377096
+              - generic [ref=e571]:
+                - generic [ref=e572]:
+                  - generic [ref=e573]: 입금은행
+                  - generic [ref=e574]: 국민은행
+                - generic [ref=e575]:
+                  - generic [ref=e576]: 입금명
+                  - generic [ref=e577]: 이슬이(이지론대부중개)
+      - generic [ref=e578]:
+        - generic [ref=e579]:
+          - link "이용약관" [ref=e580] [cursor=pointer]:
+            - /url: /c/terms
+          - link "개인정보처리방침" [ref=e582] [cursor=pointer]:
+            - /url: /c/privacy
+          - link "한계와법적고지" [ref=e584] [cursor=pointer]:
+            - /url: /c/trust
+        - list [ref=e585]:
+          - listitem [ref=e586]:
+            - generic [ref=e587]: 사이트명
+            - generic [ref=e588]: ":"
+            - generic [ref=e589]: 이지론
+          - listitem [ref=e591]:
+            - generic [ref=e592]: 대표자
+            - generic [ref=e593]: ":"
+            - generic [ref=e594]: 이슬이
+          - listitem [ref=e596]:
+            - generic [ref=e597]: 상호명
+            - generic [ref=e598]: ":"
+            - generic [ref=e599]: 이지론 대부중개
+          - listitem [ref=e601]:
+            - generic [ref=e602]: 사업자등록번호
+            - generic [ref=e603]: ":"
+            - generic [ref=e604]: 157-18-01940
+          - listitem [ref=e606]:
+            - generic [ref=e607]: 대부중개업등록번호
+            - generic [ref=e608]: ":"
+            - generic [ref=e609]: 2025-금감원-2877(대부중개업)
+          - listitem [ref=e611]:
+            - generic [ref=e612]: 대부중개업등록번호
+            - generic [ref=e613]: ":"
+            - generic [ref=e614]: 2025-금감원-2877(대부중개사이트영위업)
+          - listitem [ref=e616]:
+            - generic [ref=e617]: 통신판매업 신고번호
+            - generic [ref=e618]: ":"
+            - generic [ref=e619]: 제2023-서울송파-1816호
+          - listitem [ref=e621]:
+            - generic [ref=e622]: 주소
+            - generic [ref=e623]: ":"
+            - generic [ref=e624]: 서울시 송파구 백제고분로7길 8-16 B1층 9호
+          - listitem [ref=e626]:
+            - generic [ref=e627]: 대부업등록기관
+            - generic [ref=e628]: ":"
+            - generic [ref=e629]: 금융감독원
+          - listitem [ref=e631]:
+            - generic [ref=e632]: 대표번호
+            - generic [ref=e633]: ":"
+            - generic [ref=e634]: 1544-2169
+          - listitem [ref=e636]:
+            - generic [ref=e637]: 팩스번호
+            - generic [ref=e638]: ":"
+            - generic [ref=e639]: 02-511-3404
+          - listitem [ref=e641]:
+            - generic [ref=e642]: 개인정보책임자
+            - generic [ref=e643]: ":"
+            - generic [ref=e644]: 이슬이
+          - listitem [ref=e646]:
+            - generic [ref=e647]: 웹사이트 운영법인 상호
+            - generic [ref=e648]: ":"
+            - link "주식회사 나무홀딩스" [ref=e650] [cursor=pointer]:
+              - /url: https://namu.so/
+        - list [ref=e651]:
+          - listitem [ref=e652]:
+            - link "이지론 Naver Blog" [ref=e653] [cursor=pointer]:
+              - /url: https://blog.naver.com/ezloanio
+          - listitem [ref=e655]:
+            - link "이지론 Blogger" [ref=e656] [cursor=pointer]:
+              - /url: https://ezloanio.blogspot.com
+          - listitem [ref=e658]:
+            - link "이지론 Youtube" [ref=e659] [cursor=pointer]:
+              - /url: https://www.youtube.com/@ioezloan
+          - listitem [ref=e661]:
+            - link "이지론 Instagram" [ref=e662] [cursor=pointer]:
+              - /url: https://www.instagram.com/ezloanioio
+          - listitem [ref=e664]:
+            - link "이지론 Medium" [ref=e665] [cursor=pointer]:
+              - /url: https://medium.com/@ezloanio
+          - listitem [ref=e667]:
+            - link "이지론 Reddit" [ref=e668] [cursor=pointer]:
+              - /url: https://www.reddit.com/user/ezloanio/
+          - listitem [ref=e670]:
+            - link "이지론 Pinterest" [ref=e671] [cursor=pointer]:
+              - /url: https://www.pinterest.co.kr/ezloanio
+          - listitem [ref=e673]:
+            - link "이지론 Twitter" [ref=e674] [cursor=pointer]:
+              - /url: https://x.com/ezloanio
+          - listitem [ref=e676]:
+            - link "이지론 Tumblur" [ref=e677] [cursor=pointer]:
+              - /url: https://www.tumblr.com/ezloanio
+          - listitem [ref=e679]:
+            - link "이지론 Facebook" [ref=e680] [cursor=pointer]:
+              - /url: https://www.facebook.com/ezloanioi
+          - listitem [ref=e682]:
+            - link "이지론 Naver Band" [ref=e683] [cursor=pointer]:
+              - /url: https://band.us/@ezloanio
+          - listitem [ref=e685]:
+            - link "이지론 Tistory" [ref=e686] [cursor=pointer]:
+              - /url: https://ezloanioio.tistory.com/
+          - listitem [ref=e688]:
+            - link "이지론 Instapaper" [ref=e689] [cursor=pointer]:
+              - /url: https://www.instapaper.com/p/ezloanioio
+          - listitem [ref=e691]:
+            - link "이지론 Flickr" [ref=e692] [cursor=pointer]:
+              - /url: https://www.flickr.com/people/ezloanio/
+          - listitem [ref=e694]:
+            - link "이지론 Threads" [ref=e695] [cursor=pointer]:
+              - /url: https://www.threads.com/@ealoanguide
+          - listitem [ref=e697]:
+            - link "이지론 Bsky" [ref=e698] [cursor=pointer]:
+              - /url: https://bsky.app/profile/ezloanio.bsky.social
+          - listitem [ref=e700]:
+            - link "이지론 Vimeo" [ref=e701] [cursor=pointer]:
+              - /url: https://vimeo.com/ezloanio
+          - listitem [ref=e703]:
+            - link "이지론 주소 복사" [ref=e704] [cursor=pointer]:
+              - /url: javascript:void(0);
+      - generic [ref=e706]: © 2026 ezloan.io All rights reserved.

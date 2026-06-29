@@ -1,0 +1,573 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "MoneyDoc" [ref=e4] [cursor=pointer]:
+      - /url: /
+      - img [ref=e6]
+      - text: MoneyDoc
+  - navigation [ref=e8]:
+    - link "홈" [ref=e9] [cursor=pointer]:
+      - /url: /
+    - text: ›
+    - link "정부지원금" [ref=e10] [cursor=pointer]:
+      - /url: /government/
+    - text: ›청년미래적금 총정리
+  - article [ref=e12]:
+    - link "청년미래적금 신청하기 신청 ~7월 3일 · 첫 주 5부제 신청 바로가기 →" [ref=e13] [cursor=pointer]:
+      - /url: https://fill4young.kinfa.or.kr/yfs/main
+      - generic [ref=e14]: 청년미래적금 신청하기
+      - generic [ref=e15]: 신청 ~7월 3일 · 첫 주 5부제
+      - generic [ref=e16]: 신청 바로가기 →
+    - generic [ref=e17]:
+      - generic [ref=e18]: 금융위원회 · 서민금융진흥원
+      - generic [ref=e19]: 정책카드뉴스 · 청년 자산형성 지원
+    - generic [ref=e20]:
+      - generic [ref=e21]: 미래를 채우는 첫 시작 · 청년 자산형성
+      - heading "청년미래적금 6월 22일 출시 가입조건·정부기여금 총정리" [level=1] [ref=e22]:
+        - text: 청년미래적금 6월 22일 출시
+        - text: 가입조건·정부기여금 총정리
+      - paragraph [ref=e23]: 소득·가구요건부터 정부기여금, 우대형 조건까지 자주 묻는 궁금증을 한 번에 정리했어요.
+      - generic [ref=e24]:
+        - generic [ref=e25]: 소득·가구요건
+        - generic [ref=e26]: 정부기여금
+        - generic [ref=e27]: 중소기업·소상공인 우대형
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - generic [ref=e30]: 지
+        - generic [ref=e31]: 지원금 에디터
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - text: 작성일
+          - time [ref=e34]: 2026. 06. 19.
+        - generic [ref=e35]:
+          - text: 수정일
+          - time [ref=e36]: 2026. 06. 20.
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - generic [ref=e39]: 출시일
+        - generic [ref=e40]: 6월 22일
+      - generic [ref=e41]:
+        - generic [ref=e42]: 가입 신청
+        - generic [ref=e43]: ~ 7월 3일
+      - generic [ref=e44]:
+        - generic [ref=e45]: 콜센터
+        - link "☎ 1397 → 3" [ref=e46] [cursor=pointer]:
+          - /url: tel:1397
+    - group [ref=e47]:
+      - generic "☰ 목차 +" [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]: ☰
+        - generic [ref=e50]: 목차
+        - generic [ref=e51]: +
+      - navigation [ref=e52]:
+        - link "› 청년미래적금, 핵심만 먼저" [ref=e53] [cursor=pointer]:
+          - /url: "#sec-summary"
+        - link "› 청년미래적금이 뭔가요? (한 줄 요약)" [ref=e54] [cursor=pointer]:
+          - /url: "#sec-spec"
+        - link "› 청년미래적금 가입조건 (소득·가구요건)" [ref=e55] [cursor=pointer]:
+          - /url: "#sec-join"
+        - link "› 청년미래적금 정부기여금, 얼마나 받나? (6% vs 12%)" [ref=e56] [cursor=pointer]:
+          - /url: "#sec-gov"
+        - link "› 청년미래적금, 나에게 맞는 유형은?" [ref=e57] [cursor=pointer]:
+          - /url: "#sec-type"
+        - link "› 청년미래적금 신청 방법·준비 서류" [ref=e58] [cursor=pointer]:
+          - /url: "#sec-apply"
+        - link "› 청년미래적금 vs 청년도약계좌, 뭐가 다를까?" [ref=e59] [cursor=pointer]:
+          - /url: "#sec-compare"
+        - link "› 청년미래적금 중소기업 우대형 조건" [ref=e60] [cursor=pointer]:
+          - /url: "#sec-sme"
+        - link "› 청년미래적금 소상공인 가입 조건" [ref=e61] [cursor=pointer]:
+          - /url: "#sec-owner"
+        - link "› 청년미래적금 자주 묻는 질문 (FAQ)" [ref=e62] [cursor=pointer]:
+          - /url: "#sec-faq"
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e65]: "!"
+        - generic [ref=e66]: 한눈에 요약
+      - heading "청년미래적금, 핵심만 먼저" [level=2] [ref=e67]
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: "1"
+          - generic [ref=e71]: 신청 기간은 딱 2주. 6월 22일 출시, 7월 3일까지 신청해야 놓치지 않아요.
+        - generic [ref=e72]:
+          - generic [ref=e73]: "2"
+          - generic [ref=e74]: 매달 넣는 돈에 정부가 최대 12%까지 얹어줘요. 소득·재직 조건에 따라 0 · 6 · 12%로 갈려요.
+        - generic [ref=e75]:
+          - generic [ref=e76]: "3"
+          - generic [ref=e77]: 알바·계약직·맞벌이도 OK. 고용형태와 상관없이 작년 소득만 잡히면 가입할 수 있어요.
+    - link "지금 바로 신청하세요 신청 기간 6월 22일 ~ 7월 3일 (2주) · 첫 주는 출생연도 끝자리 5부제 신청 바로가기 →" [ref=e78] [cursor=pointer]:
+      - /url: https://fill4young.kinfa.or.kr/yfs/main
+      - generic [ref=e79]:
+        - text: 지금 바로 신청하세요
+        - generic [ref=e80]: 신청 기간 6월 22일 ~ 7월 3일 (2주) · 첫 주는 출생연도 끝자리 5부제
+      - generic [ref=e81]: 신청 바로가기 →
+    - generic [ref=e82]:
+      - generic [ref=e83]:
+        - generic [ref=e84]: i
+        - generic [ref=e85]: 상품 한눈에
+      - heading "청년미래적금이 뭔가요? (한 줄 요약)" [level=2] [ref=e86]
+      - paragraph [ref=e87]: 만 19~34세 청년이 월 최대 50만 원을 3년간 모으면, 정부 기여금(6~12%)과 비과세 혜택으로 최대 약 2,200만 원의 목돈을 만드는 정책형 적금이에요.
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - generic [ref=e90]: 가입 대상
+          - generic [ref=e91]: 만 19~34세 청년 (병역 이행 기간은 연령 계산에서 제외)
+        - generic [ref=e92]:
+          - generic [ref=e93]: 납입 한도
+          - generic [ref=e94]: 월 최대 50만 원 · 자유적립식(연 최대 600만 원)
+        - generic [ref=e95]:
+          - generic [ref=e96]: 가입 기간
+          - generic [ref=e97]: 3년 (36개월) 만기
+        - generic [ref=e98]:
+          - generic [ref=e99]: 정부 기여금
+          - generic [ref=e100]: 매월 납입금의 6%(일반형) ~ 12%(우대형)
+        - generic [ref=e101]:
+          - generic [ref=e102]: 추가 혜택
+          - generic [ref=e103]: 이자소득세 전액 비과세
+        - generic [ref=e104]:
+          - generic [ref=e105]: 예상 수령액
+          - generic [ref=e106]: 원금 1,800만 원 + 기여금·이자 → 약 2,000만~2,200만 원 (유형·금리에 따라 차이)
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - generic [ref=e109]: "1"
+        - generic [ref=e110]: 소득 및 가구요건
+      - heading "청년미래적금 가입조건 (소득·가구요건)" [level=2] [ref=e111]
+      - paragraph [ref=e112]: 누가 가입할 수 있는지, 소득·가구 기준부터 확인하세요. 조건에 따라 정부기여금이 차등 적용돼요.
+      - list [ref=e113]:
+        - listitem [ref=e114]:
+          - generic [ref=e115]: ▲
+          - generic [ref=e116]:
+            - generic [ref=e117]: 나이 요건 (만 19~34세)
+            - text: 가입신청일 기준 만 19세~34세 청년이면 가입할 수 있어요.
+            - generic [ref=e118]: 병역 이행 기간은 연령 계산에서 제외돼, 군필 남성은 최대 만 40세까지 가능해요.
+        - listitem [ref=e119]:
+          - generic [ref=e120]: ▲
+          - generic [ref=e121]:
+            - generic [ref=e122]: 소득 상한선부터 확인
+            - text: 근로자라면 총급여 7,500만 원 이하(종합소득 6,300만 원), 사장님이라면 연매출 3억 원 이하. 여기에 가구 중위소득 200% 이하까지 맞으면 돼요.
+            - generic [ref=e123]: 2025년 소득·매출을 기준으로 심사해요. 직전연도 소득이 잡히지 않으면 가입할 수 없어요.
+        - listitem [ref=e124]:
+          - generic [ref=e125]: ▲
+          - generic [ref=e126]:
+            - generic [ref=e127]: 맞벌이 부부, 둘 다 가입 OK
+            - text: 요건만 맞으면 부부가 각자 따로 신청할 수 있어요.
+            - generic [ref=e128]: 2인 가구는 중위소득 문턱을 일반형 200%→250%, 우대형 150%→200%로 낮춰줘요.
+        - listitem [ref=e129]:
+          - generic [ref=e130]: ▲
+          - generic [ref=e131]:
+            - generic [ref=e132]: 알바·일용직·계약직도 OK
+            - text: 고용형태와 상관없이, 작년 국세청 소득만 확인되면 가입할 수 있어요.
+        - listitem [ref=e133]:
+          - generic [ref=e134]: ▲
+          - generic [ref=e135]:
+            - generic [ref=e136]: 이런 소득도 인정돼요
+            - text: 사관생도·사회복무요원 등 복무 중 급여나 육아휴직급여(수당)가 있으면 예외적으로 신청할 수 있어요.
+        - listitem [ref=e137]:
+          - generic [ref=e138]: ▲
+          - generic [ref=e139]:
+            - generic [ref=e140]: 가구원은 어디까지?
+            - text: 등본상 부모·자녀·배우자·미성년 형제자매까지 포함돼요.
+            - generic [ref=e141]: 조부모는 원칙적으로 제외돼요. 청년이 조부모를 부양하는 경우에만 인정되며 증빙서류가 필요해요.
+    - generic [ref=e142]:
+      - generic [ref=e143]:
+        - generic [ref=e144]: "2"
+        - generic [ref=e145]: 정부기여금
+      - heading "청년미래적금 정부기여금, 얼마나 받나? (6% vs 12%)" [level=2] [ref=e146]
+      - paragraph [ref=e147]: 소득·재직 조건에 따라 세 가지 유형으로 나뉘어요.
+      - generic [ref=e148]:
+        - generic [ref=e149]:
+          - generic [ref=e150]: 비과세 혜택만
+          - generic [ref=e151]: 0%
+          - generic [ref=e152]: 정부기여금 없이 이자소득세 비과세만 제공
+        - generic [ref=e153]:
+          - generic [ref=e154]: 일반형
+          - generic [ref=e155]: 6%
+          - generic [ref=e156]: 매월 납입금의 6%를 정부가 매칭
+        - generic [ref=e157]:
+          - generic [ref=e158]: 우대형
+          - generic [ref=e159]: 12%
+          - generic [ref=e160]: 매월 납입금의 12%를 정부가 매칭
+      - generic [ref=e161]:
+        - generic [ref=e162]:
+          - generic [ref=e164]: 비과세
+          - generic [ref=e165]: 총급여 6,000만 원(종합소득 4,800만 원) 초과 ~ 7,500만 원(6,300만 원) 이하 + 가구 중위소득 200% 이하
+        - generic [ref=e166]:
+          - generic [ref=e168]: 일반형 6%
+          - generic [ref=e169]:
+            - text: (소상공인) 연매출 3억 원 이하 + 중위소득 200% 이하
+            - text: (일반소득자) 총급여 6,000만 원 이하 + 중위소득 200% 이하
+        - generic [ref=e170]:
+          - generic [ref=e172]: 우대형 12%
+          - generic [ref=e173]:
+            - text: (소상공인) 연매출 1억 원 이하 + 중위소득 150% 이하
+            - text: (중소기업) 만기 한 달 전까지 총 29개월 이상 재직 + 이직 2회 이하
+            - text: (신규 취업자) 총급여 6,000만 원 이하 + 중위소득 200% 이하
+            - text: (재직자) 총급여 3,600만 원 이하 + 중위소득 150% 이하
+      - list [ref=e174]:
+        - listitem [ref=e175]:
+          - generic [ref=e176]: ▲
+          - generic [ref=e177]:
+            - generic [ref=e178]: 따로 신청 안 해도 돼요
+            - text: 일반형·우대형은 별도 신청 없이 서민금융진흥원이 요건을 확인해 자동으로 정해줘요.
+        - listitem [ref=e179]:
+          - generic [ref=e180]: ▲
+          - generic [ref=e181]:
+            - generic [ref=e182]: 우대형은 '현재 재직'이 조건
+            - text: 중소기업 우대형(재직자·신규 취업자)은 지금 중소기업에 다니고 있어야 가입할 수 있어요.
+        - listitem [ref=e183]:
+          - generic [ref=e184]: ▲
+          - generic [ref=e185]:
+            - generic [ref=e186]: 연봉 올라도 그대로
+            - text: 가입 후 소득이 늘어도 정부기여금 매칭비율은 바뀌지 않아요.
+      - heading "월 납입·유형별 3년 만기 수령액" [level=3] [ref=e187]
+      - table [ref=e188]:
+        - rowgroup [ref=e189]:
+          - row "월 납입 유형 원금(36개월) 정부기여금 원금+기여금" [ref=e190]:
+            - columnheader "월 납입" [ref=e191]
+            - columnheader "유형" [ref=e192]
+            - columnheader "원금(36개월)" [ref=e193]
+            - columnheader "정부기여금" [ref=e194]
+            - columnheader "원금+기여금" [ref=e195]
+        - rowgroup [ref=e196]:
+          - row "50만 원 우대형 12% 1,800만 216만 2,016만" [ref=e197]:
+            - cell "50만 원" [ref=e198]
+            - cell "우대형 12%" [ref=e199]
+            - cell "1,800만" [ref=e200]
+            - cell "216만" [ref=e201]
+            - cell "2,016만" [ref=e202]
+          - row "50만 원 일반형 6% 1,800만 108만 1,908만" [ref=e203]:
+            - cell "50만 원" [ref=e204]
+            - cell "일반형 6%" [ref=e205]
+            - cell "1,800만" [ref=e206]
+            - cell "108만" [ref=e207]
+            - cell "1,908만" [ref=e208]
+          - row "30만 원 우대형 12% 1,080만 129.6만 1,209.6만" [ref=e209]:
+            - cell "30만 원" [ref=e210]
+            - cell "우대형 12%" [ref=e211]
+            - cell "1,080만" [ref=e212]
+            - cell "129.6만" [ref=e213]
+            - cell "1,209.6만" [ref=e214]
+          - row "30만 원 일반형 6% 1,080만 64.8만 1,144.8만" [ref=e215]:
+            - cell "30만 원" [ref=e216]
+            - cell "일반형 6%" [ref=e217]
+            - cell "1,080만" [ref=e218]
+            - cell "64.8만" [ref=e219]
+            - cell "1,144.8만" [ref=e220]
+      - generic [ref=e221]: 계산 기준 = 매월 납입금 × 매칭률 × 36개월. 여기에 은행 이자(전액 비과세)가 더해지며, 이자는 가입 은행·금리에 따라 달라 위 표에는 넣지 않았어요.
+      - link "내 월 납입·금리로 만기 수령액 계산하기 자유적금 계산기 →" [ref=e222] [cursor=pointer]:
+        - /url: /savings/free-savings/
+        - generic [ref=e223]: 내 월 납입·금리로 만기 수령액 계산하기
+        - generic [ref=e224]: 자유적금 계산기 →
+    - generic [ref=e225]:
+      - generic [ref=e226]:
+        - generic [ref=e227]: ✓
+        - generic [ref=e228]: 내 유형 찾기
+      - heading "청년미래적금, 나에게 맞는 유형은?" [level=2] [ref=e229]
+      - paragraph [ref=e230]: 대표적인 경우로 빠르게 가늠해 보세요. (실제 유형은 서민금융진흥원 심사로 확정돼요.)
+      - generic [ref=e231]:
+        - generic [ref=e232]:
+          - generic [ref=e233]: 사회초년생
+          - generic [ref=e234]: 작년에 처음 취직했고, 지금 중소기업 재직 중 · 총급여 3,600만 원 이하
+          - generic [ref=e235]:
+            - generic [ref=e236]: 추천
+            - generic [ref=e237]: 우대형 12%
+        - generic [ref=e238]:
+          - generic [ref=e239]: 일반 직장인
+          - generic [ref=e240]: 총급여 6,000만 원 이하 · 가구 중위소득 200% 이내
+          - generic [ref=e241]:
+            - generic [ref=e242]: 추천
+            - generic [ref=e243]: 일반형 6%
+        - generic [ref=e244]:
+          - generic [ref=e245]: 동네 가게 사장님
+          - generic [ref=e246]: 영세 소상공인 · 연매출 1억 원 이하(중위 150% 이내)면 우대형, 3억 원 이하면 일반형
+          - generic [ref=e247]:
+            - generic [ref=e248]: 추천
+            - generic [ref=e249]: 우대형
+            - generic [ref=e250]: 일반형
+        - generic [ref=e251]:
+          - generic [ref=e252]: 소득 상한 근처
+          - generic [ref=e253]: 총급여 6,000만 ~ 7,500만 원 구간 · 중위소득 200% 이내
+          - generic [ref=e254]:
+            - generic [ref=e255]: 추천
+            - generic [ref=e256]: 비과세형
+    - generic [ref=e257]:
+      - generic [ref=e258]:
+        - generic [ref=e259]: →
+        - generic [ref=e260]: 신청 방법
+      - heading "청년미래적금 신청 방법 (3단계)" [level=2] [ref=e261]
+      - paragraph [ref=e262]: 대부분 비대면·자동 심사라 절차가 간단해요. 아래 순서대로만 따라 하면 됩니다.
+      - generic [ref=e263]:
+        - generic [ref=e264]:
+          - generic [ref=e265]: "1"
+          - generic [ref=e266]:
+            - generic [ref=e267]: 취급은행 앱 또는 서민금융진흥원에서 신청
+            - text: 취급은행 앱이나
+            - link "서민금융진흥원 청년금융(fill4young.kinfa.or.kr)" [ref=e268] [cursor=pointer]:
+              - /url: https://fill4young.kinfa.or.kr/yfs/main
+            - text: 에서 비대면으로 신청해요.
+        - generic [ref=e269]:
+          - generic [ref=e270]: "2"
+          - generic [ref=e271]:
+            - generic [ref=e272]: 소득·가구 요건 자동 심사
+            - text: 따로 서류를 내지 않아도 서민금융진흥원이 국세청·행정정보로 소득과 가구 중위소득을 확인하고, 일반형·우대형 유형을 자동으로 정해 알려줘요.
+        - generic [ref=e273]:
+          - generic [ref=e274]: "3"
+          - generic [ref=e275]:
+            - generic [ref=e276]: 적금 개설 후 납입 시작
+            - text: 승인되면 적금 계좌를 만들고 월 최대 50만 원을 자유롭게 넣으면 끝. 3년 뒤 원금 + 정부기여금 + 비과세 이자를 받아요.
+      - heading "신청 첫 주는 '출생연도 끝자리' 5부제" [level=3] [ref=e277]
+      - paragraph [ref=e278]: 신청 첫 주(6월 22일~)는 출생연도 끝자리에 따라 신청 요일이 나뉘어요. 둘째 주부터는 끝자리와 상관없이 신청할 수 있어요.
+      - generic [ref=e279]:
+        - generic [ref=e280]:
+          - generic [ref=e281]: 월요일
+          - generic [ref=e282]: 끝자리 1·6
+        - generic [ref=e283]:
+          - generic [ref=e284]: 화요일
+          - generic [ref=e285]: 끝자리 2·7
+        - generic [ref=e286]:
+          - generic [ref=e287]: 수요일
+          - generic [ref=e288]: 끝자리 3·8
+        - generic [ref=e289]:
+          - generic [ref=e290]: 목요일
+          - generic [ref=e291]: 끝자리 4·9
+        - generic [ref=e292]:
+          - generic [ref=e293]: 금요일
+          - generic [ref=e294]: 끝자리 5·0
+      - heading "미리 챙기면 좋은 준비물" [level=3] [ref=e295]
+      - list [ref=e296]:
+        - listitem [ref=e297]:
+          - text: ✓
+          - generic [ref=e298]: 신분증 — 본인 확인용
+        - listitem [ref=e299]:
+          - text: ✓
+          - generic [ref=e300]: 소득 증빙은 대부분 자동 — 국세청에 잡힌 2025년 소득으로 자동 확인돼 따로 낼 게 없어요.
+        - listitem [ref=e301]:
+          - text: ✓
+          - generic [ref=e302]: (조부모 부양 시) 가족관계증명서·부양 사실 증빙
+        - listitem [ref=e303]:
+          - text: ✓
+          - generic [ref=e304]: (소상공인) 사업자등록증·매출(부가세 신고) 증빙
+        - listitem [ref=e305]:
+          - text: ✓
+          - generic [ref=e306]: (군필 연령 연장) 병적증명서 — 병역 기간만큼 나이 한도가 늘어요.
+    - generic [ref=e307]:
+      - generic [ref=e308]:
+        - generic [ref=e309]: vs
+        - generic [ref=e310]: 청년도약계좌와 비교
+      - heading "청년미래적금 vs 청년도약계좌, 뭐가 다를까?" [level=2] [ref=e311]
+      - paragraph [ref=e312]: 둘 중 하나만 가입돼요. 기간이 짧고 매칭률이 높은 적금 vs 길고 큰 목돈의 계좌, 성향에 맞게 고르세요.
+      - table [ref=e314]:
+        - rowgroup [ref=e315]:
+          - row "구분 청년미래적금 청년도약계좌" [ref=e316]:
+            - columnheader "구분" [ref=e317]
+            - columnheader "청년미래적금" [ref=e318]
+            - columnheader "청년도약계좌" [ref=e319]
+        - rowgroup [ref=e320]:
+          - row "납입 한도 월 최대 50만 원 월 최대 70만 원" [ref=e321]:
+            - cell "납입 한도" [ref=e322]
+            - cell "월 최대 50만 원" [ref=e323]
+            - cell "월 최대 70만 원" [ref=e324]
+          - row "만기 3년 (36개월) 5년" [ref=e325]:
+            - cell "만기" [ref=e326]
+            - cell "3년 (36개월)" [ref=e327]
+            - cell "5년" [ref=e328]
+          - row "정부 매칭 6%(일반)·12%(우대) 납입액 6% (소득 차등)" [ref=e329]:
+            - cell "정부 매칭" [ref=e330]
+            - cell "6%(일반)·12%(우대)" [ref=e331]
+            - cell "납입액 6% (소득 차등)" [ref=e332]
+          - row "최대 수령액 약 2,000~2,200만 원 약 5,000만 원" [ref=e333]:
+            - cell "최대 수령액" [ref=e334]
+            - cell "약 2,000~2,200만 원" [ref=e335]
+            - cell "약 5,000만 원" [ref=e336]
+          - row "가입 소득 개인소득 7,500만 원 이하 개인소득 7,500만 원 이하" [ref=e337]:
+            - cell "가입 소득" [ref=e338]
+            - cell "개인소득 7,500만 원 이하" [ref=e339]
+            - cell "개인소득 7,500만 원 이하" [ref=e340]
+      - list [ref=e341]:
+        - listitem [ref=e342]:
+          - generic [ref=e343]: ▲
+          - generic [ref=e344]:
+            - generic [ref=e345]: 갈아타기는 '6월에 단 1회'
+            - text: 청년도약계좌 가입자가 요건을 충족하면 청년미래적금으로 갈아탈 수 있어요. 단, 2026년 6월 최초 신청 기간에만 가능하며 중복 가입은 안 돼요.
+    - generic [ref=e346]:
+      - generic [ref=e347]:
+        - generic [ref=e348]: "3"
+        - generic [ref=e349]: 중소기업 우대형
+      - heading "청년미래적금 중소기업 우대형 조건" [level=2] [ref=e350]
+      - paragraph [ref=e351]: 중소기업에 다닌다면 신청 전 이 6가지를 꼭 확인하세요.
+      - list [ref=e352]:
+        - listitem [ref=e353]:
+          - generic [ref=e354]: ▲
+          - generic [ref=e355]:
+            - generic [ref=e356]: 올해 첫 취업이라면 내년부터
+            - text: 2026년에 처음 취직했다면 2026년 소득이 확정되는 내년부터 신청할 수 있어요.
+        - listitem [ref=e357]:
+          - generic [ref=e358]: ▲
+          - generic [ref=e359]:
+            - generic [ref=e360]: 이런 곳은 '중소기업'이 아니에요
+            - text: 비영리법인이 운영하는 사립학교·유치원, 국가기관 연구소, 공공기관 등은 해당하지 않아요.
+            - generic [ref=e361]: "기준: 중소기업기본법 제2조 제1항"
+        - listitem [ref=e362]:
+          - generic [ref=e363]: ▲
+          - generic [ref=e364]:
+            - generic [ref=e365]: 고용형태는 안 따져요
+            - text: 정규직·계약직 무관하게 중소기업 재직으로 인정돼요.
+            - generic [ref=e366]: 소득요건을 충족해도 중견기업 등 중소기업 재직자가 아니면 우대형은 불가
+        - listitem [ref=e367]:
+          - generic [ref=e368]: ▲
+          - generic [ref=e369]:
+            - generic [ref=e370]: 중간에 퇴사하면?
+            - text: 만기 한 달 전까지 재직 기간이 29개월 미만이면, 전 기간에 대해 일반형(정부기여금 6%)이 적용돼요.
+        - listitem [ref=e371]:
+          - generic [ref=e372]: ▲
+          - generic [ref=e373]:
+            - generic [ref=e374]: "'신규 취업자' 기준"
+            - text: 가입신청일(2026년 6월~) 기준 직전연도(2025년)에 최초 취업하고, 고용보험상 현재 중소기업 재직이 확인되어야 해요.
+        - listitem [ref=e375]:
+          - generic [ref=e376]: ▲
+          - generic [ref=e377]:
+            - generic [ref=e378]: 재취업도 인정
+            - text: 2025년에 처음 취업·퇴사 후 2026년 다시 중소기업에 들어간 경우도 신규 취업자로 인정해요.
+    - generic [ref=e379]:
+      - generic [ref=e380]:
+        - generic [ref=e381]: "4"
+        - generic [ref=e382]: 소상공인
+      - heading "청년미래적금 소상공인 가입 조건" [level=2] [ref=e383]
+      - paragraph [ref=e384]: 사장님이라면 근로자와 다른 이 점들을 챙기세요.
+      - list [ref=e385]:
+        - listitem [ref=e386]:
+          - generic [ref=e387]: ▲
+          - generic [ref=e388]:
+            - generic [ref=e389]: 폐업해도 우대형 유지
+            - text: 소상공인 우대형으로 가입했다면, 이후 폐업하거나 근로소득자로 바뀌어도 우대형 혜택은 그대로 유지돼요.
+        - listitem [ref=e390]:
+          - generic [ref=e391]: ▲
+          - generic [ref=e392]:
+            - generic [ref=e393]: 매출 기준 못 맞춰도 길이 있어요
+            - text: 매출액 기준에 못 미치더라도, 종합소득 기준을 충족하면 일반형으로 가입할 수 있어요.
+    - generic [ref=e394]:
+      - generic [ref=e395]:
+        - generic [ref=e396]: "?"
+        - generic [ref=e397]: 자주 묻는 질문 FAQ
+      - heading "청년미래적금 자주 묻는 질문 (FAQ)" [level=2] [ref=e398]
+      - generic [ref=e399]:
+        - group [ref=e400]:
+          - generic "Q. 부부가 둘 다 가입할 수 있나요? +" [ref=e401] [cursor=pointer]:
+            - generic [ref=e402]: Q.
+            - generic [ref=e403]: 부부가 둘 다 가입할 수 있나요?
+            - generic [ref=e404]: +
+          - generic [ref=e405]: 네. 각자 요건을 충족하면 따로따로 신청할 수 있어요. 2인 가구는 중위소득 기준도 완화돼(일반형 250%·우대형 200%) 문턱이 낮아집니다.
+        - group [ref=e406]:
+          - generic "Q. 아르바이트 소득만 있어도 가입되나요? +" [ref=e407] [cursor=pointer]:
+            - generic [ref=e408]: Q.
+            - generic [ref=e409]: 아르바이트 소득만 있어도 가입되나요?
+            - generic [ref=e410]: +
+        - group [ref=e411]:
+          - generic "Q. 가입 후 연봉이 오르면 정부 지원이 줄어드나요? +" [ref=e412] [cursor=pointer]:
+            - generic [ref=e413]: Q.
+            - generic [ref=e414]: 가입 후 연봉이 오르면 정부 지원이 줄어드나요?
+            - generic [ref=e415]: +
+        - group [ref=e416]:
+          - generic "Q. 우대형으로 가입했는데 중간에 퇴사하면요? +" [ref=e417] [cursor=pointer]:
+            - generic [ref=e418]: Q.
+            - generic [ref=e419]: 우대형으로 가입했는데 중간에 퇴사하면요?
+            - generic [ref=e420]: +
+        - group [ref=e421]:
+          - generic "Q. 공무원·공공기관 직원도 중소기업 우대형이 되나요? +" [ref=e422] [cursor=pointer]:
+            - generic [ref=e423]: Q.
+            - generic [ref=e424]: 공무원·공공기관 직원도 중소기업 우대형이 되나요?
+            - generic [ref=e425]: +
+        - group [ref=e426]:
+          - generic "Q. 사업을 접으면 우대형 혜택이 사라지나요? +" [ref=e427] [cursor=pointer]:
+            - generic [ref=e428]: Q.
+            - generic [ref=e429]: 사업을 접으면 우대형 혜택이 사라지나요?
+            - generic [ref=e430]: +
+        - group [ref=e431]:
+          - generic "Q. 조부모 소득도 가구원에 포함되나요? +" [ref=e432] [cursor=pointer]:
+            - generic [ref=e433]: Q.
+            - generic [ref=e434]: 조부모 소득도 가구원에 포함되나요?
+            - generic [ref=e435]: +
+        - group [ref=e436]:
+          - generic "Q. 일반형·우대형은 따로 신청해야 하나요? +" [ref=e437] [cursor=pointer]:
+            - generic [ref=e438]: Q.
+            - generic [ref=e439]: 일반형·우대형은 따로 신청해야 하나요?
+            - generic [ref=e440]: +
+        - group [ref=e441]:
+          - generic "Q. 청년미래적금과 청년도약계좌, 뭐가 다른가요? +" [ref=e442] [cursor=pointer]:
+            - generic [ref=e443]: Q.
+            - generic [ref=e444]: 청년미래적금과 청년도약계좌, 뭐가 다른가요?
+            - generic [ref=e445]: +
+        - group [ref=e446]:
+          - generic "Q. 만 35세인데 가입할 수 있나요? +" [ref=e447] [cursor=pointer]:
+            - generic [ref=e448]: Q.
+            - generic [ref=e449]: 만 35세인데 가입할 수 있나요?
+            - generic [ref=e450]: +
+        - group [ref=e451]:
+          - generic "Q. 중간에 해지하면 정부 기여금은 어떻게 되나요? +" [ref=e452] [cursor=pointer]:
+            - generic [ref=e453]: Q.
+            - generic [ref=e454]: 중간에 해지하면 정부 기여금은 어떻게 되나요?
+            - generic [ref=e455]: +
+    - generic [ref=e456]:
+      - heading "궁금한 점이 더 있으신가요?" [level=2] [ref=e457]
+      - paragraph [ref=e458]: 홈페이지와 콜센터에서 바로 확인하세요.
+      - generic [ref=e460]:
+        - text: 청년금융 콜센터
+        - link "☎ 1397 → 3" [ref=e461] [cursor=pointer]:
+          - /url: tel:1397
+      - link "청년미래적금 홈페이지 →" [ref=e462] [cursor=pointer]:
+        - /url: https://fill4young.kinfa.or.kr/yfs/main
+    - generic [ref=e463]:
+      - generic [ref=e464]: 금융위원회 · 서민금융진흥원
+      - generic [ref=e465]: 자료출처 = 정책브리핑 www.korea.kr
+  - contentinfo [ref=e466]:
+    - generic [ref=e467]:
+      - generic [ref=e468]:
+        - generic [ref=e469]:
+          - link "MoneyDoc" [ref=e470] [cursor=pointer]:
+            - /url: /
+            - img [ref=e472]
+            - text: MoneyDoc
+          - paragraph [ref=e474]: 복잡한 금융·법률·세금 이야기를 누구나 이해할 수 있게 풀어내는 머니 가이드.
+        - generic [ref=e475]:
+          - heading "카테고리" [level=4] [ref=e476]
+          - list [ref=e477]:
+            - listitem [ref=e478]:
+              - link "저축" [ref=e479] [cursor=pointer]:
+                - /url: /savings/
+            - listitem [ref=e480]:
+              - link "대출" [ref=e481] [cursor=pointer]:
+                - /url: /loan/
+            - listitem [ref=e482]:
+              - link "부동산" [ref=e483] [cursor=pointer]:
+                - /url: /realestate/
+            - listitem [ref=e484]:
+              - link "세금" [ref=e485] [cursor=pointer]:
+                - /url: /tax/
+        - generic [ref=e486]:
+          - heading "둘러보기" [level=4] [ref=e487]
+          - list [ref=e488]:
+            - listitem [ref=e489]:
+              - link "보험" [ref=e490] [cursor=pointer]:
+                - /url: /insurance/
+            - listitem [ref=e491]:
+              - link "연금" [ref=e492] [cursor=pointer]:
+                - /url: /pension/
+            - listitem [ref=e493]:
+              - link "법률" [ref=e494] [cursor=pointer]:
+                - /url: /law/
+            - listitem [ref=e495]:
+              - link "정부지원금" [ref=e496] [cursor=pointer]:
+                - /url: /government/
+        - generic [ref=e497]:
+          - heading "회사" [level=4] [ref=e498]
+          - list [ref=e499]:
+            - listitem [ref=e500]:
+              - link "소개" [ref=e501] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e502]:
+              - link "문의하기" [ref=e503] [cursor=pointer]:
+                - /url: /contact/
+      - generic [ref=e504]:
+        - paragraph [ref=e505]: © 2026 MoneyDoc. 모든 계산은 정부 공식 자료 기준.
+        - generic [ref=e506]:
+          - link "이용약관" [ref=e507] [cursor=pointer]:
+            - /url: /terms/
+          - link "개인정보처리방침" [ref=e508] [cursor=pointer]:
+            - /url: /privacy/

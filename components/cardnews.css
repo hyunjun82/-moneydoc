@@ -214,14 +214,14 @@
 .cardnews .applybar:hover .btn {transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.18);}
 
 /* ── 상단 고정 신청바 ── */
-.cardnews .applysticky{ position:sticky; top:72px; z-index:40; display:flex; align-items:center; gap:var(--sp-3);
+.cardnews .applysticky{ position:sticky; top:67px; z-index:40; display:flex; align-items:center; gap:var(--sp-3);
   background:var(--accent); color:#fff; padding:10px 16px; border-radius:var(--r-pill);
   box-shadow:0 6px 20px rgba(31,78,121,.28); text-decoration:none; margin-bottom:var(--sp-5); }
 .cardnews .applysticky .as-t{ font-weight:var(--fw-extrabold); font-size:var(--fs-body); white-space:nowrap; }
 .cardnews .applysticky .as-d{ font-size:var(--fs-caption); color:rgba(255,255,255,.82); white-space:nowrap; }
 .cardnews .applysticky .as-btn{ margin-left:auto; flex:none; background:#fff; color:var(--accent);
   font-weight:var(--fw-extrabold); font-size:var(--fs-caption); padding:8px 16px; border-radius:var(--r-pill); white-space:nowrap; }
-@media (max-width:520px){ .cardnews .applysticky{ top:60px; padding:9px 12px; } .cardnews .applysticky .as-d{ display:none; } }
+@media (max-width:520px){ .cardnews .applysticky{ top:67px; padding:9px 12px; } .cardnews .applysticky .as-d{ display:none; } }
 
 /* ── 케이스별 수령액 표 ── */
 .cardnews .calc-tbl{ width:100%; border-collapse:collapse; margin-top:var(--sp-5); font-size:var(--fs-caption); }
@@ -322,6 +322,7 @@
     color: var(--text-body); text-decoration: none; border-radius: var(--r-sm); word-break: keep-all;}
 .cardnews .toc-nav a::before {content: "›"; color: var(--accent); font-weight: var(--fw-bold); flex: none;}
 .cardnews .toc-nav a:hover {background: var(--bg-inset); color: var(--accent);}
-.cardnews .card[id] {scroll-margin-top: 16px;}
+.cardnews .card[id] {scroll-margin-top: 84px;}
+.cardnews:has(.applysticky) .card[id] {scroll-margin-top: 128px;}
 .cardnews .foot {text-align: center; color: var(--text-muted); font-size: var(--fs-caption); padding-top: var(--sp-4);}
 .cardnews .foot .org {font-size: var(--fs-body); font-weight: var(--fw-bold); color: var(--text-strong);}

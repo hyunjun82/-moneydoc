@@ -1,0 +1,62 @@
+{
+  "keyword": "퇴직금",
+  "_expect": "PASS",
+  "_reason": "정상 입력",
+  "spokes": [
+    {
+      "slug": "standard",
+      "format": "question",
+      "title": "퇴직금 지급기준, 1년 미만도 받을 수 있나요?",
+      "mustInclude": [
+        "퇴직금",
+        "지급기준"
+      ],
+      "sourceQuery": "퇴직금 지급기준",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "calc",
+      "format": "total-colon",
+      "title": "퇴직금 계산 방법: 평균임금 산정부터 세금까지",
+      "mustInclude": [
+        "퇴직금",
+        "계산"
+      ],
+      "sourceQuery": "퇴직금 계산",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "interim",
+      "format": "list-comma",
+      "title": "퇴직금 중간정산 사유와 신청 방법, 가능한 경우는?",
+      "mustInclude": [
+        "퇴직금",
+        "중간정산"
+      ],
+      "sourceQuery": "퇴직금 중간정산",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "tax",
+      "format": "list-comma",
+      "title": "퇴직소득세 계산법, 근속연수공제 얼마나 받나",
+      "mustInclude": [
+        "퇴직소득세",
+        "근속연수공제"
+      ],
+      "sourceQuery": "퇴직소득세 근속연수공제",
+      "sourcePlatform": "fixture"
+    },
+    {
+      "slug": "deadline",
+      "format": "question",
+      "title": "퇴직금 지급기한 14일, 안 주면 어떻게 하나요?",
+      "mustInclude": [
+        "퇴직금",
+        "지급기한"
+      ],
+      "sourceQuery": "퇴직금 지급기한",
+      "sourcePlatform": "fixture"
+    }
+  ]
+}

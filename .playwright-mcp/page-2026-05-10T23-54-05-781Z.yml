@@ -1,0 +1,295 @@
+- generic [active] [ref=e1]:
+  - text:            
+  - navigation [ref=e2]:
+    - link "부동산계산기.com" [ref=e3] [cursor=pointer]:
+      - /url: //xn--989a00af8jnslv3dba.com/
+      - img [ref=e4]
+      - text: 부동산계산기.com
+    - text: 메뉴 검색
+    - list [ref=e6]:
+      - listitem [ref=e7]:
+        - link "보수·수수료" [ref=e8] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e9]: 보수·수수료
+      - listitem [ref=e10]:
+        - link "취득·등기·보유" [ref=e11] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e12]: 취득·등기·보유
+      - listitem [ref=e13]:
+        - link "양도·증여·상속" [ref=e14] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e15]: 양도·증여·상속
+      - listitem [ref=e16]:
+        - link "임대·투자·평가" [ref=e17] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e18]: 임대·투자·평가
+      - listitem [ref=e19]:
+        - link "DSR·금융" [ref=e20] [cursor=pointer]:
+          - /url: "#"
+      - listitem [ref=e21]:
+        - link "날짜·면적 등" [ref=e22] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e23]: 날짜·면적 등
+      - listitem [ref=e24]:
+        - link "경매 계산" [ref=e25] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e26]: 경매 계산
+      - listitem [ref=e27]:
+        - link "부동산 정보" [ref=e28] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e29]: 부동산 정보
+    - generic [ref=e30]:
+      - link "" [ref=e31] [cursor=pointer]:
+        - /url: //xn--989a00af8jnslv3dba.com/menu
+        - generic [ref=e32]: 
+      - link "" [ref=e33] [cursor=pointer]:
+        - /url: //xn--989a00af8jnslv3dba.com/mypage
+        - generic [ref=e34]: 
+  - main [ref=e35]:
+    - heading "🏡 취득세 계산  주소 복사" [level=5] [ref=e36]:
+      - text: 🏡
+      - link "취득세 계산" [ref=e37] [cursor=pointer]:
+        - /url: ""
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]: 
+        - text: 주소 복사
+    - generic [ref=e40]:
+      - list [ref=e41]:
+        - listitem [ref=e42]:
+          - link "설명" [ref=e43] [cursor=pointer]:
+            - /url: "#intro1"
+        - listitem [ref=e44]:
+          - link "등기비용" [ref=e45] [cursor=pointer]:
+            - /url: "#intro2"
+      - generic [ref=e47]: 부동산 취득시 납부해야 하는 세금을 계산합니다. 과세표준은 취득자가 신고한 취득 당시 가액을 기준으로 하며, 취득한 날로부터 60일(상속시는 6개월) 이내 신고·납부하여야 합니다.
+    - generic: 
+    - generic [ref=e48]:
+      - group "취득경위" [ref=e51]:
+        - button "매매" [ref=e52] [cursor=pointer]
+        - button "증여" [ref=e53] [cursor=pointer]
+        - button "상속" [ref=e54] [cursor=pointer]
+        - button "원시" [ref=e55] [cursor=pointer]
+      - group "물건 종류" [ref=e58]:
+        - button "주택" [ref=e59] [cursor=pointer]
+        - button "오피스텔 " [ref=e60] [cursor=pointer]:
+          - text: 오피스텔
+          - generic [ref=e61]: 
+        - button "농지" [ref=e62] [cursor=pointer]
+        - button "그 외" [ref=e63] [cursor=pointer]
+      - group "규모 구분" [ref=e66]:
+        - button "40㎡▾" [ref=e67] [cursor=pointer]
+        - button "60㎡▾" [ref=e68] [cursor=pointer]
+        - button "85㎡▾" [ref=e69] [cursor=pointer]
+        - button "85㎡▴" [ref=e70] [cursor=pointer]
+      - group "주택수 구분" [ref=e73]:
+        - button "1주택 " [ref=e74] [cursor=pointer]:
+          - text: 1주택
+          - generic [ref=e75]: 
+        - button "2주택" [ref=e76] [cursor=pointer]: 2주택 
+        - button "3주택" [ref=e77] [cursor=pointer]: 3주택 
+        - button "그 이상" [ref=e78] [cursor=pointer]
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - generic [ref=e82]:
+            - generic [ref=e83]:
+              - checkbox "법인" [ref=e84]
+              - generic [ref=e85]: 법인
+            - generic [ref=e86]:
+              - checkbox "임대사업자 최초분양" [ref=e87]
+              - generic [ref=e88]: 임대사업자 최초분양
+              - generic [ref=e89] [cursor=pointer]: 
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - checkbox "조정대상지역" [ref=e92]
+              - generic [ref=e93]: 조정대상지역
+              - generic [ref=e94] [cursor=pointer]: 
+            - generic [ref=e95]:
+              - checkbox "수도권" [ref=e96]
+              - generic [ref=e97]: 수도권
+            - generic [ref=e98]:
+              - checkbox "인구감소지역" [ref=e99]
+              - generic [ref=e100]: 인구감소지역
+              - generic [ref=e102] [cursor=pointer]: 
+            - text:  
+          - generic [ref=e103]:
+            - generic [ref=e104]:
+              - checkbox "생애최초 구입" [ref=e105]
+              - generic [ref=e106]: 생애최초 구입
+              - generic [ref=e107] [cursor=pointer]: 
+            - text: 
+        - generic [ref=e108]:
+          - generic [ref=e110]:
+            - generic [ref=e112]: 취득가액
+            - spinbutton [ref=e113]: 금액 입력
+            - generic [ref=e115]: 만원
+          - generic [ref=e117]:
+            - generic [ref=e119]:
+              - text: 시가표준액
+              - generic [ref=e120] [cursor=pointer]: 
+            - spinbutton [ref=e121]: 금액 입력
+            - generic [ref=e123]: 만원
+          - generic [ref=e124]:
+            - button " 취득세 계산" [ref=e125] [cursor=pointer]:
+              - generic [ref=e126]: 
+              - text: 취득세 계산
+            - text: 
+            - generic [ref=e127]:
+              - checkbox "기록" [checked] [ref=e128]
+              - generic [ref=e129]: 기록
+      - text:    
+    - generic [ref=e130]:
+      - heading "참고사항" [level=5] [ref=e131]
+      - generic [ref=e132]:
+        - generic [ref=e133]: 
+        - text: 주택 취득세표
+      - table [ref=e134]:
+        - rowgroup [ref=e135]:
+          - row "주택 구분 취득가액 취득세율 농어촌특별세 (전용면적85m2초과만) 지방교육세" [ref=e136]:
+            - columnheader "주택" [ref=e137]
+            - columnheader "구분" [ref=e138]
+            - columnheader "취득가액" [ref=e139]
+            - columnheader "취득세율" [ref=e140]
+            - columnheader "농어촌특별세 (전용면적85m2초과만)" [ref=e141]:
+              - text: 농어촌특별세
+              - generic [ref=e142]:
+                - text: (전용면적85m
+                - superscript [ref=e143]: "2"
+                - text: 초과만)
+            - columnheader "지방교육세" [ref=e144]
+        - rowgroup [ref=e145]:
+          - row "1주택자 6억이하 1% 0.2% 0.1%" [ref=e146]:
+            - cell "1주택자" [ref=e147]
+            - cell "6억이하" [ref=e148]
+            - cell "1%" [ref=e149]
+            - cell "0.2%" [ref=e150]
+            - cell "0.1%" [ref=e151]
+          - row "6억 초과 9억 이하 (취득가액 X 2/3억원 - 3) X 1/100 취득세의 1/10" [ref=e152]:
+            - cell "6억 초과 9억 이하" [ref=e153]:
+              - text: 6억 초과
+              - text: 9억 이하
+            - cell "(취득가액 X 2/3억원 - 3) X 1/100" [ref=e154]
+            - cell "취득세의 1/10" [ref=e155]
+          - row "9억 초과 3% 0.3%" [ref=e156]:
+            - cell "9억 초과" [ref=e157]
+            - cell "3%" [ref=e158]
+            - cell "0.3%" [ref=e159]
+          - row "2주택자 조정대상지역 8% 0.6% 0.4%" [ref=e160]:
+            - cell "2주택자" [ref=e161]
+            - cell "조정대상지역" [ref=e162]
+            - cell "8%" [ref=e163]
+            - cell "0.6%" [ref=e164]
+            - cell "0.4%" [ref=e165]
+          - row "조정대상 지역외 6억이하 1% 0.2% 0.1%" [ref=e166]:
+            - cell "조정대상 지역외" [ref=e167]:
+              - text: 조정대상
+              - text: 지역외
+            - cell "6억이하" [ref=e168]
+            - cell "1%" [ref=e169]
+            - cell "0.2%" [ref=e170]
+            - cell "0.1%" [ref=e171]
+          - row "6억 초과 9억 이하 (취득가액 X 2/3억원 - 3) X 1/100 취득세의 1/10" [ref=e172]:
+            - cell "6억 초과 9억 이하" [ref=e173]:
+              - text: 6억 초과
+              - text: 9억 이하
+            - cell "(취득가액 X 2/3억원 - 3) X 1/100" [ref=e174]
+            - cell "취득세의 1/10" [ref=e175]
+          - row "9억 초과 3% 0.3%" [ref=e176]:
+            - cell "9억 초과" [ref=e177]
+            - cell "3%" [ref=e178]
+            - cell "0.3%" [ref=e179]
+          - row "3주택자 조정대상지역 12% 1% 0.4%" [ref=e180]:
+            - cell "3주택자" [ref=e181]
+            - cell "조정대상지역" [ref=e182]
+            - cell "12%" [ref=e183]
+            - cell "1%" [ref=e184]
+            - cell "0.4%" [ref=e185]
+          - row "조정대상지역외 8% 0.6% 0.4%" [ref=e186]:
+            - cell "조정대상지역외" [ref=e187]
+            - cell "8%" [ref=e188]
+            - cell "0.6%" [ref=e189]
+            - cell "0.4%" [ref=e190]
+          - row "4주택자 이상 조정대상지역 12% 1% 0.4%" [ref=e191]:
+            - cell "4주택자 이상" [ref=e192]:
+              - text: 4주택자
+              - text: 이상
+            - cell "조정대상지역" [ref=e193]
+            - cell "12%" [ref=e194]
+            - cell "1%" [ref=e195]
+            - cell "0.4%" [ref=e196]
+          - row "조정대상지역외 12% 1% 0.4%" [ref=e197]:
+            - cell "조정대상지역외" [ref=e198]
+            - cell "12%" [ref=e199]
+            - cell "1%" [ref=e200]
+            - cell "0.4%" [ref=e201]
+      - generic [ref=e202]:
+        - generic [ref=e203]: 
+        - text: 주택 외 취득세표
+      - table [ref=e204]:
+        - rowgroup [ref=e205]:
+          - row "주택외 취득세 농어촌특별세 지방교육세" [ref=e206]:
+            - columnheader "주택외" [ref=e207]
+            - columnheader "취득세" [ref=e208]
+            - columnheader "농어촌특별세" [ref=e209]
+            - columnheader "지방교육세" [ref=e210]
+        - rowgroup [ref=e211]:
+          - row "주택 외 매매(토지, 건물 등) 4% 0.2% 0.4%" [ref=e212]:
+            - cell "주택 외 매매(토지, 건물 등)" [ref=e213]
+            - cell "4%" [ref=e214]
+            - cell "0.2%" [ref=e215]
+            - cell "0.4%" [ref=e216]
+          - row "원시취득(신축), 상속(농지 외) 2.8% 0.2% 0.16%" [ref=e217]:
+            - cell "원시취득(신축), 상속(농지 외)" [ref=e218]
+            - cell "2.8%" [ref=e219]
+            - cell "0.2%" [ref=e220]
+            - cell "0.16%" [ref=e221]
+          - row "무상취득(증여) 3.5% 0.2% 0.3%" [ref=e222]:
+            - cell "무상취득(증여)" [ref=e223]
+            - cell "3.5%" [ref=e224]
+            - cell "0.2%" [ref=e225]
+            - cell "0.3%" [ref=e226]
+          - row "농지 매매 신규 3% 0.2% 0.2%" [ref=e227]:
+            - cell "농지" [ref=e228]
+            - cell "매매" [ref=e229]
+            - cell "신규" [ref=e230]
+            - cell "3%" [ref=e231]
+            - cell "0.2%" [ref=e232]
+            - cell "0.2%" [ref=e233]
+          - row "2년이상 자경 1.5% 0.1%" [ref=e234]:
+            - cell "2년이상 자경" [ref=e235]
+            - cell "1.5%" [ref=e236]
+            - cell [ref=e237]
+            - cell "0.1%" [ref=e238]
+          - row "상속 2.3% 0.2% 0.06%" [ref=e239]:
+            - cell "상속" [ref=e240]
+            - cell [ref=e241]
+            - cell "2.3%" [ref=e242]
+            - cell "0.2%" [ref=e243]
+            - cell "0.06%" [ref=e244]
+      - generic [ref=e246]:
+        - text: 검수) 부동산세금 전문
+        - link "강동균 세무사" [ref=e247] [cursor=pointer]:
+          - /url: http://www.zerotax.co.kr/
+  - link [ref=e251] [cursor=pointer]:
+    - /url: https://eznm.me/ocAP
+    - img [ref=e252]
+  - text: ex) A빌라 301호 물건 취득세  주소
+  - contentinfo [ref=e253] [cursor=pointer]:
+    - generic [ref=e254]:
+      - img [ref=e255]
+      - generic [ref=e256]:
+        - link "제휴문의" [ref=e258]:
+          - /url: /ad
+        - link "사이트맵" [ref=e260]:
+          - /url: /sitemap/sitemap_index.xml
+        - generic [ref=e261]: 책임한계 및 법적고지
+        - link "API 센터" [ref=e263]:
+          - /url: https://dev.fran.kr/
+      - generic [ref=e264]:
+        - generic [ref=e265]: 부동산계산기.com
+        - generic [ref=e266]:
+          - text: 공인중개사·세무사·법무사 등 전문직부터 부동산 투자자, 실수요자까지
+          - text: 모두가 믿고 사용하는 대한민국 대표 부동산 계산기입니다.
+          - text: 유사·사칭 서비스가 많으니 꼭 로고를 기억하세요.
+    - separator [ref=e267]
+    - generic [ref=e268]: copyright (C) 2015 - 2026 부동산계산기.com _Seoul C
+  - text:  

@@ -1,0 +1,225 @@
+- generic [active] [ref=e1]:
+  - text:            
+  - navigation [ref=e2]:
+    - link "부동산계산기.com" [ref=e3] [cursor=pointer]:
+      - /url: //xn--989a00af8jnslv3dba.com/
+      - img [ref=e4]
+      - text: 부동산계산기.com
+    - text: 메뉴 검색
+    - list [ref=e6]:
+      - listitem [ref=e7]:
+        - link "보수·수수료" [ref=e8] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e9]: 보수·수수료
+      - listitem [ref=e10]:
+        - link "취득·등기·보유" [ref=e11] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e12]: 취득·등기·보유
+      - listitem [ref=e13]:
+        - link "양도·증여·상속" [ref=e14] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e15]: 양도·증여·상속
+      - listitem [ref=e16]:
+        - link "임대·투자·평가" [ref=e17] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e18]: 임대·투자·평가
+      - listitem [ref=e19]:
+        - link "DSR·금융" [ref=e20] [cursor=pointer]:
+          - /url: "#"
+      - listitem [ref=e21]:
+        - link "날짜·면적 등" [ref=e22] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e23]: 날짜·면적 등
+      - listitem [ref=e24]:
+        - link "경매 계산" [ref=e25] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e26]: 경매 계산
+      - listitem [ref=e27]:
+        - link "부동산 정보" [ref=e28] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e29]: 부동산 정보
+    - generic [ref=e30]:
+      - link "" [ref=e31] [cursor=pointer]:
+        - /url: //xn--989a00af8jnslv3dba.com/menu
+        - generic [ref=e32]: 
+      - link "" [ref=e33] [cursor=pointer]:
+        - /url: //xn--989a00af8jnslv3dba.com/mypage
+        - generic [ref=e34]: 
+  - main [ref=e35]:
+    - heading "🏠 양도소득세 계산  주소 복사" [level=5] [ref=e36]:
+      - text: 🏠
+      - link "양도소득세 계산" [ref=e37] [cursor=pointer]:
+        - /url: ""
+      - generic [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]: 
+        - text: 주소 복사
+    - generic [ref=e40]:
+      - list [ref=e41]:
+        - listitem [ref=e42]:
+          - link "설명" [ref=e43] [cursor=pointer]:
+            - /url: "#intro1"
+        - listitem [ref=e44]:
+          - link "고급 계산" [ref=e45] [cursor=pointer]:
+            - /url: "#intro2"
+        - listitem [ref=e46]:
+          - link "개정법 적용" [ref=e47] [cursor=pointer]:
+            - /url: "#intro3"
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - paragraph [ref=e50]:
+            - text: 주택·아파트, 분양권, 조합원 입주권, 토지 등 부동산 양도시 그 차익에 대해 부과되는 세금으로, 매매거래 후 직접 신고·납부해야 합니다.
+            - text: 부동산은 양도일이 속하는 달의 말일로부터 2개월 이내 납부하여야 하며 기한 내 납부하지 않을 경우 가산세가 부과될 수 있습니다.
+          - text: ※ 새 정부의 양도세 완화 정책은 모두 반영되었으며, 양도일자에 따라 자동 적용됩니다.
+        - text:      
+    - generic [ref=e51]:
+      - group "물건 종류" [ref=e53]:
+        - button "주택 " [ref=e54] [cursor=pointer]:
+          - text: 주택
+          - generic [ref=e55]: 
+        - button "분양권" [ref=e56] [cursor=pointer]
+        - button "입주권 " [ref=e57] [cursor=pointer]:
+          - text: 입주권
+          - generic [ref=e58]: 
+        - button "비사업토지" [ref=e59] [cursor=pointer]
+        - button "기타" [ref=e60] [cursor=pointer]
+      - group "주택수 구분" [ref=e61]:
+        - button "1주택자" [ref=e62] [cursor=pointer]
+        - button "2주택자 " [ref=e63] [cursor=pointer]:
+          - text: 2주택자
+          - generic [ref=e64]: 
+        - button "그 이상" [ref=e65] [cursor=pointer]
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]:
+            - checkbox "기본공제" [checked] [ref=e69]
+            - generic [ref=e70]: 기본공제
+            - generic [ref=e71] [cursor=pointer]: 
+          - generic [ref=e72]:
+            - checkbox "공동명의" [ref=e73]
+            - generic [ref=e74]: 공동명의
+            - generic [ref=e75] [cursor=pointer]: 
+          - generic [ref=e76]:
+            - checkbox "고급 계산" [ref=e77]
+            - generic [ref=e78]: 고급 계산
+            - generic [ref=e79] [cursor=pointer]: 
+        - text:     
+        - generic [ref=e80]:
+          - generic [ref=e81]:
+            - checkbox "조정대상지역" [ref=e82]
+            - generic [ref=e83]: 조정대상지역
+            - generic [ref=e84] [cursor=pointer]: 
+          - generic [ref=e85]:
+            - checkbox "2년 이상 거주" [ref=e86]
+            - generic [ref=e87]: 2년 이상 거주
+          - generic [ref=e88]:
+            - checkbox "임대사업자" [ref=e89]
+            - generic [ref=e90]: 임대사업자
+            - generic [ref=e91] [cursor=pointer]: 
+          - generic [ref=e92]:
+            - checkbox "장기임대 조세특례" [ref=e93]
+            - generic [ref=e94]: 장기임대 조세특례
+            - generic [ref=e95] [cursor=pointer]: 
+        - generic [ref=e96]:
+          - generic [ref=e98]:
+            - generic [ref=e100]: 취득가액
+            - spinbutton [ref=e101]: 금액 입력
+            - generic [ref=e103]: 만원
+          - text:  금액 입력
+          - generic [ref=e105]:
+            - generic [ref=e107]: 양도가액
+            - spinbutton [ref=e108]: 금액 입력
+            - generic [ref=e110]: 만원
+          - text: 1~99 숫자만 입력
+          - generic [ref=e112]:
+            - generic [ref=e114]:
+              - text: 필요경비
+              - generic [ref=e115] [cursor=pointer]: 
+            - spinbutton [ref=e116]: 금액 입력
+            - generic [ref=e118]: 만원
+          - text: 금액 입력  비율 입력
+          - generic [ref=e120]:
+            - generic [ref=e122]: 취득일자
+            - spinbutton [ref=e123]: 19000101 숫자만 입력
+          - generic [ref=e125]:
+            - generic [ref=e127]: 양도일자
+            - spinbutton [ref=e128]: 20990101 숫자만 입력
+          - text:  20990101 숫자만 입력  20990101 숫자만 입력 연수만 입력 숫자만 입력
+          - generic [ref=e129]:
+            - button " 양도소득세 계산" [ref=e130] [cursor=pointer]:
+              - generic [ref=e131]: 
+              - text: 양도소득세 계산
+            - text: 
+            - generic [ref=e132]:
+              - checkbox "기록" [checked] [ref=e133]
+              - generic [ref=e134]: 기록
+      - text:    
+    - generic [ref=e135]:
+      - heading "참고사항" [level=5] [ref=e136]
+      - generic [ref=e137]: 2026년 양도소득세 과세 기준표
+      - table [ref=e138]:
+        - rowgroup [ref=e139]:
+          - row "과세표준 세율 누진공제" [ref=e140]:
+            - columnheader "과세표준" [ref=e141]
+            - columnheader "세율" [ref=e142]
+            - columnheader "누진공제" [ref=e143]
+        - rowgroup [ref=e144]:
+          - row "1400만원 이하 6% -" [ref=e145]:
+            - cell "1400만원 이하" [ref=e146]
+            - cell "6%" [ref=e147]
+            - cell "-" [ref=e148]
+          - row "1400만원 초과 5000만원 이하 15% 126만원" [ref=e149]:
+            - cell "1400만원 초과 5000만원 이하" [ref=e150]
+            - cell "15%" [ref=e151]
+            - cell "126만원" [ref=e152]
+          - row "5000만원 초과 8800만원 이하 24% 576만원" [ref=e153]:
+            - cell "5000만원 초과 8800만원 이하" [ref=e154]
+            - cell "24%" [ref=e155]
+            - cell "576만원" [ref=e156]
+          - row "8800만원 초과 1억5천만원 이하 35% 1,544만원" [ref=e157]:
+            - cell "8800만원 초과 1억5천만원 이하" [ref=e158]
+            - cell "35%" [ref=e159]
+            - cell "1,544만원" [ref=e160]
+          - row "1억5천만원 초과 3억원 이하 38% 1,994만원" [ref=e161]:
+            - cell "1억5천만원 초과 3억원 이하" [ref=e162]
+            - cell "38%" [ref=e163]
+            - cell "1,994만원" [ref=e164]
+          - row "3억원 초과 5억원 이하 40% 2,594만원" [ref=e165]:
+            - cell "3억원 초과 5억원 이하" [ref=e166]
+            - cell "40%" [ref=e167]
+            - cell "2,594만원" [ref=e168]
+          - row "5억원 초과 42% 3,594만원" [ref=e169]:
+            - cell "5억원 초과" [ref=e170]
+            - cell "42%" [ref=e171]
+            - cell "3,594만원" [ref=e172]
+          - row "10억원 초과 45% 6,594만원" [ref=e173]:
+            - cell "10억원 초과" [ref=e174]
+            - cell "45%" [ref=e175]
+            - cell "6,594만원" [ref=e176]
+      - generic [ref=e178]:
+        - text: 검수) 부동산세금 전문
+        - link "강동균 세무사" [ref=e179] [cursor=pointer]:
+          - /url: http://www.zerotax.co.kr/
+  - link [ref=e183] [cursor=pointer]:
+    - /url: https://eznm.me/ocAP
+    - img [ref=e184]
+  - text: ex) A빌라 301호 물건 취득세  주소
+  - contentinfo [ref=e185] [cursor=pointer]:
+    - generic [ref=e186]:
+      - img [ref=e187]
+      - generic [ref=e188]:
+        - link "제휴문의" [ref=e190]:
+          - /url: /ad
+        - link "사이트맵" [ref=e192]:
+          - /url: /sitemap/sitemap_index.xml
+        - generic [ref=e193]: 책임한계 및 법적고지
+        - link "API 센터" [ref=e195]:
+          - /url: https://dev.fran.kr/
+      - generic [ref=e196]:
+        - generic [ref=e197]: 부동산계산기.com
+        - generic [ref=e198]:
+          - text: 공인중개사·세무사·법무사 등 전문직부터 부동산 투자자, 실수요자까지
+          - text: 모두가 믿고 사용하는 대한민국 대표 부동산 계산기입니다.
+          - text: 유사·사칭 서비스가 많으니 꼭 로고를 기억하세요.
+    - separator [ref=e199]
+    - generic [ref=e200]: copyright (C) 2015 - 2026 부동산계산기.com _Seoul C
+  - text:   
