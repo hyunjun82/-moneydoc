@@ -5,7 +5,7 @@ REM  Registers a task that auto git add+commit+push every 1 min,
 REM  but only when files actually changed (no empty commits).
 REM ============================================================
 
-schtasks /create /tn "MoneyDocAutoPush" /tr "\"%~dp0auto-push.bat\"" /sc minute /mo 1 /f
+schtasks /create /tn "MoneyDocAutoPush" /tr "wscript.exe \"%~dp0run-hidden.vbs\"" /sc minute /mo 1 /f
 
 echo.
 echo ============================================================

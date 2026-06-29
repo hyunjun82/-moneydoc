@@ -54,6 +54,17 @@ if (!/\/savings\/|\/government\/median-income\//.test(spoke)) fails.push("계산
 // ── 출처(신뢰) ──
 if (!/자료 출처/.test(spoke)) fails.push("출처(자료 출처) 표기 없음");
 
+// ── 문체(AI 티 자기참조·나열 closer 차단) ──
+const bannedProse = [
+  "정리했어요", "정리해드릴", "정리해 드릴", "정리해드려",
+  "알아볼까요", "알아보겠습니다", "함께 알아",
+  "걱정 마세요", "걱정하지 마세요", "어렵지 않아요",
+  "이 글에서는", "이번 글에서는", "끝까지 정리", "한눈에 정리",
+  "꼼꼼히 정리", "말씀드릴게요", "소개해 드릴", "총정리해",
+];
+for (const bad of bannedProse)
+  if (spoke.includes(bad)) fails.push(`AI 티 문구 포함: "${bad}" → 사람 문체로 교체`);
+
 // ── 리포트 ──
 console.log(`\n스포크 품질 게이트: ${spokeFile}`);
 console.log(`  허브 기준 → 섹션 ${H.sections} / H2 ${H.h2} / FAQ ${H.faqDetails} / 표 ${H.tables} / steps ${H.steps}`);
