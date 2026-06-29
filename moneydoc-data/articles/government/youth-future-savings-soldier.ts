@@ -14,7 +14,6 @@ export const meta = {
 export const bodyHtml = `
 <article class="wrap">
 
-    <!-- 상단 고정: 신청 CTA -->
     <a class="applysticky" href="https://fill4young.kinfa.or.kr/yfs/main">
       <span class="as-t">청년미래적금 신청하기</span>
       <span class="as-d">군 훈련소 내 비대면 신청 가능 · ~7월 3일</span>
@@ -26,7 +25,6 @@ export const bodyHtml = `
       <div class="src">자료 출처: 금융위원회 · 국방부 · 정책브리핑(korea.kr) · 서민금융진흥원</div>
     </div>
 
-    <!-- 히어로 -->
     <section class="card hero">
       <span class="tag">청년 자산형성 · 군인 편</span>
       <h1>군인도 청년미래적금 가입되나요? <br>군장병급여만 있어도 OK</h1>
@@ -39,29 +37,22 @@ export const bodyHtml = `
       </div>
     </section>
 
-    <!-- 바이라인 -->
     <div class="byline">
-      <div class="ed">
-        <span class="ava">지</span>
-        <span class="who">지원금 에디터</span>
-      </div>
+      <div class="ed"><span class="ava">지</span><span class="who">지원금 에디터</span></div>
       <div class="dates">
         <span>작성일 <time datetime="2026-06-29">2026. 06. 29.</time></span>
         <span>수정일 <time datetime="2026-06-29">2026. 06. 29.</time></span>
       </div>
     </div>
 
-    <!-- 핵심 정보 스트립 -->
     <div class="facts">
       <div class="f"><div class="k">군인 가입</div><div class="v accent">가능</div></div>
       <div class="f"><div class="k">군인 유형</div><div class="v">대부분 일반형 6%</div></div>
       <div class="f"><div class="k">월 50만·3년</div><div class="v">원금+기여금 1,908만</div></div>
     </div>
 
-    <!-- 시점 안내 -->
     <div class="notice"><span class="ic">ⓘ</span><span>이 글은 <b>2026년 1차 신청(6월 22일~7월 3일)</b> 기준이에요. 신청 기간이 지난 뒤라면 다음 회차 일정과 최신 조건을 <a href="https://fill4young.kinfa.or.kr/yfs/main">서민금융진흥원</a>에서 확인하세요.</span></div>
 
-    <!-- 목차 -->
     <details class="toc" open>
       <summary><span class="ic">☰</span><span>목차</span><span class="tog">+</span></summary>
       <nav class="toc-nav">
@@ -78,26 +69,23 @@ export const bodyHtml = `
       </nav>
     </details>
 
-    <!-- 핵심만 먼저 -->
     <section class="card" id="sec-summary">
       <div class="seclabel"><span class="num">!</span><span class="txt">한눈에 요약</span></div>
       <h2>군인 청년미래적금, 핵심만 먼저</h2>
       <div class="keypts" style="margin-top:var(--sp-6)">
         <div class="pt"><span class="n">1</span><span class="t"><b>됩니다.</b> 현역 병사·간부 모두 가입 가능. 직전연도 소득이 없어도 <b>군장병급여(비과세)</b>만 확인되면 가입돼요.</span></div>
         <div class="pt"><span class="n">2</span><span class="t">입영 후 <b>기초군사훈련 중에도</b> 부대 안에서 비대면 가입·계좌개설이 가능해요.</span></div>
-        <div class="pt"><span class="n">3</span><span class="t">기존 <b>장병내일준비적금·장기간부도약적금과 중복가입</b>이 됩니다. 군 적금은 그대로 두고 추가로 들 수 있어요.</span></div>
+        <div class="pt"><span class="n">3</span><span class="t">기존 <b>장병내일준비적금·장기간부도약적금과 중복가입</b>이 됩니다.</span></div>
         <div class="pt"><span class="n">4</span><span class="t">군인은 대부분 <b>일반형(6%)</b>. 월 50만 원씩 3년이면 원금+기여금 <b>약 1,908만 원</b>(+비과세 이자).</span></div>
       </div>
       <p class="secteaser" style="margin-top:var(--sp-4)">내 월 납입·금리로 만기 수령액을 1분 만에 확인 → <a href="/savings/free-savings/">자유적금 계산기</a></p>
     </section>
 
-    <!-- 중간 CTA -->
     <a class="applybar" href="https://fill4young.kinfa.or.kr/yfs/main">
       <span class="t">군 복무 중에도 신청하세요<small>훈련소 내 비대면 신청 가능 · 1차 신청 ~7월 3일</small></span>
       <span class="btn">신청 바로가기 →</span>
     </a>
 
-    <!-- 1. 군장병급여 인정 -->
     <section class="card" id="sec-why">
       <div class="seclabel"><span class="num">1</span><span class="txt">가입 가능 이유</span></div>
       <h2>군인도 되는 이유 — 군장병급여가 소득으로 인정</h2>
@@ -111,7 +99,6 @@ export const bodyHtml = `
       <p class="secteaser" style="margin-top:var(--sp-3);font-size:var(--fs-caption)">근거: 금융위원회 — "직전년도 소득이 산정되지 않는 청년 군인들의 적금 가입 진입 지원".</p>
     </section>
 
-    <!-- 2. 훈련소 가입 -->
     <section class="card" id="sec-bootcamp">
       <div class="seclabel"><span class="num">2</span><span class="txt">훈련소 가입</span></div>
       <h2>훈련소에서 가입하는 법 (기초군사훈련 중에도)</h2>
@@ -125,7 +112,6 @@ export const bodyHtml = `
       <p class="secteaser" style="margin-top:var(--sp-3);font-size:var(--fs-caption)">근거: 금융위·국방부 — "軍 입영 후 기초군사훈련 중인 청년들도 청년미래적금에 가입".</p>
     </section>
 
-    <!-- 3. 가입 유형 -->
     <section class="card" id="sec-type">
       <div class="seclabel"><span class="num">3</span><span class="txt">가입 유형</span></div>
       <h2>군인의 가입 유형 — 대부분 일반형 6%</h2>
@@ -136,10 +122,9 @@ export const bodyHtml = `
         <li><span>다만 <b>전역 후 중소기업 취업</b> 등 조건이 바뀌면 우대형 경로가 열릴 수 있어요. (유형은 서민금융진흥원이 자동 심사)</span></li>
         <li><span>가입 후 소득이 늘어도 <b>매칭비율은 그대로 유지</b>돼요.</span></li>
       </ul>
-      <p class="secteaser" style="margin-top:var(--sp-3);font-size:var(--fs-caption)">근거: 한겨레 — "소득요건을 충족한 장병은 청년미래적금 '일반형'에 가입할 수 있다. 일반형은 정부가 납입액의 6%를 매칭".</p>
+      <p class="secteaser" style="margin-top:var(--sp-3);font-size:var(--fs-caption)">근거: 한겨레 — "소득요건을 충족한 장병은 청년미래적금 일반형에 가입할 수 있다. 일반형은 정부가 납입액의 6%를 매칭".</p>
     </section>
 
-    <!-- 4. 만기 수령액 표 -->
     <section class="card" id="sec-payout">
       <div class="seclabel"><span class="num">4</span><span class="txt">만기 수령액</span></div>
       <h2>군인 만기 수령액 — 월 납입별 (일반형 6% 기준)</h2>
@@ -157,11 +142,10 @@ export const bodyHtml = `
           </tbody>
         </table>
       </div>
-      <p class="secteaser" style="margin-top:var(--sp-3);font-size:var(--fs-caption)"><b>계산 기준</b> = 월 납입금 × 6% × 36개월. 여기에 <b>은행 이자(전액 비과세)</b>가 더해져요. 기본금리는 취급은행이 정하며(예: 카카오뱅크 기본 5%·최대 7%), 공통 우대금리 0.5%p·재무상담 0.2%p가 붙을 수 있어요. 이자는 은행·금리에 따라 달라 위 표에는 넣지 않았어요.</p>
+      <p class="secteaser" style="margin-top:var(--sp-3);font-size:var(--fs-caption)"><b>계산 기준</b> = 월 납입금 × 6% × 36개월. 여기에 <b>은행 이자(전액 비과세)</b>가 더해져요. 기본금리는 취급은행이 정하며(예: 카카오뱅크 기본 5%·최대 7%), 공통 우대금리 0.5%p·재무상담 0.2%p가 붙을 수 있어요.</p>
       <a class="pillbtn" href="/savings/free-savings/">내 금리로 만기 수령액 계산하기 →</a>
     </section>
 
-    <!-- 5. 중복가입 -->
     <section class="card" id="sec-overlap">
       <div class="seclabel"><span class="num">5</span><span class="txt">중복가입</span></div>
       <h2>군 적금과 중복가입 된다</h2>
@@ -175,7 +159,6 @@ export const bodyHtml = `
       <p class="secteaser" style="margin-top:var(--sp-3);font-size:var(--fs-caption)">근거: 금융위원회 — "장병내일준비적금 또는 장기간부도약적금과 청년미래적금을 중복가입하는 것이 가능".</p>
     </section>
 
-    <!-- 6. 군필 나이 -->
     <section class="card" id="sec-age">
       <div class="seclabel"><span class="num">6</span><span class="txt">군필 나이</span></div>
       <h2>군필자 나이 — 병역기간만큼 늘어난다</h2>
@@ -187,7 +170,6 @@ export const bodyHtml = `
       </ul>
     </section>
 
-    <!-- 7. 신청 3단계 -->
     <section class="card" id="sec-apply">
       <div class="seclabel"><span class="num">7</span><span class="txt">신청 방법</span></div>
       <h2>군인 청년미래적금 신청 방법 (3단계)</h2>
@@ -199,19 +181,17 @@ export const bodyHtml = `
       </div>
     </section>
 
-    <!-- 8. 주의 -->
     <section class="card" id="sec-caution">
       <div class="seclabel"><span class="num">8</span><span class="txt">신청 전 주의</span></div>
       <h2>군인 신청 전 꼭 확인할 주의사항</h2>
       <ul class="docs">
-        <li><span><b>중도해지 시 정부기여금은 원칙적으로 반환</b> — 전역·이동이 잦아도 3년 만기 유지가 가장 유리. 단 사망·해외이주 등 특별중도해지 사유는 예외.</span></li>
+        <li><span><b>중도해지 시 정부기여금은 원칙적으로 반환</b> — 3년 만기 유지가 가장 유리. 단 사망·해외이주 등 특별중도해지 사유는 예외.</span></li>
         <li><span><b>청년도약계좌와 중복 불가</b> — 둘 중 하나만. 갈아타기는 2026년 6월 단 한 번.</span></li>
         <li><span><b>유형은 자동 심사</b> — 일반형·우대형은 따로 신청 안 해도 서민금융진흥원이 정해줘요.</span></li>
-        <li><span><b>월 50만 원·연 600만 원 한도</b> — 초과 납입은 불가. 자유적립식이라 형편 되는 만큼만 넣어도 돼요.</span></li>
+        <li><span><b>월 50만 원·연 600만 원 한도</b> — 자유적립식이라 형편 되는 만큼만 넣어도 돼요.</span></li>
       </ul>
     </section>
 
-    <!-- FAQ -->
     <section class="card" id="sec-faq">
       <div class="seclabel"><span class="num">?</span><span class="txt">자주 묻는 질문 FAQ</span></div>
       <h2>군인 청년미래적금 자주 묻는 질문 (FAQ)</h2>
@@ -222,7 +202,7 @@ export const bodyHtml = `
         </details>
         <details>
           <summary><span class="q">Q.</span><span>군인 만기 수령액은 얼마인가요?</span><span class="plus">+</span></summary>
-          <div class="ans">일반형(6%) 기준, 월 50만 원씩 3년이면 원금 1,800만 + 정부기여금 108만 = <b>약 1,908만 원</b>. 여기에 비과세 은행 이자가 더해져요(은행·금리에 따라 다름).</div>
+          <div class="ans">일반형(6%) 기준, 월 50만 원씩 3년이면 원금 1,800만 + 정부기여금 108만 = <b>약 1,908만 원</b>. 여기에 비과세 은행 이자가 더해져요.</div>
         </details>
         <details>
           <summary><span class="q">Q.</span><span>장병내일준비적금이랑 같이 들어도 되나요?</span><span class="plus">+</span></summary>
@@ -243,7 +223,6 @@ export const bodyHtml = `
       </div>
     </section>
 
-    <!-- 관련 -->
     <section class="card" id="sec-related">
       <div class="seclabel"><span class="num">↗</span><span class="txt">관련</span></div>
       <h2>가입 전, 내 숫자로 미리 확인</h2>
@@ -269,10 +248,10 @@ export const faqLd = {
   "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "병사 월급(군장병급여)만 있어도 청년미래적금에 가입되나요?", acceptedAnswer: { "@type": "Answer", text: "네. 군장병급여가 비과세소득이지만 가입 자격 소득으로 인정돼, 직전연도 일반 소득이 없어도 가입할 수 있어요." } },
-    { "@type": "Question", name: "군인 청년미래적금 만기 수령액은 얼마인가요?", acceptedAnswer: { "@type": "Answer", text: "일반형(6%) 기준 월 50만 원씩 3년이면 원금 1,800만 원 + 정부기여금 108만 원으로 약 1,908만 원이고, 여기에 비과세 은행 이자가 더해져요. 이자는 가입 은행·금리에 따라 달라집니다." } },
+    { "@type": "Question", name: "군인 청년미래적금 만기 수령액은 얼마인가요?", acceptedAnswer: { "@type": "Answer", text: "일반형(6%) 기준 월 50만 원씩 3년이면 원금 1,800만 원 + 정부기여금 108만 원으로 약 1,908만 원이고, 여기에 비과세 은행 이자가 더해져요." } },
     { "@type": "Question", name: "장병내일준비적금과 청년미래적금을 같이 들어도 되나요?", acceptedAnswer: { "@type": "Answer", text: "됩니다. 병사는 장병내일준비적금, 간부는 장기간부도약적금과 청년미래적금을 중복가입할 수 있어요." } },
     { "@type": "Question", name: "군인도 청년미래적금 12%를 받을 수 있나요?", acceptedAnswer: { "@type": "Answer", text: "현역 복무 자체로는 보통 일반형(정부기여금 6%)이에요. 우대형(12%)은 중소기업 재직·소상공인 등 별도 조건이라, 전역 후 조건이 바뀌어야 가능성이 열립니다." } },
-    { "@type": "Question", name: "만 35세 전역인데 청년미래적금에 가입할 수 있나요?", acceptedAnswer: { "@type": "Answer", text: "병역 이행기간(최대 6년)이 연령 계산에서 제외되므로 군필 남성은 최대 만 40세까지 가입할 수 있어요. 병적증명서로 증빙하면 됩니다." } },
+    { "@type": "Question", name: "만 35세 전역인데 청년미래적금에 가입할 수 있나요?", acceptedAnswer: { "@type": "Answer", text: "병역 이행기간(최대 6년)이 연령 계산에서 제외되므로 군필 남성은 최대 만 40세까지 가입할 수 있어요." } },
     { "@type": "Question", name: "훈련소에 있는데 청년미래적금을 어떻게 신청하나요?", acceptedAnswer: { "@type": "Answer", text: "기초군사훈련 중에도 부대 안에서 비대면으로 신청·계좌개설이 가능해요. 취급은행 앱 또는 서민금융진흥원 청년금융에서 진행합니다." } },
   ],
 };
