@@ -54,6 +54,7 @@ export const bodyHtml = `
         <a href="#sec-why">군인도 되는 이유 — 군장병급여가 소득으로 인정</a>
         <a href="#sec-bootcamp">훈련소에서 가입하는 법 (기초군사훈련 중에도)</a>
         <a href="#sec-type">군인의 가입 유형 — 대부분 일반형 6%</a>
+        <a href="#sec-match">군인 정부기여금 유형별 매칭률 (6% vs 12%)</a>
         <a href="#sec-payout">군인 만기 수령액 — 월 납입별 (일반형 6% 기준)</a>
         <a href="#sec-persona">나는 어떤 군인 유형일까?</a>
         <a href="#sec-overlap">군 적금과 중복가입 된다</a>
@@ -118,8 +119,27 @@ export const bodyHtml = `
       <p class="secteaser" style="margin-top:var(--sp-3);font-size:var(--fs-caption)">근거: 한겨레 — 소득요건을 충족한 장병은 일반형에 가입, 일반형은 정부가 납입액의 6%를 매칭.</p>
     </section>
 
+    <section class="card" id="sec-match">
+      <div class="seclabel"><span class="num">4</span><span class="txt">유형별 매칭률</span></div>
+      <h2>군인 정부기여금 유형별 매칭률 (6% vs 12%)</h2>
+      <p class="secteaser">군인이 받는 매칭률은 유형에 따라 갈려요. 군인은 대부분 일반형(6%)입니다.</p>
+      <div class="tbl-scroll">
+        <table class="cmp">
+          <thead>
+            <tr><th>유형</th><th class="p1">매칭률</th><th>군인 해당 여부</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="lab">일반형</td><td class="hl1">6%</td><td>소득요건 충족 장병 대부분</td></tr>
+            <tr><td class="lab">우대형</td><td class="hl1">12%</td><td>전역 후 중소기업 취업 등 (현역은 어려움)</td></tr>
+            <tr><td class="lab">비과세형</td><td class="hl1">0%</td><td>총급여 6,000만 초과~7,500만 구간</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="secteaser" style="margin-top:var(--sp-3);font-size:var(--fs-caption)">근거: 금융위원회 정부기여금 지급비율 — 일반형 月납입의 6%, 우대형 12% 지급.</p>
+    </section>
+
     <section class="card" id="sec-payout">
-      <div class="seclabel"><span class="num">4</span><span class="txt">만기 수령액</span></div>
+      <div class="seclabel"><span class="num">5</span><span class="txt">만기 수령액</span></div>
       <h2>군인 만기 수령액 — 월 납입별 (일반형 6% 기준)</h2>
       <p class="secteaser">군인은 보통 일반형이라 매칭률 6%로 계산해요. 3년(36개월) 만기 기준입니다.</p>
       <div class="tbl-scroll">
@@ -140,7 +160,7 @@ export const bodyHtml = `
     </section>
 
     <section class="card" id="sec-persona">
-      <div class="seclabel"><span class="num">5</span><span class="txt">내 유형 찾기</span></div>
+      <div class="seclabel"><span class="num">6</span><span class="txt">내 유형 찾기</span></div>
       <h2>나는 어떤 군인 유형일까?</h2>
       <p class="secteaser">대표 경우로 빠르게 가늠해 보세요. (실제 유형은 서민금융진흥원 심사로 확정돼요.)</p>
       <div class="persona-grid">
@@ -152,7 +172,7 @@ export const bodyHtml = `
     </section>
 
     <section class="card" id="sec-overlap">
-      <div class="seclabel"><span class="num">6</span><span class="txt">중복가입</span></div>
+      <div class="seclabel"><span class="num">7</span><span class="txt">중복가입</span></div>
       <h2>군 적금과 중복가입 된다</h2>
       <p class="secteaser">이미 군 적금을 들고 있어도 괜찮아요.</p>
       <ul class="docs">
@@ -164,7 +184,7 @@ export const bodyHtml = `
     </section>
 
     <section class="card" id="sec-age">
-      <div class="seclabel"><span class="num">7</span><span class="txt">군필 나이</span></div>
+      <div class="seclabel"><span class="num">8</span><span class="txt">군필 나이</span></div>
       <h2>군필자 나이 — 병역기간만큼 늘어난다</h2>
       <ul class="docs">
         <li><span>기본 가입 연령은 <b>만 19~34세</b></span></li>
@@ -174,7 +194,7 @@ export const bodyHtml = `
     </section>
 
     <section class="card" id="sec-apply">
-      <div class="seclabel"><span class="num">8</span><span class="txt">신청 방법</span></div>
+      <div class="seclabel"><span class="num">9</span><span class="txt">신청 방법</span></div>
       <h2>군인 청년미래적금 신청 방법 (3단계)</h2>
       <p class="secteaser">대부분 비대면·자동 심사라 군 복무 중에도 간단해요.</p>
       <div class="steps">
@@ -185,7 +205,7 @@ export const bodyHtml = `
     </section>
 
     <section class="card" id="sec-caution">
-      <div class="seclabel"><span class="num">9</span><span class="txt">신청 전 주의</span></div>
+      <div class="seclabel"><span class="num">10</span><span class="txt">신청 전 주의</span></div>
       <h2>군인 신청 전 꼭 확인할 주의사항</h2>
       <ul class="docs">
         <li><span><b>중도해지 시 정부기여금은 원칙적으로 반환</b> — 3년 만기 유지가 가장 유리. 단 사망·해외이주 등 특별중도해지 사유는 예외.</span></li>
@@ -221,6 +241,18 @@ export const bodyHtml = `
         <details>
           <summary><span class="q">Q.</span><span>훈련소에 있는데 어떻게 신청하나요?</span><span class="plus">+</span></summary>
           <div class="ans">기초군사훈련 중에도 부대 안에서 <b>비대면</b>으로 신청·계좌개설이 가능해요. 취급은행 앱 또는 서민금융진흥원 청년금융에서 진행합니다.</div>
+        </details>
+        <details>
+          <summary><span class="q">Q.</span><span>전역하면 적금은 어떻게 되나요?</span><span class="plus">+</span></summary>
+          <div class="ans">3년 만기까지 유지하면 돼요. 전역해도 계좌는 그대로 두고 계속 납입하면 만기에 원금+정부기여금+비과세 이자를 받습니다.</div>
+        </details>
+        <details>
+          <summary><span class="q">Q.</span><span>월급이 적은데 소액만 넣어도 되나요?</span><span class="plus">+</span></summary>
+          <div class="ans">네. 자유적립식이라 매월 형편껏 넣고 최대 50만 원까지 가능해요. 많이 넣을수록 6% 매칭도 커집니다.</div>
+        </details>
+        <details>
+          <summary><span class="q">Q.</span><span>군인도 비과세 혜택을 받나요?</span><span class="plus">+</span></summary>
+          <div class="ans">네. 청년미래적금은 이자소득세가 전액 비과세예요. 군인도 동일하게 적용됩니다.</div>
         </details>
       </div>
     </section>
@@ -295,6 +327,30 @@ export const faqLd = {
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "기초군사훈련 중에도 부대 안에서 비대면으로 신청·계좌개설이 가능해요. 취급은행 앱 또는 서민금융진흥원 청년금융에서 진행합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "전역하면 적금은 어떻게 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "3년 만기까지 유지하면 돼요. 전역해도 계좌는 그대로 두고 계속 납입하면 만기에 원금+정부기여금+비과세 이자를 받습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "월급이 적은데 소액만 넣어도 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 자유적립식이라 매월 형편껏 넣고 최대 50만 원까지 가능해요. 많이 넣을수록 6% 매칭도 커집니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "군인도 비과세 혜택을 받나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 청년미래적금은 이자소득세가 전액 비과세예요. 군인도 동일하게 적용됩니다."
       }
     }
   ]
