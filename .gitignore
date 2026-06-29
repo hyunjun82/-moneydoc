@@ -40,6 +40,7 @@ next-env.d.ts
 
 # Claude Code worktrees & settings
 .claude/
+.playwright-mcp/
 
 # Preview HTML mockups (디자인 시안, 폐기 예정)
 moneydoc-home-preview.html
