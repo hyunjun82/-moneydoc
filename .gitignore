@@ -46,3 +46,8 @@ next-env.d.ts
 moneydoc-home-preview.html
 moneydoc-calculator-preview.html
 components/GenericCalculator.tsx.backup
+
+# 루트 임시 스크린샷 (자동푸시 오염 방지)
+/*.jpeg
+/*.jpg
+/*.png
