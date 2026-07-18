@@ -2,11 +2,11 @@
 // 디자인 '그대로' 유지: CSS는 .cardnews 하위로 평탄화 스코프, 본문은 정적 HTML.
 
 export const meta = {
-  title: "청년미래적금 가입조건·정부기여금 총정리 (6월 22일 출시, 7월 3일까지 신청)",
-  description: "청년미래적금 6월 22일 출시. 가입조건(소득·가구요건), 정부기여금 6% vs 12%, 중소기업·소상공인 우대형 조건, 신청기간(~7/3), 자주 묻는 질문 FAQ까지 한눈에 정리했어요.",
+  title: "청년미래적금 계좌개설(7/27~8/7)·심사결과·가입조건·수령액까지",
+  description: "청년미래적금 계좌개설 기간 7월 27일~8월 7일. 심사결과 확인 방법(7월 24일 개별 안내), 취급은행 앱 계좌개설, 가입조건과 정부기여금 6% vs 12%, 만기 수령액, 12월 2차 모집까지 정리했어요.",
   ogImage: "https://www.korea.kr/newsWeb/resources/attaches/2026.06/19/530fc8f08bdcb738a12044439f0130e2.jpg",
   datePublished: "2026-06-19",
-  dateModified: "2026-06-27",
+  dateModified: "2026-07-18",
 };
 
 export const bodyHtml = `
@@ -14,9 +14,9 @@ export const bodyHtml = `
 
     <!-- 상단 고정 신청바 -->
     <a class="applysticky" href="https://fill4young.kinfa.or.kr/yfs/main">
-      <span class="as-t">청년미래적금 신청하기</span>
-      <span class="as-d">신청 ~7월 3일 · 첫 주 5부제</span>
-      <span class="as-btn">신청 바로가기 →</span>
+      <span class="as-t">청년미래적금 계좌개설</span>
+      <span class="as-d">심사결과 7/24 · 계좌개설 7/27~8/7</span>
+      <span class="as-btn">개설 안내 →</span>
     </a>
 
     <div class="masthead">
@@ -27,9 +27,10 @@ export const bodyHtml = `
     <!-- 히어로 -->
     <section class="card hero">
       <span class="tag">미래를 채우는 첫 시작 · 청년 자산형성</span>
-      <h1>청년미래적금 6월 22일 출시 <br>가입조건·정부기여금 총정리</h1>
-      <p class="lead">소득·가구요건부터 정부기여금, 우대형 조건까지 자주 묻는 궁금증을 한 번에 정리했어요.</p>
+      <h1>청년미래적금 계좌개설 <br>심사결과·가입조건·수령액까지</h1>
+      <p class="lead">심사결과 확인과 계좌개설 방법부터 가입조건·정부기여금, 만기에 실제 받는 돈까지 지금 단계별로 정리했어요.</p>
       <div class="topics">
+        <span>계좌개설 7/27~8/7</span>
         <span>소득·가구요건</span>
         <span>정부기여금</span>
         <span>중소기업·소상공인 우대형</span>
@@ -44,25 +45,26 @@ export const bodyHtml = `
       </div>
       <div class="dates">
         <span>작성일 <time datetime="2026-06-19">2026. 06. 19.</time></span>
-        <span>수정일 <time datetime="2026-06-27">2026. 06. 27.</time></span>
+        <span>수정일 <time datetime="2026-07-18">2026. 07. 18.</time></span>
       </div>
     </div>
 
     <!-- 핵심 정보 스트립 -->
     <div class="facts">
-      <div class="f"><div class="k">출시일</div><div class="v accent">6월 22일</div></div>
-      <div class="f"><div class="k">가입 신청</div><div class="v">~ 7월 3일</div></div>
+      <div class="f"><div class="k">심사 결과</div><div class="v">7월 24일 안내</div></div>
+      <div class="f"><div class="k">계좌 개설</div><div class="v accent">7/27 ~ 8/7</div></div>
       <div class="f"><div class="k">콜센터</div><a class="v" href="tel:1397" style="text-decoration:none">☎ 1397 → 3</a></div>
     </div>
 
     <!-- 시점 안내 -->
-    <div class="notice"><span class="ic">ⓘ</span><span>이 글은 <b>2026년 1차 신청(6월 22일~7월 3일)</b> 기준으로 정리했어요. 신청 기간이 지난 뒤 보신다면 다음 회차 일정과 최신 조건을 <a href="https://fill4young.kinfa.or.kr/yfs/main">서민금융진흥원</a>에서 확인하세요.</span></div>
+    <div class="notice"><span class="ic">ⓘ</span><span><b>1차 신청(6/22~7/3)은 마감</b>됐어요. 지금은 심사결과 확인(7월 24일 개별 안내)과 <b>계좌개설(7월 27일~8월 7일)</b> 단계예요. 놓쳤다면 <b>2차 가입기간(2026년 12월 잠정)</b>을 준비하세요. 최신 일정은 <a href="https://fill4young.kinfa.or.kr/yfs/main">서민금융진흥원</a>에서 확인할 수 있어요.</span></div>
 
     <!-- 목차 (접이식) -->
     <details class="toc" open>
       <summary><span class="ic">☰</span><span>목차</span><span class="tog">+</span></summary>
       <nav class="toc-nav">
         <a href="#sec-summary">청년미래적금, 핵심만 먼저</a>
+        <a href="#sec-now">지금 단계: 심사결과 확인·계좌개설 (7/27~8/7)</a>
         <a href="#sec-spec">청년미래적금이 뭔가요? (한 줄 요약)</a>
         <a href="#sec-join">청년미래적금 가입조건 (소득·가구요건)</a>
         <a href="#sec-gov">청년미래적금 정부기여금, 얼마나 받나? (6% vs 12%)</a>
@@ -81,17 +83,41 @@ export const bodyHtml = `
       <div class="seclabel"><span class="num">!</span><span class="txt">한눈에 요약</span></div>
       <h2>청년미래적금, 핵심만 먼저</h2>
       <div class="keypts" style="margin-top:var(--sp-6)">
-        <div class="pt"><span class="n">1</span><span class="t">신청 기간은 <b>딱 2주</b>. 6월 22일 출시, <b>7월 3일까지</b> 신청해야 놓치지 않아요.</span></div>
+        <div class="pt"><span class="n">1</span><span class="t">1차 신청은 <b>7월 3일 마감</b>. 신청자는 <b>7월 24일</b> 심사결과를 받고, <b>7월 27일~8월 7일</b>에 꼭 계좌를 개설해야 해요.</span></div>
         <div class="pt"><span class="n">2</span><span class="t">매달 넣는 돈에 정부가 <b>최대 12%</b>까지 얹어줘요. 소득·재직 조건에 따라 <b>0 · 6 · 12%</b>로 갈려요.</span></div>
         <div class="pt"><span class="n">3</span><span class="t">알바·계약직·맞벌이도 OK. 고용형태와 상관없이 <b>작년 소득만 잡히면</b> 가입할 수 있어요.</span></div>
+        <div class="pt"><span class="n">4</span><span class="t">이번에 놓쳤다면 <b>2차 모집(2026년 12월 잠정)</b>이 남아 있어요. 미리 조건을 준비해 두세요.</span></div>
       </div>
     </section>
 
     <!-- 신청 바로가기 (전면 CTA) -->
     <a class="applybar" href="https://fill4young.kinfa.or.kr/yfs/main">
-      <span class="t">지금 바로 신청하세요<small>신청 기간 6월 22일 ~ 7월 3일 (2주) · 첫 주는 출생연도 끝자리 5부제</small></span>
-      <span class="btn">신청 바로가기 →</span>
+      <span class="t">심사결과 확인 후 계좌를 개설하세요<small>심사결과 7월 24일 안내 · 계좌개설 7월 27일 ~ 8월 7일 (주말 제외) · 기간이 지나면 개설 불가</small></span>
+      <span class="btn">계좌개설 안내 →</span>
     </a>
+
+    <!-- 지금 단계: 심사결과·계좌개설 -->
+    <section class="card" id="sec-now">
+      <div class="seclabel"><span class="num">★</span><span class="txt">지금 단계</span></div>
+      <h2>청년미래적금 심사결과 확인·계좌개설 방법 (7/27~8/7)</h2>
+      <p class="secteaser">1차 신청은 마감됐어요. 신청자라면 지금 할 일은 심사결과 확인과 계좌개설, 이 두 가지예요.</p>
+      <div class="spec">
+        <div class="r"><div class="k">~ 7월 3일</div><div class="v">1차 가입 신청 <span class="x">(마감)</span></div></div>
+        <div class="r"><div class="k">7/6 ~ 7/24</div><div class="v">가입·소득 심사 진행 중 → <b>7월 24일</b> 결과 개별 안내</div></div>
+        <div class="r"><div class="k">7/27 ~ 8/7</div><div class="v"><b>계좌개설 기간</b> (주말 제외) <span class="x">· 기간이 지나면 개설 불가</span></div></div>
+        <div class="r"><div class="k">12월 (잠정)</div><div class="v">2차 가입기간 <span class="x">· 이번에 놓친 경우 다음 기회</span></div></div>
+      </div>
+      <ul class="qa" style="margin-top:var(--sp-6)">
+        <li><span class="tri">▲</span><div class="body"><b class="hl">심사결과는 이렇게 확인해요</b>결과는 7월 24일 <b>가입 신청한 취급은행 앱</b> 알림 등으로 개별 안내돼요. 일반형·우대형·비과세형 유형도 자동 판정돼요. 안내를 못 받았다면 은행 앱에서 조회하거나 콜센터 <b>☎ 1397 → 3</b>으로 문의하세요.</div></li>
+        <li><span class="tri">▲</span><div class="body"><b class="hl">계좌개설은 신청한 은행 앱에서</b><b>7월 27일~8월 7일(주말 제외)</b>에 가입 신청했던 취급은행 앱에서 비대면으로 개설해요. 승인을 받았어도 기간이 지나면 개설할 수 없어요.</div></li>
+        <li><span class="tri">▲</span><div class="body"><b class="hl">청년도약계좌에서 갈아탄다면</b>가입 승인 통보 → <b>7/27~8/7 계좌개설</b> → 청년도약계좌 <b>특별중도해지</b> → 다음 날 9시부터 납입 순서로 진행해요. 그동안 받은 도약계좌 <b>정부기여금·비과세 혜택은 그대로 유지</b>되어 손실 없이 환급받아요.</div></li>
+        <li><span class="tri">▲</span><div class="body"><b class="hl">1차를 놓쳤다면 12월 2차</b>지금은 신청할 수 없고, <b>2차 가입기간이 2026년 12월(잠정)</b>로 예고돼 있어요. 다만 <b>1991년 8월 8일~12월 31일생</b>은 2차 시점에 만 35세를 넘겨 신청이 어려울 수 있어요(병역 이행 기간만큼 예외).</div></li>
+      </ul>
+      <a class="calcbar" href="/util/age-calculator/">
+        <span class="ct">연령 요건이 애매하다면 내 만 나이부터 확인하기</span>
+        <span class="cbtn">만 나이 계산기 →</span>
+      </a>
+    </section>
 
     <!-- 상품 핵심 스펙 -->
     <section class="card" id="sec-spec">
@@ -286,9 +312,9 @@ export const bodyHtml = `
             <tr><th>단계</th><th class="p1">기간</th><th>무엇을 하나요</th></tr>
           </thead>
           <tbody>
-            <tr><td class="lab">① 가입신청</td><td class="hl1">6.22 ~ 7.3</td><td>첫 주는 출생연도 끝자리 5부제, <b>7.1부터 전원 신청 가능</b></td></tr>
-            <tr><td class="lab">② 가입요건 확인</td><td class="hl1">7.5 ~ 7.25</td><td>서민금융진흥원이 소득·가구 요건을 자동 심사</td></tr>
-            <tr><td class="lab">③ 계좌개설</td><td class="hl1">7.27 ~ 8.8</td><td>승인되면 적금 계좌를 만들고 납입 시작</td></tr>
+            <tr><td class="lab">① 가입신청</td><td class="hl1">6.22 ~ 7.3 (마감)</td><td>첫 주는 출생연도 끝자리 5부제, 7.1부터 전원 신청</td></tr>
+            <tr><td class="lab">② 가입요건 확인</td><td class="hl1">7.6 ~ 7.24</td><td>서민금융진흥원이 자동 심사, <b>7.24 결과 개별 안내</b></td></tr>
+            <tr><td class="lab">③ 계좌개설</td><td class="hl1">7.27 ~ 8.7</td><td>승인되면 <b>주말 제외 이 기간에만</b> 계좌 개설 가능</td></tr>
           </tbody>
         </table>
       </div>
@@ -334,7 +360,7 @@ export const bodyHtml = `
         </table>
       </div>
       <ul class="qa" style="margin-top:var(--sp-5)">
-        <li><span class="tri">▲</span><div class="body"><b class="hl">갈아타기는 '6월에 단 1회'</b>청년도약계좌 가입자가 요건을 충족하면 청년미래적금으로 갈아탈 수 있어요. 단, <b>2026년 6월 최초 신청 기간에만</b> 가능하며 중복 가입은 안 돼요.</div></li>
+        <li><span class="tri">▲</span><div class="body"><b class="hl">갈아타기 진행 방법</b>1차 모집에 신청한 청년도약계좌 가입자는 <b>7/27~8/7 계좌개설 → 특별중도해지</b> 순서로 갈아타요. 기존 기여금·비과세는 손실 없이 유지되고, 중복 가입은 안 돼요.</div></li>
       </ul>
     </section>
 
@@ -375,7 +401,7 @@ export const bodyHtml = `
       <p class="secteaser">아래 경우엔 혜택이 줄거나 가입이 안 될 수 있어요. 손해 보지 않게 미리 체크하세요.</p>
       <div class="warn">
         <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>중도해지하면 정부기여금은 원칙적으로 반환</b> — 3년 만기 전에 깨면 그동안 받은 정부기여금을 토해내고, 원금과 은행 이자만 돌려받아요. 다만 사망·해외이주 등 <b>특별중도해지</b> 사유는 예외로 혜택이 유지될 수 있어요.</div></div>
-        <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>청년도약계좌와 중복 불가</b> — 둘 중 하나만 가입할 수 있어요. 갈아타기는 2026년 6월 신청 기간에 단 한 번만 가능해요.</div></div>
+        <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>청년도약계좌와 중복 불가</b> — 둘 중 하나만 가입할 수 있어요. 갈아타기는 모집 기간에 신청한 경우에만, 특별중도해지 방식으로 진행돼요.</div></div>
         <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>중소기업 우대형, 29개월 미만 퇴사 시 감액</b> — 만기 한 달 전까지 재직이 29개월 미만이면 전 기간이 일반형(6%)으로 적용돼 정부기여금이 절반으로 줄어요.</div></div>
         <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>공무원·공공기관·사립학교는 우대형 불가</b> — 중소기업기본법상 중소기업이 아니라, 소득요건을 채워도 중소기업 우대형은 안 돼요.</div></div>
         <div class="wi"><span class="ic">⚠️</span><div class="wt"><b>2025년 소득이 안 잡히면 가입 불가</b> — 직전연도(2025년) 국세청에 신고된 소득이 있어야 신청할 수 있어요.</div></div>
@@ -421,7 +447,7 @@ export const bodyHtml = `
         </details>
         <details>
           <summary><span class="q">Q.</span><span>청년미래적금과 청년도약계좌, 뭐가 다른가요?</span><span class="plus">+</span></summary>
-          <div class="ans">납입 한도(<b>50만 원</b> vs 70만 원), 만기(<b>3년</b> vs 5년), 정부 매칭(6·12% vs 6%), 최대 수령액(약 2,200만 원 vs 약 5,000만 원)이 달라요. 둘 중 하나만 가입할 수 있고, 갈아타기는 2026년 6월에 단 한 번 가능해요.</div>
+          <div class="ans">납입 한도(<b>50만 원</b> vs 70만 원), 만기(<b>3년</b> vs 5년), 정부 매칭(6·12% vs 6%), 최대 수령액(약 2,200만 원 vs 약 5,000만 원)이 달라요. 둘 중 하나만 가입할 수 있어요. 1차 모집 신청자는 7월 27일~8월 7일 계좌개설 후 특별중도해지 방식으로 갈아타며, 기존 기여금·비과세는 손실 없이 유지돼요.</div>
         </details>
         <details>
           <summary><span class="q">Q.</span><span>만 35세인데 가입할 수 있나요?</span><span class="plus">+</span></summary>
@@ -430,6 +456,18 @@ export const bodyHtml = `
         <details>
           <summary><span class="q">Q.</span><span>중간에 해지하면 정부 기여금은 어떻게 되나요?</span><span class="plus">+</span></summary>
           <div class="ans">중도해지 시 그동안 받은 <b>정부 기여금은 반환</b>해야 하고, 원금과 은행 이자만 돌려받아요. 다만 사망·해외이주 등 특별중도해지 사유는 예외로 혜택이 유지될 수 있어요. 3년 만기까지 유지하는 것이 가장 유리해요.</div>
+        </details>
+        <details>
+          <summary><span class="q">Q.</span><span>계좌개설 기간을 놓치면 어떻게 되나요?</span><span class="plus">+</span></summary>
+          <div class="ans">계좌개설은 <b>7월 27일~8월 7일(주말 제외)</b>에만 가능해요. 이 기간이 지나면 가입 승인을 받았어도 계좌를 만들 수 없고, <b>12월 2차 모집(잠정)</b>에 다시 신청해야 해요.</div>
+        </details>
+        <details>
+          <summary><span class="q">Q.</span><span>1차 신청을 놓쳤는데 지금 신청할 수 있나요?</span><span class="plus">+</span></summary>
+          <div class="ans">지금은 신청할 수 없어요. <b>2차 가입기간이 2026년 12월(잠정)</b>로 예고되어 있으니, 그때까지 소득·가구요건을 미리 확인해 두세요.</div>
+        </details>
+        <details>
+          <summary><span class="q">Q.</span><span>심사에서 미승인(탈락)되면 어떻게 되나요?</span><span class="plus">+</span></summary>
+          <div class="ans">소득·가구요건 미충족 등으로 미승인되면 이번에는 가입할 수 없어요. 다만 <b>12월 2차 모집(잠정) 때 다시 신청</b>할 수 있으니, 미승인 사유를 확인하고 소득 증빙 등을 보완해 두세요. 문의는 콜센터 <b>☎ 1397 → 3</b>.</div>
         </details>
       </div>
     </section>
@@ -476,8 +514,11 @@ export const faqLd = {
     { "@type": "Question", name: "사업을 접으면 소상공인 우대형 혜택이 사라지나요?", acceptedAnswer: { "@type": "Answer", text: "아니요. 소상공인 우대형은 폐업하거나 근로소득자로 바뀌어도 그대로 유지돼요." } },
     { "@type": "Question", name: "조부모 소득도 청년미래적금 가구원에 포함되나요?", acceptedAnswer: { "@type": "Answer", text: "원칙적으로 제외돼요. 다만 청년이 조부모를 부양하는 경우에만 가구원으로 인정되며 증빙서류가 필요해요." } },
     { "@type": "Question", name: "일반형·우대형은 따로 신청해야 하나요?", acceptedAnswer: { "@type": "Answer", text: "아니요. 별도 신청 없이 서민금융진흥원이 가입요건을 확인해 유형을 자동으로 정해줘요." } },
-    { "@type": "Question", name: "청년미래적금과 청년도약계좌, 무엇이 다른가요?", acceptedAnswer: { "@type": "Answer", text: "납입 한도(월 50만 원 vs 70만 원), 만기(3년 vs 5년), 정부 매칭(6·12% vs 6%), 최대 수령액(약 2,200만 원 vs 약 5,000만 원)이 달라요. 둘 중 하나만 가입할 수 있으며, 갈아타기는 2026년 6월에 단 한 번 가능해요." } },
+    { "@type": "Question", name: "청년미래적금과 청년도약계좌, 무엇이 다른가요?", acceptedAnswer: { "@type": "Answer", text: "납입 한도(월 50만 원 vs 70만 원), 만기(3년 vs 5년), 정부 매칭(6·12% vs 6%), 최대 수령액(약 2,200만 원 vs 약 5,000만 원)이 달라요. 둘 중 하나만 가입할 수 있어요. 1차 모집 신청자는 7월 27일~8월 7일 계좌개설 후 특별중도해지 방식으로 갈아타며, 기존 기여금·비과세는 손실 없이 유지돼요." } },
     { "@type": "Question", name: "만 35세인데 청년미래적금에 가입할 수 있나요?", acceptedAnswer: { "@type": "Answer", text: "원칙적으로 만 19~34세가 대상이에요. 다만 병역 이행 기간(최대 6년)은 연령 계산에서 제외되어, 군필 남성은 최대 만 40세까지 가입할 수 있어요." } },
     { "@type": "Question", name: "중간에 해지하면 정부 기여금은 어떻게 되나요?", acceptedAnswer: { "@type": "Answer", text: "중도해지 시 그동안 받은 정부 기여금은 반환해야 하며, 원금과 은행 이자만 돌려받아요. 다만 사망·해외이주 등 특별중도해지 사유는 예외로 혜택이 유지될 수 있어요. 3년 만기까지 유지하는 것이 가장 유리해요." } },
+    { "@type": "Question", name: "청년미래적금 계좌개설 기간을 놓치면 어떻게 되나요?", acceptedAnswer: { "@type": "Answer", text: "계좌개설은 7월 27일~8월 7일(주말 제외)에만 가능해요. 기간이 지나면 가입 승인을 받았어도 계좌를 만들 수 없고, 12월 2차 모집(잠정)에 다시 신청해야 해요." } },
+    { "@type": "Question", name: "청년미래적금 1차 신청을 놓쳤는데 지금 신청할 수 있나요?", acceptedAnswer: { "@type": "Answer", text: "지금은 신청할 수 없어요. 2차 가입기간이 2026년 12월(잠정)로 예고되어 있으니, 그때까지 소득·가구요건을 미리 확인해 두세요." } },
+    { "@type": "Question", name: "청년미래적금 심사에서 미승인(탈락)되면 어떻게 되나요?", acceptedAnswer: { "@type": "Answer", text: "소득·가구요건 미충족 등으로 미승인되면 이번에는 가입할 수 없어요. 다만 12월 2차 모집(잠정) 때 다시 신청할 수 있으니, 미승인 사유를 확인하고 소득 증빙 등을 보완해 두세요." } },
   ],
 };

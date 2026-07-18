@@ -39,7 +39,7 @@ const breadcrumbLd = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "홈", item: "https://moneydoc.kr/" },
     { "@type": "ListItem", position: 2, name: "정부지원금", item: "https://moneydoc.kr/government/" },
-    { "@type": "ListItem", position: 3, name: "청년미래적금 총정리", item: PAGE_URL },
+    { "@type": "ListItem", position: 3, name: "청년미래적금 가이드", item: PAGE_URL },
   ],
 };
 
@@ -52,7 +52,7 @@ export default function Page() {
         <span className="sep">›</span>
         <a href="/government/">정부지원금</a>
         <span className="sep">›</span>
-        <span>청년미래적금 총정리</span>
+        <span>청년미래적금 가이드</span>
       </nav>
       <script
         type="application/ld+json"
