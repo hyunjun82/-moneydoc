@@ -1,0 +1,60 @@
+{
+  "keyword": "근로장려금",
+  "category": "government",
+  "baseSlug": "earned-income-tax-credit",
+  "hub": {
+    "title": "근로장려금 지급일 2026, 8월 27일 지급·내 지급액 조회 방법",
+    "route": "/government/earned-income-tax-credit-guide/"
+  },
+  "calculator": {
+    "title": "근로장려금 모의계산 (가구 유형별 한도·추정)",
+    "route": "/government/earned-income-tax-credit/"
+  },
+  "researchSources": {
+    "collectedVia": "Claude in Chrome (google.com 직접 수집, 2026-08-01)",
+    "google_PAA": [
+      "근로장려금 어떤 사람이 받나?",
+      "2026년 근로장려금은 언제 지급되나요?",
+      "근로장려금 받으면 안되는 이유?",
+      "근로 장려금을 신청했는데 왜 받지 못하나요?",
+      "2026년 근로장려금 반기 신청은 언제인가요?",
+      "근로장려금 기한 후 신청 놓치면?",
+      "근로장려금은 1년에 몇번?"
+    ],
+    "google_related": [
+      "근로장려금 신청", "근로장려금 조건 확인", "근로장려금 지급일",
+      "근로장려금 신청 기간", "근로장려금 신청방법", "근로장려금 지급액 조회",
+      "근로장려금 신청 홈택스", "2026 근로장려금 기한 후 신청",
+      "근로장려금 기한 후 신청 지급일", "2026년 근로장려금 지급일",
+      "2026 근로 장려금 지급액 조회", "2026 근로장려금 산정표",
+      "근로장려금 대상자 확인 방법", "근로장려금 금액 산정 기준"
+    ],
+    "facts_for_body_only": "정기분 지급일 2026-08-27(법정기한 9월 말 대비 조기지급, 국세청) · 기한후 신청 6/2~12/1 95% 지급 · 최대 단독 165/홑벌이 285/맞벌이 330만 · 총소득 기준 2,200/3,200/4,400만 미만(국세청) · 재산 2.4억 미만(2025-06-01 기준) · ARS 1544-9944 · 상반기 반기신청 9월"
+  },
+  "spokes": [
+    { "slug": "payment-day", "cluster": "A 지급·조회", "format": "list-comma",
+      "sourceQuery": "근로장려금 지급일", "sourcePlatform": "google_related",
+      "title": "근로장려금 지급일 2026, 8월 27일 지급·계좌 입금 확인 방법",
+      "mustInclude": ["근로장려금", "지급일"] },
+    { "slug": "amount-check", "cluster": "A 지급·조회", "format": "total-colon",
+      "sourceQuery": "근로장려금 지급액 조회", "sourcePlatform": "google_related",
+      "title": "근로장려금 지급액 조회: 홈택스·손택스·ARS 확인 방법",
+      "mustInclude": ["근로장려금", "지급액 조회"] },
+    { "slug": "late-apply", "cluster": "B 신청", "format": "question",
+      "sourceQuery": "2026 근로장려금 기한 후 신청", "sourcePlatform": "google_related",
+      "title": "근로장려금 기한 후 신청 언제까지? 12월 1일·95% 지급",
+      "mustInclude": ["근로장려금", "기한 후 신청"] },
+    { "slug": "conditions", "cluster": "B 신청", "format": "list-comma",
+      "sourceQuery": "근로장려금 조건 확인", "sourcePlatform": "google_related",
+      "title": "근로장려금 조건 확인, 소득·재산 기준과 가구 유형 정리",
+      "mustInclude": ["근로장려금", "조건"] },
+    { "slug": "half-year", "cluster": "B 신청", "format": "question",
+      "sourceQuery": "2026년 근로장려금 반기 신청은 언제인가요?", "sourcePlatform": "google_PAA",
+      "title": "근로장려금 반기 신청 언제인가요? 9월 신청·12월 지급",
+      "mustInclude": ["근로장려금", "반기"] },
+    { "slug": "not-received", "cluster": "C 미지급", "format": "question",
+      "sourceQuery": "근로 장려금을 신청했는데 왜 받지 못하나요?", "sourcePlatform": "google_PAA",
+      "title": "근로장려금 신청했는데 왜 못 받나요? 감액·탈락 사유",
+      "mustInclude": ["근로장려금", "왜 못 받나요"] }
+  ]
+}
