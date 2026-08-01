@@ -14,8 +14,8 @@ export const bodyHtml = `
 
     <a class="applysticky" href="/government/earned-income-tax-credit-check/">
       <span class="as-t">근로장려금 지급액 조회</span>
-      <span class="as-d">정기분 8월 27일 지급 · 심사결과 확인</span>
-      <span class="as-btn">내 지급액 확인 →</span>
+      <span class="as-d">8월 27일 입금 전, 심사결과 미리 확인</span>
+      <span class="as-btn">조회 바로가기 →</span>
     </a>
 
     <div class="masthead">
@@ -73,8 +73,8 @@ export const bodyHtml = `
     </section>
 
     <a class="applybar" href="/government/earned-income-tax-credit-check/">
-      <span class="t">심사결과·지급액을 미리 확인하세요<small>홈택스 · 손택스 · ARS 조회 방법 단계별 안내</small></span>
-      <span class="btn">내 지급액 조회 방법 →</span>
+      <span class="t">아직 심사결과·지급액 확인 안 하셨다면<small>감액·계좌 오류면 27일에 입금이 안 될 수 있어요 — 확인은 1분이면 끝나요</small></span>
+      <span class="btn">조회 바로가기 →</span>
     </a>
 
     <section class="card" id="sec-schedule">
@@ -129,8 +129,8 @@ export const bodyHtml = `
     </section>
 
     <a class="applybar" href="/government/earned-income-tax-credit-check/">
-      <span class="t">홈택스 조회, 화면 순서대로 따라 하세요<small>심사결과 · 지급액 · 입금 계좌 확인까지 1분</small></span>
-      <span class="btn">조회 방법 보러가기 →</span>
+      <span class="t">신청했다고 끝난 게 아니에요<small>재산 1억 7,000만 원 초과면 절반 감액 · 계좌 오류면 입금 지연 — 입금 전 내 결과부터 확인하세요</small></span>
+      <span class="btn">조회 바로가기 →</span>
     </a>
 
     <section class="card" id="sec-late">

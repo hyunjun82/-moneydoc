@@ -14,8 +14,8 @@ export const bodyHtml = `
 
     <a class="applysticky" href="https://hometax.go.kr" target="_blank" rel="noopener">
       <span class="as-t">홈택스 지급액 조회</span>
-      <span class="as-d">국세청 공식 · 정기분 8월 27일 지급</span>
-      <span class="as-btn">홈택스 바로가기 →</span>
+      <span class="as-d">국세청 공식 · 심사결과 1분 확인</span>
+      <span class="as-btn">조회 바로가기 →</span>
     </a>
 
     <div class="masthead">
@@ -56,8 +56,8 @@ export const bodyHtml = `
         <div class="st"><span class="sn">3</span><div class="sb"><b>심사진행상황 조회</b>심사진행상황·지급액을 확인해요. 심사가 끝났다면 지급 예정 금액과 입금 계좌가 표시됩니다.</div></div>
       </div>
       <a class="applybar" href="https://hometax.go.kr" target="_blank" rel="noopener">
-        <span class="t">국세청 홈택스에서 바로 확인<small>심사진행상황 · 지급액 · 입금 계좌</small></span>
-        <span class="btn">홈택스 바로가기 →</span>
+        <span class="t">내 심사결과, 로그인 한 번이면 나옵니다<small>27일 입금 전 감액·제외 여부를 미리 알 수 있어요</small></span>
+        <span class="btn">조회 바로가기 →</span>
       </a>
     </section>
 
@@ -95,8 +95,8 @@ export const bodyHtml = `
         <li><span>지급: 산정액의 <b>95%</b> · 심사 후 순차 지급</span></li>
       </ul>
       <a class="applybar" href="https://hometax.go.kr" target="_blank" rel="noopener">
-        <span class="t">기한 후 신청도 홈택스에서<small>12월 1일까지 · 산정액의 95% 지급</small></span>
-        <span class="btn">홈택스에서 신청 →</span>
+        <span class="t">12월 1일이 지나면 2025년분은 신청 자체가 불가<small>지금 신청하면 산정액의 95% — 놓친 5월 신청을 되살릴 마지막 기회</small></span>
+        <span class="btn">신청 바로가기 →</span>
       </a>
     </section>
 
