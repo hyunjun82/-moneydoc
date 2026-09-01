@@ -107,49 +107,6 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="section-head">
-          <h2 className="section-title">정부지원금 가이드</h2>
-          <p className="section-sub">계산기로 나온 숫자를 실제로 어떻게 쓰는지 정리한 글</p>
-        </div>
-        <div className="cats">
-        <a href="/government/unemployment-benefit-guide/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">실업급여 조건·금액·신청방법 총정리</h3>
-            <p className="cat-desc">고용보험 180일·비자발 퇴직 조건, 2026년 상한 68,100원·하한 66,048원, 소정급여일수와 신청기간</p>
-            <span className="cat-count">가이드</span>
-          </div>
-        </a>
-        <a href="/government/earned-income-tax-credit-guide/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">근로장려금 지급일 2026, 8월 27일 지급</h3>
-            <p className="cat-desc">정기분 8월 27일 지급(법정기한보다 조기). 단독 165만·홑벌이 285만·맞벌이 330만</p>
-            <span className="cat-count">가이드</span>
-          </div>
-        </a>
-        <a href="/government/earned-income-tax-credit-check/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">근로장려금 지급액 조회 방법</h3>
-            <p className="cat-desc">홈택스·손택스 장려금 메뉴에서 심사진행상황 확인, ARS 1544-9944</p>
-            <span className="cat-count">가이드</span>
-          </div>
-        </a>
-        <a href="/government/youth-future-savings-guide/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">청년미래적금 계좌개설·심사결과·가입조건</h3>
-            <p className="cat-desc">계좌개설 7월 27일~8월 7일, 취급은행 앱 개설, 정부기여금 6% vs 12% 비교</p>
-            <span className="cat-count">가이드</span>
-          </div>
-        </a>
-        <a href="/government/youth-future-savings-soldier/" className="cat" style={{ textDecoration: "none" }}>
-          <div className="cat-body">
-            <h3 className="cat-name">군인도 청년미래적금 가입되나요?</h3>
-            <p className="cat-desc">직전연도 소득 없는 병사도 군장병급여만 있으면 가입. 훈련소 내 비대면 가입</p>
-            <span className="cat-count">가이드</span>
-          </div>
-        </a>
-        </div>
-      </section>
 
       <GuideList cat="government" sub="정부지원금 계산 기준을 법령 원문으로 확인해 정리했습니다" />
       <Footer />
