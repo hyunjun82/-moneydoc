@@ -84,15 +84,18 @@ function buildRows(spec, json) {
   const fn = calculators[spec.calc];
   if (!fn) throw new Error(`엔진에 '${spec.calc}' 없음`);
   const values = spec.vary.values;
-  return values.map((v) => {
+  return values.map((v, idx) => {
     const input = { ...(spec.fixed || {}), [spec.vary.input]: v };
     const out = fn(input, json);
-    const ctx = { input, out };
+    // 축 열은 표기가 제각각이라("1인" "3,000만" "84㎡") 원문 라벨을 그대로 쓴다
+    const vary = { label: spec.vary.labels?.[idx] };
+    const ctx = { input, out, vary };
     const row = {};
     for (const col of spec.columns) {
       let raw = resolve(col.from, ctx);
       if (raw === undefined) throw new Error(`'${col.from}' 값을 찾을 수 없음 (${spec.calc})`);
       if (col.scale) raw *= col.scale; // 예: 월 → 연 (scale 12)
+      if (col.from === 'vary.label') { row[col.label] = String(raw); continue; }
       const fmt = FORMATS[col.format || 'num'];
       if (!fmt) throw new Error(`알 수 없는 format '${col.format}'`);
       row[col.label] = fmt(raw);
