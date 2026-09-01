@@ -1,8 +1,15 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { calcSalaryNetPay, calcSalaryNetPaySimpleTax } from "@/lib/calc/salary-net-pay";
+import { calcSalaryNetPay, calcSalaryNetPaySimpleTax, salaryNetPaySpec } from "@/lib/calc/salary-net-pay";
 import { krw, parseKrw } from "@/lib/format";
+
+// 화면에 찍는 요율은 반드시 계산에 쓰는 상수에서 가져온다.
+// (하드코딩해 두었더니 계산은 4.75%인데 라벨만 4.5%로 남아 있었다.)
+const C = salaryNetPaySpec.constants as {
+  NP_RATE: number; HI_RATE: number; LTC_RATE: number; EI_RATE: number;
+};
+const pct = (v: number) => `${+(v * 100).toFixed(3)}%`;
 
 const QUICK_PICKS = [
   { value: 30000000, label: "3천만" },
@@ -218,19 +225,19 @@ export function SalaryNetPayClient() {
                 <span className="val">{krw(r.grossMonthly)}</span>
               </div>
               <div className="b-row">
-                <span className="name">국민연금 <span className="tag minus">−4.5%</span></span>
+                <span className="name">국민연금 <span className="tag minus">−{pct(C.NP_RATE)}</span></span>
                 <span className="val minus">−{krw(r.nationalPension)}</span>
               </div>
               <div className="b-row">
-                <span className="name">건강보험 <span className="tag minus">−3.545%</span></span>
+                <span className="name">건강보험 <span className="tag minus">−{pct(C.HI_RATE)}</span></span>
                 <span className="val minus">−{krw(r.healthInsurance)}</span>
               </div>
               <div className="b-row">
-                <span className="name">장기요양 <span className="tag minus">−건보의 12.95%</span></span>
+                <span className="name">장기요양 <span className="tag minus">−건보의 {pct(C.LTC_RATE)}</span></span>
                 <span className="val minus">−{krw(r.longTermCare)}</span>
               </div>
               <div className="b-row">
-                <span className="name">고용보험 <span className="tag minus">−0.9%</span></span>
+                <span className="name">고용보험 <span className="tag minus">−{pct(C.EI_RATE)}</span></span>
                 <span className="val minus">−{krw(r.employmentInsurance)}</span>
               </div>
               <div className="b-row">

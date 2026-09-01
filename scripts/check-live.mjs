@@ -41,9 +41,14 @@ for (const u of ['/', '/tax/', '/realestate/', '/government/', '/law/']) {
   const n = (body.match(/class="article"/g) || []).length;
   const heading = /class="section-title">([^<]*)<\/h2>/g;
   const titles = [...body.matchAll(heading)].map((m) => m[1]);
-  const ok = status === 200 && n > 0;
+  // 같은 제목의 섹션이 두 번 나오면 중복이다 (HTML이 한 줄이라 grep -c 로는 못 잡힌다)
+  const dup = titles.filter((t, i) => titles.indexOf(t) !== i);
+  const ok = status === 200 && n > 0 && dup.length === 0;
   if (!ok) bad++;
-  console.log(`  ${ok ? '✅' : '❌'} ${u.padEnd(16)} ${status} · 글 카드 ${n}개 · 섹션 [${titles.join(' / ')}]`);
+  console.log(
+    `  ${ok ? '✅' : '❌'} ${u.padEnd(16)} ${status} · 글 카드 ${n}개 · 섹션 [${titles.join(' / ')}]` +
+    (dup.length ? `  ⚠ 중복: ${[...new Set(dup)].join(', ')}` : '')
+  );
 }
 
 console.log(`\n${bad === 0 ? '✅ 라이브 이상 없음' : `❌ 문제 ${bad}건`}`);
