@@ -15,7 +15,9 @@ export type ArticleBlock =
   | { type: "quote"; text: string }
   | { type: "list"; items: string[]; ordered?: boolean }
   | { type: "table"; headers: string[]; rows: string[][]; note?: string }
-  | { type: "steps"; steps: { step: string; detail: string }[] };
+  | { type: "steps"; steps: { step: string; detail: string }[] }
+  | { type: "law"; cite: string; text?: string; url?: string }
+  | { type: "warn"; text: string };
 
 export type ArticleSection = {
   id: string;
@@ -39,6 +41,14 @@ export type Article = {
   keyPoints: string[];
   sections: ArticleSection[];
   faq: { q: string; a: string }[];
+  /** "2026년 9월 1일 기준" 처럼 본문 기준일을 명시 */
+  basisDate?: string;
+  /** 근거 법령·공식 자료 출처 목록 */
+  references?: { label: string; agency?: string; url?: string }[];
+  /** 같은 분류의 글 */
+  related?: { label: string; url: string }[];
+  /** 면책 문구(미지정 시 기본 문구) */
+  disclaimer?: string;
 };
 
 /** **굵게** + [텍스트](링크) 인라인 파싱 */
@@ -90,6 +100,29 @@ function renderBlock(b: ArticleBlock, i: number): ReactNode {
             </tbody>
           </table>
           {b.note && <p className="table-note">{rich(b.note)}</p>}
+        </div>
+      );
+    case "law":
+      return (
+        <div key={i} className="law-cite">
+          <span className="law-cite-mark">근거</span>
+          <div>
+            {b.url ? (
+              <a className="law-cite-name" href={b.url} target="_blank" rel="noopener noreferrer">
+                {b.cite}
+              </a>
+            ) : (
+              <span className="law-cite-name">{b.cite}</span>
+            )}
+            {b.text && <p className="law-cite-text">{rich(b.text)}</p>}
+          </div>
+        </div>
+      );
+    case "warn":
+      return (
+        <div key={i} className="warn-callout">
+          <span className="warn-mark">주의</span>
+          <p>{rich(b.text)}</p>
         </div>
       );
     case "steps":
@@ -181,6 +214,10 @@ export function ArticleBody({ article, url }: { article?: Article; url?: string 
           )}
         </div>
 
+        {article.basisDate && (
+          <div className="article-basis">{article.basisDate} 기준</div>
+        )}
+
         <p className="article-lead">{rich(article.lead)}</p>
 
         {article.keyPoints.length > 0 && (
@@ -230,6 +267,39 @@ export function ArticleBody({ article, url }: { article?: Article; url?: string 
             </div>
           </section>
         )}
+        {article.references && article.references.length > 0 && (
+          <section id="refs" className="article-sec">
+            <h2>근거 자료</h2>
+            <ul className="article-refs">
+              {article.references.map((r, i) => (
+                <li key={i}>
+                  {r.url ? (
+                    <a href={r.url} target="_blank" rel="noopener noreferrer">{r.label}</a>
+                  ) : (
+                    <span>{r.label}</span>
+                  )}
+                  {r.agency && <span className="ref-agency">{r.agency}</span>}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {article.related && article.related.length > 0 && (
+          <section className="article-sec">
+            <h2>같은 분류의 글</h2>
+            <ul className="article-related">
+              {article.related.map((r, i) => (
+                <li key={i}><a href={r.url}>{r.label}</a></li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <p className="article-disclaimer">
+          {article.disclaimer ??
+            "이 글은 공개된 법령과 정부 공식 자료를 정리한 참고 자료이며, 개별 사안에 대한 법률·세무 자문이 아닙니다. 실제 적용 여부와 금액은 관할 기관의 판단에 따라 달라질 수 있습니다."}
+        </p>
       </div>
     </article>
   );
