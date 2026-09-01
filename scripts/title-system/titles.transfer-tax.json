@@ -1,0 +1,108 @@
+{
+  "keyword": "1주택 양도세 비과세",
+  "category": "realestate",
+  "baseSlug": "transfer-tax",
+  "hub": {
+    "title": "1세대 1주택 양도세 비과세 총정리 (2026년 기준)",
+    "route": "/realestate/transfer-tax-guide/"
+  },
+  "calculator": {
+    "title": "양도소득세 계산기 (1세대 1주택 비과세 반영)",
+    "route": "/realestate/transfer-tax/"
+  },
+  "researchSources": {
+    "collected": "2026-09-01, Claude in Chrome, google.com/search?q=1주택 양도세 비과세&hl=ko&gl=kr",
+    "google_PAA": [
+      "1가구 1주택 양도세는 어떻게 되나요?",
+      "1주택 월세 비과세 조건은 무엇인가요?",
+      "일시적으로 1가구 2주택이 되면 양도소득세가 비과세되는 요건은 무엇인가요?",
+      "1세대가 1주택을 비과세 보유 기간은 얼마나 되나요?"
+    ],
+    "google_related": [
+      "1가구 1주택 양도세 비과세 12억",
+      "1세대 1주택 양도세 비과세 요건",
+      "1주택 양도세 비과세 요건",
+      "1가구 1주택 양도세 비과세 요건",
+      "1세대 1주택 양도세 비과세 신고",
+      "1세대 1주택 비과세 12억",
+      "1가구 1주택 양도세 면제",
+      "1가구 1주택 양도소득세 면제 조건"
+    ],
+    "naver": "차단됨 — 사용자 복붙 폴백 필요"
+  },
+  "spokes": [
+    {
+      "slug": "one-house-exemption",
+      "cluster": "A 비과세 요건",
+      "format": "list-comma",
+      "sourceQuery": "1세대 1주택 양도세 비과세 요건",
+      "title": "1세대 1주택 양도세 비과세 요건, 2년 보유부터 12억까지",
+      "mustInclude": [
+        "1세대 1주택",
+        "양도세",
+        "비과세",
+        "요건"
+      ]
+    },
+    {
+      "slug": "temporary-two-houses",
+      "cluster": "B 예외·특례",
+      "format": "question",
+      "sourceQuery": "일시적으로 1가구 2주택이 되면 양도소득세가 비과세되는 요건은 무엇인가요?",
+      "title": "일시적 1가구 2주택 양도세 비과세, 처분기한은 언제까지?",
+      "mustInclude": [
+        "일시적",
+        "2주택",
+        "비과세"
+      ]
+    },
+    {
+      "slug": "residency-requirement",
+      "cluster": "A 비과세 요건",
+      "format": "question",
+      "sourceQuery": "1세대가 1주택을 비과세 보유 기간은 얼마나 되나요?",
+      "title": "1주택 양도세 비과세 실거주 2년, 꼭 채워야 하나요?",
+      "mustInclude": [
+        "1주택",
+        "비과세",
+        "실거주"
+      ]
+    },
+    {
+      "slug": "over-12-billion",
+      "cluster": "C 고가주택",
+      "format": "total-colon",
+      "sourceQuery": "1가구 1주택 양도세 비과세 12억",
+      "title": "고가주택 양도세 총정리: 12억 초과분 계산과 장기보유공제",
+      "mustInclude": [
+        "양도세",
+        "12억",
+        "장기보유공제"
+      ]
+    },
+    {
+      "slug": "exemption-filing",
+      "cluster": "D 신고",
+      "format": "question",
+      "sourceQuery": "1세대 1주택 양도세 비과세 신고",
+      "title": "1세대 1주택 양도세 비과세도 신고해야 하나요?",
+      "mustInclude": [
+        "1세대 1주택",
+        "비과세",
+        "신고"
+      ]
+    },
+    {
+      "slug": "household-definition",
+      "cluster": "A 비과세 요건",
+      "format": "definition",
+      "sourceQuery": "1가구 1주택 양도소득세 면제 조건",
+      "title": "1세대란? 세대분리 기준과 양도세 비과세 판정 방법",
+      "mustInclude": [
+        "1세대",
+        "세대분리",
+        "양도세"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "keyword": "퇴직금 계산",
+  "hub": {
+    "title": "퇴직금 계산법 총정리 (2026년 기준)",
+    "route": "/law/severance-pay-guide/"
+  },
+  "calculator": {
+    "title": "퇴직금 계산기 (평균임금·퇴직소득세 반영)",
+    "route": "/law/severance-pay/"
+  },
+  "spokeCount": 6,
+  "spokes": [
+    {
+      "slug": "severance-calculation",
+      "cluster": "A 계산법",
+      "title": "퇴직금 계산법, 평균임금 산정부터 세후 실수령액까지",
+      "format": "list-comma",
+      "route": "/law/severance-pay-severance-calculation/",
+      "dataFile": "moneydoc-data/articles/law/severance-pay-severance-calculation.ts",
+      "pageFile": "app/law/severance-pay-severance-calculation/page.tsx",
+      "funnel": {
+        "hub": "/law/severance-pay-guide/",
+        "calculator": "/law/severance-pay/"
+      }
+    },
+    {
+      "slug": "severance-one-year",
+      "cluster": "B 근속기간",
+      "title": "1년 근무 퇴직금 얼마? 1년 미만이면 못 받나요?",
+      "format": "question",
+      "route": "/law/severance-pay-severance-one-year/",
+      "dataFile": "moneydoc-data/articles/law/severance-pay-severance-one-year.ts",
+      "pageFile": "app/law/severance-pay-severance-one-year/page.tsx",
+      "funnel": {
+        "hub": "/law/severance-pay-guide/",
+        "calculator": "/law/severance-pay/"
+      }
+    },
+    {
+      "slug": "average-wage-scope",
+      "cluster": "A 계산법",
+      "title": "퇴직금 평균임금에 상여금·연차수당도 포함되나요?",
+      "format": "question",
+      "route": "/law/severance-pay-average-wage-scope/",
+      "dataFile": "moneydoc-data/articles/law/severance-pay-average-wage-scope.ts",
+      "pageFile": "app/law/severance-pay-average-wage-scope/page.tsx",
+      "funnel": {
+        "hub": "/law/severance-pay-guide/",
+        "calculator": "/law/severance-pay/"
+      }
+    },
+    {
+      "slug": "severance-tax",
+      "cluster": "C 세금",
+      "title": "퇴직금 세금 총정리: 퇴직소득세 계산과 세전·세후 차이",
+      "format": "total-colon",
+      "route": "/law/severance-pay-severance-tax/",
+      "dataFile": "moneydoc-data/articles/law/severance-pay-severance-tax.ts",
+      "pageFile": "app/law/severance-pay-severance-tax/page.tsx",
+      "funnel": {
+        "hub": "/law/severance-pay-guide/",
+        "calculator": "/law/severance-pay/"
+      }
+    },
+    {
+      "slug": "unpaid-severance",
+      "cluster": "D 미지급 대응",
+      "title": "퇴직금 미지급 신고 방법, 진정부터 지급명령까지 절차",
+      "format": "list-comma",
+      "route": "/law/severance-pay-unpaid-severance/",
+      "dataFile": "moneydoc-data/articles/law/severance-pay-unpaid-severance.ts",
+      "pageFile": "app/law/severance-pay-unpaid-severance/page.tsx",
+      "funnel": {
+        "hub": "/law/severance-pay-guide/",
+        "calculator": "/law/severance-pay/"
+      }
+    },
+    {
+      "slug": "severance-vs-pension",
+      "cluster": "E 제도 비교",
+      "title": "퇴직연금이란? DB형·DC형 차이와 퇴직금 제도 비교",
+      "format": "definition",
+      "route": "/law/severance-pay-severance-vs-pension/",
+      "dataFile": "moneydoc-data/articles/law/severance-pay-severance-vs-pension.ts",
+      "pageFile": "app/law/severance-pay-severance-vs-pension/page.tsx",
+      "funnel": {
+        "hub": "/law/severance-pay-guide/",
+        "calculator": "/law/severance-pay/"
+      }
+    }
+  ]
+}

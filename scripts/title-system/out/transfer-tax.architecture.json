@@ -1,0 +1,92 @@
+{
+  "keyword": "1주택 양도세 비과세",
+  "hub": {
+    "title": "1세대 1주택 양도세 비과세 총정리 (2026년 기준)",
+    "route": "/realestate/transfer-tax-guide/"
+  },
+  "calculator": {
+    "title": "양도소득세 계산기 (1세대 1주택 비과세 반영)",
+    "route": "/realestate/transfer-tax/"
+  },
+  "spokeCount": 6,
+  "spokes": [
+    {
+      "slug": "one-house-exemption",
+      "cluster": "A 비과세 요건",
+      "title": "1세대 1주택 양도세 비과세 요건, 2년 보유부터 12억까지",
+      "format": "list-comma",
+      "route": "/realestate/transfer-tax-one-house-exemption/",
+      "dataFile": "moneydoc-data/articles/realestate/transfer-tax-one-house-exemption.ts",
+      "pageFile": "app/realestate/transfer-tax-one-house-exemption/page.tsx",
+      "funnel": {
+        "hub": "/realestate/transfer-tax-guide/",
+        "calculator": "/realestate/transfer-tax/"
+      }
+    },
+    {
+      "slug": "temporary-two-houses",
+      "cluster": "B 예외·특례",
+      "title": "일시적 1가구 2주택 양도세 비과세, 처분기한은 언제까지?",
+      "format": "question",
+      "route": "/realestate/transfer-tax-temporary-two-houses/",
+      "dataFile": "moneydoc-data/articles/realestate/transfer-tax-temporary-two-houses.ts",
+      "pageFile": "app/realestate/transfer-tax-temporary-two-houses/page.tsx",
+      "funnel": {
+        "hub": "/realestate/transfer-tax-guide/",
+        "calculator": "/realestate/transfer-tax/"
+      }
+    },
+    {
+      "slug": "residency-requirement",
+      "cluster": "A 비과세 요건",
+      "title": "1주택 양도세 비과세 실거주 2년, 꼭 채워야 하나요?",
+      "format": "question",
+      "route": "/realestate/transfer-tax-residency-requirement/",
+      "dataFile": "moneydoc-data/articles/realestate/transfer-tax-residency-requirement.ts",
+      "pageFile": "app/realestate/transfer-tax-residency-requirement/page.tsx",
+      "funnel": {
+        "hub": "/realestate/transfer-tax-guide/",
+        "calculator": "/realestate/transfer-tax/"
+      }
+    },
+    {
+      "slug": "over-12-billion",
+      "cluster": "C 고가주택",
+      "title": "고가주택 양도세 총정리: 12억 초과분 계산과 장기보유공제",
+      "format": "total-colon",
+      "route": "/realestate/transfer-tax-over-12-billion/",
+      "dataFile": "moneydoc-data/articles/realestate/transfer-tax-over-12-billion.ts",
+      "pageFile": "app/realestate/transfer-tax-over-12-billion/page.tsx",
+      "funnel": {
+        "hub": "/realestate/transfer-tax-guide/",
+        "calculator": "/realestate/transfer-tax/"
+      }
+    },
+    {
+      "slug": "exemption-filing",
+      "cluster": "D 신고",
+      "title": "1세대 1주택 양도세 비과세도 신고해야 하나요?",
+      "format": "question",
+      "route": "/realestate/transfer-tax-exemption-filing/",
+      "dataFile": "moneydoc-data/articles/realestate/transfer-tax-exemption-filing.ts",
+      "pageFile": "app/realestate/transfer-tax-exemption-filing/page.tsx",
+      "funnel": {
+        "hub": "/realestate/transfer-tax-guide/",
+        "calculator": "/realestate/transfer-tax/"
+      }
+    },
+    {
+      "slug": "household-definition",
+      "cluster": "A 비과세 요건",
+      "title": "1세대란? 세대분리 기준과 양도세 비과세 판정 방법",
+      "format": "definition",
+      "route": "/realestate/transfer-tax-household-definition/",
+      "dataFile": "moneydoc-data/articles/realestate/transfer-tax-household-definition.ts",
+      "pageFile": "app/realestate/transfer-tax-household-definition/page.tsx",
+      "funnel": {
+        "hub": "/realestate/transfer-tax-guide/",
+        "calculator": "/realestate/transfer-tax/"
+      }
+    }
+  ]
+}

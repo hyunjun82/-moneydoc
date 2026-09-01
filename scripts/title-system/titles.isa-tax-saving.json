@@ -1,0 +1,101 @@
+{
+  "keyword": "ISA 계좌 절세",
+  "category": "savings",
+  "baseSlug": "isa-tax-saving",
+  "hub": {
+    "title": "ISA 계좌 절세 총정리 (2026년 기준)",
+    "route": "/savings/isa-tax-saving-guide/"
+  },
+  "calculator": {
+    "title": "ISA 절세 계산기 (비과세·분리과세 반영)",
+    "route": "/savings/isa-tax-saving/"
+  },
+  "researchSources": {
+    "collected": "2026-09-01, Claude in Chrome, google.com/search?q=ISA 계좌 절세&hl=ko&gl=kr",
+    "google_PAA": [],
+    "google_related": [
+      "ISA 계좌 단점",
+      "ISA 계좌 절세 한도",
+      "ISA 계좌 비과세 한도",
+      "ISA 계좌 추천",
+      "ISA 계좌 연말정산",
+      "ISA 계좌 세금 혜택",
+      "ISA 계좌 세제 혜택"
+    ],
+    "naver": "차단됨 — 사용자 복붙 폴백 필요"
+  },
+  "spokes": [
+    {
+      "slug": "isa-tax-benefit",
+      "cluster": "A 절세 구조",
+      "format": "list-comma",
+      "sourceQuery": "ISA 계좌 절세 한도",
+      "title": "ISA 계좌 절세 한도, 비과세 200만원부터 분리과세까지",
+      "mustInclude": [
+        "ISA 계좌",
+        "절세",
+        "한도",
+        "비과세"
+      ]
+    },
+    {
+      "slug": "isa-general-vs-low-income",
+      "cluster": "A 절세 구조",
+      "format": "question",
+      "sourceQuery": "ISA 계좌 비과세 한도",
+      "title": "서민형 ISA 조건은? 일반형과 비과세 한도 차이 비교",
+      "mustInclude": [
+        "서민형 ISA",
+        "비과세",
+        "한도"
+      ]
+    },
+    {
+      "slug": "isa-disadvantages",
+      "cluster": "B 단점·주의",
+      "format": "question",
+      "sourceQuery": "ISA 계좌 단점",
+      "title": "ISA 계좌 단점은 뭘까? 3년 의무가입과 중도해지 기준",
+      "mustInclude": [
+        "ISA 계좌",
+        "단점",
+        "의무가입"
+      ]
+    },
+    {
+      "slug": "isa-pension-transfer",
+      "cluster": "C 만기·전환",
+      "format": "total-colon",
+      "sourceQuery": "ISA 계좌 세제 혜택",
+      "title": "ISA 연금 전환 총정리: 만기자금 이전과 추가 세액공제",
+      "mustInclude": [
+        "ISA",
+        "연금 전환",
+        "세액공제"
+      ]
+    },
+    {
+      "slug": "isa-vs-pension-savings",
+      "cluster": "C 만기·전환",
+      "format": "definition",
+      "sourceQuery": "ISA 계좌 세금 혜택",
+      "title": "ISA와 연금저축 차이는? 절세 계좌 가입 순서 정리",
+      "mustInclude": [
+        "ISA",
+        "연금저축",
+        "절세"
+      ]
+    },
+    {
+      "slug": "isa-year-end-tax",
+      "cluster": "B 단점·주의",
+      "format": "question",
+      "sourceQuery": "ISA 계좌 연말정산",
+      "title": "ISA 계좌도 연말정산 되나요? 소득공제 대상 기준",
+      "mustInclude": [
+        "ISA 계좌",
+        "연말정산"
+      ]
+    }
+  ]
+}

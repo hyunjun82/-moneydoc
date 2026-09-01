@@ -1,0 +1,104 @@
+{
+  "keyword": "퇴직금 계산",
+  "category": "law",
+  "baseSlug": "severance-pay",
+  "hub": {
+    "title": "퇴직금 계산법 총정리 (2026년 기준)",
+    "route": "/law/severance-pay-guide/"
+  },
+  "calculator": {
+    "title": "퇴직금 계산기 (평균임금·퇴직소득세 반영)",
+    "route": "/law/severance-pay/"
+  },
+  "researchSources": {
+    "collected": "2026-09-01, Claude in Chrome, google.com/search?q=퇴직금 계산&hl=ko&gl=kr",
+    "google_PAA": [
+      "7년 동안 일하면 퇴직금은 얼마나 받을 수 있나요?",
+      "1년 6개월 근무하면 퇴직금을 얼마나 받을 수 있나요?",
+      "내 퇴직금은 어떻게 계산하나요?",
+      "퇴직금 포함 연봉 5000만원이면 실제 월급 기준 연봉은 얼마인가요?"
+    ],
+    "google_related": [
+      "1년 퇴직금 계산",
+      "퇴직금 간단 계산",
+      "2 년 퇴직금 계산",
+      "퇴직금 계산기 네이버",
+      "3년 퇴직금 계산",
+      "5 년 퇴직금 계산",
+      "퇴직금 계산 세전 세후"
+    ],
+    "naver": "차단됨 — 사용자 복붙 폴백 필요"
+  },
+  "spokes": [
+    {
+      "slug": "severance-calculation",
+      "cluster": "A 계산법",
+      "format": "list-comma",
+      "sourceQuery": "내 퇴직금은 어떻게 계산하나요?",
+      "title": "퇴직금 계산법, 평균임금 산정부터 세후 실수령액까지",
+      "mustInclude": [
+        "퇴직금",
+        "계산법",
+        "평균임금"
+      ]
+    },
+    {
+      "slug": "severance-one-year",
+      "cluster": "B 근속기간",
+      "format": "question",
+      "sourceQuery": "1년 퇴직금 계산",
+      "title": "1년 근무 퇴직금 얼마? 1년 미만이면 못 받나요?",
+      "mustInclude": [
+        "퇴직금",
+        "1년"
+      ]
+    },
+    {
+      "slug": "average-wage-scope",
+      "cluster": "A 계산법",
+      "format": "question",
+      "sourceQuery": "퇴직금 간단 계산",
+      "title": "퇴직금 평균임금에 상여금·연차수당도 포함되나요?",
+      "mustInclude": [
+        "퇴직금",
+        "평균임금",
+        "상여금"
+      ]
+    },
+    {
+      "slug": "severance-tax",
+      "cluster": "C 세금",
+      "format": "total-colon",
+      "sourceQuery": "퇴직금 계산 세전 세후",
+      "title": "퇴직금 세금 총정리: 퇴직소득세 계산과 세전·세후 차이",
+      "mustInclude": [
+        "퇴직금",
+        "퇴직소득세"
+      ]
+    },
+    {
+      "slug": "unpaid-severance",
+      "cluster": "D 미지급 대응",
+      "format": "list-comma",
+      "sourceQuery": "퇴직금 간단 계산",
+      "title": "퇴직금 미지급 신고 방법, 진정부터 지급명령까지 절차",
+      "mustInclude": [
+        "퇴직금",
+        "미지급",
+        "신고 방법"
+      ]
+    },
+    {
+      "slug": "severance-vs-pension",
+      "cluster": "E 제도 비교",
+      "format": "definition",
+      "sourceQuery": "퇴직금 계산기 네이버",
+      "title": "퇴직연금이란? DB형·DC형 차이와 퇴직금 제도 비교",
+      "mustInclude": [
+        "퇴직연금",
+        "퇴직금",
+        "DB형"
+      ]
+    }
+  ]
+}

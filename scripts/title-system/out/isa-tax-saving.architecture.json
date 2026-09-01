@@ -1,0 +1,92 @@
+{
+  "keyword": "ISA 계좌 절세",
+  "hub": {
+    "title": "ISA 계좌 절세 총정리 (2026년 기준)",
+    "route": "/savings/isa-tax-saving-guide/"
+  },
+  "calculator": {
+    "title": "ISA 절세 계산기 (비과세·분리과세 반영)",
+    "route": "/savings/isa-tax-saving/"
+  },
+  "spokeCount": 6,
+  "spokes": [
+    {
+      "slug": "isa-tax-benefit",
+      "cluster": "A 절세 구조",
+      "title": "ISA 계좌 절세 한도, 비과세 200만원부터 분리과세까지",
+      "format": "list-comma",
+      "route": "/savings/isa-tax-saving-isa-tax-benefit/",
+      "dataFile": "moneydoc-data/articles/savings/isa-tax-saving-isa-tax-benefit.ts",
+      "pageFile": "app/savings/isa-tax-saving-isa-tax-benefit/page.tsx",
+      "funnel": {
+        "hub": "/savings/isa-tax-saving-guide/",
+        "calculator": "/savings/isa-tax-saving/"
+      }
+    },
+    {
+      "slug": "isa-general-vs-low-income",
+      "cluster": "A 절세 구조",
+      "title": "서민형 ISA 조건은? 일반형과 비과세 한도 차이 비교",
+      "format": "question",
+      "route": "/savings/isa-tax-saving-isa-general-vs-low-income/",
+      "dataFile": "moneydoc-data/articles/savings/isa-tax-saving-isa-general-vs-low-income.ts",
+      "pageFile": "app/savings/isa-tax-saving-isa-general-vs-low-income/page.tsx",
+      "funnel": {
+        "hub": "/savings/isa-tax-saving-guide/",
+        "calculator": "/savings/isa-tax-saving/"
+      }
+    },
+    {
+      "slug": "isa-disadvantages",
+      "cluster": "B 단점·주의",
+      "title": "ISA 계좌 단점은 뭘까? 3년 의무가입과 중도해지 기준",
+      "format": "question",
+      "route": "/savings/isa-tax-saving-isa-disadvantages/",
+      "dataFile": "moneydoc-data/articles/savings/isa-tax-saving-isa-disadvantages.ts",
+      "pageFile": "app/savings/isa-tax-saving-isa-disadvantages/page.tsx",
+      "funnel": {
+        "hub": "/savings/isa-tax-saving-guide/",
+        "calculator": "/savings/isa-tax-saving/"
+      }
+    },
+    {
+      "slug": "isa-pension-transfer",
+      "cluster": "C 만기·전환",
+      "title": "ISA 연금 전환 총정리: 만기자금 이전과 추가 세액공제",
+      "format": "total-colon",
+      "route": "/savings/isa-tax-saving-isa-pension-transfer/",
+      "dataFile": "moneydoc-data/articles/savings/isa-tax-saving-isa-pension-transfer.ts",
+      "pageFile": "app/savings/isa-tax-saving-isa-pension-transfer/page.tsx",
+      "funnel": {
+        "hub": "/savings/isa-tax-saving-guide/",
+        "calculator": "/savings/isa-tax-saving/"
+      }
+    },
+    {
+      "slug": "isa-vs-pension-savings",
+      "cluster": "C 만기·전환",
+      "title": "ISA와 연금저축 차이는? 절세 계좌 가입 순서 정리",
+      "format": "definition",
+      "route": "/savings/isa-tax-saving-isa-vs-pension-savings/",
+      "dataFile": "moneydoc-data/articles/savings/isa-tax-saving-isa-vs-pension-savings.ts",
+      "pageFile": "app/savings/isa-tax-saving-isa-vs-pension-savings/page.tsx",
+      "funnel": {
+        "hub": "/savings/isa-tax-saving-guide/",
+        "calculator": "/savings/isa-tax-saving/"
+      }
+    },
+    {
+      "slug": "isa-year-end-tax",
+      "cluster": "B 단점·주의",
+      "title": "ISA 계좌도 연말정산 되나요? 소득공제 대상 기준",
+      "format": "question",
+      "route": "/savings/isa-tax-saving-isa-year-end-tax/",
+      "dataFile": "moneydoc-data/articles/savings/isa-tax-saving-isa-year-end-tax.ts",
+      "pageFile": "app/savings/isa-tax-saving-isa-year-end-tax/page.tsx",
+      "funnel": {
+        "hub": "/savings/isa-tax-saving-guide/",
+        "calculator": "/savings/isa-tax-saving/"
+      }
+    }
+  ]
+}

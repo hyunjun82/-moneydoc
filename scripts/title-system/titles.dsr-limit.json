@@ -1,0 +1,103 @@
+{
+  "keyword": "스트레스 DSR",
+  "category": "loan",
+  "baseSlug": "dsr-limit",
+  "hub": {
+    "title": "스트레스 DSR 3단계 총정리 (2026년 기준)",
+    "route": "/loan/dsr-limit-guide/"
+  },
+  "calculator": {
+    "title": "DSR 계산기 (스트레스 DSR 3단계 반영)",
+    "route": "/loan/dsr-limit/"
+  },
+  "researchSources": {
+    "collected": "2026-09-01, Claude in Chrome, google.com/search?q=스트레스 DSR&hl=ko&gl=kr",
+    "google_PAA": [
+      "3단계 스트레스 DSR은 어떤 내용을 담고 있나요?",
+      "2단계 스트레스 DSR은 어떤 대출에 적용되나요?",
+      "DSR에 포함되지 않는 대출은 무엇인가요?",
+      "스트레스 DSR 1단계는 어떻게 적용되나요?"
+    ],
+    "google_related": [
+      "스트레스 DSR 3단계",
+      "스트레스 DSR 계산",
+      "스트레스 DSR 3단계 계산기",
+      "스트레스 DSR 적용 기준",
+      "스트레스 DSR 1단계",
+      "생애 최초 스트레스 dsr",
+      "스트레스 DSR 2단계"
+    ],
+    "naver": "차단됨 — 사용자 복붙 폴백 필요"
+  },
+  "spokes": [
+    {
+      "slug": "stress-dsr-3rd",
+      "cluster": "A 한도·계산",
+      "format": "list-comma",
+      "sourceQuery": "스트레스 DSR 3단계 계산기",
+      "title": "스트레스 DSR 3단계 계산법, 대출 한도 얼마나 줄어드나",
+      "mustInclude": [
+        "스트레스 DSR",
+        "3단계",
+        "대출 한도"
+      ]
+    },
+    {
+      "slug": "dsr-excluded-loans",
+      "cluster": "B 적용 범위",
+      "format": "question",
+      "sourceQuery": "DSR에 포함되지 않는 대출은 무엇인가요?",
+      "title": "DSR에 포함되지 않는 대출은? 제외 대상 총정리",
+      "mustInclude": [
+        "DSR",
+        "제외"
+      ]
+    },
+    {
+      "slug": "dsr-stage-comparison",
+      "cluster": "B 적용 범위",
+      "format": "total-colon",
+      "sourceQuery": "스트레스 DSR 적용 기준",
+      "title": "스트레스 DSR 총정리: 1단계·2단계·3단계 적용 기준",
+      "mustInclude": [
+        "스트레스 DSR",
+        "적용 기준"
+      ]
+    },
+    {
+      "slug": "first-time-buyer-dsr",
+      "cluster": "B 적용 범위",
+      "format": "question",
+      "sourceQuery": "생애 최초 스트레스 dsr",
+      "title": "생애 최초 주택구입도 스트레스 DSR 적용되나요?",
+      "mustInclude": [
+        "생애 최초",
+        "스트레스 DSR"
+      ]
+    },
+    {
+      "slug": "dsr-vs-ltv-dti",
+      "cluster": "C 개념",
+      "format": "definition",
+      "sourceQuery": "스트레스 DSR 계산",
+      "title": "DSR이란? LTV·DTI와 차이, 한도 계산법까지",
+      "mustInclude": [
+        "DSR",
+        "LTV",
+        "DTI"
+      ]
+    },
+    {
+      "slug": "dsr-income-proof",
+      "cluster": "A 한도·계산",
+      "format": "list-comma",
+      "sourceQuery": "스트레스 DSR 계산",
+      "title": "DSR 연소득 인정 기준, 프리랜서·자영업자 증빙 방법",
+      "mustInclude": [
+        "DSR",
+        "연소득",
+        "증빙"
+      ]
+    }
+  ]
+}

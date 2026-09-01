@@ -1,0 +1,105 @@
+{
+  "keyword": "국민연금 조기수령",
+  "category": "pension",
+  "baseSlug": "national-pension-early",
+  "hub": {
+    "title": "국민연금 조기수령 총정리 (2026년 기준)",
+    "route": "/pension/national-pension-early-guide/"
+  },
+  "calculator": {
+    "title": "국민연금 조기수령 계산기 (감액률 반영)",
+    "route": "/pension/national-pension-early/"
+  },
+  "researchSources": {
+    "collected": "2026-09-01, Claude in Chrome, google.com/search?q=국민연금 조기수령&hl=ko&gl=kr",
+    "google_PAA": [
+      "2026년 국민연금 조기 수령 조건은 무엇인가요?",
+      "국민연금 조기 수령 방법은 무엇인가요?",
+      "1967년생은 국민연금을 조기 수령할 수 있나요?",
+      "국민연금 조기 수령의 장단점은 무엇인가요?"
+    ],
+    "google_related": [
+      "국민연금 조기 수령 조건",
+      "67년생 국민연금 조기수령",
+      "국민연금 조기 수령 계산법",
+      "국민연금 조기 수령 중단",
+      "66년생 국민연금 조기 수령",
+      "국민연금 조기 수령 소득",
+      "국민연금 조기수령 서류",
+      "국민연금 조기수령 손익분기 점"
+    ],
+    "naver": "차단됨 — 사용자 복붙 폴백 필요"
+  },
+  "spokes": [
+    {
+      "slug": "early-pension-breakeven",
+      "cluster": "A 손익 판단",
+      "format": "question",
+      "sourceQuery": "국민연금 조기수령 손익분기 점",
+      "title": "국민연금 조기수령 손익분기점, 몇 살까지 살면 손해일까?",
+      "mustInclude": [
+        "국민연금",
+        "조기수령",
+        "손익분기점"
+      ]
+    },
+    {
+      "slug": "early-pension-conditions",
+      "cluster": "B 조건·신청",
+      "format": "list-comma",
+      "sourceQuery": "국민연금 조기 수령 조건",
+      "title": "국민연금 조기 수령 조건, 나이·가입기간·소득 기준 정리",
+      "mustInclude": [
+        "국민연금",
+        "조기 수령",
+        "조건"
+      ]
+    },
+    {
+      "slug": "early-pension-calc",
+      "cluster": "A 손익 판단",
+      "format": "total-colon",
+      "sourceQuery": "국민연금 조기 수령 계산법",
+      "title": "국민연금 조기 수령 계산법 총정리: 1년당 6% 감액 구조",
+      "mustInclude": [
+        "국민연금",
+        "조기 수령",
+        "계산법"
+      ]
+    },
+    {
+      "slug": "early-pension-by-birthyear",
+      "cluster": "B 조건·신청",
+      "format": "question",
+      "sourceQuery": "1967년생은 국민연금을 조기 수령할 수 있나요?",
+      "title": "1967년생 국민연금 조기수령 몇 살부터 가능한가요?",
+      "mustInclude": [
+        "국민연금",
+        "조기수령"
+      ]
+    },
+    {
+      "slug": "early-pension-income-suspension",
+      "cluster": "C 수급 중 변수",
+      "format": "question",
+      "sourceQuery": "국민연금 조기 수령 소득",
+      "title": "국민연금 조기수령 중 소득 생기면 지급정지되나요?",
+      "mustInclude": [
+        "국민연금",
+        "조기수령",
+        "소득"
+      ]
+    },
+    {
+      "slug": "early-vs-deferred",
+      "cluster": "A 손익 판단",
+      "format": "definition",
+      "sourceQuery": "국민연금 조기 수령의 장단점은 무엇인가요?",
+      "title": "조기노령연금이란? 연기연금과 비교, 유리한 선택 기준",
+      "mustInclude": [
+        "조기노령연금",
+        "연기연금"
+      ]
+    }
+  ]
+}

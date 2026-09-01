@@ -1,0 +1,92 @@
+{
+  "keyword": "국민연금 조기수령",
+  "hub": {
+    "title": "국민연금 조기수령 총정리 (2026년 기준)",
+    "route": "/pension/national-pension-early-guide/"
+  },
+  "calculator": {
+    "title": "국민연금 조기수령 계산기 (감액률 반영)",
+    "route": "/pension/national-pension-early/"
+  },
+  "spokeCount": 6,
+  "spokes": [
+    {
+      "slug": "early-pension-breakeven",
+      "cluster": "A 손익 판단",
+      "title": "국민연금 조기수령 손익분기점, 몇 살까지 살면 손해일까?",
+      "format": "question",
+      "route": "/pension/national-pension-early-early-pension-breakeven/",
+      "dataFile": "moneydoc-data/articles/pension/national-pension-early-early-pension-breakeven.ts",
+      "pageFile": "app/pension/national-pension-early-early-pension-breakeven/page.tsx",
+      "funnel": {
+        "hub": "/pension/national-pension-early-guide/",
+        "calculator": "/pension/national-pension-early/"
+      }
+    },
+    {
+      "slug": "early-pension-conditions",
+      "cluster": "B 조건·신청",
+      "title": "국민연금 조기 수령 조건, 나이·가입기간·소득 기준 정리",
+      "format": "list-comma",
+      "route": "/pension/national-pension-early-early-pension-conditions/",
+      "dataFile": "moneydoc-data/articles/pension/national-pension-early-early-pension-conditions.ts",
+      "pageFile": "app/pension/national-pension-early-early-pension-conditions/page.tsx",
+      "funnel": {
+        "hub": "/pension/national-pension-early-guide/",
+        "calculator": "/pension/national-pension-early/"
+      }
+    },
+    {
+      "slug": "early-pension-calc",
+      "cluster": "A 손익 판단",
+      "title": "국민연금 조기 수령 계산법 총정리: 1년당 6% 감액 구조",
+      "format": "total-colon",
+      "route": "/pension/national-pension-early-early-pension-calc/",
+      "dataFile": "moneydoc-data/articles/pension/national-pension-early-early-pension-calc.ts",
+      "pageFile": "app/pension/national-pension-early-early-pension-calc/page.tsx",
+      "funnel": {
+        "hub": "/pension/national-pension-early-guide/",
+        "calculator": "/pension/national-pension-early/"
+      }
+    },
+    {
+      "slug": "early-pension-by-birthyear",
+      "cluster": "B 조건·신청",
+      "title": "1967년생 국민연금 조기수령 몇 살부터 가능한가요?",
+      "format": "question",
+      "route": "/pension/national-pension-early-early-pension-by-birthyear/",
+      "dataFile": "moneydoc-data/articles/pension/national-pension-early-early-pension-by-birthyear.ts",
+      "pageFile": "app/pension/national-pension-early-early-pension-by-birthyear/page.tsx",
+      "funnel": {
+        "hub": "/pension/national-pension-early-guide/",
+        "calculator": "/pension/national-pension-early/"
+      }
+    },
+    {
+      "slug": "early-pension-income-suspension",
+      "cluster": "C 수급 중 변수",
+      "title": "국민연금 조기수령 중 소득 생기면 지급정지되나요?",
+      "format": "question",
+      "route": "/pension/national-pension-early-early-pension-income-suspension/",
+      "dataFile": "moneydoc-data/articles/pension/national-pension-early-early-pension-income-suspension.ts",
+      "pageFile": "app/pension/national-pension-early-early-pension-income-suspension/page.tsx",
+      "funnel": {
+        "hub": "/pension/national-pension-early-guide/",
+        "calculator": "/pension/national-pension-early/"
+      }
+    },
+    {
+      "slug": "early-vs-deferred",
+      "cluster": "A 손익 판단",
+      "title": "조기노령연금이란? 연기연금과 비교, 유리한 선택 기준",
+      "format": "definition",
+      "route": "/pension/national-pension-early-early-vs-deferred/",
+      "dataFile": "moneydoc-data/articles/pension/national-pension-early-early-vs-deferred.ts",
+      "pageFile": "app/pension/national-pension-early-early-vs-deferred/page.tsx",
+      "funnel": {
+        "hub": "/pension/national-pension-early-guide/",
+        "calculator": "/pension/national-pension-early/"
+      }
+    }
+  ]
+}
