@@ -11,7 +11,7 @@ const round = Math.round;
 // DSR — 금감원 가계부채 관리방안
 function calc_dsr(input) {
   const { annualIncome, monthlyExistingDebt, loanYears, loanRate, dsrLimit, stressDSR } = input;
-  const stressMap = { '미적용': 0, '1단계': 0.0025, '2단계': 0.0075, '3단계': 0.015 };
+  const stressMap = { '미적용': 0, '1단계': 0.0038, '2단계': 0.0075, '3단계': 0.015 }; // 금융위 고시
   const stressAdd = stressMap[stressDSR] ?? 0;
   const appliedRate = loanRate + stressAdd;
   const monthlyAvailable = round(annualIncome * dsrLimit / 12 - monthlyExistingDebt);
@@ -25,7 +25,7 @@ function calc_dsr(input) {
 // DTI — 금감원
 function calc_dti(input) {
   const { annualIncome, monthlyOtherDebtInterest, loanYears, loanRate, dtiLimit, stressDSR } = input;
-  const stressMap = { '미적용': 0, '1단계': 0.0025, '2단계': 0.0075, '3단계': 0.015 };
+  const stressMap = { '미적용': 0, '1단계': 0.0038, '2단계': 0.0075, '3단계': 0.015 }; // 금융위 고시
   const appliedRate = loanRate + (stressMap[stressDSR] ?? 0);
   const monthlyAvail = round(annualIncome * dtiLimit / 12 - monthlyOtherDebtInterest);
   const r = appliedRate / 12;
@@ -94,7 +94,11 @@ function calc_mortgage(input) {
     dsrLimit: input.dsrLimit,
     stressDSR: input.stressDSR,
   });
-  const absoluteCap = input.regionType === '수도권 규제·조정' ? 600000000 : null;
+  // 금융위 2025.10.16 시행: 수도권·규제지역 주담대 한도 차등 (15억↓ 6억 / 15~25억 4억 / 25억↑ 2억)
+  const isMetro = input.regionType === '수도권 규제·조정' || input.regionType === '수도권 비규제';
+  const absoluteCap = isMetro
+    ? (housePrice <= 1500000000 ? 600000000 : housePrice <= 2500000000 ? 400000000 : 200000000)
+    : null;
   let maxLoan = Math.min(ltvLimit, dsr.maxLoan);
   if (absoluteCap !== null) maxLoan = Math.min(maxLoan, absoluteCap);
   return { ltvLimit, dsrLimitAmount: dsr.maxLoan, absoluteCap, maxLoan };

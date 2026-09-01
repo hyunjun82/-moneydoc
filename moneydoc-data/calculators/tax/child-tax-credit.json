@@ -19,10 +19,10 @@
     }
   },
   "constants": {
-    "FIRST_KID": 150000,
-    "TWO_KIDS": 350000,
-    "THREE_KIDS": 650000,
-    "ADDITIONAL_PER_KID": 300000,
+    "FIRST_KID": 250000,
+    "TWO_KIDS": 550000,
+    "THREE_KIDS": 950000,
+    "ADDITIONAL_PER_KID": 400000,
     "NEWBORN_FIRST": 300000,
     "NEWBORN_SECOND": 500000,
     "NEWBORN_THIRD_PLUS": 700000
@@ -109,9 +109,9 @@
           "thirdPlusChildrenBorn": 0
         },
         "expected": {
-          "regularCredit": 150000,
+          "regularCredit": 250000,
           "newbornCredit": 300000,
-          "total": 450000
+          "total": 550000
         }
       },
       {
@@ -123,9 +123,9 @@
           "thirdPlusChildrenBorn": 0
         },
         "expected": {
-          "regularCredit": 350000,
+          "regularCredit": 550000,
           "newbornCredit": 500000,
-          "total": 850000
+          "total": 1050000
         }
       },
       {
@@ -137,9 +137,9 @@
           "thirdPlusChildrenBorn": 1
         },
         "expected": {
-          "regularCredit": 650000,
+          "regularCredit": 950000,
           "newbornCredit": 700000,
-          "total": 1350000
+          "total": 1650000
         }
       },
       {
@@ -151,9 +151,9 @@
           "thirdPlusChildrenBorn": 0
         },
         "expected": {
-          "regularCredit": 350000,
+          "regularCredit": 550000,
           "newbornCredit": 0,
-          "total": 350000
+          "total": 550000
         }
       },
       {
@@ -165,9 +165,9 @@
           "thirdPlusChildrenBorn": 0
         },
         "expected": {
-          "regularCredit": 1250000,
+          "regularCredit": 1750000,
           "newbornCredit": 0,
-          "total": 1250000
+          "total": 1750000
         }
       }
     ]

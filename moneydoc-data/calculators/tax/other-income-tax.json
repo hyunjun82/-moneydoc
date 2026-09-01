@@ -18,7 +18,8 @@
   "constants": {
     "EXPENSE_RATE": 0.6,
     "INCOME_TAX_RATE": 0.2,
-    "LOCAL_TAX_RATE": 0.02
+    "LOCAL_TAX_RATE": 0.02,
+    "MIN_TAXABLE": 50000
   },
   "formula": [
     {

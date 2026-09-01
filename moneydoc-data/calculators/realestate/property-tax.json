@@ -26,8 +26,10 @@
   },
   "constants": {
     "FAIR_MARKET_RATIO": 0.6,
-    "FAIR_MARKET_RATIO_ONE_HOME_UNDER_9EOK": 0.43,
-    "EDUCATION_TAX_RATE": 0.2
+    "EDUCATION_TAX_RATE": 0.2,
+    "FMR_ONE_HOME_UNDER_3EOK": 0.43,
+    "FMR_ONE_HOME_3_TO_6EOK": 0.44,
+    "FMR_ONE_HOME_OVER_6EOK": 0.45
   },
   "tables": {
     "brackets": {
@@ -56,7 +58,7 @@
       ]
     },
     "bracketsOneHomeUnder9Eok": {
-      "description": "1세대1주택 시가표준 9억 이하 특례세율 (지방세법 §111의2). 공정시장가액비율 43% 적용.",
+      "description": "1세대1주택 시가표준 9억 이하 특례세율 (지방세법 §111의2). 공정시장가액비율 3억 이하 43% / 3~6억 44% / 6억 초과 45% (시행령 §109).",
       "brackets": [
         {
           "upperBound": 60000000,
@@ -214,10 +216,10 @@
           "isOneHomeUnder9Eok": true
         },
         "expected": {
-          "taxableBase": 215000000,
-          "propertyTax": 250000,
-          "educationTax": 50000,
-          "totalTax": 300000
+          "taxableBase": 220000000,
+          "propertyTax": 260000,
+          "educationTax": 52000,
+          "totalTax": 312000
         }
       },
       {
@@ -227,10 +229,10 @@
           "isOneHomeUnder9Eok": true
         },
         "expected": {
-          "taxableBase": 344000000,
-          "propertyTax": 574000,
-          "educationTax": 114800,
-          "totalTax": 688800
+          "taxableBase": 360000000,
+          "propertyTax": 630000,
+          "educationTax": 126000,
+          "totalTax": 756000
         }
       }
     ]

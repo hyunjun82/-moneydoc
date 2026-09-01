@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { GuideList } from "@/components/GuideList";
 
 const CATEGORIES: {
   slug: string;
@@ -114,13 +115,6 @@ const POPULAR_CALCS: { cat: string; href: string; title: string; meta: string }[
   { cat: "정부지원금", href: "/government/unemployment-benefit/", title: "실업급여 일액 계산기", meta: "고용보험법 §46" },
 ];
 
-const GUIDES: { cat: string; href: string; title: string; meta: string }[] = [
-  { cat: "정부지원금", href: "/government/unemployment-benefit-guide/", title: "실업급여 조건·금액·신청방법 총정리", meta: "2026년 상한 68,100원 · 하한 66,048원" },
-  { cat: "정부지원금", href: "/government/earned-income-tax-credit-guide/", title: "근로장려금 지급일 2026, 8월 27일 지급", meta: "단독 165만 · 홑벌이 285만 · 맞벌이 330만" },
-  { cat: "정부지원금", href: "/government/earned-income-tax-credit-check/", title: "근로장려금 지급액 조회 방법", meta: "홈택스·손택스 · ARS 1544-9944" },
-  { cat: "정부지원금", href: "/government/youth-future-savings-guide/", title: "청년미래적금 계좌개설·가입조건·수령액", meta: "정부기여금 6% vs 12% 비교" },
-  { cat: "정부지원금", href: "/government/youth-future-savings-soldier/", title: "군인도 청년미래적금 가입되나요?", meta: "군장병급여만 있어도 가입 가능" },
-];
 
 export default function HomePage() {
   return (
@@ -187,24 +181,10 @@ export default function HomePage() {
         </section>
       </div>
 
-      <section className="section">
-        <div className="section-head">
-          <h2 className="section-title">읽을거리 · 가이드</h2>
-          <p className="section-sub">계산 결과를 실제로 어떻게 쓰는지, 법령 근거와 함께 정리했습니다</p>
-        </div>
-        <div className="articles">
-          {GUIDES.map((g, i) => (
-            <a key={g.href} href={g.href} className="article">
-              <span className="article-num">{String(i + 1).padStart(2, "0")}</span>
-              <div className="article-body">
-                <span className="article-cat">{g.cat}</span>
-                <h3 className="article-title">{g.title}</h3>
-                <span className="article-meta">{g.meta}</span>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
+      <GuideList
+        title="가이드"
+        sub="계산 기준과 근거 법령을 정리했습니다"
+      />
 
       <Footer />
     </>

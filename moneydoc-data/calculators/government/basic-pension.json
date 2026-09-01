@@ -11,8 +11,8 @@
   "subtitle": "65세 이상 소득인정액 기준 — 단독 34.97만 / 부부 55.95만 / 선정 단독 247만 (2026)",
   "slug": "basic-pension",
   "year": 2026,
-  "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastUpdated": "2026-09-01",
+  "lastVerified": "2026-09-01",
   "source": {
     "primary": {
       "agency": "보건복지부",
@@ -26,8 +26,8 @@
     "note": "2026년 기준연금액 단독 349,700원 (단독×1.6 = 부부 559,520원), 선정기준액 단독 2,470,000원 / 부부 3,952,000원."
   },
   "constants": {
-    "MAX_SINGLE_2026": 343700,
-    "MAX_COUPLE_2026": 553520,
+    "MAX_SINGLE_2026": 349700,
+    "MAX_COUPLE_2026": 559520,
     "INCOME_THRESHOLD_SINGLE": 2470000,
     "INCOME_THRESHOLD_COUPLE": 3952000
   },
@@ -71,8 +71,8 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-05-01",
-    "method": "기초연금법 §5, §8 + 2026 보건복지부 고시 적용. 감액(소득역전 방지)은 단순화로 미적용.",
+    "verifiedAt": "2026-09-01",
+    "method": "2026년 기초연금 기준: 단독 최대 349,700원 / 부부 최대 559,520원 (국민연금공단·국민연금 온에어), 선정기준액 단독 247만원 / 부부 395만 2,000원 (보건복지부 2026.1.2 결정).",
     "cases": [
       {
         "name": "Case 1 — 단독, 소득 100만 (자격 O)",
@@ -82,7 +82,7 @@
         },
         "expected": {
           "isEligible": true,
-          "monthlyPension": 343700
+          "monthlyPension": 349700
         }
       },
       {
@@ -104,7 +104,7 @@
         },
         "expected": {
           "isEligible": true,
-          "monthlyPension": 553520
+          "monthlyPension": 559520
         }
       },
       {
@@ -115,7 +115,7 @@
         },
         "expected": {
           "isEligible": true,
-          "monthlyPension": 343700
+          "monthlyPension": 349700
         }
       },
       {

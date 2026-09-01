@@ -13,8 +13,8 @@
     "조정대상지역 양도세"
   ],
   "year": 2026,
-  "lastUpdated": "2026-05-09",
-  "lastVerified": "2026-05-08",
+  "lastUpdated": "2026-09-01",
+  "lastVerified": "2026-09-01",
   "source": {
     "primary": {
       "agency": "국세청",
@@ -32,7 +32,9 @@
   "constants": {
     "NON_TAXABLE_LIMIT": 1200000000,
     "BASIC_DEDUCTION": 2500000,
-    "LOCAL_TAX_RATE": 0.1
+    "LOCAL_TAX_RATE": 0.1,
+    "SHORT_TERM_UNDER_1Y_RATE": 0.7,
+    "SHORT_TERM_1Y_TO_2Y_RATE": 0.6
   },
   "tables": {
     "incomeTaxBrackets": {
@@ -149,6 +151,23 @@
       "default": 10
     },
     {
+      "id": "adjustedArea",
+      "label": "취득 당시 조정대상지역",
+      "type": "select",
+      "default": "no",
+      "options": [
+        {
+          "value": "no",
+          "label": "아니오 (보유 2년만 충족하면 비과세)"
+        },
+        {
+          "value": "yes",
+          "label": "예 (보유 2년 + 거주 2년 필요)"
+        }
+      ],
+      "hint": "조정대상지역 주택만 거주 2년 요건이 추가됩니다 (소득세법 시행령 §154①)"
+    },
+    {
       "id": "homeCount",
       "label": "주택수 (다주택만)",
       "type": "number",
@@ -187,7 +206,7 @@
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-08",
-    "method": "3가지 모드 통합 (1home / multi / adjusted). 각 산식별 검증 완료. taxMode 입력으로 분기.",
+    "method": "3가지 모드 통합 (1home / multi / adjusted). 각 산식별 검증 완료. taxMode 입력으로 분기. | 2026.5.10 다주택 중과 부활 반영: 소득세법 §104⑦ 중과세율(+20/30%p) 및 §95② 장기보유특별공제 배제.",
     "cases": [
       {
         "name": "[1home] Case 1. 1세대1주택 비과세 (양도 10억, 취득 5억, 보유5년, 거주5년)",
@@ -259,7 +278,7 @@
         }
       },
       {
-        "name": "[1home] Case 4. 1세대1주택 거주 미달 (양도 9억, 취득 6억, 보유3년, 거주0년 → 비과세 X, 일반 LBC)",
+        "name": "[1home] Case 4. 1세대1주택 거주 미달 (조정대상지역, 양도 9억, 취득 6억, 보유3년, 거주0년 → 비과세 X, 일반 LBC)",
         "input": {
           "salePrice": 900000000,
           "acquisitionPrice": 600000000,
@@ -267,7 +286,8 @@
           "holdingYears": 3,
           "livedYears": 0,
           "isOneHome": true,
-          "taxMode": "1home"
+          "taxMode": "1home",
+          "adjustedArea": "yes"
         },
         "expected": {
           "gain": 300000000,
@@ -456,14 +476,14 @@
         },
         "expected": {
           "gain": 300000000,
-          "ltbcRate": 0.1,
-          "incomeAmount": 270000000,
-          "taxableBase": 267500000,
-          "baseTax": 81710000,
-          "surcharge": 53500000,
-          "totalIncomeTax": 135210000,
-          "localTax": 13521000,
-          "totalTax": 148731000
+          "ltbcRate": 0,
+          "incomeAmount": 300000000,
+          "taxableBase": 297500000,
+          "baseTax": 93110000,
+          "surcharge": 59500000,
+          "totalIncomeTax": 152610000,
+          "localTax": 15261000,
+          "totalTax": 167871000
         }
       },
       {
@@ -477,14 +497,14 @@
         },
         "expected": {
           "gain": 400000000,
-          "ltbcRate": 0.2,
-          "incomeAmount": 320000000,
-          "taxableBase": 317500000,
-          "baseTax": 101060000,
-          "surcharge": 95250000,
-          "totalIncomeTax": 196310000,
-          "localTax": 19631000,
-          "totalTax": 215941000
+          "ltbcRate": 0,
+          "incomeAmount": 400000000,
+          "taxableBase": 397500000,
+          "baseTax": 133060000,
+          "surcharge": 119250000,
+          "totalIncomeTax": 252310000,
+          "localTax": 25231000,
+          "totalTax": 277541000
         }
       },
       {
@@ -498,14 +518,14 @@
         },
         "expected": {
           "gain": 200000000,
-          "ltbcRate": 0.06,
-          "incomeAmount": 188000000,
-          "taxableBase": 185500000,
-          "baseTax": 50550000,
-          "surcharge": 37100000,
-          "totalIncomeTax": 87650000,
-          "localTax": 8765000,
-          "totalTax": 96415000
+          "ltbcRate": 0,
+          "incomeAmount": 200000000,
+          "taxableBase": 197500000,
+          "baseTax": 55110000,
+          "surcharge": 39500000,
+          "totalIncomeTax": 94610000,
+          "localTax": 9461000,
+          "totalTax": 104071000
         }
       },
       {
@@ -519,14 +539,14 @@
         },
         "expected": {
           "gain": 700000000,
-          "ltbcRate": 0.3,
-          "incomeAmount": 490000000,
-          "taxableBase": 487500000,
-          "baseTax": 169060000,
-          "surcharge": 146250000,
-          "totalIncomeTax": 315310000,
-          "localTax": 31531000,
-          "totalTax": 346841000
+          "ltbcRate": 0,
+          "incomeAmount": 700000000,
+          "taxableBase": 697500000,
+          "baseTax": 257010000,
+          "surcharge": 209250000,
+          "totalIncomeTax": 466260000,
+          "localTax": 46626000,
+          "totalTax": 512886000
         }
       },
       {
@@ -540,14 +560,14 @@
         },
         "expected": {
           "gain": 200000000,
-          "ltbcRate": 0.1,
-          "incomeAmount": 180000000,
-          "taxableBase": 177500000,
-          "baseTax": 47510000,
-          "surcharge": 53250000,
-          "totalIncomeTax": 100760000,
-          "localTax": 10076000,
-          "totalTax": 110836000
+          "ltbcRate": 0,
+          "incomeAmount": 200000000,
+          "taxableBase": 197500000,
+          "baseTax": 55110000,
+          "surcharge": 59250000,
+          "totalIncomeTax": 114360000,
+          "localTax": 11436000,
+          "totalTax": 125796000
         }
       }
     ]

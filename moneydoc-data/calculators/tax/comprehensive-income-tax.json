@@ -78,7 +78,7 @@
       ]
     },
     "childTaxCredit": {
-      "description": "2024년 1월 1일 이후 자녀세액공제 (8세 이상): 1자녀 15만 / 2자녀 35만 / 3자녀 65만 / 추가 자녀당 +30만",
+      "description": "자녀세액공제 (소득세법 제59조의2 제1항, 개정 2026. 4. 21.): 1명 25만 / 2명 55만 / 3명 이상 55만 + 2명 초과 1명당 40만. 대상은 기본공제대상 자녀·손자녀 중 13세 이상 (2025년 귀속분까지는 8세 이상).",
       "amounts": [
         {
           "kids": 0,
@@ -86,18 +86,18 @@
         },
         {
           "kids": 1,
-          "credit": 150000
+          "credit": 250000
         },
         {
           "kids": 2,
-          "credit": 350000
+          "credit": 550000
         },
         {
           "kids": 3,
-          "credit": 650000
+          "credit": 950000
         }
       ],
-      "additionalPerKid": 300000
+      "additionalPerKid": 400000
     }
   },
   "inputs": [
@@ -230,11 +230,11 @@
         "expected": {
           "taxableIncome": 94000000,
           "taxBeforeCredit": 17460000,
-          "childCredit": 350000,
+          "childCredit": 550000,
           "standardCredit": 70000,
-          "decisionTax": 17040000,
-          "localTax": 1704000,
-          "totalTax": 18744000
+          "decisionTax": 16840000,
+          "localTax": 1684000,
+          "totalTax": 18524000
         }
       },
       {

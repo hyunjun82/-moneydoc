@@ -11,8 +11,8 @@
     "대출 환승"
   ],
   "year": 2026,
-  "lastUpdated": "2026-05-09",
-  "lastVerified": "2026-05-07",
+  "lastUpdated": "2026-09-01",
+  "lastVerified": "2026-09-01",
   "source": {
     "primary": {
       "agency": "금융위원회",
@@ -75,7 +75,7 @@
   ],
   "verification": {
     "verified": true,
-    "verifiedAt": "2026-05-07",
+    "verifiedAt": "2026-09-01",
     "method": "PMT 산식 기반 기존 vs 신규 월상환·총상환 비교. 산식: M = P·r·(1+r)^n / ((1+r)^n−1). 독립 구현 0원 일치. 중도상환수수료·신규 인지세·보증료는 별도 계산 필요 (대환대출 인프라 2024 시행).",
     "cases": [
       {
@@ -90,9 +90,9 @@
           "oldMonthly": 584590,
           "newMonthly": 527837,
           "monthlySaving": 56753,
-          "oldTotal": 175377012,
-          "newTotal": 158351052,
-          "totalSaving": 17025960
+          "oldTotal": 175377027,
+          "newTotal": 158351021,
+          "totalSaving": 17026006
         },
         "govSource": {
           "adapter": "loan-formulas"
@@ -110,9 +110,9 @@
           "oldMonthly": 1432862,
           "newMonthly": 1265299,
           "monthlySaving": 167563,
-          "oldTotal": 343886908,
-          "newTotal": 303671701,
-          "totalSaving": 40215207
+          "oldTotal": 343886947,
+          "newTotal": 303671660,
+          "totalSaving": 40215287
         },
         "govSource": {
           "adapter": "loan-formulas"
@@ -130,9 +130,9 @@
           "oldMonthly": 1751897,
           "newMonthly": 1519855,
           "monthlySaving": 232042,
-          "oldTotal": 588637547,
-          "newTotal": 510671117,
-          "totalSaving": 77966430
+          "oldTotal": 588637758,
+          "newTotal": 510670974,
+          "totalSaving": 77966784
         },
         "govSource": {
           "adapter": "loan-formulas"
@@ -150,9 +150,9 @@
           "oldMonthly": 580542,
           "newMonthly": 542631,
           "monthlySaving": 37911,
-          "oldTotal": 69665088,
-          "newTotal": 65115767,
-          "totalSaving": 4549321
+          "oldTotal": 69665107,
+          "newTotal": 65115787,
+          "totalSaving": 4549320
         },
         "govSource": {
           "adapter": "loan-formulas"
@@ -170,9 +170,9 @@
           "oldMonthly": 2533427,
           "newMonthly": 2329787,
           "monthlySaving": 203640,
-          "oldTotal": 912033558,
-          "newTotal": 838723232,
-          "totalSaving": 73310326
+          "oldTotal": 912033393,
+          "newTotal": 838723143,
+          "totalSaving": 73310250
         },
         "govSource": {
           "adapter": "loan-formulas"

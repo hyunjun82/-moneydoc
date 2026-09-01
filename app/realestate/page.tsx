@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { GuideList } from "@/components/GuideList";
 
 export const metadata: Metadata = {
   title: "부동산 계산기 — 10종 | MoneyDoc",
@@ -99,6 +100,7 @@ export default function Page() {
         </div>
       </section>
 
+      <GuideList cat="realestate" sub="부동산 계산 기준을 법령 원문으로 확인해 정리했습니다" />
       <Footer />
     </>
   );

@@ -13,6 +13,7 @@ export type CompIncomeResult = {
   taxableIncome: number;
   taxBeforeCredit: number;
   childCredit: number;
+  standardCredit: number;
   decisionTax: number;
   localTax: number;
   totalTax: number;
@@ -21,6 +22,7 @@ export type CompIncomeResult = {
 const C = spec.constants as {
   PERSONAL_DEDUCTION: number;
   LOCAL_TAX_RATE: number;
+  STANDARD_TAX_CREDIT: number;
 };
 const T = spec.tables;
 
@@ -35,7 +37,7 @@ export function calcCompIncomeTax(input: CompIncomeInput): CompIncomeResult {
   let taxBeforeCredit = 0;
   for (const b of T.incomeTaxBrackets.brackets) {
     if (b.upperBound === null || taxableIncome <= b.upperBound) {
-      taxBeforeCredit = taxableIncome * b.rate - b.progressiveDeduction;
+      taxBeforeCredit = round(taxableIncome * b.rate - b.progressiveDeduction);
       break;
     }
   }
@@ -50,7 +52,9 @@ export function calcCompIncomeTax(input: CompIncomeInput): CompIncomeResult {
     childCredit = last.credit + (kids - last.kids) * T.childTaxCredit.additionalPerKid;
   }
 
-  const decisionTax = max(0, taxBeforeCredit - childCredit - extraTaxCredit);
+  // 표준세액공제 (소득세법 제59조의4 제9항 제2호 나목): 일반 종합소득자 연 7만원
+  const standardCredit = C.STANDARD_TAX_CREDIT || 70000;
+  const decisionTax = round(max(0, taxBeforeCredit - childCredit - standardCredit - extraTaxCredit));
   const localTax = round(decisionTax * C.LOCAL_TAX_RATE);
   const totalTax = decisionTax + localTax;
 
@@ -59,6 +63,7 @@ export function calcCompIncomeTax(input: CompIncomeInput): CompIncomeResult {
     taxableIncome,
     taxBeforeCredit,
     childCredit,
+    standardCredit,
     decisionTax,
     localTax,
     totalTax,

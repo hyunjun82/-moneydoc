@@ -51,3 +51,6 @@ components/GenericCalculator.tsx.backup
 /*.jpeg
 /*.jpg
 /*.png
+
+# 로컬 글 미리보기 (배포 제외)
+/public/_preview/

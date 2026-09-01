@@ -91,12 +91,25 @@ async function verifyOneCase(calc, c, engineFn, opts) {
   return { status: 'pass', calc: calc.slug, case: c.name };
 }
 
+// 어댑터가 참고용으로 덧붙이는 메타데이터 — 엔진 출력에는 없는 것이 정상
+const META_KEYS = new Set(['method', 'mode', 'note', 'source']);
+
 function compareFields(got, exp, tolerance = 0, prefix = '') {
   const diffs = [];
   for (const k of Object.keys(exp)) {
+    if (META_KEYS.has(k)) continue;
     const kk = prefix ? `${prefix}.${k}` : k;
     const e = exp[k], g = got?.[k];
-    if (g === undefined) continue;
+    if (g === undefined) {
+      // 기대한 출력 필드가 아예 없으면 조용히 넘어가지 않는다 (예: basic-pension monthlyPension)
+      diffs.push({ k: kk, got: 'undefined', exp: e, diff: 'missing' });
+      continue;
+    }
+    if (typeof g === 'number' && !Number.isFinite(g)) {
+      // NaN/Infinity는 비교식이 항상 false라 조용히 통과한다 → 명시적으로 불일치 처리
+      diffs.push({ k: kk, got: String(g), exp: e, diff: 'non-finite' });
+      continue;
+    }
     if (typeof e === 'number' && typeof g === 'number') {
       const d = Math.abs(g - e);
       if (d > tolerance) diffs.push({ k: kk, got: g, exp: e, diff: g - e });

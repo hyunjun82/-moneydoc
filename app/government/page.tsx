@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { GuideList } from "@/components/GuideList";
 
 export const metadata: Metadata = {
   title: "정부지원금 계산기 — 11종 | MoneyDoc",
@@ -29,7 +30,7 @@ export default function Page() {
         <a href="/government/basic-livelihood-eligibility/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">기초생활수급자 모의계산</h3>
-            <p className="cat-desc">생계 30% / 의료 40% / 주거 47% / 교육 50% 4종 급여 자격</p>
+            <p className="cat-desc">생계 32% / 의료 40% / 주거 48% / 교육 50% 4종 급여 자격</p>
             <span className="cat-count">정부 공식 산식</span>
           </div>
         </a>
@@ -150,6 +151,7 @@ export default function Page() {
         </div>
       </section>
 
+      <GuideList cat="government" sub="정부지원금 계산 기준을 법령 원문으로 확인해 정리했습니다" />
       <Footer />
     </>
   );
