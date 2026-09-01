@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "저축 계산기 — 5종 | MoneyDoc",
+  title: "저축 계산기 — 4종 | MoneyDoc",
   description: "적금·정기예금·자유적금·ISA·복리이자 계산기 — 단리/복리 일할 이자, 세후 수령액, 세전 환산 (금감원 finlife 검증, 1원 단위 정확)",
   alternates: { canonical: "/savings/" },
 };

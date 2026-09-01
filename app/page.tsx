@@ -12,7 +12,7 @@ const CATEGORIES: {
     slug: "savings",
     name: "저축",
     desc: "예금·적금, 어떤 게 나한테 더 유리할까",
-    count: 9,
+    count: 4,
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect width="20" height="14" x="2" y="5" rx="2" />
@@ -24,7 +24,7 @@ const CATEGORIES: {
     slug: "loan",
     name: "대출",
     desc: "한도·금리·중도상환수수료까지 한눈에",
-    count: 12,
+    count: 9,
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2v20" />
@@ -36,7 +36,7 @@ const CATEGORIES: {
     slug: "realestate",
     name: "부동산",
     desc: "전세·매매·임대차, 실수 없이 진행하기",
-    count: 14,
+    count: 10,
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -48,7 +48,7 @@ const CATEGORIES: {
     slug: "tax",
     name: "세금",
     desc: "연말정산·양도세·종합소득세 한 번에",
-    count: 18,
+    count: 15,
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -73,7 +73,7 @@ const CATEGORIES: {
     slug: "pension",
     name: "연금",
     desc: "국민·퇴직·개인연금, 내 노후 시뮬레이션",
-    count: 8,
+    count: 4,
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" />
@@ -85,7 +85,7 @@ const CATEGORIES: {
     slug: "law",
     name: "법률",
     desc: "상속·이혼·근로, 분쟁 전에 알아둘 것",
-    count: 7,
+    count: 6,
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 3v18M3 7h18M7 11l-3 5h6l-3-5zM17 11l-3 5h6l-3-5z" />
@@ -96,7 +96,7 @@ const CATEGORIES: {
     slug: "government",
     name: "정부지원금",
     desc: "놓치면 손해, 받을 수 있는 모든 혜택",
-    count: 17,
+    count: 11,
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6" />
@@ -142,7 +142,7 @@ export default function HomePage() {
           </h1>
           <p>
             연봉 실수령액부터 양도세·국민연금·실업급여까지. 정부 공식 산식으로
-            검증된 한국 금융·세금·법률 계산기 91종을 한 곳에서.
+            검증된 한국 금융·세금·법률 계산기 66종을 한 곳에서.
           </p>
         </div>
       </section>

@@ -12,11 +12,11 @@ const pretendard = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://moneydoc.kr"),
   title: {
-    default: "MoneyDoc — 한국 금융·세금·부동산 계산기 102종",
+    default: "MoneyDoc — 한국 금융·세금·부동산 계산기 66종",
     template: "%s | MoneyDoc",
   },
   description:
-    "정부 공식 산식으로 검증된 연봉 실수령액·종합소득세·양도세·국민연금·실업급여 계산기 102종. 오차 없는 계산, 명확한 출처.",
+    "정부 공식 산식으로 검증된 연봉 실수령액·종합소득세·양도세·국민연금·실업급여 계산기 66종. 오차 없는 계산, 명확한 출처.",
   openGraph: {
     type: "website",
     locale: "ko_KR",
@@ -39,7 +39,7 @@ const websiteJsonLd = {
   name: "MoneyDoc",
   alternateName: "머니닥",
   url: "https://moneydoc.kr",
-  description: "정부 공식 산식으로 검증된 한국 금융·세금·부동산·연금·법률 계산기 102종",
+  description: "정부 공식 산식으로 검증된 한국 금융·세금·부동산·연금·법률 계산기 66종",
   inLanguage: "ko",
   publisher: {
     "@type": "Organization",
