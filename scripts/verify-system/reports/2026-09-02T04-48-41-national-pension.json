@@ -1,0 +1,49 @@
+{
+  "label": "national-pension",
+  "timestamp": "2026-09-02T04-48-41",
+  "pass": 0,
+  "fail": 0,
+  "error": 5,
+  "results": [
+    {
+      "status": "error",
+      "calc": "national-pension",
+      "case": "Case 1 — 가입 20년, 평균소득 200만",
+      "adapter": "nps-simple-pension",
+      "detail": "어댑터 에러: 결과 파싱 실패",
+      "ts": 1788324523951
+    },
+    {
+      "status": "error",
+      "calc": "national-pension",
+      "case": "Case 2 — 가입 30년, 평균소득 300만",
+      "adapter": "nps-simple-pension",
+      "detail": "어댑터 에러: 결과 파싱 실패",
+      "ts": 1788324526116
+    },
+    {
+      "status": "error",
+      "calc": "national-pension",
+      "case": "Case 3 — 가입 40년, 평균소득 400만",
+      "adapter": "nps-simple-pension",
+      "detail": "어댑터 에러: 결과 파싱 실패",
+      "ts": 1788324527998
+    },
+    {
+      "status": "error",
+      "calc": "national-pension",
+      "case": "Case 4 — 가입 10년, 평균소득 200만",
+      "adapter": "nps-simple-pension",
+      "detail": "어댑터 에러: 결과 파싱 실패",
+      "ts": 1788324529685
+    },
+    {
+      "status": "error",
+      "calc": "national-pension",
+      "case": "Case 5 — 가입 25년, 평균소득 250만",
+      "adapter": "nps-simple-pension",
+      "detail": "어댑터 에러: 결과 파싱 실패",
+      "ts": 1788324534244
+    }
+  ]
+}

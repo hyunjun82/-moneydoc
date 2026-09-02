@@ -1,0 +1,39 @@
+{
+  "label": "business-income-tax-simple",
+  "timestamp": "2026-09-02T05-17-47",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 1 — 매출 3천만 / 경비 80% / 1인",
+      "ts": 1788326267040
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 2 — 매출 5천만 / 경비 65% / 2인",
+      "ts": 1788326267043
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 3 — 매출 1억 / 경비 50% / 4인",
+      "ts": 1788326267043
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 4 — 매출 2천만 / 경비 85% / 1인",
+      "ts": 1788326267043
+    },
+    {
+      "status": "pass",
+      "calc": "business-income-tax-simple",
+      "case": "Case 5 — 매출 2억 / 경비 60% / 1인",
+      "ts": 1788326267043
+    }
+  ]
+}

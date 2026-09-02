@@ -11,7 +11,7 @@
   ],
   "year": 2026,
   "lastUpdated": "2026-05-09",
-  "lastVerified": "2026-05-09",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "국세청",
@@ -24,7 +24,8 @@
     }
   },
   "constants": {
-    "LOCAL_TAX_RATE": 0
+    "LOCAL_TAX_RATE": 0,
+    "FILING_CREDIT_RATE": 0.03
   },
   "tables": {
     "deductions": {
@@ -155,7 +156,38 @@
         "expected": {
           "deduction": 50000000,
           "taxableBase": 50000000,
-          "tax": 5000000
+          "tax": 5000000,
+          "filingCredit": 150000,
+          "payableTax": 4850000
+        },
+        "govSource": {
+          "adapter": "hometax-gift-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4107050000&tm3lIdx=4107050200",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "deduction": 50000000,
+            "taxableBase": 50000000,
+            "tax": 5000000,
+            "filingCredit": 150000,
+            "payableTax": 4850000,
+            "source": "홈택스 증여세 간편계산",
+            "_ref": {
+              "form": {
+                "amount": 100000000,
+                "relation": "lineal_adult",
+                "btn": "btn_chid",
+                "row": "자",
+                "minor": false
+              },
+              "ratePct": 10,
+              "skipAdd": 0,
+              "dedSpouse": 0,
+              "dedLinealAsc": 50000000,
+              "dedLinealDesc": 0,
+              "dedOther": 0
+            }
+          }
         }
       },
       {
@@ -167,7 +199,38 @@
         "expected": {
           "deduction": 50000000,
           "taxableBase": 450000000,
-          "tax": 80000000
+          "tax": 80000000,
+          "filingCredit": 2400000,
+          "payableTax": 77600000
+        },
+        "govSource": {
+          "adapter": "hometax-gift-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4107050000&tm3lIdx=4107050200",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "deduction": 50000000,
+            "taxableBase": 450000000,
+            "tax": 80000000,
+            "filingCredit": 2400000,
+            "payableTax": 77600000,
+            "source": "홈택스 증여세 간편계산",
+            "_ref": {
+              "form": {
+                "amount": 500000000,
+                "relation": "lineal_adult",
+                "btn": "btn_chid",
+                "row": "자",
+                "minor": false
+              },
+              "ratePct": 20,
+              "skipAdd": 0,
+              "dedSpouse": 0,
+              "dedLinealAsc": 50000000,
+              "dedLinealDesc": 0,
+              "dedOther": 0
+            }
+          }
         }
       },
       {
@@ -179,7 +242,38 @@
         "expected": {
           "deduction": 600000000,
           "taxableBase": 400000000,
-          "tax": 70000000
+          "tax": 70000000,
+          "filingCredit": 2100000,
+          "payableTax": 67900000
+        },
+        "govSource": {
+          "adapter": "hometax-gift-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4107050000&tm3lIdx=4107050200",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "deduction": 600000000,
+            "taxableBase": 400000000,
+            "tax": 70000000,
+            "filingCredit": 2100000,
+            "payableTax": 67900000,
+            "source": "홈택스 증여세 간편계산",
+            "_ref": {
+              "form": {
+                "amount": 1000000000,
+                "relation": "spouse",
+                "btn": "btn_sps",
+                "row": null,
+                "minor": false
+              },
+              "ratePct": 20,
+              "skipAdd": 0,
+              "dedSpouse": 600000000,
+              "dedLinealAsc": 0,
+              "dedLinealDesc": 0,
+              "dedOther": 0
+            }
+          }
         }
       },
       {
@@ -191,7 +285,38 @@
         "expected": {
           "deduction": 50000000,
           "taxableBase": 250000000,
-          "tax": 40000000
+          "tax": 40000000,
+          "filingCredit": 1200000,
+          "payableTax": 38800000
+        },
+        "govSource": {
+          "adapter": "hometax-gift-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4107050000&tm3lIdx=4107050200",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "deduction": 50000000,
+            "taxableBase": 250000000,
+            "tax": 40000000,
+            "filingCredit": 1200000,
+            "payableTax": 38800000,
+            "source": "홈택스 증여세 간편계산",
+            "_ref": {
+              "form": {
+                "amount": 300000000,
+                "relation": "lineal_adult",
+                "btn": "btn_chid",
+                "row": "자",
+                "minor": false
+              },
+              "ratePct": 20,
+              "skipAdd": 0,
+              "dedSpouse": 0,
+              "dedLinealAsc": 50000000,
+              "dedLinealDesc": 0,
+              "dedOther": 0
+            }
+          }
         }
       },
       {
@@ -203,7 +328,38 @@
         "expected": {
           "deduction": 10000000,
           "taxableBase": 90000000,
-          "tax": 9000000
+          "tax": 9000000,
+          "filingCredit": 270000,
+          "payableTax": 8730000
+        },
+        "govSource": {
+          "adapter": "hometax-gift-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4107050000&tm3lIdx=4107050200",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "deduction": 10000000,
+            "taxableBase": 90000000,
+            "tax": 9000000,
+            "filingCredit": 270000,
+            "payableTax": 8730000,
+            "source": "홈택스 증여세 간편계산",
+            "_ref": {
+              "form": {
+                "amount": 100000000,
+                "relation": "sibling",
+                "btn": "btn_knfl",
+                "row": "형",
+                "minor": false
+              },
+              "ratePct": 10,
+              "skipAdd": 0,
+              "dedSpouse": 0,
+              "dedLinealAsc": 0,
+              "dedLinealDesc": 0,
+              "dedOther": 10000000
+            }
+          }
         }
       }
     ]

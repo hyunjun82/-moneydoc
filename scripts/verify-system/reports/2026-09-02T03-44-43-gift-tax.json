@@ -1,0 +1,39 @@
+{
+  "label": "gift-tax",
+  "timestamp": "2026-09-02T03-44-43",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 1 — 1억 자녀(성인) (공제 5천만)",
+      "ts": 1788320694772
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 2 — 5억 자녀(성인)",
+      "ts": 1788320706257
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 3 — 10억 배우자 (공제 6억)",
+      "ts": 1788320717114
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 4 — 3억 부모(성인 직계존속)",
+      "ts": 1788320728126
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 5 — 1억 형제 (공제 1천만)",
+      "ts": 1788320739031
+    }
+  ]
+}

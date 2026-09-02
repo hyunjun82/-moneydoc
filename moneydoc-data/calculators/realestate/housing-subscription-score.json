@@ -7,7 +7,7 @@
   "slug": "housing-subscription-score",
   "year": 2026,
   "lastUpdated": "2026-05-09",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "국토교통부",
@@ -44,7 +44,8 @@
       "type": "number",
       "min": 0,
       "max": 20,
-      "default": 5
+      "default": 5,
+      "hint": "무주택자 기준 (1년 미만 2점, 15년 이상 32점). 유주택자·만 30세 미만 미혼은 0점"
     },
     {
       "id": "dependents",
@@ -76,11 +77,12 @@
           "accountYears": 5
         },
         "expected": {
-          "noHomeScore": 10,
+          "noHomeScore": 12,
           "familyScore": 15,
           "accountScore": 7,
-          "total": 32
-        }
+          "total": 34
+        },
+        "lawSource": "주택공급에 관한 규칙 별표1 (청약가점 산정기준) — 청약홈 청약가점계산기 표와 동일 (무주택 1년 미만 2점~15년 이상 32점, 부양가족 0명 5점~6명 이상 35점, 통장 6개월 미만 1점~15년 이상 17점)"
       },
       {
         "name": "Case 2 — 무주택 15년 / 부양 4 / 통장 15년",
@@ -90,11 +92,12 @@
           "accountYears": 15
         },
         "expected": {
-          "noHomeScore": 30,
+          "noHomeScore": 32,
           "familyScore": 25,
           "accountScore": 17,
-          "total": 72
-        }
+          "total": 74
+        },
+        "lawSource": "주택공급에 관한 규칙 별표1 (청약가점 산정기준) — 청약홈 청약가점계산기 표와 동일 (무주택 1년 미만 2점~15년 이상 32점, 부양가족 0명 5점~6명 이상 35점, 통장 6개월 미만 1점~15년 이상 17점)"
       },
       {
         "name": "Case 3 — 무주택 10년 / 부양 3 / 통장 10년",
@@ -104,11 +107,12 @@
           "accountYears": 10
         },
         "expected": {
-          "noHomeScore": 20,
+          "noHomeScore": 22,
           "familyScore": 20,
           "accountScore": 12,
-          "total": 52
-        }
+          "total": 54
+        },
+        "lawSource": "주택공급에 관한 규칙 별표1 (청약가점 산정기준) — 청약홈 청약가점계산기 표와 동일 (무주택 1년 미만 2점~15년 이상 32점, 부양가족 0명 5점~6명 이상 35점, 통장 6개월 미만 1점~15년 이상 17점)"
       },
       {
         "name": "Case 4 — 무주택 0년 / 부양 0 / 통장 2년",
@@ -118,11 +122,12 @@
           "accountYears": 2
         },
         "expected": {
-          "noHomeScore": 0,
+          "noHomeScore": 2,
           "familyScore": 5,
           "accountScore": 4,
-          "total": 9
-        }
+          "total": 11
+        },
+        "lawSource": "주택공급에 관한 규칙 별표1 (청약가점 산정기준) — 청약홈 청약가점계산기 표와 동일 (무주택 1년 미만 2점~15년 이상 32점, 부양가족 0명 5점~6명 이상 35점, 통장 6개월 미만 1점~15년 이상 17점)"
       },
       {
         "name": "Case 5 — 무주택 8년 / 부양 5 / 통장 12년",
@@ -132,11 +137,12 @@
           "accountYears": 12
         },
         "expected": {
-          "noHomeScore": 16,
+          "noHomeScore": 18,
           "familyScore": 30,
           "accountScore": 14,
-          "total": 60
-        }
+          "total": 62
+        },
+        "lawSource": "주택공급에 관한 규칙 별표1 (청약가점 산정기준) — 청약홈 청약가점계산기 표와 동일 (무주택 1년 미만 2점~15년 이상 32점, 부양가족 0명 5점~6명 이상 35점, 통장 6개월 미만 1점~15년 이상 17점)"
       }
     ]
   },
@@ -336,7 +342,5 @@
       }
     ]
   },
-  "related": [
-
-  ]
+  "related": []
 }

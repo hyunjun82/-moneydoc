@@ -7,55 +7,110 @@
   "slug": "holding-tax-total",
   "year": 2026,
   "lastUpdated": "2026-05-09",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
-      "agency": "국세청·행정안전부",
-      "document": "지방세법 §111 + 종부세법 §8/§9",
-      "year": 2026
+      "agency": "국세청",
+      "document": "홈택스 종합부동산세 간이세액계산 (2026년 귀속분)",
+      "year": 2026,
+      "laws": [
+        "종합부동산세법 제8조 (과세표준)",
+        "종합부동산세법 제9조 (세율 및 세액, 재산세액 공제, 1세대1주택 세액공제)",
+        "종합부동산세법 시행령 제4조의2 (공제할 재산세액)",
+        "지방세법 제111조 (재산세 세율) 및 시행령 제109조 (공정시장가액비율)",
+        "농어촌특별세법 제5조 (종부세의 20%)"
+      ]
     }
   },
   "constants": {
-    "FAIR_MARKET_RATIO": 0.6,
-    "EDUCATION_TAX_RATE": 0.2,
     "ONE_HOME_DEDUCTION": 1200000000,
-    "GENERAL_DEDUCTION": 900000000
+    "GENERAL_DEDUCTION": 900000000,
+    "FAIR_MARKET_RATIO": 0.6,
+    "HEAVY_MIN_HOMES": 3,
+    "HEAVY_MIN_BASE": 1200000000,
+    "PROPERTY_FMR_MULTI": 0.6,
+    "PROPERTY_FMR_ONE_HOME_UNDER_3EOK": 0.43,
+    "PROPERTY_FMR_ONE_HOME_3_TO_6EOK": 0.44,
+    "PROPERTY_FMR_ONE_HOME_OVER_6EOK": 0.45,
+    "PROPERTY_TOP_RATE": 0.004,
+    "EDUCATION_TAX_RATE": 0.2,
+    "CREDIT_CAP": 0.8,
+    "RURAL_TAX_RATE": 0.2
   },
   "formula": [
     {
       "step": 1,
-      "name": "재산세",
-      "expr": "공시가 × 60% × 재산세 누진 (0.1~0.4%)"
+      "id": "propertyTax",
+      "name": "재산세 합계",
+      "expr": "주택별 floor(공시가 × 공정시장가액비율) 에 표준세율"
     },
     {
       "step": 2,
-      "name": "재산세 지방교육세",
+      "id": "propertyEduTax",
+      "name": "지방교육세",
       "expr": "재산세 × 20%"
     },
     {
       "step": 3,
-      "name": "종합부동산세",
-      "expr": "(공시가 - 공제) × 60% × 종부세 누진 (1주택 0.5~2.7% / 일반 0.5~5.0%)"
+      "id": "compPayable",
+      "name": "종부세 납부액",
+      "expr": "종부세 계산기와 동일 (재산세공제·세액공제·농특세 반영)"
     },
     {
       "step": 4,
-      "name": "총 보유세",
-      "expr": "재산세 + 교육세 + 종부세"
+      "id": "totalTax",
+      "name": "보유세 합계",
+      "expr": "재산세 + 지방교육세 + 종부세 납부액"
     }
   ],
   "inputs": [
     {
-      "id": "publicValue",
-      "label": "주택공시가 합계",
+      "id": "value1",
+      "label": "주택1 공시가격",
       "type": "currency",
       "min": 0,
-      "default": 1500000000
+      "max": 50000000000,
+      "step": 10000000,
+      "default": 1500000000,
+      "hint": "과세기준일(6월 1일) 공동주택·개별주택 공시가격"
     },
     {
-      "id": "isOneHome",
-      "label": "1세대 1주택자",
-      "type": "boolean",
-      "default": true
+      "id": "value2",
+      "label": "주택2 공시가격 (없으면 0)",
+      "type": "currency",
+      "min": 0,
+      "max": 50000000000,
+      "step": 10000000,
+      "default": 0,
+      "hint": "두 번째 주택. 1주택이면 0"
+    },
+    {
+      "id": "value3",
+      "label": "주택3 공시가격 (없으면 0)",
+      "type": "currency",
+      "min": 0,
+      "max": 50000000000,
+      "step": 10000000,
+      "default": 0,
+      "hint": "세 번째 주택. 3주택 이상이고 과세표준 12억 초과면 중과세율"
+    },
+    {
+      "id": "age",
+      "label": "연령 (1주택 세액공제)",
+      "type": "number",
+      "min": 0,
+      "max": 120,
+      "default": 50,
+      "hint": "과세기준일 기준 만 나이. 60·65·70세 이상 20/30/40%"
+    },
+    {
+      "id": "holdingYears",
+      "label": "보유연수 (1주택 세액공제)",
+      "type": "number",
+      "min": 0,
+      "max": 60,
+      "default": 3,
+      "hint": "5·10·15년 이상 20/40/50%. 고령자 공제와 합쳐 80% 한도"
     }
   ],
   "verification": {
@@ -64,74 +119,302 @@
     "method": "재산세 (지방세법 §111) + 종부세 (종부세법 §8, §9) 통합. 도시지역분 미포함.",
     "cases": [
       {
-        "name": "Case 1 — 1주택 공시가 15억",
+        "name": "Case 1 — 1주택 공시가 15억 (50세, 3년 — 세액공제 없음)",
         "input": {
-          "publicValue": 1500000000,
-          "isOneHome": true
+          "value1": 1500000000,
+          "value2": 0,
+          "value3": 0,
+          "age": 50,
+          "holdingYears": 3
         },
         "expected": {
+          "homes": 1,
+          "totalValue": 1500000000,
+          "isOneHome": true,
           "propertyTax": 2070000,
           "propertyEduTax": 414000,
-          "compTax": 900000,
-          "totalTax": 3384000
+          "compTax": 576001,
+          "ruralTax": 115200,
+          "compPayable": 691201,
+          "totalTax": 3175201
+        },
+        "govSource": {
+          "adapter": "hometax-comp-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4113000000&tm3lIdx=4113030000",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "propertyTax": 2070000,
+            "compTax": 576001,
+            "ruralTax": 115200,
+            "compPayable": 691201,
+            "source": "홈택스 종합부동산세 간이세액계산 (주택)",
+            "_ref": {
+              "form": {
+                "values": [
+                  1500000000
+                ],
+                "oneHome": true,
+                "birth": "1976-05-31",
+                "acq": "2023-05-31"
+              },
+              "totalValue": 1500000000,
+              "deduction": 1200000000,
+              "ratePct": 0.5,
+              "notice": null
+            }
+          }
         }
       },
       {
-        "name": "Case 2 — 다주택 공시가 20억",
+        "name": "Case 2 — 1주택 공시가 30억 (65세, 10년 — 고령자 30% + 장기보유 40%)",
         "input": {
-          "publicValue": 2000000000,
-          "isOneHome": false
+          "value1": 3000000000,
+          "value2": 0,
+          "value3": 0,
+          "age": 65,
+          "holdingYears": 10
         },
         "expected": {
-          "propertyTax": 4170000,
-          "propertyEduTax": 834000,
-          "compTax": 4200000,
-          "totalTax": 9204000
-        }
-      },
-      {
-        "name": "Case 3 — 1주택 공시가 8억 (종부세 X)",
-        "input": {
-          "publicValue": 800000000,
-          "isOneHome": true
-        },
-        "expected": {
-          "propertyTax": 746000,
-          "propertyEduTax": 149200,
-          "compTax": 0,
-          "totalTax": 895200
-        }
-      },
-      {
-        "name": "Case 4 — 1주택 공시가 30억",
-        "input": {
-          "publicValue": 3000000000,
-          "isOneHome": true
-        },
-        "expected": {
+          "homes": 1,
+          "totalValue": 3000000000,
+          "isOneHome": true,
           "propertyTax": 4770000,
           "propertyEduTax": 954000,
-          "compTax": 8400000,
-          "totalTax": 14124000
+          "compTax": 1936801,
+          "ruralTax": 387360,
+          "compPayable": 2324161,
+          "totalTax": 8048161
+        },
+        "govSource": {
+          "adapter": "hometax-comp-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4113000000&tm3lIdx=4113030000",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "propertyTax": 4770000,
+            "compTax": 1936801,
+            "ruralTax": 387360,
+            "compPayable": 2324161,
+            "source": "홈택스 종합부동산세 간이세액계산 (주택)",
+            "_ref": {
+              "form": {
+                "values": [
+                  3000000000
+                ],
+                "oneHome": true,
+                "birth": "1961-05-31",
+                "acq": "2016-05-31"
+              },
+              "totalValue": 3000000000,
+              "deduction": 1200000000,
+              "ratePct": 1,
+              "notice": null
+            }
+          }
         }
       },
       {
-        "name": "Case 5 — 다주택 공시가 40억",
+        "name": "Case 3 — 2주택 12억 + 8억 (기본세율)",
         "input": {
-          "publicValue": 4000000000,
-          "isOneHome": false
+          "value1": 1200000000,
+          "value2": 800000000,
+          "value3": 0,
+          "age": 50,
+          "holdingYears": 0
         },
         "expected": {
-          "propertyTax": 8970000,
-          "propertyEduTax": 1794000,
-          "compTax": 22800000,
-          "totalTax": 33564000
+          "homes": 2,
+          "totalValue": 2000000000,
+          "isOneHome": false,
+          "propertyTax": 3540000,
+          "propertyEduTax": 708000,
+          "compTax": 2855310,
+          "ruralTax": 571062,
+          "compPayable": 3426372,
+          "totalTax": 7674372
+        },
+        "govSource": {
+          "adapter": "hometax-comp-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4113000000&tm3lIdx=4113030000",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "propertyTax": 3540000,
+            "compTax": 2855310,
+            "ruralTax": 571062,
+            "compPayable": 3426372,
+            "source": "홈택스 종합부동산세 간이세액계산 (주택)",
+            "_ref": {
+              "form": {
+                "values": [
+                  1200000000,
+                  800000000
+                ],
+                "oneHome": false,
+                "birth": "1976-05-31",
+                "acq": null
+              },
+              "totalValue": 2000000000,
+              "deduction": 900000000,
+              "ratePct": 1,
+              "notice": null
+            }
+          }
+        }
+      },
+      {
+        "name": "Case 4 — 3주택 10억 + 6억 + 4억 (과표 12억 이하 → 기본세율)",
+        "input": {
+          "value1": 1000000000,
+          "value2": 600000000,
+          "value3": 400000000,
+          "age": 50,
+          "holdingYears": 0
+        },
+        "expected": {
+          "homes": 3,
+          "totalValue": 2000000000,
+          "isOneHome": false,
+          "propertyTax": 3000000,
+          "propertyEduTax": 600000,
+          "compTax": 3060432,
+          "ruralTax": 612086,
+          "compPayable": 3672518,
+          "totalTax": 7272518
+        },
+        "govSource": {
+          "adapter": "hometax-comp-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4113000000&tm3lIdx=4113030000",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "propertyTax": 3000000,
+            "compTax": 3060432,
+            "ruralTax": 612086,
+            "compPayable": 3672518,
+            "source": "홈택스 종합부동산세 간이세액계산 (주택)",
+            "_ref": {
+              "form": {
+                "values": [
+                  1000000000,
+                  600000000,
+                  400000000
+                ],
+                "oneHome": false,
+                "birth": "1976-05-31",
+                "acq": null
+              },
+              "totalValue": 2000000000,
+              "deduction": 900000000,
+              "ratePct": 1,
+              "notice": null
+            }
+          }
+        }
+      },
+      {
+        "name": "Case 5 — 1주택 공시가 8억 (70세, 15년 — 12억 이하라 종부세 없음)",
+        "input": {
+          "value1": 800000000,
+          "value2": 0,
+          "value3": 0,
+          "age": 70,
+          "holdingYears": 15
+        },
+        "expected": {
+          "homes": 1,
+          "totalValue": 800000000,
+          "isOneHome": true,
+          "propertyTax": 810000,
+          "propertyEduTax": 162000,
+          "compTax": 0,
+          "ruralTax": 0,
+          "compPayable": 0,
+          "totalTax": 972000
+        },
+        "govSource": {
+          "adapter": "hometax-comp-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4113000000&tm3lIdx=4113030000",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "propertyTax": 810000,
+            "compTax": 0,
+            "ruralTax": 0,
+            "compPayable": 0,
+            "source": "홈택스 종합부동산세 간이세액계산 (주택)",
+            "_ref": {
+              "form": {
+                "values": [
+                  800000000
+                ],
+                "oneHome": true,
+                "birth": "1956-05-31",
+                "acq": "2011-05-31"
+              },
+              "totalValue": 800000000,
+              "deduction": 1200000000,
+              "ratePct": 0,
+              "notice": null
+            }
+          }
+        }
+      },
+      {
+        "name": "Case 6 — 3주택 20억 + 15억 + 10억 (과표 12억 초과 → 중과세율)",
+        "input": {
+          "value1": 2000000000,
+          "value2": 1500000000,
+          "value3": 1000000000,
+          "age": 50,
+          "holdingYears": 0
+        },
+        "expected": {
+          "homes": 3,
+          "totalValue": 4500000000,
+          "isOneHome": false,
+          "propertyTax": 8910000,
+          "propertyEduTax": 1782000,
+          "compTax": 24258266,
+          "ruralTax": 4851653,
+          "compPayable": 29109919,
+          "totalTax": 39801919
+        },
+        "govSource": {
+          "adapter": "hometax-comp-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4113000000&tm3lIdx=4113030000",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "propertyTax": 8910000,
+            "compTax": 24258266,
+            "ruralTax": 4851653,
+            "compPayable": 29109919,
+            "source": "홈택스 종합부동산세 간이세액계산 (주택)",
+            "_ref": {
+              "form": {
+                "values": [
+                  2000000000,
+                  1500000000,
+                  1000000000
+                ],
+                "oneHome": false,
+                "birth": "1976-05-31",
+                "acq": null
+              },
+              "totalValue": 4500000000,
+              "deduction": 900000000,
+              "ratePct": 2,
+              "notice": null
+            }
+          }
         }
       }
     ]
   },
   "guide": {
-    "howToUse": "주택공시가 합계와 1주택자/다주택자 여부 입력 시 매년 보유세 합계 (재산세 + 지방교육세 + 종합부동산세) 자동 산출. 공시가 12억 1주택자는 종부세 0, 9억 다주택자도 종부세 0. 매년 6월 1일 기준.",
+    "howToUse": "주택별 공시가격(최대 3채)과 1주택자 연령·보유연수를 입력하면 매년 보유세 = 재산세 + 지방교육세(재산세의 20%) + 종합부동산세(농어촌특별세 20% 포함)를 계산합니다. 재산세는 표준세율, 1세대1주택은 공정시장가액비율 43~45%·그 외 60%. 도시지역분·지역자원시설세는 지자체별이라 제외. 과세기준일 매년 6월 1일.",
     "tables": {
       "보유세구성": [
         {
@@ -253,9 +536,9 @@
     },
     "tips": [
       "보유세 = 재산세(지방) + 도시계획세(지방) + 지방교육세(지방) + 종부세(국) + 농특세(국). 공시 10억 1주택자 = 약 203만/년.",
-      "공시가격 12억까지 1주택자 종부세 0원. 공시 15억부터 종부세 + 농특세 발생 (약 180만+).",
+      "1주택자는 공시가격 12억까지 종부세 0원. 공시 15억 1주택(50세·3년)이면 재산세 2,070,000 + 지방교육세 414,000 + 종부세·농특세 691,201 = 3,175,201원 (홈택스 간이세액계산 기준).",
       "1세대 1주택자 = 종부세 공제 17억까지 확장. 공시 17억 이하면 종부세 0원.",
-      "조정대상 2주택자 vs 1주택자 공시 10억. 보유세 1.4배 증가 (다주택 중과 + 공제 감소).",
+      "2주택자는 종부세 공제가 9억으로 줄고 1주택 세액공제가 없습니다. 세율은 기본 누진세율 그대로이며 중과세율은 3주택 이상 & 과세표준 12억 초과일 때만 적용됩니다.",
       "법인 명의는 공제 0 + 단일 세율. 개인 명의 대비 보유세 약 20배. 절대 비추.",
       "임대주택 등록 시 재산세 25~50% 감면. 지자체별 차등 (서울 25%, 부산 50% 등).",
       "공동명의는 1주택자 혜택 그대로 + 양도세 누진세율 부담 분산 효과."
@@ -267,7 +550,7 @@
       },
       {
         "q": "공시 15억 1주택자?",
-        "a": "재산세 등 343만 + 종부세 150만 + 농특세 30만 = 약 523만/년. 1세대 1주택자(요건) 공제 17억이면 종부세 0 → 343만."
+        "a": "1주택 공시 15억(50세·3년): 재산세 2,070,000 + 지방교육세 414,000 + 종부세 576,001 + 농특세 115,200 = 3,175,201원/년. 12억 이하 1주택은 종부세 없이 재산세·지방교육세만."
       },
       {
         "q": "보유세 줄이는 가장 큰 효과?",
@@ -299,5 +582,112 @@
     "property-tax",
     "comprehensive-real-estate-tax",
     "transfer-tax"
-  ]
+  ],
+  "tables": {
+    "bracketsBasic": {
+      "description": "기본 누진세율 (1·2주택, 3주택 이상은 과표 12억 이하) — 종부세법 §9①1",
+      "brackets": [
+        {
+          "upperBound": 300000000,
+          "rate": 0.005,
+          "progressiveDeduction": 0
+        },
+        {
+          "upperBound": 600000000,
+          "rate": 0.007,
+          "progressiveDeduction": 600000
+        },
+        {
+          "upperBound": 1200000000,
+          "rate": 0.01,
+          "progressiveDeduction": 2400000
+        },
+        {
+          "upperBound": 2500000000,
+          "rate": 0.013,
+          "progressiveDeduction": 6000000
+        },
+        {
+          "upperBound": 5000000000,
+          "rate": 0.015,
+          "progressiveDeduction": 11000000
+        },
+        {
+          "upperBound": 9400000000,
+          "rate": 0.02,
+          "progressiveDeduction": 36000000
+        },
+        {
+          "upperBound": null,
+          "rate": 0.027,
+          "progressiveDeduction": 101800000
+        }
+      ]
+    },
+    "bracketsHeavy": {
+      "description": "중과 누진세율 (3주택 이상 & 과세표준 12억 초과) — 종부세법 §9①2",
+      "brackets": [
+        {
+          "upperBound": 300000000,
+          "rate": 0.005,
+          "progressiveDeduction": 0
+        },
+        {
+          "upperBound": 600000000,
+          "rate": 0.007,
+          "progressiveDeduction": 600000
+        },
+        {
+          "upperBound": 1200000000,
+          "rate": 0.01,
+          "progressiveDeduction": 2400000
+        },
+        {
+          "upperBound": 2500000000,
+          "rate": 0.02,
+          "progressiveDeduction": 14400000
+        },
+        {
+          "upperBound": 5000000000,
+          "rate": 0.03,
+          "progressiveDeduction": 39400000
+        },
+        {
+          "upperBound": 9400000000,
+          "rate": 0.04,
+          "progressiveDeduction": 89400000
+        },
+        {
+          "upperBound": null,
+          "rate": 0.05,
+          "progressiveDeduction": 183400000
+        }
+      ]
+    },
+    "propertyTaxBrackets": {
+      "description": "주택 재산세 표준세율 (지방세법 §111①3, 과세표준 기준)",
+      "brackets": [
+        {
+          "upperBound": 60000000,
+          "rate": 0.001,
+          "progressiveDeduction": 0
+        },
+        {
+          "upperBound": 150000000,
+          "rate": 0.0015,
+          "progressiveDeduction": 30000
+        },
+        {
+          "upperBound": 300000000,
+          "rate": 0.0025,
+          "progressiveDeduction": 180000
+        },
+        {
+          "upperBound": null,
+          "rate": 0.004,
+          "progressiveDeduction": 630000
+        }
+      ]
+    }
+  }
 }

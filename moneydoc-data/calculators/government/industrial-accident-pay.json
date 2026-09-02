@@ -7,7 +7,7 @@
   "slug": "industrial-accident-pay",
   "year": 2026,
   "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "근로복지공단",
@@ -69,7 +69,8 @@
           "dailyAvgWage": 100000,
           "dailyBenefit": 82560,
           "totalBenefit": 2476800
-        }
+        },
+        "lawSource": "산업재해보상보험법 제52조 (휴업급여 평균임금의 70%), 제54조 (최저보상: 최저임금 일액 10,320×8 = 82,560원, 2026)"
       },
       {
         "name": "Case 2 — 월 400만 / 90일",
@@ -81,7 +82,8 @@
           "dailyAvgWage": 133333,
           "dailyBenefit": 93333,
           "totalBenefit": 8399970
-        }
+        },
+        "lawSource": "산업재해보상보험법 제52조 (휴업급여 평균임금의 70%), 제54조 (최저보상: 최저임금 일액 10,320×8 = 82,560원, 2026)"
       },
       {
         "name": "Case 3 — 월 250만 / 60일",
@@ -93,7 +95,8 @@
           "dailyAvgWage": 83333,
           "dailyBenefit": 82560,
           "totalBenefit": 4953600
-        }
+        },
+        "lawSource": "산업재해보상보험법 제52조 (휴업급여 평균임금의 70%), 제54조 (최저보상: 최저임금 일액 10,320×8 = 82,560원, 2026)"
       },
       {
         "name": "Case 4 — 월 500만 / 180일",
@@ -105,7 +108,8 @@
           "dailyAvgWage": 166667,
           "dailyBenefit": 116667,
           "totalBenefit": 21000060
-        }
+        },
+        "lawSource": "산업재해보상보험법 제52조 (휴업급여 평균임금의 70%), 제54조 (최저보상: 최저임금 일액 10,320×8 = 82,560원, 2026)"
       },
       {
         "name": "Case 5 — 월 600만 / 365일",
@@ -117,7 +121,8 @@
           "dailyAvgWage": 200000,
           "dailyBenefit": 140000,
           "totalBenefit": 51100000
-        }
+        },
+        "lawSource": "산업재해보상보험법 제52조 (휴업급여 평균임금의 70%), 제54조 (최저보상: 최저임금 일액 10,320×8 = 82,560원, 2026)"
       }
     ]
   },

@@ -7,7 +7,7 @@
   "slug": "unpaid-wages",
   "year": 2026,
   "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "고용노동부",
@@ -63,7 +63,8 @@
           "unpaidAmount": 3000000,
           "interest": 49315,
           "total": 3049315
-        }
+        },
+        "lawSource": "근로기준법 제37조 및 시행령 제17조 (미지급 임금 지연이자 연 20%)"
       },
       {
         "name": "Case 2 — 500만 / 90일",
@@ -75,7 +76,8 @@
           "unpaidAmount": 5000000,
           "interest": 246575,
           "total": 5246575
-        }
+        },
+        "lawSource": "근로기준법 제37조 및 시행령 제17조 (미지급 임금 지연이자 연 20%)"
       },
       {
         "name": "Case 3 — 1천만 / 180일",
@@ -87,7 +89,8 @@
           "unpaidAmount": 10000000,
           "interest": 986301,
           "total": 10986301
-        }
+        },
+        "lawSource": "근로기준법 제37조 및 시행령 제17조 (미지급 임금 지연이자 연 20%)"
       },
       {
         "name": "Case 4 — 200만 / 14일 (최소)",
@@ -99,7 +102,8 @@
           "unpaidAmount": 2000000,
           "interest": 15342,
           "total": 2015342
-        }
+        },
+        "lawSource": "근로기준법 제37조 및 시행령 제17조 (미지급 임금 지연이자 연 20%)"
       },
       {
         "name": "Case 5 — 800만 / 365일",
@@ -111,7 +115,8 @@
           "unpaidAmount": 8000000,
           "interest": 1600000,
           "total": 9600000
-        }
+        },
+        "lawSource": "근로기준법 제37조 및 시행령 제17조 (미지급 임금 지연이자 연 20%)"
       }
     ]
   },

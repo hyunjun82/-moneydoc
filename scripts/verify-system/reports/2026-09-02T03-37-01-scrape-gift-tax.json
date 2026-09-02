@@ -1,0 +1,46 @@
+{
+  "label": "scrape-gift-tax",
+  "timestamp": "2026-09-02T03-37-01",
+  "pass": 3,
+  "fail": 0,
+  "error": 2,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 1 — 1억 자녀(성인) (공제 5천만)",
+      "adapter": "hometax-gift-tax",
+      "ts": 1788320232215
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 2 — 5억 자녀(성인)",
+      "adapter": "hometax-gift-tax",
+      "ts": 1788320242959
+    },
+    {
+      "status": "error",
+      "calc": "gift-tax",
+      "case": "Case 3 — 10억 배우자 (공제 6억)",
+      "adapter": "hometax-gift-tax",
+      "detail": "조회 실패",
+      "ts": 1788320298037
+    },
+    {
+      "status": "pass",
+      "calc": "gift-tax",
+      "case": "Case 4 — 3억 부모(성인 직계존속)",
+      "adapter": "hometax-gift-tax",
+      "ts": 1788320309253
+    },
+    {
+      "status": "error",
+      "calc": "gift-tax",
+      "case": "Case 5 — 1억 형제 (공제 1천만)",
+      "adapter": "hometax-gift-tax",
+      "detail": "조회 실패",
+      "ts": 1788320332019
+    }
+  ]
+}

@@ -13,7 +13,7 @@
   ],
   "year": 2026,
   "lastUpdated": "2026-05-09",
-  "lastVerified": "2026-05-09",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "행정안전부",
@@ -102,6 +102,46 @@
           "autoTax": 80000,
           "eduTax": 24000,
           "totalTax": 104000
+        },
+        "govSource": {
+          "adapter": "wetax-auto-tax",
+          "url": "https://www.wetax.go.kr/tcp/loi/J030801M01.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "autoTax": 80000,
+            "eduTax": 24000,
+            "totalTax": 104000,
+            "discountRate": 0,
+            "source": "위택스 지방세 미리계산 (자동차세)",
+            "_ref": {
+              "form": {
+                "cd": "10",
+                "use": "vehUsgClCd2",
+                "y": "2026",
+                "m": "01",
+                "cy": "2026",
+                "cc": "1000"
+              },
+              "half": {
+                "auto": [
+                  80000,
+                  0,
+                  80000
+                ],
+                "edu": [
+                  24000,
+                  0,
+                  24000
+                ],
+                "sum": [
+                  104000,
+                  0,
+                  104000
+                ]
+              }
+            }
+          }
         }
       },
       {
@@ -117,6 +157,46 @@
           "autoTax": 224000,
           "eduTax": 67200,
           "totalTax": 291200
+        },
+        "govSource": {
+          "adapter": "wetax-auto-tax",
+          "url": "https://www.wetax.go.kr/tcp/loi/J030801M01.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "autoTax": 224000,
+            "eduTax": 67200,
+            "totalTax": 291200,
+            "discountRate": 0,
+            "source": "위택스 지방세 미리계산 (자동차세)",
+            "_ref": {
+              "form": {
+                "cd": "10",
+                "use": "vehUsgClCd2",
+                "y": "2026",
+                "m": "01",
+                "cy": "2026",
+                "cc": "1600"
+              },
+              "half": {
+                "auto": [
+                  112000,
+                  112000,
+                  224000
+                ],
+                "edu": [
+                  33600,
+                  33600,
+                  67200
+                ],
+                "sum": [
+                  145600,
+                  145600,
+                  291200
+                ]
+              }
+            }
+          }
         }
       },
       {
@@ -132,6 +212,46 @@
           "autoTax": 400000,
           "eduTax": 120000,
           "totalTax": 520000
+        },
+        "govSource": {
+          "adapter": "wetax-auto-tax",
+          "url": "https://www.wetax.go.kr/tcp/loi/J030801M01.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "autoTax": 400000,
+            "eduTax": 120000,
+            "totalTax": 520000,
+            "discountRate": 0,
+            "source": "위택스 지방세 미리계산 (자동차세)",
+            "_ref": {
+              "form": {
+                "cd": "10",
+                "use": "vehUsgClCd2",
+                "y": "2026",
+                "m": "01",
+                "cy": "2026",
+                "cc": "2000"
+              },
+              "half": {
+                "auto": [
+                  200000,
+                  200000,
+                  400000
+                ],
+                "edu": [
+                  60000,
+                  60000,
+                  120000
+                ],
+                "sum": [
+                  260000,
+                  260000,
+                  520000
+                ]
+              }
+            }
+          }
         }
       },
       {
@@ -145,12 +265,107 @@
           "baseTax": 399800,
           "discountRate": 0.2,
           "autoTax": 319840,
-          "eduTax": 95952,
-          "totalTax": 415792
+          "eduTax": 95940,
+          "totalTax": 415780
+        },
+        "govSource": {
+          "adapter": "wetax-auto-tax",
+          "url": "https://www.wetax.go.kr/tcp/loi/J030801M01.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "autoTax": 319840,
+            "eduTax": 95940,
+            "totalTax": 415780,
+            "discountRate": 0.2,
+            "source": "위택스 지방세 미리계산 (자동차세)",
+            "_ref": {
+              "form": {
+                "cd": "10",
+                "use": "vehUsgClCd2",
+                "y": "2021",
+                "m": "01",
+                "cy": "2026",
+                "cc": "1999"
+              },
+              "half": {
+                "auto": [
+                  159920,
+                  159920,
+                  319840
+                ],
+                "edu": [
+                  47970,
+                  47970,
+                  95940
+                ],
+                "sum": [
+                  207890,
+                  207890,
+                  415780
+                ]
+              }
+            }
+          }
         }
       },
       {
-        "name": "Case 5 — 2,000cc 12년 경감 (비영업용)",
+        "name": "Case 5 — 2,000cc 9년 경감 40% (비영업용)",
+        "input": {
+          "engineCC": 2000,
+          "vehicleAge": 9,
+          "isCommercial": false
+        },
+        "expected": {
+          "baseTax": 400000,
+          "discountRate": 0.4,
+          "autoTax": 240000,
+          "eduTax": 72000,
+          "totalTax": 312000
+        },
+        "govSource": {
+          "adapter": "wetax-auto-tax",
+          "url": "https://www.wetax.go.kr/tcp/loi/J030801M01.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "autoTax": 240000,
+            "eduTax": 72000,
+            "totalTax": 312000,
+            "discountRate": 0.4,
+            "source": "위택스 지방세 미리계산 (자동차세)",
+            "_ref": {
+              "form": {
+                "cd": "10",
+                "use": "vehUsgClCd2",
+                "y": "2017",
+                "m": "01",
+                "cy": "2026",
+                "cc": "2000"
+              },
+              "half": {
+                "auto": [
+                  120000,
+                  120000,
+                  240000
+                ],
+                "edu": [
+                  36000,
+                  36000,
+                  72000
+                ],
+                "sum": [
+                  156000,
+                  156000,
+                  312000
+                ]
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Case 6 — 2,000cc 12년 경감 50% 상한 (비영업용)",
         "input": {
           "engineCC": 2000,
           "vehicleAge": 12,
@@ -162,7 +377,8 @@
           "autoTax": 200000,
           "eduTax": 60000,
           "totalTax": 260000
-        }
+        },
+        "lawSource": "지방세법 시행령 제125조 (차령 3년차부터 매년 5% 경감, 12년 이상 50%) — 위택스 미리계산은 최초등록 2017년 이후만 입력 가능해 정부 도구 대조 제외"
       }
     ]
   },

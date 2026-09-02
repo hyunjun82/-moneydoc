@@ -1,0 +1,39 @@
+{
+  "label": "four-major-insurance",
+  "timestamp": "2026-09-02T04-39-28",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 1 — 월 보수 200만",
+      "ts": 1788323968762
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 2 — 월 보수 300만",
+      "ts": 1788323968765
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 3 — 월 보수 500만",
+      "ts": 1788323968765
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 4 — 월 보수 700만 (NP 상한 적용)",
+      "ts": 1788323968765
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 5 — 월 보수 1000만 (NP 상한)",
+      "ts": 1788323968765
+    }
+  ]
+}

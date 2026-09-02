@@ -1,0 +1,53 @@
+{
+  "label": "four-major-insurance",
+  "timestamp": "2026-09-02T04-38-30",
+  "pass": 3,
+  "fail": 2,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 1 — 월 보수 200만",
+      "ts": 1788323913166
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 2 — 월 보수 300만",
+      "ts": 1788323916659
+    },
+    {
+      "status": "fail",
+      "calc": "four-major-insurance",
+      "case": "Case 3 — 월 보수 500만",
+      "adapter": "insure4-premium",
+      "detail": "엔진 ≠ insure4-premium (tolerance ±0)",
+      "diffs": [
+        "employeeLTC: engine=23610 vs gov=23620 (Δ-10)",
+        "employerLTC: engine=23610 vs gov=23620 (Δ-10)",
+        "employeeTotal: engine=485860 vs gov=485870 (Δ-10)"
+      ],
+      "ts": 1788323919244
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 4 — 월 보수 700만 (NP 상한 적용)",
+      "ts": 1788323921023
+    },
+    {
+      "status": "fail",
+      "calc": "four-major-insurance",
+      "case": "Case 5 — 월 보수 1000만 (NP 상한)",
+      "adapter": "insure4-premium",
+      "detail": "엔진 ≠ insure4-premium (tolerance ±0)",
+      "diffs": [
+        "employeeLTC: engine=47230 vs gov=47240 (Δ-10)",
+        "employerLTC: engine=47230 vs gov=47240 (Δ-10)",
+        "employeeTotal: engine=809750 vs gov=809760 (Δ-10)"
+      ],
+      "ts": 1788323924330
+    }
+  ]
+}

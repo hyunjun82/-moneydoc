@@ -5,7 +5,7 @@ import spec from "@/data/calculators/tax/child-tax-credit.json";
 
 export const metadata: Metadata = {
   title: "자녀세액공제 계산기 — 2026년 기준",
-  description: "8세~20세 부양 자녀 수와 당해 출산·입양 자녀 수를 입력하면 자녀세액공제 총액이 산출됩니다.",
+  description: "만 9세~20세(2026년 귀속) 부양 자녀 수와 당해 출산·입양 자녀 수를 입력하면 자녀세액공제 총액이 산출됩니다.",
   alternates: { canonical: "/tax/child-tax-credit/" },
 };
 

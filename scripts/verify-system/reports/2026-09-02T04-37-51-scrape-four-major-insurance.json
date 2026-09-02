@@ -1,0 +1,44 @@
+{
+  "label": "scrape-four-major-insurance",
+  "timestamp": "2026-09-02T04-37-51",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 1 — 월 보수 200만",
+      "adapter": "insure4-premium",
+      "ts": 1788323875835
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 2 — 월 보수 300만",
+      "adapter": "insure4-premium",
+      "ts": 1788323877401
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 3 — 월 보수 500만",
+      "adapter": "insure4-premium",
+      "ts": 1788323878858
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 4 — 월 보수 700만 (NP 상한 적용)",
+      "adapter": "insure4-premium",
+      "ts": 1788323880269
+    },
+    {
+      "status": "pass",
+      "calc": "four-major-insurance",
+      "case": "Case 5 — 월 보수 1000만 (NP 상한)",
+      "adapter": "insure4-premium",
+      "ts": 1788323881798
+    }
+  ]
+}

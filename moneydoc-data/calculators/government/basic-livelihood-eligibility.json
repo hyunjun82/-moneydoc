@@ -11,7 +11,7 @@
   ],
   "year": 2026,
   "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "보건복지부",
@@ -111,7 +111,8 @@
             "threshold": 1282119,
             "isEligible": true
           }
-        }
+        },
+        "lawSource": "보건복지부 2026년 기준 중위소득 및 급여별 선정기준 (생계 32%·의료 40%·주거 48%·교육 50%) https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&list_no=1487098"
       },
       {
         "name": "Case 2 — 2인 / 110만 (4종)",
@@ -137,7 +138,8 @@
             "threshold": 2099646,
             "isEligible": true
           }
-        }
+        },
+        "lawSource": "보건복지부 2026년 기준 중위소득 및 급여별 선정기준 (생계 32%·의료 40%·주거 48%·교육 50%) https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&list_no=1487098"
       },
       {
         "name": "Case 3 — 3인 / 150만 (4종 모두 — 생계 한도 171만)",
@@ -163,7 +165,8 @@
             "threshold": 2679518,
             "isEligible": true
           }
-        }
+        },
+        "lawSource": "보건복지부 2026년 기준 중위소득 및 급여별 선정기준 (생계 32%·의료 40%·주거 48%·교육 50%) https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&list_no=1487098"
       },
       {
         "name": "Case 4 — 4인 / 270만 (주거·교육만 O)",
@@ -189,7 +192,8 @@
             "threshold": 3247369,
             "isEligible": true
           }
-        }
+        },
+        "lawSource": "보건복지부 2026년 기준 중위소득 및 급여별 선정기준 (생계 32%·의료 40%·주거 48%·교육 50%) https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&list_no=1487098"
       },
       {
         "name": "Case 5 — 4인 / 350만 (모두 X)",
@@ -215,7 +219,8 @@
             "threshold": 3247369,
             "isEligible": false
           }
-        }
+        },
+        "lawSource": "보건복지부 2026년 기준 중위소득 및 급여별 선정기준 (생계 32%·의료 40%·주거 48%·교육 50%) https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&list_no=1487098"
       }
     ]
   },

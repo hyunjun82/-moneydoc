@@ -17,6 +17,19 @@ import { getAdapter, AdapterError } from './adapters/_base.mjs';
 
 import './adapters/ezloan.mjs';
 import './adapters/kinfa.mjs';
+import './adapters/hometax-simplified-tax.mjs';
+import './adapters/wetax-acquisition-tax.mjs';
+import './adapters/hometax-transfer-tax.mjs';
+import './adapters/hometax-inheritance-tax.mjs';
+import './adapters/hometax-gift-tax.mjs';
+import './adapters/hometax-comp-tax.mjs';
+import './adapters/work24-unemployment.mjs';
+import './adapters/moel-severance.mjs';
+import './adapters/insure4-premium.mjs';
+import './adapters/nps-simple-pension.mjs';
+import './adapters/work24-parental-leave.mjs';
+import './adapters/work24-maternity-leave.mjs';
+import './adapters/wetax-auto-tax.mjs';
 import './adapters/budongsan-loan.mjs';
 import './adapters/loan-formulas.mjs';
 
@@ -92,7 +105,7 @@ async function verifyOneCase(calc, c, engineFn, opts) {
 }
 
 // 어댑터가 참고용으로 덧붙이는 메타데이터 — 엔진 출력에는 없는 것이 정상
-const META_KEYS = new Set(['method', 'mode', 'note', 'source']);
+const META_KEYS = new Set(['method', 'mode', 'note', 'source', '_ref']);
 
 function compareFields(got, exp, tolerance = 0, prefix = '') {
   const diffs = [];

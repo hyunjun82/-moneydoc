@@ -1,0 +1,16 @@
+{
+  "label": "scrape-auto-tax",
+  "timestamp": "2026-09-02T05-06-02",
+  "pass": 1,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 5 — 2,000cc 9년 경감 40% (비영업용)",
+      "adapter": "wetax-auto-tax",
+      "ts": 1788325564546
+    }
+  ]
+}

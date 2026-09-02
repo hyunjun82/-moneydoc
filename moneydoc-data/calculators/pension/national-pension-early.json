@@ -7,7 +7,7 @@
   "slug": "national-pension-early",
   "year": 2026,
   "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "국민연금공단",
@@ -68,7 +68,8 @@
           "yearsEarly": 5,
           "reductionRate": 0.3,
           "reducedPension": 700000
-        }
+        },
+        "lawSource": "국민연금법 제63조의2 (조기노령연금: 1개월당 0.5%, 1년당 6%, 최대 5년 30% 감액)"
       },
       {
         "name": "Case 2 — 정상 80만 / 62세",
@@ -80,7 +81,8 @@
           "yearsEarly": 3,
           "reductionRate": 0.18,
           "reducedPension": 656000
-        }
+        },
+        "lawSource": "국민연금법 제63조의2 (조기노령연금: 1개월당 0.5%, 1년당 6%, 최대 5년 30% 감액)"
       },
       {
         "name": "Case 3 — 정상 150만 / 60세",
@@ -92,7 +94,8 @@
           "yearsEarly": 5,
           "reductionRate": 0.3,
           "reducedPension": 1050000
-        }
+        },
+        "lawSource": "국민연금법 제63조의2 (조기노령연금: 1개월당 0.5%, 1년당 6%, 최대 5년 30% 감액)"
       },
       {
         "name": "Case 4 — 정상 60만 / 64세 (1년)",
@@ -104,7 +107,8 @@
           "yearsEarly": 1,
           "reductionRate": 0.06,
           "reducedPension": 564000
-        }
+        },
+        "lawSource": "국민연금법 제63조의2 (조기노령연금: 1개월당 0.5%, 1년당 6%, 최대 5년 30% 감액)"
       },
       {
         "name": "Case 5 — 정상 200만 / 61세",
@@ -116,7 +120,8 @@
           "yearsEarly": 4,
           "reductionRate": 0.24,
           "reducedPension": 1520000
-        }
+        },
+        "lawSource": "국민연금법 제63조의2 (조기노령연금: 1개월당 0.5%, 1년당 6%, 최대 5년 30% 감액)"
       }
     ]
   },

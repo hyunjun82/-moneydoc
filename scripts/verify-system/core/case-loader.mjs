@@ -47,12 +47,7 @@ function inferDefaultAdapter(category, json) {
     if (json.slug === 'mortgage-loan-limit') return 'kinfa';
     return 'kinfa';
   }
-  if (category === 'tax') return 'hometax';
-  if (category === 'pension') return 'nps';
-  if (category === 'savings') return 'finlife';
-  if (category === 'realestate') return 'molit';
-  if (category === 'insurance') return 'fourinsure';
-  if (category === 'government') return 'gov-portal';
+  // 그 외 카테고리는 케이스별 govSource.adapter 로만 지정한다 (예전 자리표시자 hometax/nps/molit 등은 실제 어댑터가 없어 제거)
   return null;
 }
 

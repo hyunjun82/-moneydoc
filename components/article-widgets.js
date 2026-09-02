@@ -44,14 +44,16 @@ render();
 function $(i){return document.getElementById(i)}
 function won(n){return n.toLocaleString('ko-KR')}
 function cut(n,u){u=u||10;return Math.floor(n/u)*u}
+function fl(x){return Math.floor(Math.round(x*1e6)/1e6)} /* 3,000,000×0.009=26999.999… 부동소수 오차 차단 */
 function ins(m,p){
   var base=m<p.npf?p.npf:(m>=p.npc?p.npc:m);
-  var np=cut(Math.floor(base*p.npr)), hi=cut(Math.floor(m*p.hi)),
-      ltc=cut(Math.floor(hi*p.ltc)), ei=cut(Math.floor(m*p.ei));
+  /* 장기요양 = 보수월액 × 소득 대비 요율 ÷ 2 (공단 산식, 4대사회보험 정보연계센터 모의계산과 일치) */
+  var np=cut(fl(base*p.npr)), hi=cut(fl(m*p.hi)),
+      ltc=cut(fl(m*p.ltc/2)), ei=cut(fl(m*p.ei));
   return {np:np,hi:hi,ltc:ltc,ei:ei,total:np+hi+ltc+ei};
 }
-var Y25={npr:.045,npc:6370000,npf:400000,hi:.03545,ltc:.1295,ei:.009};
-var Y26={npr:.0475,npc:6590000,npf:410000,hi:.03595,ltc:.1314,ei:.009};
+var Y25={npr:.045,npc:6370000,npf:400000,hi:.03545,ltc:.009182,ei:.009};
+var Y26={npr:.0475,npc:6590000,npf:410000,hi:.03595,ltc:.009448,ei:.009};
 var lock=false;
 function render(){
   var m=Math.floor(+$('pay').value||0);
@@ -246,17 +248,18 @@ render();
 
   // ── 8. 4대보험 요율 (8-4대보험료.html)
   fourIns: function () {
-var NP=.0475,NPC=6590000,NPF=410000,HI=.03595,LTC=.1314,EI=.009,EIE=.0115,WC=.007;
+var NP=.0475,NPC=6590000,NPF=410000,HI=.03595,LTC=.009448,EI=.009,EIE=.0115,WC=.007; /* LTC = 소득 대비 장기요양보험료율(총), 근로자·사업주 절반씩 */
 function $(i){return document.getElementById(i)}
 function cut(n){return Math.floor(n/10)*10}
+function fl(x){return Math.floor(Math.round(x*1e6)/1e6)}
 function won(n){return Math.round(n).toLocaleString('ko-KR')}
 function render(){
   var pay=+$('pay').value||0, nt=+$('nt').value||0;
   var base=Math.max(0,Math.floor(pay-nt));
   var npb=base<NPF?NPF:(base>=NPC?NPC:base);
-  var np=cut(Math.floor(npb*NP)), hi=cut(Math.floor(base*HI)), ltc=cut(Math.floor(hi*LTC)), ei=cut(Math.floor(base*EI));
+  var np=cut(fl(npb*NP)), hi=cut(fl(base*HI)), ltc=cut(fl(base*LTC/2)), ei=cut(fl(base*EI));
   var emp=np+hi+ltc+ei;
-  var cEi=cut(Math.floor(base*EIE)), cWc=cut(Math.floor(base*WC));
+  var cEi=cut(fl(base*EIE)), cWc=cut(fl(base*WC));
   var co=np+hi+ltc+cEi+cWc;
   var o='<div class="ax-wg-sec"><h6>근로자 부담</h6><ul class="ax-wg-doc">';
   o+='<li><span>국민연금 4.75%'+(base>=NPC?' (상한)':'')+'</span><b>'+won(np)+'원</b></li>';

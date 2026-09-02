@@ -12,7 +12,7 @@
   "slug": "basic-pension",
   "year": 2026,
   "lastUpdated": "2026-09-01",
-  "lastVerified": "2026-09-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "보건복지부",
@@ -83,7 +83,8 @@
         "expected": {
           "isEligible": true,
           "monthlyPension": 349700
-        }
+        },
+        "lawSource": "보건복지부 2026년 기초연금 선정기준액 고시 — 단독 247만·부부 395.2만원, 기준연금액 349,700원(부부 20% 감액 559,520원) https://www.mohw.go.kr/board.es?act=view&bid=0027&list_no=1488478&mid=a10503000000"
       },
       {
         "name": "Case 2 — 단독, 소득 250만 (자격 X — 247만 초과)",
@@ -94,7 +95,8 @@
         "expected": {
           "isEligible": false,
           "monthlyPension": 0
-        }
+        },
+        "lawSource": "보건복지부 2026년 기초연금 선정기준액 고시 — 단독 247만·부부 395.2만원, 기준연금액 349,700원(부부 20% 감액 559,520원) https://www.mohw.go.kr/board.es?act=view&bid=0027&list_no=1488478&mid=a10503000000"
       },
       {
         "name": "Case 3 — 부부, 소득 200만 (자격 O)",
@@ -105,7 +107,8 @@
         "expected": {
           "isEligible": true,
           "monthlyPension": 559520
-        }
+        },
+        "lawSource": "보건복지부 2026년 기초연금 선정기준액 고시 — 단독 247만·부부 395.2만원, 기준연금액 349,700원(부부 20% 감액 559,520원) https://www.mohw.go.kr/board.es?act=view&bid=0027&list_no=1488478&mid=a10503000000"
       },
       {
         "name": "Case 4 — 단독, 소득 247만 (경계, 자격 O)",
@@ -116,7 +119,8 @@
         "expected": {
           "isEligible": true,
           "monthlyPension": 349700
-        }
+        },
+        "lawSource": "보건복지부 2026년 기초연금 선정기준액 고시 — 단독 247만·부부 395.2만원, 기준연금액 349,700원(부부 20% 감액 559,520원) https://www.mohw.go.kr/board.es?act=view&bid=0027&list_no=1488478&mid=a10503000000"
       },
       {
         "name": "Case 5 — 부부, 소득 400만 (자격 X — 395.2만 초과)",
@@ -127,7 +131,8 @@
         "expected": {
           "isEligible": false,
           "monthlyPension": 0
-        }
+        },
+        "lawSource": "보건복지부 2026년 기초연금 선정기준액 고시 — 단독 247만·부부 395.2만원, 기준연금액 349,700원(부부 20% 감액 559,520원) https://www.mohw.go.kr/board.es?act=view&bid=0027&list_no=1488478&mid=a10503000000"
       }
     ]
   },

@@ -7,7 +7,7 @@
   "slug": "divorce-alimony",
   "year": 2026,
   "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "대법원·서울가정법원",
@@ -76,7 +76,7 @@
         "name": "Case 1 — 결혼 3년 / 보통 (1천만)",
         "input": {
           "marriageYears": 3,
-          "faultDegree": "medium"
+          "faultDegree": "보통"
         },
         "expected": {
           "baseAmount": 10000000,
@@ -88,7 +88,7 @@
         "name": "Case 2 — 결혼 8년 / 높음 (3천만)",
         "input": {
           "marriageYears": 8,
-          "faultDegree": "high"
+          "faultDegree": "높음"
         },
         "expected": {
           "baseAmount": 20000000,
@@ -100,7 +100,7 @@
         "name": "Case 3 — 결혼 15년 / 보통 (2천만)",
         "input": {
           "marriageYears": 15,
-          "faultDegree": "medium"
+          "faultDegree": "보통"
         },
         "expected": {
           "baseAmount": 20000000,
@@ -112,7 +112,7 @@
         "name": "Case 4 — 결혼 25년 / 높음 (5천만, 보수 조정)",
         "input": {
           "marriageYears": 25,
-          "faultDegree": "high"
+          "faultDegree": "높음"
         },
         "expected": {
           "baseAmount": 33333333,
@@ -124,7 +124,7 @@
         "name": "Case 5 — 결혼 12년 / 낮음 (1천만)",
         "input": {
           "marriageYears": 12,
-          "faultDegree": "low"
+          "faultDegree": "낮음"
         },
         "expected": {
           "baseAmount": 20000000,

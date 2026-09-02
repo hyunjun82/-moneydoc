@@ -12,7 +12,7 @@
   ],
   "year": 2026,
   "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "국민연금공단",
@@ -84,6 +84,29 @@
           "P": 1,
           "monthlyPension": 558300,
           "annualPension": 6699600
+        },
+        "govSource": {
+          "adapter": "nps-simple-pension",
+          "url": "https://www.nps.or.kr/comm/quick/getOHAH0011P0.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "monthlyPension": 558300,
+            "annualPension": 6699600,
+            "source": "국민연금공단 예상연금 간단계산",
+            "_ref": {
+              "premium": 190000,
+              "byYears": {
+                "10": 279150,
+                "15": 418720,
+                "20": 558300,
+                "25": 697870,
+                "30": 837450,
+                "35": 977020,
+                "40": 1116600
+              }
+            }
+          }
         }
       },
       {
@@ -96,6 +119,29 @@
           "P": 1.5,
           "monthlyPension": 998700,
           "annualPension": 11984400
+        },
+        "govSource": {
+          "adapter": "nps-simple-pension",
+          "url": "https://www.nps.or.kr/comm/quick/getOHAH0011P0.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "monthlyPension": 998700,
+            "annualPension": 11984400,
+            "source": "국민연금공단 예상연금 간단계산",
+            "_ref": {
+              "premium": 285000,
+              "byYears": {
+                "10": 332900,
+                "15": 499350,
+                "20": 665800,
+                "25": 832250,
+                "30": 998700,
+                "35": 1165150,
+                "40": 1331600
+              }
+            }
+          }
         }
       },
       {
@@ -108,6 +154,29 @@
           "P": 2,
           "monthlyPension": 1546600,
           "annualPension": 18559200
+        },
+        "govSource": {
+          "adapter": "nps-simple-pension",
+          "url": "https://www.nps.or.kr/comm/quick/getOHAH0011P0.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "monthlyPension": 1546600,
+            "annualPension": 18559200,
+            "source": "국민연금공단 예상연금 간단계산",
+            "_ref": {
+              "premium": 380000,
+              "byYears": {
+                "10": 386650,
+                "15": 579970,
+                "20": 773300,
+                "25": 966620,
+                "30": 1159950,
+                "35": 1353270,
+                "40": 1546600
+              }
+            }
+          }
         }
       },
       {
@@ -120,6 +189,29 @@
           "P": 0.5,
           "monthlyPension": 279150,
           "annualPension": 3349800
+        },
+        "govSource": {
+          "adapter": "nps-simple-pension",
+          "url": "https://www.nps.or.kr/comm/quick/getOHAH0011P0.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "monthlyPension": 279150,
+            "annualPension": 3349800,
+            "source": "국민연금공단 예상연금 간단계산",
+            "_ref": {
+              "premium": 190000,
+              "byYears": {
+                "10": 279150,
+                "15": 418720,
+                "20": 558300,
+                "25": 697870,
+                "30": 837450,
+                "35": 977020,
+                "40": 1116600
+              }
+            }
+          }
         }
       },
       {
@@ -132,6 +224,29 @@
           "P": 1.25,
           "monthlyPension": 765060,
           "annualPension": 9180720
+        },
+        "govSource": {
+          "adapter": "nps-simple-pension",
+          "url": "https://www.nps.or.kr/comm/quick/getOHAH0011P0.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "monthlyPension": 765060,
+            "annualPension": 9180720,
+            "source": "국민연금공단 예상연금 간단계산",
+            "_ref": {
+              "premium": 237500,
+              "byYears": {
+                "10": 306020,
+                "15": 459030,
+                "20": 612050,
+                "25": 765060,
+                "30": 918070,
+                "35": 1071090,
+                "40": 1224100
+              }
+            }
+          }
         }
       }
     ]

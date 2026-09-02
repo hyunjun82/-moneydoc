@@ -1,0 +1,49 @@
+{
+  "label": "scrape-national-pension",
+  "timestamp": "2026-09-02T04-44-45",
+  "pass": 0,
+  "fail": 0,
+  "error": 5,
+  "results": [
+    {
+      "status": "error",
+      "calc": "national-pension",
+      "case": "Case 1 — 가입 20년, 평균소득 200만",
+      "adapter": "nps-simple-pension",
+      "detail": "결과 미표시",
+      "ts": 1788324307380
+    },
+    {
+      "status": "error",
+      "calc": "national-pension",
+      "case": "Case 2 — 가입 30년, 평균소득 300만",
+      "adapter": "nps-simple-pension",
+      "detail": "결과 미표시",
+      "ts": 1788324323768
+    },
+    {
+      "status": "error",
+      "calc": "national-pension",
+      "case": "Case 3 — 가입 40년, 평균소득 400만",
+      "adapter": "nps-simple-pension",
+      "detail": "결과 미표시",
+      "ts": 1788324339986
+    },
+    {
+      "status": "error",
+      "calc": "national-pension",
+      "case": "Case 4 — 가입 10년, 평균소득 200만",
+      "adapter": "nps-simple-pension",
+      "detail": "결과 미표시",
+      "ts": 1788324356095
+    },
+    {
+      "status": "error",
+      "calc": "national-pension",
+      "case": "Case 5 — 가입 25년, 평균소득 250만",
+      "adapter": "nps-simple-pension",
+      "detail": "결과 미표시",
+      "ts": 1788324372186
+    }
+  ]
+}

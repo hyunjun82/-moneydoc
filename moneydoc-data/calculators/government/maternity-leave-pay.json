@@ -7,7 +7,7 @@
   "slug": "maternity-leave-pay",
   "year": 2026,
   "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "고용노동부",
@@ -18,7 +18,8 @@
   "constants": {
     "GOV_DAILY_UPPER_2026": 73333,
     "GOV_MONTHLY_UPPER_2026": 2200000,
-    "NOTE": "고용보험법 §75 - 2026년 1월 1일 이후 휴가 시작 기준 (월 220만 인상)"
+    "NOTE": "고용보험법 §75 - 2026년 1월 1일 이후 휴가 시작 기준 (월 220만 인상)",
+    "MIN_WAGE_MONTHLY": 2156880
   },
   "formula": [
     {
@@ -77,10 +78,32 @@
         },
         "expected": {
           "totalDays": 90,
+          "appliedSalary": 2500000,
           "dailyWage": 95694,
           "govPay": 6600000,
           "companyPay": 600000,
           "total": 7200000
+        },
+        "govSource": {
+          "adapter": "work24-maternity-leave",
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSimulate11.do?systId=SI00000406",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "govPay": 6600000,
+            "totalDays": 90,
+            "source": "고용24 출산전후휴가급여 간편 모의계산",
+            "_ref": {
+              "form": {
+                "start": "2026-01-01",
+                "end": "2026-03-31",
+                "big": false,
+                "hours": 209,
+                "salary": 2500000,
+                "days": 90
+              }
+            }
+          }
         }
       },
       {
@@ -92,10 +115,32 @@
         },
         "expected": {
           "totalDays": 90,
+          "appliedSalary": 3500000,
           "dailyWage": 133971,
           "govPay": 6600000,
           "companyPay": 2600000,
           "total": 9200000
+        },
+        "govSource": {
+          "adapter": "work24-maternity-leave",
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSimulate11.do?systId=SI00000406",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "govPay": 6600000,
+            "totalDays": 90,
+            "source": "고용24 출산전후휴가급여 간편 모의계산",
+            "_ref": {
+              "form": {
+                "start": "2026-01-01",
+                "end": "2026-03-31",
+                "big": false,
+                "hours": 209,
+                "salary": 3500000,
+                "days": 90
+              }
+            }
+          }
         }
       },
       {
@@ -107,10 +152,32 @@
         },
         "expected": {
           "totalDays": 90,
+          "appliedSalary": 5000000,
           "dailyWage": 191388,
           "govPay": 2200000,
           "companyPay": 10000000,
           "total": 12200000
+        },
+        "govSource": {
+          "adapter": "work24-maternity-leave",
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSimulate11.do?systId=SI00000406",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "govPay": 2200000,
+            "totalDays": 90,
+            "source": "고용24 출산전후휴가급여 간편 모의계산",
+            "_ref": {
+              "form": {
+                "start": "2026-01-01",
+                "end": "2026-03-31",
+                "big": true,
+                "hours": 209,
+                "salary": 5000000,
+                "days": 90
+              }
+            }
+          }
         }
       },
       {
@@ -122,11 +189,13 @@
         },
         "expected": {
           "totalDays": 120,
-          "dailyWage": 76555,
-          "govPay": 8000000,
+          "appliedSalary": 2156880,
+          "dailyWage": 82560,
+          "govPay": 8627520,
           "companyPay": 0,
-          "total": 8000000
-        }
+          "total": 8627520
+        },
+        "lawSource": "고용보험법 제76조 (출산전후휴가 급여: 다태아 120일, 대규모기업은 마지막 45일 정부 지급) — 고용24 간편 모의계산은 다태아 입력이 없어 정부 도구 대조 제외"
       },
       {
         "name": "Case 5 — 월 400만 / 다태 / 대기업",
@@ -137,10 +206,49 @@
         },
         "expected": {
           "totalDays": 120,
+          "appliedSalary": 4000000,
           "dailyWage": 153110,
           "govPay": 4400000,
           "companyPay": 8000000,
           "total": 12400000
+        },
+        "lawSource": "고용보험법 제76조 (출산전후휴가 급여: 다태아 120일, 대규모기업은 마지막 45일 정부 지급) — 고용24 간편 모의계산은 다태아 입력이 없어 정부 도구 대조 제외"
+      },
+      {
+        "name": "Case 6 — 월 200만 / 단태 / 중소 (최저임금 월환산 2,156,880원으로 상향)",
+        "input": {
+          "monthlySalary": 2000000,
+          "isMultiple": false,
+          "isSME": true
+        },
+        "expected": {
+          "totalDays": 90,
+          "appliedSalary": 2156880,
+          "dailyWage": 82560,
+          "govPay": 6470640,
+          "companyPay": 0,
+          "total": 6470640
+        },
+        "govSource": {
+          "adapter": "work24-maternity-leave",
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSimulate11.do?systId=SI00000406",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "govPay": 6470640,
+            "totalDays": 90,
+            "source": "고용24 출산전후휴가급여 간편 모의계산",
+            "_ref": {
+              "form": {
+                "start": "2026-01-01",
+                "end": "2026-03-31",
+                "big": false,
+                "hours": 209,
+                "salary": 2000000,
+                "days": 90
+              }
+            }
+          }
         }
       }
     ]

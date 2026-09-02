@@ -1,0 +1,44 @@
+{
+  "label": "scrape-parental-leave-pay",
+  "timestamp": "2026-09-02T04-52-34",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 1 — 통상 200만 × 6개월",
+      "adapter": "work24-parental-leave",
+      "ts": 1788324760618
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 2 — 통상 300만 × 12개월 (상한 적용)",
+      "adapter": "work24-parental-leave",
+      "ts": 1788324767397
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 3 — 통상 150만 × 12개월",
+      "adapter": "work24-parental-leave",
+      "ts": 1788324773177
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 4 — 통상 80만 × 12개월 (하한 적용)",
+      "adapter": "work24-parental-leave",
+      "ts": 1788324778951
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 5 — 통상 500만 × 9개월 (상한 적용)",
+      "adapter": "work24-parental-leave",
+      "ts": 1788324784795
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "label": "scrape-maternity-leave-pay",
+  "timestamp": "2026-09-02T04-54-49",
+  "pass": 4,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 1 — 월 250만 / 단태 / 중소",
+      "adapter": "work24-maternity-leave",
+      "ts": 1788324896245
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 2 — 월 350만 / 단태 / 중소",
+      "adapter": "work24-maternity-leave",
+      "ts": 1788324906955
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 3 — 월 500만 / 단태 / 대기업",
+      "adapter": "work24-maternity-leave",
+      "ts": 1788324913212
+    },
+    {
+      "status": "pass",
+      "calc": "maternity-leave-pay",
+      "case": "Case 6 — 월 200만 / 단태 / 중소 (최저임금 월환산 2,156,880원으로 상향)",
+      "adapter": "work24-maternity-leave",
+      "ts": 1788324919709
+    }
+  ]
+}

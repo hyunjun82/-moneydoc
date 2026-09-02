@@ -12,19 +12,17 @@
   ],
   "year": 2026,
   "lastUpdated": "2026-09-01",
-  "lastVerified": "2026-09-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "국세청",
-      "document": "소득세법 / 근로소득 간이세액표",
+      "document": "근로소득 간이세액표 (소득세법 시행령 별표2, 2026.3.1. 이후) — 홈택스 엑셀 원본",
       "year": 2026,
+      "file": "moneydoc-data/sources/simplified-tax-table-2026-03-01.xlsx",
       "laws": [
-        "소득세법 제55조 (종합소득세율)",
-        "소득세법 제47조 (근로소득공제)",
-        "소득세법 제50조 (인적공제)",
-        "소득세법 제59조 (근로소득세액공제)",
-        "소득세법 제59조의2 (자녀세액공제)",
-        "소득세법 제134조 (간이세액표)"
+        "소득세법 제134조 (근로소득에 대한 원천징수) 및 시행령 제189조 (간이세액표)",
+        "소득세법 시행령 제194조 (원천징수세액 80%·100%·120% 선택)",
+        "지방세법 제103조의13 (지방소득세 특별징수, 소득세의 10%)"
       ]
     },
     "secondary": [
@@ -56,165 +54,15 @@
     "NP_CAP_MONTHLY": 6590000,
     "NP_FLOOR_MONTHLY": 410000,
     "HI_RATE": 0.03595,
-    "LTC_RATE": 0.1314,
     "EI_RATE": 0.009,
     "LOCAL_TAX_RATE": 0.1,
-    "PERSONAL_DEDUCTION": 1500000,
-    "STANDARD_TAX_DEDUCTION_YEARLY": 1560000
+    "LTC_INCOME_RATE": 0.009448
   },
   "tables": {
-    "earnedIncomeDeduction": {
-      "description": "근로소득공제 (소득세법 제47조). 총급여(연봉)에서 차감.",
-      "brackets": [
-        {
-          "upperBound": 5000000,
-          "fixed": 0,
-          "rate": 0.7,
-          "lowerBound": 0
-        },
-        {
-          "upperBound": 15000000,
-          "fixed": 3500000,
-          "rate": 0.4,
-          "lowerBound": 5000000
-        },
-        {
-          "upperBound": 45000000,
-          "fixed": 7500000,
-          "rate": 0.15,
-          "lowerBound": 15000000
-        },
-        {
-          "upperBound": 100000000,
-          "fixed": 12000000,
-          "rate": 0.05,
-          "lowerBound": 45000000
-        },
-        {
-          "upperBound": null,
-          "fixed": 14750000,
-          "rate": 0.02,
-          "lowerBound": 100000000
-        }
-      ],
-      "limit": 20000000,
-      "limitNote": "공제 한도 2,000만원 (2020년 시행)"
-    },
-    "incomeTaxBrackets": {
-      "description": "종합소득세 누진세율 (소득세법 제55조)",
-      "brackets": [
-        {
-          "upperBound": 14000000,
-          "rate": 0.06,
-          "progressiveDeduction": 0
-        },
-        {
-          "upperBound": 50000000,
-          "rate": 0.15,
-          "progressiveDeduction": 1260000
-        },
-        {
-          "upperBound": 88000000,
-          "rate": 0.24,
-          "progressiveDeduction": 5760000
-        },
-        {
-          "upperBound": 150000000,
-          "rate": 0.35,
-          "progressiveDeduction": 15440000
-        },
-        {
-          "upperBound": 300000000,
-          "rate": 0.38,
-          "progressiveDeduction": 19940000
-        },
-        {
-          "upperBound": 500000000,
-          "rate": 0.4,
-          "progressiveDeduction": 25940000
-        },
-        {
-          "upperBound": 1000000000,
-          "rate": 0.42,
-          "progressiveDeduction": 35940000
-        },
-        {
-          "upperBound": null,
-          "rate": 0.45,
-          "progressiveDeduction": 65940000
-        }
-      ]
-    },
-    "earnedIncomeTaxCredit": {
-      "description": "근로소득세액공제 (소득세법 제59조). 산출세액에서 차감.",
-      "computation": [
-        {
-          "salaryThreshold": 1300000,
-          "fixed": 0,
-          "rate": 0.55,
-          "lowerSalary": 0
-        },
-        {
-          "salaryThreshold": null,
-          "fixed": 715000,
-          "rate": 0.3,
-          "lowerSalary": 1300000
-        }
-      ],
-      "limits": [
-        {
-          "totalSalaryUpper": 33000000,
-          "type": "fixed",
-          "amount": 740000
-        },
-        {
-          "totalSalaryUpper": 70000000,
-          "type": "linear",
-          "base": 740000,
-          "subtractRate": 0.008,
-          "subtractAfter": 33000000,
-          "minLimit": 660000
-        },
-        {
-          "totalSalaryUpper": 120000000,
-          "type": "linear",
-          "base": 660000,
-          "subtractRate": 0.0005,
-          "subtractAfter": 70000000,
-          "minLimit": 500000
-        },
-        {
-          "totalSalaryUpper": null,
-          "type": "linear",
-          "base": 500000,
-          "subtractRate": 0.0005,
-          "subtractAfter": 120000000,
-          "minLimit": 200000
-        }
-      ]
-    },
-    "childTaxCredit": {
-      "description": "자녀세액공제 (소득세법 제59조의2). 만 8세 이상 ~ 만 20세 이하 부양 자녀.",
-      "amounts": [
-        {
-          "kids": 0,
-          "credit": 0
-        },
-        {
-          "kids": 1,
-          "credit": 250000
-        },
-        {
-          "kids": 2,
-          "credit": 550000
-        },
-        {
-          "kids": 3,
-          "credit": 950000
-        }
-      ],
-      "additionalPerKid": 400000,
-      "additionalThreshold": 3
+    "simplifiedTax": {
+      "description": "근로소득 간이세액표 2026.3.1. 이후 (국세청 엑셀 원본 → lib/calc/tables/simplified-tax-2026-03.js). 월급여 77만~1,000만원 646구간 × 가족 1~11명, 1,000만 초과 6구간 산식, 8~20세 자녀 조정 20,830/45,830/+33,330원.",
+      "effectiveFrom": "2026-03-01",
+      "generator": "scripts/verify-system/build-simplified-tax-table.py"
     }
   },
   "inputs": [
@@ -233,9 +81,9 @@
       "label": "부양가족 수",
       "type": "stepper",
       "min": 1,
-      "max": 10,
+      "max": 11,
       "default": 1,
-      "hint": "본인 포함, 인적공제 1인당 150만원"
+      "hint": "본인 포함 공제대상가족 수 (간이세액표 기준)"
     },
     {
       "id": "kids",
@@ -244,7 +92,7 @@
       "min": 0,
       "max": 8,
       "default": 0,
-      "hint": "자녀세액공제 대상"
+      "hint": "부양가족에 포함된 8세 이상 20세 이하 자녀 (부양가족 수 − 1 이하)"
     },
     {
       "id": "nontaxable",
@@ -261,8 +109,8 @@
     {
       "step": 1,
       "id": "monthly",
-      "name": "월 세전 급여",
-      "expr": "annual / 12"
+      "name": "월급여 (비과세 제외)",
+      "expr": "floor(annual / 12 − nontaxable)"
     },
     {
       "step": 2,
@@ -302,81 +150,33 @@
     },
     {
       "step": 8,
-      "id": "earnedIncomeDeduction",
-      "name": "근로소득공제 (연간)",
-      "expr": "lookup(earnedIncomeDeduction, annual), capped at 20000000"
+      "id": "incomeTax100",
+      "name": "소득세 (간이세액표 100%)",
+      "expr": "lookup(simplifiedTax, monthly, dependents) − childAdjust(kids)"
     },
     {
       "step": 9,
-      "id": "personalDeduction",
-      "name": "인적공제 (연간)",
-      "expr": "dependents * PERSONAL_DEDUCTION"
+      "id": "monthlyIncomeTax",
+      "name": "소득세 (선택 비율 적용)",
+      "expr": "cutOff10(incomeTax100 × taxRatePct / 100)"
     },
     {
       "step": 10,
-      "id": "taxableIncome",
-      "name": "과세표준 (연간)",
-      "expr": "max(0, annual - earnedIncomeDeduction - personalDeduction)"
+      "id": "monthlyLocalTax",
+      "name": "지방소득세",
+      "expr": "cutOff10(monthlyIncomeTax × LOCAL_TAX_RATE)"
     },
     {
       "step": 11,
-      "id": "taxBeforeCredit",
-      "name": "산출세액 (연간)",
-      "expr": "taxableIncome * 이자율 - progressiveDeduction (lookup incomeTaxBrackets)"
+      "id": "totalDeduction",
+      "name": "공제 합계",
+      "expr": "cutOff10(totalInsurance + monthlyIncomeTax + monthlyLocalTax)"
     },
     {
       "step": 12,
-      "id": "earnedIncomeCreditRaw",
-      "name": "근로소득세액공제 (산출세액 기준)",
-      "expr": "computation lookup of taxBeforeCredit"
-    },
-    {
-      "step": 13,
-      "id": "earnedIncomeCreditLimit",
-      "name": "근로소득세액공제 한도",
-      "expr": "limit lookup based on annual (totalSalary)"
-    },
-    {
-      "step": 14,
-      "id": "earnedIncomeCredit",
-      "name": "적용 근로소득세액공제",
-      "expr": "min(earnedIncomeCreditRaw, earnedIncomeCreditLimit)"
-    },
-    {
-      "step": 15,
-      "id": "childCredit",
-      "name": "자녀세액공제",
-      "expr": "lookup(childTaxCredit, kids)"
-    },
-    {
-      "step": 16,
-      "id": "annualIncomeTax",
-      "name": "결정세액 (연간 소득세)",
-      "expr": "max(0, taxBeforeCredit - earnedIncomeCredit - childCredit)"
-    },
-    {
-      "step": 17,
-      "id": "monthlyIncomeTax",
-      "name": "소득세 (월 환산)",
-      "expr": "round(annualIncomeTax / 12)"
-    },
-    {
-      "step": 18,
-      "id": "monthlyLocalTax",
-      "name": "지방소득세 (월)",
-      "expr": "round(monthlyIncomeTax * LOCAL_TAX_RATE)"
-    },
-    {
-      "step": 19,
-      "id": "totalDeduction",
-      "name": "총 공제액 (월)",
-      "expr": "totalInsurance + monthlyIncomeTax + monthlyLocalTax"
-    },
-    {
-      "step": 20,
       "id": "netMonthly",
       "name": "월 실수령액",
-      "expr": "monthly - totalDeduction"
+      "expr": "cutOff10(monthly + nontaxable − totalDeduction)"
     }
   ],
   "verification": {
@@ -397,14 +197,32 @@
           "grossMonthly": 2500000,
           "nationalPension": 118750,
           "healthInsurance": 89870,
-          "longTermCare": 11800,
+          "longTermCare": 11810,
           "employmentInsurance": 22500,
-          "totalInsurance": 242920,
-          "monthlyIncomeTax": 40970,
-          "monthlyLocalTax": 4090,
-          "totalDeduction": 287980,
-          "netMonthly": 2212020,
-          "deductRatePct": 11.5
+          "totalInsurance": 242930,
+          "monthlyIncomeTax": 35600,
+          "monthlyLocalTax": 3560,
+          "totalDeduction": 282090,
+          "netMonthly": 2217910,
+          "deductRatePct": 11.3
+        },
+        "govSource": {
+          "adapter": "hometax-simplified-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=40&tm2lIdx=4021040000&tm3lIdx=4021040100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "monthlyIncomeTax": 35600,
+            "monthlyLocalTax": 3560,
+            "source": "홈택스 근로소득 간이세액표 2026.3.1. 이후",
+            "_ref": {
+              "monthlyUsed": 2500000,
+              "incomeTax80": 28480,
+              "incomeTax120": 42720,
+              "localTax80": 2840,
+              "localTax120": 4270
+            }
+          }
         }
       },
       {
@@ -422,11 +240,29 @@
           "longTermCare": 19680,
           "employmentInsurance": 37490,
           "totalInsurance": 404870,
-          "monthlyIncomeTax": 230750,
-          "monthlyLocalTax": 23070,
-          "totalDeduction": 658690,
-          "netMonthly": 3507970,
-          "deductRatePct": 15.8
+          "monthlyIncomeTax": 217320,
+          "monthlyLocalTax": 21730,
+          "totalDeduction": 643920,
+          "netMonthly": 3522740,
+          "deductRatePct": 15.5
+        },
+        "govSource": {
+          "adapter": "hometax-simplified-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=40&tm2lIdx=4021040000&tm3lIdx=4021040100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "monthlyIncomeTax": 217320,
+            "monthlyLocalTax": 21730,
+            "source": "홈택스 근로소득 간이세액표 2026.3.1. 이후",
+            "_ref": {
+              "monthlyUsed": 4166666,
+              "incomeTax80": 173850,
+              "incomeTax120": 260780,
+              "localTax80": 17380,
+              "localTax120": 26070
+            }
+          }
         }
       },
       {
@@ -444,11 +280,29 @@
           "longTermCare": 27550,
           "employmentInsurance": 52490,
           "totalInsurance": 566820,
-          "monthlyIncomeTax": 328650,
-          "monthlyLocalTax": 32860,
-          "totalDeduction": 928330,
-          "netMonthly": 4905000,
-          "deductRatePct": 15.9
+          "monthlyIncomeTax": 279050,
+          "monthlyLocalTax": 27900,
+          "totalDeduction": 873770,
+          "netMonthly": 4959560,
+          "deductRatePct": 15
+        },
+        "govSource": {
+          "adapter": "hometax-simplified-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=40&tm2lIdx=4021040000&tm3lIdx=4021040100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "monthlyIncomeTax": 279050,
+            "monthlyLocalTax": 27900,
+            "source": "홈택스 근로소득 간이세액표 2026.3.1. 이후",
+            "_ref": {
+              "monthlyUsed": 5833333,
+              "incomeTax80": 223240,
+              "incomeTax120": 334860,
+              "localTax80": 22320,
+              "localTax120": 33480
+            }
+          }
         }
       },
       {
@@ -466,11 +320,29 @@
           "longTermCare": 39360,
           "employmentInsurance": 74990,
           "totalInsurance": 726950,
-          "monthlyIncomeTax": 1040450,
-          "monthlyLocalTax": 104040,
-          "totalDeduction": 1871440,
-          "netMonthly": 6461890,
-          "deductRatePct": 22.5
+          "monthlyIncomeTax": 1032080,
+          "monthlyLocalTax": 103200,
+          "totalDeduction": 1862230,
+          "netMonthly": 6471100,
+          "deductRatePct": 22.3
+        },
+        "govSource": {
+          "adapter": "hometax-simplified-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=40&tm2lIdx=4021040000&tm3lIdx=4021040100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "monthlyIncomeTax": 1032080,
+            "monthlyLocalTax": 103200,
+            "source": "홈택스 근로소득 간이세액표 2026.3.1. 이후",
+            "_ref": {
+              "monthlyUsed": 8333333,
+              "incomeTax80": 825660,
+              "incomeTax120": 1238490,
+              "localTax80": 82560,
+              "localTax120": 123840
+            }
+          }
         }
       },
       {
@@ -488,23 +360,41 @@
           "longTermCare": 18730,
           "employmentInsurance": 35690,
           "totalInsurance": 385430,
-          "monthlyIncomeTax": 204130,
-          "monthlyLocalTax": 20410,
-          "totalDeduction": 609970,
-          "netMonthly": 3556690,
-          "deductRatePct": 14.6
+          "monthlyIncomeTax": 190620,
+          "monthlyLocalTax": 19060,
+          "totalDeduction": 595110,
+          "netMonthly": 3571550,
+          "deductRatePct": 14.3
+        },
+        "govSource": {
+          "adapter": "hometax-simplified-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=40&tm2lIdx=4021040000&tm3lIdx=4021040100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "monthlyIncomeTax": 190620,
+            "monthlyLocalTax": 19060,
+            "source": "홈택스 근로소득 간이세액표 2026.3.1. 이후",
+            "_ref": {
+              "monthlyUsed": 3966666,
+              "incomeTax80": 152490,
+              "incomeTax120": 228740,
+              "localTax80": 15240,
+              "localTax120": 22870
+            }
+          }
         }
       }
     ]
   },
   "guide": {
-    "howToUse": "세전 연봉, 부양가족 수, 자녀 수만 입력하면 매월 통장에 들어오는 실수령액이 자동으로 계산됩니다. 연봉은 식대·차량유지비 같은 비과세 항목을 제외한 금액으로 입력하세요. 부양가족은 본인을 포함하며, 자녀는 만 8세 이상~만 20세 이하만 자녀세액공제 대상입니다.",
+    "howToUse": "세전 연봉, 부양가족 수, 자녀 수만 입력하면 매월 통장에 들어오는 실수령액이 자동으로 계산됩니다. 연봉은 식대·차량유지비 같은 비과세 항목을 제외한 금액으로 입력하세요. 부양가족은 본인을 포함하며, 자녀는 부양가족에 포함된 만 8세 이상~만 20세 이하만 간이세액표 자녀 조정 대상입니다.",
     "calculationOrder": [
       "1단계: 연봉을 12개월로 나눠 월 급여 산출",
       "2단계: 4대보험 차감 (국민연금 4.75% + 건강보험 3.595% + 장기요양 = 건보의 13.14% + 고용보험 0.9%). 2026.1.1 시행",
-      "3단계: 연간 기준으로 근로소득공제 + 인적공제(1인당 150만) 차감 → 과세표준",
-      "4단계: 누진세율(6%~45%) 적용 → 산출세액",
-      "5단계: 근로소득세액공제(한도 차등) + 자녀세액공제 차감 → 결정세액",
+      "3단계: 국세청 근로소득 간이세액표(2026.3.1. 이후)에서 월급여 구간 × 공제대상가족 수로 소득세 조회 (월 1,000만원 초과는 표의 산식)",
+      "4단계: 8~20세 자녀가 있으면 자녀 수별 조정액 차감 (1명 20,830원 · 2명 45,830원 · 3명↑ +33,330원/명)",
+      "5단계: 선택한 원천징수 비율(80·100·120%) 적용 후 10원 절사 → 소득세, 그 10% → 지방소득세",
       "6단계: 결정세액 ÷ 12 + 지방소득세(소득세의 10%) → 월 떼는 세금",
       "7단계: 월 급여 - 4대보험 - 소득세·지방세 = 실수령액"
     ],
@@ -514,57 +404,57 @@
           "연봉": "3,000만",
           "월 세전": "250만",
           "4대보험": "약 24.3만",
-          "소득세+지방세": "약 4.5만",
-          "월 실수령": "약 221.2만",
-          "연 실수령": "2,654만"
+          "소득세+지방세": "약 3.9만",
+          "월 실수령": "약 221.8만",
+          "연 실수령": "2,661만"
         },
         {
           "연봉": "4,000만",
           "월 세전": "333만",
           "4대보험": "약 32.4만",
-          "소득세+지방세": "약 13.1만",
-          "월 실수령": "약 287.9만",
-          "연 실수령": "3,454만"
+          "소득세+지방세": "약 11.6만",
+          "월 실수령": "약 289.4만",
+          "연 실수령": "3,472만"
         },
         {
           "연봉": "5,000만",
           "월 세전": "417만",
           "4대보험": "약 40.5만",
-          "소득세+지방세": "약 25.4만",
-          "월 실수령": "약 350.8만",
-          "연 실수령": "4,210만"
+          "소득세+지방세": "약 23.9만",
+          "월 실수령": "약 352.3만",
+          "연 실수령": "4,227만"
         },
         {
           "연봉": "6,000만",
           "월 세전": "500만",
           "4대보험": "약 48.6만",
-          "소득세+지방세": "약 38.0만",
-          "월 실수령": "약 413.5만",
-          "연 실수령": "4,961만"
+          "소득세+지방세": "약 36.9만",
+          "월 실수령": "약 414.5만",
+          "연 실수령": "4,974만"
         },
         {
           "연봉": "7,000만",
           "월 세전": "583만",
           "4대보험": "약 56.7만",
-          "소득세+지방세": "약 51.4만",
-          "월 실수령": "약 475.3만",
-          "연 실수령": "5,703만"
+          "소득세+지방세": "약 49.6만",
+          "월 실수령": "약 477.1만",
+          "연 실수령": "5,725만"
         },
         {
           "연봉": "1억",
           "월 세전": "833만",
           "4대보험": "약 72.7만",
-          "소득세+지방세": "약 114.4만",
-          "월 실수령": "약 646.2만",
-          "연 실수령": "7,754만"
+          "소득세+지방세": "약 113.5만",
+          "월 실수령": "약 647.1만",
+          "연 실수령": "7,765만"
         },
         {
           "연봉": "1.5억",
           "월 세전": "1,250만",
           "4대보험": "약 93.4만",
-          "소득세+지방세": "약 272.7만",
-          "월 실수령": "약 883.9만",
-          "연 실수령": "1억 607만"
+          "소득세+지방세": "약 262.9만",
+          "월 실수령": "약 893.7만",
+          "연 실수령": "1억 725만"
         }
       ],
       "공제내역5000만": [

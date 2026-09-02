@@ -1,0 +1,39 @@
+{
+  "label": "inheritance-tax",
+  "timestamp": "2026-09-02T03-23-27",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "inheritance-tax",
+      "case": "Case 1 — 5억, 배우자 X, 자녀 2 (인적공제 0)",
+      "ts": 1788319419946
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-tax",
+      "case": "Case 2 — 10억, 배우자 O, 자녀 2 (배우자공제 5억 최소)",
+      "ts": 1788319434994
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-tax",
+      "case": "Case 3 — 15억, 배우자 O, 자녀 2 (배우자 6.43억, 장례비 500만 공제)",
+      "ts": 1788319449700
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-tax",
+      "case": "Case 4 — 30억, 배우자 O, 자녀 2 (배우자 12.86억)",
+      "ts": 1788319465848
+    },
+    {
+      "status": "pass",
+      "calc": "inheritance-tax",
+      "case": "Case 5 — 50억, 배우자 O, 자녀 2 (배우자 21.43억)",
+      "ts": 1788319480996
+    }
+  ]
+}

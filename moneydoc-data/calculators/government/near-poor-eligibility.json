@@ -12,7 +12,7 @@
   ],
   "year": 2026,
   "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "보건복지부",
@@ -80,7 +80,8 @@
           "threshold": 1282119,
           "isEligible": true,
           "incomePct": 31.2
-        }
+        },
+        "lawSource": "보건복지부 2026년 기준 중위소득 (차상위 = 중위 50% 이하) https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&list_no=1487098"
       },
       {
         "name": "Case 2 — 2인 / 150만",
@@ -92,7 +93,8 @@
           "threshold": 2099646,
           "isEligible": true,
           "incomePct": 35.7
-        }
+        },
+        "lawSource": "보건복지부 2026년 기준 중위소득 (차상위 = 중위 50% 이하) https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&list_no=1487098"
       },
       {
         "name": "Case 3 — 3인 / 250만 (자격 O)",
@@ -104,7 +106,8 @@
           "threshold": 2679518,
           "isEligible": true,
           "incomePct": 46.7
-        }
+        },
+        "lawSource": "보건복지부 2026년 기준 중위소득 (차상위 = 중위 50% 이하) https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&list_no=1487098"
       },
       {
         "name": "Case 4 — 4인 / 300만 (자격 O — 2026 인상으로 변경)",
@@ -116,7 +119,8 @@
           "threshold": 3247369,
           "isEligible": true,
           "incomePct": 46.2
-        }
+        },
+        "lawSource": "보건복지부 2026년 기준 중위소득 (차상위 = 중위 50% 이하) https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&list_no=1487098"
       },
       {
         "name": "Case 5 — 4인 / 400만 (자격 X)",
@@ -128,7 +132,8 @@
           "threshold": 3247369,
           "isEligible": false,
           "incomePct": 61.6
-        }
+        },
+        "lawSource": "보건복지부 2026년 기준 중위소득 (차상위 = 중위 50% 이하) https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&list_no=1487098"
       }
     ]
   },

@@ -1,0 +1,64 @@
+{
+  "label": "inheritance-tax",
+  "timestamp": "2026-09-02T03-19-03",
+  "pass": 0,
+  "fail": 5,
+  "error": 0,
+  "results": [
+    {
+      "status": "fail",
+      "calc": "inheritance-tax",
+      "case": "Case 1 — 5억, 배우자 X, 자녀 2 (인적공제 0)",
+      "adapter": "hometax-inheritance-tax",
+      "detail": "엔진 ≠ hometax-inheritance-tax (tolerance ±0)",
+      "diffs": [
+        "deduction: engine=495000000 vs gov=null (Δstring)"
+      ],
+      "ts": 1788319155605
+    },
+    {
+      "status": "fail",
+      "calc": "inheritance-tax",
+      "case": "Case 2 — 10억, 배우자 O, 자녀 2 (배우자공제 5억 최소)",
+      "adapter": "hometax-inheritance-tax",
+      "detail": "엔진 ≠ hometax-inheritance-tax (tolerance ±0)",
+      "diffs": [
+        "deduction: engine=995000000 vs gov=null (Δstring)"
+      ],
+      "ts": 1788319170637
+    },
+    {
+      "status": "fail",
+      "calc": "inheritance-tax",
+      "case": "Case 3 — 15억, 배우자 O, 자녀 2 (배우자 6.43억, 장례비 500만 공제)",
+      "adapter": "hometax-inheritance-tax",
+      "detail": "엔진 ≠ hometax-inheritance-tax (tolerance ±0)",
+      "diffs": [
+        "deduction: engine=1142857142 vs gov=null (Δstring)"
+      ],
+      "ts": 1788319186932
+    },
+    {
+      "status": "fail",
+      "calc": "inheritance-tax",
+      "case": "Case 4 — 30억, 배우자 O, 자녀 2 (배우자 12.86억)",
+      "adapter": "hometax-inheritance-tax",
+      "detail": "엔진 ≠ hometax-inheritance-tax (tolerance ±0)",
+      "diffs": [
+        "deduction: engine=1785714285 vs gov=null (Δstring)"
+      ],
+      "ts": 1788319201064
+    },
+    {
+      "status": "fail",
+      "calc": "inheritance-tax",
+      "case": "Case 5 — 50억, 배우자 O, 자녀 2 (배우자 21.43억)",
+      "adapter": "hometax-inheritance-tax",
+      "detail": "엔진 ≠ hometax-inheritance-tax (tolerance ±0)",
+      "diffs": [
+        "deduction: engine=2642857142 vs gov=null (Δstring)"
+      ],
+      "ts": 1788319215247
+    }
+  ]
+}

@@ -95,6 +95,8 @@ for (const file of files) {
 
   for (const input of json.inputs || []) {
     if (input.default === undefined) continue;
+    // conditional: 다른 입력이 특정 조합일 때만 살아나는 입력 (예: 형제자매 상속분은 1~3순위가 모두 없을 때만) — JSON에 근거를 적고 검사에서 뺀다
+    if (input.conditional) { report.push(`  ⚠ ${json.slug} / ${input.id} — 조건부 입력 (JSON conditional: true, hint 참고)`); continue; }
     const vs = variants(input);
     if (!vs.length) continue;
     checked++;

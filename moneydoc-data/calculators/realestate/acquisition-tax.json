@@ -179,6 +179,27 @@
           "ruralTax": 0,
           "educationTax": 500000,
           "totalTax": 5500000
+        },
+        "govSource": {
+          "adapter": "wetax-acquisition-tax",
+          "url": "https://www.wetax.go.kr/tcp/loi/J030801M01.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "acquisitionTax": 5000000,
+            "educationTax": 500000,
+            "ruralTax": 0,
+            "totalTax": 5500000,
+            "source": "위택스 지방세 미리계산 (취득세)",
+            "_ref": {
+              "form": {
+                "price": 500000000,
+                "dealType": "01",
+                "adjusted": false,
+                "houseCnt": 1
+              }
+            }
+          }
         }
       },
       {
@@ -195,6 +216,27 @@
           "ruralTax": 0,
           "educationTax": 1169000,
           "totalTax": 12859000
+        },
+        "govSource": {
+          "adapter": "wetax-acquisition-tax",
+          "url": "https://www.wetax.go.kr/tcp/loi/J030801M01.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "acquisitionTax": 11690000,
+            "educationTax": 1169000,
+            "ruralTax": 0,
+            "totalTax": 12859000,
+            "source": "위택스 지방세 미리계산 (취득세)",
+            "_ref": {
+              "form": {
+                "price": 700000000,
+                "dealType": "01",
+                "adjusted": false,
+                "houseCnt": 1
+              }
+            }
+          }
         }
       },
       {
@@ -211,6 +253,27 @@
           "ruralTax": 2000000,
           "educationTax": 3000000,
           "totalTax": 35000000
+        },
+        "govSource": {
+          "adapter": "wetax-acquisition-tax",
+          "url": "https://www.wetax.go.kr/tcp/loi/J030801M01.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "acquisitionTax": 30000000,
+            "educationTax": 3000000,
+            "ruralTax": 2000000,
+            "totalTax": 35000000,
+            "source": "위택스 지방세 미리계산 (취득세)",
+            "_ref": {
+              "form": {
+                "price": 1000000000,
+                "dealType": "02",
+                "adjusted": false,
+                "houseCnt": 1
+              }
+            }
+          }
         }
       },
       {
@@ -227,6 +290,27 @@
           "ruralTax": 0,
           "educationTax": 3200000,
           "totalTax": 67200000
+        },
+        "govSource": {
+          "adapter": "wetax-acquisition-tax",
+          "url": "https://www.wetax.go.kr/tcp/loi/J030801M01.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "acquisitionTax": 64000000,
+            "educationTax": 3200000,
+            "ruralTax": 0,
+            "totalTax": 67200000,
+            "source": "위택스 지방세 미리계산 (취득세)",
+            "_ref": {
+              "form": {
+                "price": 800000000,
+                "dealType": "01",
+                "adjusted": true,
+                "houseCnt": 2
+              }
+            }
+          }
         }
       },
       {
@@ -240,9 +324,30 @@
         "expected": {
           "rate": 0.12,
           "acquisitionTax": 60000000,
-          "ruralTax": 1000000,
+          "ruralTax": 5000000,
           "educationTax": 2000000,
-          "totalTax": 63000000
+          "totalTax": 67000000
+        },
+        "govSource": {
+          "adapter": "wetax-acquisition-tax",
+          "url": "https://www.wetax.go.kr/tcp/loi/J030801M01.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "acquisitionTax": 60000000,
+            "educationTax": 2000000,
+            "ruralTax": 5000000,
+            "totalTax": 67000000,
+            "source": "위택스 지방세 미리계산 (취득세)",
+            "_ref": {
+              "form": {
+                "price": 500000000,
+                "dealType": "02",
+                "adjusted": true,
+                "houseCnt": 3
+              }
+            }
+          }
         }
       }
     ]

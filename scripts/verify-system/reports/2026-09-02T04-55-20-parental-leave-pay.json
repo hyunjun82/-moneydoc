@@ -1,0 +1,39 @@
+{
+  "label": "parental-leave-pay",
+  "timestamp": "2026-09-02T04-55-20",
+  "pass": 5,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 1 — 통상 200만 × 6개월",
+      "ts": 1788324926411
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 2 — 통상 300만 × 12개월 (상한 적용)",
+      "ts": 1788324932266
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 3 — 통상 150만 × 12개월",
+      "ts": 1788324938146
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 4 — 통상 80만 × 12개월 (하한 적용)",
+      "ts": 1788324945067
+    },
+    {
+      "status": "pass",
+      "calc": "parental-leave-pay",
+      "case": "Case 5 — 통상 500만 × 9개월 (상한 적용)",
+      "ts": 1788324950766
+    }
+  ]
+}

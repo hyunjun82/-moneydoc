@@ -11,7 +11,7 @@
   "slug": "child-support",
   "year": 2026,
   "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "서울가정법원",
@@ -222,7 +222,8 @@
           "ageGroup": "3-5",
           "standardSupport": 848000,
           "nonCustodianShare": 508800
-        }
+        },
+        "lawSource": "서울가정법원 양육비 산정기준표 (2021.12.22 공표, 2022.3.1 시행, 2026년 현재 최신)"
       },
       {
         "name": "Case 2 — 합산 500만, 자녀 10세, 비양육 300만",
@@ -235,7 +236,8 @@
           "ageGroup": "9-11",
           "standardSupport": 1544000,
           "nonCustodianShare": 926400
-        }
+        },
+        "lawSource": "서울가정법원 양육비 산정기준표 (2021.12.22 공표, 2022.3.1 시행, 2026년 현재 최신)"
       },
       {
         "name": "Case 3 — 합산 800만, 자녀 16세, 비양육 500만",
@@ -248,7 +250,8 @@
           "ageGroup": "15-18",
           "standardSupport": 2384000,
           "nonCustodianShare": 1490000
-        }
+        },
+        "lawSource": "서울가정법원 양육비 산정기준표 (2021.12.22 공표, 2022.3.1 시행, 2026년 현재 최신)"
       },
       {
         "name": "Case 4 — 합산 350만, 자녀 2세, 비양육 200만",
@@ -261,7 +264,8 @@
           "ageGroup": "0-2",
           "standardSupport": 945000,
           "nonCustodianShare": 540000
-        }
+        },
+        "lawSource": "서울가정법원 양육비 산정기준표 (2021.12.22 공표, 2022.3.1 시행, 2026년 현재 최신)"
       },
       {
         "name": "Case 5 — 합산 1,200만, 자녀 12세, 비양육 700만",
@@ -274,7 +278,8 @@
           "ageGroup": "12-14",
           "standardSupport": 2367000,
           "nonCustodianShare": 1380750
-        }
+        },
+        "lawSource": "서울가정법원 양육비 산정기준표 (2021.12.22 공표, 2022.3.1 시행, 2026년 현재 최신)"
       }
     ]
   },

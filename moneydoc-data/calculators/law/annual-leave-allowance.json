@@ -7,7 +7,7 @@
   "slug": "annual-leave-allowance",
   "year": 2026,
   "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "고용노동부",
@@ -68,7 +68,8 @@
           "hourlyWage": 14354,
           "dailyWage": 114832,
           "allowance": 574160
-        }
+        },
+        "lawSource": "근로기준법 제60조 (연차유급휴가), 통상임금 산정 209시간 기준 (근로기준법 시행령 제6조)"
       },
       {
         "name": "Case 2 — 월 400만 / 10일",
@@ -80,7 +81,8 @@
           "hourlyWage": 19139,
           "dailyWage": 153112,
           "allowance": 1531120
-        }
+        },
+        "lawSource": "근로기준법 제60조 (연차유급휴가), 통상임금 산정 209시간 기준 (근로기준법 시행령 제6조)"
       },
       {
         "name": "Case 3 — 월 250만 / 8일",
@@ -92,7 +94,8 @@
           "hourlyWage": 11962,
           "dailyWage": 95696,
           "allowance": 765568
-        }
+        },
+        "lawSource": "근로기준법 제60조 (연차유급휴가), 통상임금 산정 209시간 기준 (근로기준법 시행령 제6조)"
       },
       {
         "name": "Case 4 — 월 500만 / 15일",
@@ -104,7 +107,8 @@
           "hourlyWage": 23923,
           "dailyWage": 191384,
           "allowance": 2870760
-        }
+        },
+        "lawSource": "근로기준법 제60조 (연차유급휴가), 통상임금 산정 209시간 기준 (근로기준법 시행령 제6조)"
       },
       {
         "name": "Case 5 — 월 350만 / 3일",
@@ -116,7 +120,8 @@
           "hourlyWage": 16746,
           "dailyWage": 133968,
           "allowance": 401904
-        }
+        },
+        "lawSource": "근로기준법 제60조 (연차유급휴가), 통상임금 산정 209시간 기준 (근로기준법 시행령 제6조)"
       }
     ]
   },

@@ -7,7 +7,7 @@
   "slug": "parental-leave-pay",
   "year": 2026,
   "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "고용노동부",
@@ -21,9 +21,9 @@
     "note": "2026년 개편 — 3단계 구조 + 사후지급 폐지."
   },
   "constants": {
-    "PHASE1_RATE": 1.0,
+    "PHASE1_RATE": 1,
     "PHASE1_UPPER": 2500000,
-    "PHASE2_RATE": 1.0,
+    "PHASE2_RATE": 1,
     "PHASE2_UPPER": 2000000,
     "PHASE3_RATE": 0.8,
     "PHASE3_UPPER": 1600000,
@@ -87,6 +87,23 @@
           "phase2Monthly": 2000000,
           "phase3Monthly": 1600000,
           "totalPay": 12000000
+        },
+        "govSource": {
+          "adapter": "work24-parental-leave",
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSimulate12.do?systId=SI00000402",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "totalPay": 12000000,
+            "source": "고용24 육아휴직급여 간편 모의계산",
+            "_ref": {
+              "form": {
+                "start": "2026-01-01",
+                "end": "2026-06-30",
+                "salary": 2000000
+              }
+            }
+          }
         }
       },
       {
@@ -100,6 +117,23 @@
           "phase2Monthly": 2000000,
           "phase3Monthly": 1600000,
           "totalPay": 23100000
+        },
+        "govSource": {
+          "adapter": "work24-parental-leave",
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSimulate12.do?systId=SI00000402",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "totalPay": 23100000,
+            "source": "고용24 육아휴직급여 간편 모의계산",
+            "_ref": {
+              "form": {
+                "start": "2026-01-01",
+                "end": "2026-12-31",
+                "salary": 3000000
+              }
+            }
+          }
         }
       },
       {
@@ -113,6 +147,23 @@
           "phase2Monthly": 1500000,
           "phase3Monthly": 1200000,
           "totalPay": 16200000
+        },
+        "govSource": {
+          "adapter": "work24-parental-leave",
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSimulate12.do?systId=SI00000402",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "totalPay": 16200000,
+            "source": "고용24 육아휴직급여 간편 모의계산",
+            "_ref": {
+              "form": {
+                "start": "2026-01-01",
+                "end": "2026-12-31",
+                "salary": 1500000
+              }
+            }
+          }
         }
       },
       {
@@ -126,6 +177,23 @@
           "phase2Monthly": 800000,
           "phase3Monthly": 700000,
           "totalPay": 9000000
+        },
+        "govSource": {
+          "adapter": "work24-parental-leave",
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSimulate12.do?systId=SI00000402",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "totalPay": 9000000,
+            "source": "고용24 육아휴직급여 간편 모의계산",
+            "_ref": {
+              "form": {
+                "start": "2026-01-01",
+                "end": "2026-12-31",
+                "salary": 800000
+              }
+            }
+          }
         }
       },
       {
@@ -139,6 +207,23 @@
           "phase2Monthly": 2000000,
           "phase3Monthly": 1600000,
           "totalPay": 18300000
+        },
+        "govSource": {
+          "adapter": "work24-parental-leave",
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSimulate12.do?systId=SI00000402",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "totalPay": 18300000,
+            "source": "고용24 육아휴직급여 간편 모의계산",
+            "_ref": {
+              "form": {
+                "start": "2026-01-01",
+                "end": "2026-09-30",
+                "salary": 5000000
+              }
+            }
+          }
         }
       }
     ]

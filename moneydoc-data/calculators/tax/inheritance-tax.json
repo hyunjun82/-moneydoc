@@ -10,7 +10,7 @@
   ],
   "year": 2026,
   "lastUpdated": "2026-05-09",
-  "lastVerified": "2026-05-09",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "국세청",
@@ -34,7 +34,9 @@
     "ELDERLY_DEDUCTION_PER": 50000000,
     "DISABLED_DEDUCTION_PER_YEAR": 10000000,
     "SPOUSE_MIN": 500000000,
-    "SPOUSE_MAX": 3000000000
+    "SPOUSE_MAX": 3000000000,
+    "FUNERAL_MIN_DEDUCTION": 5000000,
+    "FILING_CREDIT_RATE": 0.03
   },
   "tables": {
     "brackets": {
@@ -172,10 +174,42 @@
           "disabledExpectedYears": 0
         },
         "expected": {
-          "deduction": 500000000,
+          "funeral": 5000000,
+          "taxableValue": 495000000,
+          "deduction": 495000000,
           "spouseDeduction": 0,
           "taxableBase": 0,
-          "tax": 0
+          "tax": 0,
+          "filingCredit": 0,
+          "payableTax": 0
+        },
+        "govSource": {
+          "adapter": "hometax-inheritance-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4108040000&tm3lIdx=4108040200",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "spouseDeduction": 0,
+            "deduction": 495000000,
+            "taxableBase": 0,
+            "tax": 0,
+            "source": "홈택스 상속세 간편계산",
+            "_ref": {
+              "form": {
+                "estate": 500000000,
+                "spouse": false,
+                "children": 2,
+                "elderly": 0,
+                "disabledAmt": 0
+              },
+              "funeral": 5000000,
+              "taxableValue": 495000000,
+              "deductionSum": 500000000,
+              "deductionLimit": 495000000,
+              "filingCredit": 0,
+              "payableTax": 0
+            }
+          }
         }
       },
       {
@@ -190,14 +224,46 @@
           "disabledExpectedYears": 0
         },
         "expected": {
-          "deduction": 1000000000,
+          "funeral": 5000000,
+          "taxableValue": 995000000,
+          "deduction": 995000000,
           "spouseDeduction": 500000000,
           "taxableBase": 0,
-          "tax": 0
+          "tax": 0,
+          "filingCredit": 0,
+          "payableTax": 0
+        },
+        "govSource": {
+          "adapter": "hometax-inheritance-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4108040000&tm3lIdx=4108040200",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "spouseDeduction": 500000000,
+            "deduction": 995000000,
+            "taxableBase": 0,
+            "tax": 0,
+            "source": "홈택스 상속세 간편계산",
+            "_ref": {
+              "form": {
+                "estate": 1000000000,
+                "spouse": true,
+                "children": 2,
+                "elderly": 0,
+                "disabledAmt": 0
+              },
+              "funeral": 5000000,
+              "taxableValue": 995000000,
+              "deductionSum": 1000000000,
+              "deductionLimit": 995000000,
+              "filingCredit": 0,
+              "payableTax": 0
+            }
+          }
         }
       },
       {
-        "name": "Case 3 — 15억, 배우자 O, 자녀 2 (배우자 6.43억)",
+        "name": "Case 3 — 15억, 배우자 O, 자녀 2 (배우자 6.43억, 장례비 500만 공제)",
         "input": {
           "totalEstate": 1500000000,
           "hasSpouse": true,
@@ -208,10 +274,42 @@
           "disabledExpectedYears": 0
         },
         "expected": {
-          "deduction": 1142857143,
-          "spouseDeduction": 642857143,
-          "taxableBase": 357142857,
-          "tax": 61428571
+          "funeral": 5000000,
+          "taxableValue": 1495000000,
+          "deduction": 1142857142,
+          "spouseDeduction": 642857142,
+          "taxableBase": 352142858,
+          "tax": 60428571,
+          "filingCredit": 1812857,
+          "payableTax": 58615714
+        },
+        "govSource": {
+          "adapter": "hometax-inheritance-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4108040000&tm3lIdx=4108040200",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "spouseDeduction": 642857142,
+            "deduction": 1142857142,
+            "taxableBase": 352142858,
+            "tax": 60428571,
+            "source": "홈택스 상속세 간편계산",
+            "_ref": {
+              "form": {
+                "estate": 1500000000,
+                "spouse": true,
+                "children": 2,
+                "elderly": 0,
+                "disabledAmt": 0
+              },
+              "funeral": 5000000,
+              "taxableValue": 1495000000,
+              "deductionSum": 1142857142,
+              "deductionLimit": 1495000000,
+              "filingCredit": 1812857,
+              "payableTax": 58615714
+            }
+          }
         }
       },
       {
@@ -226,10 +324,42 @@
           "disabledExpectedYears": 0
         },
         "expected": {
-          "deduction": 1785714286,
-          "spouseDeduction": 1285714286,
-          "taxableBase": 1214285714,
-          "tax": 325714286
+          "funeral": 5000000,
+          "taxableValue": 2995000000,
+          "deduction": 1785714285,
+          "spouseDeduction": 1285714285,
+          "taxableBase": 1209285715,
+          "tax": 323714286,
+          "filingCredit": 9711428,
+          "payableTax": 314002858
+        },
+        "govSource": {
+          "adapter": "hometax-inheritance-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4108040000&tm3lIdx=4108040200",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "spouseDeduction": 1285714285,
+            "deduction": 1785714285,
+            "taxableBase": 1209285715,
+            "tax": 323714286,
+            "source": "홈택스 상속세 간편계산",
+            "_ref": {
+              "form": {
+                "estate": 3000000000,
+                "spouse": true,
+                "children": 2,
+                "elderly": 0,
+                "disabledAmt": 0
+              },
+              "funeral": 5000000,
+              "taxableValue": 2995000000,
+              "deductionSum": 1785714285,
+              "deductionLimit": 2995000000,
+              "filingCredit": 9711428,
+              "payableTax": 314002858
+            }
+          }
         }
       },
       {
@@ -244,10 +374,42 @@
           "disabledExpectedYears": 0
         },
         "expected": {
-          "deduction": 2642857143,
-          "spouseDeduction": 2142857143,
-          "taxableBase": 2357142857,
-          "tax": 782857143
+          "funeral": 5000000,
+          "taxableValue": 4995000000,
+          "deduction": 2642857142,
+          "spouseDeduction": 2142857142,
+          "taxableBase": 2352142858,
+          "tax": 780857143,
+          "filingCredit": 23425714,
+          "payableTax": 757431429
+        },
+        "govSource": {
+          "adapter": "hometax-inheritance-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4108040000&tm3lIdx=4108040200",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "spouseDeduction": 2142857142,
+            "deduction": 2642857142,
+            "taxableBase": 2352142858,
+            "tax": 780857143,
+            "source": "홈택스 상속세 간편계산",
+            "_ref": {
+              "form": {
+                "estate": 5000000000,
+                "spouse": true,
+                "children": 2,
+                "elderly": 0,
+                "disabledAmt": 0
+              },
+              "funeral": 5000000,
+              "taxableValue": 4995000000,
+              "deductionSum": 2642857142,
+              "deductionLimit": 4995000000,
+              "filingCredit": 23425714,
+              "payableTax": 757431429
+            }
+          }
         }
       }
     ]

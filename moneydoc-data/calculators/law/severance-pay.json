@@ -13,7 +13,7 @@
   ],
   "year": 2026,
   "lastUpdated": "2026-05-09",
-  "lastVerified": "2026-05-09",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "고용노동부",
@@ -120,6 +120,62 @@
           "threeMonthTotal": 7500000,
           "avgDailyWage": 81521.74,
           "severance": 2452353
+        },
+        "govSource": {
+          "adapter": "moel-severance",
+          "url": "https://www.moel.go.kr/retirementpayCal.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "termDays": 366,
+            "sumday": 92,
+            "threeMonthTotal": 7500000,
+            "avgDailyWage": 81521.74,
+            "severance": 2452353,
+            "source": "고용노동부 퇴직금 계산기",
+            "_ref": {
+              "form": {
+                "hire": [
+                  2024,
+                  1,
+                  1
+                ],
+                "retire": [
+                  2025,
+                  1,
+                  1
+                ],
+                "monthly": 2500000,
+                "annualBonus": 0,
+                "leavePay": 0
+              },
+              "rows": [
+                {
+                  "i": 1,
+                  "f": "2024.10.1",
+                  "cnt": "31",
+                  "basic": 2500000
+                },
+                {
+                  "i": 2,
+                  "f": "2024.11.1",
+                  "cnt": "30",
+                  "basic": 2500000
+                },
+                {
+                  "i": 3,
+                  "f": "2024.12.1",
+                  "cnt": "31",
+                  "basic": 2500000
+                },
+                {
+                  "i": 4,
+                  "f": "",
+                  "cnt": ""
+                }
+              ]
+            }
+          }
         }
       },
       {
@@ -137,6 +193,62 @@
           "threeMonthTotal": 10500000,
           "avgDailyWage": 114130.44,
           "severance": 10281120
+        },
+        "govSource": {
+          "adapter": "moel-severance",
+          "url": "https://www.moel.go.kr/retirementpayCal.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "termDays": 1096,
+            "sumday": 92,
+            "threeMonthTotal": 10500000,
+            "avgDailyWage": 114130.44,
+            "severance": 10281120,
+            "source": "고용노동부 퇴직금 계산기",
+            "_ref": {
+              "form": {
+                "hire": [
+                  2022,
+                  1,
+                  1
+                ],
+                "retire": [
+                  2025,
+                  1,
+                  1
+                ],
+                "monthly": 3000000,
+                "annualBonus": 6000000,
+                "leavePay": 0
+              },
+              "rows": [
+                {
+                  "i": 1,
+                  "f": "2024.10.1",
+                  "cnt": "31",
+                  "basic": 3000000
+                },
+                {
+                  "i": 2,
+                  "f": "2024.11.1",
+                  "cnt": "30",
+                  "basic": 3000000
+                },
+                {
+                  "i": 3,
+                  "f": "2024.12.1",
+                  "cnt": "31",
+                  "basic": 3000000
+                },
+                {
+                  "i": 4,
+                  "f": "",
+                  "cnt": ""
+                }
+              ]
+            }
+          }
         }
       },
       {
@@ -154,6 +266,62 @@
           "threeMonthTotal": 14200000,
           "avgDailyWage": 154347.83,
           "severance": 23177547
+        },
+        "govSource": {
+          "adapter": "moel-severance",
+          "url": "https://www.moel.go.kr/retirementpayCal.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "termDays": 1827,
+            "sumday": 92,
+            "threeMonthTotal": 14200000,
+            "avgDailyWage": 154347.83,
+            "severance": 23177547,
+            "source": "고용노동부 퇴직금 계산기",
+            "_ref": {
+              "form": {
+                "hire": [
+                  2020,
+                  1,
+                  1
+                ],
+                "retire": [
+                  2025,
+                  1,
+                  1
+                ],
+                "monthly": 4000000,
+                "annualBonus": 8000000,
+                "leavePay": 800000
+              },
+              "rows": [
+                {
+                  "i": 1,
+                  "f": "2024.10.1",
+                  "cnt": "31",
+                  "basic": 4000000
+                },
+                {
+                  "i": 2,
+                  "f": "2024.11.1",
+                  "cnt": "30",
+                  "basic": 4000000
+                },
+                {
+                  "i": 3,
+                  "f": "2024.12.1",
+                  "cnt": "31",
+                  "basic": 4000000
+                },
+                {
+                  "i": 4,
+                  "f": "",
+                  "cnt": ""
+                }
+              ]
+            }
+          }
         }
       },
       {
@@ -171,6 +339,62 @@
           "threeMonthTotal": 18000000,
           "avgDailyWage": 195652.18,
           "severance": 58743897
+        },
+        "govSource": {
+          "adapter": "moel-severance",
+          "url": "https://www.moel.go.kr/retirementpayCal.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "termDays": 3653,
+            "sumday": 92,
+            "threeMonthTotal": 18000000,
+            "avgDailyWage": 195652.18,
+            "severance": 58743897,
+            "source": "고용노동부 퇴직금 계산기",
+            "_ref": {
+              "form": {
+                "hire": [
+                  2015,
+                  1,
+                  1
+                ],
+                "retire": [
+                  2025,
+                  1,
+                  1
+                ],
+                "monthly": 5000000,
+                "annualBonus": 12000000,
+                "leavePay": 0
+              },
+              "rows": [
+                {
+                  "i": 1,
+                  "f": "2024.10.1",
+                  "cnt": "31",
+                  "basic": 5000000
+                },
+                {
+                  "i": 2,
+                  "f": "2024.11.1",
+                  "cnt": "30",
+                  "basic": 5000000
+                },
+                {
+                  "i": 3,
+                  "f": "2024.12.1",
+                  "cnt": "31",
+                  "basic": 5000000
+                },
+                {
+                  "i": 4,
+                  "f": "",
+                  "cnt": ""
+                }
+              ]
+            }
+          }
         }
       },
       {
@@ -188,6 +412,62 @@
           "threeMonthTotal": 10500000,
           "avgDailyWage": 114130.44,
           "severance": 23986154
+        },
+        "govSource": {
+          "adapter": "moel-severance",
+          "url": "https://www.moel.go.kr/retirementpayCal.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "termDays": 2557,
+            "sumday": 92,
+            "threeMonthTotal": 10500000,
+            "avgDailyWage": 114130.44,
+            "severance": 23986154,
+            "source": "고용노동부 퇴직금 계산기",
+            "_ref": {
+              "form": {
+                "hire": [
+                  2018,
+                  1,
+                  1
+                ],
+                "retire": [
+                  2025,
+                  1,
+                  1
+                ],
+                "monthly": 3500000,
+                "annualBonus": 0,
+                "leavePay": 0
+              },
+              "rows": [
+                {
+                  "i": 1,
+                  "f": "2024.10.1",
+                  "cnt": "31",
+                  "basic": 3500000
+                },
+                {
+                  "i": 2,
+                  "f": "2024.11.1",
+                  "cnt": "30",
+                  "basic": 3500000
+                },
+                {
+                  "i": 3,
+                  "f": "2024.12.1",
+                  "cnt": "31",
+                  "basic": 3500000
+                },
+                {
+                  "i": 4,
+                  "f": "",
+                  "cnt": ""
+                }
+              ]
+            }
+          }
         }
       }
     ]

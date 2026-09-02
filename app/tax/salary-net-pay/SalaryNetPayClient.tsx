@@ -7,7 +7,7 @@ import { krw, parseKrw } from "@/lib/format";
 // 화면에 찍는 요율은 반드시 계산에 쓰는 상수에서 가져온다.
 // (하드코딩해 두었더니 계산은 4.75%인데 라벨만 4.5%로 남아 있었다.)
 const C = salaryNetPaySpec.constants as {
-  NP_RATE: number; HI_RATE: number; LTC_RATE: number; EI_RATE: number;
+  NP_RATE: number; HI_RATE: number; LTC_INCOME_RATE: number; EI_RATE: number;
 };
 const pct = (v: number) => `${+(v * 100).toFixed(3)}%`;
 
@@ -28,17 +28,18 @@ const DONUT_C = 2 * Math.PI * 54;
 export function SalaryNetPayClient() {
   const [annual, setAnnual] = useState(50_000_000);
   const [dependents, setDependents] = useState(1);
+  const [kids, setKids] = useState(0); // 부양가족 중 8~20세 자녀 (간이세액표 자녀 조정)
   const [nontaxable, setNontaxable] = useState(0);
 
   // 메인 = 간이세액표 §134 모드 (회사 매월 떼는 기준, 명세서와 일치)
   const r = useMemo(
-    () => calcSalaryNetPaySimpleTax({ annual, dependents, nontaxable }),
-    [annual, dependents, nontaxable]
+    () => calcSalaryNetPaySimpleTax({ annual, dependents, kids, nontaxable }),
+    [annual, dependents, kids, nontaxable]
   );
   // 참고용 = 1년 정확 환산 (소득세법 §55 누진세율, 연말정산 후 일치)
   const rAnnual = useMemo(
-    () => calcSalaryNetPay({ annual, dependents }),
-    [annual, dependents]
+    () => calcSalaryNetPay({ annual, dependents, kids }),
+    [annual, dependents, kids]
   );
 
   const netPct = (r.netMonthly / r.monthly) * 100;
@@ -110,9 +111,23 @@ export function SalaryNetPayClient() {
                       <span className="hint">본인 포함</span>
                     </div>
                     <div className="stepper">
-                      <button onClick={() => setDependents((d) => Math.max(1, d - 1))} type="button">−</button>
+                      <button
+                        onClick={() => setDependents((d) => { const n = Math.max(1, d - 1); setKids((k) => Math.min(k, n - 1)); return n; })}
+                        type="button"
+                      >−</button>
                       <span className="val">{dependents}</span>
-                      <button onClick={() => setDependents((d) => Math.min(10, d + 1))} type="button">+</button>
+                      <button onClick={() => setDependents((d) => Math.min(11, d + 1))} type="button">+</button>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="input-label">
+                      <span className="name">8~20세 자녀</span>
+                      <span className="hint">부양가족에 포함된 자녀만</span>
+                    </div>
+                    <div className="stepper">
+                      <button onClick={() => setKids((k) => Math.max(0, k - 1))} type="button">−</button>
+                      <span className="val">{kids}</span>
+                      <button onClick={() => setKids((k) => Math.min(dependents - 1, k + 1))} type="button">+</button>
                     </div>
                   </div>
                 </div>
@@ -221,7 +236,7 @@ export function SalaryNetPayClient() {
                 <span className="val minus">−{krw(r.healthInsurance)}</span>
               </div>
               <div className="b-row">
-                <span className="name">장기요양 <span className="tag minus">−건보의 {pct(C.LTC_RATE)}</span></span>
+                <span className="name">장기요양 <span className="tag minus">−보수의 {pct(C.LTC_INCOME_RATE / 2)}</span></span>
                 <span className="val minus">−{krw(r.longTermCare)}</span>
               </div>
               <div className="b-row">

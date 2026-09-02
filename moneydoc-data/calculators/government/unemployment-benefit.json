@@ -12,7 +12,7 @@
   ],
   "year": 2026,
   "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "고용노동부",
@@ -28,13 +28,10 @@
   },
   "constants": {
     "BENEFIT_RATE": 0.6,
-    "DAILY_UPPER_LIMIT_2026": 68100,
-    "DAILY_LOWER_LIMIT_2026": 66048,
-    "ELDERLY_DISABLED_BONUS_DAYS": 30,
     "DAILY_LOWER_LIMIT": 66048,
-    "DAILY_UPPER_LIMIT": 66000,
-    "DAILY_LOWER_LIMIT_2025": 66048,
-    "DAILY_UPPER_LIMIT_2025": 68100
+    "DAILY_UPPER_LIMIT": 68100,
+    "BASE_DAILY_WAGE_CAP": 113500,
+    "ELDERLY_DISABLED_BONUS_DAYS": 30
   },
   "tables": {
     "benefitDays": {
@@ -140,6 +137,27 @@
           "dailyBenefit": 66048,
           "benefitDays": 150,
           "totalBenefit": 9907200
+        },
+        "govSource": {
+          "adapter": "work24-unemployment",
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSimulate.do?systId=SI00000001",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "dailyBenefit": 66048,
+            "benefitDays": 150,
+            "totalBenefit": 9907200,
+            "source": "고용24 실업급여 간편 모의계산",
+            "_ref": {
+              "form": {
+                "age": 35,
+                "disabled": false,
+                "months": 24,
+                "hours": 8,
+                "salary": 2000000
+              }
+            }
+          }
         }
       },
       {
@@ -155,6 +173,27 @@
           "dailyBenefit": 66048,
           "benefitDays": 210,
           "totalBenefit": 13870080
+        },
+        "govSource": {
+          "adapter": "work24-unemployment",
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSimulate.do?systId=SI00000001",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "dailyBenefit": 66048,
+            "benefitDays": 210,
+            "totalBenefit": 13870080,
+            "source": "고용24 실업급여 간편 모의계산",
+            "_ref": {
+              "form": {
+                "age": 35,
+                "disabled": false,
+                "months": 60,
+                "hours": 8,
+                "salary": 3000000
+              }
+            }
+          }
         }
       },
       {
@@ -170,7 +209,8 @@
           "dailyBenefit": 68100,
           "benefitDays": 240,
           "totalBenefit": 16344000
-        }
+        },
+        "lawSource": "고용보험법 시행령 제68조 (기초일액 상한 113,500원, 2025.12.23 개정) → 구직급여 상한 1일 68,100원. 고용24 간편 모의계산은 2026-09 현재 이 개정을 미반영(66,048원으로 절단)해 정부 도구 대조에서 제외."
       },
       {
         "name": "Case 4 — 월급 250만, 가입 1년 (정확히), 50세 미만 (하한 적용)",
@@ -185,6 +225,27 @@
           "dailyBenefit": 66048,
           "benefitDays": 150,
           "totalBenefit": 9907200
+        },
+        "govSource": {
+          "adapter": "work24-unemployment",
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSimulate.do?systId=SI00000001",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "dailyBenefit": 66048,
+            "benefitDays": 150,
+            "totalBenefit": 9907200,
+            "source": "고용24 실업급여 간편 모의계산",
+            "_ref": {
+              "form": {
+                "age": 35,
+                "disabled": false,
+                "months": 12,
+                "hours": 8,
+                "salary": 2500000
+              }
+            }
+          }
         }
       },
       {
@@ -200,6 +261,79 @@
           "dailyBenefit": 68100,
           "benefitDays": 240,
           "totalBenefit": 16344000
+        },
+        "lawSource": "고용보험법 시행령 제68조 (기초일액 상한 113,500원, 2025.12.23 개정) → 구직급여 상한 1일 68,100원. 고용24 간편 모의계산은 2026-09 현재 이 개정을 미반영(66,048원으로 절단)해 정부 도구 대조에서 제외."
+      },
+      {
+        "name": "Case 6 — 월급 250만, 가입 6개월, 50세 이상 (1년 미만은 가산 없음 → 120일)",
+        "input": {
+          "monthlySalary": 2500000,
+          "insuredYears": 0.5,
+          "isElderlyOrDisabled": true
+        },
+        "expected": {
+          "rawDailyWage": 83333,
+          "rawBenefit": 50000,
+          "dailyBenefit": 66048,
+          "benefitDays": 120,
+          "totalBenefit": 7925760
+        },
+        "govSource": {
+          "adapter": "work24-unemployment",
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSimulate.do?systId=SI00000001",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "dailyBenefit": 66048,
+            "benefitDays": 120,
+            "totalBenefit": 7925760,
+            "source": "고용24 실업급여 간편 모의계산",
+            "_ref": {
+              "form": {
+                "age": 55,
+                "disabled": false,
+                "months": 6,
+                "hours": 8,
+                "salary": 2500000
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Case 7 — 월급 330만, 가입 5년 (60% = 66,000 < 하한 66,048)",
+        "input": {
+          "monthlySalary": 3300000,
+          "insuredYears": 5,
+          "isElderlyOrDisabled": false
+        },
+        "expected": {
+          "rawDailyWage": 110000,
+          "rawBenefit": 66000,
+          "dailyBenefit": 66048,
+          "benefitDays": 210,
+          "totalBenefit": 13870080
+        },
+        "govSource": {
+          "adapter": "work24-unemployment",
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSimulate.do?systId=SI00000001",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "dailyBenefit": 66048,
+            "benefitDays": 210,
+            "totalBenefit": 13870080,
+            "source": "고용24 실업급여 간편 모의계산",
+            "_ref": {
+              "form": {
+                "age": 35,
+                "disabled": false,
+                "months": 60,
+                "hours": 8,
+                "salary": 3300000
+              }
+            }
+          }
         }
       }
     ]

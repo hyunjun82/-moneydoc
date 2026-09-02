@@ -7,7 +7,7 @@
   "slug": "four-major-insurance",
   "year": 2026,
   "lastUpdated": "2026-09-01",
-  "lastVerified": "2026-09-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "4대 사회보험 정보연계센터",
@@ -40,9 +40,9 @@
     "NP_CAP": 6590000,
     "NP_FLOOR": 410000,
     "HI_RATE": 0.03595,
-    "LTC_RATE": 0.1314,
     "EI_RATE": 0.009,
-    "EI_RATE_EMPLOYER": 0.0115
+    "EI_RATE_EMPLOYER": 0.0115,
+    "LTC_INCOME_RATE": 0.009448
   },
   "formula": [
     {
@@ -143,6 +143,29 @@
           "employerWC": 14000,
           "employerTotal": 213340,
           "grandTotal": 407680
+        },
+        "govSource": {
+          "adapter": "insure4-premium",
+          "url": "https://www.4insure.or.kr/pbiz/ntcn/inscSmlCalcView.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "employeeNP": 95000,
+            "employerNP": 95000,
+            "employeeHI": 71900,
+            "employerHI": 71900,
+            "employeeLTC": 9440,
+            "employerLTC": 9440,
+            "employeeEI": 18000,
+            "employerEI": 23000,
+            "employeeTotal": 194340,
+            "source": "4대사회보험 정보연계센터 모의계산 (2026)",
+            "_ref": {
+              "base": 2000000,
+              "bizprTotalExclWC": 199340,
+              "grandTotalExclWC": 393680
+            }
+          }
         }
       },
       {
@@ -156,15 +179,38 @@
           "employeeNP": 142500,
           "employeeHI": 107850,
           "employeeLTC": 14170,
-          "employeeEI": 26990,
-          "employeeTotal": 291510,
+          "employeeEI": 27000,
+          "employeeTotal": 291520,
           "employerNP": 142500,
           "employerHI": 107850,
           "employerLTC": 14170,
           "employerEI": 34500,
           "employerWC": 21000,
           "employerTotal": 320020,
-          "grandTotal": 611530
+          "grandTotal": 611540
+        },
+        "govSource": {
+          "adapter": "insure4-premium",
+          "url": "https://www.4insure.or.kr/pbiz/ntcn/inscSmlCalcView.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "employeeNP": 142500,
+            "employerNP": 142500,
+            "employeeHI": 107850,
+            "employerHI": 107850,
+            "employeeLTC": 14170,
+            "employerLTC": 14170,
+            "employeeEI": 27000,
+            "employerEI": 34500,
+            "employeeTotal": 291520,
+            "source": "4대사회보험 정보연계센터 모의계산 (2026)",
+            "_ref": {
+              "base": 3000000,
+              "bizprTotalExclWC": 299020,
+              "grandTotalExclWC": 590540
+            }
+          }
         }
       },
       {
@@ -177,16 +223,39 @@
         "expected": {
           "employeeNP": 237500,
           "employeeHI": 179750,
-          "employeeLTC": 23610,
+          "employeeLTC": 23620,
           "employeeEI": 45000,
-          "employeeTotal": 485860,
+          "employeeTotal": 485870,
           "employerNP": 237500,
           "employerHI": 179750,
-          "employerLTC": 23610,
+          "employerLTC": 23620,
           "employerEI": 57500,
           "employerWC": 35000,
-          "employerTotal": 533360,
-          "grandTotal": 1019220
+          "employerTotal": 533370,
+          "grandTotal": 1019240
+        },
+        "govSource": {
+          "adapter": "insure4-premium",
+          "url": "https://www.4insure.or.kr/pbiz/ntcn/inscSmlCalcView.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "employeeNP": 237500,
+            "employerNP": 237500,
+            "employeeHI": 179750,
+            "employerHI": 179750,
+            "employeeLTC": 23620,
+            "employerLTC": 23620,
+            "employeeEI": 45000,
+            "employerEI": 57500,
+            "employeeTotal": 485870,
+            "source": "4대사회보험 정보연계센터 모의계산 (2026)",
+            "_ref": {
+              "base": 5000000,
+              "bizprTotalExclWC": 498370,
+              "grandTotalExclWC": 984240
+            }
+          }
         }
       },
       {
@@ -200,15 +269,38 @@
           "employeeNP": 313020,
           "employeeHI": 251650,
           "employeeLTC": 33060,
-          "employeeEI": 62990,
-          "employeeTotal": 660720,
+          "employeeEI": 63000,
+          "employeeTotal": 660730,
           "employerNP": 313020,
           "employerHI": 251650,
           "employerLTC": 33060,
           "employerEI": 80500,
           "employerWC": 49000,
           "employerTotal": 727230,
-          "grandTotal": 1387950
+          "grandTotal": 1387960
+        },
+        "govSource": {
+          "adapter": "insure4-premium",
+          "url": "https://www.4insure.or.kr/pbiz/ntcn/inscSmlCalcView.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "employeeNP": 313020,
+            "employerNP": 313020,
+            "employeeHI": 251650,
+            "employerHI": 251650,
+            "employeeLTC": 33060,
+            "employerLTC": 33060,
+            "employeeEI": 63000,
+            "employerEI": 80500,
+            "employeeTotal": 660730,
+            "source": "4대사회보험 정보연계센터 모의계산 (2026)",
+            "_ref": {
+              "base": 7000000,
+              "bizprTotalExclWC": 678230,
+              "grandTotalExclWC": 1338960
+            }
+          }
         }
       },
       {
@@ -221,16 +313,39 @@
         "expected": {
           "employeeNP": 313020,
           "employeeHI": 359500,
-          "employeeLTC": 47230,
+          "employeeLTC": 47240,
           "employeeEI": 90000,
-          "employeeTotal": 809750,
+          "employeeTotal": 809760,
           "employerNP": 313020,
           "employerHI": 359500,
-          "employerLTC": 47230,
+          "employerLTC": 47240,
           "employerEI": 115000,
           "employerWC": 70000,
-          "employerTotal": 904750,
-          "grandTotal": 1714500
+          "employerTotal": 904760,
+          "grandTotal": 1714520
+        },
+        "govSource": {
+          "adapter": "insure4-premium",
+          "url": "https://www.4insure.or.kr/pbiz/ntcn/inscSmlCalcView.do",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "employeeNP": 313020,
+            "employerNP": 313020,
+            "employeeHI": 359500,
+            "employerHI": 359500,
+            "employeeLTC": 47240,
+            "employerLTC": 47240,
+            "employeeEI": 90000,
+            "employerEI": 115000,
+            "employeeTotal": 809760,
+            "source": "4대사회보험 정보연계센터 모의계산 (2026)",
+            "_ref": {
+              "base": 10000000,
+              "bizprTotalExclWC": 834760,
+              "grandTotalExclWC": 1644520
+            }
+          }
         }
       }
     ]

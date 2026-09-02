@@ -23,6 +23,19 @@ import { getAdapter, AdapterError } from './adapters/_base.mjs';
 
 import './adapters/ezloan.mjs';
 import './adapters/kinfa.mjs';
+import './adapters/hometax-simplified-tax.mjs';
+import './adapters/wetax-acquisition-tax.mjs';
+import './adapters/hometax-transfer-tax.mjs';
+import './adapters/hometax-inheritance-tax.mjs';
+import './adapters/hometax-gift-tax.mjs';
+import './adapters/hometax-comp-tax.mjs';
+import './adapters/work24-unemployment.mjs';
+import './adapters/moel-severance.mjs';
+import './adapters/insure4-premium.mjs';
+import './adapters/nps-simple-pension.mjs';
+import './adapters/work24-parental-leave.mjs';
+import './adapters/work24-maternity-leave.mjs';
+import './adapters/wetax-auto-tax.mjs';
 
 const args = parseArgs(process.argv.slice(2));
 
@@ -55,7 +68,7 @@ async function main() {
       try {
         const adapter = getAdapter(adapterId);
         console.log(`  ⏳ ${c.name} via ${adapterId}...`);
-        const govExpected = await adapter.calculate(c.input);
+        const govExpected = await adapter.calculate(c.input, calc.slug);
 
         json.verification.cases[i].govSource = {
           adapter: adapterId,

@@ -1,0 +1,45 @@
+{
+  "label": "holding-tax-total",
+  "timestamp": "2026-09-02T04-07-43",
+  "pass": 6,
+  "fail": 0,
+  "error": 0,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "holding-tax-total",
+      "case": "Case 1 — 1주택 공시가 15억 (50세, 3년 — 세액공제 없음)",
+      "ts": 1788322063470
+    },
+    {
+      "status": "pass",
+      "calc": "holding-tax-total",
+      "case": "Case 2 — 1주택 공시가 30억 (65세, 10년 — 고령자 30% + 장기보유 40%)",
+      "ts": 1788322063473
+    },
+    {
+      "status": "pass",
+      "calc": "holding-tax-total",
+      "case": "Case 3 — 2주택 12억 + 8억 (기본세율)",
+      "ts": 1788322063473
+    },
+    {
+      "status": "pass",
+      "calc": "holding-tax-total",
+      "case": "Case 4 — 3주택 10억 + 6억 + 4억 (과표 12억 이하 → 기본세율)",
+      "ts": 1788322063473
+    },
+    {
+      "status": "pass",
+      "calc": "holding-tax-total",
+      "case": "Case 5 — 1주택 공시가 8억 (70세, 15년 — 12억 이하라 종부세 없음)",
+      "ts": 1788322063473
+    },
+    {
+      "status": "pass",
+      "calc": "holding-tax-total",
+      "case": "Case 6 — 3주택 20억 + 15억 + 10억 (과표 12억 초과 → 중과세율)",
+      "ts": 1788322063473
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "label": "scrape-auto-tax",
+  "timestamp": "2026-09-02T05-04-24",
+  "pass": 4,
+  "fail": 0,
+  "error": 1,
+  "results": [
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 1 — 1,000cc 신차 (비영업용)",
+      "adapter": "wetax-auto-tax",
+      "ts": 1788325474751
+    },
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 2 — 1,600cc 신차 (비영업용)",
+      "adapter": "wetax-auto-tax",
+      "ts": 1788325477431
+    },
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 3 — 2,000cc 신차 (비영업용)",
+      "adapter": "wetax-auto-tax",
+      "ts": 1788325479841
+    },
+    {
+      "status": "pass",
+      "calc": "auto-tax",
+      "case": "Case 4 — 1,999cc 5년 경감 (비영업용)",
+      "adapter": "wetax-auto-tax",
+      "ts": 1788325482365
+    },
+    {
+      "status": "error",
+      "calc": "auto-tax",
+      "case": "Case 5 — 2,000cc 12년 경감 (비영업용)",
+      "adapter": "wetax-auto-tax",
+      "detail": "폼 상태 반영 실패: {\"ok\":true,\"cd\":\"10\",\"use\":true,\"y\":null,\"cy\":\"2026\",\"cc\":\"2,000\"}",
+      "ts": 1788325485369
+    }
+  ]
+}

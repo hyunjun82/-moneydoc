@@ -11,7 +11,7 @@
   ],
   "year": 2026,
   "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "보건복지부",
@@ -82,7 +82,8 @@
           "median40": 1025695,
           "median32": 820556,
           "userPct": 39.0
-        }
+        },
+        "lawSource": "보건복지부 제77차 중앙생활보장위원회 의결 — 2026년 기준 중위소득 (1인 2,564,238 … 6인 8,555,952원) https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&list_no=1487098"
       },
       {
         "name": "Case 2 — 2인 / 200만",
@@ -97,7 +98,8 @@
           "median40": 1679717,
           "median32": 1343773,
           "userPct": 47.6
-        }
+        },
+        "lawSource": "보건복지부 제77차 중앙생활보장위원회 의결 — 2026년 기준 중위소득 (1인 2,564,238 … 6인 8,555,952원) https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&list_no=1487098"
       },
       {
         "name": "Case 3 — 3인 / 400만",
@@ -112,7 +114,8 @@
           "median40": 2143614,
           "median32": 1714892,
           "userPct": 74.6
-        }
+        },
+        "lawSource": "보건복지부 제77차 중앙생활보장위원회 의결 — 2026년 기준 중위소득 (1인 2,564,238 … 6인 8,555,952원) https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&list_no=1487098"
       },
       {
         "name": "Case 4 — 4인 / 600만",
@@ -127,7 +130,8 @@
           "median40": 2597895,
           "median32": 2078316,
           "userPct": 92.4
-        }
+        },
+        "lawSource": "보건복지부 제77차 중앙생활보장위원회 의결 — 2026년 기준 중위소득 (1인 2,564,238 … 6인 8,555,952원) https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&list_no=1487098"
       },
       {
         "name": "Case 5 — 1인 / 50만",
@@ -142,7 +146,8 @@
           "median40": 1025695,
           "median32": 820556,
           "userPct": 19.5
-        }
+        },
+        "lawSource": "보건복지부 제77차 중앙생활보장위원회 의결 — 2026년 기준 중위소득 (1인 2,564,238 … 6인 8,555,952원) https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&list_no=1487098"
       }
     ]
   },

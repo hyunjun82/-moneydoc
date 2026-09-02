@@ -11,7 +11,7 @@
   "slug": "property-tax",
   "year": 2026,
   "lastUpdated": "2026-05-09",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "행정안전부",
@@ -142,6 +142,19 @@
           "propertyTax": 270000,
           "educationTax": 54000,
           "totalTax": 324000
+        },
+        "govSource": {
+          "adapter": "hometax-comp-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4113000000&tm3lIdx=4113030000",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "propertyTax": 270000,
+            "source": "홈택스 종합부동산세 간이세액계산 (주택) — 재산세액 합계",
+            "_ref": {
+              "standardRate": true
+            }
+          }
         }
       },
       {
@@ -155,6 +168,19 @@
           "propertyTax": 570000,
           "educationTax": 114000,
           "totalTax": 684000
+        },
+        "govSource": {
+          "adapter": "hometax-comp-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4113000000&tm3lIdx=4113030000",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "propertyTax": 570000,
+            "source": "홈택스 종합부동산세 간이세액계산 (주택) — 재산세액 합계",
+            "_ref": {
+              "standardRate": true
+            }
+          }
         }
       },
       {
@@ -168,6 +194,19 @@
           "propertyTax": 1290000,
           "educationTax": 258000,
           "totalTax": 1548000
+        },
+        "govSource": {
+          "adapter": "hometax-comp-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4113000000&tm3lIdx=4113030000",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "propertyTax": 1290000,
+            "source": "홈택스 종합부동산세 간이세액계산 (주택) — 재산세액 합계",
+            "_ref": {
+              "standardRate": true
+            }
+          }
         }
       },
       {
@@ -181,6 +220,19 @@
           "propertyTax": 60000,
           "educationTax": 12000,
           "totalTax": 72000
+        },
+        "govSource": {
+          "adapter": "hometax-comp-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4113000000&tm3lIdx=4113030000",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "propertyTax": 60000,
+            "source": "홈택스 종합부동산세 간이세액계산 (주택) — 재산세액 합계",
+            "_ref": {
+              "standardRate": true
+            }
+          }
         }
       },
       {
@@ -194,6 +246,19 @@
           "propertyTax": 150000,
           "educationTax": 30000,
           "totalTax": 180000
+        },
+        "govSource": {
+          "adapter": "hometax-comp-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4113000000&tm3lIdx=4113030000",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "propertyTax": 150000,
+            "source": "홈택스 종합부동산세 간이세액계산 (주택) — 재산세액 합계",
+            "_ref": {
+              "standardRate": true
+            }
+          }
         }
       },
       {
@@ -207,7 +272,8 @@
           "propertyTax": 99000,
           "educationTax": 19800,
           "totalTax": 118800
-        }
+        },
+        "lawSource": "지방세법 제111조의2 (1세대1주택 세율 특례, 2026.12.28까지 유효) + 시행령 제109조 (공정시장가액비율 43/44/45%)"
       },
       {
         "name": "Case 7 — 공시가 5억 (1주택 9억 이하 특례)",
@@ -220,7 +286,8 @@
           "propertyTax": 260000,
           "educationTax": 52000,
           "totalTax": 312000
-        }
+        },
+        "lawSource": "지방세법 제111조의2 (1세대1주택 세율 특례, 2026.12.28까지 유효) + 시행령 제109조 (공정시장가액비율 43/44/45%)"
       },
       {
         "name": "Case 8 — 공시가 8억 (1주택 9억 이하 특례)",
@@ -233,7 +300,8 @@
           "propertyTax": 630000,
           "educationTax": 126000,
           "totalTax": 756000
-        }
+        },
+        "lawSource": "지방세법 제111조의2 (1세대1주택 세율 특례, 2026.12.28까지 유효) + 시행령 제109조 (공정시장가액비율 43/44/45%)"
       }
     ]
   },

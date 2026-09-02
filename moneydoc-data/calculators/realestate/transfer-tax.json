@@ -14,7 +14,7 @@
   ],
   "year": 2026,
   "lastUpdated": "2026-09-01",
-  "lastVerified": "2026-09-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "국세청",
@@ -229,6 +229,40 @@
           "taxBeforeLocal": 0,
           "localTax": 0,
           "totalTax": 0
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "isNonTaxable": true,
+            "taxableGain": 0,
+            "ltbcRate": 0,
+            "incomeAmount": 0,
+            "taxableBase": 0,
+            "taxBeforeLocal": 0,
+            "localTax": 0,
+            "totalTax": 0,
+            "source": "홈택스 양도소득세 간편계산 (비과세 안내)",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2021,
+                  9,
+                  2
+                ],
+                "kind": 1,
+                "sale": 1000000000,
+                "buy": 500000000,
+                "expense": 0,
+                "exemption": true,
+                "livedLabel": "5년 이상 6년 미만",
+                "heavy": 0
+              },
+              "notice": "양도가액이 12억원 이하이고 1세대1주택 비과세 요건에 해당하는 경우에는 모의계산 서비스를 제공하지 않습니다.\n양도가액을 다시 한 번 확인해 주시기 바랍니다."
+            }
+          }
         }
       },
       {
@@ -252,6 +286,58 @@
           "taxBeforeLocal": 2565000,
           "localTax": 256500,
           "totalTax": 2821500
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 700000000,
+            "incomeAmount": 28000000,
+            "taxableBase": 25500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2016,
+                  9,
+                  2
+                ],
+                "kind": 2,
+                "sale": 1500000000,
+                "buy": 800000000,
+                "expense": 0,
+                "exemption": true,
+                "livedLabel": "10년 이상",
+                "heavy": 0
+              },
+              "ltbc": 112000000,
+              "ltbcPopup": {
+                "cls": {
+                  "v": "1세대1주택장특공제(80% 한도)",
+                  "locked": false
+                },
+                "hold": {
+                  "v": "10년 이상",
+                  "locked": true
+                },
+                "lived": {
+                  "v": "-선택-",
+                  "locked": false
+                },
+                "amount": 112000000
+              },
+              "nonTaxableGain": 560000000,
+              "taxableGain": 140000000,
+              "calcTax": 2565000,
+              "rateText": "15%"
+            },
+            "ltbcRate": 0.8,
+            "taxBeforeLocal": 2565000,
+            "taxableGain": 140000000,
+            "isNonTaxable": false
+          }
         }
       },
       {
@@ -275,6 +361,58 @@
           "taxBeforeLocal": 82470000,
           "localTax": 8247000,
           "totalTax": 90717000
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 1000000000,
+            "incomeAmount": 272000000,
+            "taxableBase": 269500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2021,
+                  9,
+                  2
+                ],
+                "kind": 2,
+                "sale": 2000000000,
+                "buy": 1000000000,
+                "expense": 0,
+                "exemption": true,
+                "livedLabel": "3년 이상 4년 미만",
+                "heavy": 0
+              },
+              "ltbc": 128000000,
+              "ltbcPopup": {
+                "cls": {
+                  "v": "1세대1주택장특공제(80% 한도)",
+                  "locked": false
+                },
+                "hold": {
+                  "v": "5년 이상 6년 미만",
+                  "locked": true
+                },
+                "lived": {
+                  "v": "-선택-",
+                  "locked": false
+                },
+                "amount": 128000000
+              },
+              "nonTaxableGain": 600000000,
+              "taxableGain": 400000000,
+              "calcTax": 82470000,
+              "rateText": "38%"
+            },
+            "ltbcRate": 0.32,
+            "taxBeforeLocal": 82470000,
+            "taxableGain": 400000000,
+            "isNonTaxable": false
+          }
         }
       },
       {
@@ -299,6 +437,58 @@
           "taxBeforeLocal": 86270000,
           "localTax": 8627000,
           "totalTax": 94897000
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 300000000,
+            "incomeAmount": 282000000,
+            "taxableBase": 279500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2023,
+                  9,
+                  2
+                ],
+                "kind": 1,
+                "sale": 900000000,
+                "buy": 600000000,
+                "expense": 0,
+                "exemption": false,
+                "livedLabel": null,
+                "heavy": 0
+              },
+              "ltbc": 18000000,
+              "ltbcPopup": {
+                "cls": {
+                  "v": "장특공제(30%한도)",
+                  "locked": false
+                },
+                "hold": {
+                  "v": "3년 이상 4년 미만",
+                  "locked": true
+                },
+                "lived": {
+                  "v": "-선택-",
+                  "locked": true
+                },
+                "amount": 18000000
+              },
+              "nonTaxableGain": 0,
+              "taxableGain": 300000000,
+              "calcTax": 86270000,
+              "rateText": "38%"
+            },
+            "ltbcRate": 0.06,
+            "taxBeforeLocal": 86270000,
+            "taxableGain": 300000000,
+            "isNonTaxable": false
+          }
         }
       },
       {
@@ -322,6 +512,58 @@
           "taxBeforeLocal": 81710000,
           "localTax": 8171000,
           "totalTax": 89881000
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 300000000,
+            "incomeAmount": 270000000,
+            "taxableBase": 267500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2021,
+                  9,
+                  2
+                ],
+                "kind": 1,
+                "sale": 800000000,
+                "buy": 500000000,
+                "expense": 0,
+                "exemption": false,
+                "livedLabel": null,
+                "heavy": 0
+              },
+              "ltbc": 30000000,
+              "ltbcPopup": {
+                "cls": {
+                  "v": "장특공제(30%한도)",
+                  "locked": false
+                },
+                "hold": {
+                  "v": "5년 이상 6년 미만",
+                  "locked": true
+                },
+                "lived": {
+                  "v": "-선택-",
+                  "locked": true
+                },
+                "amount": 30000000
+              },
+              "nonTaxableGain": 0,
+              "taxableGain": 300000000,
+              "calcTax": 81710000,
+              "rateText": "38%"
+            },
+            "ltbcRate": 0.1,
+            "taxBeforeLocal": 81710000,
+            "taxableGain": 300000000,
+            "isNonTaxable": false
+          }
         }
       },
       {
@@ -345,6 +587,58 @@
           "taxBeforeLocal": 138250000,
           "localTax": 13825000,
           "totalTax": 152075000
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 200000000,
+            "incomeAmount": 200000000,
+            "taxableBase": 197500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2026,
+                  3,
+                  2
+                ],
+                "kind": 1,
+                "sale": 800000000,
+                "buy": 600000000,
+                "expense": 0,
+                "exemption": false,
+                "livedLabel": null,
+                "heavy": 0
+              },
+              "ltbc": 0,
+              "ltbcPopup": {
+                "cls": {
+                  "v": "장특공제(30%한도)",
+                  "locked": false
+                },
+                "hold": {
+                  "v": "-선택-",
+                  "locked": true
+                },
+                "lived": {
+                  "v": "-선택-",
+                  "locked": true
+                },
+                "amount": 0
+              },
+              "nonTaxableGain": 0,
+              "taxableGain": 200000000,
+              "calcTax": 138250000,
+              "rateText": "70%"
+            },
+            "ltbcRate": 0,
+            "taxBeforeLocal": 138250000,
+            "taxableGain": 200000000,
+            "isNonTaxable": false
+          }
         }
       },
       {
@@ -368,6 +662,58 @@
           "taxBeforeLocal": 118500000,
           "localTax": 11850000,
           "totalTax": 130350000
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 200000000,
+            "incomeAmount": 200000000,
+            "taxableBase": 197500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2025,
+                  3,
+                  2
+                ],
+                "kind": 1,
+                "sale": 700000000,
+                "buy": 500000000,
+                "expense": 0,
+                "exemption": false,
+                "livedLabel": null,
+                "heavy": 0
+              },
+              "ltbc": 0,
+              "ltbcPopup": {
+                "cls": {
+                  "v": "장특공제(30%한도)",
+                  "locked": false
+                },
+                "hold": {
+                  "v": "-선택-",
+                  "locked": true
+                },
+                "lived": {
+                  "v": "-선택-",
+                  "locked": true
+                },
+                "amount": 0
+              },
+              "nonTaxableGain": 0,
+              "taxableGain": 200000000,
+              "calcTax": 118500000,
+              "rateText": "60%"
+            },
+            "ltbcRate": 0,
+            "taxBeforeLocal": 118500000,
+            "taxableGain": 200000000,
+            "isNonTaxable": false
+          }
         }
       },
       {
@@ -387,6 +733,56 @@
           "taxBeforeLocal": 47510000,
           "localTax": 4751000,
           "totalTax": 52261000
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 200000000,
+            "incomeAmount": 180000000,
+            "taxableBase": 177500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2021,
+                  9,
+                  2
+                ],
+                "kind": 1,
+                "sale": 500000000,
+                "buy": 300000000,
+                "expense": 0,
+                "exemption": false,
+                "livedLabel": null,
+                "heavy": 0
+              },
+              "ltbc": 20000000,
+              "ltbcPopup": {
+                "cls": {
+                  "v": "장특공제(30%한도)",
+                  "locked": false
+                },
+                "hold": {
+                  "v": "5년 이상 6년 미만",
+                  "locked": true
+                },
+                "lived": {
+                  "v": "-선택-",
+                  "locked": true
+                },
+                "amount": 20000000
+              },
+              "nonTaxableGain": 0,
+              "taxableGain": 200000000,
+              "calcTax": 47510000,
+              "rateText": "38%"
+            },
+            "ltbcRate": 0.1,
+            "taxBeforeLocal": 47510000
+          }
         }
       },
       {
@@ -406,6 +802,56 @@
           "taxBeforeLocal": 70310000,
           "localTax": 7031000,
           "totalTax": 77341000
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 300000000,
+            "incomeAmount": 240000000,
+            "taxableBase": 237500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2016,
+                  9,
+                  2
+                ],
+                "kind": 1,
+                "sale": 800000000,
+                "buy": 500000000,
+                "expense": 0,
+                "exemption": false,
+                "livedLabel": null,
+                "heavy": 0
+              },
+              "ltbc": 60000000,
+              "ltbcPopup": {
+                "cls": {
+                  "v": "장특공제(30%한도)",
+                  "locked": false
+                },
+                "hold": {
+                  "v": "10년 이상",
+                  "locked": true
+                },
+                "lived": {
+                  "v": "-선택-",
+                  "locked": true
+                },
+                "amount": 60000000
+              },
+              "nonTaxableGain": 0,
+              "taxableGain": 300000000,
+              "calcTax": 70310000,
+              "rateText": "38%"
+            },
+            "ltbcRate": 0.2,
+            "taxBeforeLocal": 70310000
+          }
         }
       },
       {
@@ -425,6 +871,56 @@
           "taxBeforeLocal": 178500000,
           "localTax": 17850000,
           "totalTax": 196350000
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 300000000,
+            "incomeAmount": 300000000,
+            "taxableBase": 297500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2025,
+                  9,
+                  2
+                ],
+                "kind": 1,
+                "sale": 1000000000,
+                "buy": 700000000,
+                "expense": 0,
+                "exemption": false,
+                "livedLabel": null,
+                "heavy": 0
+              },
+              "ltbc": 0,
+              "ltbcPopup": {
+                "cls": {
+                  "v": "장특공제(30%한도)",
+                  "locked": false
+                },
+                "hold": {
+                  "v": "-선택-",
+                  "locked": true
+                },
+                "lived": {
+                  "v": "-선택-",
+                  "locked": true
+                },
+                "amount": 0
+              },
+              "nonTaxableGain": 0,
+              "taxableGain": 300000000,
+              "calcTax": 178500000,
+              "rateText": "60%"
+            },
+            "ltbcRate": 0,
+            "taxBeforeLocal": 178500000
+          }
         }
       },
       {
@@ -444,6 +940,56 @@
           "taxBeforeLocal": 50550000,
           "localTax": 5055000,
           "totalTax": 55605000
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 200000000,
+            "incomeAmount": 188000000,
+            "taxableBase": 185500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2023,
+                  9,
+                  2
+                ],
+                "kind": 1,
+                "sale": 600000000,
+                "buy": 400000000,
+                "expense": 0,
+                "exemption": false,
+                "livedLabel": null,
+                "heavy": 0
+              },
+              "ltbc": 12000000,
+              "ltbcPopup": {
+                "cls": {
+                  "v": "장특공제(30%한도)",
+                  "locked": false
+                },
+                "hold": {
+                  "v": "3년 이상 4년 미만",
+                  "locked": true
+                },
+                "lived": {
+                  "v": "-선택-",
+                  "locked": true
+                },
+                "amount": 12000000
+              },
+              "nonTaxableGain": 0,
+              "taxableGain": 200000000,
+              "calcTax": 50550000,
+              "rateText": "38%"
+            },
+            "ltbcRate": 0.06,
+            "taxBeforeLocal": 50550000
+          }
         }
       },
       {
@@ -463,6 +1009,56 @@
           "taxBeforeLocal": 85510000,
           "localTax": 8551000,
           "totalTax": 94061000
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 400000000,
+            "incomeAmount": 280000000,
+            "taxableBase": 277500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2011,
+                  9,
+                  2
+                ],
+                "kind": 1,
+                "sale": 1200000000,
+                "buy": 800000000,
+                "expense": 0,
+                "exemption": false,
+                "livedLabel": null,
+                "heavy": 0
+              },
+              "ltbc": 120000000,
+              "ltbcPopup": {
+                "cls": {
+                  "v": "장특공제(30%한도)",
+                  "locked": false
+                },
+                "hold": {
+                  "v": "15년 이상",
+                  "locked": true
+                },
+                "lived": {
+                  "v": "-선택-",
+                  "locked": true
+                },
+                "amount": 120000000
+              },
+              "nonTaxableGain": 0,
+              "taxableGain": 400000000,
+              "calcTax": 85510000,
+              "rateText": "38%"
+            },
+            "ltbcRate": 0.3,
+            "taxBeforeLocal": 85510000
+          }
         }
       },
       {
@@ -484,6 +1080,42 @@
           "totalIncomeTax": 152610000,
           "localTax": 15261000,
           "totalTax": 167871000
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 300000000,
+            "incomeAmount": 300000000,
+            "taxableBase": 297500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2021,
+                  9,
+                  2
+                ],
+                "kind": 1,
+                "sale": 800000000,
+                "buy": 500000000,
+                "expense": 0,
+                "exemption": false,
+                "livedLabel": null,
+                "heavy": 2
+              },
+              "ltbc": 0,
+              "ltbcPopup": null,
+              "nonTaxableGain": 0,
+              "taxableGain": 300000000,
+              "calcTax": 152610000,
+              "rateText": "58%"
+            },
+            "ltbcRate": 0,
+            "totalIncomeTax": 152610000
+          }
         }
       },
       {
@@ -505,6 +1137,42 @@
           "totalIncomeTax": 252310000,
           "localTax": 25231000,
           "totalTax": 277541000
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 400000000,
+            "incomeAmount": 400000000,
+            "taxableBase": 397500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2016,
+                  9,
+                  2
+                ],
+                "kind": 1,
+                "sale": 1000000000,
+                "buy": 600000000,
+                "expense": 0,
+                "exemption": false,
+                "livedLabel": null,
+                "heavy": 3
+              },
+              "ltbc": 0,
+              "ltbcPopup": null,
+              "nonTaxableGain": 0,
+              "taxableGain": 400000000,
+              "calcTax": 252310000,
+              "rateText": "70%"
+            },
+            "ltbcRate": 0,
+            "totalIncomeTax": 252310000
+          }
         }
       },
       {
@@ -526,6 +1194,42 @@
           "totalIncomeTax": 94610000,
           "localTax": 9461000,
           "totalTax": 104071000
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 200000000,
+            "incomeAmount": 200000000,
+            "taxableBase": 197500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2023,
+                  9,
+                  2
+                ],
+                "kind": 1,
+                "sale": 600000000,
+                "buy": 400000000,
+                "expense": 0,
+                "exemption": false,
+                "livedLabel": null,
+                "heavy": 2
+              },
+              "ltbc": 0,
+              "ltbcPopup": null,
+              "nonTaxableGain": 0,
+              "taxableGain": 200000000,
+              "calcTax": 94610000,
+              "rateText": "58%"
+            },
+            "ltbcRate": 0,
+            "totalIncomeTax": 94610000
+          }
         }
       },
       {
@@ -547,6 +1251,42 @@
           "totalIncomeTax": 466260000,
           "localTax": 46626000,
           "totalTax": 512886000
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 700000000,
+            "incomeAmount": 700000000,
+            "taxableBase": 697500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2011,
+                  9,
+                  2
+                ],
+                "kind": 1,
+                "sale": 1500000000,
+                "buy": 800000000,
+                "expense": 0,
+                "exemption": false,
+                "livedLabel": null,
+                "heavy": 3
+              },
+              "ltbc": 0,
+              "ltbcPopup": null,
+              "nonTaxableGain": 0,
+              "taxableGain": 700000000,
+              "calcTax": 466260000,
+              "rateText": "72%"
+            },
+            "ltbcRate": 0,
+            "totalIncomeTax": 466260000
+          }
         }
       },
       {
@@ -568,6 +1308,42 @@
           "totalIncomeTax": 114360000,
           "localTax": 11436000,
           "totalTax": 125796000
+        },
+        "govSource": {
+          "adapter": "hometax-transfer-tax",
+          "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&tmIdx=41&tm2lIdx=4104060000&tm3lIdx=4104060100",
+          "gov": true,
+          "lastVerified": "2026-09-02",
+          "govExpected": {
+            "gain": 200000000,
+            "incomeAmount": 200000000,
+            "taxableBase": 197500000,
+            "source": "홈택스 양도소득세 간편계산",
+            "_ref": {
+              "form": {
+                "acq": [
+                  2021,
+                  9,
+                  2
+                ],
+                "kind": 1,
+                "sale": 500000000,
+                "buy": 300000000,
+                "expense": 0,
+                "exemption": false,
+                "livedLabel": null,
+                "heavy": 3
+              },
+              "ltbc": 0,
+              "ltbcPopup": null,
+              "nonTaxableGain": 0,
+              "taxableGain": 200000000,
+              "calcTax": 114360000,
+              "rateText": "68%"
+            },
+            "ltbcRate": 0,
+            "totalIncomeTax": 114360000
+          }
         }
       }
     ]

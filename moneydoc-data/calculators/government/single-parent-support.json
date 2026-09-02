@@ -7,7 +7,7 @@
   "slug": "single-parent-support",
   "year": 2026,
   "lastUpdated": "2026-05-01",
-  "lastVerified": "2026-05-01",
+  "lastVerified": "2026-09-02",
   "source": {
     "primary": {
       "agency": "여성가족부",
@@ -63,7 +63,8 @@
           "isEligible": true,
           "monthlySupport": 230000,
           "annualSupport": 2760000
-        }
+        },
+        "lawSource": "한부모가족지원법 및 여성가족부 2026년 한부모가족 지원사업 안내 — 아동양육비 자녀 1인당 월 23만원 (기준 중위소득 65% 이하), 미혼모·부/조손/청년한부모 추가 10만원"
       },
       {
         "name": "Case 2 — 70% / 10세 (소득 초과)",
@@ -75,7 +76,8 @@
           "isEligible": false,
           "monthlySupport": 0,
           "annualSupport": 0
-        }
+        },
+        "lawSource": "한부모가족지원법 및 여성가족부 2026년 한부모가족 지원사업 안내 — 아동양육비 자녀 1인당 월 23만원 (기준 중위소득 65% 이하), 미혼모·부/조손/청년한부모 추가 10만원"
       },
       {
         "name": "Case 3 — 30% / 5세",
@@ -87,7 +89,8 @@
           "isEligible": true,
           "monthlySupport": 230000,
           "annualSupport": 2760000
-        }
+        },
+        "lawSource": "한부모가족지원법 및 여성가족부 2026년 한부모가족 지원사업 안내 — 아동양육비 자녀 1인당 월 23만원 (기준 중위소득 65% 이하), 미혼모·부/조손/청년한부모 추가 10만원"
       },
       {
         "name": "Case 4 — 60% / 17세 (경계)",
@@ -99,7 +102,8 @@
           "isEligible": true,
           "monthlySupport": 230000,
           "annualSupport": 2760000
-        }
+        },
+        "lawSource": "한부모가족지원법 및 여성가족부 2026년 한부모가족 지원사업 안내 — 아동양육비 자녀 1인당 월 23만원 (기준 중위소득 65% 이하), 미혼모·부/조손/청년한부모 추가 10만원"
       },
       {
         "name": "Case 5 — 45% / 19세 (연령 초과)",
@@ -111,7 +115,8 @@
           "isEligible": false,
           "monthlySupport": 0,
           "annualSupport": 0
-        }
+        },
+        "lawSource": "한부모가족지원법 및 여성가족부 2026년 한부모가족 지원사업 안내 — 아동양육비 자녀 1인당 월 23만원 (기준 중위소득 65% 이하), 미혼모·부/조손/청년한부모 추가 10만원"
       }
     ]
   },
@@ -247,7 +252,5 @@
       }
     ]
   },
-  "related": [
-
-  ]
+  "related": []
 }
