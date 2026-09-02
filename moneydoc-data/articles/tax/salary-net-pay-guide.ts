@@ -48,7 +48,7 @@ export const htmlBefore = `<h1>2026 연봉 실수령액 표, 4대보험 올라 �
 </g>
 </svg>
 
-<p class="ax-intro">2026년부터 국민연금이 <b>9%에서 9.5%로</b>, 건강보험이 <b>7.09%에서 7.19%로</b> 올랐습니다. 여기에 기준소득월액 상한까지 인상되면서 연봉이 그대로여도 실수령액이 줄었습니다. 연봉 5천만원 기준으로 4대보험만 <b>월 13,070원, 연 156,840원</b> 더 나갑니다. 아래 표는 고용노동부 공식 산식과 2026년 9월 요율로 계산했습니다.</p>
+<p class="ax-intro">2026년부터 국민연금이 <b>9%에서 9.5%로</b>, 건강보험이 <b>7.09%에서 7.19%로</b> 올랐습니다. 여기에 기준소득월액 상한까지 인상되면서 연봉이 그대로여도 실수령액이 줄었습니다. 연봉 5천만원 기준으로 4대보험만 <b>월 13,070원, 연 156,840원</b> 더 나갑니다. 아래 표는 국세청 2026.3 근로소득 간이세액표 원본과 2026년 9월 4대보험 요율로 계산했으며, 홈택스 조회값과 원 단위까지 일치합니다.</p>
 
 <a class="ax-cta" href="/tax/salary-net-pay/">
 <span><b>내 연봉 실수령액 바로 계산하기</b><i>연봉·부양가족·비과세만 넣으면 됩니다</i></span>
@@ -101,9 +101,9 @@ export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 계산 구�
 <tr><td>장기요양</td><td>건강보험료의 13.14%</td><td>19,680원</td></tr>
 <tr><td>고용보험</td><td>0.9%</td><td>37,490원</td></tr>
 <tr class="ax-hi"><td>4대보험 합계</td><td>약 9.72%</td><td><b>404,870원</b></td></tr>
-<tr><td>소득세</td><td>간이세액표 (부양 1명)</td><td>230,750원</td></tr>
-<tr><td>지방소득세</td><td>소득세의 10%</td><td>23,070원</td></tr>
-<tr class="ax-hi"><td>공제 합계</td><td>15.8%</td><td><b>658,690원</b></td></tr>
+<tr><td>소득세</td><td>간이세액표 (부양 1명)</td><td>217,320원</td></tr>
+<tr><td>지방소득세</td><td>소득세의 10%</td><td>21,730원</td></tr>
+<tr class="ax-hi"><td>공제 합계</td><td>15.5%</td><td><b>643,920원</b></td></tr>
 </tbody></table>
 <p class="ax-tn">연봉 5,000만원(월 세전 4,166,666원), 부양가족 1명(본인), 비과세 0원 기준.</p></div>
 </div></div>
@@ -116,18 +116,18 @@ export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 계산 구�
 <div class="ax-tw"><table>
 <thead><tr><th>연봉</th><th>월 세전</th><th>4대보험</th><th>소득세+지방세</th><th>월 실수령</th><th>공제율</th></tr></thead>
 <tbody>
-<tr><td>2,400만</td><td>2,000,000</td><td>194,340</td><td>21,240</td><td><b>1,784,420</b></td><td>10.8%</td></tr>
-<tr><td>3,000만</td><td>2,500,000</td><td>242,920</td><td>45,060</td><td><b>2,212,020</b></td><td>11.5%</td></tr>
-<tr><td>3,600만</td><td>3,000,000</td><td>291,510</td><td>92,460</td><td><b>2,616,030</b></td><td>12.8%</td></tr>
-<tr><td>4,000만</td><td>3,333,333</td><td>323,890</td><td>130,850</td><td><b>2,878,590</b></td><td>13.6%</td></tr>
-<tr class="ax-hi"><td>5,000만</td><td>4,166,666</td><td>404,870</td><td>253,820</td><td><b>3,507,970</b></td><td>15.8%</td></tr>
-<tr><td>6,000만</td><td>5,000,000</td><td>485,860</td><td>379,580</td><td><b>4,134,560</b></td><td>17.3%</td></tr>
-<tr><td>7,000만</td><td>5,833,333</td><td>566,820</td><td>514,010</td><td><b>4,752,500</b></td><td>18.5%</td></tr>
-<tr><td>8,000만</td><td>6,666,666</td><td>644,160</td><td>730,350</td><td><b>5,292,150</b></td><td>20.6%</td></tr>
-<tr><td>9,000만</td><td>7,500,000</td><td>685,560</td><td>939,910</td><td><b>5,874,530</b></td><td>21.7%</td></tr>
-<tr><td>1억</td><td>8,333,333</td><td>726,950</td><td>1,144,490</td><td><b>6,461,890</b></td><td>22.5%</td></tr>
-<tr><td>1.2억</td><td>10,000,000</td><td>809,750</td><td>1,648,870</td><td><b>7,541,380</b></td><td>24.6%</td></tr>
-<tr><td>1.5억</td><td>12,500,000</td><td>933,920</td><td>2,726,870</td><td><b>8,839,210</b></td><td>29.3%</td></tr>
+<tr><td>2,400만</td><td>2,000,000</td><td>194,340</td><td>21,470</td><td><b>1,784,190</b></td><td>10.8%</td></tr>
+<tr><td>3,000만</td><td>2,500,000</td><td>242,930</td><td>39,160</td><td><b>2,217,910</b></td><td>11.3%</td></tr>
+<tr><td>3,600만</td><td>3,000,000</td><td>291,520</td><td>81,780</td><td><b>2,626,700</b></td><td>12.4%</td></tr>
+<tr><td>4,000만</td><td>3,333,333</td><td>323,890</td><td>115,730</td><td><b>2,893,710</b></td><td>13.2%</td></tr>
+<tr class="ax-hi"><td>5,000만</td><td>4,166,666</td><td>404,870</td><td>239,050</td><td><b>3,522,740</b></td><td>15.5%</td></tr>
+<tr><td>6,000만</td><td>5,000,000</td><td>485,870</td><td>369,010</td><td><b>4,145,120</b></td><td>17.1%</td></tr>
+<tr><td>7,000만</td><td>5,833,333</td><td>566,820</td><td>495,510</td><td><b>4,771,000</b></td><td>18.2%</td></tr>
+<tr><td>8,000만</td><td>6,666,666</td><td>644,160</td><td>721,140</td><td><b>5,301,360</b></td><td>20.5%</td></tr>
+<tr><td>9,000만</td><td>7,500,000</td><td>685,570</td><td>930,710</td><td><b>5,883,720</b></td><td>21.6%</td></tr>
+<tr><td>1억</td><td>8,333,333</td><td>726,950</td><td>1,135,280</td><td><b>6,471,100</b></td><td>22.3%</td></tr>
+<tr><td>1.2억</td><td>10,000,000</td><td>809,760</td><td>1,658,140</td><td><b>7,532,100</b></td><td>24.7%</td></tr>
+<tr><td>1.5억</td><td>12,500,000</td><td>933,940</td><td>2,628,890</td><td><b>8,937,170</b></td><td>28.5%</td></tr>
 </tbody></table>
 <p class="ax-tn">단위: 원. 부양가족 1명·비과세 0원·2026년 9월 요율 기준. MoneyDoc 계산기 엔진으로 산출했습니다.</p></div>
 <div class="ax-warn"><span>주의</span><p>연봉 8,000만원부터 4대보험 증가폭이 확 꺾입니다. 월 급여가 <b>659만원</b>을 넘으면 국민연금이 상한에 걸려 더 이상 늘지 않기 때문입니다.</p></div>
@@ -137,23 +137,23 @@ export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 계산 구�
 <h3>연봉 7000 8000 9000 1억 실수령액은 얼마인가요</h3>
 <p>고연봉 구간은 소득세 누진 때문에 공제율이 빠르게 올라갑니다. 연봉이 2배가 돼도 실수령액은 2배가 되지 않습니다.</p>
 <div class="ax-cp">
-  <div><em>연봉 7,000만</em><b>4,752,500원</b><i>공제율 18.5% · 연 5,703만</i></div>
-  <div><em>연봉 8,000만</em><b>5,292,150원</b><i>공제율 20.6% · 연 6,350만</i></div>
-  <div><em>연봉 9,000만</em><b>5,874,530원</b><i>공제율 21.7% · 연 7,049만</i></div>
-  <div class="ax-hi"><em>연봉 1억</em><b>6,461,890원</b><i>공제율 22.5% · 연 7,754만</i></div>
+  <div><em>연봉 7,000만</em><b>4,771,000원</b><i>공제율 18.2% · 연 5,725만</i></div>
+  <div><em>연봉 8,000만</em><b>5,301,360원</b><i>공제율 20.6% · 연 6,362만</i></div>
+  <div><em>연봉 9,000만</em><b>5,883,720원</b><i>공제율 21.7% · 연 7,060만</i></div>
+  <div class="ax-hi"><em>연봉 1억</em><b>6,471,100원</b><i>공제율 22.3% · 연 7,765만</i></div>
 </div>
-<p class="ax-nt">연봉 5,000만원과 1억원을 비교하면 세전은 정확히 2배지만 실수령액은 <b>1.84배</b>입니다. 차액 월 295만원 중 약 89만원이 세금과 보험료로 빠집니다.</p>
+<p class="ax-nt">연봉 5,000만원과 1억원을 비교하면 세전은 정확히 2배지만 실수령액은 <b>1.84배</b>입니다. 차액 월 295만원 중 약 122만원이 세금과 보험료로 빠집니다.</p>
 <figure class="ax-ig">
 <svg viewBox="0 0 660 170" role="img" aria-label="연봉이 오를수록 공제율이 올라 실수령액 증가폭이 둔화됩니다">
 <text x="0" y="18" font-size="13" font-weight="700" fill="currentColor" letter-spacing="-.3">연봉이 오를수록 공제율이 커집니다</text>
 <line x1="0" y1="130" x2="620" y2="130" stroke="currentColor" stroke-width="1.5" opacity=".3"/>
 <g>
-<rect x="20" y="94" width="52" height="36" fill="currentColor" opacity=".45"/><text x="46" y="148" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">3천만</text><text x="46" y="86" font-size="11.5" font-weight="700" text-anchor="middle" fill="currentColor">11.5%</text>
-<rect x="118" y="80" width="52" height="50" fill="currentColor" opacity=".45"/><text x="144" y="148" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">4천만</text><text x="144" y="72" font-size="11.5" font-weight="700" text-anchor="middle" fill="currentColor">13.6%</text>
-<rect x="216" y="66" width="52" height="64" fill="currentColor" opacity=".45"/><text x="242" y="148" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">5천만</text><text x="242" y="58" font-size="11.5" font-weight="700" text-anchor="middle" fill="currentColor">15.8%</text>
-<rect x="314" y="52" width="52" height="78" fill="currentColor" opacity=".45"/><text x="340" y="148" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">7천만</text><text x="340" y="44" font-size="11.5" font-weight="700" text-anchor="middle" fill="currentColor">18.5%</text>
-<rect x="412" y="38" width="52" height="92" fill="#c4452f" opacity=".85"/><text x="438" y="148" font-size="11" text-anchor="middle" fill="#c4452f">1억</text><text x="438" y="30" font-size="11.5" font-weight="700" text-anchor="middle" fill="#c4452f">22.5%</text>
-<rect x="510" y="18" width="52" height="112" fill="#c4452f" opacity=".85"/><text x="536" y="148" font-size="11" text-anchor="middle" fill="#c4452f">1.5억</text><text x="536" y="10" font-size="11.5" font-weight="700" text-anchor="middle" fill="#c4452f">29.3%</text>
+<rect x="20" y="94" width="52" height="36" fill="currentColor" opacity=".45"/><text x="46" y="148" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">3천만</text><text x="46" y="86" font-size="11.5" font-weight="700" text-anchor="middle" fill="currentColor">11.3%</text>
+<rect x="118" y="80" width="52" height="50" fill="currentColor" opacity=".45"/><text x="144" y="148" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">4천만</text><text x="144" y="72" font-size="11.5" font-weight="700" text-anchor="middle" fill="currentColor">13.2%</text>
+<rect x="216" y="66" width="52" height="64" fill="currentColor" opacity=".45"/><text x="242" y="148" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">5천만</text><text x="242" y="58" font-size="11.5" font-weight="700" text-anchor="middle" fill="currentColor">15.5%</text>
+<rect x="314" y="52" width="52" height="78" fill="currentColor" opacity=".45"/><text x="340" y="148" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">7천만</text><text x="340" y="44" font-size="11.5" font-weight="700" text-anchor="middle" fill="currentColor">18.2%</text>
+<rect x="412" y="38" width="52" height="92" fill="#c4452f" opacity=".85"/><text x="438" y="148" font-size="11" text-anchor="middle" fill="#c4452f">1억</text><text x="438" y="30" font-size="11.5" font-weight="700" text-anchor="middle" fill="#c4452f">22.3%</text>
+<rect x="510" y="18" width="52" height="112" fill="#c4452f" opacity=".85"/><text x="536" y="148" font-size="11" text-anchor="middle" fill="#c4452f">1.5억</text><text x="536" y="10" font-size="11.5" font-weight="700" text-anchor="middle" fill="#c4452f">28.5%</text>
 </g>
 </svg>
 <figcaption>소득세법 제55조 종합소득세율 (누진) · 4대보험 요율 2026년 9월 기준</figcaption>
@@ -172,19 +172,19 @@ export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 계산 구�
 <div class="ax-tw"><table>
 <thead><tr><th>가족 구성</th><th>월 소득세</th><th>월 실수령</th><th>본인만 대비</th></tr></thead>
 <tbody>
-<tr><td>본인만</td><td>230,750</td><td>3,507,970</td><td>-</td></tr>
-<tr><td>배우자 포함</td><td>202,620</td><td>3,538,910</td><td>+30,940</td></tr>
-<tr><td>배우자 + 자녀 1명</td><td>142,590</td><td>3,604,950</td><td>+96,980</td></tr>
-<tr class="ax-hi"><td>배우자 + 자녀 2명</td><td>123,840</td><td>3,625,570</td><td><b>+117,600</b></td></tr>
+<tr><td>본인만</td><td>217,320</td><td>3,522,740</td><td>-</td></tr>
+<tr><td>배우자 포함</td><td>189,190</td><td>3,553,690</td><td>+30,950</td></tr>
+<tr><td>배우자 + 자녀 1명</td><td>108,320</td><td>3,642,640</td><td>+119,900</td></tr>
+<tr class="ax-hi"><td>배우자 + 자녀 2명</td><td>64,570</td><td>3,690,770</td><td><b>+168,030</b></td></tr>
 </tbody></table>
-<p class="ax-tn">연봉 5,000만원 기준. 인적공제는 1인당 연 150만원이고, 8~20세 자녀는 자녀세액공제가 추가됩니다.</p></div>
+<p class="ax-tn">연봉 5,000만원 기준. 인적공제는 1인당 연 150만원이고, 8~20세 자녀는 간이세액표 자녀 조정(1명 20,830원·2명 45,830원)이 추가로 빠집니다.</p></div>
 <p class="ax-nt">비과세는 4대보험과 소득세를 <b>동시에</b> 줄입니다. 식대는 월 20만원까지 비과세이고, 이만큼은 보험료 산정 기준에서도 빠집니다.</p>
 <div class="ax-tw"><table>
 <thead><tr><th>비과세 (월)</th><th>4대보험</th><th>월 실수령</th><th>비과세 0원 대비</th></tr></thead>
 <tbody>
-<tr><td>0원</td><td>404,870</td><td>3,507,970</td><td>-</td></tr>
-<tr class="ax-hi"><td>20만원 (식대)</td><td>385,430</td><td>3,556,690</td><td><b>+48,720</b></td></tr>
-<tr><td>30만원</td><td>375,710</td><td>3,581,060</td><td>+73,090</td></tr>
+<tr><td>0원</td><td>404,870</td><td>3,522,740</td><td>-</td></tr>
+<tr class="ax-hi"><td>20만원 (식대)</td><td>385,430</td><td>3,571,550</td><td><b>+48,810</b></td></tr>
+<tr><td>30만원</td><td>375,710</td><td>3,595,960</td><td>+73,220</td></tr>
 </tbody></table>
 <p class="ax-tn">연봉 5,000만원 기준. 같은 연봉이라도 식대 20만원이 비과세로 잡히면 연 58만원을 더 받습니다.</p></div>
 <div class="ax-warn"><span>주의</span><p>비과세로 잡히면 국민연금 기준소득월액도 줄어들어 <b>나중에 받을 연금액이 함께 줄어듭니다.</b> 당장의 실수령액과 노후 연금 사이의 선택입니다.</p></div>
@@ -202,11 +202,11 @@ export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 계산 구�
 <h2 class="ax-sec" id="faq">자주 묻는 질문</h2>
 
 <details class="ax-acc" open><summary>연봉 5000만원이면 월 실수령액은 얼마인가요?</summary>
-<div class="ax-ab"><p>부양가족 1명·비과세 0원 기준으로 월 <b>3,507,970원</b>입니다. 세전 4,166,666원에서 4대보험 404,870원, 소득세와 지방소득세 253,820원이 빠집니다. 공제율은 15.8%입니다.</p>
+<div class="ax-ab"><p>부양가족 1명·비과세 0원 기준으로 월 <b>3,522,740원</b>입니다. 세전 4,166,666원에서 4대보험 404,870원, 소득세와 지방소득세 239,050원이 빠집니다. 공제율은 15.5%입니다.</p>
 <p class="ax-law">소득세법 제134조 (간이세액표) · 4대보험 요율 2026년 9월</p></div></details>
 
 <details class="ax-acc"><summary>연봉 1억이면 실수령액이 얼마나 되나요?</summary>
-<div class="ax-ab"><p>월 <b>6,461,890원</b>, 연 7,754만원입니다. 공제율 22.5%로 연봉 5,000만원(15.8%)보다 크게 높습니다. 세전은 정확히 2배인데 실수령액은 1.84배입니다.</p>
+<div class="ax-ab"><p>월 <b>6,471,100원</b>, 연 7,765만원입니다. 공제율 22.3%로 연봉 5,000만원(15.5%)보다 크게 높습니다. 세전은 정확히 2배인데 실수령액은 1.84배입니다.</p>
 <p class="ax-law">소득세법 제55조 (종합소득세율)</p></div></details>
 
 <details class="ax-acc"><summary>2026년에 실수령액이 줄어든 이유가 뭔가요?</summary>
@@ -226,7 +226,7 @@ export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 계산 구�
 <ul>
 <li>실수령액 = 세전 월급 − <b>4대보험(약 9.72%)</b> − 소득세 − 지방소득세.</li>
 <li>2026년 요율은 국민연금 <b>4.75%</b>, 건강보험 <b>3.595%</b>, 장기요양 건보료의 <b>13.14%</b>, 고용보험 <b>0.9%</b>입니다.</li>
-<li>연봉 5,000만원 월 실수령 <b>3,507,970원</b>, 1억 <b>6,461,890원</b>입니다.</li>
+<li>연봉 5,000만원 월 실수령 <b>3,522,740원</b>, 1억 <b>6,471,100원</b>입니다.</li>
 <li>월 급여 <b>659만원</b>을 넘으면 국민연금이 상한에 걸립니다.</li>
 <li>부양가족 등록과 비과세 항목이 실수령액을 늘리는 현실적인 두 가지 방법입니다.</li>
 </ul>
@@ -242,11 +242,11 @@ export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 계산 구�
 <div class="ax-lawq"><b>2026년 4대보험 요율 (근로자 부담)</b>
 <p>국민연금 4.75% (총 9.5%) · 기준소득월액 상한 6,590,000원 / 하한 410,000원 (2026.7~2027.6 적용) — 국민연금공단·보건복지부<br>
 건강보험 3.595% (총 7.19%) — 국민건강보험공단<br>
-장기요양보험 건강보험료의 13.14% — 국민건강보험공단<br>
+장기요양보험 소득 대비 0.9448% (건강보험료의 13.14%), 근로자 절반 부담 — 국민건강보험공단<br>
 고용보험(실업급여) 0.9% (총 1.8%) — 고용노동부</p></div>
 
 <div class="ax-lawq"><b>소득세 산출 근거</b>
-<p>소득세법 제47조(근로소득공제) · 제50조(기본공제) · 제55조(세율) · 제59조(근로소득세액공제) · 제59조의2(자녀세액공제) · 제134조(근로소득 간이세액표). 지방소득세는 지방세법에 따라 소득세의 10%.</p></div>
+<p>소득세법 제47조(근로소득공제) · 제50조(기본공제) · 제55조(세율) · 제59조(근로소득세액공제) · 제59조의2(간이세액표 자녀 조정) · 제134조(근로소득 간이세액표). 지방소득세는 지방세법에 따라 소득세의 10%.</p></div>
 
 <div class="ax-src"><b>출처 · 국민연금공단, 국민건강보험공단, 고용노동부, 국세청</b><br>
 계산 산식은 <a href="https://www.moel.go.kr/" target="_blank" rel="noopener">고용노동부</a> 연봉 계산 산식을 따르며, 세율·공제는 국세청 소득세법 기준입니다. 요율은
@@ -283,7 +283,7 @@ export const faqLd = {
       "name": "연봉 5000만원이면 월 실수령액은 얼마인가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "부양가족 1명·비과세 0원 기준으로 월 3,507,970원입니다. 세전 4,166,666원에서 4대보험 404,870원, 소득세와 지방소득세 253,820원이 빠집니다. 공제율은 15.8%입니다. 소득세법 제134조 (간이세액표) · 4대보험 요율 2026년 9월"
+        "text": "부양가족 1명·비과세 0원 기준으로 월 3,522,740원입니다. 세전 4,166,666원에서 4대보험 404,870원, 소득세와 지방소득세 239,050원이 빠집니다. 공제율은 15.5%입니다. 소득세법 제134조 (간이세액표) · 4대보험 요율 2026년 9월"
       }
     },
     {
@@ -291,7 +291,7 @@ export const faqLd = {
       "name": "연봉 1억이면 실수령액이 얼마나 되나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "월 6,461,890원, 연 7,754만원입니다. 공제율 22.5%로 연봉 5,000만원(15.8%)보다 크게 높습니다. 세전은 정확히 2배인데 실수령액은 1.84배입니다. 소득세법 제55조 (종합소득세율)"
+        "text": "월 6,471,100원, 연 7,765만원입니다. 공제율 22.3%로 연봉 5,000만원(15.5%)보다 크게 높습니다. 세전은 정확히 2배인데 실수령액은 1.84배입니다. 소득세법 제55조 (종합소득세율)"
       }
     },
     {

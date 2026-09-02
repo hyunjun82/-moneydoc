@@ -33,7 +33,7 @@ export const htmlBefore = `<h1>자동차세 계산, 1월에 내면 2만 3천원 
 <text x="72" y="282" font-size="57" font-weight="800" fill="#2b2723" letter-spacing="-2.6">자동차세 연납</text>
 <rect x="70" y="312" width="336" height="26" fill="#f2cfc8"/>
 <text x="72" y="349" font-size="57" font-weight="800" fill="#c4452f" letter-spacing="-2.6">1월이 가장 크다</text>
-<text x="72" y="400" font-size="21" font-weight="700" fill="#6f6858" letter-spacing="-.8">2,000cc 기준 연 519,740원 · 연납 23,821원 할인</text>
+<text x="72" y="400" font-size="21" font-weight="700" fill="#6f6858" letter-spacing="-.8">2,000cc 기준 연 519,740원 · 연납 약 23,760원 할인</text>
 <rect x="0" y="545" width="1100" height="18" fill="#c4452f"/>
 <g transform="translate(636 190)">
   <ellipse cx="212" cy="230" rx="180" ry="18" fill="#e8ded0" opacity=".55"/>
@@ -46,7 +46,7 @@ export const htmlBefore = `<h1>자동차세 계산, 1월에 내면 2만 3천원 
 </g>
 </svg>
 
-<p class="ax-intro">자동차세는 <b>배기량 × cc당 세율</b>로 정해집니다. 2,000cc 승용차라면 자동차세 399,800원에 지방교육세 30%가 붙어 연 <b>519,740원</b>입니다. 1월에 한 번에 내면 <b>23,821원</b>을 아끼고, 차가 오래될수록 세금이 줄어듭니다. 차값이나 연비와는 아무 상관이 없습니다.</p>
+<p class="ax-intro">자동차세는 <b>배기량 × cc당 세율</b>로 정해집니다. 2,000cc 승용차라면 자동차세 399,800원에 지방교육세 30%가 붙어 연 <b>519,740원</b>입니다. 1월에 한 번에 내면 <b>23,760원</b>을 아끼고, 차가 오래될수록 세금이 줄어듭니다. 차값이나 연비와는 아무 상관이 없습니다.</p>
 
 <a class="ax-cta" href="/insurance/auto-tax/">
 <span><b>내 자동차세 바로 계산하기</b><i>배기량과 연식만 넣으면 됩니다</i></span>
@@ -96,11 +96,11 @@ export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 계산 구�
 <div class="ax-tw"><table>
 <thead><tr><th>배기량</th><th>자동차세</th><th>지방교육세</th><th>연간 합계</th><th>1월 연납 시</th></tr></thead>
 <tbody>
-<tr><td>998cc (경차)</td><td>79,840</td><td>23,952</td><td>103,792</td><td><b>99,035</b></td></tr>
-<tr><td>1,598cc</td><td>223,720</td><td>67,116</td><td>290,836</td><td><b>277,506</b></td></tr>
-<tr class="ax-hi"><td>1,999cc</td><td>399,800</td><td>119,940</td><td><b>519,740</b></td><td><b>495,919</b></td></tr>
-<tr><td>2,497cc</td><td>499,400</td><td>149,820</td><td>649,220</td><td><b>619,464</b></td></tr>
-<tr><td>3,342cc</td><td>668,400</td><td>200,520</td><td>868,920</td><td><b>829,094</b></td></tr>
+<tr><td>998cc (경차)</td><td>79,840</td><td>23,940</td><td>103,780</td><td><b>99,030</b></td></tr>
+<tr><td>1,598cc</td><td>223,720</td><td>67,100</td><td>290,820</td><td><b>277,520</b></td></tr>
+<tr class="ax-hi"><td>1,999cc</td><td>399,800</td><td>119,940</td><td><b>519,740</b></td><td><b>495,980</b></td></tr>
+<tr><td>2,497cc</td><td>499,400</td><td>149,820</td><td>649,220</td><td><b>619,550</b></td></tr>
+<tr><td>3,342cc</td><td>668,400</td><td>200,520</td><td>868,920</td><td><b>829,210</b></td></tr>
 </tbody></table>
 <p class="ax-tn">단위: 원. 비영업용 승용차·신차 기준. 연납액은 2~12월분의 5%를 공제한 값입니다. MoneyDoc 계산기 엔진으로 산출했습니다.</p></div>
 <p class="ax-nt">1,600cc가 경계선입니다. 1,598cc는 cc당 140원이라 29만원인데, 1,999cc는 200원이라 <b>52만원</b>입니다. 배기량은 25% 차이인데 세금은 79% 더 냅니다.</p>
@@ -115,10 +115,10 @@ export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 계산 구�
 <thead><tr><th>등록 후</th><th>사용연수</th><th>경감률</th><th>연간 세금 (1,999cc)</th></tr></thead>
 <tbody>
 <tr><td>0~1년</td><td>1~2년차</td><td>0%</td><td>519,740</td></tr>
-<tr><td>2년</td><td>3년차</td><td>5%</td><td>493,753</td></tr>
-<tr><td>4년</td><td>5년차</td><td>15%</td><td>441,779</td></tr>
-<tr><td>7년</td><td>8년차</td><td>30%</td><td>363,818</td></tr>
-<tr><td>9년</td><td>10년차</td><td>40%</td><td>311,844</td></tr>
+<tr><td>2년</td><td>3년차</td><td>5%</td><td>493,740</td></tr>
+<tr><td>4년</td><td>5년차</td><td>15%</td><td>441,760</td></tr>
+<tr><td>7년</td><td>8년차</td><td>30%</td><td>363,800</td></tr>
+<tr><td>9년</td><td>10년차</td><td>40%</td><td>311,840</td></tr>
 <tr class="ax-hi"><td>11년 이상</td><td>12년차 이상</td><td><b>50% (한도)</b></td><td><b>259,870</b></td></tr>
 </tbody></table>
 <p class="ax-tn">지방세법 시행령 제125조. 12년차부터는 50%로 고정되어 더 내려가지 않습니다.</p></div>
@@ -130,11 +130,11 @@ export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 계산 구�
 
 <div class="ax-st"><div class="ax-n">4</div><div class="ax-sb">
 <h3>연납하면 얼마나 아끼나요</h3>
-<p>자동차세는 원래 6월과 12월에 나눠 냅니다. 1월에 1년치를 미리 내면 <b>2월부터 12월까지 11개월분의 5%</b>를 공제받습니다. 연세액 기준으로는 약 <b>4.58%</b>입니다.</p>
+<p>자동차세는 원래 6월과 12월에 나눠 냅니다. 1월에 1년치를 미리 내면 <b>2월부터 12월까지 11개월분의 5%</b>를 공제받습니다. 연세액 기준으로는 약 <b>4.57%</b>입니다.</p>
 <div class="ax-tw"><table>
 <thead><tr><th>신청 시기</th><th>공제 대상</th><th>1,999cc 기준 할인액</th></tr></thead>
 <tbody>
-<tr class="ax-hi"><td>1월</td><td>2~12월분 (11개월)</td><td><b>약 23,821원</b></td></tr>
+<tr class="ax-hi"><td>1월</td><td>2~12월분 (11개월)</td><td><b>약 23,760원</b></td></tr>
 <tr><td>3월</td><td>4~12월분 (9개월)</td><td>줄어듦</td></tr>
 <tr><td>6월</td><td>7~12월분 (6개월)</td><td>더 줄어듦</td></tr>
 <tr><td>9월</td><td>10~12월분 (3개월)</td><td>가장 적음</td></tr>
@@ -177,11 +177,11 @@ export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 계산 구�
 <h2 class="ax-sec" id="faq">자주 묻는 질문</h2>
 
 <details class="ax-acc" open><summary>2,000cc 자동차세는 얼마인가요?</summary>
-<div class="ax-ab"><p>1,999cc 비영업용 승용차 신차 기준으로 자동차세 <b>399,800원</b>에 지방교육세 119,940원을 더해 연 <b>519,740원</b>입니다. 1월에 연납하면 23,821원을 공제받아 495,919원을 냅니다.</p>
+<div class="ax-ab"><p>1,999cc 비영업용 승용차 신차 기준으로 자동차세 <b>399,800원</b>에 지방교육세 119,940원을 더해 연 <b>519,740원</b>입니다. 1월에 연납하면 23,760원을 공제받아 495,980원을 냅니다.</p>
 <p class="ax-law">지방세법 제127조 (1,600cc 초과 cc당 200원) · 제151조</p></div></details>
 
 <details class="ax-acc"><summary>자동차세 연납 할인은 몇 퍼센트인가요?</summary>
-<div class="ax-ab"><p>1월에 신고·납부하면 <b>2월부터 12월까지 11개월분의 5%</b>를 공제합니다. 연세액 기준으로는 약 4.58%입니다. 3·6·9월에도 신청할 수 있지만 남은 기간분에만 적용돼 할인액이 줄어듭니다.</p>
+<div class="ax-ab"><p>1월에 신고·납부하면 <b>2월부터 12월까지 11개월분의 5%</b>를 공제합니다. 연세액 기준으로는 약 4.57%입니다. 3·6·9월에도 신청할 수 있지만 남은 기간분에만 적용돼 할인액이 줄어듭니다.</p>
 <p class="ax-law">지방자치단체 자동차세 연납 안내</p></div></details>
 
 <details class="ax-acc"><summary>차가 오래되면 자동차세가 줄어드나요?</summary>
@@ -203,7 +203,7 @@ export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 계산 구�
 <li>비영업용 승용 세율은 1,000cc 이하 80원, 1,600cc 이하 140원, <b>1,600cc 초과 200원</b>입니다.</li>
 <li>1,999cc 신차는 연 <b>519,740원</b>입니다.</li>
 <li>사용연수 3년차부터 <b>매년 5%씩</b> 경감되어 12년차에 50%가 됩니다.</li>
-<li>1월 연납하면 11개월분의 5%, 1,999cc 기준 <b>약 23,821원</b>을 아낍니다.</li>
+<li>1월 연납하면 11개월분의 5%, 1,999cc 기준 <b>약 23,760원</b>을 아낍니다.</li>
 </ul>
 <a class="ax-cta" href="/insurance/auto-tax/">
 <span><b>자동차세 계산기로 확인하기</b><i>배기량·연식으로 즉시 계산</i></span>
@@ -257,7 +257,7 @@ export const faqLd = {
       "name": "2,000cc 자동차세는 얼마인가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "1,999cc 비영업용 승용차 신차 기준으로 자동차세 399,800원에 지방교육세 119,940원을 더해 연 519,740원입니다. 1월에 연납하면 23,821원을 공제받아 495,919원을 냅니다. 지방세법 제127조 (1,600cc 초과 cc당 200원) · 제151조"
+        "text": "1,999cc 비영업용 승용차 신차 기준으로 자동차세 399,800원에 지방교육세 119,940원을 더해 연 519,740원입니다. 1월에 연납하면 23,760원을 공제받아 495,980원을 냅니다. 지방세법 제127조 (1,600cc 초과 cc당 200원) · 제151조"
       }
     },
     {
@@ -265,7 +265,7 @@ export const faqLd = {
       "name": "자동차세 연납 할인은 몇 퍼센트인가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "1월에 신고·납부하면 2월부터 12월까지 11개월분의 5%를 공제합니다. 연세액 기준으로는 약 4.58%입니다. 3·6·9월에도 신청할 수 있지만 남은 기간분에만 적용돼 할인액이 줄어듭니다. 지방자치단체 자동차세 연납 안내"
+        "text": "1월에 신고·납부하면 2월부터 12월까지 11개월분의 5%를 공제합니다. 연세액 기준으로는 약 4.57%입니다. 3·6·9월에도 신청할 수 있지만 남은 기간분에만 적용돼 할인액이 줄어듭니다. 지방자치단체 자동차세 연납 안내"
       }
     },
     {
