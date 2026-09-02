@@ -18,7 +18,7 @@ import { calculators } from "@/lib/calc/engine";
 export type SalaryInput = {
   annual: number;
   dependents: number;
-  kids: number;
+  kids?: number;       // 엔진(고용노동부 산식)이 쓰지 않음 — 간이세액표 자녀 조정값 확인 후 반영
   nontaxable?: number; // 월 비과세액 (식대 등). default 0
 };
 

@@ -28,18 +28,17 @@ const DONUT_C = 2 * Math.PI * 54;
 export function SalaryNetPayClient() {
   const [annual, setAnnual] = useState(50_000_000);
   const [dependents, setDependents] = useState(1);
-  const [kids, setKids] = useState(0);
   const [nontaxable, setNontaxable] = useState(0);
 
   // 메인 = 간이세액표 §134 모드 (회사 매월 떼는 기준, 명세서와 일치)
   const r = useMemo(
-    () => calcSalaryNetPaySimpleTax({ annual, dependents, kids, nontaxable }),
-    [annual, dependents, kids, nontaxable]
+    () => calcSalaryNetPaySimpleTax({ annual, dependents, nontaxable }),
+    [annual, dependents, nontaxable]
   );
   // 참고용 = 1년 정확 환산 (소득세법 §55 누진세율, 연말정산 후 일치)
   const rAnnual = useMemo(
-    () => calcSalaryNetPay({ annual, dependents, kids }),
-    [annual, dependents, kids]
+    () => calcSalaryNetPay({ annual, dependents }),
+    [annual, dependents]
   );
 
   const netPct = (r.netMonthly / r.monthly) * 100;
@@ -114,17 +113,6 @@ export function SalaryNetPayClient() {
                       <button onClick={() => setDependents((d) => Math.max(1, d - 1))} type="button">−</button>
                       <span className="val">{dependents}</span>
                       <button onClick={() => setDependents((d) => Math.min(10, d + 1))} type="button">+</button>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="input-label">
-                      <span className="name">8세~20세 자녀</span>
-                      <span className="hint">세액공제</span>
-                    </div>
-                    <div className="stepper">
-                      <button onClick={() => setKids((k) => Math.max(0, k - 1))} type="button">−</button>
-                      <span className="val">{kids}</span>
-                      <button onClick={() => setKids((k) => Math.min(8, k + 1))} type="button">+</button>
                     </div>
                   </div>
                 </div>
