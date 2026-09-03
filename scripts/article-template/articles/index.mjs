@@ -18,4 +18,6 @@ export const ARTICLES = [
   { slug: 'transfer-tax-guide', cat: 'realestate', catLabel: '부동산', crumb: '양도소득세', blurb: '2년 보유 비과세 · 12억 초과분 계산 · 장기보유특별공제 80% · 2개월 예정신고' },
   { slug: 'property-tax-guide', cat: 'realestate', catLabel: '부동산', crumb: '재산세', blurb: '공시가격 → 과세표준 · 공시가별 세금표 · 1주택 특례세율 · 7월 9월 납기' },
   { slug: 'comprehensive-real-estate-tax-guide', cat: 'realestate', catLabel: '부동산', crumb: '종합부동산세', blurb: '공시가 합산 · 1주택 12억 공제 · 재산세액공제 · 고령자·장기보유 80%' },
+  { slug: 'annual-leave-allowance-guide', cat: 'law', catLabel: '법률', crumb: '연차수당', blurb: '연차 15일·25일 한도 · 1년 미만 11일 · 통상임금 하루치 · 촉진 절차' },
+  { slug: 'unpaid-wages-guide', cat: 'law', catLabel: '법률', crumb: '임금체불', blurb: '14일 지급기한 · 연 20% 지연이자 표 · 진정 절차 · 대지급금 요건' },
 ];

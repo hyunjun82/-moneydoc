@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { ArticleV2 } from "@/components/ArticleV2";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/law/annual-leave-allowance-guide";
+import { meta, faqLd, html, scriptKey } from "@/data/articles/law/unpaid-wages-guide";
 
-const PAGE_URL = "https://moneydoc.kr/law/annual-leave-allowance-guide/";
+const PAGE_URL = "https://moneydoc.kr/law/unpaid-wages-guide/";
 
 export const metadata: Metadata = {
   title: meta.title,
   description: meta.description,
-  alternates: { canonical: "/law/annual-leave-allowance-guide/" },
+  alternates: { canonical: "/law/unpaid-wages-guide/" },
   robots: { index: true, follow: true, "max-image-preview": "large" },
   openGraph: {
     type: "article",
@@ -31,7 +31,7 @@ export default function Page() {
       url={PAGE_URL}
       cat="law"
       catLabel="법률"
-      crumb="연차수당"
+      crumb="임금체불"
     />
   );
 }
