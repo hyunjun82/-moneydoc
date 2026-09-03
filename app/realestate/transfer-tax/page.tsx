@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CalculatorShell } from "@/components/CalculatorShell";
-import { GenericCalculator } from "@/components/GenericCalculator";
+import { Client } from "./Client";
 import spec from "@/data/calculators/realestate/transfer-tax.json";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function Page() {
       sourceBadge="국세청·소득세법 §89·§95·§104 · 17 case 검증"
       description="1세대 1주택 / 다주택자 / 조정대상지역 다주택 — 양도 상황별 토글 한 화면"
     >
-      <GenericCalculator spec={spec} />
+      <Client />
     </CalculatorShell>
   );
 }

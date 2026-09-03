@@ -1,5 +1,5 @@
 import spec from "@/data/calculators/tax/salary-net-pay.json";
-import { calculators } from "@/lib/calc/engine";
+import { calc as calcSalary } from "@/lib/calc/gen/salary-net-pay";
 
 /**
  * 연봉 실수령액 — 산식은 lib/calc/engine.js 의 calc_salary 하나만 사용한다.
@@ -46,7 +46,7 @@ export type SalaryResult = {
 
 function run(input: SalaryInput): SalaryResult {
   const { annual, dependents, kids = 0, nontaxable = 0, taxRatePct = 100 } = input;
-  return calculators["salary-net-pay"](
+  return calcSalary(
     { annual, dependents, kids, nontaxable, taxRatePct },
     spec as unknown as Record<string, unknown>
   ) as unknown as SalaryResult;

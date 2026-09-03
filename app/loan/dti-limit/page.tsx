@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CalculatorShell } from "@/components/CalculatorShell";
-import { GenericCalculator } from "@/components/GenericCalculator";
+import { Client } from "./Client";
 import spec from "@/data/calculators/loan/dti-limit.json";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function Page() {
       sourceBadge="주담대 DTI 산정 기준 · 5케이스 검증"
       description="총부채상환비율 기준 신규 주담대 한도"
     >
-      <GenericCalculator spec={spec} />
+      <Client />
     </CalculatorShell>
   );
 }

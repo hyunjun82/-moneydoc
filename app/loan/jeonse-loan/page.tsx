@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CalculatorShell } from "@/components/CalculatorShell";
-import { GenericCalculator } from "@/components/GenericCalculator";
+import { Client } from "./Client";
 import spec from "@/data/calculators/loan/jeonse-loan.json";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function Page() {
       sourceBadge="HF·HUG 보증 한도 기준 · 5케이스 검증"
       description="보증금 80% (HF·HUG·청년) + 한도 차등"
     >
-      <GenericCalculator spec={spec} />
+      <Client />
     </CalculatorShell>
   );
 }

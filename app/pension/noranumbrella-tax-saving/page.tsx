@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CalculatorShell } from "@/components/CalculatorShell";
-import { GenericCalculator } from "@/components/GenericCalculator";
+import { Client } from "./Client";
 import spec from "@/data/calculators/pension/noranumbrella-tax-saving.json";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default function Page() {
       spec={spec}
       sourceBadge="중소기업중앙회 2026 · 검증 완료"
     >
-      <GenericCalculator spec={spec} />
+      <Client />
     </CalculatorShell>
   );
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CalculatorShell } from "@/components/CalculatorShell";
-import { GenericCalculator } from "@/components/GenericCalculator";
+import { Client } from "./Client";
 import spec from "@/data/calculators/savings/free-savings.json";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function Page() {
       sourceBadge="한국은행 표준 산식 · 5케이스 검증"
       description="월 자유 납입 적금 만기 수령액 — 평균 월납입 기준 단리, 이자세 15.4% (비과세 시 0%)"
     >
-      <GenericCalculator spec={spec} />
+      <Client />
     </CalculatorShell>
   );
 }

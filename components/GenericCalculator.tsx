@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo, useEffect, useRef } from "react";
-import { calculators } from "@/lib/calc/engine";
 import { krw, parseKrw } from "@/lib/format";
 import { OUTPUT_LABELS } from "./calc-output-labels";
 
@@ -11,7 +10,8 @@ import { OUTPUT_LABELS } from "./calc-output-labels";
    - 오른쪽 입력 카드: 금액은 칩(빠른 선택), 정수는 스테퍼, 선택지 4개 이하는 세그먼트
    - 아래 즉답 표: 첫 금액 입력을 구간별로 바꿔 가며 결과를 미리 보여준다 (표 값도 엔진)
    - URL 쿼리로 입력을 저장·복원 (공유 링크)
-   계산은 lib/calc/engine.js 그대로. 이 파일은 화면만 담당한다.
+   계산은 lib/calc/engine.js 그대로. 페이지는 scripts/split-engine.mjs 가 쪼갠 lib/calc/gen/<slug>.js 의 함수를
+   calc 로 넘긴다(자기 산식만 실림). 이 파일은 화면만 담당한다.
    ========================================================================= */
 
 type Option = { value: unknown; label: string };
@@ -116,7 +116,9 @@ function normalizeOptions(def: InputDef): Option[] {
   return (def.options ?? []).map((o) => (typeof o === "string" ? { value: o, label: o } : o));
 }
 
-export function GenericCalculator({ spec }: { spec: Spec }) {
+type CalcFn = (input: Record<string, unknown>, spec?: unknown) => Record<string, unknown>;
+
+export function GenericCalculator({ spec, calc }: { spec: Spec; calc: CalcFn }) {
   const inputs = spec.inputs ?? [];
   const initial = () => {
     const v: Record<string, unknown> = {};
@@ -158,7 +160,7 @@ export function GenericCalculator({ spec }: { spec: Spec }) {
     } catch { /* noop */ }
   }, [values, inputs]);
 
-  const calcFn = calculators[spec.slug];
+  const calcFn = calc;
   const expected = spec.verification?.cases?.[0]?.expected ?? {};
   const primaryKey = pickPrimaryOutput(expected);
   const govVerified = (spec.verification?.cases ?? []).some((c) => c.govSource);

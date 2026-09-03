@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CalculatorShell } from "@/components/CalculatorShell";
-import { GenericCalculator } from "@/components/GenericCalculator";
+import { Client } from "./Client";
 import spec from "@/data/calculators/loan/ltv-limit.json";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function Page() {
       sourceBadge="국토부·금감원 LTV 한도 · 8케이스 검증"
       description="주택담보비율 + 방공제 + 임차보증금 + 절대한도 (수도권 규제 6억, 25억 초과 8억) 통합"
     >
-      <GenericCalculator spec={spec} />
+      <Client />
     </CalculatorShell>
   );
 }

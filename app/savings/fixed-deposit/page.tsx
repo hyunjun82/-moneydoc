@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CalculatorShell } from "@/components/CalculatorShell";
-import { GenericCalculator } from "@/components/GenericCalculator";
+import { Client } from "./Client";
 import spec from "@/data/calculators/savings/fixed-deposit.json";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function Page() {
       sourceBadge="한국은행 표준 산식 · 5케이스 검증"
       description="목돈 일시 예치 시 만기 수령액 — 단리, 이자소득세 15.4% 자동 차감 (비과세 자격 시 0%)"
     >
-      <GenericCalculator spec={spec} />
+      <Client />
     </CalculatorShell>
   );
 }
