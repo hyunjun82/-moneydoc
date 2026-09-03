@@ -28,4 +28,7 @@ export const ARTICLES = [
   { slug: 'national-pension-early-guide', cat: 'pension', catLabel: '연금', crumb: '국민연금 조기수령', blurb: '1년 6% 감액표 · 손익분기 나이 · 신청 조건 · 연기연금 비교' },
   { slug: 'installment-savings-guide', cat: 'savings', catLabel: '저축', crumb: '적금 이자', blurb: '기간·금리별 이자표 · 단리 복리 차이 · 15.4% 세금 · 비과세 조건' },
   { slug: 'auto-tax-guide', cat: 'insurance', catLabel: '보험·자동차', crumb: '자동차세', blurb: '배기량별 세액표 · 차령 5% 경감 · 연납 공제 · 6월 12월 납기' },
+  { slug: 'certified-mail-guide', cat: 'law', catLabel: '법률', crumb: '내용증명', blurb: '작성 항목 8가지 · 세 통 준비 · 발송 절차 · 효력과 시효 · 보증금 문구' },
+  { slug: 'deposit-return-suit-guide', cat: 'law', catLabel: '법률', crumb: '보증금 반환 소송', blurb: '이사 전 임차권등기 · 내용증명 · 지급명령 · 소장 접수 · 비용' },
+  { slug: 'personal-rehabilitation-guide', cat: 'law', catLabel: '법률', crumb: '개인회생', blurb: '신청 자격 판정 · 가용소득 변제금 · 3년 변제 · 서류 7종 · 면책 제외' },
 ];
