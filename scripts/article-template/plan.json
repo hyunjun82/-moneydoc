@@ -131,7 +131,7 @@
       "n": 4,
       "slug": "freelancer-tax-guide",
       "cat": "tax",
-      "status": "todo",
+      "status": "done",
       "title": "프리랜서 3.3% 원천징수와 환급, 경비율부터 5월 신고까지",
       "h2": [
         "3.3% 구조",
@@ -150,7 +150,7 @@
       "n": 5,
       "slug": "acquisition-tax-guide",
       "cat": "realestate",
-      "status": "todo",
+      "status": "done",
       "title": "집 살 때 취득세 세율과 계산, 생애최초 감면부터 다주택 중과까지",
       "h2": [
         "6억·9억 세율",
@@ -170,7 +170,7 @@
       "n": 6,
       "slug": "transfer-tax-guide",
       "cat": "realestate",
-      "status": "todo",
+      "status": "done",
       "title": "1주택 양도세 비과세 요건과 계산, 2년 보유부터 12억 초과분까지",
       "h2": [
         "비과세 요건",
@@ -190,7 +190,7 @@
       "n": 7,
       "slug": "property-tax-guide",
       "cat": "realestate",
-      "status": "todo",
+      "status": "done",
       "title": "재산세 계산과 납부, 공시가격부터 특례세율과 7월 9월 분납까지",
       "h2": [
         "과세표준",
@@ -210,7 +210,7 @@
       "n": 8,
       "slug": "comprehensive-real-estate-tax-guide",
       "cat": "realestate",
-      "status": "todo",
+      "status": "done",
       "title": "종합부동산세 대상과 계산, 공시가 합산부터 1주택 공제까지",
       "h2": [
         "과세 대상",

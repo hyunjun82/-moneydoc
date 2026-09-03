@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { ArticleV2 } from "@/components/ArticleV2";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/realestate/property-tax-guide";
+import { meta, faqLd, html, scriptKey } from "@/data/articles/realestate/comprehensive-real-estate-tax-guide";
 
-const PAGE_URL = "https://moneydoc.kr/realestate/property-tax-guide/";
+const PAGE_URL = "https://moneydoc.kr/realestate/comprehensive-real-estate-tax-guide/";
 
 export const metadata: Metadata = {
   title: meta.title,
   description: meta.description,
-  alternates: { canonical: "/realestate/property-tax-guide/" },
+  alternates: { canonical: "/realestate/comprehensive-real-estate-tax-guide/" },
   robots: { index: true, follow: true, "max-image-preview": "large" },
   openGraph: {
     type: "article",
@@ -31,7 +31,7 @@ export default function Page() {
       url={PAGE_URL}
       cat="realestate"
       catLabel="부동산"
-      crumb="재산세"
+      crumb="종합부동산세"
     />
   );
 }

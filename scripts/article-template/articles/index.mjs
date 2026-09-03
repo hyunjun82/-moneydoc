@@ -16,4 +16,6 @@ export const ARTICLES = [
   { slug: 'freelancer-tax-guide', cat: 'tax', catLabel: '세금', crumb: '프리랜서 3.3%', blurb: '3.3% 구조 · 단순경비율 · 수입별 환급액 표 · 5월 신고 흐름' },
   { slug: 'acquisition-tax-guide', cat: 'realestate', catLabel: '부동산', crumb: '취득세', blurb: '6억·9억 세율 · 집값별 세금표 · 생애최초 200만원 · 8%·12% 중과' },
   { slug: 'transfer-tax-guide', cat: 'realestate', catLabel: '부동산', crumb: '양도소득세', blurb: '2년 보유 비과세 · 12억 초과분 계산 · 장기보유특별공제 80% · 2개월 예정신고' },
+  { slug: 'property-tax-guide', cat: 'realestate', catLabel: '부동산', crumb: '재산세', blurb: '공시가격 → 과세표준 · 공시가별 세금표 · 1주택 특례세율 · 7월 9월 납기' },
+  { slug: 'comprehensive-real-estate-tax-guide', cat: 'realestate', catLabel: '부동산', crumb: '종합부동산세', blurb: '공시가 합산 · 1주택 12억 공제 · 재산세액공제 · 고령자·장기보유 80%' },
 ];
