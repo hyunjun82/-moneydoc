@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { ArticleV2 } from "@/components/ArticleV2";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/tax/comprehensive-income-tax-guide";
+import { meta, faqLd, html, scriptKey } from "@/data/articles/tax/freelancer-tax-guide";
 
-const PAGE_URL = "https://moneydoc.kr/tax/comprehensive-income-tax-guide/";
+const PAGE_URL = "https://moneydoc.kr/tax/freelancer-tax-guide/";
 
 export const metadata: Metadata = {
   title: meta.title,
   description: meta.description,
-  alternates: { canonical: "/tax/comprehensive-income-tax-guide/" },
+  alternates: { canonical: "/tax/freelancer-tax-guide/" },
   robots: { index: true, follow: true, "max-image-preview": "large" },
   openGraph: {
     type: "article",
@@ -31,7 +31,7 @@ export default function Page() {
       url={PAGE_URL}
       cat="tax"
       catLabel="세금"
-      crumb="종합소득세"
+      crumb="프리랜서 3.3%"
     />
   );
 }

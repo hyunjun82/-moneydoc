@@ -865,4 +865,84 @@ function mdSalary(annual, dependents, kids, nontaxable){
   ['wh','wg'].forEach(function(id){document.getElementById(id).addEventListener('input',prender)}); prender();
 
   },
+  "comprehensive-income-tax-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
+
+  var CBR = [[14000000,0.06,0],[50000000,0.15,1260000],[88000000,0.24,5760000],[150000000,0.35,15440000],[300000000,0.38,19940000],[500000000,0.4,25940000],[1000000000,0.42,35940000],[null,0.45,65940000]];
+  var CKID = [[0,0],[1,250000],[2,550000],[3,950000]], CKADD = 400000;
+  function citax(income, dependents, kids){
+    var base = Math.max(0, income - dependents * 1500000);
+    var before = 0;
+    for (var i = 0; i < CBR.length; i++) { if (CBR[i][0] === null || base <= CBR[i][0]) { before = Math.round(base * CBR[i][1] - CBR[i][2]); break; } }
+    var credit = null;
+    for (var j = 0; j < CKID.length; j++) if (CKID[j][0] === kids) credit = CKID[j][1];
+    if (credit === null) credit = CKID[CKID.length - 1][1] + (kids - CKID[CKID.length - 1][0]) * CKADD;
+    var decision = Math.round(Math.max(0, before - credit - 70000));
+    var local = Math.round(decision * 0.1);
+    return { base: base, before: before, decision: decision, local: local, total: decision + local };
+  }
+
+  function crender(){ var inc=(+document.getElementById('ci').value||0)*1e4, d=+document.getElementById('cd').value||1, k=+document.getElementById('ck').value||0; var r=citax(inc,d,k);
+    document.getElementById('cbase').textContent=won(r.base)+'원'; document.getElementById('cout').textContent=won(r.decision)+'원'; document.getElementById('cloc').textContent=won(r.local)+'원'; document.getElementById('ctot').textContent=won(r.total)+'원'; }
+  ['ci','cd','ck'].forEach(function(id){document.getElementById(id).addEventListener('input',crender)}); crender();
+
+  },
+  "freelancer-tax-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
+
+  function frtax(revenue, rate, dependents){
+    var profit = Math.round(revenue * (1 - rate));
+    var taxable = Math.max(0, profit - dependents * 1500000);
+    var br = [[14000000,0.06,0],[50000000,0.15,1260000],[88000000,0.24,5760000],[150000000,0.35,15440000],[300000000,0.38,19940000],[500000000,0.40,25940000],[1000000000,0.42,35940000],[Infinity,0.45,65940000]];
+    var base = 0;
+    for (var i = 0; i < br.length; i++) { if (taxable <= br[i][0]) { base = Math.round(taxable * br[i][1] - br[i][2]); break; } }
+    base = Math.max(0, base);
+    var tax = Math.max(0, base - 70000);
+    var local = Math.round(tax * 0.10);
+    var withheld = Math.round(revenue * 0.03) + Math.round(revenue * 0.003);
+    return { profit: profit, taxable: taxable, total: tax + local, withheld: withheld, refund: withheld - (tax + local) };
+  }
+
+  function frrender(){ var rev=(+document.getElementById('fr').value||0)*1e4, rt=(+document.getElementById('fe').value||0)/100, d=+document.getElementById('fd').value||1; var r=frtax(rev,rt,d);
+    document.getElementById('fprofit').textContent=won(r.profit)+'원'; document.getElementById('fwh').textContent=won(r.withheld)+'원'; document.getElementById('ftax').textContent=won(r.total)+'원';
+    document.getElementById('fref').textContent=(r.refund>=0? won(r.refund)+'원 환급' : won(-r.refund)+'원 추가 납부'); }
+  ['fr','fe','fd'].forEach(function(id){document.getElementById(id).addEventListener('input',frrender)}); frrender();
+
+  },
 };
