@@ -349,7 +349,7 @@
       "n": 15,
       "slug": "dsr-limit-guide",
       "cat": "loan",
-      "status": "todo",
+      "status": "done",
       "title": "스트레스 DSR 계산과 대출 한도, 3단계 적용부터 주담대 한도까지",
       "h2": [
         "DSR 계산",
@@ -368,7 +368,7 @@
       "n": 16,
       "slug": "national-pension-early-guide",
       "cat": "pension",
-      "status": "todo",
+      "status": "done",
       "title": "국민연금 조기수령 감액과 손익분기, 조건부터 연기연금 비교까지",
       "h2": [
         "감액률",

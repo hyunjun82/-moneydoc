@@ -1,307 +1,234 @@
-// 자동 생성: scripts/convert-previews.mjs — 직접 수정하지 말 것
-// 원본: public/_preview/5-국민연금-조기수령.html
+// 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
+// 원본: public/_preview/article-v2-national-pension-early-guide.html
 export const meta = {
-  title: "국민연금 조기수령 손익분기 76.7세, 당겨받으면 손해일까",
-  description: "국민연금 조기수령은 1년당 6%씩 최대 30% 깎입니다. 60세 개시 시 손익분기점은 76.7세. 출생연도별 지급개시연령과 조기수령 조건, 소득 발생 시 지급정지까지 국민연금공단 자료로 정리했습니다.",
-  datePublished: "2026-09-01",
-  dateModified: "2026-09-01",
+  title: "국민연금 조기수령 감액과 손익분기, 조건부터 연기연금 비교까지",
+  description: "정상수령 월 100만원인 사람이 60세부터 받으면 700,000원으로 30% 깎여요. 감액률표, 손익분기 나이, 신청 조건, 연기연금과의 비교를 한 번에 정리했어요.",
+  datePublished: "2026-09-02",
+  dateModified: "2026-09-02",
   url: "https://moneydoc.kr/pension/national-pension-early-guide/",
+  image: "https://moneydoc.kr/og/national-pension-early-guide.png",
+  imageAlt: "국민연금 조기수령 감액. 정상 100만원이면 60세에 700,000원",
 };
 
-export const widgetKey = "earlyPension";
+export const scriptKey = "national-pension-early-guide";
 
-export const widgetHtml = `<div class="ax-wg" id="wg1">
-<div class="ax-wg-h"><b>조기수령 손익분기 계산</b>
-<span>예상 연금액과 개시 나이를 넣으면 감액률과 손익분기 나이가 나옵니다</span></div>
-<div class="ax-wg-in">
-  <label class="ax-wg-f"><em>정상 수령 시 월 연금액 (원)</em><input type="number" id="pen" value="1000000" step="50000" min="0"></label>
-  <label class="ax-wg-f"><em>정상 지급개시 연령</em>
-    <select id="norm"><option value="65">65세 (1969년 이후 출생)</option><option value="64">64세 (1965~68년생)</option><option value="63">63세 (1961~64년생)</option></select></label>
-  <label class="ax-wg-f"><em>조기수령 시작 나이</em><input type="number" id="start" value="60" step="1" min="55" max="65"></label>
-  <label class="ax-wg-f"><em>기대 수명</em><input type="number" id="life" value="85" step="1" min="60" max="110"></label>
+export const html = `<h1>국민연금 조기수령 감액과 손익분기, 조건부터 연기연금 비교까지</h1>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">국민연금법 조기노령연금 지급률과 일치 · 2026-09-02</span></div>
+<img class="v2-hero" src="/og/national-pension-early-guide.png" width="1200" height="630" alt="국민연금 조기수령 감액. 정상 100만원이면 60세에 700,000원">
+<p class="v2-lead v2-intro">국민연금은 정해진 나이보다 최대 5년 먼저 받을 수 있어요. 대신 1년 일찍 받을 때마다 6%씩 깎이고, 그 감액은 평생 이어져요. 정상수령액이 월 100만원인 사람이 5년 일찍 받으면 700,000원이라 매달 300,000원이 줄어요. 대신 5년 동안 먼저 받는 돈이 42,000,000원이라 오래 살수록 불리해지는 구조예요. 감액률, 조건, 손익분기 나이, 연기연금 비교를 정리했어요.</p>
+<section class="v2-answer" aria-label="즉답">
+  <div class="v2-lbl">시작 나이를 눌러 감액된 연금을 확인해 보세요 (정상 100만원 기준)</div>
+  <div class="v2-chips" id="qchips" data-q='[{&quot;big&quot;:&quot;700,000원&quot;,&quot;unit&quot;:&quot;월 연금액&quot;,&quot;sub&quot;:&quot;30% 감액 · 손익분기 약 76.7세&quot;},{&quot;big&quot;:&quot;820,000원&quot;,&quot;unit&quot;:&quot;월 연금액&quot;,&quot;sub&quot;:&quot;18% 감액 · 손익분기 약 78.7세&quot;},{&quot;big&quot;:&quot;940,000원&quot;,&quot;unit&quot;:&quot;월 연금액&quot;,&quot;sub&quot;:&quot;6% 감액 · 손익분기 약 80.7세&quot;}]'><button type="button" data-i="0" aria-pressed="true">60세 시작</button><button type="button" data-i="1" aria-pressed="false">62세 시작</button><button type="button" data-i="2" aria-pressed="false">64세 시작</button></div>
+  <div class="v2-big" id="qnet">700,000원<small>월 연금액</small></div>
+  <div class="v2-sub" id="qsub">30% 감액 · 손익분기 약 76.7세</div>
+  <div class="v2-split">
+    <div class="v2-box"><b>1년에 6%씩 깎여요</b><span>최대 5년까지 당길 수 있고 30%가 최대 감액이에요. 평생 그 금액으로 받아요</span></div>
+    <div class="v2-box"><b>오래 살수록 불리해요</b><span>60세부터 받으면 손익분기가 약 76.7세라 그보다 오래 살면 손해예요</span></div>
+  </div>
+</section>
+<a class="v2-cta" href="/pension/national-pension-early/">국민연금 조기수령 계산기 바로가기</a>
+<details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">국민연금 조기수령 감액, 얼마나 깎이나요</a></li><li><a href="#s2">조기노령연금 조건은 어떻게 되나요</a></li><li><a href="#s3">조기수령 손익분기점, 몇 살인가요</a></li><li><a href="#s4">연기연금과 비교하면 어느 쪽이 낫나요</a></li><li><a href="#s5">조기연금 소득 있으면 어떻게 되나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
+<section class="v2-kk" aria-label="한눈에 보는 요약">
+  <div class="v2-hd"><small>한눈에 보는 조기수령</small><b>핵심콕콕</b></div>
+  <dl>
+    <div class="v2-row"><dt>조기수령 가능 시기</dt><dd>정상 개시보다 최대 5년 일찍</dd></div>
+    <div class="v2-row"><dt>감액률</dt><dd>1년마다 6%씩. 5년이면 30%</dd></div>
+    <div class="v2-row"><dt>정상 100만원이면</dt><dd>60세 700,000원, 62세 820,000원</dd></div>
+    <div class="v2-row"><dt>가입 기간</dt><dd>10년 이상이어야 노령연금을 받아요</dd></div>
+    <div class="v2-row"><dt>소득 요건</dt><dd>소득이 있는 업무에 종사하지 않아야 조기 신청이 가능해요</dd></div>
+    <div class="v2-row"><dt>손익분기</dt><dd>60세 시작이면 약 76.7세</dd></div>
+    <div class="v2-row"><dt>연기연금</dt><dd>1개월 미룰 때마다 0.6%씩 늘어 5년이면 1,360,000원</dd></div>
+    <div class="v2-row"><dt>되돌리기</dt><dd>조기수령을 시작하면 원칙적으로 되돌릴 수 없어요</dd></div>
+  </dl>
+</section>
+
+<h2 id="s1">국민연금 조기수령 감액, 얼마나 깎이나요<small>1년에 6%씩 평생 줄어요</small></h2>
+<p class="v2-lead"><span class="v2-ans">5년 일찍 받으면 30%가 깎여 월 700,000원이 돼요.</span> 1년 일찍 받을 때마다 6%씩 줄어요. 한 번 정해진 감액률은 평생 그대로라서, 나중에 정상 나이가 되어도 원래 금액으로 돌아가지 않아요.</p>
+<div class="v2-tbl"><table><caption>시작 나이별 감액률과 월 연금액 (정상수령 100만원 기준)</caption><thead><tr><th>시작 나이</th><th>감액률</th><th>월 연금액</th><th>줄어드는 금액</th></tr></thead><tbody>
+<tr class="v2-hi"><th scope="row">60세</th><td>30%</td><td class="v2-net">700,000원</td><td>300,000원</td></tr>
+<tr><th scope="row">61세</th><td>24%</td><td class="v2-net">760,000원</td><td>240,000원</td></tr>
+<tr><th scope="row">62세</th><td>18%</td><td class="v2-net">820,000원</td><td>180,000원</td></tr>
+<tr><th scope="row">63세</th><td>12%</td><td class="v2-net">880,000원</td><td>120,000원</td></tr>
+<tr><th scope="row">64세</th><td>6%</td><td class="v2-net">940,000원</td><td>60,000원</td></tr>
+</tbody></table></div>
+<p class="v2-fn">국민연금법 제63조제2항의 조기노령연금 지급률에 따른 금액이에요. 정상 개시 연령은 출생 연도에 따라 달라요.</p>
+<div class="v2-tbl v2-compact" id="penTbl"><table><caption>정상수령액별 60세 조기수령 금액</caption><thead><tr><th>정상수령액</th><th class="v2-x">감액분</th><th>60세 수령액</th></tr></thead><tbody>
+<tr><th scope="row">70만원</th><td class="v2-x">210,000</td><td class="v2-net">490,000</td></tr>
+<tr class="v2-hi"><th scope="row">100만원</th><td class="v2-x">300,000</td><td class="v2-net">700,000</td></tr>
+<tr><th scope="row">150만원</th><td class="v2-x">450,000</td><td class="v2-net">1,050,000</td></tr>
+<tr><th scope="row">200만원</th><td class="v2-x">600,000</td><td class="v2-net">1,400,000</td></tr>
+</tbody></table></div>
+<button class="v2-more" type="button" data-more="penTbl">감액분까지 보기</button>
+<p class="v2-fn">단위: 원. 부양가족연금액은 감액 대상이 아니라 따로 더해져요.</p>
+<section class="v2-widget" aria-label="내 조기수령액 계산">
+  <h4>내 연금으로 바로 보기</h4><p class="v2-note">정상수령 시 월 연금액과 받기 시작할 나이를 넣으면 감액된 금액과 손익분기 나이가 나와요.</p>
+  <div class="v2-grid">
+    <div><label>정상수령 월 연금액 (만원)</label><input id="np" type="number" inputmode="numeric" value="100" min="10" max="500" step="5"></div>
+    <div><label>받기 시작할 나이</label><input id="na" type="number" inputmode="numeric" value="60" min="60" max="64" step="1"></div>
+  </div>
+  <div class="v2-result">
+    <div class="v2-main"><span>감액률</span><b id="nrate">—</b></div>
+    <div><span>월 연금액</span><b id="nmon">—</b></div>
+    <div><span>매달 줄어드는 금액</span><b id="ncut">—</b></div>
+    <div><span>손익분기 나이</span><b id="nbe">—</b></div>
+  </div>
+</section>
+
+<h2 id="s2">조기노령연금 조건은 어떻게 되나요<small>가입 10년과 소득 요건을 봐요</small></h2>
+<p class="v2-lead"><span class="v2-ans">가입 기간이 10년 이상이고 소득이 있는 업무에 종사하지 않아야 신청할 수 있어요.</span> 정상 개시 연령은 출생 연도에 따라 달라요. 1969년 이후에 태어났다면 65세부터가 정상이고, 그보다 최대 5년 일찍 받을 수 있어요. 신청한 다음 달부터 지급이 시작돼요.</p>
+<div class="v2-tbl v2-text"><table><caption>조기노령연금 신청 조건</caption><thead><tr><th>항목</th><th>기준</th></tr></thead><tbody>
+<tr><th scope="row">가입 기간</th><td data-l="기준">10년 이상이어야 노령연금 수급권이 생겨요</td></tr>
+<tr><th scope="row">나이</th><td data-l="기준">정상 개시 연령보다 최대 5년 일찍</td></tr>
+<tr><th scope="row">소득</th><td data-l="기준">소득이 있는 업무에 종사하지 않아야 해요</td></tr>
+<tr><th scope="row">신청</th><td data-l="기준">본인이 희망해서 청구해야 지급돼요</td></tr>
+<tr><th scope="row">특수직종 근로자</th><td data-l="기준">광원과 부원은 개시 연령이 5년 빨라요</td></tr>
+<tr><th scope="row">출생 연도</th><td data-l="기준">1969년 이후 출생자는 정상 개시가 65세예요</td></tr>
+</tbody></table></div>
+<p class="v2-fn">조기노령연금은 국민연금법 제61조제2항, 개시 연령의 경과 규정은 같은 법 부칙 제8조에 있어요.</p>
+<div class="v2-note"><b>조기수령 단점은 취소가 어렵다는 점이에요</b> 한 번 시작하면 조기연금 취소가 원칙적으로 안 되고 감액이 평생 이어져요. 목돈이 급하다는 이유만으로 결정하기 전에 다른 방법을 먼저 살펴보세요.</div>
+
+<h2 id="s3">조기수령 손익분기점, 몇 살인가요<small>먼저 받은 총액과 나중 총액이 같아지는 시점</small></h2>
+<p class="v2-lead"><span class="v2-ans">60세부터 받으면 손익분기가 약 76.7세예요.</span> 60세부터 5년 동안 먼저 받는 돈이 42,000,000원이고, 65세 이후에는 매달 300,000원씩 덜 받아요. 이 차이가 메워지는 시점이 손익분기예요. 그보다 오래 살면 조기수령이 손해가 돼요.</p>
+<div class="v2-flow" aria-label="손익분기가 정해지는 구조">
+  <div class="v2-s"><span>60세부터 5년</span><b>42,000,000원</b><span>먼저 받는 총액</span></div><div class="v2-op">÷</div>
+  <div class="v2-s"><span>매달 차이</span><b>300,000원</b><span>정상수령보다 적은 금액</span></div><div class="v2-op">=</div>
+  <div class="v2-s"><span>따라잡는 기간</span><b>약 12년</b><span>65세 이후 기준</span></div><div class="v2-op">→</div>
+  <div class="v2-s v2-out"><span>손익분기</span><b>약 76.7세</b><span>이보다 오래 살면 손해</span></div>
 </div>
-<div class="ax-wg-out" id="out"></div>
-<p class="ax-wg-note">감액률은 1년당 6%(월 0.5%)로 계산했습니다. 실제 연금액은 가입기간·소득에 따라 달라지므로 <a href="/pension/national-pension-early/">조기수령 계산기</a>와 국민연금공단 내 연금 알아보기에서 확인하세요.</p>
-</div>`;
-
-export const htmlBefore = `<h1>국민연금 조기수령 손익분기 76.7세, 당겨받으면 손해일까</h1>
-<p class="ax-by">MoneyDoc 편집팀 · 2026년 9월 1일 기준 · 약 8분</p>
-
-<svg class="ax-hero" viewBox="0 0 1100 563" role="img" aria-label="국민연금 조기수령 — 1년당 6% 감액, 손익분기 76.7세">
-<rect width="1100" height="563" fill="#f7f2ea"/>
-<path d="M820 0h280v240a60 60 0 0 1-60 60H820z" fill="#f6e3de"/>
-<circle cx="1012" cy="72" r="46" fill="#f2d9d2" opacity=".55"/>
-<rect x="72" y="160" width="104" height="42" rx="9" fill="#c4452f"/>
-<text x="124" y="189" font-size="19" font-weight="800" text-anchor="middle" fill="#fff" letter-spacing="-.5">연금·노후</text>
-<text x="72" y="282" font-size="55" font-weight="800" fill="#2b2723" letter-spacing="-2.6">국민연금 조기수령</text>
-<rect x="70" y="312" width="286" height="26" fill="#f2cfc8"/>
-<text x="72" y="349" font-size="55" font-weight="800" fill="#c4452f" letter-spacing="-2.6">손익분기 76.7세</text>
-<text x="72" y="400" font-size="21" font-weight="700" fill="#6f6858" letter-spacing="-.8">1년 당길 때마다 6% 감액 · 최대 30%</text>
-<rect x="0" y="545" width="1100" height="18" fill="#c4452f"/>
-<g transform="translate(646 156)">
-  <ellipse cx="196" cy="286" rx="170" ry="18" fill="#e8ded0" opacity=".55"/>
-  <line x1="20" y1="240" x2="372" y2="240" stroke="#6b6255" stroke-width="4" stroke-linecap="round"/>
-  <path d="M20 210 L372 96" fill="none" stroke="#c4452f" stroke-width="6" stroke-linecap="round"/>
-  <path d="M20 240 L372 40" fill="none" stroke="#6b6255" stroke-width="6" stroke-linecap="round" opacity=".6"/>
-  <circle cx="264" cy="132" r="12" fill="#c4452f"/>
-  <text x="264" y="112" font-size="19" font-weight="800" text-anchor="middle" fill="#c4452f">교차</text>
-  <text x="30" y="272" font-size="15" font-weight="700" fill="#8a8172">60세</text>
-  <text x="352" y="272" font-size="15" font-weight="700" text-anchor="end" fill="#8a8172">90세</text>
-</g>
-</svg>
-
-<p class="ax-intro">국민연금은 정해진 나이보다 <b>최대 5년</b> 먼저 받을 수 있습니다. 대신 <b>1년당 6%</b>씩, 5년을 당기면 <b>30%</b>가 영구히 깎입니다. 매달 덜 받지만 더 오래 받으니, 어느 시점부터 손해로 바뀌는지가 관건입니다. 정상 수령액이 월 100만원이라면 그 지점은 <b>76.7세</b>입니다.</p>
-
-<a class="ax-cta" href="/pension/national-pension-early/">
-<span><b>내 조기수령 감액액 바로 계산하기</b><i>예상 연금액과 개시 나이만 넣으면 됩니다</i></span>
-<em>조기수령 계산하기</em></a>
-
-<div class="ax-toc"><b>이 글에서는</b><a href="#m1">조건 2단계</a><a href="#m2">손익분기</a><a href="#m3">소득 발생 시</a><a href="#tips">알아두면 좋은 것</a><a href="#faq">자주 묻는 질문</a><a href="#src">근거 자료</a></div>`;
-
-export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 조건</b><span>언제부터 · 얼마나 깎이나</span></div>
-
-<div class="ax-st"><div class="ax-n">1</div><div class="ax-sb">
-<h3>국민연금 조기 수령 조건은 무엇인가요</h3>
-<p>세 가지를 모두 충족해야 합니다. 가입기간이 <b>10년 이상</b>이고, <b>지급개시연령보다 최대 5년</b> 이른 나이여야 하며, <b>소득이 있는 업무에 종사하지 않아야</b> 합니다. 개시연령은 출생연도에 따라 다릅니다.</p>
-<div class="ax-tw"><table>
-<thead><tr><th>출생연도</th><th>노령연금 개시</th><th>조기노령연금 개시</th></tr></thead>
-<tbody>
-<tr><td>1953~1956년생</td><td>61세</td><td>56세</td></tr>
-<tr><td>1957~1960년생</td><td>62세</td><td>57세</td></tr>
-<tr><td>1961~1964년생</td><td>63세</td><td>58세</td></tr>
-<tr><td>1965~1968년생</td><td>64세</td><td>59세</td></tr>
-<tr class="ax-hi"><td>1969년 이후 출생</td><td><b>65세</b></td><td><b>60세</b></td></tr>
-</tbody></table>
-<p class="ax-tn">국민연금공단 기준. 특수직종근로자는 각각 5년씩 앞당겨집니다.</p></div>
-<ul class="ax-ck"><li>가입기간 10년 이상</li><li>개시연령 5년 전부터</li><li>소득 있는 업무 미종사</li><li>본인 신청</li></ul>
-<p class="ax-law-l">국민연금법 제61조·제62조 · 국민연금공단 노령연금 안내</p>
-</div></div>
-
-<div class="ax-st"><div class="ax-n">2</div><div class="ax-sb">
-<h3>1년 당길 때마다 6%씩 줄어듭니다</h3>
-<p>감액은 1년당 6%, 한 달당 0.5%입니다. 한 번 정해진 감액률은 <b>평생 그대로</b> 적용됩니다. 정상 개시연령에 도달해도 원래 금액으로 돌아오지 않습니다.</p>
-<div class="ax-tw"><table>
-<thead><tr><th>개시 나이</th><th>당긴 기간</th><th>감액률</th><th>월 수령액</th><th>정상 대비</th></tr></thead>
-<tbody>
-<tr class="ax-hi"><td>60세</td><td>5년</td><td>30%</td><td><b>700,000원</b></td><td>−300,000</td></tr>
-<tr><td>61세</td><td>4년</td><td>24%</td><td>760,000원</td><td>−240,000</td></tr>
-<tr><td>62세</td><td>3년</td><td>18%</td><td>820,000원</td><td>−180,000</td></tr>
-<tr><td>63세</td><td>2년</td><td>12%</td><td>880,000원</td><td>−120,000</td></tr>
-<tr><td>64세</td><td>1년</td><td>6%</td><td>940,000원</td><td>−60,000</td></tr>
-<tr><td>65세 (정상)</td><td>-</td><td>0%</td><td>1,000,000원</td><td>-</td></tr>
-</tbody></table>
-<p class="ax-tn">정상 수령액 월 100만원, 개시연령 65세(1969년 이후 출생) 기준. MoneyDoc 계산기 엔진으로 산출했습니다.</p></div>
-<div class="ax-warn"><span>주의</span><p>감액은 <b>영구적</b>입니다. 60세에 당겨 받기 시작하면 90세가 되어도 70%만 받습니다. 유족연금 산정 기준액도 감액된 금액이 기준이 됩니다.</p></div>
-</div></div>
-
-<div class="ax-mh ax-b" id="m2"><b>2단계 — 손익분기</b><span>몇 살까지 살면 손해인가</span></div>
-
-<div class="ax-st ax-b2"><div class="ax-n">3</div><div class="ax-sb">
-<h3>국민연금 조기수령 손익분기점은 몇 살인가요</h3>
-<p>먼저 받기 시작하는 만큼 초반에는 앞섭니다. 그러다 정상 수령자가 따라잡는 시점이 손익분기점입니다.</p>
-<div class="ax-tw"><table>
-<thead><tr><th>개시 나이</th><th>월 수령액</th><th>손익분기 나이</th></tr></thead>
-<tbody>
-<tr class="ax-hi"><td>60세</td><td>700,000원</td><td><b>76.7세</b></td></tr>
-<tr><td>61세</td><td>760,000원</td><td>77.7세</td></tr>
-<tr><td>62세</td><td>820,000원</td><td>78.7세</td></tr>
-<tr><td>63세</td><td>880,000원</td><td>79.7세</td></tr>
-<tr><td>64세</td><td>940,000원</td><td>80.7세</td></tr>
-</tbody></table>
-<p class="ax-tn">정상 개시 65세·월 100만원 기준. 물가상승률과 연금액 인상은 반영하지 않은 단순 누적 비교입니다.</p></div>
-<p class="ax-nt">60세에 당겨 받으면 <b>76.7세</b>까지는 누적 수령액이 더 많고, 그 이후로는 정상 수령이 앞섭니다. 나이별 누적액을 보면 차이가 분명해집니다.</p>
-<div class="ax-tw"><table>
-<thead><tr><th>나이</th><th>60세 개시 누적</th><th>65세 개시 누적</th><th>차이</th></tr></thead>
-<tbody>
-<tr><td>70세</td><td>84,000,000</td><td>60,000,000</td><td>+24,000,000</td></tr>
-<tr><td>75세</td><td>126,000,000</td><td>120,000,000</td><td>+6,000,000</td></tr>
-<tr class="ax-hi"><td>77세</td><td>142,800,000</td><td>144,000,000</td><td><b>−1,200,000</b></td></tr>
-<tr><td>80세</td><td>168,000,000</td><td>180,000,000</td><td>−12,000,000</td></tr>
-<tr><td>85세</td><td>210,000,000</td><td>240,000,000</td><td>−30,000,000</td></tr>
-<tr><td>90세</td><td>252,000,000</td><td>300,000,000</td><td>−48,000,000</td></tr>
-</tbody></table>
-<p class="ax-tn">단위: 원. 90세까지 산다면 조기수령이 4,800만원 손해입니다.</p></div>
-<figure class="ax-ig">
-<svg viewBox="0 0 660 180" role="img" aria-label="조기수령은 초반에 앞서지만 76.7세를 넘으면 정상수령이 역전합니다">
-<text x="0" y="18" font-size="13" font-weight="700" fill="currentColor" letter-spacing="-.3">누적 수령액이 뒤집히는 지점</text>
-<line x1="30" y1="150" x2="640" y2="150" stroke="currentColor" stroke-width="1.5" opacity=".3"/>
-<path d="M30 148 L640 44" fill="none" stroke="#c4452f" stroke-width="4" stroke-linecap="round"/>
-<path d="M234 148 L640 20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity=".55"/>
-<circle cx="452" cy="76" r="8" fill="#c4452f"/>
-<text x="452" y="62" font-size="12" font-weight="800" text-anchor="middle" fill="#c4452f">76.7세</text>
-<text x="30" y="168" font-size="11" fill="currentColor" opacity=".6">60세</text>
-<text x="234" y="168" font-size="11" fill="currentColor" opacity=".6">65세</text>
-<text x="640" y="168" font-size="11" text-anchor="end" fill="currentColor" opacity=".6">90세</text>
-<text x="150" y="110" font-size="11.5" font-weight="700" fill="#c4452f">조기수령 (월 70만)</text>
-<text x="470" y="120" font-size="11.5" font-weight="700" fill="currentColor" opacity=".7">정상수령 (월 100만)</text>
-</svg>
-<figcaption>정상 개시 65세·월 100만원 가정 · 물가상승률 미반영 단순 누적</figcaption>
-</figure>
-<div class="ax-btns">
-<a class="ax-btn" href="/pension/national-pension-early/"><b>조기수령 계산기</b><span>감액률·수령액 계산</span></a>
-<a class="ax-btn" href="/pension/national-pension/"><b>국민연금 예상수령액</b><span>가입기간별 예상액</span></a>
-</div>
-</div></div>
-
-<div class="ax-mh" id="m3"><b>3단계 — 소득 발생</b><span>지급정지</span></div>
-
-<div class="ax-st"><div class="ax-n">4</div><div class="ax-sb">
-<h3>조기수령 중 소득이 생기면 어떻게 되나요</h3>
-<p>조기노령연금은 <b>소득이 있는 업무에 종사하지 않는 것</b>이 요건입니다. 수급 중에 소득이 생기면 지급이 정지되고, 소득이 없어지면 다시 신청해 받을 수 있습니다.</p>
-<figure class="ax-ig">
-<svg viewBox="0 0 660 140" role="img" aria-label="조기수령 중 소득이 생기면 지급정지, 소득이 없어지면 재지급 신청">
-<text x="0" y="18" font-size="13" font-weight="700" fill="currentColor" letter-spacing="-.3">소득이 생겼을 때의 흐름</text>
-<rect x="0" y="44" width="176" height="50" rx="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".55"/>
-<text x="88" y="66" font-size="12.5" font-weight="700" text-anchor="middle" fill="currentColor">조기노령연금 수급</text>
-<text x="88" y="84" font-size="10.5" text-anchor="middle" fill="currentColor" opacity=".6">소득 없음</text>
-<line x1="176" y1="69" x2="224" y2="69" stroke="#c4452f" stroke-width="2" stroke-linecap="round"/>
-<polygon points="215,64 215,74 224,69" fill="#c4452f"/>
-<text x="200" y="58" font-size="10.5" font-weight="600" text-anchor="middle" fill="#c4452f">소득 발생</text>
-<rect x="224" y="44" width="176" height="50" rx="8" fill="none" stroke="#c4452f" stroke-width="1.5"/>
-<text x="312" y="66" font-size="12.5" font-weight="700" text-anchor="middle" fill="#c4452f">지급정지</text>
-<text x="312" y="84" font-size="10.5" text-anchor="middle" fill="#c4452f" opacity=".85">신청으로 정지</text>
-<line x1="400" y1="69" x2="448" y2="69" stroke="currentColor" stroke-width="2" opacity=".6" stroke-linecap="round"/>
-<polygon points="439,64 439,74 448,69" fill="currentColor" opacity=".6"/>
-<text x="424" y="58" font-size="10.5" font-weight="600" text-anchor="middle" fill="currentColor" opacity=".6">소득 종료</text>
-<rect x="448" y="44" width="212" height="50" rx="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".55"/>
-<text x="554" y="66" font-size="12.5" font-weight="700" text-anchor="middle" fill="currentColor">재지급 신청</text>
-<text x="554" y="84" font-size="10.5" text-anchor="middle" fill="currentColor" opacity=".6">다시 수령</text>
-<text x="0" y="128" font-size="11.5" font-weight="600" fill="currentColor" opacity=".6" letter-spacing="-.3">지급정지·재지급 모두 신청일 이전으로 소급되지 않습니다</text>
-</svg>
-<figcaption>국민연금공단 조기노령연금 지급정지·재지급 안내</figcaption>
-</figure>
-<div class="ax-warn"><span>주의</span><p>지급정지와 재지급 신청은 <b>신청일 이전으로 소급되지 않습니다.</b> 소득이 생겼는데 신고하지 않고 계속 받으면 나중에 환수될 수 있습니다.</p></div>
-</div></div>
-
-<h2 class="ax-sec" id="tips">알아두면 좋은 것</h2>
-<ul class="ax-tips">
-<li>조기수령은 한 번 결정하면 되돌릴 수 없습니다. 감액률이 평생 고정되므로 신중히 판단해야 합니다.</li>
-<li>반대로 연기연금은 1년당 7.2%(월 0.6%)씩 늘어나 최대 5년, 36%까지 증액됩니다. 건강하고 다른 소득이 있다면 연기가 유리할 수 있습니다.</li>
-<li>손익분기점은 물가상승률을 반영하지 않은 단순 비교입니다. 국민연금은 매년 물가에 연동해 인상되므로 금액이 큰 정상수령 쪽이 인상 효과도 큽니다.</li>
-<li>건강보험 피부양자 자격은 연금소득도 따집니다. 조기수령으로 소득이 잡히면 피부양자에서 탈락할 수 있습니다.</li>
-<li>당장 생활비가 급하거나 건강이 좋지 않다면 손익분기 나이보다 현금흐름이 우선일 수 있습니다. 숫자만으로 결정할 문제는 아닙니다.</li>
-</ul>
-
-<h2 class="ax-sec" id="faq">자주 묻는 질문</h2>
-
-<details class="ax-acc" open><summary>2026년 국민연금 조기 수령 조건은 무엇인가요?</summary>
-<div class="ax-ab"><p>가입기간 10년 이상, 지급개시연령보다 최대 5년 이른 나이, 소득이 있는 업무에 종사하지 않을 것 세 가지입니다. 1969년 이후 출생자는 개시연령이 65세이므로 <b>60세부터</b> 신청할 수 있습니다.</p>
-<p class="ax-law">국민연금법 제61조·제62조</p></div></details>
-
-<details class="ax-acc"><summary>1967년생은 국민연금을 조기 수령할 수 있나요?</summary>
-<div class="ax-ab"><p>가능합니다. 1965~1968년생은 노령연금 개시연령이 <b>64세</b>이므로, 조기노령연금은 <b>59세부터</b> 신청할 수 있습니다. 5년을 당기면 감액률은 동일하게 30%입니다.</p>
-<p class="ax-law">국민연금공단 출생연도별 지급개시연령</p></div></details>
-
-<details class="ax-acc"><summary>국민연금 조기 수령 계산법은 어떻게 되나요?</summary>
-<div class="ax-ab"><p>당긴 기간 1년당 6%, 한 달당 0.5%를 뺍니다. 정상 수령액이 월 100만원이고 5년을 당기면 30%가 깎여 <b>70만원</b>, 3년을 당기면 18%가 깎여 <b>82만원</b>입니다.</p>
-<p class="ax-law">국민연금법 시행령 (조기노령연금 지급률)</p></div></details>
-
-<details class="ax-acc"><summary>국민연금 조기 수령의 장단점은 무엇인가요?</summary>
-<div class="ax-ab"><p>장점은 5년 일찍 현금흐름이 생긴다는 것이고, 단점은 감액이 평생 이어진다는 것입니다. 정상 수령액 월 100만원 기준으로 <b>76.7세</b>를 넘겨 살면 조기수령이 손해로 바뀌고, 90세까지 살면 누적 4,800만원 차이가 납니다.</p>
-<p class="ax-law">본문 손익분기 표 참고</p></div></details>
-
-<details class="ax-acc"><summary>조기수령 중 소득이 생기면 지급정지되나요?</summary>
-<div class="ax-ab"><p>됩니다. 조기노령연금은 소득이 있는 업무에 종사하지 않는 것이 요건이라, 소득이 생기면 지급정지를 신청해야 합니다. 소득이 없어지면 재지급을 신청해 다시 받을 수 있고, 둘 다 신청일 이전으로 소급되지 않습니다.</p>
-<p class="ax-law">국민연금공단 조기노령연금 지급정지·재지급</p></div></details>
-
-<div class="ax-sum">
-<h4>정리</h4>
-<ul>
-<li>조기노령연금은 개시연령보다 <b>최대 5년</b> 먼저, 가입 10년 이상·소득 없을 때 받습니다.</li>
-<li>감액은 <b>1년당 6%</b>, 최대 30%이며 <b>평생 고정</b>됩니다.</li>
-<li>1969년 이후 출생자는 <b>60세</b>, 1965~68년생은 59세부터 가능합니다.</li>
-<li>월 100만원 기준 손익분기점은 <b>76.7세</b>, 90세까지 살면 4,800만원 손해입니다.</li>
-<li>수급 중 소득이 생기면 <b>지급정지</b> 신청 대상입니다.</li>
-</ul>
-<a class="ax-cta" href="/pension/national-pension-early/">
-<span><b>조기수령 계산기로 내 감액액 확인하기</b><i>개시 나이별 수령액을 한눈에</i></span>
-<em>조기수령 계산하기</em></a>
+<div class="v2-tbl"><table><caption>시작 나이별 손익분기 (정상수령 100만원 기준)</caption><thead><tr><th>시작 나이</th><th>월 연금액</th><th>손익분기 나이</th></tr></thead><tbody>
+<tr class="v2-hi"><th scope="row">60세</th><td>700,000원</td><td class="v2-net">약 76.7세</td></tr>
+<tr><th scope="row">61세</th><td>760,000원</td><td class="v2-net">약 77.7세</td></tr>
+<tr><th scope="row">62세</th><td>820,000원</td><td class="v2-net">약 78.7세</td></tr>
+<tr><th scope="row">63세</th><td>880,000원</td><td class="v2-net">약 79.7세</td></tr>
+<tr><th scope="row">64세</th><td>940,000원</td><td class="v2-net">약 80.7세</td></tr>
+</tbody></table></div>
+<p class="v2-fn">물가 상승에 따른 연금액 조정과 세금은 넣지 않은 단순 비교예요. 실제로는 조정률에 따라 조금씩 달라져요.</p>
+<div class="v2-tips">
+  <div><b>건강 상태를 함께 보세요</b>기대여명이 손익분기보다 짧다고 보면 조기수령이 유리해요. 판단이 어렵다면 국민연금공단 상담을 받아 보세요.</div>
+  <div><b>당장 소득이 없다면</b>퇴직 후 소득이 끊긴 기간을 메우는 용도로는 의미가 있어요. 다만 평생 감액이라는 점을 잊지 마세요.</div>
+  <div><b>기초연금과 함께 보세요</b>국민연금 수령액이 늘면 기초연금이 줄 수 있어요. 두 연금을 함께 계산해 보는 편이 정확해요.</div>
 </div>
 
-<h2 class="ax-sec" id="src">근거 자료</h2>
+<h2 id="s4">연기연금과 비교하면 어느 쪽이 낫나요<small>미루면 1개월에 0.6%씩 늘어요</small></h2>
+<p class="v2-lead"><span class="v2-ans">연금을 미루면 1개월마다 0.6%씩 늘어요. 5년을 미루면 1,360,000원이 돼요.</span> 조기수령이 1년에 6%씩 깎는 것과 반대로, 연기연금은 1년에 7.2%씩 늘어나요. 정상수령액이 100만원이면 5년 연기로 360,000원이 더해져요. 소득이 있고 건강하다면 미루는 쪽이 유리할 수 있어요.</p>
+<div class="v2-tbl"><table><caption>조기수령과 연기연금 비교 (정상수령 100만원 기준)</caption><thead><tr><th>선택</th><th>월 연금액</th><th>정상 대비</th></tr></thead><tbody>
+<tr><th scope="row">5년 조기수령</th><td>700,000원</td><td class="v2-net">300,000원 적음</td></tr>
+<tr><th scope="row">3년 조기수령</th><td>820,000원</td><td class="v2-net">180,000원 적음</td></tr>
+<tr class="v2-hi"><th scope="row">정상수령</th><td>1,000,000원</td><td class="v2-net">기준</td></tr>
+<tr><th scope="row">5년 연기수령</th><td>1,360,000원</td><td class="v2-net">360,000원 많음</td></tr>
+</tbody></table></div>
+<p class="v2-fn">연기 가산은 국민연금법 제62조제2항의 1개월당 1천분의 6 기준이에요. 연기는 최대 5년까지 할 수 있어요.</p>
+<div class="v2-note"><b>일부만 미룰 수도 있어요</b> 연금 전부가 아니라 절반이나 70% 같은 일부만 연기할 수도 있어요. 소득이 있는 기간에 맞춰 조절하면 부담이 줄어요.</div>
 
-<p class="ax-collected">아래 내용은 2026년 9월 1일 기준으로 국민연금공단 안내를 확인해 정리한 것입니다.</p>
-
-<div class="ax-lawq"><b>국민연금공단 — 노령연금의 종류</b>
-<p>지급개시연령은 1953년생부터 점차 상향되어 <b>1969년 이후 출생자부터는 65세(조기노령연금의 경우 60세)</b>에 연금을 받도록 규정하고 있습니다.</p></div>
-
-<div class="ax-lawq"><b>국민연금공단 — 조기노령연금</b>
-<p>가입 기간이 <b>10년 이상</b>이고, <b>소득이 있는 업무에 종사하지 않는 경우</b> 본인이 신청하여 지급개시연령보다 <b>최대 5년 일찍</b> 받을 수 있습니다.</p></div>
-
-<div class="ax-lawq"><b>국민연금공단 — 조기노령연금 지급정지·재지급</b>
-<p>조기노령연금 수급 중이며 소득이 있는 업무에 종사하지 않는 경우 지급정지 신청이 가능합니다. <b>신청일 이전으로 소급하여 지급정지 및 재지급 신청은 불가</b>합니다.</p></div>
-
-<div class="ax-lawq"><b>출생연도별 지급개시연령</b>
-<p>1953~1956년생 61세 / 1957~1960년생 62세 / 1961~1964년생 63세 / 1965~1968년생 64세 / 1969년 이후 65세. 조기노령연금은 각 개시연령의 5년 전부터. (특수직종근로자는 5년씩 앞당김)</p></div>
-
-<div class="ax-src"><b>출처 · 국민연금공단</b><br>
-지급개시연령과 조기노령연금 요건은 <a href="https://www.nps.or.kr/" target="_blank" rel="noopener">국민연금공단</a>에서 확인할 수 있습니다. 근거 법령은 국민연금법 제61조(노령연금 수급권자)·제62조(조기노령연금)입니다.<br><br>
-실제 연금액은 가입기간, 가입 중 소득, 전체 가입자 평균소득 등에 따라 결정됩니다. 본문의 손익분기 계산은 물가상승에 따른 연금액 인상을 반영하지 않은 단순 누적 비교이며, 참고용입니다. 정확한 예상 연금액은 국민연금공단 '내 연금 알아보기'에서 확인하시기 바랍니다.</div>`;
-
-export const asideHtml = `<div class="ax-side"><h4>연금 계산기</h4>
-<a class="ax-rel" href="/pension/national-pension-early/">국민연금 조기수령 계산기<span>감액률 반영</span></a>
-<a class="ax-rel" href="/pension/national-pension/">국민연금 예상수령액<span>가입기간별</span></a>
-<a class="ax-rel" href="/government/basic-pension/">기초연금 계산기<span>65세 이상</span></a>
+<h2 id="s5">조기연금 소득 있으면 어떻게 되나요<small>60세부터 65세 사이에는 감액될 수 있어요</small></h2>
+<p class="v2-lead"><span class="v2-ans">일정 기준을 넘는 소득이 있으면 그 기간에는 연금이 줄어요.</span> 초과소득월액이 200만원 이상이면 구간에 따라 깎이고, 빼는 금액은 연금액의 절반을 넘지 않아요. 65세가 넘으면 소득이 있어도 감액하지 않아요.</p>
+<div class="v2-tbl v2-text"><table><caption>소득이 있을 때 줄어드는 금액</caption><thead><tr><th>초과소득월액</th><th>빼는 금액</th></tr></thead><tbody>
+<tr><th scope="row">200만원 이상 300만원 미만</th><td data-l="빼는 금액">15만원에 초과분의 15%를 더한 금액</td></tr>
+<tr><th scope="row">300만원 이상 400만원 미만</th><td data-l="빼는 금액">30만원에 초과분의 20%를 더한 금액</td></tr>
+<tr><th scope="row">400만원 이상</th><td data-l="빼는 금액">50만원에 초과분의 25%를 더한 금액</td></tr>
+<tr><th scope="row">공통 한도</th><td data-l="빼는 금액">빼는 금액은 연금액의 2분의 1을 넘지 않아요</td></tr>
+<tr><th scope="row">65세 이후</th><td data-l="빼는 금액">소득이 있어도 감액하지 않아요</td></tr>
+</tbody></table></div>
+<p class="v2-fn">소득활동에 따른 감액은 국민연금법 제63조의2에 있어요. 초과소득월액은 소득월액에서 정해진 금액을 뺀 값이에요.</p>
+<div class="v2-tips">
+  <div><b>조기수령 중 취업하면 정지될 수 있어요</b>조기노령연금을 받는 동안 소득이 있는 업무에 종사하면 지급이 멈출 수 있어요. 취업 전에 공단에 확인하세요.</div>
+  <div><b>연금도 소득세 대상이에요</b>연금소득으로 잡혀 연말정산이나 종합소득세 신고에 반영돼요. 다른 소득과 합쳐 확인해 보세요.</div>
+  <div><b>내 예상 연금액을 먼저 확인하세요</b>국민연금공단 홈페이지에서 가입 내역과 예상 수령액을 볼 수 있어요.</div>
+</div>
+<div class="v2-steps">
+  <div><i>1단계</i><b>예상 연금액 확인</b><span>국민연금공단에서 가입 기간과 정상수령 예상액을 확인해요</span><em>5분</em><a class="v2-go" href="https://www.nps.or.kr" target="_blank" rel="noopener">국민연금공단</a></div>
+  <div><i>2단계</i><b>감액과 손익분기 계산</b><span>시작 나이별 금액과 손익분기 나이를 비교해요</span><em>2분</em><a class="v2-go" href="/pension/national-pension-early/">조기수령 계산기</a></div>
+  <div><i>3단계</i><b>청구</b><span>공단 지사나 홈페이지에서 청구하면 다음 달부터 지급돼요</span><em>본인 청구</em></div>
 </div>
 
-<div class="ax-side"><h4>이 글의 단계</h4>
-<ol>
-<li><a href="#m1">조기수령 조건</a></li>
-<li><a href="#m1">감액률 6%</a></li>
-<li><a href="#m2">손익분기점</a></li>
-<li><a href="#m3">소득 발생 시</a></li>
-<li><a href="#faq">자주 묻는 질문</a></li>
-</ol></div>
-
-<div class="ax-side"><h4>같은 분류의 글</h4>
-<a class="ax-rel" href="/loan/dsr-limit-guide/">스트레스 DSR 3단계 계산<span>대출</span></a>
-<a class="ax-rel" href="/realestate/transfer-tax-guide/">1세대 1주택 양도세 비과세<span>양도세</span></a>
-<a class="ax-rel" href="undefined">2026 연봉 실수령액 표<span>연봉</span></a>
+<h2 id="faq">자주 묻는 질문</h2>
+<div class="v2-faqs">
+<details class="v2-faq" open><summary><i>Q</i><span>국민연금 조기수령하면 얼마나 깎이나요?</span></summary><div><i>A</i><p>1년에 6%씩 깎여요. 5년 일찍 받으면 30%가 줄어 정상 100만원이 <b>700,000원</b>이 돼요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>조기노령연금 조건이 뭔가요?</span></summary><div><i>A</i><p>가입 기간이 10년 이상이고 소득이 있는 업무에 종사하지 않아야 해요. 정상 개시보다 최대 5년 일찍 받을 수 있어요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>조기수령 손익분기는 몇 살인가요?</span></summary><div><i>A</i><p>60세부터 받으면 약 76.7세예요. 그보다 오래 살면 정상수령이 유리해요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>연기연금은 얼마나 늘어나나요?</span></summary><div><i>A</i><p>1개월 미룰 때마다 0.6%씩 늘어요. 5년을 미루면 360,000원이 더해져 1,360,000원이 돼요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>조기수령을 다시 되돌릴 수 있나요?</span></summary><div><i>A</i><p>원칙적으로 어려워요. 한 번 정해진 감액률이 평생 이어지니 신중하게 결정해야 해요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>소득이 있으면 연금이 깎이나요?</span></summary><div><i>A</i><p>60세부터 65세 사이에는 초과소득월액에 따라 줄어요. 빼는 금액은 연금액의 절반을 넘지 않고, 65세가 지나면 감액하지 않아요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>정상 수령 나이가 몇 살인가요?</span></summary><div><i>A</i><p>출생 연도에 따라 달라요. 1969년 이후 출생자는 65세부터예요.</p></div></details>
+</div>
+<section class="v2-sum" aria-label="정리"><div class="v2-hd"><small>이 글 한 줄 정리</small><b>정리</b></div><ul>
+<li>조기수령은 1년에 6%씩 깎여요. 5년이면 30%가 줄어 평생 그 금액이에요.</li>
+<li>정상 100만원이면 60세 수령은 700,000원이고 손익분기는 약 76.7세예요.</li>
+<li>가입 10년 이상이어야 하고 소득이 있는 업무에 종사하지 않아야 신청할 수 있어요.</li>
+<li>반대로 미루면 1개월에 0.6%씩 늘어 5년 연기하면 1,360,000원이 돼요.</li>
+</ul></section>
+<a class="v2-cta" href="/pension/national-pension-early/">국민연금 조기수령 계산기 바로가기</a>
+<h2 id="src">출처</h2>
+<div class="v2-src">
+<b>법령</b>국민연금법 제61조(노령연금 수급권자와 조기노령연금 청구 요건), 제62조(지급의 연기에 따른 가산, 1개월당 1천분의 6), 제63조(노령연금액과 조기노령연금 지급률), 제63조의2(소득활동에 따른 노령연금액 감액), 부칙 제8조(출생 연도별 지급연령 경과 규정). 국민연금법 시행령(지급 개시와 청구 절차).
+<b>정부 도구</b>국민연금공단 예상연금 모의계산의 감액 구조와 이 글의 계산이 같아요 (2026-09-02 대조).
+</div>
+<div class="v2-rel"><a href="/pension/national-pension-early/"><b>계산기</b>국민연금 조기수령 계산기</a><a href="/pension/national-pension/"><b>연금 계산기</b>국민연금 예상 수령액</a><a href="/government/basic-pension-guide/"><b>정부지원금 가이드</b>2026년 기초연금 수급 조건과 금액</a></div>
+<div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
+  <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
+    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>
+    <button class="v2-btn" id="md-inter-go">바로 이동</button></div>
 </div>`;
 
 export const faqLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
+  "mainEntity": [
     {
       "@type": "Question",
-      "name": "2026년 국민연금 조기 수령 조건은 무엇인가요?",
+      "name": "국민연금 조기수령하면 얼마나 깎이나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "가입기간 10년 이상, 지급개시연령보다 최대 5년 이른 나이, 소득이 있는 업무에 종사하지 않을 것 세 가지입니다. 1969년 이후 출생자는 개시연령이 65세이므로 60세부터 신청할 수 있습니다. 국민연금법 제61조·제62조"
+        "text": "1년에 6%씩 깎여요. 5년 일찍 받으면 30%가 줄어 정상 100만원이 700,000원이 돼요."
       }
     },
     {
       "@type": "Question",
-      "name": "1967년생은 국민연금을 조기 수령할 수 있나요?",
+      "name": "조기노령연금 조건이 뭔가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "가능합니다. 1965~1968년생은 노령연금 개시연령이 64세이므로, 조기노령연금은 59세부터 신청할 수 있습니다. 5년을 당기면 감액률은 동일하게 30%입니다. 국민연금공단 출생연도별 지급개시연령"
+        "text": "가입 기간이 10년 이상이고 소득이 있는 업무에 종사하지 않아야 해요. 정상 개시보다 최대 5년 일찍 받을 수 있어요."
       }
     },
     {
       "@type": "Question",
-      "name": "국민연금 조기 수령 계산법은 어떻게 되나요?",
+      "name": "조기수령 손익분기는 몇 살인가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "당긴 기간 1년당 6%, 한 달당 0.5%를 뺍니다. 정상 수령액이 월 100만원이고 5년을 당기면 30%가 깎여 70만원, 3년을 당기면 18%가 깎여 82만원입니다. 국민연금법 시행령 (조기노령연금 지급률)"
+        "text": "60세부터 받으면 약 76.7세예요. 그보다 오래 살면 정상수령이 유리해요."
       }
     },
     {
       "@type": "Question",
-      "name": "국민연금 조기 수령의 장단점은 무엇인가요?",
+      "name": "연기연금은 얼마나 늘어나나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "장점은 5년 일찍 현금흐름이 생긴다는 것이고, 단점은 감액이 평생 이어진다는 것입니다. 정상 수령액 월 100만원 기준으로 76.7세를 넘겨 살면 조기수령이 손해로 바뀌고, 90세까지 살면 누적 4,800만원 차이가 납니다. 본문 손익분기 표 참고"
+        "text": "1개월 미룰 때마다 0.6%씩 늘어요. 5년을 미루면 360,000원이 더해져 1,360,000원이 돼요."
       }
     },
     {
       "@type": "Question",
-      "name": "조기수령 중 소득이 생기면 지급정지되나요?",
+      "name": "조기수령을 다시 되돌릴 수 있나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "됩니다. 조기노령연금은 소득이 있는 업무에 종사하지 않는 것이 요건이라, 소득이 생기면 지급정지를 신청해야 합니다. 소득이 없어지면 재지급을 신청해 다시 받을 수 있고, 둘 다 신청일 이전으로 소급되지 않습니다. 국민연금공단 조기노령연금 지급정지·재지급"
+        "text": "원칙적으로 어려워요. 한 번 정해진 감액률이 평생 이어지니 신중하게 결정해야 해요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "소득이 있으면 연금이 깎이나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "60세부터 65세 사이에는 초과소득월액에 따라 줄어요. 빼는 금액은 연금액의 절반을 넘지 않고, 65세가 지나면 감액하지 않아요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "정상 수령 나이가 몇 살인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "출생 연도에 따라 달라요. 1969년 이후 출생자는 65세부터예요."
       }
     }
-  ],
+  ]
 };

@@ -24,4 +24,6 @@ export const ARTICLES = [
   { slug: 'basic-pension-guide', cat: 'government', catLabel: '정부지원금', crumb: '기초연금', blurb: '65세·선정기준액 · 소득인정액 계산 · 국민연금 연계 · 신청 4단계' },
   { slug: 'parental-leave-pay-guide', cat: 'government', catLabel: '정부지원금', crumb: '육아휴직 급여', blurb: '구간별 상한 250·200·160만 · 통상임금별 표 · 6+6 특례 · 신청 4단계' },
   { slug: 'basic-livelihood-eligibility-guide', cat: 'government', catLabel: '정부지원금', crumb: '기초생활수급', blurb: '중위소득 4종 기준표 · 소득인정액 · 급여 내용 · 신청 서류' },
+  { slug: 'dsr-limit-guide', cat: 'loan', catLabel: '대출', crumb: '스트레스 DSR', blurb: 'DSR 40%·50% · 단계별 가산금리 · 소득·기간별 한도표 · 한도 늘리기' },
+  { slug: 'national-pension-early-guide', cat: 'pension', catLabel: '연금', crumb: '국민연금 조기수령', blurb: '1년 6% 감액표 · 손익분기 나이 · 신청 조건 · 연기연금 비교' },
 ];
