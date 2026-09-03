@@ -64,10 +64,25 @@ JSON case에 `govSource.govExpected` 자동 채움 (scrape-gov.mjs가 함, 손�
 ## 7. 푸시
 
 1. `verify-3way.mjs --all` PASS
-2. `npx tsc --noEmit -p .` 0 에러
-3. truncation 체크
-4. push-changes.bat → Cloudflare 빌드 확인
-5. push 후 `verify-3way.mjs --all` (--no-gov 빼고) → 라이브+정부 일치 재확인
+2. `node scripts/verify-system/check-constants.mjs` PASS (상수 출처 게이트)
+3. `npx tsc --noEmit -p .` 0 에러
+4. truncation 체크
+5. push-changes.bat → Cloudflare 빌드 확인
+6. push 후 `verify-3way.mjs --all` (--no-gov 빼고) → 라이브+정부 일치 재확인
+
+### 7-1. 상수 출처 게이트 (왜 필요한가)
+
+verify-3way 는 "엔진 == JSON 기대값" 만 본다. 기대값 자체가 **옛 고시로 만들어졌으면 그대로 PASS** 한다.
+매년 고시로 바뀌는 값(기초연금 기준연금액, 기준 중위소득 등)은 이 구멍에 그대로 빠진다.
+
+`check-constants.mjs` 가 그 앞단을 막는다.
+
+- 상수·표가 있는 모든 계산기는 `scripts/verify-system/constants-classification.json` 의
+  **annual / statutory / pending** 중 하나에 반드시 들어가야 한다. 분류가 없으면 FAIL.
+- `annual` 은 `verification.constantsSource` (고시명·고시번호·URL·확인일·값·원문 인용) 필수.
+  적어 둔 값과 실제 상수가 달라지면 FAIL.
+- `pending` 은 아직 출처를 못 적은 것. 경고로 계속 보이며 하나씩 `annual` 로 옮긴다.
+- 확인일이 180일을 넘으면 경고. 고시를 다시 열어 대조하고 `checkedAt` 을 갱신한다.
 
 ## 8. 타이틀 생성 시스템 (콘텐츠 글 제목)
 

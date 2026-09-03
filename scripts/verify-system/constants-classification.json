@@ -1,0 +1,63 @@
+{
+  "_설명": "계산기 상수가 어디서 왔는지 갈래를 정한다. check-constants.mjs 가 읽는다. 새 계산기를 만들면 반드시 한 갈래에 넣어야 하고, 넣지 않으면 게이트가 FAIL 한다.",
+  "_annual": "매년 정부 고시로 바뀌는 값. verification.constantsSource (고시명·번호·URL·확인일·값) 가 반드시 있어야 하고, 적어 둔 값이 실제 상수와 달라지면 FAIL 한다.",
+  "_statutory": "법·시행령 본문에 금액이나 비율이 박혀 있어 개정 전까지 그대로인 값. 개정이 있으면 그때 옮긴다.",
+  "_pending": "매년 바뀌는 값인데 아직 출처를 기록하지 못한 것. 경고로 계속 노출되며, 하나씩 확인해 annual 로 옮긴다.",
+
+  "annual": [
+    "government/basic-pension",
+    "government/basic-livelihood-eligibility"
+  ],
+
+  "pending": [
+    "government/earned-income-tax-credit",
+    "government/industrial-accident-pay",
+    "government/maternity-leave-pay",
+    "government/median-income",
+    "government/national-scholarship",
+    "government/near-poor-eligibility",
+    "government/single-parent-support",
+    "government/unemployment-benefit",
+    "law/child-support",
+    "loan/dsr-limit",
+    "loan/ltv-limit",
+    "loan/mortgage-loan-limit",
+    "pension/national-pension",
+    "realestate/brokerage-fee",
+    "tax/four-major-insurance",
+    "tax/salary-net-pay"
+  ],
+
+  "statutory": [
+    "government/parental-leave-pay",
+    "insurance/auto-tax",
+    "law/annual-leave-allowance",
+    "law/divorce-alimony",
+    "law/severance-pay",
+    "law/unpaid-wages",
+    "loan/prepayment-fee",
+    "pension/irp-tax-credit",
+    "pension/national-pension-early",
+    "realestate/acquisition-tax",
+    "realestate/comprehensive-real-estate-tax",
+    "realestate/holding-tax-total",
+    "realestate/housing-subscription-score",
+    "realestate/jeonse-monthly-conversion",
+    "realestate/property-tax",
+    "realestate/transfer-tax",
+    "savings/fixed-deposit",
+    "savings/free-savings",
+    "savings/installment-savings",
+    "savings/isa-tax-saving",
+    "savings/tax-free-savings",
+    "tax/child-tax-credit",
+    "tax/comprehensive-income-tax",
+    "tax/crypto-transfer-tax",
+    "tax/daily-wage-tax",
+    "tax/freelancer-tax",
+    "tax/gift-tax",
+    "tax/inheritance-tax",
+    "tax/other-income-tax",
+    "tax/stock-transfer-tax"
+  ]
+}
