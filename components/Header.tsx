@@ -8,7 +8,7 @@ const NAV_ITEMS = [
   { slug: "insurance", label: "보험" },
   { slug: "pension", label: "연금" },
   { slug: "law", label: "법률" },
-  { slug: "government", label: "정부지원금" },
+  { slug: "gov", label: "정부지원금" },
 ];
 
 export function Header({ active }: { active?: string }) {

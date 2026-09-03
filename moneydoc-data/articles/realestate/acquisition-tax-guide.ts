@@ -26,7 +26,7 @@ export const html = `<h1>집 살 때 취득세 세율과 계산, 생애최초 �
     <div class="v2-box"><b>전용 85㎡ 이하면 농특세가 없어요</b><span>같은 6억원이어도 전용 100㎡면 1,200,000원을 더 내요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/realestate/acquisition-tax/">취득세 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/acquisition-tax/calculator/">취득세 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (7개 질문)<span>열기</span></summary><ol><li><a href="#s1">취득세 세율, 6억과 9억에서 어떻게 달라지나요</a></li><li><a href="#s2">취득세 계산, 집값별로 얼마 나오나요</a></li><li><a href="#s3">생애최초로 집을 사면 얼마나 깎아 주나요</a></li><li><a href="#s4">다주택 중과, 8%와 12%는 언제 붙나요</a></li><li><a href="#s5">취득세 언제까지 어떻게 내나요</a></li><li><a href="#s6">오피스텔이나 분양권은 취득세가 어떻게 되나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 취득세</small><b>핵심콕콕</b></div>
@@ -182,13 +182,13 @@ export const html = `<h1>집 살 때 취득세 세율과 계산, 생애최초 �
 <li>무주택자가 12억원 이하 집을 사면 취득세에서 200만원을 빼 줘요. 3년 안에 팔면 다시 걷어가요.</li>
 <li>조정대상지역 2주택과 비조정 3주택은 8%, 그 위는 12%예요. 비조정 2주택은 중과가 아니에요.</li>
 </ul></section>
-<a class="v2-cta" href="/realestate/acquisition-tax/">취득세 계산기 바로가기</a>
+<a class="v2-cta" href="/acquisition-tax/calculator/">취득세 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>지방세법 제11조(부동산 취득의 세율), 제13조의2(주택 취득 중과), 제20조(신고 및 납부, 60일), 제151조(지방교육세). 지방세법 시행령(주택 수 산정과 일시적 2주택). 지방세특례제한법 제36조의3(생애최초 주택 구입 감면), 제36조의5(출산·양육 주택 감면). 농어촌특별세법 제4조(비과세), 제5조(과세표준과 세율).
 <b>정부 도구</b>위택스 지방세 미리계산과 이 글의 금액이 1원 단위까지 같아요 (2026-09-02 대조).
 </div>
-<div class="v2-rel"><a href="/realestate/acquisition-tax/"><b>계산기</b>취득세 계산기</a><a href="/realestate/property-tax/"><b>부동산 계산기</b>재산세 계산기</a><a href="/realestate/transfer-tax/"><b>부동산 계산기</b>양도소득세 계산기</a></div>
+<div class="v2-rel"><a href="/acquisition-tax/"><b>계산기</b>취득세 계산기</a><a href="/property-tax/"><b>부동산 계산기</b>재산세 계산기</a><a href="/transfer-tax/"><b>부동산 계산기</b>양도소득세 계산기</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

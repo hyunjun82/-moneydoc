@@ -1,3 +1,4 @@
+import { hubHref } from "@/lib/hub-map";
 import basicLivelihoodEligibility from "@/data/calculators/government/basic-livelihood-eligibility.json";
 import basicPension from "@/data/calculators/government/basic-pension.json";
 import earnedIncomeTaxCredit from "@/data/calculators/government/earned-income-tax-credit.json";
@@ -85,7 +86,7 @@ export const CATEGORIES: Record<CategorySlug, { slug: CategorySlug; name: string
   insurance: { slug: "insurance", name: "보험", href: "/insurance/" },
   pension: { slug: "pension", name: "연금", href: "/pension/" },
   law: { slug: "law", name: "법률", href: "/law/" },
-  government: { slug: "government", name: "정부지원금", href: "/government/" },
+  government: { slug: "government", name: "정부지원금", href: "/gov/" },
   util: { slug: "util", name: "유틸", href: "/util/" },
 };
 
@@ -176,7 +177,7 @@ export const CALCULATORS_INDEX: Record<string, CalcMeta> = Object.fromEntries(
       categoryName: CATEGORIES[spec.category as CategorySlug]?.name ?? spec.category,
       title: spec.title,
       subtitle: spec.subtitle,
-      href: `/${spec.category}/${spec.slug}/`,
+      href: hubHref(spec.category, spec.slug),
     },
   ])
 );

@@ -26,7 +26,7 @@ export const html = `<h1>퇴직금 못 받았을 때 지급명령과 소장, 양
     <div class="v2-box"><b>이의가 없으면 판결과 같아요</b><span>상대가 2주 안에 이의하지 않으면 확정판결과 같은 효력이 생겨요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/law/severance-pay/">퇴직금 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/severance/calculator/">퇴직금 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">지급명령 신청서, 어떻게 쓰나요</a></li><li><a href="#s2">소장 양식은 어디서 받나요</a></li><li><a href="#s3">인지대와 송달료는 얼마인가요</a></li><li><a href="#s4">관할 법원은 어디로 내나요</a></li><li><a href="#s5">지급명령 뒤에는 어떻게 되나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 퇴직금 청구 절차</small><b>핵심콕콕</b></div>
@@ -71,7 +71,7 @@ export const html = `<h1>퇴직금 못 받았을 때 지급명령과 소장, 양
 </tbody></table></div>
 <p class="v2-fn">소액사건 범위와 이행권고결정은 소액사건심판법에 있어요. 지급명령에 이의가 있으면 신청한 때에 소가 제기된 것으로 봐요.</p>
 <div class="v2-steps">
-  <div><i>1단계</i><b>청구금액 확정</b><span>퇴직금과 지연이자를 계산해 청구할 금액을 정해요</span><em>3분</em><a class="v2-go" href="/law/severance-pay/">퇴직금 계산기</a></div>
+  <div><i>1단계</i><b>청구금액 확정</b><span>퇴직금과 지연이자를 계산해 청구할 금액을 정해요</span><em>3분</em><a class="v2-go" href="/severance/">퇴직금 계산기</a></div>
   <div><i>2단계</i><b>전자소송 회원가입</b><span>공동인증서나 간편인증으로 가입하고 사용자 등록을 해요</span><em>10분</em><a class="v2-go" href="https://ecfs.scourt.go.kr" target="_blank" rel="noopener">전자소송 바로가기</a></div>
   <div><i>3단계</i><b>서식 작성</b><span>지급명령 신청서나 소장을 화면에서 작성하고 증거를 올려요</span><em>30분</em><a class="v2-go" href="https://help.scourt.go.kr/nm/min_1/min_1_7/index.html" target="_blank" rel="noopener">법원 양식 모음</a></div>
   <div><i>4단계</i><b>인지대와 송달료 납부</b><span>화면에서 계산된 금액을 카드나 계좌이체로 내고 제출해요</span><em>5분</em></div>
@@ -167,13 +167,13 @@ export const html = `<h1>퇴직금 못 받았을 때 지급명령과 소장, 양
 <li>관할은 회사의 보통재판적이 있는 곳의 지방법원이고 독촉절차는 전속관할이에요.</li>
 <li>2주 안에 이의가 없으면 확정판결과 같은 효력이 생겨 압류로 이어갈 수 있어요.</li>
 </ul></section>
-<a class="v2-cta" href="/law/severance-pay/">퇴직금 계산기 바로가기</a>
+<a class="v2-cta" href="/severance/calculator/">퇴직금 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>민사소송법 제462조(지급명령의 요건), 제463조(관할법원, 전속관할), 제469조(송달과 이의신청), 제470조(이의신청의 효력, 2주 불변기간), 제472조(소송으로의 이행), 제474조(확정판결과 같은 효력). 민사소송 등 인지법 제2조(소장 인지액), 제7조제2항(지급명령 신청서는 10분의 1), 제16조(전자소송은 10분의 9). 소액사건심판법(소액사건 범위와 이행권고결정). 근로기준법 제36조(금품 청산 14일), 제49조(임금채권 3년 시효).
 <b>정부 도구</b>대법원 전자소송의 인지액 산정 기준과 이 글의 계산이 같은 산식이에요 (2026-09-02 대조).
 </div>
-<div class="v2-rel"><a href="/law/severance-pay/"><b>계산기</b>퇴직금 계산기</a><a href="/law/unpaid-wages/"><b>법률 계산기</b>임금체불 지연이자 계산기</a><a href="/law/unpaid-wages-guide/"><b>법률 가이드</b>임금체불 진정 방법과 지연이자</a></div>
+<div class="v2-rel"><a href="/severance/"><b>계산기</b>퇴직금 계산기</a><a href="/unpaid-wages/"><b>법률 계산기</b>임금체불 지연이자 계산기</a><a href="/unpaid-wages/"><b>법률 가이드</b>임금체불 진정 방법과 지연이자</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

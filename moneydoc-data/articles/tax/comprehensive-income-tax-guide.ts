@@ -26,7 +26,7 @@ export const html = `<h1>종합소득세 세율과 계산 방법, 신고 대상�
     <div class="v2-box"><b>실제 부담률은 약 13.1%</b><span>종합소득금액 5,000만원 기준이에요. 세율 구간이 15%여도 누진공제 덕분에 실제 부담은 더 낮아요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/tax/comprehensive-income-tax/">종합소득세 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/income-tax/calculator/">종합소득세 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (7개 질문)<span>열기</span></summary><ol><li><a href="#s1">종합소득세 세율 몇 퍼센트인가요</a></li><li><a href="#s2">종합소득세 계산, 과세표준은 어떻게 구하나요</a></li><li><a href="#s3">종합소득세 신고 대상은 누구인가요</a></li><li><a href="#s4">홈택스 신고 순서, 5월에 뭐부터 하나요</a></li><li><a href="#s5">종합소득세 신고 안 하면 어떻게 되나요</a></li><li><a href="#s6">종합소득세 환급받으려면 뭘 챙겨야 하나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 종합소득세</small><b>핵심콕콕</b></div>
@@ -130,7 +130,7 @@ export const html = `<h1>종합소득세 세율과 계산 방법, 신고 대상�
   <div><i>1단계</i><b>홈택스 로그인</b><span>공동인증서나 간편인증으로 들어가 종합소득세 신고 메뉴를 고르세요</span><em>5월 1일부터</em><a class="v2-go" href="https://www.hometax.go.kr" target="_blank" rel="noopener">홈택스 바로가기</a></div>
   <div><i>2단계</i><b>미리 채워진 자료 확인</b><span>원천징수 내역과 매출 자료가 자동으로 들어와 있어요. 빠진 소득이 없는지 보세요</span><em>5분</em></div>
   <div><i>3단계</i><b>필요경비와 공제 입력</b><span>장부를 쓰면 실제 경비를, 안 쓰면 업종별 경비율을 적용해요. 부양가족과 연금보험료도 넣어요</span><em>10분</em></div>
-  <div><i>4단계</i><b>세액 확인</b><span>결정세액과 지방소득세를 확인하세요. 이미 낸 세금이 많으면 환급으로 바뀌어요</span><em>3분</em><a class="v2-go" href="/tax/comprehensive-income-tax/">종합소득세 계산기로 확인</a></div>
+  <div><i>4단계</i><b>세액 확인</b><span>결정세액과 지방소득세를 확인하세요. 이미 낸 세금이 많으면 환급으로 바뀌어요</span><em>3분</em><a class="v2-go" href="/income-tax/">종합소득세 계산기로 확인</a></div>
   <div><i>5단계</i><b>신고서 제출과 납부</b><span>제출한 뒤 계좌이체나 카드로 내요. 지방소득세는 위택스로 넘어가 따로 내요</span><em>5월 31일까지</em></div>
 </div>
 <div class="v2-tips">
@@ -176,13 +176,13 @@ export const html = `<h1>종합소득세 세율과 계산 방법, 신고 대상�
 <li>사업소득이나 프리랜서 소득이 있으면 금액과 상관없이 5월에 신고해야 해요.</li>
 <li>기한을 넘기면 가산세 20%가 붙어요. 한 달 안에 기한 후 신고하면 절반으로 줄어요.</li>
 </ul></section>
-<a class="v2-cta" href="/tax/comprehensive-income-tax/">종합소득세 계산기 바로가기</a>
+<a class="v2-cta" href="/income-tax/calculator/">종합소득세 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>소득세법 제14조(과세표준의 계산), 제50조(기본공제 1명당 연 150만원), 제55조(세율), 제59조의2(자녀세액공제), 제70조(5월 1일부터 5월 31일 확정신고), 제70조의2(성실신고확인서 제출 시 6월 30일), 제73조(확정신고의 예외). 국세기본법 제47조의2(무신고가산세), 제47조의4(납부지연가산세), 제48조(가산세 감면). 지방세법 제91조(개인지방소득세 과세표준), 제92조(세율).
 <b>정부 도구</b>홈택스 종합소득세 신고 화면의 세율표와 이 글의 계산이 같은 값이에요 (2026-09-02 대조).
 </div>
-<div class="v2-rel"><a href="/tax/comprehensive-income-tax/"><b>계산기</b>종합소득세 계산기</a><a href="/tax/freelancer-tax/"><b>세금 계산기</b>프리랜서 3.3% 계산기</a><a href="/tax/salary-net-pay-guide/"><b>세금 가이드</b>연봉 실수령액 계산법</a></div>
+<div class="v2-rel"><a href="/income-tax/"><b>계산기</b>종합소득세 계산기</a><a href="/freelancer/"><b>세금 계산기</b>프리랜서 3.3% 계산기</a><a href="/salary/"><b>세금 가이드</b>연봉 실수령액 계산법</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

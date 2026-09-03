@@ -35,7 +35,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `종합소득금액 5,000만원이면 종합소득세는 지방소득세까지 ${won(R.totalTax)}원이에요. 세율 구간표, 과세표준 계산 순서, 신고 대상 판정, 홈택스 신고 순서, 신고를 놓쳤을 때 가산세까지 한 번에 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 8,
     badge: `소득세법 누진세율표와 1원 단위 일치 · ${VERIFIED}`,
-    calc: { href: '/tax/comprehensive-income-tax/', label: '종합소득세 계산기 바로가기' },
+    calc: { href: '/income-tax/calculator/', label: '종합소득세 계산기 바로가기' },
     hero: {
       tag: '세금', line1: '종합소득세 세율과 계산', line2: '내 세금 얼마',
       sub1: `종합소득금액 5,000만원 → ${won(R.totalTax)}원`,
@@ -165,7 +165,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           { title: '홈택스 로그인', text: '공동인증서나 간편인증으로 들어가 종합소득세 신고 메뉴를 고르세요', meta: '5월 1일부터', link: { label: '홈택스 바로가기', href: HOMETAX } },
           { title: '미리 채워진 자료 확인', text: '원천징수 내역과 매출 자료가 자동으로 들어와 있어요. 빠진 소득이 없는지 보세요', meta: '5분' },
           { title: '필요경비와 공제 입력', text: '장부를 쓰면 실제 경비를, 안 쓰면 업종별 경비율을 적용해요. 부양가족과 연금보험료도 넣어요', meta: '10분' },
-          { title: '세액 확인', text: '결정세액과 지방소득세를 확인하세요. 이미 낸 세금이 많으면 환급으로 바뀌어요', meta: '3분', link: { label: '종합소득세 계산기로 확인', href: '/tax/comprehensive-income-tax/' } },
+          { title: '세액 확인', text: '결정세액과 지방소득세를 확인하세요. 이미 낸 세금이 많으면 환급으로 바뀌어요', meta: '3분', link: { label: '종합소득세 계산기로 확인', href: '/income-tax/' } },
           { title: '신고서 제출과 납부', text: '제출한 뒤 계좌이체나 카드로 내요. 지방소득세는 위택스로 넘어가 따로 내요', meta: '5월 31일까지' },
         ] },
         { type: 'tips', items: [
@@ -228,9 +228,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 4, quote: '거주자의 종합소득에 대한 개인지방소득세 산출세액은 해당 연도의 과세표준에 제1항 및 제2항의 세율을 적용하여 산출한 금액으로 한다', note: '지방소득세는 같은 과세표준에 별도 세율 (지방세법 제92조③)' },
     ],
     related: [
-      { kind: '계산기', label: '종합소득세 계산기', href: '/tax/comprehensive-income-tax/' },
-      { kind: '세금 계산기', label: '프리랜서 3.3% 계산기', href: '/tax/freelancer-tax/' },
-      { kind: '세금 가이드', label: '연봉 실수령액 계산법', href: '/tax/salary-net-pay-guide/' },
+      { kind: '계산기', label: '종합소득세 계산기', href: '/income-tax/' },
+      { kind: '세금 계산기', label: '프리랜서 3.3% 계산기', href: '/freelancer/' },
+      { kind: '세금 가이드', label: '연봉 실수령액 계산법', href: '/salary/' },
     ],
   };
 }

@@ -26,7 +26,7 @@ export const html = `<h1>아르바이트 4대보험 가입 기준과 보험료, 
     <div class="v2-box"><b>주 15시간이 두 번째 기준</b><span>고용보험은 주 15시간 미만이어도 3개월 넘게 계속 일하면 가입해요. 산재보험은 시간과 무관하게 적용돼요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/tax/four-major-insurance/">4대보험료 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/four-insurance/calculator/">4대보험료 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">아르바이트 4대보험 가입 기준, 몇 시간부터인가요</a></li><li><a href="#s2">알바 보험료 계산, 주 몇 시간이면 얼마인가요</a></li><li><a href="#s3">알바 4대보험 사업주 의무, 신고와 부담은 어디까지인가요</a></li><li><a href="#s4">알바를 그만두면 건강보험은 어떻게 되나요</a></li><li><a href="#s5">알바도 퇴직금과 실업급여를 받을 수 있나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 알바 4대보험</small><b>핵심콕콕</b></div>
@@ -136,14 +136,14 @@ export const html = `<h1>아르바이트 4대보험 가입 기준과 보험료, 
 <li>주 20시간이면 월 보수 1,073,280원에 보험료 104,280원, 회사도 114,480원을 내요.</li>
 <li>그만두면 지역가입자로 바뀌고, 직장가입 1년 이상이면 임의계속가입을 쓸 수 있어요.</li>
 </ul></section>
-<a class="v2-cta" href="/tax/four-major-insurance/">4대보험료 계산기 바로가기</a>
+<a class="v2-cta" href="/four-insurance/calculator/">4대보험료 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>국민연금법 시행령 제2조(1개월 소정근로시간 60시간 미만 단시간근로자 제외, 3개월 이상 계속 근로 시 예외). 국민건강보험법 시행령 제9조(60시간 미만 단시간근로자 직장가입 제외), 국민건강보험법 제110조(임의계속가입). 고용보험법 시행령 제3조(1개월 60시간 또는 1주 15시간 미만 적용 제외, 3개월 이상 계속 근로와 일용근로자는 적용). 근로기준법 제18조(4주 평균 주 15시간 미만은 주휴일·연차 미적용). 산업재해보상보험법 제6조(근로자를 사용하는 모든 사업 적용).
 <b>행정규칙·정부 안내</b>최저임금위원회 2026년 최저임금 결정현황(시급 10,320원). 4대사회보험 정보연계센터 자격 신고와 가입내역 조회.
 <b>정부 도구</b>보험료는 4대보험료 계산기 엔진으로 계산했고 4대사회보험 모의계산과 대조했어요 (2026-09-02).
 </div>
-<div class="v2-rel"><a href="/tax/four-major-insurance/"><b>계산기</b>4대보험료 계산기</a><a href="/tax/four-major-insurance-guide/"><b>세금 가이드</b>2026 4대보험 요율과 계산</a><a href="/law/severance-pay-guide/"><b>법률 가이드</b>퇴직금 계산 방법과 지급기준</a></div>
+<div class="v2-rel"><a href="/four-insurance/"><b>계산기</b>4대보험료 계산기</a><a href="/four-insurance/"><b>세금 가이드</b>2026 4대보험 요율과 계산</a><a href="/severance/"><b>법률 가이드</b>퇴직금 계산 방법과 지급기준</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

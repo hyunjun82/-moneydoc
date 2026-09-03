@@ -34,7 +34,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `월 보수 300만원이면 근로자가 내는 4대보험은 ${won(R.employeeTotal)}원이고 회사는 ${won(R.employerTotal)}원을 내요. 국민연금 4.75%, 건강보험 3.595%, 장기요양, 고용보험 요율과 월급별 공제액 표, 4월 건강보험 정산까지 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `4대사회보험 모의계산 일치 · 법령 요율 확인 · ${VERIFIED}`,
-    calc: { href: '/tax/four-major-insurance/', label: '4대보험료 계산기 바로가기' },
+    calc: { href: '/four-insurance/calculator/', label: '4대보험료 계산기 바로가기' },
     hero: {
       tag: '급여·세금', line1: '2026년 4대보험', line2: '얼마나 떼나',
       sub1: `월 보수 300만원 → 근로자 ${won(R.employeeTotal)}원 · 회사 ${won(R.employerTotal)}원`,
@@ -156,7 +156,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
         { type: 'table', text: true, caption: '4대보험 관련 서류와 조회, 어디서 하나요', headers: ['하려는 것', '어디서', '준비물'], rows: [
           { docs: true, cells: ['가입내역확인서 발급', docs([{ label: '4대사회보험 정보연계센터', href: INSURE4 }]), '공동인증서'] },
           { docs: true, cells: ['국민연금 예상수령액 조회', docs([{ label: '국민연금공단', href: NPS }]), '공동인증서'] },
-          { docs: true, cells: ['내 보험료 미리 계산', docs([{ label: '4대보험료 계산기', href: '/tax/four-major-insurance/' }]), '월 보수·업종'] },
+          { docs: true, cells: ['내 보험료 미리 계산', docs([{ label: '4대보험료 계산기', href: '/four-insurance/' }]), '월 보수·업종'] },
         ], fn: '가입내역확인서는 이직이나 대출 심사에서 재직 증빙으로 자주 쓰여요.' },
       ] },
 
@@ -202,9 +202,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 8, quote: '다음 해에 확정되는 해당 연도의 보수 총액을 기준으로 제39조에 따라 보수월액을 다시 산정하여 정산한다', note: '건강보험 4월 정산 근거 (시행령 제34조①)' },
     ],
     related: [
-      { kind: '계산기', label: '4대보험료 계산기', href: '/tax/four-major-insurance/' },
-      { kind: '세금 가이드', label: '연봉 실수령액 표', href: '/tax/salary-net-pay-guide/' },
-      { kind: '정부지원금 가이드', label: '실업급여 조건과 금액', href: '/government/unemployment-benefit-guide/' },
+      { kind: '계산기', label: '4대보험료 계산기', href: '/four-insurance/' },
+      { kind: '세금 가이드', label: '연봉 실수령액 표', href: '/salary/' },
+      { kind: '정부지원금 가이드', label: '실업급여 조건과 금액', href: '/unemployment/' },
     ],
   };
 }

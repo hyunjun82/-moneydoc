@@ -26,7 +26,7 @@ export const html = `<h1>프리랜서 3.3% 원천징수와 환급, 경비율부�
     <div class="v2-box"><b>수입이 적을수록 환급이 커요</b><span>연 수입 1,200만원이면 뗀 396,000원 중 255,200원이 돌아와요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/tax/freelancer-tax/">프리랜서 3.3% 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/freelancer/calculator/">프리랜서 3.3% 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (7개 질문)<span>열기</span></summary><ol><li><a href="#s1">프리랜서 3.3% 원천징수, 왜 떼는 건가요</a></li><li><a href="#s2">단순경비율이 뭔가요, 내 경비는 얼마로 잡히나요</a></li><li><a href="#s3">프리랜서 환급액은 얼마인가요</a></li><li><a href="#s4">종합소득세 신고 어떻게 하나요, 5월에 뭘 준비하죠</a></li><li><a href="#s5">프리랜서가 신고를 안 하면 어떻게 되나요</a></li><li><a href="#s6">사업자등록이나 부가세 신고도 해야 하나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 프리랜서 세금</small><b>핵심콕콕</b></div>
@@ -166,13 +166,13 @@ export const html = `<h1>프리랜서 3.3% 원천징수와 환급, 경비율부�
 <li>연 수입 3,600만원에 경비율 60%면 약 413,600원을 돌려받아요. 경비율이 낮으면 더 낼 수도 있어요.</li>
 <li>신고하지 않으면 환급을 못 받고, 낼 세금이 있으면 가산세 20%가 붙어요.</li>
 </ul></section>
-<a class="v2-cta" href="/tax/freelancer-tax/">프리랜서 3.3% 계산기 바로가기</a>
+<a class="v2-cta" href="/freelancer/calculator/">프리랜서 3.3% 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>소득세법 제127조(원천징수의무, 원천징수대상 사업소득), 제129조(원천징수세율, 사업소득 100분의 3), 제70조(5월 1일부터 5월 31일 확정신고), 제80조(추계결정). 소득세법 시행령 제143조(추계결정과 단순경비율 적용대상자), 제145조(기준경비율). 국세청 경비율 고시(업종별 단순경비율과 기준경비율, 인적용역 기본율과 초과율). 국세기본법 제47조의2(무신고가산세), 제48조(가산세 감면). 지방세법(개인지방소득세 특별징수).
 <b>정부 도구</b>홈택스 종합소득세 신고 화면의 세율표와 이 글의 계산이 같은 값이에요 (2026-09-02 대조).
 </div>
-<div class="v2-rel"><a href="/tax/freelancer-tax/"><b>계산기</b>프리랜서 3.3% 계산기</a><a href="/tax/comprehensive-income-tax/"><b>세금 계산기</b>종합소득세 계산기</a><a href="/tax/comprehensive-income-tax-guide/"><b>세금 가이드</b>종합소득세 세율과 계산 방법</a></div>
+<div class="v2-rel"><a href="/freelancer/"><b>계산기</b>프리랜서 3.3% 계산기</a><a href="/income-tax/"><b>세금 계산기</b>종합소득세 계산기</a><a href="/income-tax/"><b>세금 가이드</b>종합소득세 세율과 계산 방법</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

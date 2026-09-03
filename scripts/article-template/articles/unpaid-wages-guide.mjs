@@ -21,7 +21,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `퇴사하고 14일이 지나도 임금을 못 받으면 연 20%의 지연이자가 붙어요. 500만원을 90일 못 받으면 이자가 ${won(R.interest)}원이에요. 진정 접수 방법, 조사 절차, 회사가 도산했을 때 받는 대지급금까지 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 8,
     badge: `근로기준법 지연이자 이율과 대지급금 요건 대조 · ${VERIFIED}`,
-    calc: { href: '/law/unpaid-wages/', label: '임금체불 지연이자 계산기 바로가기' },
+    calc: { href: '/unpaid-wages/calculator/', label: '임금체불 지연이자 계산기 바로가기' },
     hero: {
       tag: '법률', line1: '임금체불 진정과 지연이자', line2: '얼마 받나요',
       sub1: `500만원을 90일 못 받으면 이자 ${won(R.interest)}원`,
@@ -61,7 +61,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
         { type: 'steps', items: [
           { title: '증거 모으기', text: '근로계약서, 급여명세서, 통장 입금 내역, 출퇴근 기록을 모아요', meta: '가장 중요해요' },
           { title: '서면으로 지급 요청', text: '문자나 메일로 지급을 요청하고 답변을 남겨 두세요. 나중에 증거가 돼요', meta: '기록 필수' },
-          { title: '금액 계산', text: '못 받은 임금과 지연이자를 계산해 청구 금액을 정해요', meta: '2분', link: { label: '지연이자 계산기', href: '/law/unpaid-wages/' } },
+          { title: '금액 계산', text: '못 받은 임금과 지연이자를 계산해 청구 금액을 정해요', meta: '2분', link: { label: '지연이자 계산기', href: '/unpaid-wages/' } },
           { title: '진정 접수', text: '노동포털에서 임금체불 진정을 접수해요. 사업장 주소와 체불 내역을 적어요', meta: '무료 · 10분', link: { label: '노동포털 진정 접수', href: LABOR } },
         ] },
         { type: 'table', text: true, caption: '진정을 낼 때 준비할 자료', headers: ['자료', '왜 필요한가요'], rows: [
@@ -204,9 +204,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 3, quote: '재직 근로자에 대한 대지급금은 해당 근로자가 하나의 사업에 근로하는 동안 1회만 지급한다', note: '재직 근로자 1회 제한 (제7조의2④)' },
     ],
     related: [
-      { kind: '계산기', label: '임금체불 지연이자 계산기', href: '/law/unpaid-wages/' },
-      { kind: '법률 계산기', label: '퇴직금 계산기', href: '/law/severance-pay/' },
-      { kind: '법률 가이드', label: '연차수당 계산과 발생 기준', href: '/law/annual-leave-allowance-guide/' },
+      { kind: '계산기', label: '임금체불 지연이자 계산기', href: '/unpaid-wages/' },
+      { kind: '법률 계산기', label: '퇴직금 계산기', href: '/severance/' },
+      { kind: '법률 가이드', label: '연차수당 계산과 발생 기준', href: '/annual-leave/' },
     ],
   };
 }

@@ -26,7 +26,7 @@ export const html = `<h1>1주택 양도세 비과세 요건과 계산, 2년 보�
     <div class="v2-box"><b>오래 살수록 크게 깎여요</b><span>10년 보유하고 10년 살면 80%를 빼 줘요. 거주가 없으면 세금이 22,352,000원 늘어요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/realestate/transfer-tax/">양도소득세 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/transfer-tax/calculator/">양도소득세 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">1주택 양도세 비과세 요건이 뭔가요</a></li><li><a href="#s2">12억 초과분 양도세 계산, 어떻게 하나요</a></li><li><a href="#s3">장기보유특별공제는 얼마나 빼 주나요</a></li><li><a href="#s4">2년 안에 팔면 세율이 얼마인가요</a></li><li><a href="#s5">양도세 언제까지 신고하나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 1주택 양도세</small><b>핵심콕콕</b></div>
@@ -119,7 +119,7 @@ export const html = `<h1>1주택 양도세 비과세 요건과 계산, 2년 보�
 <p class="v2-lead"><span class="v2-ans">잔금을 받은 달의 말일부터 2개월 안에 예정신고를 해야 해요.</span> 비과세라서 낼 세금이 0원이어도 신고는 하는 편이 안전해요. 한 해에 두 건 이상 팔았다면 다음 해 5월에 합쳐서 확정신고를 해야 해요.</p>
 <div class="v2-steps">
   <div><i>1단계</i><b>증빙 모으기</b><span>매매계약서, 취득세 영수증, 중개보수 영수증, 인테리어 세금계산서를 모아요</span><em>잔금 직후</em></div>
-  <div><i>2단계</i><b>세액 미리 계산</b><span>판 금액과 산 금액, 보유와 거주 기간을 넣어 세금을 확인해요</span><em>5분</em><a class="v2-go" href="/realestate/transfer-tax/">양도소득세 계산기</a></div>
+  <div><i>2단계</i><b>세액 미리 계산</b><span>판 금액과 산 금액, 보유와 거주 기간을 넣어 세금을 확인해요</span><em>5분</em><a class="v2-go" href="/transfer-tax/">양도소득세 계산기</a></div>
   <div><i>3단계</i><b>홈택스 예정신고</b><span>양도소득세 신고 메뉴에서 신고서를 제출하고 세금을 내요</span><em>판 달 말일부터 2개월</em><a class="v2-go" href="https://www.hometax.go.kr" target="_blank" rel="noopener">홈택스 바로가기</a></div>
   <div><i>4단계</i><b>지방소득세 납부</b><span>산출된 세금의 10%를 위택스에서 따로 내요</span><em>같은 기한</em></div>
 </div>
@@ -145,13 +145,13 @@ export const html = `<h1>1주택 양도세 비과세 요건과 계산, 2년 보�
 <li>1주택 장기보유특별공제는 보유와 거주를 각각 연 4%씩 더해 최대 80%예요.</li>
 <li>판 달의 말일부터 2개월 안에 예정신고를 해요. 지방소득세는 위택스에서 따로 내요.</li>
 </ul></section>
-<a class="v2-cta" href="/realestate/transfer-tax/">양도소득세 계산기 바로가기</a>
+<a class="v2-cta" href="/transfer-tax/calculator/">양도소득세 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>소득세법 제89조(비과세 양도소득, 12억원 초과 고가주택 제외), 제95조(장기보유 특별공제), 제103조(양도소득 기본공제 연 250만원), 제104조(양도소득세의 세율), 제105조(예정신고, 양도일이 속하는 달의 말일부터 2개월). 소득세법 시행령 제154조(1세대1주택의 범위, 보유 2년과 조정대상지역 거주 2년), 제155조(일시적 2주택 3년), 제159조의3(1주택 장기보유특별공제), 제160조(고가주택 양도차익 안분).
 <b>정부 도구</b>홈택스 양도소득세 신고 화면의 세율표와 이 글의 계산이 같은 값이에요 (2026-09-02 대조).
 </div>
-<div class="v2-rel"><a href="/realestate/transfer-tax/"><b>계산기</b>양도소득세 계산기</a><a href="/realestate/acquisition-tax/"><b>부동산 계산기</b>취득세 계산기</a><a href="/realestate/acquisition-tax-guide/"><b>부동산 가이드</b>집 살 때 취득세 세율과 계산</a></div>
+<div class="v2-rel"><a href="/transfer-tax/"><b>계산기</b>양도소득세 계산기</a><a href="/acquisition-tax/"><b>부동산 계산기</b>취득세 계산기</a><a href="/acquisition-tax/"><b>부동산 가이드</b>집 살 때 취득세 세율과 계산</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

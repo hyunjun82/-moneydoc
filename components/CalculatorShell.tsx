@@ -4,6 +4,7 @@ import { GuideAccordion } from "./GuideAccordion";
 import { SourceBox } from "./SourceBox";
 import { RelatedCards } from "./RelatedCards";
 import { CATEGORIES, type CategorySlug } from "@/lib/calculators-index";
+import { hubHref } from "@/lib/hub-map";
 
 type CalcSpec = {
   category: string;
@@ -49,7 +50,7 @@ export function CalculatorShell({
               "@type": "ListItem",
               position: 3,
               name: spec.title,
-              item: `https://moneydoc.kr/${spec.category}/${spec.slug}/`,
+              item: `https://moneydoc.kr${hubHref(spec.category, spec.slug)}`,
             },
           ]
         : []),

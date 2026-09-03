@@ -28,7 +28,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `월 50만원을 24개월 동안 연 4% 적금에 넣으면 이자가 ${won(R.interest)}원, 세금을 뗀 만기 실수령액은 ${won(R.maturity)}원이에요. 단리와 복리 차이, 이자소득세, 비과세 조건을 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `이자소득세 15.4% 원천징수 기준 반영 · ${VERIFIED}`,
-    calc: { href: '/savings/installment-savings/', label: '적금 이자 계산기 바로가기' },
+    calc: { href: '/installment/calculator/', label: '적금 이자 계산기 바로가기' },
     hero: {
       tag: '저축', line1: '적금 이자 계산과 세금', line2: '만기에 얼마 받나',
       sub1: `월 50만원 · 24개월 · 연 4% → ${won(R.maturity)}원`,
@@ -158,7 +158,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
         { type: 'steps', items: [
           { title: '목표 금액 정하기', text: '언제까지 얼마를 모을지 정하면 월 납입금이 나와요', meta: '5분' },
           { title: '금리 비교', text: '은행별 기본금리와 우대 조건을 비교해요. 조건을 채울 수 있는지가 중요해요', meta: '10분' },
-          { title: '만기 금액 확인', text: '월 납입금과 기간, 금리를 넣어 세후 실수령액을 확인해요', meta: '2분', link: { label: '적금 이자 계산기', href: '/savings/installment-savings/' } },
+          { title: '만기 금액 확인', text: '월 납입금과 기간, 금리를 넣어 세후 실수령액을 확인해요', meta: '2분', link: { label: '적금 이자 계산기', href: '/installment/' } },
           { title: '자동이체 설정', text: '급여일 다음 날로 자동이체를 걸어 두면 빠뜨리지 않아요', meta: '가입 시' },
         ] },
       ] },
@@ -190,9 +190,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 1, quote: '원천징수의무자가 제127조제1항 각 호에 따른 소득을 지급하여 소득세를 원천징수할 때 적용하는 세율', note: '원천징수세율 적용 (제129조①)' },
     ],
     related: [
-      { kind: '계산기', label: '적금 이자 계산기', href: '/savings/installment-savings/' },
-      { kind: '저축 계산기', label: '예금 이자 계산기', href: '/savings/fixed-deposit/' },
-      { kind: '저축 계산기', label: '비과세 저축 계산기', href: '/savings/tax-free-savings/' },
+      { kind: '계산기', label: '적금 이자 계산기', href: '/installment/' },
+      { kind: '저축 계산기', label: '예금 이자 계산기', href: '/deposit/' },
+      { kind: '저축 계산기', label: '자유적금 계산기', href: '/free-savings/' },
     ],
   };
 }

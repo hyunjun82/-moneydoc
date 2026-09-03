@@ -27,14 +27,14 @@ export default function Page() {
 
       <section className="section">
         <div className="cats">
-        <a href="/insurance/medical-insurance-payout/" className="cat" style={{ textDecoration: "none" }}>
+        <a href="/medical-payout/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">실손보험 자기부담금 계산기</h3>
             <p className="cat-desc">의료비 - 면책금 - 자기부담률 = 보험금 (1~4세대 모두)</p>
             <span className="cat-count">금감원 표준약관</span>
           </div>
         </a>
-        <a href="/insurance/auto-tax/" className="cat" style={{ textDecoration: "none" }}>
+        <a href="/auto-tax/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">자동차세 계산기</h3>
             <p className="cat-desc">배기량·연식·영업용 → 자동차세 + 지방교육세 자동 산출</p>

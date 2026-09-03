@@ -29,7 +29,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `65세 이상이고 소득인정액이 단독가구 ${won(C.INCOME_THRESHOLD_SINGLE)}원 이하면 기초연금을 받아요. 단독가구는 월 ${won(C.MAX_SINGLE_2026)}원, 부부가구는 ${won(C.MAX_COUPLE_2026)}원이에요. 선정기준액, 소득인정액, 국민연금 연계 감액, 신청 방법을 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `기초연금법 요건과 2026년 고시 금액 대조 · ${VERIFIED}`,
-    calc: { href: '/government/basic-pension/', label: '기초연금 계산기 바로가기' },
+    calc: { href: '/basic-pension/calculator/', label: '기초연금 계산기 바로가기' },
     hero: {
       tag: '정부지원금', line1: '기초연금 수급 조건과 금액', line2: '나도 받나요',
       sub1: `단독가구 월 ${won(C.MAX_SINGLE_2026)}원 · 부부가구 ${won(C.MAX_COUPLE_2026)}원`,
@@ -156,7 +156,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { id: 's5', h2: '기초연금 신청, 어디서 어떻게 하나요', sub: '주민센터, 국민연금공단, 복지로', blocks: [
         { type: 'p', lead: true, ans: '주소지 행정복지센터나 가까운 국민연금공단 지사에서 신청하면 돼요.', text: '온라인은 복지로에서 신청할 수 있어요. 신청한 날이 속한 달부터 지급되기 때문에 미루면 그만큼 못 받아요. 거동이 불편하면 찾아뵙는 서비스를 신청할 수도 있어요.' },
         { type: 'steps', items: [
-          { title: '대상 여부 확인', text: '가구 유형과 소득인정액을 넣어 대상인지 먼저 확인해요', meta: '1분', link: { label: '기초연금 계산기', href: '/government/basic-pension/' } },
+          { title: '대상 여부 확인', text: '가구 유형과 소득인정액을 넣어 대상인지 먼저 확인해요', meta: '1분', link: { label: '기초연금 계산기', href: '/basic-pension/' } },
           { title: '서류 준비', text: '신분증, 통장 사본, 배우자 금융정보 제공 동의서를 준비해요', meta: '10분' },
           { title: '신청', text: '행정복지센터나 국민연금공단에 내거나 복지로에서 온라인으로 신청해요', meta: '만 65세 생일 한 달 전부터', link: { label: '복지로 바로가기', href: BOKJIRO } },
           { title: '결정 통지와 지급', text: '조사 후 결정 통지서를 받고, 신청한 달부터 매달 지급돼요', meta: '보통 한 달 안', link: { label: '국민연금공단', href: NPS } },
@@ -205,9 +205,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 2, quote: '전년도 12월 31일까지 보건복지부장관이 결정ㆍ고시하고, 1월 1일부터 12월 31일까지 적용한다', note: '선정기준액 고시 시점 (시행령 제4조④)' },
     ],
     related: [
-      { kind: '계산기', label: '기초연금 계산기', href: '/government/basic-pension/' },
-      { kind: '연금 계산기', label: '국민연금 예상 수령액', href: '/pension/national-pension/' },
-      { kind: '정부지원금 가이드', label: '2026년 실업급여 얼마나 받나요', href: '/government/unemployment-benefit-guide/' },
+      { kind: '계산기', label: '기초연금 계산기', href: '/basic-pension/' },
+      { kind: '연금 계산기', label: '국민연금 예상 수령액', href: '/national-pension/' },
+      { kind: '정부지원금 가이드', label: '2026년 실업급여 얼마나 받나요', href: '/unemployment/' },
     ],
   };
 }

@@ -32,7 +32,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `연소득 5,000만원이면 30년 원리금균등 기준 대출 한도가 ${won(R.maxLoan)}원이에요. 스트레스 금리 1.5%가 붙어 ${won(stressGap)}원이 줄어든 금액이에요. DSR 계산법, 단계별 가산금리, 소득과 기간별 한도표를 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `은행업감독규정 DSR 규제와 스트레스 금리 반영 · ${VERIFIED}`,
-    calc: { href: '/loan/dsr-limit/', label: 'DSR 대출 한도 계산기 바로가기' },
+    calc: { href: '/dsr/calculator/', label: 'DSR 대출 한도 계산기 바로가기' },
     hero: {
       tag: '대출', line1: '스트레스 DSR과 대출 한도', line2: '얼마까지 되나요',
       sub1: `연소득 5,000만원 · 30년 · 금리 4% → ${won(R.maxLoan)}원`,
@@ -201,9 +201,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 2, quote: '담보인정비율, 총부채상환비율 및 총부채원리금상환비율을 10퍼센트포인트 범위 이내에서 가감조정할 수 있다', note: '2금융권 조정 권한 (제39조의2②)' },
     ],
     related: [
-      { kind: '계산기', label: 'DSR 대출 한도 계산기', href: '/loan/dsr-limit/' },
-      { kind: '대출 계산기', label: '주택담보대출 계산기', href: '/loan/mortgage-loan-limit/' },
-      { kind: '대출 계산기', label: '원리금균등 상환 계산기', href: '/loan/loan-amortization/' },
+      { kind: '계산기', label: 'DSR 대출 한도 계산기', href: '/dsr/' },
+      { kind: '대출 계산기', label: '주택담보대출 계산기', href: '/mortgage/' },
+      { kind: '대출 계산기', label: '원리금균등 상환 계산기', href: '/repayment/' },
     ],
   };
 }

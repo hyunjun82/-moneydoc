@@ -26,7 +26,7 @@ export const html = `<h1>내용증명 작성 방법과 양식, 임대차부터 �
     <div class="v2-box"><b>배달증명을 함께 붙이세요</b><span>언제 도착했는지까지 증명해야 기한 계산에 쓸 수 있어요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/law/">법률 계산기 모아보기</a>
+<!--CALC_START--><a class="v2-cta" href="/law/">법률 계산기 모아보기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">내용증명 작성 방법, 뭘 적어야 하나요</a></li><li><a href="#s2">내용증명 양식 다운로드 대신 직접 만들면 되나요</a></li><li><a href="#s3">발송 방법과 비용은 어떻게 되나요</a></li><li><a href="#s4">내용증명 효력, 법적으로 어떤 힘이 있나요</a></li><li><a href="#s5">보증금 반환 내용증명은 어떻게 쓰나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 내용증명</small><b>핵심콕콕</b></div>
@@ -146,7 +146,7 @@ export const html = `<h1>내용증명 작성 방법과 양식, 임대차부터 �
 <b>법령</b>우편법 시행규칙 제46조(내용증명 취급 대상 문서), 제47조(동문내용증명), 제48조(원본과 등본 2통 제출), 제52조(원본과 등본 대조와 계인), 제54조(발송 후 재증명 청구, 3년), 제55조(등본 열람청구, 3년). 민법 제168조(소멸시효의 중단사유), 제174조(최고와 시효중단, 6월), 제387조(이행기와 이행지체). 주택임대차보호법 제6조(계약의 갱신), 제6조의2(묵시적 갱신의 경우 계약의 해지, 3개월).
 <b>정부 도구</b>인터넷우체국의 내용증명 접수 절차를 기준으로 정리했어요 (2026-09-02 확인).
 </div>
-<div class="v2-rel"><a href="/law/severance-claim-form-guide/"><b>법률 가이드</b>퇴직금 못 받았을 때 지급명령과 소장</a><a href="/law/unpaid-wages-guide/"><b>법률 가이드</b>임금체불 진정 방법과 지연이자</a><a href="/law/unpaid-wages/"><b>계산기</b>임금체불 지연이자 계산기</a></div>
+<div class="v2-rel"><a href="/severance/claim/"><b>법률 가이드</b>퇴직금 못 받았을 때 지급명령과 소장</a><a href="/unpaid-wages/"><b>법률 가이드</b>임금체불 진정 방법과 지연이자</a><a href="/unpaid-wages/"><b>계산기</b>임금체불 지연이자 계산기</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

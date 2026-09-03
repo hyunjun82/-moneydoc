@@ -162,9 +162,9 @@ export default function article({ VERIFIED }) {
       { src: 3, quote: '해지는 임대인이 그 통지를 받은 날부터 3개월이 지나면 그 효력이 발생한다', note: '묵시적 갱신 해지 효력 (제6조의2②)' },
     ],
     related: [
-      { kind: '법률 가이드', label: '퇴직금 못 받았을 때 지급명령과 소장', href: '/law/severance-claim-form-guide/' },
-      { kind: '법률 가이드', label: '임금체불 진정 방법과 지연이자', href: '/law/unpaid-wages-guide/' },
-      { kind: '계산기', label: '임금체불 지연이자 계산기', href: '/law/unpaid-wages/' },
+      { kind: '법률 가이드', label: '퇴직금 못 받았을 때 지급명령과 소장', href: '/severance/claim/' },
+      { kind: '법률 가이드', label: '임금체불 진정 방법과 지연이자', href: '/unpaid-wages/' },
+      { kind: '계산기', label: '임금체불 지연이자 계산기', href: '/unpaid-wages/' },
     ],
   };
 }

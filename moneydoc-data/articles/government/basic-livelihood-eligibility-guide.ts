@@ -26,7 +26,7 @@ export const html = `<h1>2026년 기초생활수급 조건과 급여, 소득인�
     <div class="v2-box"><b>생계급여는 부족분을 채워 줘요</b><span>1인 가구 소득인정액이 60만원이면 차액인 220,556원이 생계급여로 들어와요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/government/basic-livelihood-eligibility/">기초생활수급 자격 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/basic-livelihood/calculator/">기초생활수급 자격 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">기초생활수급 조건, 중위소득 얼마 이하인가요</a></li><li><a href="#s2">소득인정액은 어떻게 계산하나요</a></li><li><a href="#s3">생계급여와 의료급여는 얼마나 받나요</a></li><li><a href="#s4">기초생활수급 신청 서류는 뭐가 필요한가요</a></li><li><a href="#s5">수급자가 되면 무엇이 달라지나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 기초생활보장</small><b>핵심콕콕</b></div>
@@ -165,13 +165,13 @@ export const html = `<h1>2026년 기초생활수급 조건과 급여, 소득인�
 <li>소득인정액은 소득평가액과 재산의 소득환산액을 더해 계산해요.</li>
 <li>신청은 주소지 행정복지센터나 복지로에서 하고, 조사를 거쳐 급여가 결정돼요.</li>
 </ul></section>
-<a class="v2-cta" href="/government/basic-livelihood-eligibility/">기초생활수급 자격 계산기 바로가기</a>
+<a class="v2-cta" href="/basic-livelihood/calculator/">기초생활수급 자격 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>국민기초생활 보장법 제6조의2(기준 중위소득), 제6조의3(소득인정액 산정), 제7조(급여의 종류), 제8조(생계급여, 기준 중위소득의 100분의 30 이상), 제11조(주거급여), 제12조(교육급여, 100분의 50 이상), 제12조의3(의료급여, 100분의 40 이상), 제21조(급여의 신청과 금융정보 제공 동의). 국민기초생활 보장법 시행령(소득의 범위와 재산의 소득환산).
 <b>정부 도구</b>보건복지부가 고시한 2026년 기준 중위소득과 급여별 선정기준을 그대로 반영했어요 (2026-09-02 대조).
 </div>
-<div class="v2-rel"><a href="/government/basic-livelihood-eligibility/"><b>계산기</b>기초생활수급 자격 계산기</a><a href="/government/median-income/"><b>정부지원금 계산기</b>기준 중위소득 계산기</a><a href="/government/basic-pension-guide/"><b>정부지원금 가이드</b>2026년 기초연금 수급 조건과 금액</a></div>
+<div class="v2-rel"><a href="/basic-livelihood/"><b>계산기</b>기초생활수급 자격 계산기</a><a href="/median-income/"><b>정부지원금 계산기</b>기준 중위소득 계산기</a><a href="/basic-pension/"><b>정부지원금 가이드</b>2026년 기초연금 수급 조건과 금액</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

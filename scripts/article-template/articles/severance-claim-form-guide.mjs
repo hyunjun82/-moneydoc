@@ -42,7 +42,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `퇴직금 ${won(CLAIM)}원을 못 받았다면 지급명령 인지대는 전자소송 기준 ${won(orderFee)}원이에요. 지급명령 신청서와 소장 양식을 어디서 받는지, 인지대와 송달료는 얼마인지, 어느 법원에 내는지 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 8,
     badge: `민사소송법과 인지법 산식 대조 · ${VERIFIED}`,
-    calc: { href: '/law/severance-pay/', label: '퇴직금 계산기 바로가기' },
+    calc: { href: '/severance/calculator/', label: '퇴직금 계산기 바로가기' },
     hero: {
       tag: '법률', line1: '퇴직금 지급명령과 소장', line2: '어떻게 내나요',
       sub1: `청구금액 ${won(CLAIM)}원이면 인지대 ${won(orderFee)}원`,
@@ -102,7 +102,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           { cells: ['회사가 도산했을 때', '대지급금 청구를 먼저 검토하세요'] },
         ], fn: '소액사건 범위와 이행권고결정은 소액사건심판법에 있어요. 지급명령에 이의가 있으면 신청한 때에 소가 제기된 것으로 봐요.' },
         { type: 'steps', items: [
-          { title: '청구금액 확정', text: '퇴직금과 지연이자를 계산해 청구할 금액을 정해요', meta: '3분', link: { label: '퇴직금 계산기', href: '/law/severance-pay/' } },
+          { title: '청구금액 확정', text: '퇴직금과 지연이자를 계산해 청구할 금액을 정해요', meta: '3분', link: { label: '퇴직금 계산기', href: '/severance/' } },
           { title: '전자소송 회원가입', text: '공동인증서나 간편인증으로 가입하고 사용자 등록을 해요', meta: '10분', link: { label: '전자소송 바로가기', href: COURT } },
           { title: '서식 작성', text: '지급명령 신청서나 소장을 화면에서 작성하고 증거를 올려요', meta: '30분', link: { label: '법원 양식 모음', href: FORM } },
           { title: '인지대와 송달료 납부', text: '화면에서 계산된 금액을 카드나 계좌이체로 내고 제출해요', meta: '5분' },
@@ -223,9 +223,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 4, quote: '이 법에 따른 임금채권은 3년간 행사하지 아니하면 시효로 소멸한다', note: '임금채권 3년 시효 (근로기준법 제49조)' },
     ],
     related: [
-      { kind: '계산기', label: '퇴직금 계산기', href: '/law/severance-pay/' },
-      { kind: '법률 계산기', label: '임금체불 지연이자 계산기', href: '/law/unpaid-wages/' },
-      { kind: '법률 가이드', label: '임금체불 진정 방법과 지연이자', href: '/law/unpaid-wages-guide/' },
+      { kind: '계산기', label: '퇴직금 계산기', href: '/severance/' },
+      { kind: '법률 계산기', label: '임금체불 지연이자 계산기', href: '/unpaid-wages/' },
+      { kind: '법률 가이드', label: '임금체불 진정 방법과 지연이자', href: '/unpaid-wages/' },
     ],
   };
 }

@@ -38,7 +38,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `2026년 기준 월급 300만원에 5년 일했다면 실업급여는 하루 ${won(R.dailyBenefit)}원씩 ${R.benefitDays}일, 모두 ${won(R.totalBenefit)}원이에요. 받는 조건 세 가지 판정, 월급별 금액표, 가입기간별 일수, 신청 4단계를 고용24 모의계산과 맞춰 정리했어요.`,
     datePublished: '2026-09-02', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 8,
     badge: `고용24 모의계산 일치 · 시행령 §68 확인 · ${VERIFIED}`,
-    calc: { href: '/government/unemployment-benefit/', label: '실업급여 계산기 바로가기' },
+    calc: { href: '/unemployment/calculator/', label: '실업급여 계산기 바로가기' },
     hero: {
       tag: '정부지원금', line1: '2026년 실업급여', line2: '얼마나 받나요',
       sub1: `월급 300만원 · 5년 근무 → 하루 ${won(R.dailyBenefit)}원 × ${R.benefitDays}일 = ${won(R.totalBenefit)}원`,
@@ -223,9 +223,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 9, quote: '신청 후 최초로 내야 할 직장가입자 보험료를 그 납부기한부터 2개월이 지난 날까지 내지 아니한 경우에는 그 자격을 유지할 수 없다', note: '임의계속가입: 첫 보험료를 납부기한 2개월 안에 내야 자격 유지 (제110조②)' },
     ],
     related: [
-      { kind: '계산기', label: '실업급여 계산기', href: '/government/unemployment-benefit/' },
-      { kind: '법률 가이드', label: '퇴직금 계산과 평균임금', href: '/law/severance-pay-guide/' },
-      { kind: '정부지원금 가이드', label: '육아휴직급여 2026', href: '/government/parental-leave-pay-guide/' },
+      { kind: '계산기', label: '실업급여 계산기', href: '/unemployment/' },
+      { kind: '법률 가이드', label: '퇴직금 계산과 평균임금', href: '/severance/' },
+      { kind: '정부지원금 가이드', label: '육아휴직급여 2026', href: '/parental-leave/' },
     ],
   };
 }

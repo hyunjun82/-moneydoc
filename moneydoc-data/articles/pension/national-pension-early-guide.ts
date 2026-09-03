@@ -26,7 +26,7 @@ export const html = `<h1>국민연금 조기수령 감액과 손익분기, 조�
     <div class="v2-box"><b>오래 살수록 불리해요</b><span>60세부터 받으면 손익분기가 약 76.7세라 그보다 오래 살면 손해예요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/pension/national-pension-early/">국민연금 조기수령 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/pension-early/calculator/">국민연금 조기수령 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">국민연금 조기수령 감액, 얼마나 깎이나요</a></li><li><a href="#s2">조기노령연금 조건은 어떻게 되나요</a></li><li><a href="#s3">조기수령 손익분기점, 몇 살인가요</a></li><li><a href="#s4">연기연금과 비교하면 어느 쪽이 낫나요</a></li><li><a href="#s5">조기연금 소득 있으면 어떻게 되나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 조기수령</small><b>핵심콕콕</b></div>
@@ -137,7 +137,7 @@ export const html = `<h1>국민연금 조기수령 감액과 손익분기, 조�
 </div>
 <div class="v2-steps">
   <div><i>1단계</i><b>예상 연금액 확인</b><span>국민연금공단에서 가입 기간과 정상수령 예상액을 확인해요</span><em>5분</em><a class="v2-go" href="https://www.nps.or.kr" target="_blank" rel="noopener">국민연금공단</a></div>
-  <div><i>2단계</i><b>감액과 손익분기 계산</b><span>시작 나이별 금액과 손익분기 나이를 비교해요</span><em>2분</em><a class="v2-go" href="/pension/national-pension-early/">조기수령 계산기</a></div>
+  <div><i>2단계</i><b>감액과 손익분기 계산</b><span>시작 나이별 금액과 손익분기 나이를 비교해요</span><em>2분</em><a class="v2-go" href="/pension-early/">조기수령 계산기</a></div>
   <div><i>3단계</i><b>청구</b><span>공단 지사나 홈페이지에서 청구하면 다음 달부터 지급돼요</span><em>본인 청구</em></div>
 </div>
 
@@ -157,13 +157,13 @@ export const html = `<h1>국민연금 조기수령 감액과 손익분기, 조�
 <li>가입 10년 이상이어야 하고 소득이 있는 업무에 종사하지 않아야 신청할 수 있어요.</li>
 <li>반대로 미루면 1개월에 0.6%씩 늘어 5년 연기하면 1,360,000원이 돼요.</li>
 </ul></section>
-<a class="v2-cta" href="/pension/national-pension-early/">국민연금 조기수령 계산기 바로가기</a>
+<a class="v2-cta" href="/pension-early/calculator/">국민연금 조기수령 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>국민연금법 제61조(노령연금 수급권자와 조기노령연금 청구 요건), 제62조(지급의 연기에 따른 가산, 1개월당 1천분의 6), 제63조(노령연금액과 조기노령연금 지급률), 제63조의2(소득활동에 따른 노령연금액 감액), 부칙 제8조(출생 연도별 지급연령 경과 규정). 국민연금법 시행령(지급 개시와 청구 절차).
 <b>정부 도구</b>국민연금공단 예상연금 모의계산의 감액 구조와 이 글의 계산이 같아요 (2026-09-02 대조).
 </div>
-<div class="v2-rel"><a href="/pension/national-pension-early/"><b>계산기</b>국민연금 조기수령 계산기</a><a href="/pension/national-pension/"><b>연금 계산기</b>국민연금 예상 수령액</a><a href="/government/basic-pension-guide/"><b>정부지원금 가이드</b>2026년 기초연금 수급 조건과 금액</a></div>
+<div class="v2-rel"><a href="/pension-early/"><b>계산기</b>국민연금 조기수령 계산기</a><a href="/national-pension/"><b>연금 계산기</b>국민연금 예상 수령액</a><a href="/basic-pension/"><b>정부지원금 가이드</b>2026년 기초연금 수급 조건과 금액</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

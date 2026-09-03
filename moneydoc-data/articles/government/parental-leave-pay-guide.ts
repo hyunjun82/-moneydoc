@@ -26,7 +26,7 @@ export const html = `<h1>2026년 육아휴직 급여 조건과 금액, 신청 �
     <div class="v2-box"><b>기간은 1년, 조건 맞으면 1년 6개월</b><span>부모가 각각 3개월 이상 쓰면 6개월을 더 쓸 수 있어 9,600,000원을 더 받아요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/government/parental-leave-pay/">육아휴직 급여 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/parental-leave/calculator/">육아휴직 급여 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">육아휴직 조건, 누가 얼마나 쓸 수 있나요</a></li><li><a href="#s2">육아휴직 급여, 월마다 얼마 나오나요</a></li><li><a href="#s3">6+6 부모육아휴직제는 얼마나 더 받나요</a></li><li><a href="#s4">육아휴직 급여 신청 방법은 어떻게 되나요</a></li><li><a href="#s5">복직 후와 육아기 근로시간 단축은 어떻게 되나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 육아휴직 급여</small><b>핵심콕콕</b></div>
@@ -118,7 +118,7 @@ export const html = `<h1>2026년 육아휴직 급여 조건과 금액, 신청 �
   <div><i>1단계</i><b>회사에 육아휴직 신청</b><span>휴직 시작 예정일 30일 전까지 회사에 신청해요</span><em>30일 전</em></div>
   <div><i>2단계</i><b>회사가 확인서 제출</b><span>사업주가 육아휴직 확인서를 고용센터에 내요</span><em>회사 몫</em></div>
   <div><i>3단계</i><b>급여 신청</b><span>휴직 시작 1개월 뒤부터 고용보험 홈페이지에서 신청해요</span><em>매월</em><a class="v2-go" href="https://www.ei.go.kr" target="_blank" rel="noopener">고용보험 바로가기</a></div>
-  <div><i>4단계</i><b>지급</b><span>심사를 거쳐 계좌로 입금돼요. 금액을 미리 확인해 두면 좋아요</span><em>보통 2주 안</em><a class="v2-go" href="/government/parental-leave-pay/">육아휴직 급여 계산기</a></div>
+  <div><i>4단계</i><b>지급</b><span>심사를 거쳐 계좌로 입금돼요. 금액을 미리 확인해 두면 좋아요</span><em>보통 2주 안</em><a class="v2-go" href="/parental-leave/">육아휴직 급여 계산기</a></div>
 </div>
 <div class="v2-tbl v2-text"><table><caption>신청할 때 챙길 것</caption><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><th scope="row">신청 기한</th><td data-l="내용">휴직 시작 1개월 뒤부터 끝난 날 이후 12개월 이내</td></tr>
@@ -161,13 +161,13 @@ export const html = `<h1>2026년 육아휴직 급여 조건과 금액, 신청 �
 <li>부모가 함께 쓰면 첫 6개월 상한이 250만원에서 450만원까지 올라가요.</li>
 <li>신청은 휴직 시작 1개월 뒤부터, 끝난 날 이후 12개월 이내에 해야 해요.</li>
 </ul></section>
-<a class="v2-cta" href="/government/parental-leave-pay/">육아휴직 급여 계산기 바로가기</a>
+<a class="v2-cta" href="/parental-leave/calculator/">육아휴직 급여 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>남녀고용평등과 일·가정 양립 지원에 관한 법률 제19조(육아휴직 대상과 1년, 부모 각각 3개월 이상 사용 시 6개월 추가, 해고 금지, 복귀 의무), 제19조의2(육아기 근로시간 단축). 고용보험법 제70조(육아휴직 급여 요건 180일, 신청 기한). 고용보험법 시행령 제95조(구간별 지급액과 상한·하한), 제95조의3(출생 후 18개월 이내 부모 모두 사용 시 특례 상한).
 <b>정부 도구</b>고용보험 육아휴직 급여 모의계산과 이 글의 금액이 같은 기준이에요 (2026-09-02 대조).
 </div>
-<div class="v2-rel"><a href="/government/parental-leave-pay/"><b>계산기</b>육아휴직 급여 계산기</a><a href="/government/maternity-leave-pay/"><b>정부지원금 계산기</b>출산휴가 급여 계산기</a><a href="/government/unemployment-benefit-guide/"><b>정부지원금 가이드</b>2026년 실업급여 얼마나 받나요</a></div>
+<div class="v2-rel"><a href="/parental-leave/"><b>계산기</b>육아휴직 급여 계산기</a><a href="/maternity/"><b>정부지원금 계산기</b>출산휴가 급여 계산기</a><a href="/unemployment/"><b>정부지원금 가이드</b>2026년 실업급여 얼마나 받나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

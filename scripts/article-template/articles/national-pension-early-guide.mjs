@@ -34,7 +34,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `정상수령 월 100만원인 사람이 60세부터 받으면 ${won(R.reducedPension)}원으로 ${pctOf(R.reductionRate)}% 깎여요. 감액률표, 손익분기 나이, 신청 조건, 연기연금과의 비교를 한 번에 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `국민연금법 조기노령연금 지급률과 일치 · ${VERIFIED}`,
-    calc: { href: '/pension/national-pension-early/', label: '국민연금 조기수령 계산기 바로가기' },
+    calc: { href: '/pension-early/calculator/', label: '국민연금 조기수령 계산기 바로가기' },
     hero: {
       tag: '연금', line1: '국민연금 조기수령 감액', line2: '언제가 유리한가',
       sub1: `정상 100만원 → 60세 수령 시 ${won(R.reducedPension)}원`,
@@ -168,7 +168,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
         ] },
         { type: 'steps', items: [
           { title: '예상 연금액 확인', text: '국민연금공단에서 가입 기간과 정상수령 예상액을 확인해요', meta: '5분', link: { label: '국민연금공단', href: NPS } },
-          { title: '감액과 손익분기 계산', text: '시작 나이별 금액과 손익분기 나이를 비교해요', meta: '2분', link: { label: '조기수령 계산기', href: '/pension/national-pension-early/' } },
+          { title: '감액과 손익분기 계산', text: '시작 나이별 금액과 손익분기 나이를 비교해요', meta: '2분', link: { label: '조기수령 계산기', href: '/pension-early/' } },
           { title: '청구', text: '공단 지사나 홈페이지에서 청구하면 다음 달부터 지급돼요', meta: '본인 청구' },
         ] },
       ] },
@@ -202,9 +202,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 2, quote: '조기노령연금의 수급권을 취득한 자', note: '조기노령연금 관련 시행령 규정' },
     ],
     related: [
-      { kind: '계산기', label: '국민연금 조기수령 계산기', href: '/pension/national-pension-early/' },
-      { kind: '연금 계산기', label: '국민연금 예상 수령액', href: '/pension/national-pension/' },
-      { kind: '정부지원금 가이드', label: '2026년 기초연금 수급 조건과 금액', href: '/government/basic-pension-guide/' },
+      { kind: '계산기', label: '국민연금 조기수령 계산기', href: '/pension-early/' },
+      { kind: '연금 계산기', label: '국민연금 예상 수령액', href: '/national-pension/' },
+      { kind: '정부지원금 가이드', label: '2026년 기초연금 수급 조건과 금액', href: '/basic-pension/' },
     ],
   };
 }

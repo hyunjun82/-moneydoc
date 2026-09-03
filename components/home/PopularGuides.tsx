@@ -4,12 +4,12 @@ import { TILES } from "./CategoryTiles";
 /* 홈 인기글: 검색 유입 상위 가이드 6편. 목록은 articles/index.ts (자동 생성) 에서 가져온다 */
 
 const TOP: string[] = [
-  "/government/unemployment-benefit-guide/",
-  "/tax/salary-net-pay-guide/",
-  "/law/severance-pay-guide/",
-  "/tax/four-major-insurance-guide/",
-  "/realestate/transfer-tax-guide/",
-  "/government/basic-pension-guide/",
+  "/unemployment/",
+  "/salary/",
+  "/severance/",
+  "/four-insurance/",
+  "/transfer-tax/",
+  "/basic-pension/",
 ];
 
 export function PopularGuides() {

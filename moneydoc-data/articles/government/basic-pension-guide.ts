@@ -26,7 +26,7 @@ export const html = `<h1>2026년 기초연금 수급 조건과 금액, 선정기
     <div class="v2-box"><b>소득만 보는 게 아니에요</b><span>재산을 소득으로 환산해 더한 소득인정액으로 판단해요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/government/basic-pension/">기초연금 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/basic-pension/calculator/">기초연금 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">기초연금 수급 조건, 누가 받나요</a></li><li><a href="#s2">선정기준액은 얼마인가요</a></li><li><a href="#s3">소득인정액은 어떻게 계산하나요</a></li><li><a href="#s4">국민연금 연계 감액과 부부 감액은 뭔가요</a></li><li><a href="#s5">기초연금 신청, 어디서 어떻게 하나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 기초연금</small><b>핵심콕콕</b></div>
@@ -117,7 +117,7 @@ export const html = `<h1>2026년 기초연금 수급 조건과 금액, 선정기
 <h2 id="s5">기초연금 신청, 어디서 어떻게 하나요<small>주민센터, 국민연금공단, 복지로</small></h2>
 <p class="v2-lead"><span class="v2-ans">주소지 행정복지센터나 가까운 국민연금공단 지사에서 신청하면 돼요.</span> 온라인은 복지로에서 신청할 수 있어요. 신청한 날이 속한 달부터 지급되기 때문에 미루면 그만큼 못 받아요. 거동이 불편하면 찾아뵙는 서비스를 신청할 수도 있어요.</p>
 <div class="v2-steps">
-  <div><i>1단계</i><b>대상 여부 확인</b><span>가구 유형과 소득인정액을 넣어 대상인지 먼저 확인해요</span><em>1분</em><a class="v2-go" href="/government/basic-pension/">기초연금 계산기</a></div>
+  <div><i>1단계</i><b>대상 여부 확인</b><span>가구 유형과 소득인정액을 넣어 대상인지 먼저 확인해요</span><em>1분</em><a class="v2-go" href="/basic-pension/">기초연금 계산기</a></div>
   <div><i>2단계</i><b>서류 준비</b><span>신분증, 통장 사본, 배우자 금융정보 제공 동의서를 준비해요</span><em>10분</em></div>
   <div><i>3단계</i><b>신청</b><span>행정복지센터나 국민연금공단에 내거나 복지로에서 온라인으로 신청해요</span><em>만 65세 생일 한 달 전부터</em><a class="v2-go" href="https://www.bokjiro.go.kr" target="_blank" rel="noopener">복지로 바로가기</a></div>
   <div><i>4단계</i><b>결정 통지와 지급</b><span>조사 후 결정 통지서를 받고, 신청한 달부터 매달 지급돼요</span><em>보통 한 달 안</em><a class="v2-go" href="https://www.nps.or.kr" target="_blank" rel="noopener">국민연금공단</a></div>
@@ -152,13 +152,13 @@ export const html = `<h1>2026년 기초연금 수급 조건과 금액, 선정기
 <li>소득인정액은 소득평가액과 재산의 소득환산액을 더해 계산해요.</li>
 <li>신청한 달부터 지급되니 만 65세 생일 한 달 전에 미리 신청하세요.</li>
 </ul></section>
-<a class="v2-cta" href="/government/basic-pension/">기초연금 계산기 바로가기</a>
+<a class="v2-cta" href="/basic-pension/calculator/">기초연금 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>기초연금법 제2조(소득인정액 정의), 제3조(65세 이상, 선정기준액, 수급자 100분의 70 수준, 직역연금 수급자 제외), 제6조(국민연금 급여액에 따른 기초연금액 특례, 기준연금액의 100분의 150과 100분의 200), 제8조(부부 모두 수급 시 100분의 20 감액), 제10조(지급 신청과 금융정보 제공 동의), 제14조(신청한 날이 속하는 달부터 지급), 제22조(이의신청). 기초연금법 시행령(선정기준액과 소득인정액 산정).
 <b>정부 도구</b>보건복지부가 고시한 2026년 선정기준액과 기준연금액을 그대로 반영했어요 (2026-09-02 대조).
 </div>
-<div class="v2-rel"><a href="/government/basic-pension/"><b>계산기</b>기초연금 계산기</a><a href="/pension/national-pension/"><b>연금 계산기</b>국민연금 예상 수령액</a><a href="/government/unemployment-benefit-guide/"><b>정부지원금 가이드</b>2026년 실업급여 얼마나 받나요</a></div>
+<div class="v2-rel"><a href="/basic-pension/"><b>계산기</b>기초연금 계산기</a><a href="/national-pension/"><b>연금 계산기</b>국민연금 예상 수령액</a><a href="/unemployment/"><b>정부지원금 가이드</b>2026년 실업급여 얼마나 받나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

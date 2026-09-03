@@ -143,46 +143,69 @@ export const faqLd = ${JSON.stringify(c.faqLd, null, 2)};
 `;
 }
 
-function pageFile(a) {
-  const url = `https://moneydoc.kr/${a.cat}/${a.slug}/`;
-  return `import type { Metadata } from "next";
-import { ArticleV2 } from "@/components/ArticleV2";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/${a.cat}/${a.slug}";
+const URLMAP = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/url-map.json'), 'utf8'));
+const HUBMAP = Object.fromEntries(Object.entries(URLMAP).filter(([k]) => !k.startsWith('_')));
+const NOCALC = URLMAP['_계산기없는허브'] ?? {};
+const NL = String.fromCharCode(10);
 
-const PAGE_URL = ${JSON.stringify(url)};
-
-export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
-  alternates: { canonical: "/${a.cat}/${a.slug}/" },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
-  openGraph: {
-    type: "article",
-    title: meta.title,
-    description: meta.description,
-    url: PAGE_URL,
-    publishedTime: meta.datePublished,
-    modifiedTime: meta.dateModified,
-    images: [{ url: meta.image, width: 1200, height: 630, alt: meta.imageAlt }],
-  },
-  twitter: { card: "summary_large_image", title: meta.title, description: meta.description, images: [meta.image] },
-};
-
-export default function Page() {
-  return (
-    <ArticleV2
-      meta={meta}
-      html={html}
-      faqLd={faqLd}
-      scriptKey={scriptKey}
-      url={PAGE_URL}
-      cat=${JSON.stringify(a.cat)}
-      catLabel=${JSON.stringify(a.catLabel)}
-      crumb=${JSON.stringify(a.crumb)}
-    />
-  );
+/** 글 슬러그 → 허브 라우트. 계산기가 있으면 그 컴포넌트 파일명도 같이 돌려준다 */
+function hubRoute(a) {
+  const base = a.slug.replace(/-guide$/, '');
+  const hub = HUBMAP[a.cat + '/' + base];
+  if (hub) {
+    const dir = path.join(ROOT, 'app', hub);
+    return { route: hub, client: null };   // 계산기는 /{hub}/calculator/ 로 따로 둔다
+  }
+  return { route: NOCALC[a.cat + '/' + a.slug] ?? (a.cat + '/' + a.slug), client: null };
 }
-`;
+
+function pageFile(a) {
+  const { route, client } = hubRoute(a);
+  const url = 'https://moneydoc.kr/' + route + '/';
+  const comp = client ? client.replace(/[^A-Za-z0-9_]/g, '') : null;
+  const catHref = '/' + (a.cat === 'government' ? 'gov' : a.cat) + '/';
+  const importLine = client ? 'import { ' + comp + ' } from "./' + client + '";' + NL : '';
+  const calcProp = client ? '      calculator={<' + comp + ' />}' + NL : '';
+  return [
+    'import type { Metadata } from "next";',
+    'import { HubPage } from "@/components/HubPage";',
+    importLine + 'import { meta, faqLd, html, scriptKey } from "@/data/articles/' + a.cat + '/' + a.slug + '";',
+    '',
+    'const PAGE_URL = ' + JSON.stringify(url) + ';',
+    '',
+    'export const metadata: Metadata = {',
+    '  title: meta.title,',
+    '  description: meta.description,',
+    '  alternates: { canonical: "/' + route + '/" },',
+    '  robots: { index: true, follow: true, "max-image-preview": "large" },',
+    '  openGraph: {',
+    '    type: "article",',
+    '    title: meta.title,',
+    '    description: meta.description,',
+    '    url: PAGE_URL,',
+    '    publishedTime: meta.datePublished,',
+    '    modifiedTime: meta.dateModified,',
+    '    images: [{ url: meta.image, width: 1200, height: 630, alt: meta.imageAlt }],',
+    '  },',
+    '  twitter: { card: "summary_large_image", title: meta.title, description: meta.description, images: [meta.image] },',
+    '};',
+    '',
+    'export default function Page() {',
+    '  return (',
+    '    <HubPage',
+    '      meta={meta}',
+    '      html={html}',
+    '      faqLd={faqLd}',
+    '      scriptKey={scriptKey}',
+    '      url={PAGE_URL}',
+    '      catHref=' + JSON.stringify(catHref),
+    '      catLabel=' + JSON.stringify(a.catLabel),
+    '      crumb=' + JSON.stringify(a.crumb),
+    calcProp + '    />',
+    '  );',
+    '}',
+    '',
+  ].join(NL);
 }
 
 // ── 실행 ─────────────────────────────────────────────────────────────────
@@ -201,9 +224,10 @@ for (const a of ARTICLES) {
   registry += `  ${JSON.stringify(a.slug)}: function () {\n${c.js.replace(/^\(function\(\)\{/, '').replace(/\}\)\(\);?\s*$/, '')}\n  },\n`;
   fs.mkdirSync(path.join(ROOT, `moneydoc-data/articles/${a.cat}`), { recursive: true });
   fs.writeFileSync(path.join(ROOT, `moneydoc-data/articles/${a.cat}/${a.slug}.ts`), dataFile(a, c), 'utf8');
-  fs.mkdirSync(path.join(ROOT, `app/${a.cat}/${a.slug}`), { recursive: true });
-  fs.writeFileSync(path.join(ROOT, `app/${a.cat}/${a.slug}/page.tsx`), pageFile(a), 'utf8');
-  console.log(`✓ /${a.cat}/${a.slug}/  html ${(c.html.length / 1024).toFixed(0)}KB  js ${(c.js.length / 1024).toFixed(1)}KB  faq ${c.faqLd.mainEntity.length}`);
+  const { route: hubR } = hubRoute(a);
+  fs.mkdirSync(path.join(ROOT, `app/${hubR}`), { recursive: true });
+  fs.writeFileSync(path.join(ROOT, `app/${hubR}/page.tsx`), pageFile(a), 'utf8');
+  console.log(`✓ /${hubR}/  html ${(c.html.length / 1024).toFixed(0)}KB  js ${(c.js.length / 1024).toFixed(1)}KB  faq ${c.faqLd.mainEntity.length}`);
 }
 registry += '};\n';
 fs.writeFileSync(path.join(ROOT, 'components/article-v2.css'), css, 'utf8');

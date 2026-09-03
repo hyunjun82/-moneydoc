@@ -29,7 +29,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `2년 이상 보유한 1주택을 12억원 이하로 팔면 양도세가 없어요. 15억원에 팔면 초과분에만 세금이 붙어 ${won(R.totalTax)}원이에요. 비과세 요건, 12억 초과분 계산, 장기보유특별공제, 신고 기한을 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 8,
     badge: `소득세법 비과세 요건과 세율표 대조 · ${VERIFIED}`,
-    calc: { href: '/realestate/transfer-tax/', label: '양도소득세 계산기 바로가기' },
+    calc: { href: '/transfer-tax/calculator/', label: '양도소득세 계산기 바로가기' },
     hero: {
       tag: '부동산', line1: '1주택 양도세 비과세', line2: '내 세금 얼마',
       sub1: '2년 이상 보유 + 12억원 이하 → 세금 0원',
@@ -167,7 +167,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
         { type: 'p', lead: true, ans: '잔금을 받은 달의 말일부터 2개월 안에 예정신고를 해야 해요.', text: '비과세라서 낼 세금이 0원이어도 신고는 하는 편이 안전해요. 한 해에 두 건 이상 팔았다면 다음 해 5월에 합쳐서 확정신고를 해야 해요.' },
         { type: 'steps', items: [
           { title: '증빙 모으기', text: '매매계약서, 취득세 영수증, 중개보수 영수증, 인테리어 세금계산서를 모아요', meta: '잔금 직후' },
-          { title: '세액 미리 계산', text: '판 금액과 산 금액, 보유와 거주 기간을 넣어 세금을 확인해요', meta: '5분', link: { label: '양도소득세 계산기', href: '/realestate/transfer-tax/' } },
+          { title: '세액 미리 계산', text: '판 금액과 산 금액, 보유와 거주 기간을 넣어 세금을 확인해요', meta: '5분', link: { label: '양도소득세 계산기', href: '/transfer-tax/' } },
           { title: '홈택스 예정신고', text: '양도소득세 신고 메뉴에서 신고서를 제출하고 세금을 내요', meta: '판 달 말일부터 2개월', link: { label: '홈택스 바로가기', href: HOMETAX } },
           { title: '지방소득세 납부', text: '산출된 세금의 10%를 위택스에서 따로 내요', meta: '같은 기한' },
         ] },
@@ -207,9 +207,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 2, quote: '고가주택에 해당하는 자산에 적용할 양도차익', note: '12억 초과분 안분 계산 (제160조①)' },
     ],
     related: [
-      { kind: '계산기', label: '양도소득세 계산기', href: '/realestate/transfer-tax/' },
-      { kind: '부동산 계산기', label: '취득세 계산기', href: '/realestate/acquisition-tax/' },
-      { kind: '부동산 가이드', label: '집 살 때 취득세 세율과 계산', href: '/realestate/acquisition-tax-guide/' },
+      { kind: '계산기', label: '양도소득세 계산기', href: '/transfer-tax/' },
+      { kind: '부동산 계산기', label: '취득세 계산기', href: '/acquisition-tax/' },
+      { kind: '부동산 가이드', label: '집 살 때 취득세 세율과 계산', href: '/acquisition-tax/' },
     ],
   };
 }

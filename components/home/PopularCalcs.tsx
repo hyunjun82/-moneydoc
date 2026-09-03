@@ -1,4 +1,5 @@
 "use client";
+import { hubHref } from "@/lib/hub-map";
 
 import { useState } from "react";
 import { TILES } from "./CategoryTiles";
@@ -65,7 +66,7 @@ export function PopularCalcs() {
           {list.map((c) => {
             const tile = TILES.find((t) => t.slug === c.cat)!;
             return (
-              <a key={c.slug} href={`/${c.cat}/${c.slug}/`} className="card" style={{ ["--tint" as string]: tile.tint, ["--ink" as string]: tile.ink }}>
+              <a key={c.slug} href={hubHref(c.cat, c.slug)} className="card" style={{ ["--tint" as string]: tile.tint, ["--ink" as string]: tile.ink }}>
                 <span className="card-ico">{calcIcon(c.slug, tile.icon)}{c.gov ? <i className="chk" aria-label="정부 계산기와 일치">✓</i> : null}</span>
                 <span className="card-name">{c.title}</span>
                 <span className={`card-note${c.gov ? " gov" : ""}`}>{c.gov ? "정부 일치 · " : ""}{c.note}</span>

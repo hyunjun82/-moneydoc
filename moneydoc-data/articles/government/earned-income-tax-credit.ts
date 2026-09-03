@@ -1,5 +1,5 @@
 // 근로장려금 퍼널 랜딩(허브). 8월 지급 시즌 타깃 — 검색 의도: 지급일·지급액 조회·기한후 신청.
-// 퍼널: 본문 CTA 전부 내부(/government/earned-income-tax-credit-check/)로 이동 → 그 페이지에서 홈택스 공식 링크.
+// 퍼널: 본문 CTA 전부 내부(/gov/earned-income-tax-credit-check/)로 이동 → 그 페이지에서 홈택스 공식 링크.
 // 클래스는 components/cardnews.css 화이트리스트만 사용. 사실 출처: 국세청(nts.go.kr)·정책브리핑.
 
 export const meta = {
@@ -12,7 +12,7 @@ export const meta = {
 export const bodyHtml = `
 <article class="wrap">
 
-    <a class="applysticky" href="/government/earned-income-tax-credit-check/">
+    <a class="applysticky" href="/gov/earned-income-tax-credit-check/">
       <span class="as-t">근로장려금 지급액 조회</span>
       <span class="as-d">8월 27일 입금 전, 심사결과 미리 확인</span>
       <span class="as-btn">조회 바로가기 →</span>
@@ -72,7 +72,7 @@ export const bodyHtml = `
       </div>
     </section>
 
-    <a class="applybar" href="/government/earned-income-tax-credit-check/">
+    <a class="applybar" href="/gov/earned-income-tax-credit-check/">
       <span class="t">아직 심사결과·지급액 확인 안 하셨다면<small>감액·계좌 오류면 27일에 입금이 안 될 수 있어요 — 확인은 1분이면 끝나요</small></span>
       <span class="btn">조회 바로가기 →</span>
     </a>
@@ -111,7 +111,7 @@ export const bodyHtml = `
         <li><span class="tri">▲</span><div class="body"><b class="hl">재산 요건도 봐요</b>2025년 6월 1일 기준 가구 재산 합계가 <b>2억 4,000만 원 미만</b>이어야 해요. <b>1억 7,000만 원 이상</b>이면 지급액이 <b>50% 감액</b>됩니다.</div></li>
         <li><span class="tri">▲</span><div class="body"><b class="hl">최대액은 '구간'에서만 나와요</b>소득이 너무 적거나 기준선에 가까우면 지급액이 줄어요. 산정표 구간에 따라 <b>최소 3만 원</b>까지 내려갈 수 있어요.</div></li>
       </ul>
-      <a class="calcbar" href="/government/earned-income-tax-credit/">
+      <a class="calcbar" href="/eitc/">
         <span class="ct">내 소득·가구 유형으로 예상 지급액 계산하기</span>
         <span class="cbtn">근로장려금 모의계산 →</span>
       </a>
@@ -128,7 +128,7 @@ export const bodyHtml = `
       </ul>
     </section>
 
-    <a class="applybar" href="/government/earned-income-tax-credit-check/">
+    <a class="applybar" href="/gov/earned-income-tax-credit-check/">
       <span class="t">신청했다고 끝난 게 아니에요<small>재산 1억 7,000만 원 초과면 절반 감액 · 계좌 오류면 입금 지연 — 입금 전 내 결과부터 확인하세요</small></span>
       <span class="btn">조회 바로가기 →</span>
     </a>
@@ -167,7 +167,7 @@ export const bodyHtml = `
         </details>
         <details>
           <summary><span class="q">Q.</span><span>내가 얼마 받는지 어떻게 확인하나요?</span><span class="plus">+</span></summary>
-          <div class="ans"><b>홈택스·손택스</b>의 장려금 메뉴에서 심사진행상황과 지급액을 조회할 수 있어요. <a href="/government/earned-income-tax-credit-check/">단계별 조회 방법은 여기</a>에 정리했어요.</div>
+          <div class="ans"><b>홈택스·손택스</b>의 장려금 메뉴에서 심사진행상황과 지급액을 조회할 수 있어요. <a href="/gov/earned-income-tax-credit-check/">단계별 조회 방법은 여기</a>에 정리했어요.</div>
         </details>
         <details>
           <summary><span class="q">Q.</span><span>신청했는데 왜 못 받나요?</span><span class="plus">+</span></summary>
@@ -193,9 +193,9 @@ export const bodyHtml = `
       <h2>내 숫자로 미리 확인해 보세요</h2>
       <p class="secteaser">예상 지급액부터 다른 지원금 자격까지, 머니닥 계산기로 바로 확인할 수 있어요.</p>
       <div class="rellinks">
-        <a class="rel" href="/government/earned-income-tax-credit/"><span class="rt">근로장려금 모의계산 →</span><span class="rd">가구 유형·소득별 예상 지급액</span></a>
-        <a class="rel" href="/government/earned-income-tax-credit-check/"><span class="rt">지급액 조회 방법 →</span><span class="rd">홈택스·손택스·ARS 단계별 안내</span></a>
-        <a class="rel" href="/government/median-income/"><span class="rt">중위소득 계산기 →</span><span class="rd">내 가구 중위소득 % 확인</span></a>
+        <a class="rel" href="/eitc/"><span class="rt">근로장려금 모의계산 →</span><span class="rd">가구 유형·소득별 예상 지급액</span></a>
+        <a class="rel" href="/gov/earned-income-tax-credit-check/"><span class="rt">지급액 조회 방법 →</span><span class="rd">홈택스·손택스·ARS 단계별 안내</span></a>
+        <a class="rel" href="/median-income/"><span class="rt">중위소득 계산기 →</span><span class="rd">내 가구 중위소득 % 확인</span></a>
       </div>
     </section>
 

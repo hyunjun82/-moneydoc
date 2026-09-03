@@ -163,7 +163,7 @@ export function render(a) {
 ${a.answer.boxes.map((b) => `    <div class="box"><b>${b.title}</b><span>${b.text}</span></div>`).join('\n')}
   </div>
 </section>
-<a class="cta" href="${a.calc.href}">${a.calc.label}</a>
+<!--CALC_START--><a class="cta" href="${a.calc.href}">${a.calc.label}</a><!--CALC_END-->
 <details class="toc"><summary>목차 (${toc.length}개 질문)<span>열기</span></summary><ol>${toc.map(([id, t]) => `<li><a href="#${id}">${t}</a></li>`).join('')}</ol></details>
 <section class="kk" aria-label="한눈에 보는 요약">
   <div class="hd"><small>${a.keyPoints.title}</small><b>핵심콕콕</b></div>

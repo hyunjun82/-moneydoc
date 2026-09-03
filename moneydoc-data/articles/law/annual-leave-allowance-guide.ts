@@ -26,7 +26,7 @@ export const html = `<h1>연차수당 계산과 발생 기준, 입사 1년부터
     <div class="v2-box"><b>통상임금으로 계산해요</b><span>월 통상임금을 209시간으로 나눈 시급에 하루 8시간을 곱한 값이 하루치예요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/law/annual-leave-allowance/">연차수당 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/annual-leave/calculator/">연차수당 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">연차 발생 기준, 며칠 생기나요</a></li><li><a href="#s2">1년 미만 신입은 연차가 어떻게 되나요</a></li><li><a href="#s3">연차수당 계산, 통상임금으로 하루 얼마인가요</a></li><li><a href="#s4">미사용 연차수당은 언제 받나요</a></li><li><a href="#s5">연차촉진을 하면 수당을 못 받나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 연차수당</small><b>핵심콕콕</b></div>
@@ -125,7 +125,7 @@ export const html = `<h1>연차수당 계산과 발생 기준, 입사 1년부터
 </div>
 <div class="v2-steps">
   <div><i>1단계</i><b>남은 일수 확인</b><span>연차 대장이나 인사 시스템에서 미사용 일수를 확인해요</span><em>5분</em></div>
-  <div><i>2단계</i><b>금액 계산</b><span>월 통상임금과 일수를 넣어 받을 금액을 확인해요</span><em>1분</em><a class="v2-go" href="/law/annual-leave-allowance/">연차수당 계산기</a></div>
+  <div><i>2단계</i><b>금액 계산</b><span>월 통상임금과 일수를 넣어 받을 금액을 확인해요</span><em>1분</em><a class="v2-go" href="/annual-leave/">연차수당 계산기</a></div>
   <div><i>3단계</i><b>회사에 서면으로 요청</b><span>메일이나 문자로 요청하고 기록을 남겨요</span><em>기록 필수</em></div>
   <div><i>4단계</i><b>안 주면 진정 접수</b><span>노동포털에서 임금체불 진정을 내면 관할 노동청이 조사해요</span><em>무료 · 온라인</em><a class="v2-go" href="https://labor.moel.go.kr/anmtDclrCntr/main.do" target="_blank" rel="noopener">임금체불 진정</a></div>
 </div>
@@ -160,13 +160,13 @@ export const html = `<h1>연차수당 계산과 발생 기준, 입사 1년부터
 <li>1년 미만은 한 달 개근마다 1일씩 생겨 첫해에 최대 11일을 쓸 수 있어요.</li>
 <li>남은 연차는 소멸 후 첫 급여일에 수당으로 받고, 3년 안에 청구할 수 있어요.</li>
 </ul></section>
-<a class="v2-cta" href="/law/annual-leave-allowance/">연차수당 계산기 바로가기</a>
+<a class="v2-cta" href="/annual-leave/calculator/">연차수당 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>근로기준법 제60조(연차 유급휴가, 1년 80퍼센트 출근 시 15일, 1년 미만 월 개근 1일, 3년 이상 가산과 25일 한도, 1년 미사용 시 소멸), 제61조(연차 유급휴가의 사용 촉진), 제49조(임금채권 3년 소멸시효), 제18조제3항(주 15시간 미만 적용 제외). 근로기준법 시행령 제6조(통상임금 시간급 산정).
 <b>정부 도구</b>고용노동부 연차수당 산정 기준과 이 글의 계산이 같은 방식이에요 (2026-09-02 대조).
 </div>
-<div class="v2-rel"><a href="/law/annual-leave-allowance/"><b>계산기</b>연차수당 계산기</a><a href="/law/severance-pay/"><b>법률 계산기</b>퇴직금 계산기</a><a href="/law/severance-pay-guide/"><b>법률 가이드</b>퇴직금 계산 방법과 지급기준</a></div>
+<div class="v2-rel"><a href="/annual-leave/"><b>계산기</b>연차수당 계산기</a><a href="/severance/"><b>법률 계산기</b>퇴직금 계산기</a><a href="/severance/"><b>법률 가이드</b>퇴직금 계산 방법과 지급기준</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

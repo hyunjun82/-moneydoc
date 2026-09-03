@@ -159,7 +159,7 @@ export const bodyHtml = `
         </tbody>
       </table>
       <div class="subnote" style="margin-top:var(--sp-4)"><b>계산 기준</b> = 월 납입금 × 6% × 36개월. 여기에 <b>은행 이자(전액 비과세)</b>가 더해져요. 이자는 가입 은행·금리에 따라 달라 위 표에는 넣지 않았어요.</div>
-      <a class="calcbar" href="/savings/free-savings/">
+      <a class="calcbar" href="/free-savings/">
         <span class="ct">내 월 납입·금리로 만기 수령액 계산하기</span>
         <span class="cbtn">자유적금 계산기 →</span>
       </a>
@@ -286,9 +286,9 @@ export const bodyHtml = `
       <h2>가입 전, 내 숫자로 미리 확인하세요</h2>
       <p class="secteaser">군인은 보통 일반형 6%. 자격 판단부터 만기 수령액까지 머니닥 계산기로 바로 확인할 수 있어요.</p>
       <div class="rellinks">
-        <a class="rel" href="/savings/free-savings/"><span class="rt">자유적금 계산기 →</span><span class="rd">월 납입·금리별 3년 만기 수령액</span></a>
-        <a class="rel" href="/government/youth-future-savings-guide/"><span class="rt">청년미래적금 총정리 →</span><span class="rd">가입조건·정부기여금·신청일정 (허브)</span></a>
-        <a class="rel" href="/government/median-income/"><span class="rt">중위소득 계산기 →</span><span class="rd">내 가구 중위소득 % 확인</span></a>
+        <a class="rel" href="/free-savings/"><span class="rt">자유적금 계산기 →</span><span class="rd">월 납입·금리별 3년 만기 수령액</span></a>
+        <a class="rel" href="/gov/youth-future-savings-guide/"><span class="rt">청년미래적금 총정리 →</span><span class="rd">가입조건·정부기여금·신청일정 (허브)</span></a>
+        <a class="rel" href="/median-income/"><span class="rt">중위소득 계산기 →</span><span class="rd">내 가구 중위소득 % 확인</span></a>
       </div>
     </section>
 

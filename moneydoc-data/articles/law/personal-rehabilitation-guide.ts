@@ -26,7 +26,7 @@ export const html = `<h1>개인회생 신청 조건과 절차, 준비 서류부�
     <div class="v2-box"><b>소득이 있어야 해요</b><span>변제할 재원이 있어야 계획을 세울 수 있어요. 소득이 없으면 파산 쪽이에요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/law/">법률 계산기 모아보기</a>
+<!--CALC_START--><a class="v2-cta" href="/law/">법률 계산기 모아보기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">개인회생 조건, 누가 신청할 수 있나요</a></li><li><a href="#s2">변제 계획과 변제금은 어떻게 정해지나요</a></li><li><a href="#s3">개인회생 절차는 어떻게 진행되나요</a></li><li><a href="#s4">신청 서류는 뭐가 필요한가요</a></li><li><a href="#s5">면책이 되면 빚이 다 사라지나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 개인회생</small><b>핵심콕콕</b></div>
@@ -161,7 +161,7 @@ export const html = `<h1>개인회생 신청 조건과 절차, 준비 서류부�
 <b>법령</b>채무자 회생 및 파산에 관한 법률 제579조(개인채무자와 급여소득자·영업소득자, 가용소득의 정의, 담보 채권 15억원과 무담보 채권 10억원 한도), 제593조(중지명령), 제600조(개시 결정에 따른 절차 중지와 금지), 제611조(변제계획의 내용, 인가일부터 1월 내 변제 개시, 변제기간 3년과 예외 5년), 제624조(면책결정), 제625조(면책의 효력과 면책되지 않는 청구권).
 <b>정부 도구</b>대한민국 법원 전자소송의 개인회생 신청 안내를 기준으로 정리했어요 (2026-09-02 확인).
 </div>
-<div class="v2-rel"><a href="/law/certified-mail-guide/"><b>법률 가이드</b>내용증명 작성 방법과 양식</a><a href="/law/deposit-return-suit-guide/"><b>법률 가이드</b>보증금 반환 소송 절차와 양식</a><a href="/law/unpaid-wages-guide/"><b>법률 가이드</b>임금체불 진정 방법과 지연이자</a></div>
+<div class="v2-rel"><a href="/certified-mail/"><b>법률 가이드</b>내용증명 작성 방법과 양식</a><a href="/deposit-return/"><b>법률 가이드</b>보증금 반환 소송 절차와 양식</a><a href="/unpaid-wages/"><b>법률 가이드</b>임금체불 진정 방법과 지연이자</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

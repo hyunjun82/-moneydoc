@@ -26,7 +26,7 @@ export const html = `<h1>보증금 반환 소송 절차와 양식, 내용증명�
     <div class="v2-box"><b>소송보다 지급명령이 먼저예요</b><span>상대가 다투지 않으면 확정판결과 같은 효력이 생겨요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/realestate/">부동산 계산기 모아보기</a>
+<!--CALC_START--><a class="v2-cta" href="/realestate/">부동산 계산기 모아보기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">보증금 반환 소송 전에 무엇을 먼저 하나요</a></li><li><a href="#s2">임차권등기명령은 어떻게 신청하나요</a></li><li><a href="#s3">지급명령과 소송 중 어느 쪽으로 가나요</a></li><li><a href="#s4">소장 접수는 어떻게 하나요</a></li><li><a href="#s5">소송 비용과 전세금 반환 소송 기간은 얼마나 되나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 보증금 회수 절차</small><b>핵심콕콕</b></div>
@@ -152,7 +152,7 @@ export const html = `<h1>보증금 반환 소송 절차와 양식, 내용증명�
 <b>법령</b>주택임대차보호법 제3조(대항력, 인도와 주민등록의 다음 날부터 효력), 제3조의2(보증금의 회수와 우선변제권, 확정판결에 따른 경매 신청 특칙), 제3조의3(임차권등기명령의 신청과 효력), 제6조(계약의 갱신). 민사소송법 제462조(지급명령의 요건), 제470조(이의신청의 효력, 2주), 제474조(확정판결과 같은 효력). 소액사건심판법 제2조(적용 범위), 제5조의3(이행권고결정). 소송촉진 등에 관한 특례법 제3조(법정이율).
 <b>정부 도구</b>대한민국 법원 전자소송의 신청 절차를 기준으로 정리했어요 (2026-09-02 확인).
 </div>
-<div class="v2-rel"><a href="/law/certified-mail-guide/"><b>법률 가이드</b>내용증명 작성 방법과 양식</a><a href="/law/severance-claim-form-guide/"><b>법률 가이드</b>퇴직금 못 받았을 때 지급명령과 소장</a><a href="/realestate/jeonse-monthly-conversion/"><b>부동산 계산기</b>전월세 전환율 계산기</a></div>
+<div class="v2-rel"><a href="/certified-mail/"><b>법률 가이드</b>내용증명 작성 방법과 양식</a><a href="/severance/claim/"><b>법률 가이드</b>퇴직금 못 받았을 때 지급명령과 소장</a><a href="/jeonse-conversion/"><b>부동산 계산기</b>전월세 전환율 계산기</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

@@ -128,9 +128,9 @@ export const bodyHtml = `
       <h2>더 확인해 보세요</h2>
       <p class="secteaser">지급 일정 전체와 예상 지급액도 바로 볼 수 있어요.</p>
       <div class="rellinks">
-        <a class="rel" href="/government/earned-income-tax-credit-guide/"><span class="rt">근로장려금 총정리 →</span><span class="rd">지급일 · 가구별 지급액 · 기한 후 신청 (허브)</span></a>
-        <a class="rel" href="/government/earned-income-tax-credit/"><span class="rt">근로장려금 모의계산 →</span><span class="rd">가구 유형·소득별 예상 지급액</span></a>
-        <a class="rel" href="/government/median-income/"><span class="rt">중위소득 계산기 →</span><span class="rd">내 가구 중위소득 % 확인</span></a>
+        <a class="rel" href="/eitc/"><span class="rt">근로장려금 총정리 →</span><span class="rd">지급일 · 가구별 지급액 · 기한 후 신청 (허브)</span></a>
+        <a class="rel" href="/eitc/"><span class="rt">근로장려금 모의계산 →</span><span class="rd">가구 유형·소득별 예상 지급액</span></a>
+        <a class="rel" href="/median-income/"><span class="rt">중위소득 계산기 →</span><span class="rd">내 가구 중위소득 % 확인</span></a>
       </div>
     </section>
 

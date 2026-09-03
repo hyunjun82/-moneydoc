@@ -26,7 +26,7 @@ export const html = `<h1>적금 이자 계산과 세금, 단리 복리부터 만
     <div class="v2-box"><b>이자에는 15.4%가 붙어요</b><span>이자소득세 14%와 지방소득세 1.4%를 합친 세금이에요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/savings/installment-savings/">적금 이자 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/installment/calculator/">적금 이자 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">적금 이자 계산, 어떻게 붙나요</a></li><li><a href="#s2">단리 복리 차이는 얼마나 되나요</a></li><li><a href="#s3">이자소득세는 얼마나 떼나요</a></li><li><a href="#s4">비과세 적금은 누가 가입할 수 있나요</a></li><li><a href="#s5">적금 중도해지하면 이자를 얼마나 받나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 적금 이자</small><b>핵심콕콕</b></div>
@@ -132,7 +132,7 @@ export const html = `<h1>적금 이자 계산과 세금, 단리 복리부터 만
 <div class="v2-steps">
   <div><i>1단계</i><b>목표 금액 정하기</b><span>언제까지 얼마를 모을지 정하면 월 납입금이 나와요</span><em>5분</em></div>
   <div><i>2단계</i><b>금리 비교</b><span>은행별 기본금리와 우대 조건을 비교해요. 조건을 채울 수 있는지가 중요해요</span><em>10분</em></div>
-  <div><i>3단계</i><b>만기 금액 확인</b><span>월 납입금과 기간, 금리를 넣어 세후 실수령액을 확인해요</span><em>2분</em><a class="v2-go" href="/savings/installment-savings/">적금 이자 계산기</a></div>
+  <div><i>3단계</i><b>만기 금액 확인</b><span>월 납입금과 기간, 금리를 넣어 세후 실수령액을 확인해요</span><em>2분</em><a class="v2-go" href="/installment/">적금 이자 계산기</a></div>
   <div><i>4단계</i><b>자동이체 설정</b><span>급여일 다음 날로 자동이체를 걸어 두면 빠뜨리지 않아요</span><em>가입 시</em></div>
 </div>
 
@@ -152,13 +152,13 @@ export const html = `<h1>적금 이자 계산과 세금, 단리 복리부터 만
 <li>복리는 단리보다 13,015원 많고, 기간이 길수록 차이가 커져요.</li>
 <li>중도해지하면 약정 금리 대신 훨씬 낮은 이율이 적용되니 기간을 무리하게 잡지 마세요.</li>
 </ul></section>
-<a class="v2-cta" href="/savings/installment-savings/">적금 이자 계산기 바로가기</a>
+<a class="v2-cta" href="/installment/calculator/">적금 이자 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>소득세법 제16조(이자소득), 제129조(원천징수세율, 그 밖의 이자소득 100분의 14). 지방세법(이자소득에 대한 개인지방소득세 특별징수). 조세특례제한법(비과세종합저축과 개인종합자산관리계좌 과세특례).
 <b>정부 도구</b>금융감독원 금융상품통합비교공시의 적금 이자 계산 방식과 같은 구조예요 (2026-09-02 대조).
 </div>
-<div class="v2-rel"><a href="/savings/installment-savings/"><b>계산기</b>적금 이자 계산기</a><a href="/savings/fixed-deposit/"><b>저축 계산기</b>예금 이자 계산기</a><a href="/savings/tax-free-savings/"><b>저축 계산기</b>비과세 저축 계산기</a></div>
+<div class="v2-rel"><a href="/installment/"><b>계산기</b>적금 이자 계산기</a><a href="/deposit/"><b>저축 계산기</b>예금 이자 계산기</a><a href="/free-savings/"><b>저축 계산기</b>자유적금 계산기</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

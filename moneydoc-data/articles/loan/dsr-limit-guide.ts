@@ -26,7 +26,7 @@ export const html = `<h1>스트레스 DSR 계산과 대출 한도, 3단계 적�
     <div class="v2-box"><b>실제 금리보다 높게 계산해요</b><span>금리 4%로 빌려도 3단계는 5.5%로 계산해 한도가 55,565,806원 줄어요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/loan/dsr-limit/">DSR 대출 한도 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/dsr/calculator/">DSR 대출 한도 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">DSR 계산, 총부채원리금상환비율은 어떻게 구하나요</a></li><li><a href="#s2">스트레스 금리는 얼마나 붙나요</a></li><li><a href="#s3">내 연소득이면 대출 한도가 얼마인가요</a></li><li><a href="#s4">기존 대출 DSR 포함, 한도가 얼마나 깎이나요</a></li><li><a href="#s5">DSR 줄이는 방법, 한도를 늘리려면 어떻게 하나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 스트레스 DSR</small><b>핵심콕콕</b></div>
@@ -157,13 +157,13 @@ export const html = `<h1>스트레스 DSR 계산과 대출 한도, 3단계 적�
 <li>연소득 5,000만원, 30년 기준 한도는 293,536,331원이에요. 스트레스로 55,565,806원이 줄었어요.</li>
 <li>기존 대출과 마이너스 통장을 정리하면 한도가 바로 늘어나요.</li>
 </ul></section>
-<a class="v2-cta" href="/loan/dsr-limit/">DSR 대출 한도 계산기 바로가기</a>
+<a class="v2-cta" href="/dsr/calculator/">DSR 대출 한도 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>은행업감독규정 제29조의2(주택관련 담보대출 등에 대한 리스크관리, 담보인정비율·총부채상환비율·총부채원리금상환비율 준수와 별표 기준). 상호저축은행업감독규정 제39조의2(같은 취지의 2금융권 규제). 스트레스 금리는 금융당국이 정한 시행 방안에 따라 단계별로 적용돼요.
 <b>정부 도구</b>금융감독원이 안내하는 DSR 산정 방식과 이 글의 계산이 같은 구조예요 (2026-09-02 대조).
 </div>
-<div class="v2-rel"><a href="/loan/dsr-limit/"><b>계산기</b>DSR 대출 한도 계산기</a><a href="/loan/mortgage-loan-limit/"><b>대출 계산기</b>주택담보대출 계산기</a><a href="/loan/loan-amortization/"><b>대출 계산기</b>원리금균등 상환 계산기</a></div>
+<div class="v2-rel"><a href="/dsr/"><b>계산기</b>DSR 대출 한도 계산기</a><a href="/mortgage/"><b>대출 계산기</b>주택담보대출 계산기</a><a href="/repayment/"><b>대출 계산기</b>원리금균등 상환 계산기</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

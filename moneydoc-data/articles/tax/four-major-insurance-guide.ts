@@ -26,7 +26,7 @@ export const html = `<h1>2026년 4대보험 요율과 계산, 월급에서 떼�
     <div class="v2-box"><b>1년이면 3,498,240원</b><span>월 보수 300만원 기준 근로자 부담 연 환산. 연말정산과 별개로 매달 빠져요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/tax/four-major-insurance/">4대보험료 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/four-insurance/calculator/">4대보험료 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">2026년 4대보험 요율과 국민연금 상한, 항목별로 얼마인가요</a></li><li><a href="#s2">4대보험 계산, 월급별로 얼마나 떼나요</a></li><li><a href="#s3">회사가 내는 4대보험은 얼마인가요</a></li><li><a href="#s4">4월과 7월에 4대보험이 달라지는 이유는 무엇인가요</a></li><li><a href="#s5">4대보험 가입 대상은 누구인가요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 2026 4대보험</small><b>핵심콕콕</b></div>
@@ -126,7 +126,7 @@ export const html = `<h1>2026년 4대보험 요율과 계산, 월급에서 떼�
 <div class="v2-tbl v2-text"><table><caption>4대보험 관련 서류와 조회, 어디서 하나요</caption><thead><tr><th>하려는 것</th><th>어디서</th><th>준비물</th></tr></thead><tbody>
 <tr><th scope="row">가입내역확인서 발급</th><td data-l="어디서"><a class="v2-doc" href="https://www.4insure.or.kr/pbiz/main/main.do" target="_blank" rel="noopener">4대사회보험 정보연계센터</a></td><td class="v2-docs" data-l="준비물">공동인증서</td></tr>
 <tr><th scope="row">국민연금 예상수령액 조회</th><td data-l="어디서"><a class="v2-doc" href="https://www.nps.or.kr/" target="_blank" rel="noopener">국민연금공단</a></td><td class="v2-docs" data-l="준비물">공동인증서</td></tr>
-<tr><th scope="row">내 보험료 미리 계산</th><td data-l="어디서"><a class="v2-doc" href="/tax/four-major-insurance/">4대보험료 계산기</a></td><td class="v2-docs" data-l="준비물">월 보수·업종</td></tr>
+<tr><th scope="row">내 보험료 미리 계산</th><td data-l="어디서"><a class="v2-doc" href="/four-insurance/">4대보험료 계산기</a></td><td class="v2-docs" data-l="준비물">월 보수·업종</td></tr>
 </tbody></table></div>
 <p class="v2-fn">가입내역확인서는 이직이나 대출 심사에서 재직 증빙으로 자주 쓰여요.</p>
 
@@ -155,14 +155,14 @@ export const html = `<h1>2026년 4대보험 요율과 계산, 월급에서 떼�
 <li>국민연금은 월 보수 659만원까지만 부과되고 그 위로는 금액이 같아요.</li>
 <li>4월 건강보험 정산과 7월 국민연금 기준소득월액 변경 때 금액이 바뀌어요.</li>
 </ul></section>
-<a class="v2-cta" href="/tax/four-major-insurance/">4대보험료 계산기 바로가기</a>
+<a class="v2-cta" href="/four-insurance/calculator/">4대보험료 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>국민연금법 부칙 제4조(2026년 사업장가입자 기여금 1만분의 475, 2032년까지 단계 인상). 국민건강보험법 제76조(보험료 100분의 50씩 부담), 같은 법 시행령 제44조(보험료율 1만분의 719), 제34조(보수월액보험료 정산), 제110조(임의계속가입). 노인장기요양보험법 시행령 제4조(장기요양보험료율 100만분의 9,448). 고용보험 및 산업재해보상보험의 보험료징수 등에 관한 법률 제13조(근로자는 실업급여 보험료율의 2분의 1, 산재보험료는 사업주 부담), 같은 법 시행령 제12조(실업급여 보험료율 1천분의 18).
 <b>행정규칙·정부 안내</b>보건복지부 고시 국민연금 기준소득월액 하한액과 상한액(하한 410천원 · 상한 6,590천원, 2026.7~2027.6). 4대사회보험 정보연계센터 가입내역 조회와 모의계산.
 <b>정부 도구</b>4대사회보험 정보연계센터 모의계산과 대조했어요 (2026-09-02).
 </div>
-<div class="v2-rel"><a href="/tax/four-major-insurance/"><b>계산기</b>4대보험료 계산기</a><a href="/tax/salary-net-pay-guide/"><b>세금 가이드</b>연봉 실수령액 표</a><a href="/government/unemployment-benefit-guide/"><b>정부지원금 가이드</b>실업급여 조건과 금액</a></div>
+<div class="v2-rel"><a href="/four-insurance/"><b>계산기</b>4대보험료 계산기</a><a href="/salary/"><b>세금 가이드</b>연봉 실수령액 표</a><a href="/unemployment/"><b>정부지원금 가이드</b>실업급여 조건과 금액</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

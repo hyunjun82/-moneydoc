@@ -26,7 +26,7 @@ export const html = `<h1>종합부동산세 대상과 계산, 공시가 합산�
     <div class="v2-box"><b>집이 여러 채면 공제가 9억원</b><span>1세대 1주택보다 300,000,000원 적게 빼 줘서 세금이 빨리 붙어요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/realestate/comprehensive-real-estate-tax/">종합부동산세 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/comprehensive-tax/calculator/">종합부동산세 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">종합부동산세 대상은 누구인가요</a></li><li><a href="#s2">종합부동산세 계산, 공시가 합산부터 어떻게 하나요</a></li><li><a href="#s3">1세대 1주택 12억 공제, 여러 채면 어떻게 되나요</a></li><li><a href="#s4">재산세액공제와 고령자 장기보유 공제는 얼마인가요</a></li><li><a href="#s5">종합부동산세 언제 어떻게 내나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 종합부동산세</small><b>핵심콕콕</b></div>
@@ -145,7 +145,7 @@ export const html = `<h1>종합부동산세 대상과 계산, 공시가 합산�
 </div>
 <div class="v2-steps">
   <div><i>1단계</i><b>공시가격 확인</b><span>내가 가진 집의 공시가격을 모두 더해 공제액을 넘는지 봐요</span><em>4월 이후</em></div>
-  <div><i>2단계</i><b>세액 미리 계산</b><span>공시가격과 나이, 보유 기간을 넣어 예상 세액을 확인해요</span><em>2분</em><a class="v2-go" href="/realestate/comprehensive-real-estate-tax/">종합부동산세 계산기</a></div>
+  <div><i>2단계</i><b>세액 미리 계산</b><span>공시가격과 나이, 보유 기간을 넣어 예상 세액을 확인해요</span><em>2분</em><a class="v2-go" href="/comprehensive-tax/">종합부동산세 계산기</a></div>
   <div><i>3단계</i><b>고지서 확인과 납부</b><span>홈택스에서 고지 내용을 보고 12월 15일까지 납부해요</span><em>12월</em><a class="v2-go" href="https://www.hometax.go.kr" target="_blank" rel="noopener">홈택스 바로가기</a></div>
 </div>
 
@@ -165,13 +165,13 @@ export const html = `<h1>종합부동산세 대상과 계산, 공시가 합산�
 <li>이미 낸 재산세는 빼 주고, 1주택은 고령자와 장기보유 공제를 최대 80%까지 더 받아요.</li>
 <li>12월 1일부터 15일까지 고지서로 내요. 농어촌특별세 20%가 함께 붙어요.</li>
 </ul></section>
-<a class="v2-cta" href="/realestate/comprehensive-real-estate-tax/">종합부동산세 계산기 바로가기</a>
+<a class="v2-cta" href="/comprehensive-tax/calculator/">종합부동산세 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>종합부동산세법 제7조(납세의무자), 제8조(과세표준과 기본공제 12억원·9억원, 합산배제), 제9조(세율, 재산세액공제, 고령자·장기보유 세액공제와 80% 한도), 제10조(세부담의 상한 150%), 제16조(12월 1일부터 15일까지 부과·징수). 종합부동산세법 시행령 제2조의4(공정시장가액비율 60%). 농어촌특별세법(종합부동산세액에 대한 농어촌특별세).
 <b>정부 도구</b>홈택스 종합부동산세 화면의 공제액과 세율 구조가 이 글의 계산과 같아요 (2026-09-02 대조).
 </div>
-<div class="v2-rel"><a href="/realestate/comprehensive-real-estate-tax/"><b>계산기</b>종합부동산세 계산기</a><a href="/realestate/property-tax/"><b>부동산 계산기</b>재산세 계산기</a><a href="/realestate/property-tax-guide/"><b>부동산 가이드</b>재산세 계산과 납부</a></div>
+<div class="v2-rel"><a href="/comprehensive-tax/"><b>계산기</b>종합부동산세 계산기</a><a href="/property-tax/"><b>부동산 계산기</b>재산세 계산기</a><a href="/property-tax/"><b>부동산 가이드</b>재산세 계산과 납부</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

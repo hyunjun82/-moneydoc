@@ -36,7 +36,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `5억원짜리 집을 처음 사면 취득세는 지방교육세까지 ${won(R.totalTax)}원이에요. 6억과 9억을 기준으로 갈리는 세율, 집값별 세금표, 생애최초 200만원 공제, 8%와 12% 중과 기준, 60일 신고 기한을 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 8,
     badge: `위택스 지방세 미리계산과 1원 단위 일치 · ${VERIFIED}`,
-    calc: { href: '/realestate/acquisition-tax/', label: '취득세 계산기 바로가기' },
+    calc: { href: '/acquisition-tax/calculator/', label: '취득세 계산기 바로가기' },
     hero: {
       tag: '부동산', line1: '집 살 때 취득세', line2: '얼마 내나요',
       sub1: `5억 · 전용 84㎡ · 첫 집 → ${won(R.totalTax)}원`,
@@ -229,9 +229,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 3, quote: '500만원 이하인 경우에는 취득세를 면제하고, 500만원을 초과하는 경우에는 산출세액에서 500만원을 공제한다', note: '출산·양육 주택 감면 500만원 (제36조의5①)' },
     ],
     related: [
-      { kind: '계산기', label: '취득세 계산기', href: '/realestate/acquisition-tax/' },
-      { kind: '부동산 계산기', label: '재산세 계산기', href: '/realestate/property-tax/' },
-      { kind: '부동산 계산기', label: '양도소득세 계산기', href: '/realestate/transfer-tax/' },
+      { kind: '계산기', label: '취득세 계산기', href: '/acquisition-tax/' },
+      { kind: '부동산 계산기', label: '재산세 계산기', href: '/property-tax/' },
+      { kind: '부동산 계산기', label: '양도소득세 계산기', href: '/transfer-tax/' },
     ],
   };
 }

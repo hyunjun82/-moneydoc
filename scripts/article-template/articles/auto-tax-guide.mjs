@@ -26,7 +26,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `배기량 1,999cc 승용차의 자동차세는 지방교육세까지 1년에 ${won(R.totalTax)}원이에요. 배기량별 세액, 차령에 따른 경감, 연납 할인, 6월과 12월 납부 방법을 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `위택스 자동차세 계산과 대조 · ${VERIFIED}`,
-    calc: { href: '/insurance/auto-tax/', label: '자동차세 계산기 바로가기' },
+    calc: { href: '/auto-tax/calculator/', label: '자동차세 계산기 바로가기' },
     hero: {
       tag: '보험·자동차', line1: '자동차세 계산과 연납 할인', line2: '내 차는 얼마',
       sub1: `1,999cc 승용차 → 1년 ${won(R.totalTax)}원`,
@@ -153,7 +153,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
         ], fn: '납기와 분할 납부는 지방세법 제128조제1항, 일할 계산은 같은 조 제5항에 있어요.' },
         { type: 'steps', items: [
           { title: '배기량 확인', text: '자동차등록증에서 배기량과 등록일을 확인해요', meta: '1분' },
-          { title: '세액 미리 계산', text: '배기량과 차령을 넣어 올해 낼 금액을 확인해요', meta: '1분', link: { label: '자동차세 계산기', href: '/insurance/auto-tax/' } },
+          { title: '세액 미리 계산', text: '배기량과 차령을 넣어 올해 낼 금액을 확인해요', meta: '1분', link: { label: '자동차세 계산기', href: '/auto-tax/' } },
           { title: '연납 신청', text: '1월에 위택스에서 연납을 신청하면 공제받고 한 번에 낼 수 있어요', meta: '1월', link: { label: '위택스 바로가기', href: WETAX } },
           { title: '납부', text: '계좌이체나 카드로 내요. 자동이체를 걸어 두면 놓치지 않아요', meta: '납기 안에' },
         ] },
@@ -203,9 +203,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 1, quote: '연세액이 10만원 이하인 자동차세는 제1항 및 제2항에도 불구하고 제1기분을 부과할 때 전액을 부과ㆍ징수할 수 있다', note: '소액 일괄 부과 (제128조④)' },
     ],
     related: [
-      { kind: '계산기', label: '자동차세 계산기', href: '/insurance/auto-tax/' },
-      { kind: '부동산 가이드', label: '재산세 계산과 납부', href: '/realestate/property-tax-guide/' },
-      { kind: '부동산 가이드', label: '집 살 때 취득세 세율과 계산', href: '/realestate/acquisition-tax-guide/' },
+      { kind: '계산기', label: '자동차세 계산기', href: '/auto-tax/' },
+      { kind: '부동산 가이드', label: '재산세 계산과 납부', href: '/property-tax/' },
+      { kind: '부동산 가이드', label: '집 살 때 취득세 세율과 계산', href: '/acquisition-tax/' },
     ],
   };
 }

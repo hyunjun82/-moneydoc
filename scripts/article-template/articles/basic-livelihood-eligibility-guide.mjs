@@ -26,7 +26,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `1인 가구 소득인정액이 ${won(R.livelihood.threshold)}원 이하면 생계급여를 받아요. 기준 중위소득, 급여 4종의 선정기준, 소득인정액 계산, 신청 서류를 한 번에 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 8,
     badge: `기준 중위소득과 급여별 선정기준 대조 · ${VERIFIED}`,
-    calc: { href: '/government/basic-livelihood-eligibility/', label: '기초생활수급 자격 계산기 바로가기' },
+    calc: { href: '/basic-livelihood/calculator/', label: '기초생활수급 자격 계산기 바로가기' },
     hero: {
       tag: '정부지원금', line1: '기초생활수급 조건과 급여', line2: '나도 되나요',
       sub1: `1인 가구 생계급여 기준 ${won(R.livelihood.threshold)}원`,
@@ -208,9 +208,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 2, quote: '기초생활의 유지에 필요하다고 보건복지부장관이 정하여 고시하는 기본재산액', note: '기본재산액 공제 (시행령 제5조의4①1가)' },
     ],
     related: [
-      { kind: '계산기', label: '기초생활수급 자격 계산기', href: '/government/basic-livelihood-eligibility/' },
-      { kind: '정부지원금 계산기', label: '기준 중위소득 계산기', href: '/government/median-income/' },
-      { kind: '정부지원금 가이드', label: '2026년 기초연금 수급 조건과 금액', href: '/government/basic-pension-guide/' },
+      { kind: '계산기', label: '기초생활수급 자격 계산기', href: '/basic-livelihood/' },
+      { kind: '정부지원금 계산기', label: '기준 중위소득 계산기', href: '/median-income/' },
+      { kind: '정부지원금 가이드', label: '2026년 기초연금 수급 조건과 금액', href: '/basic-pension/' },
     ],
   };
 }

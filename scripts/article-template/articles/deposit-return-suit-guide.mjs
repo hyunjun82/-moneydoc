@@ -168,9 +168,9 @@ export default function article({ VERIFIED }) {
       { src: 4, quote: '손해배상액 산정의 기준이 되는 법정이율은 그 금전채무의 이행을 구하는 소장', note: '소장 송달 다음 날부터 법정이율 (소송촉진법 제3조①)' },
     ],
     related: [
-      { kind: '법률 가이드', label: '내용증명 작성 방법과 양식', href: '/law/certified-mail-guide/' },
-      { kind: '법률 가이드', label: '퇴직금 못 받았을 때 지급명령과 소장', href: '/law/severance-claim-form-guide/' },
-      { kind: '부동산 계산기', label: '전월세 전환율 계산기', href: '/realestate/jeonse-monthly-conversion/' },
+      { kind: '법률 가이드', label: '내용증명 작성 방법과 양식', href: '/certified-mail/' },
+      { kind: '법률 가이드', label: '퇴직금 못 받았을 때 지급명령과 소장', href: '/severance/claim/' },
+      { kind: '부동산 계산기', label: '전월세 전환율 계산기', href: '/jeonse-conversion/' },
     ],
   };
 }

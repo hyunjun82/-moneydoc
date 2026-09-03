@@ -26,35 +26,35 @@ export default function Page() {
 
       <section className="section">
         <div className="cats">
-        <a href="/util/age-calculator/" className="cat" style={{ textDecoration: "none" }}>
+        <a href="/age/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">나이 계산기</h3>
             <p className="cat-desc">만 나이 + 한국 나이 + 띠 자동 산출</p>
             <span className="cat-count">정부 공식 산식</span>
           </div>
         </a>
-        <a href="/util/cash-service-fee/" className="cat" style={{ textDecoration: "none" }}>
+        <a href="/cash-service/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">현금서비스 수수료 계산기</h3>
             <p className="cat-desc">이용금액 × 연이율 / 365 × 사용일수 (단리)</p>
             <span className="cat-count">정부 공식 산식</span>
           </div>
         </a>
-        <a href="/util/date-calculator/" className="cat" style={{ textDecoration: "none" }}>
+        <a href="/date/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">날짜 계산기 (D-Day)</h3>
             <p className="cat-desc">두 날짜 사이 일수·년월일 + 디데이</p>
             <span className="cat-count">정부 공식 산식</span>
           </div>
         </a>
-        <a href="/util/installment-fee/" className="cat" style={{ textDecoration: "none" }}>
+        <a href="/card-installment/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">신용카드 할부 수수료 계산기</h3>
             <p className="cat-desc">원리금균등 방식 월 결제액 + 총 수수료</p>
             <span className="cat-count">정부 공식 산식</span>
           </div>
         </a>
-        <a href="/util/percent-calculator/" className="cat" style={{ textDecoration: "none" }}>
+        <a href="/percent/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">퍼센트 계산기</h3>
             <p className="cat-desc">% 계산 4가지 모드 (전체 중 일부 / 비율 / 증감률 / 증감 후)</p>

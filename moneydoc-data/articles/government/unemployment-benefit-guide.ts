@@ -26,7 +26,7 @@ export const html = `<h1>2026년 실업급여 얼마나 받나요, 조건부터 
     <div class="v2-box"><b>하루 68,100원이 천장이에요</b><span>2026년 상한. 월급 약 341만원부터는 더 안 올라가요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/government/unemployment-benefit/">실업급여 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/unemployment/calculator/">실업급여 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (9개 질문)<span>열기</span></summary><ol><li><a href="#s1">실업급여 조건, 나도 받을 수 있나요 (수급자격 판정)</a></li><li><a href="#s2">실업급여 얼마나 받나요 (월급별 하루 금액 표)</a></li><li><a href="#s3">실업급여 몇 개월 받나요 (가입기간·나이별 일수)</a></li><li><a href="#s4">2026년 실업급여 상한액 하한액, 왜 다들 66,048원인가요</a></li><li><a href="#s5">실업급여 신청 방법 4단계 (이직확인서부터 첫 지급까지)</a></li><li><a href="#s5b">실업급여 구직활동 몇 번 해야 하나요 (실업인정 회차별 기준)</a></li><li><a href="#s6">실업급여 받다가 취업하면, 알바하면 어떻게 되나요</a></li><li><a href="#reasons">자발적 퇴사인데 실업급여 받는 경우, 정당한 이직 사유 전체</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 2026 실업급여</small><b>핵심콕콕</b></div>
@@ -176,14 +176,14 @@ export const html = `<h1>2026년 실업급여 얼마나 받나요, 조건부터 
 <li>기간: 가입기간·나이로 120~270일. 퇴사 다음 날부터 12개월 안에 다 받아야 해요.</li>
 <li>신청: 이직확인서 확인, 워크넷 구직등록, 고용센터 신청, 4주마다 실업인정.</li>
 </ul></section>
-<a class="v2-cta" href="/government/unemployment-benefit/">실업급여 계산기 바로가기</a>
+<a class="v2-cta" href="/unemployment/calculator/">실업급여 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제40조(수급요건), 제46조(구직급여일액), 제48조(수급기간 12개월), 제50조 및 별표1(소정급여일수), 제58조(이직 사유 제한), 제64조(조기재취업수당). 시행령 제68조(기초일액 상한 113,500원, 2025.12.23 개정), 제84조(조기재취업수당 요건과 금액). 시행규칙 제92조(취업 인정 기준), 별표2(정당한 이직 사유). 국민건강보험법 제110조(임의계속가입). 하한은 최저임금법에 따른 2026년 최저임금 10,320원.
 <b>행정규칙·정부 안내</b>고용노동부 예규 「실업인정 및 재취업지원규정」 제249호 제10조·제12조(2026.9.1 시행, 실업인정일 지정 기준과 재취업활동 인정 범위). 고용노동부 「실업급여 지급 요건 강화, 무엇이 달라지나」 정책브리핑(2022.6.29, 회차별 재취업활동 횟수, 2022.7.1 시행). 고용24 실업급여 제도 안내(신청 절차, 허위·형식적 구직활동 제재). 법제처 생활법령정보 실업급여(2026.8.15 기준, 정당한 이직 사유 목록).
 <b>정부 도구</b>고용24 실업급여 간편 모의계산과 하한·일수 케이스 5건 일치 (2026-09-02). 상한 케이스는 도구가 개정 전 값을 써서 법령 원문을 기준으로 했어요.
 </div>
-<div class="v2-rel"><a href="/government/unemployment-benefit/"><b>계산기</b>실업급여 계산기</a><a href="/law/severance-pay-guide/"><b>법률 가이드</b>퇴직금 계산과 평균임금</a><a href="/government/parental-leave-pay-guide/"><b>정부지원금 가이드</b>육아휴직급여 2026</a></div>
+<div class="v2-rel"><a href="/unemployment/"><b>계산기</b>실업급여 계산기</a><a href="/severance/"><b>법률 가이드</b>퇴직금 계산과 평균임금</a><a href="/parental-leave/"><b>정부지원금 가이드</b>육아휴직급여 2026</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

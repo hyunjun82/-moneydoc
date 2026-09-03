@@ -24,7 +24,7 @@ export function Footer() {
               <li><a href="/insurance/">보험</a></li>
               <li><a href="/pension/">연금</a></li>
               <li><a href="/law/">법률</a></li>
-              <li><a href="/government/">정부지원금</a></li>
+              <li><a href="/gov/">정부지원금</a></li>
             </ul>
           </div>
           <div className="footer-col">

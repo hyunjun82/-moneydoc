@@ -27,7 +27,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `공시가격 5억원인 집의 재산세는 지방교육세까지 ${won(R.totalTax)}원이에요. 1세대 1주택 특례세율을 받으면 ${won(R1.totalTax)}원으로 줄어요. 과세표준 계산, 세율 구간, 7월과 9월 납기, 조회와 카드 납부를 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `지방세법 세율표와 공정시장가액비율 대조 · ${VERIFIED}`,
-    calc: { href: '/realestate/property-tax/', label: '재산세 계산기 바로가기' },
+    calc: { href: '/property-tax/calculator/', label: '재산세 계산기 바로가기' },
     hero: {
       tag: '부동산', line1: '재산세 계산과 납부', line2: '올해 얼마 나오나',
       sub1: `공시가격 5억 → ${won(R.totalTax)}원`,
@@ -165,7 +165,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
         { type: 'p', lead: true, ans: '위택스에 로그인하면 고지서를 조회하고 계좌이체나 카드로 낼 수 있어요.', text: '고지서를 잃어버렸어도 전자고지로 확인할 수 있어요. 서울은 이택스에서 같은 절차로 처리해요.' },
         { type: 'steps', items: [
           { title: '공시가격 확인', text: '부동산공시가격 알리미에서 내 집의 공시가격을 확인해요', meta: '4월 이후', link: { label: '공시가격 알리미', href: REALTY } },
-          { title: '세액 미리 계산', text: '공시가격을 넣어 올해 재산세가 얼마인지 확인해요', meta: '1분', link: { label: '재산세 계산기', href: '/realestate/property-tax/' } },
+          { title: '세액 미리 계산', text: '공시가격을 넣어 올해 재산세가 얼마인지 확인해요', meta: '1분', link: { label: '재산세 계산기', href: '/property-tax/' } },
           { title: '고지서 조회', text: '위택스에서 지방세 납부 메뉴로 들어가 고지 내역을 확인해요', meta: '7월과 9월', link: { label: '위택스 바로가기', href: WETAX } },
           { title: '납부', text: '계좌이체나 카드로 내요. 자동이체를 걸면 세액공제를 받는 지역도 있어요', meta: '납기 안에' },
         ] },
@@ -205,9 +205,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 2, quote: '시가표준액이 3억원 이하인 주택: 시가표준액의 100분의 43', note: '1세대 1주택 우대 비율 (제109조①2가)' },
     ],
     related: [
-      { kind: '계산기', label: '재산세 계산기', href: '/realestate/property-tax/' },
-      { kind: '부동산 계산기', label: '종합부동산세 계산기', href: '/realestate/comprehensive-real-estate-tax/' },
-      { kind: '부동산 가이드', label: '집 살 때 취득세 세율과 계산', href: '/realestate/acquisition-tax-guide/' },
+      { kind: '계산기', label: '재산세 계산기', href: '/property-tax/' },
+      { kind: '부동산 계산기', label: '종합부동산세 계산기', href: '/comprehensive-tax/' },
+      { kind: '부동산 가이드', label: '집 살 때 취득세 세율과 계산', href: '/acquisition-tax/' },
     ],
   };
 }

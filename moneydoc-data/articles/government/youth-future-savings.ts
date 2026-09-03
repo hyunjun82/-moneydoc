@@ -113,7 +113,7 @@ export const bodyHtml = `
         <li><span class="tri">▲</span><div class="body"><b class="hl">청년도약계좌에서 갈아탄다면</b>가입 승인 통보 → <b>7/27~8/7 계좌개설</b> → 청년도약계좌 <b>특별중도해지</b> → 다음 날 9시부터 납입 순서로 진행해요. 그동안 받은 도약계좌 <b>정부기여금·비과세 혜택은 그대로 유지</b>되어 손실 없이 환급받아요.</div></li>
         <li><span class="tri">▲</span><div class="body"><b class="hl">1차를 놓쳤다면 12월 2차</b>지금은 신청할 수 없고, <b>2차 가입기간이 2026년 12월(잠정)</b>로 예고돼 있어요. 다만 <b>1991년 8월 8일~12월 31일생</b>은 2차 시점에 만 35세를 넘겨 신청이 어려울 수 있어요(병역 이행 기간만큼 예외).</div></li>
       </ul>
-      <a class="calcbar" href="/util/age-calculator/">
+      <a class="calcbar" href="/age/">
         <span class="ct">연령 요건이 애매하다면 내 만 나이부터 확인하기</span>
         <span class="cbtn">만 나이 계산기 →</span>
       </a>
@@ -188,7 +188,7 @@ export const bodyHtml = `
         </li>
       </ul>
 
-      <a class="calcbar" href="/government/median-income/">
+      <a class="calcbar" href="/median-income/">
         <span class="ct">내 가구가 중위소득 200% 이하인지 먼저 확인하기</span>
         <span class="cbtn">중위소득 계산기 →</span>
       </a>
@@ -258,7 +258,7 @@ export const bodyHtml = `
       </table>
       <div class="subnote" style="margin-top:var(--sp-4)"><b>계산 기준</b> = 매월 납입금 × 매칭률 × 36개월. 여기에 <b>은행 이자(전액 비과세)</b>가 더해져요. 기본금리는 취급은행이 정하고, 여기에 <b>공통 우대금리 0.5%p</b>(총급여 3,600만 원 이하)와 <b>재무상담 이수 0.2%p</b>가 더해질 수 있어요. 최종 수령액은 가입 은행·금리에 따라 달라 위 표에는 이자를 넣지 않았어요.</div>
 
-      <a class="calcbar" href="/savings/free-savings/">
+      <a class="calcbar" href="/free-savings/">
         <span class="ct">내 월 납입·금리로 만기 수령액 계산하기</span>
         <span class="cbtn">자유적금 계산기 →</span>
       </a>
@@ -478,9 +478,9 @@ export const bodyHtml = `
       <h2>가입 전, 내 숫자로 미리 계산해 보세요</h2>
       <p class="secteaser">자격 판단부터 만기 수령액까지, 머니닥 계산기로 바로 확인할 수 있어요.</p>
       <div class="rellinks">
-        <a class="rel" href="/government/median-income/"><span class="rt">중위소득 계산기 →</span><span class="rd">내 가구 중위소득 % 확인 (자격 핵심 조건)</span></a>
-        <a class="rel" href="/savings/free-savings/"><span class="rt">자유적금 계산기 →</span><span class="rd">월 납입·금리별 3년 만기 수령액</span></a>
-        <a class="rel" href="/savings/installment-savings/"><span class="rt">정기적금 계산기 →</span><span class="rd">매월 정액 적립 시 이자·실수령액</span></a>
+        <a class="rel" href="/median-income/"><span class="rt">중위소득 계산기 →</span><span class="rd">내 가구 중위소득 % 확인 (자격 핵심 조건)</span></a>
+        <a class="rel" href="/free-savings/"><span class="rt">자유적금 계산기 →</span><span class="rd">월 납입·금리별 3년 만기 수령액</span></a>
+        <a class="rel" href="/installment/"><span class="rt">정기적금 계산기 →</span><span class="rd">매월 정액 적립 시 이자·실수령액</span></a>
       </div>
     </section>
 

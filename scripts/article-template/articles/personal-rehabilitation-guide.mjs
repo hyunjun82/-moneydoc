@@ -181,9 +181,9 @@ export default function article({ VERIFIED }) {
       { src: 1, quote: '개인회생채권자목록에 기재되지 아니한 청구권', note: '면책되지 않는 채권 (제625조②1)' },
     ],
     related: [
-      { kind: '법률 가이드', label: '내용증명 작성 방법과 양식', href: '/law/certified-mail-guide/' },
-      { kind: '법률 가이드', label: '보증금 반환 소송 절차와 양식', href: '/law/deposit-return-suit-guide/' },
-      { kind: '법률 가이드', label: '임금체불 진정 방법과 지연이자', href: '/law/unpaid-wages-guide/' },
+      { kind: '법률 가이드', label: '내용증명 작성 방법과 양식', href: '/certified-mail/' },
+      { kind: '법률 가이드', label: '보증금 반환 소송 절차와 양식', href: '/deposit-return/' },
+      { kind: '법률 가이드', label: '임금체불 진정 방법과 지연이자', href: '/unpaid-wages/' },
     ],
   };
 }

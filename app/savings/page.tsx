@@ -27,28 +27,28 @@ export default function Page() {
 
       <section className="section">
         <div className="cats">
-        <a href="/savings/installment-savings/" className="cat" style={{ textDecoration: "none" }}>
+        <a href="/installment/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">적금 계산기</h3>
             <p className="cat-desc">월 X원 납입 시 만기 수령액 — 단리·복리 토글, 이자소득세 차감</p>
             <span className="cat-count">금감원 finlife 검증</span>
           </div>
         </a>
-        <a href="/savings/fixed-deposit/" className="cat" style={{ textDecoration: "none" }}>
+        <a href="/deposit/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">정기예금 계산기</h3>
             <p className="cat-desc">목돈 일시 예치 시 만기 수령액 — 단리, 이자소득세 차감</p>
             <span className="cat-count">금감원 finlife 검증</span>
           </div>
         </a>
-        <a href="/savings/free-savings/" className="cat" style={{ textDecoration: "none" }}>
+        <a href="/free-savings/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">자유적금 계산기</h3>
             <p className="cat-desc">자유 입금 적금 만기 수령액 — 일별 단리, 이자소득세 차감</p>
             <span className="cat-count">금감원 finlife 검증</span>
           </div>
         </a>
-        <a href="/savings/isa-tax-saving/" className="cat" style={{ textDecoration: "none" }}>
+        <a href="/isa/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">ISA 계산기</h3>
             <p className="cat-desc">200만 비과세 + 초과분 9.9% 분리과세 절세효과</p>

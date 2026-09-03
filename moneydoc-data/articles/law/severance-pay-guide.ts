@@ -26,7 +26,7 @@ export const html = `<h1>퇴직금 계산 방법과 지급기준, 평균임금�
     <div class="v2-box"><b>근속 1년당 약 2,934,783원</b><span>월급 300만원 기준. 정확히는 하루 평균임금 97,826원 × 30일이에요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/law/severance-pay/">퇴직금 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/severance/calculator/">퇴직금 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (7개 질문)<span>열기</span></summary><ol><li><a href="#s1">퇴직금 계산 방법, 어떻게 계산하나요</a></li><li><a href="#s2">월급별 퇴직금 얼마인가요 (5년 근무 기준)</a></li><li><a href="#s3">퇴직금에 상여금과 연차수당도 들어가나요</a></li><li><a href="#s4">퇴직금 지급기준과 지급기한, 언제까지 줘야 하나요</a></li><li><a href="#s5">퇴직금 중간정산은 언제 되나요</a></li><li><a href="#s6">퇴직금에도 세금 내나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 퇴직금</small><b>핵심콕콕</b></div>
@@ -114,7 +114,7 @@ export const html = `<h1>퇴직금 계산 방법과 지급기준, 평균임금�
   <div><b>회사가 도산했다면</b>국가가 대신 주는 대지급금 제도가 있어요. 도산 사실과 미지급 사실을 확인받아야 하고, 한도가 정해져 있어요.</div>
 </div>
 <div class="v2-steps">
-  <div><i>1단계</i><b>받을 금액 계산</b><span>입사일과 퇴사일, 퇴사 전 3개월 임금을 넣으면 정확한 금액이 나와요</span><em>3분</em><a class="v2-go" href="/law/severance-pay/">퇴직금 계산기</a></div>
+  <div><i>1단계</i><b>받을 금액 계산</b><span>입사일과 퇴사일, 퇴사 전 3개월 임금을 넣으면 정확한 금액이 나와요</span><em>3분</em><a class="v2-go" href="/severance/">퇴직금 계산기</a></div>
   <div><i>2단계</i><b>진정 접수</b><span>노동포털에서 임금체불 진정을 접수하면 관할 고용노동청이 조사해요</span><em>무료 · 온라인 10분</em><a class="v2-go" href="https://labor.moel.go.kr/anmtDclrCntr/main.do" target="_blank" rel="noopener">임금체불 진정</a></div>
 </div>
 
@@ -154,13 +154,13 @@ export const html = `<h1>퇴직금 계산 방법과 지급기준, 평균임금�
 <li>평균임금에는 상여금과 연차수당의 3/12이 들어가요. 기본급만 계산하면 적게 나와요.</li>
 <li>지급 기한은 퇴사일부터 14일. 안 주면 노동포털에서 진정을 낼 수 있어요.</li>
 </ul></section>
-<a class="v2-cta" href="/law/severance-pay/">퇴직금 계산기 바로가기</a>
+<a class="v2-cta" href="/severance/calculator/">퇴직금 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>근로자퇴직급여 보장법 제4조(퇴직급여제도의 설정, 1년 미만·주 15시간 미만 제외), 제8조(계속근로기간 1년에 대하여 30일분 이상의 평균임금), 제9조(퇴사일부터 14일 이내 지급). 같은 법 시행령 제3조(중간정산 사유). 근로기준법 제2조(평균임금 정의, 평균임금이 통상임금보다 적으면 통상임금). 소득세법(퇴직소득 계산).
 <b>정부 도구</b>고용노동부 퇴직금 계산기와 이 글의 금액이 1원 단위까지 같아요 (2026-09-02 대조).
 </div>
-<div class="v2-rel"><a href="/law/severance-pay/"><b>계산기</b>퇴직금 계산기</a><a href="/tax/retirement-income-tax/"><b>세금 계산기</b>퇴직소득세 계산기</a><a href="/law/annual-leave-allowance-guide/"><b>법률 가이드</b>연차수당 계산법</a></div>
+<div class="v2-rel"><a href="/severance/"><b>계산기</b>퇴직금 계산기</a><a href="/retirement-tax/"><b>세금 계산기</b>퇴직소득세 계산기</a><a href="/annual-leave/"><b>법률 가이드</b>연차수당 계산법</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

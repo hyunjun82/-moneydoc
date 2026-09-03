@@ -26,7 +26,7 @@ export const html = `<h1>2026년 연봉 실수령액 표, 연봉 3000부터 1억
     <div class="v2-box"><b>세금은 월 239,050원이에요</b><span>소득세 217,320원 + 지방소득세 21,730원. 부양가족이 늘면 줄어요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/tax/salary-net-pay/">연봉 실수령액 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/salary/calculator/">연봉 실수령액 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (8개 질문)<span>열기</span></summary><ol><li><a href="#s1">연봉 실수령액 계산 방법, 월급에서 뭐가 빠지나요</a></li><li><a href="#s2">2026년 연봉 실수령액 표, 연봉 3000·4000·5000·7000·1억은 월 얼마인가요</a></li><li><a href="#s3">2026년 4대보험 요율, 월급에서 얼마나 떼나요</a></li><li><a href="#s4">연봉 100만원 인상되면 실수령액은 얼마나 늘어나나요</a></li><li><a href="#s5">연봉 실수령액 늘리는 방법 (부양가족·비과세 식대)</a></li><li><a href="#s6">급여명세서 실수령액이 계산과 다른 이유는 무엇인가요</a></li><li><a href="#s7">월급 실수령액이 매달 다른 이유는 무엇인가요 (1월·4월·7월)</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 2026 실수령액</small><b>핵심콕콕</b></div>
@@ -183,14 +183,14 @@ export const html = `<h1>2026년 연봉 실수령액 표, 연봉 3000부터 1억
 <li>월 급여 659만원(연봉 약 7,908만원)을 넘으면 국민연금은 더 늘지 않아요.</li>
 <li>부양가족 신고와 비과세 식대가 실수령을 늘리는 현실적인 방법이에요.</li>
 </ul></section>
-<a class="v2-cta" href="/tax/salary-net-pay/">연봉 실수령액 계산기 바로가기</a>
+<a class="v2-cta" href="/salary/calculator/">연봉 실수령액 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>소득세법 제134조(원천징수), 제12조(비과세 식사대 월 20만원). 소득세법 시행령 제194조(간이세액표 적용, 100분의 80·120 신청). 국민연금법 부칙(2026년 사업장가입자 기여금 1만분의 475, 2032년까지 단계 인상). 국민건강보험법 시행령(보험료율 1만분의 719). 노인장기요양보험법 시행령 제4조(장기요양보험료율 100만분의 9,448). 고용보험 및 산업재해보상보험의 보험료징수 등에 관한 법률 시행령 제12조(실업급여 보험료율 1천분의 18).
 <b>행정규칙·정부 안내</b>보건복지부 고시 국민연금 기준소득월액 하한액과 상한액(하한 410천원 · 상한 6,590천원, 2026.7~2027.6). 국세청 근로소득 간이세액표(2026.3.1 이후) 엑셀 원본을 그대로 옮겨 계산. 최저임금위원회 2026년 최저임금 결정현황(시급 10,320원).
 <b>정부 도구</b>홈택스 근로소득 간이세액표 조회값과 5케이스 원 단위 일치 (2026-09-02). 4대보험은 공단 요율로 계산해 4대사회보험 정보연계센터 모의계산과 대조했어요.
 </div>
-<div class="v2-rel"><a href="/tax/salary-net-pay/"><b>계산기</b>연봉 실수령액 계산기</a><a href="/tax/four-major-insurance-guide/"><b>세금 가이드</b>2026 4대보험 요율, 회사 부담까지</a><a href="/tax/comprehensive-income-tax-guide/"><b>세금 가이드</b>종합소득세 계산, 세율 구간</a></div>
+<div class="v2-rel"><a href="/salary/"><b>계산기</b>연봉 실수령액 계산기</a><a href="/four-insurance/"><b>세금 가이드</b>2026 4대보험 요율, 회사 부담까지</a><a href="/income-tax/"><b>세금 가이드</b>종합소득세 계산, 세율 구간</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>

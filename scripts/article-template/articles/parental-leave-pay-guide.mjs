@@ -24,7 +24,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `통상임금 300만원이면 육아휴직 12개월 동안 ${won(R.totalPay)}원을 받아요. 첫 3개월은 월 ${won(R.phase1Monthly)}원, 4개월째부터는 ${won(R.phase2Monthly)}원이에요. 지급 조건, 월별 상한, 신청 방법, 부모가 함께 쓰는 특례를 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `고용보험법 시행령 지급액 기준과 1원 단위 일치 · ${VERIFIED}`,
-    calc: { href: '/government/parental-leave-pay/', label: '육아휴직 급여 계산기 바로가기' },
+    calc: { href: '/parental-leave/calculator/', label: '육아휴직 급여 계산기 바로가기' },
     hero: {
       tag: '정부지원금', line1: '육아휴직 급여 조건과 금액', line2: '얼마 받나요',
       sub1: `통상임금 300만원 · 12개월 → ${won(R.totalPay)}원`,
@@ -148,7 +148,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           { title: '회사에 육아휴직 신청', text: '휴직 시작 예정일 30일 전까지 회사에 신청해요', meta: '30일 전' },
           { title: '회사가 확인서 제출', text: '사업주가 육아휴직 확인서를 고용센터에 내요', meta: '회사 몫' },
           { title: '급여 신청', text: '휴직 시작 1개월 뒤부터 고용보험 홈페이지에서 신청해요', meta: '매월', link: { label: '고용보험 바로가기', href: EI } },
-          { title: '지급', text: '심사를 거쳐 계좌로 입금돼요. 금액을 미리 확인해 두면 좋아요', meta: '보통 2주 안', link: { label: '육아휴직 급여 계산기', href: '/government/parental-leave-pay/' } },
+          { title: '지급', text: '심사를 거쳐 계좌로 입금돼요. 금액을 미리 확인해 두면 좋아요', meta: '보통 2주 안', link: { label: '육아휴직 급여 계산기', href: '/parental-leave/' } },
         ] },
         { type: 'table', text: true, caption: '신청할 때 챙길 것', headers: ['항목', '내용'], rows: [
           { cells: ['신청 기한', '휴직 시작 1개월 뒤부터 끝난 날 이후 12개월 이내'] },
@@ -202,9 +202,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 3, quote: '부모가 육아휴직을 사용한 기간이 각각 6개월인 경우: 부모 각각에 대하여 첫 번째 달과 두 번째 달은 월 250만원, 세 번째 달은 월 300만원, 네 번째 달은 월 350만원, 다섯 번째 달은 월 400만원, 여섯 번째 달은 월 450만원', note: '부모 함께 사용 시 상한 (제95조의3①1바)' },
     ],
     related: [
-      { kind: '계산기', label: '육아휴직 급여 계산기', href: '/government/parental-leave-pay/' },
-      { kind: '정부지원금 계산기', label: '출산휴가 급여 계산기', href: '/government/maternity-leave-pay/' },
-      { kind: '정부지원금 가이드', label: '2026년 실업급여 얼마나 받나요', href: '/government/unemployment-benefit-guide/' },
+      { kind: '계산기', label: '육아휴직 급여 계산기', href: '/parental-leave/' },
+      { kind: '정부지원금 계산기', label: '출산휴가 급여 계산기', href: '/maternity/' },
+      { kind: '정부지원금 가이드', label: '2026년 실업급여 얼마나 받나요', href: '/unemployment/' },
     ],
   };
 }

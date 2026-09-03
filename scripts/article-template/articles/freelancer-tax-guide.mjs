@@ -36,7 +36,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `프리랜서가 300만원을 받으면 3.3%인 ${won(M.totalTax)}원을 떼고 ${won(M.netPayment)}원이 들어와요. 3.3%가 어떻게 나뉘는지, 단순경비율로 소득금액이 얼마가 되는지, 5월에 신고하면 얼마를 돌려받는지 표로 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `소득세법 원천징수세율과 누진세율표 대조 · ${VERIFIED}`,
-    calc: { href: '/tax/freelancer-tax/', label: '프리랜서 3.3% 계산기 바로가기' },
+    calc: { href: '/freelancer/calculator/', label: '프리랜서 3.3% 계산기 바로가기' },
     hero: {
       tag: '세금', line1: '프리랜서 3.3% 원천징수', line2: '얼마나 돌려받나',
       sub1: `300만원 받으면 ${won(M.totalTax)}원 떼고 ${won(M.netPayment)}원`,
@@ -217,9 +217,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 5, quote: '법정신고기한이 지난 후 1개월 이내에 기한 후 신고를 한 경우: 해당 가산세액의 100분의 50에 상당하는 금액', note: '기한 후 신고 가산세 감면 (국세기본법 제48조②2가)' },
     ],
     related: [
-      { kind: '계산기', label: '프리랜서 3.3% 계산기', href: '/tax/freelancer-tax/' },
-      { kind: '세금 계산기', label: '종합소득세 계산기', href: '/tax/comprehensive-income-tax/' },
-      { kind: '세금 가이드', label: '종합소득세 세율과 계산 방법', href: '/tax/comprehensive-income-tax-guide/' },
+      { kind: '계산기', label: '프리랜서 3.3% 계산기', href: '/freelancer/' },
+      { kind: '세금 계산기', label: '종합소득세 계산기', href: '/income-tax/' },
+      { kind: '세금 가이드', label: '종합소득세 세율과 계산 방법', href: '/income-tax/' },
     ],
   };
 }

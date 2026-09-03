@@ -35,9 +35,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `월급 300만원으로 5년 일하고 그만두면 퇴직금은 ${won(R.severance)}원이에요. 퇴직금은 평균임금 기준이라 상여금과 연차수당까지 들어가요. 계산 순서, 근속별·월급별 금액표, 14일 지급기한, 못 받았을 때 신고 방법을 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `고용노동부 퇴직금 계산기와 1원 단위 일치 · ${VERIFIED}`,
-    calc: { href: '/law/severance-pay/', label: '퇴직금 계산기 바로가기' },
+    calc: { href: '/severance/calculator/', label: '퇴직금 계산기 바로가기' },
     hero: {
-      tag: '법률', line1: '퇴직금 계산 방법', line2: '내 퇴직금 얼마',
+      tag: '법률', line1: '퇴직금 계산 방법과 지급기준', line2: '평균임금부터 14일까지',
       sub1: `월급 300만원 · 5년 근무 → ${won(R.severance)}원`,
       sub2: `하루 평균임금 ${won(R.avgDailyWage)}원 × 30일 × (재직일수 ÷ 365)`,
       foot: `고용노동부 퇴직금 계산기와 1원 단위 일치 · ${VERIFIED} 검증`,
@@ -146,7 +146,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           { title: '회사가 도산했다면', text: '국가가 대신 주는 대지급금 제도가 있어요. 도산 사실과 미지급 사실을 확인받아야 하고, 한도가 정해져 있어요.' },
         ] },
         { type: 'steps', items: [
-          { title: '받을 금액 계산', text: '입사일과 퇴사일, 퇴사 전 3개월 임금을 넣으면 정확한 금액이 나와요', meta: '3분', link: { label: '퇴직금 계산기', href: '/law/severance-pay/' } },
+          { title: '받을 금액 계산', text: '입사일과 퇴사일, 퇴사 전 3개월 임금을 넣으면 정확한 금액이 나와요', meta: '3분', link: { label: '퇴직금 계산기', href: '/severance/' } },
           { title: '진정 접수', text: '노동포털에서 임금체불 진정을 접수하면 관할 고용노동청이 조사해요', meta: '무료 · 온라인 10분', link: { label: '임금체불 진정', href: LABOR } },
         ] },
       ] },
@@ -205,9 +205,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { src: 5, quote: '퇴직일자는 마지막으로 근무한 날의 1일 후 날짜를 기재', note: '퇴사일 입력 기준 (마지막 근무일 다음 날)' },
     ],
     related: [
-      { kind: '계산기', label: '퇴직금 계산기', href: '/law/severance-pay/' },
-      { kind: '세금 계산기', label: '퇴직소득세 계산기', href: '/tax/retirement-income-tax/' },
-      { kind: '법률 가이드', label: '연차수당 계산법', href: '/law/annual-leave-allowance-guide/' },
+      { kind: '계산기', label: '퇴직금 계산기', href: '/severance/' },
+      { kind: '세금 계산기', label: '퇴직소득세 계산기', href: '/retirement-tax/' },
+      { kind: '법률 가이드', label: '연차수당 계산법', href: '/annual-leave/' },
     ],
   };
 }

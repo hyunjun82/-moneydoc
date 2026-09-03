@@ -32,7 +32,7 @@ export function CategoryTiles() {
       </div>
       <div className="tiles">
         {TILES.map((t) => (
-          <a key={t.slug} href={`/${t.slug}/`} className="tile" style={{ ["--tint" as string]: t.tint, ["--ink" as string]: t.ink }}>
+          <a key={t.slug} href={`/${t.slug === "government" ? "gov" : t.slug}/`} className="tile" style={{ ["--tint" as string]: t.tint, ["--ink" as string]: t.ink }}>
             <span className="tile-ico">{t.icon}</span>
             <span className="tile-name">{t.name}</span>
             <span className="tile-count">{t.count}개 계산기</span>

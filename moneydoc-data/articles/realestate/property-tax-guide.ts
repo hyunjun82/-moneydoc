@@ -26,7 +26,7 @@ export const html = `<h1>재산세 계산과 납부, 공시가격부터 특례�
     <div class="v2-box"><b>1세대 1주택이면 372,000원 적어요</b><span>공시가격 9억원 이하인 한 채라면 낮은 특례세율이 적용돼요</span></div>
   </div>
 </section>
-<a class="v2-cta" href="/realestate/property-tax/">재산세 계산기 바로가기</a>
+<!--CALC_START--><a class="v2-cta" href="/property-tax/calculator/">재산세 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">재산세 과세표준, 공시가격에서 어떻게 정해지나요</a></li><li><a href="#s2">재산세 계산, 공시가격별로 얼마인가요</a></li><li><a href="#s3">1세대 1주택 특례세율은 얼마나 줄여 주나요</a></li><li><a href="#s4">재산세 납부, 7월과 9월에 나눠 내나요</a></li><li><a href="#s5">재산세 조회와 카드 납부는 어떻게 하나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 재산세</small><b>핵심콕콕</b></div>
@@ -139,7 +139,7 @@ export const html = `<h1>재산세 계산과 납부, 공시가격부터 특례�
 <p class="v2-lead"><span class="v2-ans">위택스에 로그인하면 고지서를 조회하고 계좌이체나 카드로 낼 수 있어요.</span> 고지서를 잃어버렸어도 전자고지로 확인할 수 있어요. 서울은 이택스에서 같은 절차로 처리해요.</p>
 <div class="v2-steps">
   <div><i>1단계</i><b>공시가격 확인</b><span>부동산공시가격 알리미에서 내 집의 공시가격을 확인해요</span><em>4월 이후</em><a class="v2-go" href="https://www.realtyprice.kr" target="_blank" rel="noopener">공시가격 알리미</a></div>
-  <div><i>2단계</i><b>세액 미리 계산</b><span>공시가격을 넣어 올해 재산세가 얼마인지 확인해요</span><em>1분</em><a class="v2-go" href="/realestate/property-tax/">재산세 계산기</a></div>
+  <div><i>2단계</i><b>세액 미리 계산</b><span>공시가격을 넣어 올해 재산세가 얼마인지 확인해요</span><em>1분</em><a class="v2-go" href="/property-tax/">재산세 계산기</a></div>
   <div><i>3단계</i><b>고지서 조회</b><span>위택스에서 지방세 납부 메뉴로 들어가 고지 내역을 확인해요</span><em>7월과 9월</em><a class="v2-go" href="https://www.wetax.go.kr" target="_blank" rel="noopener">위택스 바로가기</a></div>
   <div><i>4단계</i><b>납부</b><span>계좌이체나 카드로 내요. 자동이체를 걸면 세액공제를 받는 지역도 있어요</span><em>납기 안에</em></div>
 </div>
@@ -165,13 +165,13 @@ export const html = `<h1>재산세 계산과 납부, 공시가격부터 특례�
 <li>1세대 1주택으로 공시가격 9억원 이하면 특례세율이 붙어 312,000원으로 줄어요.</li>
 <li>6월 1일 소유자가 내고, 주택은 7월과 9월에 절반씩 나눠 내요.</li>
 </ul></section>
-<a class="v2-cta" href="/realestate/property-tax/">재산세 계산기 바로가기</a>
+<a class="v2-cta" href="/property-tax/calculator/">재산세 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>지방세법 제110조(과세표준), 제111조(세율), 제111조의2(1세대 1주택 세율 특례), 제114조(과세기준일 6월 1일), 제115조(납기), 제118조(분할납부 250만원), 제118조의2(납부유예), 제151조(지방교육세). 지방세법 시행령 제109조(공정시장가액비율). 부동산 가격공시에 관한 법률(공동주택가격 공시).
 <b>정부 도구</b>위택스 지방세 조회 화면의 세율 구조와 이 글의 계산이 같은 값이에요 (2026-09-02 대조).
 </div>
-<div class="v2-rel"><a href="/realestate/property-tax/"><b>계산기</b>재산세 계산기</a><a href="/realestate/comprehensive-real-estate-tax/"><b>부동산 계산기</b>종합부동산세 계산기</a><a href="/realestate/acquisition-tax-guide/"><b>부동산 가이드</b>집 살 때 취득세 세율과 계산</a></div>
+<div class="v2-rel"><a href="/property-tax/"><b>계산기</b>재산세 계산기</a><a href="/comprehensive-tax/"><b>부동산 계산기</b>종합부동산세 계산기</a><a href="/acquisition-tax/"><b>부동산 가이드</b>집 살 때 취득세 세율과 계산</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>
