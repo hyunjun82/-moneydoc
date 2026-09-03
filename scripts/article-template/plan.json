@@ -388,7 +388,7 @@
       "n": 17,
       "slug": "installment-savings-guide",
       "cat": "savings",
-      "status": "todo",
+      "status": "done",
       "title": "적금 이자 계산과 세금, 단리 복리부터 만기 실수령액까지",
       "h2": [
         "이자 계산",
@@ -408,7 +408,7 @@
       "n": 18,
       "slug": "auto-tax-guide",
       "cat": "insurance",
-      "status": "todo",
+      "status": "done",
       "title": "자동차세 계산과 연납 할인, 배기량별 세액부터 1월 신청까지",
       "h2": [
         "배기량 세율",
