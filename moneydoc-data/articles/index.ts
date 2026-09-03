@@ -111,8 +111,8 @@ export const GUIDES: GuideLink[] = [
     "cat": "government",
     "catLabel": "정부지원금",
     "href": "/government/unemployment-benefit-guide/",
-    "title": "실업급여 조건·금액·신청방법 총정리",
-    "blurb": "2026년 상한 68,100원 · 하한 66,048원"
+    "title": "2026년 실업급여 얼마나 받나요, 조건부터 금액과 신청 방법까지",
+    "blurb": "하루 66,048원 · 210일 · 신청 4단계와 회차별 구직활동"
   },
   {
     "cat": "government",

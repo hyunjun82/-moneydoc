@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { CalculatorShell } from "@/components/CalculatorShell";
-import { compIncomeTaxSpec } from "@/lib/calc/comprehensive-income-tax";
-import { Client } from "./Client";
-
-const spec = compIncomeTaxSpec;
+import { GenericCalculator } from "@/components/GenericCalculator";
+import spec from "@/data/calculators/tax/comprehensive-income-tax.json";
 
 export const metadata: Metadata = {
   title: "종합소득세 계산기 — 2026 누진세율 기준",
@@ -19,7 +17,7 @@ export default function Page() {
       sourceBadge="국세청 2026 · 5케이스 검증 완료"
       description="근로소득 외 사업·임대·기타소득이 있는 분이 매년 5월 신고하는 종합소득세를 누진세율(6~45%)로 정확히 계산해드립니다."
     >
-      <Client />
+      <GenericCalculator spec={spec} />
     </CalculatorShell>
   );
 }

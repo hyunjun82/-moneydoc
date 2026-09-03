@@ -308,26 +308,27 @@ export function GuideAccordion({
 
   if (sections.length === 0) return null;
 
+  // FAQ 는 목업처럼 접히는 목록으로 따로, 나머지는 펼친 섹션으로
+  const faqSec = sections.find((s) => s.title === "자주 묻는 질문");
+  const body = sections.filter((s) => s !== faqSec);
+  const faqs: { q: string; a: string }[] = guide.faq?.length ? guide.faq : ((guide.sections ?? []).find((x) => x.type === "faq") as SectionFAQ | undefined)?.items ?? [];
+
   return (
     <section className="guide-section">
-      <div className="guide-head">
-        <h2 className="guide-title">{title ?? "이 계산기, 자세히 알아보기"}</h2>
-        {sub && <p className="guide-sub">{sub}</p>}
-      </div>
-      <div className="guide-list">
-        {sections.map((s, i) => (
-          <details key={s.num} open={i === 0}>
-            <summary>
-              <span>
-                <span className="num">{s.num}</span>
-                {s.title}
-              </span>
-              <ChevronDown />
-            </summary>
-            <div className="detail-content">{s.content}</div>
-          </details>
-        ))}
-      </div>
+      {body.map((s, i) => (
+        <div key={s.num} className="gsec">
+          <h2><em>{i + 1}</em>{s.title}</h2>
+          <div className="gsec-body">{s.content}</div>
+        </div>
+      ))}
+      {faqs.length > 0 && (
+        <div className="gfaq">
+          <h2>자주 묻는 질문</h2>
+          {faqs.map((qa, i) => (
+            <details key={i} open={i === 0}><summary>{qa.q}</summary><p>{qa.a}</p></details>
+          ))}
+        </div>
+      )}
     </section>
   );
 }

@@ -1,9 +1,20 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { calculators } from "@/lib/calc/engine";
 import { krw, parseKrw } from "@/lib/format";
+import { OUTPUT_LABELS } from "./calc-output-labels";
 
+/* =========================================================================
+   GenericCalculator v2 — 계산기 64개가 공유하는 화면.
+   - 왼쪽(모바일은 위) 결과 카드: 큰 숫자 · 입력 요약 · 내역 · 링크 복사
+   - 오른쪽 입력 카드: 금액은 칩(빠른 선택), 정수는 스테퍼, 선택지 4개 이하는 세그먼트
+   - 아래 즉답 표: 첫 금액 입력을 구간별로 바꿔 가며 결과를 미리 보여준다 (표 값도 엔진)
+   - URL 쿼리로 입력을 저장·복원 (공유 링크)
+   계산은 lib/calc/engine.js 그대로. 이 파일은 화면만 담당한다.
+   ========================================================================= */
+
+type Option = { value: unknown; label: string };
 type InputDef = {
   id: string;
   label: string;
@@ -13,722 +24,330 @@ type InputDef = {
   step?: number;
   default?: unknown;
   hint?: string;
-  options?: { value: unknown; label: string }[] | string[];
+  options?: Option[] | string[];
   unit?: string;
+  conditional?: boolean;
 };
 
 type Spec = {
   slug: string;
+  title?: string;
+  year?: number | string;
+  lastVerified?: string;
   inputs: InputDef[];
-  verification?: {
-    cases?: { expected?: Record<string, unknown> }[];
-  };
+  verification?: { cases?: { expected?: Record<string, unknown>; govSource?: unknown }[] };
 };
 
-// 결과 키 → 한국어 라벨
-const OUTPUT_LABELS: Record<string, string> = {
-  // ltv/대출 — 누락분
-  leaseDeductTotal: "임차보증금 공제",
-  priorityClaim: "최우선변제 한도",
-  feePct: "수수료율",
-  rateInRange: "약정 범위 내",
-  // 모드/구분
-  mode: "상환방식",
-  accountType: "ISA 유형",
-  taxFree: "비과세 적용",
-  category: "주택보유 상태",
-  regionType: "지역 구분",
-  area: "소액보증금 지역",
-  roomDeduction: "방 공제",
-  stressDSR: "스트레스 DSR",
-  appliedRate: "적용 금리",
-  // 급여 / 4대보험
-  netMonthly: "월 실수령액",
-  grossMonthly: "월 세전 급여",
-  monthly: "월 환산",
-  totalDeduction: "총 공제액",
-  totalInsurance: "4대보험 합계",
-  nationalPension: "국민연금",
-  np: "국민연금",
-  healthInsurance: "건강보험",
-  hi: "건강보험",
-  longTermCare: "장기요양보험",
-  ltc: "장기요양보험",
-  employmentInsurance: "고용보험",
-  ei: "고용보험",
-  wc: "산재보험",
-  employeeNP: "근로자 국민연금",
-  employerNP: "사업주 국민연금",
-  employeeEI: "근로자 고용보험",
-  employerEI: "사업주 고용보험",
-  employee: "근로자 부담",
-  employer: "사업주 부담",
-  companyPay: "회사 부담",
-  selfPay: "본인 부담",
-  // 소득세 / 세액
-  monthlyIncomeTax: "소득세 (월)",
-  monthlyLocalTax: "지방소득세 (월)",
-  annualIncomeTax: "연 소득세",
-  totalIncomeTax: "총 소득세",
-  incomeTax: "소득세",
-  taxBeforeCredit: "산출세액",
-  taxBeforeLocal: "결정세액 (지방세 전)",
-  taxBeforeSeniorDed: "공제 전 세액",
-  seniorDed: "고령자 공제",
-  taxableIncome: "과세표준",
-  taxable: "과세표준",
-  taxableBase: "과세표준",
-  taxableGain: "양도차익",
-  earnedIncomeDeduction: "근로소득공제",
-  personalDeduction: "인적공제",
-  spouseDeduction: "배우자 공제",
-  funeral: "장례비용 공제",
-  appliedSalary: "산정 기준 통상임금 (최저임금 하한 적용)",
-  homes: "주택 수",
-  totalValue: "공시가격 합계",
-  isOneHome: "1세대 1주택",
-  ratePct: "적용 세율 (%)",
-  heavy: "중과세율 적용",
-  taxBeforePropertyCredit: "재산세공제 전 종부세",
-  propertyTaxCredit: "공제할 재산세액",
-  calcTax: "산출세액",
-  ageCredit: "고령자 세액공제",
-  holdingCredit: "장기보유 세액공제",
-  creditTotal: "세액공제 합계 (80% 한도)",
-  compPayable: "종부세 납부액 (농특세 포함)",
-  propertyTaxTotal: "재산세 합계",
-  taxableValue: "과세가액",
-  filingCredit: "신고세액공제 (3%)",
-  payableTax: "납부할 세액",
-  incomeTax100: "간이세액표 소득세 (100%)",
-  childAdjust: "자녀 조정 차감",
-  earnedIncomeCredit: "근로소득세액공제",
-  childCredit: "자녀세액공제",
-  newbornCredit: "출산입양 공제",
-  taxCredit: "세액공제",
-  regularCredit: "기본 공제",
-  decisionTax: "결정세액",
-  localTax: "지방소득세",
-  totalTax: "총 세금",
-  marginalRate: "한계세율",
-  taxRate: "세율",
-  rate: "요율",
-  baseRate: "기본 요율",
-  ltbcRate: "장기보유특별공제율",
-  reductionRate: "감면율",
-  // 부동산 세금
-  acquisitionTax: "취득세",
-  registrationTax: "등록면허세",
-  brokerageFee: "중개수수료",
-  totalFee: "총 수수료",
-  vat: "부가세",
-  educationTax: "교육세",
-  ruralTax: "농어촌특별세",
-  propertyTax: "재산세",
-  propertyEduTax: "지방교육세",
-  compTax: "종합부동산세",
-  generalTax: "일반세",
-  transferTax: "양도세",
-  longTermDeduction: "장기보유특별공제",
-  yearsDed: "보유기간 공제",
-  // 대출 / 금융
-  monthlyPayment: "월 상환액",
-  monthlyInterest: "월 이자",
-  totalInterest: "총 이자",
-  totalPayment: "총 상환액",
-  totalRepayment: "총 상환액",
-  maxLoan: "최대 대출 한도",
-  depositRatio: "대출 가능 금액 (보증금 × 보증비율)",
-  appliedLimit: "적용 한도 (보증한도 cap 적용)",
-  ltvLimit: "LTV 한도",
-  dsrLimitAmount: "DSR 한도 금액",
-  dsrPct: "DSR",
-  dtiPct: "DTI",
-  ltvPct: "LTV",
-  ltv: "LTV",
-  graceMonthlyInterest: "거치 월 이자",
-  totalGraceInterest: "거치기간 총 이자",
-  phase1Monthly: "1단계 월액",
-  phase2Monthly: "2단계 월액",
-  newMonthly: "신규 월 상환",
-  oldMonthly: "기존 월 상환",
-  newTotal: "신규 총 상환",
-  oldTotal: "기존 총 상환",
-  diff: "차액",
-  savings: "절감액",
-  fee: "수수료",
-  // 저축 / 만기
-  maturityAmount: "만기 수령액",
-  maturity: "만기액",
-  compoundMaturity: "복리 만기",
-  simpleMaturity: "단리 만기",
-  totalDeposit: "총 납입액",
-  totalContribution: "총 납입액",
-  annualContribution: "연 납입액",
-  monthlyContribution: "월 납입액",
-  monthlyMatching: "월 매칭금",
-  matchingTotal: "정부 기여금",
-  govPay: "정부 지원금",
-  ownTotal: "본인 납입",
-  expectedBalance: "예상 잔액",
-  totalNet: "세후 합계",
-  netPayment: "세후 지급액",
-  taxOnInterest: "이자소득세",
-  netInterest: "세후 이자",
-  interest: "이자",
-  simpleInterest: "단리 이자",
-  compoundInterest: "복리 이자",
-  isaTax: "ISA 세금",
-  taxSaving: "절세액",
-  // 연금
-  monthlyPension: "월 연금액",
-  yearlyPension: "연 연금액",
-  annualPension: "연 연금액",
-  reducedPension: "감액 연금",
-  yearsEarly: "조기수령 연수",
-  dbAmount: "DB형 퇴직금",
-  // 실업급여
-  benefitDays: "수급 가능 일수",
-  dailyBenefit: "일 수급액",
-  totalBenefit: "총 수급액",
-  rawBenefit: "기본 수급액",
-  rawDailyWage: "평균임금",
-  avgDailyWage: "평균임금",
-  dailyAvgWage: "일평균임금",
-  remainingDays: "잔여 일수",
-  // 자격 판정
-  isEligible: "자격",
-  isExpired: "기한 경과",
-  isNonTaxable: "비과세 여부",
-  applied: "적용 여부",
-  appliedAmount: "적용 금액",
-  // 법률
-  childSupport: "월 양육비",
-  alimony: "위자료 예상액",
-  severancePay: "퇴직금",
-  severance: "퇴직금",
-  hourlyWage: "시급",
-  netDailyWage: "세후 일급",
-  dailyTax: "일 소득세",
-  dailyLocalTax: "일 지방세",
-  totalDailyDeduct: "일 공제 합계",
-  unpaidAmount: "미지급 금액",
-  nonCustodianShare: "비양육자 부담 비율",
-  standardSupport: "표준양육비",
-  // 상속 / 증여
-  inheritanceTax: "상속세",
-  giftTax: "증여세",
-  spouse: "배우자",
-  child: "자녀",
-  parent: "부모",
-  sibling: "형제",
-  // 부동산 수익
-  rentalYield: "임대수익률",
-  grossYieldPct: "표면수익률",
-  netYieldPct: "실질수익률",
-  monthlyRent: "월세",
-  baseRent: "기본 임대료",
-  jeonseEquivalent: "전세 환산",
-  conversionAmount: "전월세 전환",
-  annualRentIncome: "연 임대소득",
-  netCost: "순 비용",
-  netLoss: "순 손실",
-  totalBuyCost: "총 매수 비용",
-  totalJeonseCost: "총 전세 비용",
-  totalCollegeCost: "총 대학 등록금",
-  futureTuition: "미래 등록금",
-  yearsToCollege: "대학 진학까지 연수",
-  monthlyNeeded: "월 필요액",
-  monthlySaving: "월 저축액",
-  totalROI: "총 수익률",
-  annualROI: "연 수익률",
-  investedCapital: "투자 자본",
-  profit: "수익",
-  gain: "이익",
-  // 정부지원금 / 복지
-  livelihood: "생계급여",
-  livelihoodBase: "생계급여 기준",
-  medical: "의료급여",
-  housing: "주거급여",
-  education: "교육급여",
-  median30: "중위 30%",
-  median40: "중위 40%",
-  median47: "중위 47%",
-  median50: "중위 50%",
-  median100: "중위 100%",
-  threshold: "기준액",
-  incomeAmount: "소득인정액",
-  incomePct: "소득 백분위",
-  monthlySupport: "월 지원금",
-  annualSupport: "연 지원금",
-  monthlyAvailable: "월 수령 가능",
-  monthlyAvail: "월 수령 가능",
-  parentalAllowance0: "부모급여 0세",
-  parentalAllowance1: "부모급여 1세",
-  childAllowance: "아동수당",
-  newLevel: "변경 단계",
-  tier: "단계",
-  estimatedAmount: "예상 금액",
-  // 보험
-  monthlyPremium: "월 보험료",
-  annualPremium: "연 보험료",
-  adjustedPremium: "조정 보험료",
-  ageMultiplier: "연령 배수",
-  faultMultiplier: "할증 배수",
-  ageGroup: "연령 그룹",
-  reimbursement: "환급금",
-  surrender: "해지환급금",
-  payable: "지급액",
-  surcharge: "할증료",
-  // 청약
-  totalPoints: "총 가점",
-  noHomeOk: "무주택 자격",
-  noHomeScore: "무주택 가점",
-  accountOk: "통장 자격",
-  accountScore: "통장 가점",
-  familyScore: "부양가족 가점",
-  depositOk: "납입 자격",
-  // 시뮬레이션
-  totalCost: "총 비용",
-  totalSaving: "총 저축",
-  totalPaid: "총 납부",
-  totalPay: "총 지급",
-  totalReturn: "총 환급",
-  total: "총계",
-  furniture: "가구",
-  wedding: "예식",
-  incentive: "인센티브",
-  fundNet: "펀드 순수익",
-  fixedNet: "예금 순수익",
-  savingsNet: "적금 순수익",
-  // 일반 / 기타
-  refund: "환급액",
-  expense: "지출",
-  baseAmount: "기준 금액",
-  baseTax: "기준 세액",
-  principal: "원금",
-  excess: "초과액",
-  limit: "한도",
-  maxAmount: "한도액",
-  result: "결과",
-  amount: "금액",
-  // 날짜 / 기간
-  days: "일수",
-  months: "개월수",
-  years: "연수",
-  totalDays: "총 일수",
-  threeMonthTotal: "3개월 합계",
-  westAge: "만나이",
-  koreanAge: "한국나이",
-  zodiac: "띠",
-  deadline: "기한",
-  firstMeeting: "최초 면담일",
-  firstPayment: "첫 달 상환",
-  lastPayment: "마지막 달 상환",
-  repayMonthly: "월 상환금",
-  // 미분류
-  netAnnualIncome: "연 순소득",
-  discountRatePct: "할인율 (%)",
-  userPct: "사용자 비율 (%)",
-  year: "연도",
-  support: "지원금",
-  allowance: "수당",
-  dailyWage: "일급",
-  deduction: "공제액",
-  tax: "세금",
-  monthlyAvg: "월 평균",
-  annualConverted: "연 환산",
+const outputLabel = (key: string) => OUTPUT_LABELS[key] ?? key;
+const won = (n: number) => Math.round(n).toLocaleString("ko-KR");
+const manwon = (n: number) => {
+  if (n >= 1e8) return `${+(n / 1e8).toFixed((n / 1e8) % 1 ? 1 : 0)}억`;
+  if (n >= 1e4) return `${(n / 1e4).toLocaleString("ko-KR")}만`;
+  return won(n);
 };
 
-function outputLabel(key: string): string {
-  return OUTPUT_LABELS[key] ?? key;
+function isPercentKey(key: string): boolean {
+  if (/^baseRate$|^hourlyRate$|^monthlyRate$|^dailyRate$|^baseAmount$|^depositRatio$/i.test(key)) return false;
+  return /Pct|Rate(?!s)|Ratio|Pcnt|^ltv$|^dti$|^dsr$|^userPct/i.test(key);
 }
+const isCountKey = (key: string) =>
+  /^(year|months|days|totalDays|yearsToCollege|yearsEarly|yearsDed|remainingDays|benefitDays|kids|dependents|tier|newLevel|westAge|koreanAge|ageGroup|ageMultiplier)$/.test(key) || /Score$/.test(key);
 
-function formatValue(v: unknown, unit?: string, key?: string): string {
+function formatValue(v: unknown, key: string): string {
   if (v === null || v === undefined) return "—";
-  if (typeof v === "boolean") return v ? "O" : "X";
+  if (typeof v === "boolean") return v ? "예" : "아니오";
   if (typeof v === "number") {
-    if (unit === "%") {
-      // Pct 키 = 이미 percent 형태 (예: 17.1), Rate/Ratio 키 = 소수 형태 (예: 0.01)
-      // Pct 키여도 절댓값 < 1이면 소수 형태로 간주 (예: feePct=0.012 → 1.2%)
-      const isAlreadyPercent = key ? (/Pct|Pcnt/i.test(key) && Math.abs(v) >= 1) : v >= 1;
-      const display = isAlreadyPercent ? v : v * 100;
-      return `${display.toFixed(2)}%`;
+    if (isPercentKey(key)) {
+      const already = /Pct|Pcnt/i.test(key) && Math.abs(v) >= 1;
+      return `${(already ? v : v * 100).toFixed(2).replace(/\.?0+$/, "")}%`;
     }
-    if (unit === "년" || unit === "개월" || unit === "일") return `${v}${unit}`;
-    // 단위 없는 카운트 키 (정확 매칭만)
-    if (key && (/^(year|months|days|totalDays|yearsToCollege|yearsEarly|yearsDed|remainingDays|benefitDays|kids|dependents|tier|newLevel|westAge|koreanAge|ageGroup|ageMultiplier)$/.test(key) || /Score$/.test(key))) {
-      return String(v);
-    }
+    if (isCountKey(key)) return String(v);
     return krw(v);
   }
   if (typeof v === "string") return v;
   if (typeof v === "object") return JSON.stringify(v);
   return String(v);
 }
+const unitOf = (key: string, v: unknown) => (typeof v === "number" && !isPercentKey(key) && !isCountKey(key) ? "원" : "");
 
-function isPercentKey(key: string): boolean {
-  // 금액 키 (Rate/Ratio가 들어있어도 금액 — 명시적 예외)
-  if (/^baseRate$|^hourlyRate$|^monthlyRate$|^dailyRate$|^baseAmount$|^depositRatio$/i.test(key)) return false;
-  return /Pct|Rate(?!s)|Ratio|Pcnt|^ltv$|^dti$|^dsr$|^userPct/i.test(key);
-}
-
-function isDateKey(key: string): boolean {
-  return /Date|date$/i.test(key);
-}
-
-function isBooleanKey(key: string, val: unknown): boolean {
-  return typeof val === "boolean" || /^is[A-Z]/.test(key);
-}
-
-function pickPrimaryOutput(expected: Record<string, unknown>, inputs: InputDef[]): string {
-  // 1. priority keys
-  const priority = [
-    "netMonthly",
-    "inheritanceTax",
-    "giftTax",
-    "transferTax",
-    "acquisitionTax",
-    "totalTax",
-    "brokerageFee",
-    "totalCost",
-    "maturityAmount",
-    "monthlyPayment",
-    "totalBenefit",
-    "monthlyPension",
-    "severancePay",
-    "maxLoan",
-    "totalDeduction",
-    "refund",
-    "taxCredit",
-    "taxSaving",
-    "estimatedAmount",
-    "payable",
-    "tax",
-    "total",
-    "totalSaving",
-    "totalPay",
-    "totalReturn",
-    "result",
-    "decisionTax",
-    "annualPension",
-    "yearlyPension",
-    "rentalYield",
-    "totalInsurance",
-    "monthlyPremium",
-    "annualPremium",
-  ];
-  for (const k of priority) {
-    if (k in expected) return k;
-  }
-  // fallback: largest numeric value
+const PRIORITY = [
+  "netMonthly", "inheritanceTax", "giftTax", "transferTax", "acquisitionTax", "totalTax", "brokerageFee", "totalCost",
+  "maturityAmount", "monthlyPayment", "totalBenefit", "monthlyPension", "severancePay", "maxLoan", "totalDeduction", "refund",
+  "taxCredit", "taxSaving", "estimatedAmount", "payable", "tax", "total", "totalSaving", "totalPay", "totalReturn", "result",
+  "decisionTax", "annualPension", "yearlyPension", "rentalYield", "totalInsurance", "monthlyPremium", "annualPremium",
+];
+function pickPrimaryOutput(expected: Record<string, unknown>): string {
+  for (const k of PRIORITY) if (k in expected) return k;
   const numeric = Object.entries(expected).filter(([, v]) => typeof v === "number");
-  if (numeric.length) {
-    numeric.sort((a, b) => Math.abs(b[1] as number) - Math.abs(a[1] as number));
-    return numeric[0][0];
-  }
+  if (numeric.length) return numeric.sort((a, b) => Math.abs(b[1] as number) - Math.abs(a[1] as number))[0][0];
   return Object.keys(expected)[0];
 }
 
+/** 금액 입력의 빠른 선택 칩: 기본값을 중심으로 0.5배~5배, 보기 좋은 숫자로 (min~max 안) */
+const NICE = [1, 1.5, 2, 2.5, 3, 4, 5, 6, 7, 8, 9, 10];
+const niceRound = (v: number) => { const p = Math.pow(10, Math.floor(Math.log10(v))); const m = v / p; return NICE.reduce((a, c) => (Math.abs(c - m) < Math.abs(a - m) ? c : a)) * p; };
+function presets(def: InputDef): number[] {
+  const d = typeof def.default === "number" && def.default > 0 ? def.default : (def.min ?? 0) > 0 ? (def.min as number) : 0;
+  if (!d) return [];
+  const min = def.min ?? 0, max = def.max ?? Infinity;
+  const out = new Set<number>();
+  for (const m of [0.5, 0.7, 1, 1.3, 1.5, 2, 3, 5]) { const v = niceRound(d * m); if (v >= min && v <= max && v > 0) out.add(v); }
+  out.add(d);
+  return [...out].sort((a, b) => a - b).slice(0, 9);
+}
+
+function normalizeOptions(def: InputDef): Option[] {
+  return (def.options ?? []).map((o) => (typeof o === "string" ? { value: o, label: o } : o));
+}
+
 export function GenericCalculator({ spec }: { spec: Spec }) {
-  const [values, setValues] = useState<Record<string, unknown>>(() => {
+  const inputs = spec.inputs ?? [];
+  const initial = () => {
     const v: Record<string, unknown> = {};
-    for (const inp of spec.inputs ?? []) {
-      v[inp.id] = inp.default ?? (inp.type === "stepper" || inp.type === "number" ? 0 : "");
-    }
+    for (const inp of inputs) v[inp.id] = inp.default ?? (inp.type === "stepper" || inp.type === "number" || inp.type === "currency" ? 0 : "");
     return v;
-  });
+  };
+  const [values, setValues] = useState<Record<string, unknown>>(initial);
+  const [copied, setCopied] = useState(false);
+  const mounted = useRef(false);
+
+  // URL → 입력 복원 (공유 링크)
+  useEffect(() => {
+    try {
+      const p = new URLSearchParams(window.location.search);
+      if (![...p.keys()].length) { mounted.current = true; return; }
+      setValues((s) => {
+        const n = { ...s };
+        for (const inp of inputs) {
+          const raw = p.get(inp.id);
+          if (raw === null) continue;
+          if (inp.type === "boolean" || inp.type === "checkbox") n[inp.id] = raw === "1" || raw === "true";
+          else if (inp.type === "select") { const o = normalizeOptions(inp).find((x) => String(x.value) === raw); n[inp.id] = o ? o.value : raw; }
+          else if (inp.type === "date" || inp.type === "text") n[inp.id] = raw;
+          else n[inp.id] = Number(raw);
+        }
+        return n;
+      });
+    } catch { /* noop */ }
+    mounted.current = true;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  // 입력 → URL
+  useEffect(() => {
+    if (!mounted.current) return;
+    try {
+      const p = new URLSearchParams();
+      for (const inp of inputs) { const v = values[inp.id]; if (v === undefined || v === null || v === "") continue; p.set(inp.id, typeof v === "boolean" ? (v ? "1" : "0") : String(v)); }
+      window.history.replaceState(null, "", `?${p}`);
+    } catch { /* noop */ }
+  }, [values, inputs]);
 
   const calcFn = calculators[spec.slug];
   const expected = spec.verification?.cases?.[0]?.expected ?? {};
-  const primaryKey = pickPrimaryOutput(expected, spec.inputs ?? []);
+  const primaryKey = pickPrimaryOutput(expected);
+  const govVerified = (spec.verification?.cases ?? []).some((c) => c.govSource);
 
-  const result = useMemo(() => {
-    if (!calcFn) return null;
-    try {
-      return calcFn(values, spec as unknown as Record<string, unknown>) as Record<string, unknown>;
-    } catch (e) {
-      return null;
-    }
-  }, [values, calcFn, spec]);
+  const run = (v: Record<string, unknown>) => { try { return calcFn ? (calcFn(v, spec as unknown as Record<string, unknown>) as Record<string, unknown>) : null; } catch { return null; } };
+  const result = useMemo(() => run(values), [values, calcFn, spec]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // 즉답 표: 첫 금액 입력을 구간별로
+  const tableInput = inputs.find((i) => i.type === "currency" && typeof i.default === "number" && i.default > 0);
+  const tableRows = useMemo(() => {
+    if (!tableInput || !calcFn) return [];
+    return presets(tableInput).map((x) => ({ x, r: run({ ...values, [tableInput.id]: x }) }));
+  }, [tableInput, values, calcFn]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!calcFn) {
-    return (
-      <section className="main">
-        <div className="panel" style={{ padding: 32, textAlign: "center" }}>
-          이 계산기는 곧 추가됩니다.
-        </div>
-      </section>
-    );
+    return <section className="main"><div className="gc-card" style={{ textAlign: "center", padding: 32 }}>이 계산기는 곧 추가됩니다.</div></section>;
   }
 
   const update = (id: string, v: unknown) => setValues((s) => ({ ...s, [id]: v }));
-
-  const expectedKeys = Object.keys(expected);
-  const breakdownKeys = expectedKeys.filter((k) => k !== primaryKey);
+  const breakdownKeys = Object.keys(expected).filter((k) => k !== primaryKey);
   const primaryVal = result?.[primaryKey];
-  const primaryUnit = isPercentKey(primaryKey) ? "%" : isBooleanKey(primaryKey, primaryVal) ? "" : "원";
-  const primaryDisplay = formatValue(primaryVal, primaryUnit, primaryKey);
+  const primaryUnit = unitOf(primaryKey, primaryVal);
+  const tableCols = [primaryKey, ...breakdownKeys.filter((k) => typeof (result?.[k]) === "number").slice(0, 3)];
+  const deductionStyle = /^net|Net$/.test(primaryKey) || "totalDeduction" in expected;
+  // 한 줄 인사이트: 첫 금액 입력이 한 단계 오르면 결과가 얼마나 변하는지 (목업의 "연봉 1,000만원 오르면" 줄)
+  const insight = (() => {
+    if (!tableInput || !result || typeof result[primaryKey] !== "number") return null;
+    const cur = Number(values[tableInput.id]) || 0; if (!cur) return null;
+    const step = niceRound(cur * 0.2); const r2 = run({ ...values, [tableInput.id]: cur + step });
+    if (!r2 || typeof r2[primaryKey] !== "number") return null;
+    const diff = (r2[primaryKey] as number) - (result[primaryKey] as number);
+    return { step, diff };
+  })();
+
+  const summary = inputs
+    .filter((i) => !(i.type === "boolean" || i.type === "checkbox") || values[i.id])
+    .map((i) => {
+      const v = values[i.id];
+      if (i.type === "boolean" || i.type === "checkbox") return i.label;
+      if (i.type === "select") return normalizeOptions(i).find((o) => String(o.value) === String(v))?.label ?? String(v);
+      if (i.type === "currency") return `${i.label} ${manwon(Number(v) || 0)}원`;
+      if (typeof v === "number") return `${i.label} ${v}${i.unit ?? ""}`;
+      return `${i.label} ${String(v)}`;
+    })
+    .slice(0, 4)
+    .join(" · ");
+
+  const copyLink = async () => {
+    try { await navigator.clipboard.writeText(window.location.href); setCopied(true); setTimeout(() => setCopied(false), 1500); } catch { /* noop */ }
+  };
 
   return (
     <section className="main">
-      <div className="calc-grid">
-        {/* INPUT */}
-        <div className="panel">
-          <div className="panel-head">
-            <span className="panel-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 20h9" />
-                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4z" />
-              </svg>
-            </span>
-            <h2 className="panel-title">정보 입력</h2>
-          </div>
-
-          {(spec.inputs ?? []).map((inp) => (
-            <InputField key={inp.id} def={inp} value={values[inp.id]} onChange={(v) => update(inp.id, v)} />
-          ))}
-        </div>
-
-        {/* RESULT */}
-        <div className="panel">
-          <div className="panel-head">
-            <span className="panel-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M3 3v18h18" />
-                <path d="M18 17V9M13 17V5M8 17v-3" />
-              </svg>
-            </span>
-            <h2 className="panel-title">계산 결과</h2>
-          </div>
-
+      <div className="gc">
+        {/* 결과 */}
+        <div className="gc-card gc-res">
+          <div className="gc-res-l"><span>{outputLabel(primaryKey)}</span><button type="button" onClick={copyLink}>{copied ? "복사됨" : "링크 복사"}</button></div>
           {result ? (
             <>
-              <div className="result-hero">
-                <div className="result-label">{outputLabel(primaryKey)}</div>
-                <div>
-                  <span className="result-value">{primaryDisplay}</span>
-                  {primaryUnit && primaryUnit !== "%" && primaryDisplay !== "O" && primaryDisplay !== "X" && (
-                    <span className="result-unit">{primaryUnit}</span>
-                  )}
-                </div>
-              </div>
-
+              <div className="gc-res-v">{formatValue(primaryVal, primaryKey)}{primaryUnit && <small>{primaryUnit}</small>}</div>
+              <div className="gc-res-s">{summary}</div>
               {breakdownKeys.length > 0 && (
-                <div className="breakdown-list">
+                <ul className="gc-rows">
                   {breakdownKeys.map((key) => {
                     const v = result[key];
-                    if (v === undefined || v === null) return null;
-                    if (typeof v === "object" && !Array.isArray(v)) {
+                    if (v === undefined || v === null || Array.isArray(v)) return null;
+                    if (typeof v === "object") {
                       const obj = v as Record<string, unknown>;
                       return (
-                        <div key={key} style={{ padding: "10px 0", borderBottom: "1px solid var(--line-soft)" }}>
-                          <div style={{ fontSize: 13, fontWeight: 700, color: "var(--text)", marginBottom: 6 }}>
-                            {outputLabel(key)}
-                          </div>
-                          <div style={{ display: "flex", flexDirection: "column", gap: 4, paddingLeft: 8 }}>
-                            {Object.entries(obj).map(([k2, v2]) => {
-                              if (v2 === null || v2 === undefined || typeof v2 === "object") return null;
-                              return (
-                                <div key={k2} style={{ display: "flex", justifyContent: "space-between", fontSize: 13, color: "var(--text-2)" }}>
-                                  <span>{outputLabel(k2)}</span>
-                                  <span style={{ fontVariantNumeric: "tabular-nums", color: "var(--text)", fontWeight: 600 }}>
-                                    {formatValue(v2, isPercentKey(k2) ? "%" : "", k2)}
-                                  </span>
-                                </div>
-                              );
-                            })}
-                          </div>
-                        </div>
+                        <li key={key} className="gc-group">
+                          <div className="gc-group-t">{outputLabel(key)}</div>
+                          {Object.entries(obj).map(([k2, v2]) => (v2 === null || v2 === undefined || typeof v2 === "object") ? null : (
+                            <div key={k2} className="gc-group-r"><span>{outputLabel(k2)}</span><b>{formatValue(v2, k2)}</b></div>
+                          ))}
+                        </li>
                       );
                     }
-                    if (Array.isArray(v)) return null;
-                    const unit = isPercentKey(key) ? "%" : "";
-                    return (
-                      <div key={key} className="b-row">
-                        <span className="name">{outputLabel(key)}</span>
-                        <span className="val">{formatValue(v, unit, key)}</span>
-                      </div>
-                    );
+                    const total = /^total|Total$|합계/.test(key);
+                    const minus = deductionStyle && typeof v === "number" && v > 0 && /(Tax|Insurance|Pension|Care|Deduction|Fee|Premium|Cost)$/i.test(key) && !/^total(?!Deduction)/.test(key);
+                    return <li key={key} className={total ? "tot" : ""}><span>{outputLabel(key)}</span><b className={minus ? "minus" : ""}>{minus ? "−" : ""}{formatValue(v, key)}</b></li>;
                   })}
-                </div>
+                </ul>
               )}
             </>
           ) : (
-            <div style={{ padding: 24, textAlign: "center", color: "var(--text-3)" }}>
-              입력값을 확인해주세요.
-            </div>
+            <div className="gc-empty">입력값을 확인해 주세요.</div>
           )}
+          {insight && result && (
+            <div className="gc-rev">{tableInput!.label} {manwon(insight.step)}원 오르면 {outputLabel(primaryKey)}은 <b>{insight.diff >= 0 ? "+" : "−"}{formatValue(Math.abs(insight.diff), primaryKey)}{primaryUnit}</b>{insight.diff === 0 ? " (변화 없음)" : ""}</div>
+          )}
+          <div className="gc-trust"><i />{govVerified ? "정부 계산기와 0원 일치 확인" : "법령·공식 고시 기준"}{spec.lastVerified ? ` · ${spec.lastVerified} 검증` : spec.year ? ` · ${spec.year}년 기준` : ""}</div>
+        </div>
+
+        {/* 입력 */}
+        <div className="gc-card">
+          {inputs.map((inp) => <Field key={inp.id} def={inp} value={values[inp.id]} onChange={(v) => update(inp.id, v)} />)}
         </div>
       </div>
+
+      {/* 즉답 표 */}
+      {tableInput && tableRows.length > 1 && (
+        <div className="gc-tw-wrap">
+          <h2 className="gc-h2">{tableInput.label}별 {outputLabel(primaryKey)}<i>다른 입력은 지금 값 기준</i></h2>
+          <div className="gc-tw"><table>
+            <thead><tr><th>{tableInput.label}</th>{tableCols.map((k) => <th key={k}>{outputLabel(k)}</th>)}</tr></thead>
+            <tbody>
+              {tableRows.map(({ x, r }) => (
+                <tr key={x} className={x === values[tableInput.id] ? "hi" : ""} onClick={() => update(tableInput.id, x)} title="이 값으로 계산">
+                  <td>{manwon(x)}원</td>
+                  {tableCols.map((k) => <td key={k}>{r ? formatValue(r[k], k) : "—"}</td>)}
+                </tr>
+              ))}
+            </tbody>
+          </table></div>
+          <p className="gc-tn">표의 값은 이 페이지 계산 엔진이 만들어요. 줄을 누르면 그 값으로 위 결과가 바뀌어요.</p>
+        </div>
+      )}
     </section>
   );
 }
 
-function InputField({
-  def,
-  value,
-  onChange,
-}: {
-  def: InputDef;
-  value: unknown;
-  onChange: (v: unknown) => void;
-}) {
+function Field({ def, value, onChange }: { def: InputDef; value: unknown; onChange: (v: unknown) => void }) {
   const t = def.type ?? "number";
-
-  if (t === "stepper") {
-    const n = (value as number) ?? def.default ?? 0;
-    return (
-      <div className="input-row">
-        <div className="input-label">
-          <span className="name">{def.label}</span>
-          {def.hint && <span className="hint">{def.hint}</span>}
-        </div>
-        <div className="stepper">
-          <button
-            type="button"
-            onClick={() => onChange(Math.max(def.min ?? 0, n - 1))}
-          >
-            −
-          </button>
-          <span className="val">{n}</span>
-          <button
-            type="button"
-            onClick={() => onChange(Math.min(def.max ?? 99, n + 1))}
-          >
-            +
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  if (t === "select" && def.options) {
-    const opts = def.options.map((o) =>
-      typeof o === "string" ? { value: o, label: o } : o
-    );
-    return (
-      <div className="input-row">
-        <div className="input-label">
-          <span className="name">{def.label}</span>
-          {def.hint && <span className="hint">{def.hint}</span>}
-        </div>
-        <div className="input-box">
-          <select
-            value={String(value ?? "")}
-            onChange={(e) => {
-              const raw = e.target.value;
-              const matched = opts.find((o) => String(o.value) === raw);
-              onChange(matched?.value ?? raw);
-            }}
-            style={{
-              width: "100%",
-              height: 46,
-              padding: "0 16px",
-              background: "var(--bg)",
-              border: "1.5px solid var(--line)",
-              borderRadius: 10,
-              fontSize: 17,
-              fontWeight: 600,
-              color: "var(--text)",
-              fontFamily: "inherit",
-            }}
-          >
-            {opts.map((o) => (
-              <option key={String(o.value)} value={String(o.value)}>
-                {o.label}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
-    );
-  }
+  const label = <label>{def.label}{def.hint && <em>{def.hint}</em>}</label>;
 
   if (t === "boolean" || t === "checkbox") {
+    const on = Boolean(value);
     return (
-      <div className="input-row">
-        <label style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }}>
-          <input
-            type="checkbox"
-            checked={Boolean(value)}
-            onChange={(e) => onChange(e.target.checked)}
-            style={{ width: 18, height: 18 }}
-          />
-          <span style={{ fontSize: 14, fontWeight: 600 }}>{def.label}</span>
-          {def.hint && <span className="hint">{def.hint}</span>}
-        </label>
-      </div>
-    );
-  }
-
-  if (t === "date") {
-    return (
-      <div className="input-row">
-        <div className="input-label">
-          <span className="name">{def.label}</span>
-          {def.hint && <span className="hint">{def.hint}</span>}
-        </div>
-        <div className="input-box">
-          <input
-            type="date"
-            value={String(value ?? "")}
-            onChange={(e) => onChange(e.target.value)}
-          />
+      <div className="gc-f">
+        {label}
+        <div className="gc-seg two">
+          <button type="button" className={!on ? "on" : ""} onClick={() => onChange(false)}>아니오</button>
+          <button type="button" className={on ? "on" : ""} onClick={() => onChange(true)}>예</button>
         </div>
       </div>
     );
   }
 
-  if (t === "text") {
-    return (
-      <div className="input-row">
-        <div className="input-label">
-          <span className="name">{def.label}</span>
-          {def.hint && <span className="hint">{def.hint}</span>}
+  if (t === "select") {
+    const opts = normalizeOptions(def);
+    const cur = String(value ?? "");
+    if (opts.length <= 4 && opts.every((o) => o.label.length <= 8)) {
+      return (
+        <div className="gc-f">
+          {label}
+          <div className="gc-seg" style={{ gridTemplateColumns: `repeat(${opts.length},1fr)` }}>
+            {opts.map((o) => <button key={String(o.value)} type="button" className={String(o.value) === cur ? "on" : ""} onClick={() => onChange(o.value)}>{o.label}</button>)}
+          </div>
         </div>
-        <div className="input-box">
-          <input
-            type="text"
-            value={String(value ?? "")}
-            onChange={(e) => onChange(e.target.value)}
-          />
+      );
+    }
+    return (
+      <div className="gc-f">
+        {label}
+        <div className="gc-in"><select value={cur} onChange={(e) => { const m = opts.find((o) => String(o.value) === e.target.value); onChange(m ? m.value : e.target.value); }}>
+          {opts.map((o) => <option key={String(o.value)} value={String(o.value)}>{o.label}</option>)}
+        </select></div>
+      </div>
+    );
+  }
+
+  if (t === "date" || t === "text") {
+    return (
+      <div className="gc-f">
+        {label}
+        <div className="gc-in"><input type={t} value={String(value ?? "")} onChange={(e) => onChange(e.target.value)} /></div>
+      </div>
+    );
+  }
+
+  const n = typeof value === "number" ? value : Number(value) || 0;
+
+  // 정수·작은 범위 → 스테퍼
+  const small = t === "stepper" || (t === "number" && (def.max ?? 999) <= 60 && (def.step ?? 1) === 1);
+  if (small) {
+    const min = def.min ?? 0, max = def.max ?? 99;
+    return (
+      <div className="gc-f">
+        {label}
+        <div className="gc-step">
+          <button type="button" onClick={() => onChange(Math.max(min, n - 1))} aria-label="줄이기">−</button>
+          <b>{n}{def.unit ? <small>{def.unit}</small> : null}</b>
+          <button type="button" onClick={() => onChange(Math.min(max, n + 1))} aria-label="늘리기">+</button>
         </div>
       </div>
     );
   }
 
-  // currency or number (default)
   const isCurrency = t === "currency";
-  const n = (value as number) ?? def.default ?? 0;
+  const chips = isCurrency ? presets(def) : [];
   return (
-    <div className="input-row">
-      <div className="input-label">
-        <span className="name">{def.label}</span>
-        {def.hint && <span className="hint">{def.hint}</span>}
-      </div>
-      <div className="input-box">
+    <div className="gc-f">
+      {label}
+      <div className="gc-in">
         <input
-          type="text"
-          inputMode="numeric"
+          type="text" inputMode="decimal"
           value={isCurrency ? n.toLocaleString("ko-KR") : String(n)}
-          onChange={(e) => {
-            const num = isCurrency ? parseKrw(e.target.value) : Number(String(e.target.value).replace(/[^0-9.\-]/g, "")) || 0;
-            onChange(num);
-          }}
+          onChange={(e) => onChange(isCurrency ? parseKrw(e.target.value) : Number(String(e.target.value).replace(/[^0-9.\-]/g, "")) || 0)}
         />
-        <span className="input-suffix">{def.unit ?? (isCurrency ? "원" : "")}</span>
+        <span>{def.unit ?? (isCurrency ? "원" : "")}</span>
       </div>
-      {def.min !== undefined && def.max !== undefined && (
-        <input
-          type="range"
-          className="slider"
-          min={def.min}
-          max={def.max}
-          step={def.step ?? 1}
-          value={Math.min(Math.max(n, def.min), def.max)}
-          onChange={(e) => onChange(Number(e.target.value))}
-        />
+      {chips.length > 1 && (
+        <div className="gc-chips">
+          {chips.map((c) => <button key={c} type="button" className={c === n ? "on" : ""} onClick={() => onChange(c)}>{manwon(c)}</button>)}
+        </div>
       )}
     </div>
   );

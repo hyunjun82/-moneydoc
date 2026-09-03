@@ -15,7 +15,7 @@ export default function Page() {
       <GenericCalculator spec={spec} />
       <div className="main" style={{ paddingTop: 18 }}>
         <a href="/government/unemployment-benefit-guide/" style={{ color: "var(--brand)", fontWeight: 600, fontSize: 15 }}>
-          실업급여 조건·금액·신청방법 총정리 가이드 보기 →
+          2026년 실업급여 얼마나 받나요, 조건부터 신청 방법까지 가이드 보기 →
         </a>
       </div>
     </CalculatorShell>

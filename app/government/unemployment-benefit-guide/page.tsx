@@ -1,36 +1,37 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { ArticleBody } from "@/components/ArticleBody";
-import { article } from "@/data/articles/government/unemployment-benefit";
+import { ArticleV2 } from "@/components/ArticleV2";
+import { meta, faqLd, html, scriptKey } from "@/data/articles/government/unemployment-benefit-guide";
 
 const PAGE_URL = "https://moneydoc.kr/government/unemployment-benefit-guide/";
 
 export const metadata: Metadata = {
-  title: article.title,
-  description: article.description,
+  title: meta.title,
+  description: meta.description,
   alternates: { canonical: "/government/unemployment-benefit-guide/" },
+  robots: { index: true, follow: true, "max-image-preview": "large" },
   openGraph: {
     type: "article",
-    title: article.title,
-    description: article.description,
+    title: meta.title,
+    description: meta.description,
     url: PAGE_URL,
+    publishedTime: meta.datePublished,
+    modifiedTime: meta.dateModified,
+    images: [{ url: meta.image, width: 1200, height: 630, alt: meta.imageAlt }],
   },
+  twitter: { card: "summary_large_image", title: meta.title, description: meta.description, images: [meta.image] },
 };
 
 export default function Page() {
   return (
-    <>
-      <Header active="government" />
-      <nav className="crumbs">
-        <a href="/">홈</a>
-        <span className="sep">›</span>
-        <a href="/government/">정부지원금</a>
-        <span className="sep">›</span>
-        <span>실업급여 총정리</span>
-      </nav>
-      <ArticleBody article={article} url={PAGE_URL} />
-      <Footer />
-    </>
+    <ArticleV2
+      meta={meta}
+      html={html}
+      faqLd={faqLd}
+      scriptKey={scriptKey}
+      url={PAGE_URL}
+      cat="government"
+      catLabel="정부지원금"
+      crumb="실업급여"
+    />
   );
 }

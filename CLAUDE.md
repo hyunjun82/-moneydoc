@@ -85,3 +85,14 @@ node scripts/title-system/test.mjs                                           # �
 규칙·패턴: `scripts/title-system/README.md` + `pattern.json`.
 핵심: 검색 키워드 그대로 박기 / 클릭베이트 금지 / ㅣ≤15% / 포맷 다양(≥3종, 한 포맷≤55%).
 **lint PASS = 페이지 생성 가능. FAIL = 제목 다시.**
+
+## 9. 가이드 글 v2 템플릿 (대량 생성)
+
+글은 손으로 HTML 쓰지 않는다. 스펙 하나 = 글 하나. 상세 `scripts/article-template/README.md`.
+
+```bash
+node scripts/article-template/lint.mjs <slug>    # 품질 게이트 PASS 여야 진행
+node scripts/article-template/build.mjs <slug>   # lint → 위젯 산식 엔진 대조 → HTML → og PNG → Next 페이지
+```
+
+규칙: 해요체 / 문장 100자 이하 / 대시·파이프 금지 / 본문 법 조문 금지(출처·각주만) / H2 는 검색어형 질문 / 표 캡션 필수 / 숫자는 엔진 값만.

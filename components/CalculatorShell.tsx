@@ -124,13 +124,9 @@ export function CalculatorShell({
         <span>{breadcrumbLabel}</span>
       </nav>
 
-      <header className="page-head">
-        <span className="source-badge">
-          <span className="dot" />
-          {sourceBadge}
-        </span>
+      <header className="page-head v2">
         <h1 className="page-title">{spec.title}</h1>
-        <p className="page-sub">{description ?? spec.subtitle}</p>
+        <p className="page-sub"><span className="dot" />{sourceBadge}</p>
       </header>
 
       {children}

@@ -848,3 +848,178 @@ a.law-cite-name { color: var(--brand); text-decoration: underline; text-underlin
   .law-cite-name { font-size: 13.5px; }
   .article-sec .warn-callout p { font-size: 15px; }
 }
+
+/* ───────── HOME v2: 카테고리 타일 · 인기 계산기 카드 · 탭 ───────── */
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.tile {
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px;
+  padding: 30px 16px 26px;
+  background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow-card); transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); border-color: var(--ink); }
+.tile-ico, .card-ico {
+  position: relative;
+  width: 76px; height: 76px; border-radius: 24px;
+  background:
+    radial-gradient(120% 90% at 28% 18%, rgba(255,255,255,.95) 0%, rgba(255,255,255,0) 55%),
+    linear-gradient(165deg, var(--tint) 0%, color-mix(in srgb, var(--tint) 72%, var(--ink)) 100%);
+  color: var(--ink); display: inline-flex; align-items: center; justify-content: center;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.9),
+    inset 0 -2px 6px color-mix(in srgb, var(--ink) 18%, transparent),
+    0 10px 20px -12px color-mix(in srgb, var(--ink) 55%, transparent);
+  margin-bottom: 8px;
+  transition: transform .25s;
+}
+.tile:hover .tile-ico, .card:hover .card-ico { transform: translateY(-2px) scale(1.04); }
+.tile-ico svg, .card-ico svg { filter: drop-shadow(0 1px 0 rgba(255,255,255,.8)); }
+.card-ico .chk {
+  position: absolute; right: -4px; bottom: -4px;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: #178f7a; color: #fff; font-style: normal; font-size: 12px; font-weight: 800;
+  display: grid; place-items: center; border: 2px solid var(--bg-card);
+}
+.tile-name { font-size: 17.5px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); }
+.tile-count { font-size: 13.5px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+.pop-wrap { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.pop-tabs { display: flex; gap: 2px; overflow-x: auto; border-bottom: 1px solid var(--line); margin: -8px 0 22px; scrollbar-width: none; }
+.pop-tabs::-webkit-scrollbar { display: none; }
+.pop-tabs button {
+  flex: none; font: inherit; font-size: 14.5px; font-weight: 600; color: var(--text-3);
+  background: none; border: 0; border-bottom: 2px solid transparent; padding: 10px 14px; margin-bottom: -1px; cursor: pointer;
+}
+.pop-tabs button.on { color: var(--text); border-bottom-color: var(--brand); }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.card {
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px;
+  padding: 26px 14px 22px;
+  background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow-card); transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); border-color: var(--ink); }
+.card .card-ico { width: 64px; height: 64px; border-radius: 19px; }
+.card .card-ico svg { width: 26px; height: 26px; }
+.card-tag { font-size: 12px; font-weight: 700; color: var(--ink); }
+.card-name { font-size: 16px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); line-height: 1.35; word-break: keep-all; }
+.card-note { font-size: 12.5px; color: var(--text-3); font-variant-numeric: tabular-nums; line-height: 1.4; }
+.card-note.gov { color: #178f7a; font-weight: 600; }
+.cards.guides { grid-template-columns: repeat(3, 1fr); }
+.cards.guides .card { align-items: flex-start; text-align: left; padding: 22px 20px; }
+.cards.guides .card-name { font-size: 15.5px; font-weight: 700; }
+.more-btn {
+  display: block; width: max-content; margin: 22px auto 0; padding: 12px 28px;
+  background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px;
+  font-size: 14.5px; font-weight: 700; color: var(--text);
+}
+.more-btn:hover { border-color: var(--brand); color: var(--brand); }
+@media (max-width: 960px) { .tiles, .cards { grid-template-columns: repeat(2, 1fr); } .cards.guides { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) {
+  .tiles, .cards { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .cards.guides { grid-template-columns: 1fr; }
+  .tile { padding: 22px 10px 18px; } .tile-ico { width: 62px; height: 62px; border-radius: 18px; }
+  .card { padding: 20px 10px 16px; } .card .card-ico { width: 54px; height: 54px; border-radius: 16px; }
+  .tile-name, .card-name { font-size: 15px; }
+}
+
+/* ───────── CALC v2 (GenericCalculator) ───────── */
+.gc { display: grid; gap: 12px; grid-template-columns: 1fr; --gc-ink: #1f3a3a; --gc-minus: #b4432f; --gc-soft: #eef2ef; }
+.gc > * { min-width: 0; }
+.gc-card { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-card); padding: 20px; }
+.gc-res { order: -1; }
+@media (min-width: 860px) { .gc { grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; } .gc-card { padding: 24px; } .gc-res { order: 0; position: sticky; top: 84px; } }
+.gc-res-l { font-size: 13px; color: var(--text-3); font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
+.gc-res-l button { border: 1px solid var(--line); background: var(--bg-card); border-radius: 999px; padding: 4px 11px; font: inherit; font-size: 12px; font-weight: 600; color: var(--text-3); cursor: pointer; }
+.gc-res-l button:hover { color: var(--brand); border-color: var(--brand); }
+.gc-res-v { font-size: 38px; font-weight: 800; letter-spacing: -1.6px; line-height: 1.1; margin: 6px 0 4px; color: var(--gc-ink); font-variant-numeric: tabular-nums; }
+.gc-res-v small { font-size: 17px; font-weight: 700; margin-left: 3px; color: var(--text-2); }
+.gc-res-s { font-size: 13px; color: var(--text-3); margin-bottom: 14px; line-height: 1.5; }
+.gc-rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.gc-rows li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line-soft); font-size: 14px; }
+.gc-rows li span { color: var(--text-2); }
+.gc-rows li b { font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.gc-rows li.tot { font-weight: 700; } .gc-rows li.tot span { color: var(--text); } .gc-rows li.tot b { color: var(--gc-ink); }
+.gc-rows li b.minus { color: var(--gc-minus); }
+.gc-rev { margin-top: 12px; padding: 12px 14px; border-radius: 12px; background: var(--gc-soft); font-size: 14px; color: var(--text); line-height: 1.55; } .gc-rev b { color: var(--gc-ink); }
+.gc-rows .gc-group { display: block; }
+.gc-group-t { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.gc-group-r { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-2); padding: 3px 0 3px 10px; }
+.gc-group-r b { font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; }
+.gc-empty { padding: 24px 0; text-align: center; color: var(--text-3); }
+.gc-trust { font-size: 12px; color: var(--text-3); margin-top: 14px; display: flex; gap: 7px; align-items: center; }
+.gc-trust i { width: 7px; height: 7px; border-radius: 50%; background: #178f7a; flex: none; }
+/* 입력 */
+.gc-f { margin-bottom: 16px; } .gc-f:last-child { margin-bottom: 0; }
+.gc-f > label { display: block; font-size: 13.5px; font-weight: 700; margin-bottom: 7px; color: var(--text); }
+.gc-f > label em { font-style: normal; font-weight: 500; color: var(--text-3); margin-left: 6px; font-size: 12.5px; }
+.gc-in { display: flex; align-items: center; border: 1.5px solid var(--line); border-radius: 12px; background: #fff; padding: 0 14px; height: 50px; }
+.gc-in:focus-within { border-color: var(--gc-ink); background: var(--bg-card); }
+.gc-in input, .gc-in select { flex: 1; border: 0; outline: 0; background: none; font: inherit; font-size: 18px; font-weight: 700; letter-spacing: -.3px; min-width: 0; color: var(--text); font-variant-numeric: tabular-nums; height: 100%; }
+.gc-in span { color: var(--text-3); font-size: 13px; flex: none; }
+.gc-chips { display: flex; gap: 6px; margin: 8px -20px 0; padding: 0 20px 2px; overflow-x: auto; scrollbar-width: none; }
+.gc-chips::-webkit-scrollbar { display: none; }
+.gc-chips button { flex: none; border: 1px solid var(--line); background: var(--bg-card); border-radius: 999px; padding: 7px 12px; font: inherit; font-size: 13px; font-weight: 600; color: var(--text-2); cursor: pointer; }
+.gc-chips button.on { background: var(--gc-ink); border-color: var(--gc-ink); color: #fff; }
+@media (min-width: 860px) { .gc-chips { flex-wrap: wrap; overflow: visible; margin: 8px 0 0; padding: 0; } }
+.gc-step { display: flex; align-items: center; border: 1.5px solid var(--line); border-radius: 12px; background: #fff; height: 50px; }
+.gc-step button { width: 48px; height: 100%; border: 0; background: none; font-size: 22px; color: var(--text-2); cursor: pointer; }
+.gc-step button:hover { color: var(--brand); }
+.gc-step b { flex: 1; text-align: center; font-size: 18px; color: var(--text); font-variant-numeric: tabular-nums; }
+.gc-step b small { font-size: 13px; color: var(--text-3); margin-left: 3px; font-weight: 500; }
+.gc-seg { display: grid; border: 1.5px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; height: 46px; }
+.gc-seg.two { grid-template-columns: 1fr 1fr; }
+.gc-seg button { border: 0; background: none; font: inherit; font-size: 14px; font-weight: 600; color: var(--text-2); border-right: 1px solid var(--line); cursor: pointer; }
+.gc-seg button:last-child { border-right: 0; }
+.gc-seg button.on { background: var(--gc-ink); color: #fff; }
+/* 즉답 표 */
+.gc-tw-wrap { margin-top: 26px; }
+.gc-h2 { font-size: 17px; letter-spacing: -.5px; margin: 0 0 10px; color: var(--text); font-weight: 800; }
+.gc-h2 i { font-style: normal; font-size: 12.5px; color: var(--text-3); font-weight: 600; margin-left: 8px; }
+.gc-tw { overflow-x: auto; background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; -webkit-overflow-scrolling: touch; }
+.gc-tw table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+.gc-tw th, .gc-tw td { padding: 10px 14px; text-align: right; border-bottom: 1px solid var(--line-soft); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.gc-tw th { font-size: 12px; color: var(--text-3); font-weight: 600; background: var(--bg-soft); }
+.gc-tw th:first-child, .gc-tw td:first-child { text-align: left; position: sticky; left: 0; background: var(--bg-card); font-weight: 600; }
+.gc-tw th:first-child { background: var(--bg-soft); }
+.gc-tw tbody tr { cursor: pointer; } .gc-tw tbody tr:hover td { background: var(--bg-soft); }
+.gc-tw tr.hi td, .gc-tw tr.hi:hover td { background: #f3f7f4; font-weight: 700; }
+.gc-tw tr:last-child td { border-bottom: 0; }
+.gc-tn { font-size: 12.5px; color: var(--text-3); margin: 8px 2px 0; }
+
+/* ───────── CALC PAGE v2 (목업 구조: 작은 제목 · 펼친 가이드 · FAQ · 출처 표) ───────── */
+.page-head.v2 { padding: 8px 24px 18px; }
+.page-head.v2 .page-title { font-size: 26px; letter-spacing: -.8px; margin: 0 0 6px; }
+.page-head.v2 .page-sub { font-size: 13px; color: var(--text-3); display: flex; align-items: center; gap: 7px; }
+.page-head.v2 .dot { width: 7px; height: 7px; border-radius: 50%; background: #178f7a; display: inline-block; }
+.guide-section { padding: 30px 24px 0; }
+.gsec { margin-top: 30px; }
+.gsec h2 { display: flex; align-items: baseline; gap: 8px; margin: 0 0 8px; font-size: 17px; letter-spacing: -.5px; font-weight: 800; color: var(--text); }
+.gsec h2 em { font-style: normal; font-size: 13px; color: var(--text-3); font-weight: 600; }
+.gsec-body { font-size: 15px; color: var(--text-2); line-height: 1.75; }
+.gsec-body p { margin: 0 0 8px; } .gsec-body ul, .gsec-body ol { margin: 0; padding-left: 20px; } .gsec-body li { margin-bottom: 5px; }
+.gsec-body table { border-collapse: collapse; width: 100%; font-size: 13.5px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.gsec-body th, .gsec-body td { padding: 9px 12px; border-bottom: 1px solid var(--line-soft); text-align: left; }
+.gsec-body th { font-size: 12px; color: var(--text-3); font-weight: 600; background: var(--bg-soft); }
+.gsec-body tr:last-child td { border-bottom: 0; }
+.gfaq { margin-top: 34px; }
+.gfaq h2 { font-size: 17px; letter-spacing: -.5px; margin: 0 0 10px; font-weight: 800; color: var(--text); }
+.gfaq details { background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px; padding: 0 16px; margin-bottom: 8px; }
+.gfaq summary { list-style: none; cursor: pointer; padding: 13px 0; font-size: 14.5px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; color: var(--text); }
+.gfaq summary::-webkit-details-marker { display: none; }
+.gfaq summary::after { content: "+"; color: var(--text-3); font-weight: 400; font-size: 18px; }
+.gfaq details[open] summary::after { content: "−"; }
+.gfaq details[open] summary { background: none; }
+.gfaq details p { margin: 0 0 14px; font-size: 14px; color: var(--text-2); line-height: 1.7; }
+.src-section { max-width: var(--max); margin: 34px auto 0; padding: 20px 24px 48px; border-top: 1px solid var(--line); }
+.src-section h2 { font-size: 15px; color: var(--text-3); margin: 0 0 10px; font-weight: 700; }
+.srct { border-collapse: collapse; width: 100%; font-size: 13px; }
+.srct th, .srct td { text-align: left; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.srct th { font-size: 12px; color: var(--text-3); font-weight: 600; }
+.srct td:first-child { font-weight: 700; white-space: nowrap; width: 1%; color: var(--text); }
+.srct td:last-child { color: var(--text-3); }
+.src-lim { margin: 12px 0 0; font-size: 13px; color: var(--text-3); }
+.gc-mode { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; background: var(--gc-soft); border-radius: 12px; padding: 4px; margin-bottom: 16px; }
+.gc-mode button { border: 0; background: none; border-radius: 9px; padding: 9px 0; font: inherit; font-size: 13.5px; font-weight: 700; color: var(--text-3); cursor: pointer; }
+.gc-mode button.on { background: #fff; color: var(--gc-ink); box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+.gc-two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; } .gc-two > .gc-f { margin-bottom: 16px; }

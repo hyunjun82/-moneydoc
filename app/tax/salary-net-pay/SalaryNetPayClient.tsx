@@ -1,291 +1,154 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import { calcSalaryNetPay, calcSalaryNetPaySimpleTax, salaryNetPaySpec } from "@/lib/calc/salary-net-pay";
-import { krw, parseKrw } from "@/lib/format";
+import { useState, useMemo, useEffect, useRef } from "react";
+import { calcSalaryNetPaySimpleTax, salaryNetPaySpec } from "@/lib/calc/salary-net-pay";
+import { parseKrw } from "@/lib/format";
 
-// 화면에 찍는 요율은 반드시 계산에 쓰는 상수에서 가져온다.
-// (하드코딩해 두었더니 계산은 4.75%인데 라벨만 4.5%로 남아 있었다.)
-const C = salaryNetPaySpec.constants as {
-  NP_RATE: number; HI_RATE: number; LTC_INCOME_RATE: number; EI_RATE: number;
-};
+/* =========================================================================
+   연봉 실수령액 계산기 — 계산기 v2 목업(calc-salary-v2.html)을 그대로 옮긴 화면.
+   왼쪽 결과(월 실수령액 · 공제 내역 · "연봉 1,000만원 오르면" 한 줄) / 오른쪽 입력(모드 · 칩 · 스테퍼 · 세그먼트)
+   아래 연봉별 표. 숫자는 전부 lib/calc/salary-net-pay(엔진, 홈택스 0원 일치)에서 나온다.
+   간이세액 80/100/120% 는 소득세법 시행령 §194 (100% 세액의 80%·120%, 10원 미만 절사).
+   ========================================================================= */
+
+const C = salaryNetPaySpec.constants as { NP_RATE: number; HI_RATE: number; LTC_INCOME_RATE: number; EI_RATE: number };
 const pct = (v: number) => `${+(v * 100).toFixed(3)}%`;
+const won = (n: number) => Math.round(n).toLocaleString("ko-KR");
+const manwon = (n: number) => (n >= 1e8 ? `${+(n / 1e8).toFixed((n / 1e8) % 1 ? 1 : 0)}억` : `${won(n / 1e4)}만`);
+const cut = (n: number) => Math.floor(n / 10) * 10;
 
-const QUICK_PICKS = [
-  { value: 30000000, label: "3천만" },
-  { value: 50000000, label: "5천만" },
-  { value: 70000000, label: "7천만" },
-  { value: 100000000, label: "1억" },
-  { value: 150000000, label: "1.5억" },
-];
+// 2026 최저임금: 시급 10,320 × 209시간 × 12개월 (고용노동부 2026 고시)
+const MIN_ANNUAL = 10320 * 209 * 12;
+const CHIPS: [number, string][] = [[MIN_ANNUAL, "최저임금"], [3e7, "3천만"], [4e7, "4천만"], [5e7, "5천만"], [6e7, "6천만"], [7e7, "7천만"], [8e7, "8천만"], [9e7, "9천만"], [1e8, "1억"], [1.5e8, "1.5억"]];
+const TARGETS: [number, string][] = [[3e6, "300만"], [3.5e6, "350만"], [4e6, "400만"], [4.5e6, "450만"], [5e6, "500만"], [6e6, "600만"], [7e6, "700만"]];
+const ROWS = [MIN_ANNUAL, 3e7, 4e7, 5e7, 6e7, 7e7, 8e7, 9e7, 1e8, 1.5e8, 2e8];
 
-const SLIDER_MIN = 20_000_000;
-const SLIDER_MAX = 200_000_000;
-const SLIDER_STEP = 1_000_000;
-
-const DONUT_C = 2 * Math.PI * 54;
+type In = { annual: number; dependents: number; kids: number; nontaxable: number };
+function calc(i: In, ratio: number) {
+  const r = calcSalaryNetPaySimpleTax(i);
+  if (ratio === 1) return r;
+  const it = cut(r.monthlyIncomeTax * ratio), lt = it > 0 ? cut(it / 10) : 0;
+  const td = cut(it + lt + r.totalInsurance);
+  return { ...r, monthlyIncomeTax: it, monthlyLocalTax: lt, totalDeduction: td, netMonthly: cut(r.grossMonthly - td) };
+}
+/** 목표 실수령액을 만드는 최소 연봉 (만원 단위) */
+function reverse(target: number, base: Omit<In, "annual">, ratio: number) {
+  let lo = 0, hi = 2_000_000_000;
+  while (hi - lo > 10000) { const mid = Math.floor((lo + hi) / 2 / 10000) * 10000; if (calc({ ...base, annual: mid }, ratio).netMonthly >= target) hi = mid; else lo = mid + 10000; }
+  while (hi > 10000 && calc({ ...base, annual: hi - 10000 }, ratio).netMonthly >= target) hi -= 10000;
+  return hi;
+}
 
 export function SalaryNetPayClient() {
-  const [annual, setAnnual] = useState(50_000_000);
+  const [mode, setMode] = useState<"fwd" | "rev">("fwd");
+  const [annual, setAnnual] = useState(5e7);
+  const [target, setTarget] = useState(4e6);
   const [dependents, setDependents] = useState(1);
-  const [kids, setKids] = useState(0); // 부양가족 중 8~20세 자녀 (간이세액표 자녀 조정)
+  const [kids, setKids] = useState(0);
   const [nontaxable, setNontaxable] = useState(0);
+  const [ratio, setRatio] = useState(1);
+  const [copied, setCopied] = useState(false);
+  const mounted = useRef(false);
 
-  // 메인 = 간이세액표 §134 모드 (회사 매월 떼는 기준, 명세서와 일치)
-  const r = useMemo(
-    () => calcSalaryNetPaySimpleTax({ annual, dependents, kids, nontaxable }),
-    [annual, dependents, kids, nontaxable]
-  );
-  // 참고용 = 1년 정확 환산 (소득세법 §55 누진세율, 연말정산 후 일치)
-  const rAnnual = useMemo(
-    () => calcSalaryNetPay({ annual, dependents, kids }),
-    [annual, dependents, kids]
-  );
+  useEffect(() => {
+    try {
+      const p = new URLSearchParams(window.location.search);
+      if (p.get("a")) setAnnual(+p.get("a")!); if (p.get("t")) setTarget(+p.get("t")!);
+      if (p.get("d")) setDependents(+p.get("d")!); if (p.get("k")) setKids(+p.get("k")!);
+      if (p.get("n")) setNontaxable(+p.get("n")!); if (p.get("r")) setRatio(+p.get("r")!);
+      if (p.get("m") === "rev") setMode("rev");
+    } catch { /* noop */ }
+    mounted.current = true;
+  }, []);
 
-  const netPct = (r.netMonthly / r.monthly) * 100;
-  const donutFilled = DONUT_C * (netPct / 100);
-  const totalTax = r.monthlyIncomeTax + r.monthlyLocalTax;
+  const base = { dependents, kids: Math.min(kids, Math.max(0, dependents - 1)), nontaxable };
+  const effAnnual = mode === "rev" ? reverse(target, base, ratio) : annual;
+  const r = useMemo(() => calc({ ...base, annual: effAnnual }, ratio), [effAnnual, dependents, kids, nontaxable, ratio]); // eslint-disable-line react-hooks/exhaustive-deps
+  const up = calc({ ...base, annual: effAnnual + 1e7 , }, ratio);
+  const gain = up.netMonthly - r.netMonthly;
+
+  useEffect(() => {
+    if (!mounted.current) return;
+    try { window.history.replaceState(null, "", `?${new URLSearchParams({ a: String(effAnnual), t: String(target), d: String(dependents), k: String(kids), n: String(nontaxable), r: String(ratio), m: mode })}`); } catch { /* noop */ }
+  }, [effAnnual, target, dependents, kids, nontaxable, ratio, mode]);
+
+  const copy = async () => { try { await navigator.clipboard.writeText(window.location.href); setCopied(true); setTimeout(() => setCopied(false), 1500); } catch { /* noop */ } };
+  const rows: [string, number][] = [
+    [`국민연금 ${pct(C.NP_RATE)}`, r.nationalPension], [`건강보험 ${pct(C.HI_RATE)}`, r.healthInsurance], [`장기요양 ${pct(C.LTC_INCOME_RATE / 2)}`, r.longTermCare], [`고용보험 ${pct(C.EI_RATE)}`, r.employmentInsurance],
+    [`소득세${ratio !== 1 ? ` (${ratio * 100}%)` : ""}`, r.monthlyIncomeTax], ["지방소득세", r.monthlyLocalTax],
+  ];
+  const table = useMemo(() => ROWS.map((a) => ({ a, r: calcSalaryNetPaySimpleTax({ annual: a, dependents: 1, kids: 0, nontaxable: 0 }) })), []);
 
   return (
-    <>
-      <section className="main">
-        <div className="calc-grid">
-          <div>
-            {/* INPUT PANEL */}
-            <div className="panel">
-              <div className="panel-head">
-                <span className="panel-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 20h9" />
-                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4z" />
-                  </svg>
-                </span>
-                <h2 className="panel-title">정보 입력</h2>
-              </div>
+    <section className="main">
+      <div className="gc">
+        <div className="gc-card gc-res">
+          <div className="gc-res-l"><span>{mode === "rev" ? "필요한 세전 연봉 (비과세 제외)" : "월 실수령액"}</span><button type="button" onClick={copy}>{copied ? "복사됨" : "링크 복사"}</button></div>
+          <div className="gc-res-v">{won(mode === "rev" ? effAnnual : r.netMonthly)}<small>원</small></div>
+          <div className="gc-res-s">{mode === "rev" ? `월 실수령 ${won(r.netMonthly)}원 · 부양가족 ${dependents}명 · 세전 월 ${won(r.grossMonthly)}원` : `연봉 ${manwon(effAnnual)}원 · 부양가족 ${dependents}명 · 세전 월 ${won(r.grossMonthly)}원`}</div>
+          <ul className="gc-rows">
+            {rows.map(([k, v]) => <li key={k}><span>{k}</span><b className="minus">−{won(v)}</b></li>)}
+            <li className="tot"><span>공제 합계</span><b>−{won(r.totalDeduction)}</b></li>
+          </ul>
+          <div className="gc-rev">연봉 1,000만원 오르면 실수령은 월 <b>+{won(gain)}원</b> (연 {won(gain * 12)}원). 인상분의 {Math.round(gain * 12 / 1e7 * 100)}%가 남아요.</div>
+          <div className="gc-trust"><i />국세청 2026.3 간이세액표 · 4대보험 2026 공단 요율 · 홈택스 5케이스 0원 일치</div>
+        </div>
 
-              <div className="input-row">
-                <div className="input-label">
-                  <span className="name">연봉</span>
-                  <span className="hint">세전 기준 (식대·차량유지비 등 비과세 제외)</span>
-                </div>
-                <div className="input-box">
-                  <input
-                    type="text"
-                    inputMode="numeric"
-                    value={annual.toLocaleString("ko-KR")}
-                    onChange={(e) => {
-                      const n = parseKrw(e.target.value);
-                      setAnnual(n);
-                    }}
-                  />
-                  <span className="input-suffix">원</span>
-                </div>
-                <input
-                  type="range"
-                  className="slider"
-                  min={SLIDER_MIN}
-                  max={SLIDER_MAX}
-                  step={SLIDER_STEP}
-                  value={Math.min(Math.max(annual, SLIDER_MIN), SLIDER_MAX)}
-                  onChange={(e) => setAnnual(Number(e.target.value))}
-                />
-                <div className="quick-pick">
-                  {QUICK_PICKS.map((q) => (
-                    <button
-                      key={q.value}
-                      className={annual === q.value ? "active" : ""}
-                      onClick={() => setAnnual(q.value)}
-                      type="button"
-                    >
-                      {q.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="input-row">
-                <div className="select-row">
-                  <div>
-                    <div className="input-label">
-                      <span className="name">부양가족 수</span>
-                      <span className="hint">본인 포함</span>
-                    </div>
-                    <div className="stepper">
-                      <button
-                        onClick={() => setDependents((d) => { const n = Math.max(1, d - 1); setKids((k) => Math.min(k, n - 1)); return n; })}
-                        type="button"
-                      >−</button>
-                      <span className="val">{dependents}</span>
-                      <button onClick={() => setDependents((d) => Math.min(11, d + 1))} type="button">+</button>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="input-label">
-                      <span className="name">8~20세 자녀</span>
-                      <span className="hint">부양가족에 포함된 자녀만</span>
-                    </div>
-                    <div className="stepper">
-                      <button onClick={() => setKids((k) => Math.max(0, k - 1))} type="button">−</button>
-                      <span className="val">{kids}</span>
-                      <button onClick={() => setKids((k) => Math.min(dependents - 1, k + 1))} type="button">+</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="input-row">
-                <div className="input-label">
-                  <span className="name">비과세액 (월)</span>
-                  <span className="hint">식대·차량유지비 등, 일반적으로 0~20만</span>
-                </div>
-                <div className="input-box">
-                  <input
-                    type="text"
-                    inputMode="numeric"
-                    value={nontaxable.toLocaleString("ko-KR")}
-                    onChange={(e) => {
-                      const n = parseKrw(e.target.value);
-                      setNontaxable(Math.min(1_000_000, Math.max(0, n)));
-                    }}
-                  />
-                  <span className="input-suffix">원</span>
-                </div>
-              </div>
+        <div className="gc-card">
+          <div className="gc-mode">
+            <button type="button" className={mode === "fwd" ? "on" : ""} onClick={() => setMode("fwd")}>연봉 → 실수령액</button>
+            <button type="button" className={mode === "rev" ? "on" : ""} onClick={() => setMode("rev")}>실수령액 → 연봉</button>
+          </div>
+          {mode === "fwd" ? (
+            <div className="gc-f">
+              <label>연봉<em>세전, 비과세 제외</em></label>
+              <div className="gc-in"><input type="text" inputMode="numeric" value={won(annual)} onChange={(e) => setAnnual(parseKrw(e.target.value))} /><span>원</span></div>
+              <div className="gc-chips">{CHIPS.map(([v, l]) => <button key={v} type="button" className={v === annual ? "on" : ""} onClick={() => setAnnual(v)}>{l}</button>)}</div>
             </div>
-
-            {/* DONUT VIZ */}
-            <div className="viz-card">
-              <div className="viz-head">한눈에 보는 공제 비율</div>
-              <div className="donut-wrap">
-                <div className="donut">
-                  <svg width="130" height="130" viewBox="0 0 130 130">
-                    <circle className="ring-bg" cx="65" cy="65" r="54" />
-                    <circle
-                      className="ring-fill"
-                      cx="65"
-                      cy="65"
-                      r="54"
-                      strokeDasharray={`${donutFilled} ${DONUT_C}`}
-                    />
-                  </svg>
-                  <div className="center">
-                    <div className="pct">
-                      <span>{netPct.toFixed(1)}</span>%
-                    </div>
-                    <div className="lbl">실수령 비율</div>
-                  </div>
-                </div>
-                <div className="donut-legend">
-                  <div className="legend-row">
-                    <span className="lhs"><span className="swatch s-net" />실수령</span>
-                    <span className="val">{krw(r.netMonthly)}</span>
-                  </div>
-                  <div className="legend-row">
-                    <span className="lhs"><span className="swatch s-ins" />4대보험</span>
-                    <span className="val">−{krw(r.totalInsurance)}</span>
-                  </div>
-                  <div className="legend-row">
-                    <span className="lhs"><span className="swatch s-tax" />소득세·지방세</span>
-                    <span className="val">−{krw(totalTax)}</span>
-                  </div>
-                </div>
-              </div>
+          ) : (
+            <div className="gc-f">
+              <label>목표 월 실수령액<em>통장에 찍히길 바라는 금액</em></label>
+              <div className="gc-in"><input type="text" inputMode="numeric" value={won(target)} onChange={(e) => setTarget(parseKrw(e.target.value))} /><span>원</span></div>
+              <div className="gc-chips">{TARGETS.map(([v, l]) => <button key={v} type="button" className={v === target ? "on" : ""} onClick={() => setTarget(v)}>{l}</button>)}</div>
+            </div>
+          )}
+          <div className="gc-two">
+            <div className="gc-f">
+              <label>부양가족<em>본인 포함</em></label>
+              <div className="gc-step"><button type="button" onClick={() => setDependents(Math.max(1, dependents - 1))}>−</button><b>{dependents}</b><button type="button" onClick={() => setDependents(Math.min(11, dependents + 1))}>+</button></div>
+            </div>
+            <div className="gc-f">
+              <label>8~20세 자녀<em>부양가족 중</em></label>
+              <div className="gc-step"><button type="button" onClick={() => setKids(Math.max(0, kids - 1))}>−</button><b>{Math.min(kids, Math.max(0, dependents - 1))}</b><button type="button" onClick={() => setKids(Math.min(dependents - 1, kids + 1))}>+</button></div>
             </div>
           </div>
-
-          {/* RESULT PANEL */}
-          <div className="panel">
-            <div className="panel-head">
-              <span className="panel-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M3 3v18h18" />
-                  <path d="M18 17V9M13 17V5M8 17v-3" />
-                </svg>
-              </span>
-              <h2 className="panel-title">계산 결과</h2>
-            </div>
-
-            <div className="result-hero">
-              <div className="result-label">월 실수령액 (간이세액표 §134 · 명세서 기준)</div>
-              <div>
-                <span className="result-value">{krw(r.netMonthly)}</span>
-                <span className="result-unit">원</span>
-              </div>
-              <div className="result-sub">
-                연 환산 <b>{krw(r.netMonthly * 12)}</b>원 · 공제율 <b>{r.deductRatePct.toFixed(1)}</b>%
-              </div>
-              <div style={{ marginTop: 14, paddingTop: 14, borderTop: "1px solid var(--line-soft)", fontSize: 13, color: "var(--text-2)" }}>
-                <b>참고:</b> 1년 정확 환산(소득세법 §55) <b style={{ color: "var(--brand)" }}>{krw(rAnnual.netMonthly)}원</b>
-                <span style={{ marginLeft: 6, color: "var(--text-3)" }}>
-                  · 차이는 연말정산 후 일치
-                </span>
-              </div>
-            </div>
-
-            <div className="breakdown-list">
-              <div className="b-row">
-                <span className="name">월 세전 급여</span>
-                <span className="val">{krw(r.grossMonthly)}</span>
-              </div>
-              <div className="b-row">
-                <span className="name">국민연금 <span className="tag minus">−{pct(C.NP_RATE)}</span></span>
-                <span className="val minus">−{krw(r.nationalPension)}</span>
-              </div>
-              <div className="b-row">
-                <span className="name">건강보험 <span className="tag minus">−{pct(C.HI_RATE)}</span></span>
-                <span className="val minus">−{krw(r.healthInsurance)}</span>
-              </div>
-              <div className="b-row">
-                <span className="name">장기요양 <span className="tag minus">−보수의 {pct(C.LTC_INCOME_RATE / 2)}</span></span>
-                <span className="val minus">−{krw(r.longTermCare)}</span>
-              </div>
-              <div className="b-row">
-                <span className="name">고용보험 <span className="tag minus">−{pct(C.EI_RATE)}</span></span>
-                <span className="val minus">−{krw(r.employmentInsurance)}</span>
-              </div>
-              <div className="b-row">
-                <span className="name">소득세 <span className="tag minus">간이세액표 §134</span></span>
-                <span className="val minus">−{krw(r.monthlyIncomeTax)}</span>
-              </div>
-              <div className="b-row">
-                <span className="name">지방소득세 <span className="tag minus">−소득세의 10%</span></span>
-                <span className="val minus">−{krw(r.monthlyLocalTax)}</span>
-              </div>
-              <div className="b-row total">
-                <span className="name">총 공제액</span>
-                <span className="val">−{krw(r.totalDeduction)}</span>
-              </div>
+          <div className="gc-f">
+            <label>비과세액<em>월 · 식대 등, 보통 0~20만</em></label>
+            <div className="gc-in"><input type="text" inputMode="numeric" value={won(nontaxable)} onChange={(e) => setNontaxable(parseKrw(e.target.value))} /><span>원</span></div>
+          </div>
+          <div className="gc-f">
+            <label>간이세액 비율<em>회사 신청값 · 명세서와 맞출 때</em></label>
+            <div className="gc-seg" style={{ gridTemplateColumns: "repeat(3,1fr)" }}>
+              {[0.8, 1, 1.2].map((v) => <button key={v} type="button" className={ratio === v ? "on" : ""} onClick={() => setRatio(v)}>{v * 100}%</button>)}
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* STEPS */}
-      <section className="steps-section">
-        <h3 className="steps-title">계산이 이렇게 진행됩니다</h3>
-        <div className="steps">
-          <div className="step">
-            <div className="label">월 급여</div>
-            <div className="value">{krw(r.grossMonthly)}</div>
-          </div>
-          <div className="step">
-            <div className="label">4대보험 차감</div>
-            <div className="value">−{krw(r.totalInsurance)}</div>
-          </div>
-          <div className="step">
-            <div className="label">과세 표준 (월)</div>
-            <div className="value">{krw(r.grossMonthly - r.totalInsurance)}</div>
-          </div>
-          <div className="step">
-            <div className="label">소득세·지방세 차감</div>
-            <div className="value">−{krw(totalTax)}</div>
-          </div>
-          <div className="step highlight">
-            <div className="label">실수령액</div>
-            <div className="value">{krw(r.netMonthly)}</div>
-          </div>
-        </div>
-      </section>
-    </>
+      <div className="gc-tw-wrap">
+        <h2 className="gc-h2">연봉별 실수령액<i>2026년 · 부양가족 1명 · 비과세 0</i></h2>
+        <div className="gc-tw"><table>
+          <thead><tr><th>연봉</th><th>월 세전</th><th>4대보험</th><th>소득세+지방세</th><th>월 실수령</th><th>연 실수령</th></tr></thead>
+          <tbody>
+            {table.map(({ a, r: t }) => (
+              <tr key={a} className={a === effAnnual ? "hi" : ""} onClick={() => { setMode("fwd"); setAnnual(a); }} title="이 연봉으로 계산">
+                <td>{a === MIN_ANNUAL ? `최저임금 (${manwon(a)})` : manwon(a)}</td><td>{won(t.grossMonthly)}</td><td>{won(t.totalInsurance)}</td><td>{won(t.monthlyIncomeTax + t.monthlyLocalTax)}</td><td>{won(t.netMonthly)}</td><td>{won(t.netMonthly * 12)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table></div>
+        <p className="gc-tn">최저임금은 시급 10,320원 × 209시간 × 12개월 = {won(MIN_ANNUAL)}원(고용노동부 2026 고시). 표는 계산 엔진이 만들어요. 줄을 누르면 그 연봉으로 계산돼요.</p>
+      </div>
+    </section>
   );
 }

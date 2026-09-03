@@ -3,12 +3,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ARTICLES } from './convert-previews.mjs';
+import { ARTICLES as V2 } from './article-template/articles/index.mjs';
 
 const ROOT = process.cwd();
 
 // 이전부터 있던 글 5편 (public/_preview 에서 생성된 것이 아니라 손으로 쓴 글)
 const EXISTING = [
-  { cat: 'government', catLabel: '정부지원금', href: '/government/unemployment-benefit-guide/',      title: '실업급여 조건·금액·신청방법 총정리',      blurb: '2026년 상한 68,100원 · 하한 66,048원' },
   { cat: 'government', catLabel: '정부지원금', href: '/government/earned-income-tax-credit-guide/',  title: '근로장려금 지급일 2026, 8월 27일 지급',    blurb: '단독 165만 · 홑벌이 285만 · 맞벌이 330만' },
   { cat: 'government', catLabel: '정부지원금', href: '/government/earned-income-tax-credit-check/',  title: '근로장려금 지급액 조회 방법',              blurb: '홈택스·손택스 · ARS 1544-9944' },
   { cat: 'government', catLabel: '정부지원금', href: '/government/youth-future-savings-guide/',      title: '청년미래적금 계좌개설·가입조건·수령액',    blurb: '정부기여금 6% vs 12% 비교' },
@@ -28,6 +28,12 @@ const rows = [
       title: JSON.parse(`"${title}"`),
       blurb: a.blurb,
     };
+  }),
+  ...V2.map((a) => {
+    const data = fs.readFileSync(path.join(ROOT, 'moneydoc-data/articles', a.cat, `${a.slug}.ts`), 'utf8');
+    const title = /title: "((?:[^"\\]|\\.)*)"/.exec(data)?.[1];
+    if (!title) throw new Error(`${a.slug}: title 추출 실패`);
+    return { cat: a.cat, catLabel: a.catLabel, href: `/${a.cat}/${a.slug}/`, title: JSON.parse(`"${title}"`), blurb: a.blurb };
   }),
   ...EXISTING,
 ];
