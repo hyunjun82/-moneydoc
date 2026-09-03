@@ -20,4 +20,6 @@ export const ARTICLES = [
   { slug: 'comprehensive-real-estate-tax-guide', cat: 'realestate', catLabel: '부동산', crumb: '종합부동산세', blurb: '공시가 합산 · 1주택 12억 공제 · 재산세액공제 · 고령자·장기보유 80%' },
   { slug: 'annual-leave-allowance-guide', cat: 'law', catLabel: '법률', crumb: '연차수당', blurb: '연차 15일·25일 한도 · 1년 미만 11일 · 통상임금 하루치 · 촉진 절차' },
   { slug: 'unpaid-wages-guide', cat: 'law', catLabel: '법률', crumb: '임금체불', blurb: '14일 지급기한 · 연 20% 지연이자 표 · 진정 절차 · 대지급금 요건' },
+  { slug: 'severance-claim-form-guide', cat: 'law', catLabel: '법률', crumb: '퇴직금 지급명령', blurb: '지급명령 신청서 · 소장 양식 · 인지대 계산표 · 관할 법원 · 2주 이의' },
+  { slug: 'basic-pension-guide', cat: 'government', catLabel: '정부지원금', crumb: '기초연금', blurb: '65세·선정기준액 · 소득인정액 계산 · 국민연금 연계 · 신청 4단계' },
 ];

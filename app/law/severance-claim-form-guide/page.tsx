@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { ArticleV2 } from "@/components/ArticleV2";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/government/basic-pension-guide";
+import { meta, faqLd, html, scriptKey } from "@/data/articles/law/severance-claim-form-guide";
 
-const PAGE_URL = "https://moneydoc.kr/government/basic-pension-guide/";
+const PAGE_URL = "https://moneydoc.kr/law/severance-claim-form-guide/";
 
 export const metadata: Metadata = {
   title: meta.title,
   description: meta.description,
-  alternates: { canonical: "/government/basic-pension-guide/" },
+  alternates: { canonical: "/law/severance-claim-form-guide/" },
   robots: { index: true, follow: true, "max-image-preview": "large" },
   openGraph: {
     type: "article",
@@ -29,9 +29,9 @@ export default function Page() {
       faqLd={faqLd}
       scriptKey={scriptKey}
       url={PAGE_URL}
-      cat="government"
-      catLabel="정부지원금"
-      crumb="기초연금"
+      cat="law"
+      catLabel="법률"
+      crumb="퇴직금 지급명령"
     />
   );
 }
