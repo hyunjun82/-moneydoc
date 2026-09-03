@@ -342,7 +342,7 @@ export const asideHtml = `<div class="ax-side"><h4>세금 계산기</h4>
 
 <div class="ax-side"><h4>같은 분류의 글</h4>
 <a class="ax-rel" href="undefined">연봉 실수령액과 공제 항목<span>급여</span></a>
-<a class="ax-rel" href="/tax/four-major-insurance-guide/">4대보험 요율 2026<span>보험료</span></a>
+<a class="ax-rel" href="undefined">4대보험 요율 2026<span>보험료</span></a>
 <a class="ax-rel" href="/realestate/transfer-tax-guide/">1세대 1주택 양도세 비과세<span>양도세</span></a>
 </div>`;
 

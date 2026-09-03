@@ -251,7 +251,7 @@ export const asideHtml = `<div class="ax-side"><h4>근로 계산기</h4>
 
 <div class="ax-side"><h4>같은 분류의 글</h4>
 <a class="ax-rel" href="/law/severance-pay/">퇴직금 계산 방법과 평균임금<span>퇴직금</span></a>
-<a class="ax-rel" href="/tax/four-major-insurance-guide/">4대보험 요율 2026<span>급여</span></a>
+<a class="ax-rel" href="undefined">4대보험 요율 2026<span>급여</span></a>
 <a class="ax-rel" href="undefined">2026 연봉 실수령액 표<span>연봉</span></a>
 </div>`;
 

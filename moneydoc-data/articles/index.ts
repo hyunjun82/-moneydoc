@@ -38,13 +38,6 @@ export const GUIDES: GuideLink[] = [
     "blurb": "소득인정액 기준과 감액 구조"
   },
   {
-    "cat": "tax",
-    "catLabel": "세금",
-    "href": "/tax/four-major-insurance-guide/",
-    "title": "4대보험 요율 2026, 회사가 나보다 더 낸다는 사실",
-    "blurb": "국민연금 4.75% · 건보 3.595% (2026년)"
-  },
-  {
     "cat": "law",
     "catLabel": "법률",
     "href": "/law/annual-leave-allowance-guide/",
@@ -113,6 +106,13 @@ export const GUIDES: GuideLink[] = [
     "href": "/law/severance-pay-guide/",
     "title": "퇴직금 계산 방법과 지급기준, 내 퇴직금 얼마인가요",
     "blurb": "평균임금 계산 순서 · 근속·월급별 표 · 14일 지급기한과 중간정산"
+  },
+  {
+    "cat": "tax",
+    "catLabel": "세금",
+    "href": "/tax/four-major-insurance-guide/",
+    "title": "2026년 4대보험 요율과 계산, 월급에서 떼는 돈과 회사 부담",
+    "blurb": "요율 4가지 · 월급별 공제액 표 · 회사 부담 · 4월 정산"
   },
   {
     "cat": "government",
