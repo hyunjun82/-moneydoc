@@ -11,10 +11,10 @@
 const strip = (s) => String(s ?? '').replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<style[\s\S]*?<\/style>/g, ' ').replace(/\s(href|src|data-[\w-]+|id|class|style|value|min|max|step)="[^"]*"/g, ' ').replace(/<[^>]+>/g, ' ').replace(/&[a-z]+;/g, ' ').replace(/\s+/g, ' ');
 const norm = (s) => s.replace(/[,\s]/g, '');
 // 법령은 "11만3500원"처럼 쓴다 → 113500 도 같이 넣어 둔다
-const expandKo = (s) => s.replace(/(\d+)만\s?(\d{1,4})?\s?원?/g, (m, a, b) => `${m} ${Number(a) * 10000 + Number(b || 0)}`).replace(/(\d+)억\s?(\d{1,4})?만?/g, (m, a, b) => `${m} ${Number(a) * 1e8 + Number(b || 0) * 1e4}`);
+const expandKo = (s) => s.replace(/(\d[\d,]*)천원/g, (m, a) => `${m} ${Number(a.replace(/,/g, '')) * 1000}`).replace(/(\d+)만\s?(\d{1,4})?\s?원?/g, (m, a, b) => `${m} ${Number(a) * 10000 + Number(b || 0)}`).replace(/(\d+)억\s?(\d{1,4})?만?/g, (m, a, b) => `${m} ${Number(a) * 1e8 + Number(b || 0) * 1e4}`);
 const ko = (s) => s.replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
 
-export function factCheck({ html, evidence, engineNums, brief }) {
+export function factCheck({ html, evidence, engineNums, brief, claims }) {
   const text = strip(html);
   const evNorm = evidence.map((e) => norm(expandKo(e.text)));
   const evAll = evNorm.join('\n');
@@ -48,6 +48,13 @@ export function factCheck({ html, evidence, engineNums, brief }) {
     const n = c.replace(/^§/, '제').replace(/^제(\d+)$/, '제$1조');
     const alt = c.startsWith('별표') ? [c, c.replace('별표', '별표 ')] : [n, n.replace('제', '제 ')];
     if (!alt.some((a) => evAll.includes(norm(a)))) problems.push(`조문 근거 없음: ${c}`);
+  }
+
+  // 2.5) 인용: 스펙 claims[{src, quote}] 의 quote 가 그 근거(src=번호) 텍스트에 그대로 있어야 한다 (해석 오류 차단)
+  for (const c of claims ?? []) {
+    const ev = evidence.find((e) => e.n === c.src);
+    if (!ev) { problems.push(`인용 근거 번호 없음: src=${c.src}`); continue; }
+    if (!norm(ev.text).includes(norm(c.quote))) problems.push(`인용이 근거 ${c.src}에 없음: "${c.quote.slice(0, 60)}…"`);
   }
 
   // 3) 키워드

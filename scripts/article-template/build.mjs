@@ -79,7 +79,7 @@ for (const slug of slugs) {
   const brief = JSON.parse(fs.readFileSync(briefPath, 'utf8'));
   const evidence = fs.existsSync(evDir) ? fs.readdirSync(evDir).filter((f) => f.endsWith('.json')).map((f) => JSON.parse(fs.readFileSync(path.join(evDir, f), 'utf8'))) : [];
   if (evidence.length < brief.sources.length) { console.error(`✗ ${slug}: 근거 ${evidence.length}/${brief.sources.length} — evidence.mjs 먼저`); failed++; continue; }
-  const fc = factCheck({ html, evidence, engineNums: eng.nums, brief });
+  const fc = factCheck({ html, evidence, engineNums: eng.nums, brief, claims: a.claims });
   if (fc.problems.length) {
     console.error(`✗ ${slug}: 사실 대조 FAIL (${fc.problems.length})`);
     for (const p of fc.problems) console.error(`   - ${p}`);

@@ -19,6 +19,21 @@ const BAD_DASH = /[—|]/;
 const FORMAL = /(합니다|입니다|됩니다|습니다|십시오)(?=[\s.,!?)]|$)/;
 const LAW_INLINE = /(§\s?\d+|제\d+조|시행령\s*제|시행규칙\s*제|별표\s?\d)/;
 const SELF_REF = /(검증했어요|확인했어요|맞춰 봤|대조했어요)/;
+// 번역투·AI투 (fluent-korean · korean-report-style 규칙 중 기계 검사 가능한 것만). 걸리면 FAIL.
+const AWKWARD = [
+  [/에 대한 (이해|설명|정보|내용|부분)/, '"~에 대한 ○○" → "~을 ○○"'],
+  [/하는 것이다|하는 것입니다|되는 것이다/, '"~하는 것이다" 명사화 → 동사로'],
+  [/되어지|되어져|되여/, '이중 피동 "~되어지다"'],
+  [/(있어서는|에 있어서)/, '"~에 있어서" → "~에서" 또는 삭제'],
+  [/을 통해서|를 통해서|을 통하여|를 통하여/, '"~을 통해" → "~로", "~해서"'],
+  [/(적인|적으로) (측면|부분|관점)/, '"~적인 측면" 번역투'],
+  [/시키(는|고|며|다)(?! 위|주)/, '"~시키다" 남용 (동사 그대로)'],
+  [/그럼에도 불구하고/, '"그럼에도 불구하고" → "그래도"'],
+  [/필요로 하(는|다|고)/, '"필요로 하다" → "필요하다"'],
+  [/이러한|그러한|저러한/, '"이러한" → "이런"'],
+  [/할 수 있게 됩니다|할 수 있게 돼요|하게 됩니다/, '"~하게 되다" 피동 남용'],
+  [/(여러분|독자 여러분)/, '독자 호칭 금지'],
+];
 // 한글은 \b 가 안 먹는다. 질문형 어미나 검색어 핵심어가 들어 있으면 통과.
 const PAA = /(나요|가요|까요|무엇|어떻게|얼마|언제|몇|왜|어디|어느|방법|조건|기준|비교|정리|단계|전체|총정리)/;
 
@@ -31,6 +46,7 @@ export function lint(a) {
     if (FORMAL.test(t)) add(where, `합니다체: "${t.match(FORMAL)[0]}"`);
     if (law && LAW_INLINE.test(t)) add(where, `본문 법 조문 인용: "${t.match(LAW_INLINE)[0]}" (출처·각주로)`);
     if (SELF_REF.test(t)) add(where, `자기 언급: "${t.match(SELF_REF)[0]}"`);
+    for (const [re, why] of AWKWARD) if (re.test(t)) add(where, `번역투: ${why} ← "${t.match(re)[0]}"`);
     for (const s of sentences(t)) if (s.length > len) add(where, `문장 ${s.length}자 (>${len}): "${s.slice(0, 50)}…"`);
   };
 
@@ -91,6 +107,8 @@ export function lint(a) {
   if (!srcKeys.includes('법령')) add('sources', '법령 항목 없음');
   if (!srcKeys.some((k) => /정부 도구|정부 안내/.test(k))) add('sources', '정부 도구·안내 항목 없음');
   if ((a.related?.length ?? 0) < 2) add('related', '관련 글 2개 이상');
+  if ((a.claims?.length ?? 0) < 5) add('claims', `근거 인용(claims) ${a.claims?.length ?? 0}개 (조건·기준을 말하는 문장마다 원문 인용, 5개 이상)`);
+  for (const c of a.claims ?? []) if (!c.src || !c.quote || c.quote.length < 8) add('claims', '각 인용은 { src: 근거번호, quote: 원문 8자 이상 }');
   return out;
 }
 
