@@ -104,15 +104,22 @@ export const GUIDES: GuideLink[] = [
     "cat": "law",
     "catLabel": "법률",
     "href": "/law/severance-pay-guide/",
-    "title": "퇴직금 계산 방법과 지급기준, 내 퇴직금 얼마인가요",
+    "title": "퇴직금 계산 방법과 지급기준, 평균임금부터 14일 지급기한까지",
     "blurb": "평균임금 계산 순서 · 근속·월급별 표 · 14일 지급기한과 중간정산"
   },
   {
     "cat": "tax",
     "catLabel": "세금",
     "href": "/tax/four-major-insurance-guide/",
-    "title": "2026년 4대보험 요율과 계산, 월급에서 떼는 돈과 회사 부담",
+    "title": "2026년 4대보험 요율과 계산, 월급에서 떼는 돈부터 회사 부담까지",
     "blurb": "요율 4가지 · 월급별 공제액 표 · 회사 부담 · 4월 정산"
+  },
+  {
+    "cat": "tax",
+    "catLabel": "세금",
+    "href": "/tax/part-time-insurance-guide/",
+    "title": "아르바이트 4대보험 가입 기준과 보험료, 주 15시간부터 퇴사 후까지",
+    "blurb": "주 15시간·월 60시간 기준 · 시간별 보험료 · 사업주 의무"
   },
   {
     "cat": "government",

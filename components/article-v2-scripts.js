@@ -827,4 +827,42 @@ function mdSalary(annual, dependents, kids, nontaxable){
   ['wm','wn','ww'].forEach(function(id){document.getElementById(id).addEventListener('input',irender);document.getElementById(id).addEventListener('change',irender)}); irender();
 
   },
+  "part-time-insurance-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
+
+  var NP_RATE=0.0475, NP_CAP=6590000, NP_FLOOR=410000, HI_RATE=0.03595, EI_RATE=0.009, EI_EMP=0.0115, LTC=0.009448, WC=0.007;
+  function partTime(hours, wage){
+    var cut=function(n){return Math.floor(n/10)*10}, fl=function(x){return Math.floor(Math.round(x*1e6)/1e6)};
+    var weekly = hours + (hours >= 15 ? hours/5 : 0);            // 주 15시간 이상이면 주휴수당
+    var pay = Math.round(wage * weekly * 52 / 12 / 10) * 10;
+    var npb = pay < NP_FLOOR ? NP_FLOOR : (pay >= NP_CAP ? NP_CAP : pay);
+    var np=cut(fl(npb*NP_RATE)), hi=cut(fl(pay*HI_RATE)), ltc=cut(fl(pay*LTC/2)), ei=cut(fl(pay*EI_RATE));
+    var er=np+hi+ltc+cut(fl(pay*EI_EMP))+cut(fl(pay*WC));
+    var emp=np+hi+ltc+ei;
+    return { pay: pay, emp: emp, er: er, net: pay-emp };
+  }
+
+  function prender(){ var h=+document.getElementById('wh').value||0, g=+document.getElementById('wg').value||0; if(h<=0||g<=0)return; var r=partTime(h,g);
+    document.getElementById('wpay').textContent=won(r.pay)+'원'; document.getElementById('wemp').textContent=won(r.emp)+'원'; document.getElementById('wer').textContent=won(r.er)+'원'; document.getElementById('wnet').textContent=won(r.net)+'원'; }
+  ['wh','wg'].forEach(function(id){document.getElementById(id).addEventListener('input',prender)}); prender();
+
+  },
 };

@@ -11,4 +11,5 @@ export const ARTICLES = [
   { slug: 'salary-net-pay-guide', cat: 'tax', catLabel: '세금', crumb: '연봉 실수령액', blurb: '연봉 2,400만~2억 실수령액 표 · 4대보험 요율 · 명세서와 다른 이유' },
   { slug: 'severance-pay-guide', cat: 'law', catLabel: '법률', crumb: '퇴직금', blurb: '평균임금 계산 순서 · 근속·월급별 표 · 14일 지급기한과 중간정산' },
   { slug: 'four-major-insurance-guide', cat: 'tax', catLabel: '세금', crumb: '4대보험', blurb: '요율 4가지 · 월급별 공제액 표 · 회사 부담 · 4월 정산' },
+  { slug: 'part-time-insurance-guide', cat: 'tax', catLabel: '세금', crumb: '아르바이트 4대보험', blurb: '주 15시간·월 60시간 기준 · 시간별 보험료 · 사업주 의무' },
 ];
