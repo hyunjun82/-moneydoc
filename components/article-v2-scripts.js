@@ -754,4 +754,40 @@ function mdSalary(annual, dependents, kids, nontaxable){
   ['wa','wd','wk','wn'].forEach(function(id){document.getElementById(id).addEventListener('input',wrender)}); wrender();
 
   },
+  "severance-pay-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
+
+  // 고용노동부 계산기 산식 (retire_cal.js): 평균임금은 소수 둘째자리 올림, 퇴직금은 반올림 후 버림
+  function sevCalc(monthly, years, bonus){
+    var days = Math.round(years * 365);
+    var sumday = 92;                       // 1월 1일 퇴사 기준 직전 3개월(10~12월)
+    var three = monthly * 3 + bonus * 0.25;
+    var avg = Math.ceil((three / sumday) * 100) / 100;
+    var sev = Math.floor(Math.round(avg * 30 * days / 365));
+    return { sev: sev, avg: avg, days: days, three: three };
+  }
+
+  function srender(){ var m=(+document.getElementById('ws').value||0)*1e4, y=+document.getElementById('wy').value||1, bn=(+document.getElementById('wb').value||0)*1e4; if(m<=0)return; var r=sevCalc(m,y,bn);
+    document.getElementById('wsev').textContent=won(r.sev)+'원'; document.getElementById('wavg').textContent=won(r.avg)+'원'; document.getElementById('wdays').textContent=r.days+'일'; document.getElementById('wmon').textContent=(r.sev/m).toFixed(1)+'개월치'; }
+  ['ws','wy','wb'].forEach(function(id){document.getElementById(id).addEventListener('input',srender)}); srender();
+
+  },
 };

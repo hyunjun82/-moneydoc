@@ -297,7 +297,7 @@ export const asideHtml = `<div class="ax-side"><h4>정부지원금 계산기</h4
 </ol></div>
 
 <div class="ax-side"><h4>같은 분류의 글</h4>
-<a class="ax-rel" href="/law/severance-pay-guide/">퇴직금 계산 방법과 평균임금<span>퇴직금</span></a>
+<a class="ax-rel" href="undefined">퇴직금 계산 방법과 평균임금<span>퇴직금</span></a>
 <a class="ax-rel" href="/tax/four-major-insurance-guide/">4대보험 요율 2026<span>급여</span></a>
 <a class="ax-rel" href="/law/annual-leave-allowance-guide/">연차수당 계산과 소멸<span>연차</span></a>
 </div>`;

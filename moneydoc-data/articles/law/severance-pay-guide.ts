@@ -1,391 +1,219 @@
-// 자동 생성: scripts/convert-previews.mjs — 직접 수정하지 말 것
-// 원본: public/_preview/1-퇴직금-계산방법.html
+// 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
+// 원본: public/_preview/article-v2-severance-pay-guide.html
 export const meta = {
-  title: "퇴직금 계산 방법과 평균임금 산정기준, 퇴사일 따라 달라집니다",
-  description: "퇴직금 계산법과 평균임금 산정기준. 3개월 총일수가 89일이냐 92일이냐에 따라 1일 평균임금이 3,298원 달라집니다. 통상임금이 더 큰 경우까지 법령 원문으로 정리했습니다.",
-  datePublished: "2026-09-01",
-  dateModified: "2026-09-01",
+  title: "퇴직금 계산 방법과 지급기준, 내 퇴직금 얼마인가요",
+  description: "월급 300만원으로 5년 일하고 그만두면 퇴직금은 14,673,913원이에요. 퇴직금은 평균임금 기준이라 상여금과 연차수당까지 들어가요. 계산 순서, 근속별·월급별 금액표, 14일 지급기한, 못 받았을 때 신고 방법을 정리했어요.",
+  datePublished: "2026-09-02",
+  dateModified: "2026-09-02",
   url: "https://moneydoc.kr/law/severance-pay-guide/",
+  image: "https://moneydoc.kr/og/severance-pay-guide.png",
+  imageAlt: "퇴직금 계산 방법. 월급 300만원으로 5년 일하면 퇴직금 14,673,913원",
 };
 
-export const widgetKey = "severance";
+export const scriptKey = "severance-pay-guide";
 
-export const widgetHtml = `<div class="ax-wg" id="wg1">
-<div class="ax-wg-h"><b>평균임금 간이 산정</b>
-<span>퇴사일과 급여를 넣으면 3개월 총일수와 1일 평균임금이 나옵니다</span></div>
-<div class="ax-wg-in">
-  <label class="ax-wg-f"><em>퇴사일</em><input type="date" id="ret" value="2026-01-01"></label>
-  <label class="ax-wg-f"><em>월 기본급 (원)</em><input type="number" id="pay" value="3000000" step="100000" min="0"></label>
-  <label class="ax-wg-f"><em>연간 상여금 (원)</em><input type="number" id="bonus" value="0" step="500000" min="0"></label>
-  <label class="ax-wg-f"><em>전년 미사용 연차수당 (원)</em><input type="number" id="leave" value="0" step="100000" min="0"></label>
+export const html = `<h1>퇴직금 계산 방법과 지급기준, 내 퇴직금 얼마인가요</h1>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용노동부 퇴직금 계산기와 1원 단위 일치 · 2026-09-02</span></div>
+<img class="v2-hero" src="/og/severance-pay-guide.png" width="1200" height="630" alt="퇴직금 계산 방법. 월급 300만원으로 5년 일하면 퇴직금 14,673,913원">
+<p class="v2-lead v2-intro">퇴직금은 "월급 곱하기 근속연수"가 아니에요. 퇴사 직전 3개월 평균임금으로 계산하고, 그 안에 상여금과 연차수당까지 들어가요. 월급 300만원으로 5년 일했다면 14,673,913원이고, 같은 조건에서 상여금 600만원과 연차수당이 있으면 17,608,697원으로 늘어요. 계산 순서, 근속별 금액표, 지급 기한과 못 받았을 때 할 일을 순서대로 정리했어요.</p>
+<section class="v2-answer" aria-label="즉답">
+  <div class="v2-lbl">퇴사 전 월급을 고르면 바로 답해요 (5년 근무 기준)</div>
+  <div class="v2-chips" id="qchips" data-q='[{&quot;big&quot;:&quot;12,228,261원&quot;,&quot;unit&quot;:&quot;퇴직금&quot;,&quot;sub&quot;:&quot;하루 평균임금 81,522원 × 30일 × 5년&quot;},{&quot;big&quot;:&quot;14,673,913원&quot;,&quot;unit&quot;:&quot;퇴직금&quot;,&quot;sub&quot;:&quot;하루 평균임금 97,826원 × 30일 × 5년&quot;},{&quot;big&quot;:&quot;19,565,218원&quot;,&quot;unit&quot;:&quot;퇴직금&quot;,&quot;sub&quot;:&quot;하루 평균임금 130,435원 × 30일 × 5년&quot;}]'><button type="button" data-i="0" aria-pressed="false">250만원</button><button type="button" data-i="1" aria-pressed="true">300만원</button><button type="button" data-i="2" aria-pressed="false">400만원</button></div>
+  <div class="v2-big" id="qnet">14,673,913원<small>퇴직금</small></div>
+  <div class="v2-sub" id="qsub">하루 평균임금 97,826원 × 30일 × 5년</div>
+  <div class="v2-split">
+    <div class="v2-box"><b>1년 이상 일해야 받아요</b><span>계속근로기간 1년 미만이거나 4주 평균 주 15시간 미만이면 퇴직금 의무가 없어요</span></div>
+    <div class="v2-box"><b>근속 1년당 약 2,934,783원</b><span>월급 300만원 기준. 정확히는 하루 평균임금 97,826원 × 30일이에요</span></div>
+  </div>
+</section>
+<a class="v2-cta" href="/law/severance-pay/">퇴직금 계산기 바로가기</a>
+<details class="v2-toc"><summary>목차 (7개 질문)<span>열기</span></summary><ol><li><a href="#s1">퇴직금 계산 방법, 어떻게 계산하나요</a></li><li><a href="#s2">월급별 퇴직금 얼마인가요 (5년 근무 기준)</a></li><li><a href="#s3">퇴직금에 상여금과 연차수당도 들어가나요</a></li><li><a href="#s4">퇴직금 지급기준과 지급기한, 언제까지 줘야 하나요</a></li><li><a href="#s5">퇴직금 중간정산은 언제 되나요</a></li><li><a href="#s6">퇴직금에도 세금 내나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
+<section class="v2-kk" aria-label="한눈에 보는 요약">
+  <div class="v2-hd"><small>한눈에 보는 퇴직금</small><b>핵심콕콕</b></div>
+  <dl>
+    <div class="v2-row"><dt>받는 조건</dt><dd>계속근로 1년 이상, 4주 평균 주 15시간 이상 근무</dd></div>
+    <div class="v2-row"><dt>계산식</dt><dd>하루 평균임금 × 30일 × (재직일수 ÷ 365)</dd></div>
+    <div class="v2-row"><dt>평균임금</dt><dd>퇴사 전 3개월 임금 총액 ÷ 그 기간 총일수</dd></div>
+    <div class="v2-row"><dt>월급 300만·5년</dt><dd>14,673,913원 (하루 평균임금 97,826원)</dd></div>
+    <div class="v2-row"><dt>상여·연차수당</dt><dd>연간 상여의 3/12, 전년 미사용 연차수당의 3/12이 평균임금에 들어가요</dd></div>
+    <div class="v2-row"><dt>지급 기한</dt><dd>퇴사한 날부터 14일 안에 지급, 합의하면 연장 가능</dd></div>
+    <div class="v2-row"><dt>안 주면</dt><dd>고용노동부 임금체불 진정. 지연이자 연 20%</dd></div>
+    <div class="v2-row"><dt>세금</dt><dd>퇴직소득세는 근속연수공제와 환산급여공제를 거쳐 따로 계산해요</dd></div>
+  </dl>
+</section>
+
+<h2 id="s1">퇴직금 계산 방법, 어떻게 계산하나요<small>하루 평균임금 × 30일 × (재직일수 ÷ 365)</small></h2>
+<p class="v2-lead"><span class="v2-ans">월급 300만원으로 5년(1825일) 일했다면 퇴직금은 14,673,913원이에요.</span> 퇴사 직전 3개월 임금 9,000,000원을 그 기간 총일수 92일로 나눈 97,826원이 하루 평균임금이고, 여기에 30일과 근속연수를 곱해요.</p>
+<div class="v2-flow" aria-label="퇴직금 계산 순서">
+  <div class="v2-s"><span>퇴사 전 3개월 임금</span><b>9,000,000원</b><span>92일치</span></div><div class="v2-op">÷</div>
+  <div class="v2-s"><span>3개월 총일수</span><b>92일</b><span>달력 날짜 그대로</span></div><div class="v2-op">=</div>
+  <div class="v2-s"><span>하루 평균임금</span><b>97,826원</b><span>× 30일 × 재직일수 ÷ 365</span></div><div class="v2-op">=</div>
+  <div class="v2-s v2-out"><span>퇴직금</span><b>14,673,913원</b><span>근속 1825일</span></div>
 </div>
-<div class="ax-wg-out" id="out"></div>
-<p class="ax-wg-note">산정기간은 퇴사일 직전 3개월입니다. 통상임금 일급은 주 40시간·1일 8시간 기준으로 월 209시간을 적용해 환산한 값입니다. 퇴사일이 매월 1일이 아니면 월 경계가 나뉘어 실제 금액과 차이가 날 수 있으니 <a href="/law/severance-pay/">퇴직금 계산기</a>에서 확인하세요.</p>
-</div>`;
+<div class="v2-tbl"><table><caption>근속기간별 퇴직금 (월급 300만원 기준)</caption><thead><tr><th>근속기간</th><th>재직일수</th><th>하루 평균임금</th><th>퇴직금</th></tr></thead><tbody>
+<tr><th scope="row">1년</th><td>365일</td><td>97,826원</td><td class="v2-net">2,934,783원</td></tr>
+<tr><th scope="row">3년</th><td>1095일</td><td>97,826원</td><td class="v2-net">8,804,348원</td></tr>
+<tr class="v2-hi"><th scope="row">5년</th><td>1825일</td><td>97,826원</td><td class="v2-net">14,673,913원</td></tr>
+<tr><th scope="row">10년</th><td>3650일</td><td>97,826원</td><td class="v2-net">29,347,827원</td></tr>
+</tbody></table></div>
+<p class="v2-fn">재직일수는 입사일부터 퇴사일까지 달력 날짜예요. 1년을 못 채우면 퇴직금 지급 의무가 없어요.</p>
+<div class="v2-note"><b>퇴사 날짜에 따라 금액이 달라져요</b> 3개월 총일수가 며칠이냐로 하루 평균임금이 바뀌어요. 같은 월급 300만원인데 3월 퇴사(직전 3개월 90일)는 하루 100,000원, 1월 퇴사(92일)는 97,826원이에요.</div>
 
-export const htmlBefore = `<h1>퇴직금 계산 방법과 평균임금 산정기준, 퇴사일 따라 달라집니다</h1>
-<p class="ax-by">MoneyDoc 편집팀 · 2026년 9월 1일 기준 · 약 7분</p>
+<h2 id="s2">월급별 퇴직금 얼마인가요 (5년 근무 기준)<small>월급 200만원부터 500만원까지</small></h2>
+<p><span class="v2-ans">월급 200만원이면 9,782,610원, 300만원이면 14,673,913원, 500만원이면 24,456,522원이에요.</span> 기본급만 넣은 금액이라, 상여금이나 연차수당이 있으면 이보다 늘어요.</p>
+<div class="v2-tbl v2-compact" id="salTbl"><table><caption>월급별 퇴직금 표 (근속 5년, 상여금 없음 기준)</caption><thead><tr><th>퇴사 전 월급</th><th>퇴직금</th><th class="v2-x">하루 평균임금</th><th class="v2-x">3개월 임금</th></tr></thead><tbody>
+<tr><th scope="row">200만원</th><td class="v2-net">9,782,610</td><td class="v2-x">65,217</td><td class="v2-x">6,000,000</td></tr>
+<tr><th scope="row">250만원</th><td class="v2-net">12,228,261</td><td class="v2-x">81,522</td><td class="v2-x">7,500,000</td></tr>
+<tr class="v2-hi"><th scope="row">300만원</th><td class="v2-net">14,673,913</td><td class="v2-x">97,826</td><td class="v2-x">9,000,000</td></tr>
+<tr><th scope="row">350만원</th><td class="v2-net">17,119,566</td><td class="v2-x">114,130</td><td class="v2-x">10,500,000</td></tr>
+<tr><th scope="row">400만원</th><td class="v2-net">19,565,218</td><td class="v2-x">130,435</td><td class="v2-x">12,000,000</td></tr>
+<tr><th scope="row">500만원</th><td class="v2-net">24,456,522</td><td class="v2-x">163,043</td><td class="v2-x">15,000,000</td></tr>
+</tbody></table></div>
+<button class="v2-more" type="button" data-more="salTbl">전체 항목 보기</button>
+<p class="v2-fn">단위: 원. 근속 5년(1825일) 기준. 고용노동부 퇴직금 계산기와 1원 단위까지 같은 값이에요.</p>
+<section class="v2-widget" aria-label="내 퇴직금 계산">
+  <h4>내 조건으로 바로 보기</h4><p class="v2-note">퇴사 전 3개월 평균 월급, 근속 연수, 연간 상여금을 넣으면 바로 계산해요. 근속 연수 × 365일 기준이라, 윤년이 낀 실제 입사일로 계산하면 하루치가 더해질 수 있어요.</p>
+  <div class="v2-grid">
+    <div><label>퇴사 전 월급 (만원)</label><input id="ws" type="number" inputmode="numeric" value="300" min="100" max="2000" step="10"></div>
+    <div><label>근속 연수</label><input id="wy" type="number" inputmode="numeric" value="5" min="1" max="40" step="1"></div>
+    <div><label>연간 상여금 (만원)</label><input id="wb" type="number" inputmode="numeric" value="0" min="0" max="5000" step="50"></div>
+  </div>
+  <div class="v2-result">
+    <div class="v2-main"><span>퇴직금</span><b id="wsev">—</b></div>
+    <div><span>하루 평균임금</span><b id="wavg">—</b></div>
+    <div><span>재직일수</span><b id="wdays">—</b></div>
+    <div><span>월급 대비</span><b id="wmon">—</b></div>
+  </div>
+</section>
 
-<svg class="ax-hero" viewBox="0 0 1100 563" role="img" aria-label="퇴직금 계산 어떻게 하나 — 평균임금 산정기준 통상임금 근속연수">
-<rect width="1100" height="563" fill="#f7f2ea"/>
-<path d="M820 0h280v240a60 60 0 0 1-60 60H820z" fill="#f6e3de"/>
-<circle cx="1012" cy="72" r="46" fill="#f2d9d2" opacity=".55"/>
-<rect x="72" y="160" width="120" height="42" rx="9" fill="#c4452f"/>
-<text x="132" y="189" font-size="19" font-weight="800" text-anchor="middle" fill="#fff" letter-spacing="-.5">근로·퇴직</text>
-<text x="72" y="282" font-size="57" font-weight="800" fill="#2b2723" letter-spacing="-2.6">퇴직금 계산</text>
-<rect x="70" y="312" width="286" height="26" fill="#f2cfc8"/>
-<text x="72" y="349" font-size="57" font-weight="800" fill="#c4452f" letter-spacing="-2.6">어떻게 하나</text>
-<text x="72" y="400" font-size="21" font-weight="700" fill="#6f6858" letter-spacing="-.8">3개월 총일수 89일과 92일, 1일 3,298원 차이</text>
-<rect x="0" y="545" width="1100" height="18" fill="#c4452f"/>
-<g transform="translate(618 138)">
-  <ellipse cx="210" cy="298" rx="180" ry="19" fill="#e8ded0" opacity=".55"/>
-  <g transform="rotate(-6 120 150)">
-    <rect x="36" y="44" width="172" height="222" rx="10" fill="#fdfcfa" stroke="#6b6255" stroke-width="4"/>
-    <rect x="62" y="82" width="104" height="11" rx="5" fill="#2b2723"/>
-    <rect x="62" y="114" width="120" height="7" rx="3.5" fill="#cfc6b6"/>
-    <rect x="62" y="136" width="120" height="7" rx="3.5" fill="#cfc6b6"/>
-    <rect x="62" y="158" width="88" height="7" rx="3.5" fill="#cfc6b6"/>
-    <rect x="62" y="182" width="120" height="16" rx="6" fill="#f2cfc8"/>
-    <text x="122" y="238" font-size="26" font-weight="800" text-anchor="middle" fill="#c4452f">÷ 92</text>
-  </g>
-  <path d="M236 162h50" stroke="#3d7a3d" stroke-width="7" stroke-linecap="round"/>
-  <path d="M274 148l16 14-16 14" fill="none" stroke="#3d7a3d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-  <ellipse cx="358" cy="192" rx="46" ry="42" fill="#d9bd6a" stroke="#6b6255" stroke-width="4"/>
-  <ellipse cx="358" cy="186" rx="31" ry="27" fill="none" stroke="#a8894a" stroke-width="3"/>
-  <text x="358" y="200" font-size="24" font-weight="800" text-anchor="middle" fill="#6b6255">₩</text>
-  <ellipse cx="410" cy="242" rx="40" ry="36" fill="#d9bd6a" stroke="#6b6255" stroke-width="4"/>
-  <ellipse cx="410" cy="237" rx="26" ry="22" fill="none" stroke="#a8894a" stroke-width="3"/>
-  <g transform="translate(396 20)">
-    <circle cx="46" cy="52" r="42" fill="#fdf4f1" stroke="#c4452f" stroke-width="5"/>
-    <path d="M46 28v26l17 12" fill="none" stroke="#c4452f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="36" y="2" width="20" height="9" rx="4" fill="#8a8172"/>
-  </g>
-</g>
-</svg>
-
-<p class="ax-intro">퇴직금 공식은 한 줄입니다. 그런데 실제 금액이 갈리는 곳은 공식이 아니라 <b>평균임금을 어떻게 산정하느냐</b>입니다. 3개월을 며칠로 세는지, 어떤 기간을 빼는지, 상여금을 얼마나 넣는지에 따라 결과가 달라집니다. 법령 원문 순서대로 정리했습니다.</p>
-
-<a class="ax-cta" href="/law/severance-pay/">
-<span><b>내 퇴직금 바로 계산하기</b><i>입사일·퇴사일·월급만 넣으면 됩니다. 고용노동부 산식과 0원 일치</i></span>
-<em>퇴직금 계산하기</em></a>
-
-<div class="ax-toc"><b>이 글에서는</b><a href="#m1">계산 공식 2단계</a><a href="#m2">통상임금과 근속별 금액 2단계</a><a href="#tips">알아두면 좋은 것</a><a href="#faq">자주 묻는 질문</a><a href="#src">근거 법령 원문</a></div>`;
-
-export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 계산 공식</b><span>공식과 평균임금 산정기준</span></div>
-
-<div class="ax-st"><div class="ax-n">1</div><div class="ax-sb">
-<h3>퇴직금 계산법, 공식은 어떻게 되나요</h3>
-<p>법이 정한 최저 기준은 계속근로기간 1년에 대해 30일분 이상의 평균임금입니다. 여기서 공식이 나옵니다.</p>
-<figure class="ax-il">
-<svg viewBox="0 0 860 300" role="img" aria-label="3개월 임금총액을 총일수로 나눠 1일 평균임금을 구하고 30일과 재직일수를 곱해 퇴직금을 계산합니다">
-<rect width="860" height="300" fill="#f6f1e9"/>
-<ellipse cx="430" cy="268" rx="290" ry="17" fill="#e8ded0" opacity=".5"/>
-<g transform="translate(66 40)">
-  <rect x="26" y="26" width="150" height="192" rx="10" fill="#efe9dd" stroke="#6b6255" stroke-width="3.5"/>
-  <rect x="13" y="13" width="150" height="192" rx="10" fill="#f7f3ea" stroke="#6b6255" stroke-width="3.5"/>
-  <rect x="0" y="0" width="150" height="192" rx="10" fill="#fdfcfa" stroke="#6b6255" stroke-width="4"/>
-  <rect x="24" y="28" width="80" height="10" rx="5" fill="#2b2723"/>
-  <rect x="24" y="58" width="102" height="7" rx="3.5" fill="#cfc6b6"/>
-  <rect x="24" y="80" width="102" height="7" rx="3.5" fill="#cfc6b6"/>
-  <rect x="24" y="102" width="72" height="7" rx="3.5" fill="#cfc6b6"/>
-  <rect x="24" y="134" width="102" height="16" rx="6" fill="#f2cfc8"/>
-  <text x="75" y="180" font-size="15" font-weight="700" text-anchor="middle" fill="#8a8172">3개월 임금총액</text>
-</g>
-<text x="304" y="146" font-size="34" font-weight="800" text-anchor="middle" fill="#6b6255">÷</text>
-<text x="304" y="176" font-size="14" font-weight="700" text-anchor="middle" fill="#8a8172">총일수</text>
-<g transform="translate(352 76)">
-  <rect x="0" y="20" width="180" height="108" rx="14" fill="#fdfcfa" stroke="#6b6255" stroke-width="4"/>
-  <text x="90" y="72" font-size="25" font-weight="800" text-anchor="middle" fill="#2b2723" letter-spacing="-1">1일 평균임금</text>
-  <text x="90" y="104" font-size="14" font-weight="600" text-anchor="middle" fill="#8a8172">89~92일로 나눔</text>
-</g>
-<path d="M560 146h48" stroke="#3d7a3d" stroke-width="7" stroke-linecap="round"/>
-<path d="M596 132l16 14-16 14" fill="none" stroke="#3d7a3d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="584" y="118" font-size="13.5" font-weight="700" text-anchor="middle" fill="#3d7a3d">×30×일수/365</text>
-<g transform="translate(642 66)">
-  <ellipse cx="74" cy="98" rx="62" ry="56" fill="#d9bd6a" stroke="#6b6255" stroke-width="4"/>
-  <ellipse cx="74" cy="92" rx="42" ry="36" fill="none" stroke="#a8894a" stroke-width="3"/>
-  <text x="74" y="104" font-size="30" font-weight="800" text-anchor="middle" fill="#6b6255">₩</text>
-  <text x="74" y="182" font-size="18" font-weight="800" text-anchor="middle" fill="#c4452f">퇴직금</text>
-</g>
-</svg>
-<figcaption>「근로자퇴직급여 보장법」 제8조제1항</figcaption>
-</figure>
-<div class="ax-tw"><table>
-<thead><tr><th>단계</th><th>내용</th></tr></thead>
-<tbody>
-<tr><td>1. 재직일수</td><td>입사일부터 퇴사일까지의 일수. 365일 미만이면 여기서 끝</td></tr>
-<tr><td>2. 산정기간</td><td>퇴사일 직전 3개월. 달마다 일수가 달라 89~92일</td></tr>
-<tr class="ax-hi"><td>3. 임금총액</td><td>3개월 기본급 + 연간 상여금 × 3/12 + 전년 연차수당 × 3/12</td></tr>
-<tr class="ax-hi"><td>4. 1일 평균임금</td><td>임금총액 ÷ 3개월 총일수</td></tr>
-<tr><td>5. 퇴직금</td><td>1일 평균임금 × 30 × 재직일수 ÷ 365</td></tr>
-</tbody></table>
-<p class="ax-tn">고용노동부 공식 계산기가 밟는 순서와 같습니다. MoneyDoc 계산기는 이 순서를 그대로 구현해 정부 계산기와 5개 표본에서 0원 일치를 확인했습니다.</p></div>
-</div></div>
-
-<div class="ax-st"><div class="ax-n">2</div><div class="ax-sb">
-<h3>평균임금 산정기준과 최근 3개월</h3>
-<p>평균임금은 산정 사유가 발생한 날 이전 3개월 동안 지급된 임금 총액을 <b>그 기간의 총일수</b>로 나눈 금액입니다. 30일이 아니라 달력상 실제 일수로 나누기 때문에, 퇴사 시기에 따라 같은 월급이라도 1일 평균임금이 달라집니다.</p>
-<div class="ax-tw"><table>
-<thead><tr><th>3개월 총일수</th><th>1일 평균임금 (월 300만)</th><th>차이</th></tr></thead>
-<tbody>
-<tr class="ax-hi"><td>89일</td><td>101,123.60원</td><td>가장 유리</td></tr>
-<tr><td>90일</td><td>100,000.00원</td><td>−1,124원</td></tr>
-<tr><td>91일</td><td>98,901.10원</td><td>−2,223원</td></tr>
-<tr><td>92일</td><td>97,826.09원</td><td>−3,298원</td></tr>
-</tbody></table>
-<p class="ax-tn">2·3월이 낀 겨울에 퇴사하면 총일수가 89~90일로 짧아 1일 평균임금이 높아집니다. 여름은 92일이 되기 쉽습니다.</p></div>
-<p class="ax-nt">산정기간 중에 아래 기간이 있으면 <b>그 기간과 그 기간에 지급된 임금을 양쪽에서 모두 뺍니다.</b> 무급이거나 임금이 적은 기간 때문에 평균임금이 깎이는 것을 막기 위한 규정입니다.</p>
-<ul class="ax-ck">
-<li>수습 시작일부터 3개월 이내</li><li>사용자 귀책 휴업기간</li>
-<li>출산전후휴가·유산사산휴가</li><li>업무상 부상·질병 요양 휴업</li>
-<li>육아휴직</li><li>쟁의행위기간</li>
-<li>병역·예비군·민방위 의무 이행</li><li>승인받은 업무 외 부상·질병 휴업</li>
-</ul>
-<figure class="ax-ig">
-<svg viewBox="0 0 660 150" role="img" aria-label="산정기간에 제외 기간이 있으면 그 기간과 임금을 모두 빼고 나머지로 평균임금을 계산합니다">
-<text x="0" y="18" font-size="13" font-weight="700" fill="currentColor" letter-spacing="-.3">제외 기간이 있으면 기간과 임금을 함께 뺍니다</text>
-<rect x="0" y="44" width="300" height="40" rx="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".55"/>
-<text x="150" y="69" font-size="12.5" font-weight="700" text-anchor="middle" fill="currentColor" letter-spacing="-.3">퇴사일 직전 3개월 (89~92일)</text>
-<rect x="196" y="44" width="104" height="40" rx="8" fill="#c4452f" opacity=".14"/>
-<text x="248" y="69" font-size="11.5" font-weight="700" text-anchor="middle" fill="#c4452f" letter-spacing="-.3">육아휴직 등</text>
-<line x1="300" y1="64" x2="352" y2="64" stroke="#c4452f" stroke-width="2" stroke-linecap="round"/>
-<polygon points="343,59 343,69 352,64" fill="#c4452f"/>
-<text x="326" y="54" font-size="10.5" font-weight="600" text-anchor="middle" fill="#c4452f" letter-spacing="-.3">제외</text>
-<rect x="352" y="44" width="196" height="40" rx="8" fill="none" stroke="#c4452f" stroke-width="1.5"/>
-<text x="450" y="69" font-size="12.5" font-weight="700" text-anchor="middle" fill="#c4452f" letter-spacing="-.3">남은 기간 · 남은 임금</text>
-<text x="620" y="69" font-size="13" font-weight="800" text-anchor="middle" fill="currentColor" opacity=".7">= 평균임금</text>
-<text x="0" y="122" font-size="11.5" font-weight="600" fill="currentColor" opacity=".6" letter-spacing="-.3">임시로 지급된 임금·수당과 현물로 지급된 임금은 임금총액에 넣지 않습니다</text>
-</svg>
-<figcaption>「근로기준법」 제2조제1항제6호 · 같은 법 시행령 제2조</figcaption>
-</figure>
-<div class="ax-cp">
-  <div><em>상여 없음 · 월 300만 · 3년</em><b>8,812,389원</b><i>1일 평균임금 97,826.09원</i></div>
-  <div class="ax-hi"><em>연 상여 600만 · 월 300만 · 3년</em><b>10,281,120원</b><i>1일 평균임금 114,130.44원</i></div>
-</div>
-<p class="ax-tn">연간 상여금은 전액이 아니라 1년치의 3/12만 가산합니다. 600만 원의 3/12인 150만 원이 더해져 퇴직금이 1,468,731원 늘었습니다. 입사 2023-01-01, 퇴사 2026-01-01 기준.</p>
-</div></div>
-
-<div class="ax-mh ax-b" id="m2"><b>2단계 — 통상임금과 금액</b><span>하한 규정 · 근속별 퇴직금</span></div>
-
-<div class="ax-st ax-b2"><div class="ax-n">3</div><div class="ax-sb">
-<h3>퇴직금 통상임금 계산은 언제 쓰나요</h3>
-<p>평균임금이 통상임금보다 적게 나오면 <b>통상임금액을 평균임금으로 봅니다.</b> 근로자가 손해 보지 않도록 둔 하한선입니다. 통상임금은 정기적·일률적으로 지급하기로 정한 금액을 말하고, 월급을 시간급으로 바꿀 때는 월의 통상임금 산정 기준시간 수로 나눕니다.</p>
-<figure class="ax-ig">
-<svg viewBox="0 0 660 170" role="img" aria-label="월급을 209시간으로 나눠 시간급을 구하고 1일 소정근로시간 8시간을 곱해 1일 통상임금을 구합니다">
-<text x="0" y="18" font-size="13" font-weight="700" fill="currentColor" letter-spacing="-.3">월급에서 1일 통상임금 구하기 (주 40시간 기준)</text>
-<rect x="0" y="44" width="150" height="48" rx="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".55"/>
-<text x="75" y="66" font-size="12.5" font-weight="700" text-anchor="middle" fill="currentColor" letter-spacing="-.3">월급 금액</text>
-<text x="75" y="83" font-size="10.5" text-anchor="middle" fill="currentColor" opacity=".6" letter-spacing="-.3">3,000,000원</text>
-<line x1="150" y1="68" x2="196" y2="68" stroke="currentColor" stroke-width="2" opacity=".6" stroke-linecap="round"/>
-<polygon points="188,63 188,73 196,68" fill="currentColor" opacity=".6"/>
-<text x="173" y="58" font-size="10.5" font-weight="600" text-anchor="middle" fill="currentColor" opacity=".6">÷209</text>
-<rect x="196" y="44" width="150" height="48" rx="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".55"/>
-<text x="271" y="66" font-size="12.5" font-weight="700" text-anchor="middle" fill="currentColor" letter-spacing="-.3">시간급 통상임금</text>
-<text x="271" y="83" font-size="10.5" text-anchor="middle" fill="currentColor" opacity=".6" letter-spacing="-.3">14,354.07원</text>
-<line x1="346" y1="68" x2="392" y2="68" stroke="#c4452f" stroke-width="2" stroke-linecap="round"/>
-<polygon points="384,63 384,73 392,68" fill="#c4452f"/>
-<text x="369" y="58" font-size="10.5" font-weight="600" text-anchor="middle" fill="#c4452f">×8</text>
-<rect x="392" y="44" width="268" height="48" rx="8" fill="none" stroke="#c4452f" stroke-width="1.5"/>
-<text x="526" y="66" font-size="12.5" font-weight="700" text-anchor="middle" fill="#c4452f" letter-spacing="-.3">1일 통상임금 114,832.54원</text>
-<text x="526" y="83" font-size="10.5" text-anchor="middle" fill="#c4452f" opacity=".85" letter-spacing="-.3">1일 소정근로시간 8시간</text>
-<text x="0" y="126" font-size="11.5" font-weight="600" fill="currentColor" opacity=".6" letter-spacing="-.3">209시간 = (소정근로 40시간 + 유급주휴 8시간) × 52.142857주 ÷ 12개월 = 208.57시간</text>
-<text x="0" y="148" font-size="11.5" font-weight="600" fill="currentColor" opacity=".6" letter-spacing="-.3">1년 동안의 평균 주의 수 52.142857 = 365 ÷ 7</text>
-</svg>
-<figcaption>「근로기준법」 제2조제2항 · 같은 법 시행령 제6조제1항·제2항제4호·제3항</figcaption>
-</figure>
-<p class="ax-nt">두 값을 나란히 놓으면 왜 이 규정이 중요한지 보입니다. 수당이나 상여금 없이 <b>기본급만 받는 월급제 근로자</b>는 평균임금이 통상임금보다 낮게 나오는 경우가 흔합니다.</p>
-<div class="ax-tw"><table>
-<thead><tr><th>월 기본급</th><th>1일 평균임금 (92일)</th><th>1일 통상임금</th><th>적용되는 값</th></tr></thead>
-<tbody>
-<tr><td>250만</td><td>81,521.74</td><td>95,693.78</td><td>통상임금</td></tr>
-<tr class="ax-hi"><td>300만</td><td>97,826.09</td><td>114,832.54</td><td>통상임금</td></tr>
-<tr><td>400만</td><td>130,434.78</td><td>153,110.05</td><td>통상임금</td></tr>
-<tr><td>500만</td><td>163,043.48</td><td>191,387.56</td><td>통상임금</td></tr>
-</tbody></table>
-<p class="ax-tn">단위: 원. 상여금·수당이 전혀 없고 3개월 총일수가 92일인 경우를 가정했습니다. 상여금과 각종 수당이 붙으면 평균임금이 올라가 순서가 뒤집힙니다.</p></div>
-<div class="ax-warn"><span>주의</span><p>고용노동부 계산기와 대부분의 온라인 계산기는 <b>평균임금 기준으로만</b> 금액을 냅니다. 기본급 외에 받는 것이 거의 없다면 통상임금으로 계산한 값과 비교해 보고, 통상임금이 더 크면 그 금액으로 청구할 수 있습니다.</p></div>
-</div></div>
-
-<div class="ax-st ax-b2"><div class="ax-n">4</div><div class="ax-sb">
-<h3>3년 5년 근속 퇴직금 평균은 얼마인가요</h3>
-<p>상여금과 연차수당을 0으로, 퇴사일을 2026년 1월 1일로 두고 계산한 세전 금액입니다.</p>
-<div class="ax-tw"><table>
-<thead><tr><th>월 기본급</th><th>1년</th><th>3년</th><th>5년</th><th>10년</th></tr></thead>
-<tbody>
-<tr><td>250만</td><td>2,445,652</td><td>7,343,657</td><td>12,234,961</td><td>24,476,623</td></tr>
-<tr class="ax-hi"><td>300만</td><td>2,934,783</td><td>8,812,389</td><td>14,681,954</td><td>29,371,949</td></tr>
-<tr><td>400만</td><td>3,913,044</td><td>11,749,852</td><td>19,575,939</td><td>39,162,599</td></tr>
-<tr><td>500만</td><td>4,891,304</td><td>14,687,314</td><td>24,469,923</td><td>48,953,247</td></tr>
-</tbody></table>
-<p class="ax-tn">단위: 원(세전). 재직일수 1년 365일 · 3년 1,096일 · 5년 1,826일 · 10년 3,653일 기준이며 윤년에 따라 하루 단위로 달라집니다.</p></div>
-<p class="ax-nt">퇴직금은 재직일수에 비례합니다. 월급이 같다면 10년 근속은 1년 근속의 약 10배입니다. 다만 평균임금은 <b>퇴직 직전 3개월</b>만 보기 때문에, 그 3개월 급여가 낮아지면 근속 전체의 퇴직금이 함께 줄어듭니다.</p>
-<div class="ax-cp">
-  <div><em>재직 365일 · 딱 1년</em><b>2,934,783원</b><i>월 기본급 300만 · 세전</i></div>
-  <div class="ax-hi"><em>재직 366일 · 1년 하루</em><b>2,942,823원</b><i>하루당 8,040원</i></div>
-</div>
-<div class="ax-btns">
-<a class="ax-btn" href="/law/severance-pay/"><b>퇴직금 계산기</b><span>내 입사일·퇴사일로 정확히 계산</span></a>
-<a class="ax-btn" href="https://www.moel.go.kr/retirementpayCal.do" target="_blank" rel="noopener"><b>고용노동부 계산기</b><span>공식 계산기로 교차 확인</span></a>
-</div>
-</div></div>
-
-<h2 class="ax-sec" id="tips">알아두면 좋은 것</h2>
-<ul class="ax-tips">
-<li>퇴사 시기를 고를 수 있다면 3개월 총일수가 짧은 구간이 유리합니다. 같은 월급이라도 89일과 92일은 1일 평균임금이 3,298원 차이 납니다.</li>
-<li>퇴직 직전 3개월에 무급휴직이나 임금 삭감이 있으면 근속 전체의 퇴직금이 줄어듭니다. 다만 육아휴직·산재요양 등 법이 정한 기간은 산정기간에서 빠지므로 불이익이 없습니다.</li>
-<li>임시로 지급된 임금과 수당, 현물로 지급된 임금은 임금총액에 넣지 않습니다.</li>
-<li>연간 상여금과 전년도 미사용 연차수당은 전액이 아니라 3/12만 가산합니다.</li>
-<li>퇴직급여제도를 아예 설정하지 않은 사업장은 퇴직금제도를 설정한 것으로 봅니다. 회사에 제도가 없다는 이유로 지급을 거절할 수 없습니다.</li>
-</ul>
-
-<h2 class="ax-sec" id="faq">자주 묻는 질문</h2>
-
-<details class="ax-acc" open><summary>내 퇴직금은 어떻게 계산하나요?</summary>
-<div class="ax-ab"><p>1일 평균임금 × 30일 × (재직일수 ÷ 365)입니다. 1일 평균임금은 퇴직 직전 3개월 임금 총액을 그 기간의 총일수로 나눈 값이고, 연간 상여금과 전년도 미사용 연차수당은 3/12만 더합니다.</p>
-<p class="ax-law">「근로자퇴직급여 보장법」 제8조제1항 · 「근로기준법」 제2조제1항제6호</p></div></details>
-
-<details class="ax-acc"><summary>3개월 총일수는 왜 89일에서 92일까지 달라지나요?</summary>
-<div class="ax-ab"><p>평균임금은 30일이 아니라 산정기간의 <b>달력상 총일수</b>로 나누기 때문입니다. 2월이 낀 구간은 89~90일, 31일이 많은 구간은 92일이 됩니다. 월 300만 원 기준으로 89일이면 101,123.60원, 92일이면 97,826.09원입니다.</p>
-<p class="ax-law">「근로기준법」 제2조제1항제6호</p></div></details>
-
-<details class="ax-acc"><summary>육아휴직 중에 퇴사하면 평균임금이 확 줄어드나요?</summary>
-<div class="ax-ab"><p>줄지 않습니다. 육아휴직 기간은 평균임금 산정기간과 임금총액에서 모두 제외합니다. 출산전후휴가, 업무상 부상·질병 요양 휴업, 사용자 귀책 휴업, 쟁의행위기간, 병역 의무 이행 기간도 같습니다.</p>
-<p class="ax-law">「근로기준법 시행령」 제2조제1항</p></div></details>
-
-<details class="ax-acc"><summary>평균임금이 통상임금보다 적게 나왔습니다.</summary>
-<div class="ax-ab"><p>그 경우에는 통상임금액을 평균임금으로 봅니다. 월급 300만 원에 다른 수당이 없다면 1일 평균임금은 97,826.09원, 1일 통상임금은 114,832.54원이라 통상임금이 적용됩니다.</p>
-<p class="ax-law">「근로기준법」 제2조제2항 · 같은 법 시행령 제6조</p></div></details>
-
-<details class="ax-acc"><summary>퇴직금 계산에서 209시간은 어디서 나온 숫자인가요?</summary>
-<div class="ax-ab"><p>월급을 시간급으로 바꿀 때 쓰는 월의 통상임금 산정 기준시간 수입니다. 1주 소정근로 40시간에 유급으로 처리되는 주휴 8시간을 더한 48시간에, 1년 동안의 평균 주의 수 52.142857(=365÷7)을 곱하고 12로 나누면 208.57시간이 나옵니다.</p>
-<p class="ax-law">「근로기준법 시행령」 제6조제2항제4호</p></div></details>
-
-<div class="ax-sum">
-<h4>정리</h4>
-<ul>
-<li>퇴직금은 <b>1일 평균임금 × 30일 × (재직일수 ÷ 365)</b>입니다.</li>
-<li>평균임금은 퇴직 직전 3개월 임금총액을 <b>달력상 총일수(89~92일)</b>로 나눈 값입니다.</li>
-<li>연간 상여금과 전년도 미사용 연차수당은 전액이 아니라 <b>3/12만</b> 더합니다.</li>
-<li>육아휴직·출산휴가·산재요양 등 8가지 기간은 <b>기간과 임금을 함께 빼고</b> 계산합니다.</li>
-<li>평균임금이 통상임금보다 적으면 <b>통상임금액</b>을 평균임금으로 봅니다.</li>
-</ul>
-<a class="ax-cta" href="/law/severance-pay/">
-<span><b>퇴직금 계산기로 내 금액 확인하기</b><i>3개월 총일수와 상여금 3/12 가산까지 자동 반영</i></span>
-<em>퇴직금 계산하기</em></a>
-<p class="ax-tn" style="margin-top:14px">퇴직금의 다른 주제는 <a href="/law/severance-pay-guide/" style="color:var(--ac);font-weight:700">퇴직금 전체 가이드</a>에서 볼 수 있습니다.</p>
+<h2 id="s3">퇴직금에 상여금과 연차수당도 들어가나요<small>평균임금이라 기본급만이 아니에요</small></h2>
+<p class="v2-lead"><span class="v2-ans">들어가요. 연간 상여금 600만원과 전년 미사용 연차수당 120만원이 있으면 퇴직금이 14,673,913원에서 17,608,697원으로 2,934,784원 늘어요.</span> 1년치 금액을 그대로 더하는 게 아니라 3개월치에 해당하는 4분의 1(3/12)만 평균임금에 들어가요.</p>
+<div class="v2-tbl"><table><caption>상여금·연차수당이 있을 때 퇴직금 차이 (월급 300만원, 근속 5년)</caption><thead><tr><th>구분</th><th>3개월 임금 총액</th><th>하루 평균임금</th><th>퇴직금</th></tr></thead><tbody>
+<tr><th scope="row">기본급만</th><td>9,000,000</td><td>97,826</td><td class="v2-net">14,673,913</td></tr>
+<tr class="v2-hi"><th scope="row">상여 600만 + 연차수당 120만 포함</th><td>10,800,000</td><td>117,391</td><td class="v2-net">17,608,697</td></tr>
+</tbody></table></div>
+<p class="v2-fn">평균임금에 들어가는 임금은 근로의 대가로 받은 모든 금품이에요. 식대·교통비 같은 고정 수당도 포함돼요.</p>
+<div class="v2-tips">
+  <div><b>평균임금에 들어가는 것</b>기본급, 고정 수당(식대·교통비·직책수당), 연장·야간·휴일근로수당, 연간 상여금의 3/12, 전년 미사용 연차수당의 3/12.</div>
+  <div><b>들어가지 않는 것</b>경조사비처럼 은혜적으로 준 금품, 실비 변상 성격의 출장비, 퇴직 후 지급되는 성과급 등이에요.</div>
+  <div><b>평균임금이 통상임금보다 적으면</b>통상임금을 평균임금으로 써요. 결근이 많아 3개월 임금이 적어진 사람을 보호하는 규정이에요.</div>
 </div>
 
-<h2 class="ax-sec" id="src">근거 법령 원문</h2>
-
-<p class="ax-collected">아래 조문은 2026년 9월 1일 <b>국가법령정보센터(law.go.kr)</b>에서 직접 조회해 옮긴 원문입니다. 요약하지 않았습니다.</p>
-
-<div class="ax-lawq"><b>「근로자퇴직급여 보장법」 제8조(퇴직금제도의 설정 등) 제1항 &nbsp;[시행 2026. 7. 1.] [법률 제21475호]</b>
-<p>퇴직금제도를 설정하려는 사용자는 계속근로기간 1년에 대하여 30일분 이상의 평균임금을 퇴직금으로 퇴직 근로자에게 지급할 수 있는 제도를 설정하여야 한다.</p></div>
-
-<div class="ax-lawq"><b>「근로기준법」 제2조(정의) 제1항제6호</b>
-<p>“평균임금”이란 이를 산정하여야 할 사유가 발생한 날 이전 3개월 동안에 그 근로자에게 지급된 임금의 총액을 그 기간의 총일수로 나눈 금액을 말한다. 근로자가 취업한 후 3개월 미만인 경우도 이에 준한다.</p></div>
-
-<div class="ax-lawq"><b>「근로기준법」 제2조(정의) 제2항</b>
-<p>제1항제6호에 따라 산출된 금액이 그 근로자의 통상임금보다 적으면 그 통상임금액을 평균임금으로 한다.</p></div>
-
-<div class="ax-lawq"><b>「근로기준법 시행령」 제2조(평균임금의 계산에서 제외되는 기간과 임금) 제1항</b>
-<p>「근로기준법」(이하 “법”이라 한다) 제2조제1항제6호에 따른 평균임금 산정기간 중에 다음 각 호의 어느 하나에 해당하는 기간이 있는 경우에는 그 기간과 그 기간 중에 지급된 임금은 평균임금 산정기준이 되는 기간과 임금의 총액에서 각각 뺀다.</p>
-<ol>
-<li>근로계약을 체결하고 수습 중에 있는 근로자가 수습을 시작한 날부터 3개월 이내의 기간</li>
-<li>법 제46조에 따른 사용자의 귀책사유로 휴업한 기간</li>
-<li>법 제74조제1항부터 제3항까지의 규정에 따른 출산전후휴가 및 유산ㆍ사산 휴가 기간</li>
-<li>법 제78조에 따라 업무상 부상 또는 질병으로 요양하기 위하여 휴업한 기간</li>
-<li>「남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률」 제19조에 따른 육아휴직 기간</li>
-<li>「노동조합 및 노동관계조정법」 제2조제6호에 따른 쟁의행위기간</li>
-<li>「병역법」, 「예비군법」 또는 「민방위기본법」에 따른 의무를 이행하기 위하여 휴직하거나 근로하지 못한 기간. 다만, 그 기간 중 임금을 지급받은 경우에는 그러하지 아니하다.</li>
-<li>업무 외 부상이나 질병, 그 밖의 사유로 사용자의 승인을 받아 휴업한 기간</li>
-</ol></div>
-
-<div class="ax-lawq"><b>「근로기준법 시행령」 제2조 제2항</b>
-<p>법 제2조제1항제6호에 따른 임금의 총액을 계산할 때에는 임시로 지급된 임금 및 수당과 통화 외의 것으로 지급된 임금을 포함하지 아니한다. 다만, 고용노동부장관이 정하는 것은 그러하지 아니하다.</p></div>
-
-<div class="ax-lawq"><b>「근로기준법 시행령」 제6조(통상임금) 제1항</b>
-<p>법과 이 영에서 “통상임금”이란 근로자에게 정기적이고 일률적으로 소정(所定)근로 또는 총 근로에 대하여 지급하기로 정한 시간급 금액, 일급 금액, 주급 금액, 월급 금액 또는 도급 금액을 말한다.</p></div>
-
-<div class="ax-lawq"><b>「근로기준법 시행령」 제6조 제2항제4호</b>
-<p>월급 금액으로 정한 임금은 그 금액을 월의 통상임금 산정 기준시간 수(1주의 통상임금 산정 기준시간 수에 1년 동안의 평균 주의 수를 곱한 시간을 12로 나눈 시간)로 나눈 금액</p></div>
-
-<div class="ax-lawq"><b>「근로기준법 시행령」 제6조 제3항</b>
-<p>제1항에 따른 통상임금을 일급 금액으로 산정할 때에는 제2항에 따른 시간급 금액에 1일의 소정근로시간 수를 곱하여 계산한다.</p></div>
-
-<div class="ax-src"><b>출처 · 국가법령정보센터, 고용노동부</b><br>
-원문은 <a href="https://www.law.go.kr/법령/근로자퇴직급여보장법" target="_blank" rel="noopener">근로자퇴직급여 보장법</a> ·
-<a href="https://www.law.go.kr/법령/근로기준법" target="_blank" rel="noopener">근로기준법</a> ·
-<a href="https://www.law.go.kr/법령/근로기준법시행령" target="_blank" rel="noopener">근로기준법 시행령</a>에서 확인할 수 있습니다.
-계산 절차는 <a href="https://www.moel.go.kr/retirementpayCal.do" target="_blank" rel="noopener">고용노동부 퇴직금 계산기</a>의 산식을 따랐습니다.<br><br>
-본 계산 결과는 참고용이며 법적 효력을 갖는 유권해석의 근거가 되지 않습니다. 구체적인 사안은 관할 지방고용노동관서에 문의하시기 바랍니다.</div>`;
-
-export const asideHtml = `<div class="ax-side"><h4>이 글의 단계</h4>
-<ol>
-<li><a href="#m1">퇴직금 계산 공식</a></li>
-<li><a href="#m1">평균임금 산정기준</a></li>
-<li><a href="#m2">통상임금을 쓰는 경우</a></li>
-<li><a href="#m2">근속별 퇴직금</a></li>
-<li><a href="#faq">자주 묻는 질문</a></li>
-<li><a href="#src">근거 법령 원문</a></li>
-</ol></div>
-
-<div class="ax-side"><h4>퇴직금 계산기</h4>
-<a class="ax-rel" href="/law/severance-pay/">입사일·퇴사일로 바로 계산하기<span>고용노동부 산식 0원 일치</span></a>
+<h2 id="s4">퇴직금 지급기준과 지급기한, 언제까지 줘야 하나요<small>퇴사한 날부터 14일</small></h2>
+<p class="v2-lead"><span class="v2-ans">퇴사한 날부터 14일 안에 줘야 해요.</span> 당사자가 합의하면 기일을 늦출 수 있지만, 합의 없이 넘기면 체불이에요. 늦게 준 기간에는 지연이자가 붙어요.</p>
+<div class="v2-tl" aria-label="퇴직금 받는 순서">
+  <div class="v2-go"><i>퇴사일</i><b>지급사유 발생</b><span>마지막 근무일 다음 날부터 계산</span></div>
+  <div class="v2-go"><i>14일</i><b>지급 기한</b><span>이 안에 안 주면 체불</span><em>법정 기한</em></div>
+  <div><i>그 뒤</i><b>지연이자 연 20%</b><span>미지급 기간에 대해 발생</span></div>
+  <div><i>진정</i><b>노동청 신고</b><span>노동포털에서 온라인 접수</span><em>무료</em></div>
+</div>
+<div class="v2-steps">
+  <div><i>1단계</i><b>회사에 서면으로 요청</b><span>문자나 메일로 남겨 두세요. 지급 요청 기록이 나중에 증거가 돼요</span><em>준비물: 근로계약서·급여명세서</em></div>
+  <div><i>2단계</i><b>임금체불 진정 접수</b><span>고용노동부 노동포털에서 온라인으로 낼 수 있어요. 관할 고용노동청이 조사해요</span><em>무료 · 온라인 10분</em><a class="v2-go" href="https://labor.moel.go.kr/anmtDclrCntr/main.do" target="_blank" rel="noopener">임금체불 진정</a></div>
+  <div><i>3단계</i><b>금액 확인</b><span>받아야 할 금액을 미리 계산해 두면 진정서에 적기 쉬워요. 입사일과 퇴사일, 3개월 임금만 넣으면 돼요</span><em>3분</em><a class="v2-go" href="/law/severance-pay/">퇴직금 계산기</a></div>
+  <div><i>4단계</i><b>체당금 신청</b><span>회사가 도산해 못 받으면 국가가 대신 주는 대지급금 제도가 있어요</span><em>도산·미지급 확인 필요</em></div>
 </div>
 
-<div class="ax-side"><h4>같은 분류의 글</h4>
-<a class="ax-rel" href="/law/severance-pay-guide/"><b>퇴직금 전체 가이드</b><span>10개 주제 한눈에 보기</span></a>
-<a class="ax-rel" href="/tax/retirement-income-tax/">퇴직금 실수령액 세금 몇 프로일까<span>세금</span></a>
-<a class="ax-rel" href="/law/severance-pay-guide/">상여금 연차수당 식대 퇴직금 포함되나요<span>포함항목</span></a>
-<a class="ax-rel" href="/pension/irp-tax-credit/">퇴직금 수령방법 IRP 통장부터 연금 전환까지<span>수령방법</span></a>
-<a class="ax-rel" href="/law/severance-pay-guide/">퇴직금 지급일 언제 들어오나요<span>지급일</span></a>
-<a class="ax-rel" href="/law/unpaid-wages/">퇴직금 미지급 신고 처벌 지연이자 대지급금<span>미지급</span></a>
+<h2 id="s5">퇴직금 중간정산은 언제 되나요<small>법에 정해진 사유만 가능해요</small></h2>
+<p><span class="v2-ans">무주택자의 주택 구입, 전세금·보증금 부담, 6개월 이상 요양 의료비, 파산선고, 개인회생, 임금피크제 같은 사유만 돼요.</span> 회사가 마음대로 해 주거나, 근로자가 원한다고 아무 때나 받을 수 있는 게 아니에요. 중간정산을 하면 그 시점부터 근속기간이 새로 시작돼요.</p>
+<div class="v2-tbl v2-text"><table><caption>퇴직금 중간정산이 되는 사유</caption><thead><tr><th>사유</th><th>조건</th></tr></thead><tbody>
+<tr><th scope="row">무주택자 주택 구입</th><td data-l="조건">본인 명의로 사는 경우</td></tr>
+<tr><th scope="row">무주택자 전세금·보증금</th><td data-l="조건">주거 목적. 한 회사에서 1회만</td></tr>
+<tr><th scope="row">6개월 이상 요양 의료비</th><td data-l="조건">본인·배우자·부양가족. 연간 임금총액의 1천분의 125를 넘게 부담할 때</td></tr>
+<tr><th scope="row">파산선고·개인회생</th><td data-l="조건">신청일부터 거꾸로 5년 안에 결정을 받은 경우</td></tr>
+<tr><th scope="row">임금피크제</th><td data-l="조건">정년 연장·보장 조건으로 임금을 줄이는 제도를 시행할 때</td></tr>
+<tr><th scope="row">근로시간 단축</th><td data-l="조건">하루 1시간 또는 주 5시간 이상 줄여 3개월 이상 일하기로 한 경우</td></tr>
+<tr><th scope="row">재난 피해</th><td data-l="조건">고용노동부장관이 정해 고시하는 사유</td></tr>
+</tbody></table></div>
+<p class="v2-fn">중간정산 뒤 퇴직금 계산을 위한 계속근로기간은 정산 시점부터 새로 계산해요.</p>
+
+<h2 id="s6">퇴직금에도 세금 내나요<small>퇴직소득세는 다른 소득과 따로 계산해요</small></h2>
+<p><span class="v2-ans">내요. 다만 근속연수공제와 환산급여공제를 거쳐 세금이 크게 줄어요.</span> 퇴직소득은 다른 소득과 합치지 않고 따로 계산해요. 오래 일할수록 공제가 커져서 같은 금액이어도 세금이 적어져요. 회사가 원천징수하고 남은 금액을 줘요.</p>
+<div class="v2-tips">
+  <div><b>퇴직연금(DB·DC)이면</b>DB형은 퇴직금과 계산이 같고, DC형은 회사가 매년 넣어 준 금액과 운용 수익이 내 돈이에요. 운용 성과에 따라 금액이 달라져요.</div>
+  <div><b>IRP로 옮기면</b>퇴직금을 개인형퇴직연금(IRP) 계좌로 받으면 당장은 세금을 떼지 않고, 나중에 연금으로 받을 때 세금이 30~40% 줄어요.</div>
+  <div><b>55세 이후 퇴직이면</b>IRP 이전 의무가 없어 계좌로 바로 받을 수 있어요.</div>
+</div>
+
+<h2 id="faq">자주 묻는 질문</h2>
+<div class="v2-faqs">
+<details class="v2-faq" open><summary><i>Q</i><span>퇴직금 계산은 어떻게 하나요?</span></summary><div><i>A</i><p>하루 평균임금 × 30일 × (재직일수 ÷ 365)예요. 월급 300만원으로 5년 일했다면 하루 평균임금 97,826원, 퇴직금 <b>14,673,913원</b>이에요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>1년 미만 일해도 퇴직금 받나요?</span></summary><div><i>A</i><p>못 받아요. 계속근로기간이 1년 미만이면 퇴직급여 제도를 설정할 의무가 없어요. 4주를 평균해 주 15시간 미만으로 일한 경우도 마찬가지예요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>퇴직금 지급기한이 언제까지인가요?</span></summary><div><i>A</i><p>퇴사한 날부터 14일 안이에요. 당사자가 합의하면 늦출 수 있지만, 합의 없이 넘기면 임금체불이고 지연이자 연 20%가 붙어요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>퇴직금에 상여금이 포함되나요?</span></summary><div><i>A</i><p>포함돼요. 1년치 상여금의 3/12이 평균임금에 들어가요. 월급 300만원에 상여 600만원과 연차수당 120만원이 있으면 퇴직금이 2,934,784원 늘어요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>퇴직금을 못 받으면 어떻게 하나요?</span></summary><div><i>A</i><p>고용노동부 노동포털에서 임금체불 진정을 온라인으로 낼 수 있어요. 무료이고, 관할 고용노동청이 조사해요. 회사가 도산했다면 국가가 대신 주는 대지급금 제도가 있어요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>퇴직금 중간정산을 아무 때나 받을 수 있나요?</span></summary><div><i>A</i><p>아니에요. 무주택자 주택 구입, 전세금 부담, 6개월 이상 요양 의료비, 파산선고, 개인회생, 임금피크제 같은 법에 정해진 사유만 돼요.</p></div></details>
+</div>
+<section class="v2-sum" aria-label="정리"><div class="v2-hd"><small>이 글 한 줄 정리</small><b>정리</b></div><ul>
+<li>계산식: 하루 평균임금 × 30일 × (재직일수 ÷ 365). 월급 300만원·5년이면 14,673,913원.</li>
+<li>조건: 계속근로 1년 이상, 4주 평균 주 15시간 이상. 둘 중 하나라도 안 되면 의무가 없어요.</li>
+<li>평균임금에는 상여금과 연차수당의 3/12이 들어가요. 기본급만 계산하면 적게 나와요.</li>
+<li>지급 기한은 퇴사일부터 14일. 안 주면 노동포털에서 진정을 낼 수 있어요.</li>
+</ul></section>
+<a class="v2-cta" href="/law/severance-pay/">퇴직금 계산기 바로가기</a>
+<h2 id="src">출처</h2>
+<div class="v2-src">
+<b>법령</b>근로자퇴직급여 보장법 제4조(퇴직급여제도의 설정, 1년 미만·주 15시간 미만 제외), 제8조(계속근로기간 1년에 대하여 30일분 이상의 평균임금), 제9조(퇴사일부터 14일 이내 지급). 같은 법 시행령 제3조(중간정산 사유). 근로기준법 제2조(평균임금 정의, 평균임금이 통상임금보다 적으면 통상임금). 소득세법(퇴직소득 계산).
+<b>정부 도구</b>고용노동부 퇴직금 계산기와 이 글의 금액이 1원 단위까지 같아요 (2026-09-02 대조).
+</div>
+<div class="v2-rel"><a href="/law/severance-pay/"><b>계산기</b>퇴직금 계산기</a><a href="/tax/retirement-income-tax/"><b>세금 계산기</b>퇴직소득세 계산기</a><a href="/law/annual-leave-allowance-guide/"><b>법률 가이드</b>연차수당 계산법</a></div>
+<div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
+  <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
+    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>
+    <button class="v2-btn" id="md-inter-go">바로 이동</button></div>
 </div>`;
 
 export const faqLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
+  "mainEntity": [
     {
       "@type": "Question",
-      "name": "내 퇴직금은 어떻게 계산하나요?",
+      "name": "퇴직금 계산은 어떻게 하나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "1일 평균임금 × 30일 × (재직일수 ÷ 365)입니다. 1일 평균임금은 퇴직 직전 3개월 임금 총액을 그 기간의 총일수로 나눈 값이고, 연간 상여금과 전년도 미사용 연차수당은 3/12만 더합니다. 「근로자퇴직급여 보장법」 제8조제1항 · 「근로기준법」 제2조제1항제6호"
+        "text": "하루 평균임금 × 30일 × (재직일수 ÷ 365)예요. 월급 300만원으로 5년 일했다면 하루 평균임금 97,826원, 퇴직금 14,673,913원이에요."
       }
     },
     {
       "@type": "Question",
-      "name": "3개월 총일수는 왜 89일에서 92일까지 달라지나요?",
+      "name": "1년 미만 일해도 퇴직금 받나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "평균임금은 30일이 아니라 산정기간의 달력상 총일수로 나누기 때문입니다. 2월이 낀 구간은 89~90일, 31일이 많은 구간은 92일이 됩니다. 월 300만 원 기준으로 89일이면 101,123.60원, 92일이면 97,826.09원입니다. 「근로기준법」 제2조제1항제6호"
+        "text": "못 받아요. 계속근로기간이 1년 미만이면 퇴직급여 제도를 설정할 의무가 없어요. 4주를 평균해 주 15시간 미만으로 일한 경우도 마찬가지예요."
       }
     },
     {
       "@type": "Question",
-      "name": "육아휴직 중에 퇴사하면 평균임금이 확 줄어드나요?",
+      "name": "퇴직금 지급기한이 언제까지인가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "줄지 않습니다. 육아휴직 기간은 평균임금 산정기간과 임금총액에서 모두 제외합니다. 출산전후휴가, 업무상 부상·질병 요양 휴업, 사용자 귀책 휴업, 쟁의행위기간, 병역 의무 이행 기간도 같습니다. 「근로기준법 시행령」 제2조제1항"
+        "text": "퇴사한 날부터 14일 안이에요. 당사자가 합의하면 늦출 수 있지만, 합의 없이 넘기면 임금체불이고 지연이자 연 20%가 붙어요."
       }
     },
     {
       "@type": "Question",
-      "name": "평균임금이 통상임금보다 적게 나왔습니다.",
+      "name": "퇴직금에 상여금이 포함되나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "그 경우에는 통상임금액을 평균임금으로 봅니다. 월급 300만 원에 다른 수당이 없다면 1일 평균임금은 97,826.09원, 1일 통상임금은 114,832.54원이라 통상임금이 적용됩니다. 「근로기준법」 제2조제2항 · 같은 법 시행령 제6조"
+        "text": "포함돼요. 1년치 상여금의 3/12이 평균임금에 들어가요. 월급 300만원에 상여 600만원과 연차수당 120만원이 있으면 퇴직금이 2,934,784원 늘어요."
       }
     },
     {
       "@type": "Question",
-      "name": "퇴직금 계산에서 209시간은 어디서 나온 숫자인가요?",
+      "name": "퇴직금을 못 받으면 어떻게 하나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "월급을 시간급으로 바꿀 때 쓰는 월의 통상임금 산정 기준시간 수입니다. 1주 소정근로 40시간에 유급으로 처리되는 주휴 8시간을 더한 48시간에, 1년 동안의 평균 주의 수 52.142857(=365÷7)을 곱하고 12로 나누면 208.57시간이 나옵니다. 「근로기준법 시행령」 제6조제2항제4호"
+        "text": "고용노동부 노동포털에서 임금체불 진정을 온라인으로 낼 수 있어요. 무료이고, 관할 고용노동청이 조사해요. 회사가 도산했다면 국가가 대신 주는 대지급금 제도가 있어요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "퇴직금 중간정산을 아무 때나 받을 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니에요. 무주택자 주택 구입, 전세금 부담, 6개월 이상 요양 의료비, 파산선고, 개인회생, 임금피크제 같은 법에 정해진 사유만 돼요."
       }
     }
-  ],
+  ]
 };

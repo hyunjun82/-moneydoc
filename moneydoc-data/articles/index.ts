@@ -3,13 +3,6 @@ export type GuideLink = { cat: string; catLabel: string; href: string; title: st
 
 export const GUIDES: GuideLink[] = [
   {
-    "cat": "law",
-    "catLabel": "법률",
-    "href": "/law/severance-pay-guide/",
-    "title": "퇴직금 계산 방법과 평균임금 산정기준, 퇴사일 따라 달라집니다",
-    "blurb": "평균임금 vs 통상임금 · 퇴사일 직전 3개월"
-  },
-  {
     "cat": "realestate",
     "catLabel": "부동산",
     "href": "/realestate/transfer-tax-guide/",
@@ -113,6 +106,13 @@ export const GUIDES: GuideLink[] = [
     "href": "/tax/salary-net-pay-guide/",
     "title": "2026년 연봉 실수령액 표, 연봉 3000부터 1억까지 월급 얼마 받나요",
     "blurb": "연봉 2,400만~2억 실수령액 표 · 4대보험 요율 · 명세서와 다른 이유"
+  },
+  {
+    "cat": "law",
+    "catLabel": "법률",
+    "href": "/law/severance-pay-guide/",
+    "title": "퇴직금 계산 방법과 지급기준, 내 퇴직금 얼마인가요",
+    "blurb": "평균임금 계산 순서 · 근속·월급별 표 · 14일 지급기한과 중간정산"
   },
   {
     "cat": "government",
