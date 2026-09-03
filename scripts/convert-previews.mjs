@@ -18,7 +18,7 @@ const SRC = path.join(ROOT, 'public/_preview');
 // widget      : ArticleWidget 레지스트리 키
 export const ARTICLES = [
   { n: 1,  file: '1-퇴직금-계산방법.html',   cat: 'law',        slug: 'severance-pay-guide',              calc: '/law/severance-pay/',                        catLabel: '법률',      crumb: '퇴직금 계산과 평균임금',   widget: 'severance', blurb: '평균임금 vs 통상임금 · 퇴사일 직전 3개월' },
-  { n: 2,  file: '2-연봉-실수령액.html',     cat: 'tax',        slug: 'salary-net-pay-guide',             calc: '/tax/salary-net-pay/',                       catLabel: '세금',      crumb: '연봉 실수령액',            widget: 'salary', blurb: '2026년 4대보험 요율 + 간이세액표 반영' },
+    // n:2 연봉 실수령액 → v2 템플릿(scripts/article-template/articles/salary-net-pay-guide.mjs)으로 이전 (2026-09-03)
   { n: 3,  file: '3-양도세-비과세.html',     cat: 'realestate', slug: 'transfer-tax-guide',               calc: '/realestate/transfer-tax/',                  catLabel: '부동산',    crumb: '1세대 1주택 비과세',       widget: 'transfer', blurb: '2년 보유·거주요건과 12억 고가주택 기준' },
   { n: 4,  file: '4-스트레스DSR.html',       cat: 'loan',       slug: 'dsr-limit-guide',                  calc: '/loan/dsr-limit/',                           catLabel: '대출',      crumb: '스트레스 DSR',             widget: 'dsr', blurb: '스트레스 금리 1~3단계 · 한도 얼마나 줄까' },
   { n: 5,  file: '5-국민연금-조기수령.html', cat: 'pension',    slug: 'national-pension-early-guide',     calc: '/pension/national-pension-early/',           catLabel: '연금',      crumb: '조기수령 손익분기',        widget: 'earlyPension', blurb: '1년 앞당길수록 6% 감액 · 손익분기 나이' },

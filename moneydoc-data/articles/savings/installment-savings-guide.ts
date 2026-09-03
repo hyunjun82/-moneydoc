@@ -226,7 +226,7 @@ export const asideHtml = `<div class="ax-side"><h4>저축 계산기</h4>
 
 <div class="ax-side"><h4>같은 분류의 글</h4>
 <a class="ax-rel" href="/pension/national-pension-early-guide/">국민연금 조기수령 손익분기<span>연금</span></a>
-<a class="ax-rel" href="/tax/salary-net-pay-guide/">2026 연봉 실수령액 표<span>연봉</span></a>
+<a class="ax-rel" href="undefined">2026 연봉 실수령액 표<span>연봉</span></a>
 <a class="ax-rel" href="/loan/dsr-limit-guide/">스트레스 DSR 3단계 계산<span>대출</span></a>
 </div>`;
 

@@ -236,7 +236,7 @@ export const asideHtml = `<div class="ax-side"><h4>대출 계산기</h4>
 
 <div class="ax-side"><h4>같은 분류의 글</h4>
 <a class="ax-rel" href="/realestate/transfer-tax-guide/">1세대 1주택 양도세 비과세 요건<span>양도세</span></a>
-<a class="ax-rel" href="/tax/salary-net-pay-guide/">2026 연봉 실수령액 표<span>연봉</span></a>
+<a class="ax-rel" href="undefined">2026 연봉 실수령액 표<span>연봉</span></a>
 <a class="ax-rel" href="/law/severance-pay/">퇴직금 계산 방법과 평균임금 산정기준<span>퇴직금</span></a>
 </div>`;
 

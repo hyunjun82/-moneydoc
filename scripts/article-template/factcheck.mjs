@@ -37,7 +37,18 @@ export function factCheck({ html, evidence, engineNums, brief, claims }) {
     if (engineNums.has(num) || engineNums.has(String(v))) continue;
     if (unit === '만' || unit === '만원') { if (engineNums.has(String(v * 1e4)) || inEvidence(num + '만') || inEvidence(String(v * 1e4))) continue; }
     if (unit === '억') { if (engineNums.has(String(v * 1e8)) || inEvidence(num + '억') || inEvidence(String(v * 1e8))) continue; }
-    if (unit === '%') { if (inEvidence(num + '%') || inEvidence(`100분의${num}`) || inEvidence(`${num}퍼센트`)) continue; }
+    if (unit === '%') {
+      // 4.75% = 엔진 상수 0.0475, 또는 법령의 "1만분의 475" / "1천분의 95" / "100분의 60" / "100만분의 9,448" 표기
+      const frac = String(+(v / 100).toFixed(10));
+      if (engineNums.has(frac)) continue;
+      const half = String(+(v * 2 / 100).toFixed(10));           // 근로자 절반 표기(3.595% ← 1만분의 719 의 절반)
+      const hits = [[100, '100분의'], [1000, '1천분의'], [10000, '1만분의'], [1000000, '100만분의']].some(([d, w]) => {
+        const n1 = Math.round(v / 100 * d), n2 = Math.round(v * 2 / 100 * d);
+        const ok = (n) => Number.isInteger(n) && (inEvidence(`${w}${n}`) || inEvidence(`${w}${n.toLocaleString('ko-KR')}`));
+        return ok(n1) || ok(n2);
+      });
+      if (hits || engineNums.has(half) || inEvidence(num + '%') || inEvidence(`${num}퍼센트`)) continue;
+    }
     if (inEvidence(num)) continue;
     const at = text.slice(Math.max(0, m.index - 40), m.index + 40).trim();
     problems.push(`숫자 근거 없음: ${raw}${unit}  ← "…${at}…"`);

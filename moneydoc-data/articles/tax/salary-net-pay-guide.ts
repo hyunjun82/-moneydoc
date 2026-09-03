@@ -1,297 +1,219 @@
-// 자동 생성: scripts/convert-previews.mjs — 직접 수정하지 말 것
-// 원본: public/_preview/2-연봉-실수령액.html
+// 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
+// 원본: public/_preview/article-v2-salary-net-pay-guide.html
 export const meta = {
-  title: "2026 연봉 실수령액 표, 4대보험 올라 월급 얼마나 줄었나",
-  description: "2026년 연봉 실수령액 표. 국민연금 9.5%·건강보험 7.19% 인상으로 연봉 5천만원 기준 4대보험이 월 13,070원 늘었습니다. 연봉 3000만원부터 1억5천까지 월급 실수령액을 정리했습니다.",
-  datePublished: "2026-09-01",
-  dateModified: "2026-09-01",
+  title: "2026년 연봉 실수령액 표, 연봉 3000부터 1억까지 월급 얼마 받나요",
+  description: "연봉 5,000만원이면 2026년 월 실수령액은 3,522,740원이에요. 국세청 간이세액표 원본으로 계산해 홈택스 조회값과 원 단위까지 같은 실수령액 표(2,400만원부터 2억까지), 4대보험 요율, 실수령액 늘리는 법, 명세서와 다른 이유를 정리했어요.",
+  datePublished: "2026-09-02",
+  dateModified: "2026-09-02",
   url: "https://moneydoc.kr/tax/salary-net-pay-guide/",
+  image: "https://moneydoc.kr/og/salary-net-pay-guide.png",
+  imageAlt: "2026년 연봉 실수령액 표. 연봉 5,000만원이면 월 3,522,740원, 1억이면 월 6,471,100원",
 };
 
-export const widgetKey = "salary";
+export const scriptKey = "salary-net-pay-guide";
 
-export const widgetHtml = `<div class="ax-wg" id="wg1">
-<div class="ax-wg-h"><b>2025년 대비 4대보험 얼마나 늘었나</b>
-<span>월급을 넣으면 항목별로 얼마가 더 빠지는지 나옵니다</span></div>
-<div class="ax-wg-in">
-  <label class="ax-wg-f"><em>월 급여 (세전, 비과세 제외)</em><input type="number" id="pay" value="4166666" step="100000" min="0"></label>
-  <label class="ax-wg-f"><em>연봉으로 환산하면</em><input type="number" id="ann" value="50000000" step="1000000" min="0"></label>
+export const html = `<h1>2026년 연봉 실수령액 표, 연봉 3000부터 1억까지 월급 얼마 받나요</h1>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">홈택스 간이세액표 원 단위 일치 · 2026-09-02</span></div>
+<img class="v2-hero" src="/og/salary-net-pay-guide.png" width="1200" height="630" alt="2026년 연봉 실수령액 표. 연봉 5,000만원이면 월 3,522,740원, 1억이면 월 6,471,100원">
+<p class="v2-lead v2-intro">연봉 계약서의 숫자와 통장에 찍히는 숫자는 달라요. 연봉 5,000만원이면 2026년 기준 월 3,522,740원이 들어오고, 세전 4,166,666원에서 4대보험 404,870원과 소득세·지방소득세 239,050원이 빠져요. 이 글은 연봉 2,400만원부터 2억까지 실수령액 표, 4대보험 요율, 실수령액을 늘리는 두 가지 방법, 급여명세서와 숫자가 다른 이유를 순서대로 정리했어요.</p>
+<section class="v2-answer" aria-label="즉답">
+  <div class="v2-lbl">연봉을 고르면 바로 답해요 (본인 1명 · 비과세 0원)</div>
+  <div class="v2-chips" id="qchips" data-q='[{&quot;big&quot;:&quot;2,217,910원&quot;,&quot;unit&quot;:&quot;월 실수령&quot;,&quot;sub&quot;:&quot;공제율 11.3% · 4대보험 242,930원 · 소득세+지방세 39,160원&quot;},{&quot;big&quot;:&quot;2,893,710원&quot;,&quot;unit&quot;:&quot;월 실수령&quot;,&quot;sub&quot;:&quot;공제율 13.2% · 4대보험 323,890원 · 소득세+지방세 115,730원&quot;},{&quot;big&quot;:&quot;3,522,740원&quot;,&quot;unit&quot;:&quot;월 실수령&quot;,&quot;sub&quot;:&quot;공제율 15.5% · 4대보험 404,870원 · 소득세+지방세 239,050원&quot;},{&quot;big&quot;:&quot;4,771,000원&quot;,&quot;unit&quot;:&quot;월 실수령&quot;,&quot;sub&quot;:&quot;공제율 18.2% · 4대보험 566,820원 · 소득세+지방세 495,510원&quot;},{&quot;big&quot;:&quot;6,471,100원&quot;,&quot;unit&quot;:&quot;월 실수령&quot;,&quot;sub&quot;:&quot;공제율 22.3% · 4대보험 726,950원 · 소득세+지방세 1,135,280원&quot;}]'><button type="button" data-i="0" aria-pressed="false">3,000만</button><button type="button" data-i="1" aria-pressed="false">4,000만</button><button type="button" data-i="2" aria-pressed="true">5,000만</button><button type="button" data-i="3" aria-pressed="false">7,000만</button><button type="button" data-i="4" aria-pressed="false">1억</button></div>
+  <div class="v2-big" id="qnet">3,522,740원<small>월 실수령</small></div>
+  <div class="v2-sub" id="qsub">공제율 15.5% · 4대보험 404,870원 · 소득세+지방세 239,050원</div>
+  <div class="v2-split">
+    <div class="v2-box"><b>4대보험이 월 404,870원 빠져요</b><span>연봉 5,000만원 기준. 국민연금 197,910원, 건강보험 149,790원, 장기요양 19,680원, 고용보험 37,490원</span></div>
+    <div class="v2-box"><b>세금은 월 239,050원이에요</b><span>소득세 217,320원 + 지방소득세 21,730원. 부양가족이 늘면 줄어요</span></div>
+  </div>
+</section>
+<a class="v2-cta" href="/tax/salary-net-pay/">연봉 실수령액 계산기 바로가기</a>
+<details class="v2-toc"><summary>목차 (8개 질문)<span>열기</span></summary><ol><li><a href="#s1">연봉 실수령액 계산 방법, 월급에서 뭐가 빠지나요</a></li><li><a href="#s2">2026년 연봉 실수령액 표, 연봉 3000·4000·5000·7000·1억은 월 얼마인가요</a></li><li><a href="#s3">2026년 4대보험 요율, 월급에서 얼마나 떼나요</a></li><li><a href="#s4">연봉 100만원 인상되면 실수령액은 얼마나 늘어나나요</a></li><li><a href="#s5">연봉 실수령액 늘리는 방법 (부양가족·비과세 식대)</a></li><li><a href="#s6">급여명세서 실수령액이 계산과 다른 이유는 무엇인가요</a></li><li><a href="#s7">월급 실수령액이 매달 다른 이유는 무엇인가요 (1월·4월·7월)</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
+<section class="v2-kk" aria-label="한눈에 보는 요약">
+  <div class="v2-hd"><small>한눈에 보는 2026 실수령액</small><b>핵심콕콕</b></div>
+  <dl>
+    <div class="v2-row"><dt>기준</dt><dd>2026년 9월 · 본인 1명 · 비과세 0원 · 국세청 2026.3 간이세액표</dd></div>
+    <div class="v2-row"><dt>연봉 5,000만</dt><dd>월 3,522,740원 (공제율 15.5%)</dd></div>
+    <div class="v2-row"><dt>연봉 1억</dt><dd>월 6,471,100원 (공제율 22.3%)</dd></div>
+    <div class="v2-row"><dt>4대보험 요율</dt><dd>국민연금 4.75% · 건강보험 3.595% · 장기요양 0.4724% · 고용보험 0.9%</dd></div>
+    <div class="v2-row"><dt>국민연금 상한</dt><dd>월 급여 659만원 (연봉 약 7,908만원) 초과분은 더 안 늘어요</dd></div>
+    <div class="v2-row"><dt>실수령 늘리기</dt><dd>부양가족 신고 · 비과세 식대 월 20만원 (월 48,810원 차이)</dd></div>
+    <div class="v2-row"><dt>2025년 대비</dt><dd>국민연금 근로자 요율 4.5% → 4.75%, 연봉 5,000만원이면 월 10,420원 더 빠져요</dd></div>
+    <div class="v2-row"><dt>검증</dt><dd>홈택스 간이세액표 조회값과 원 단위 일치 (2026-09-02)</dd></div>
+  </dl>
+</section>
+
+<h2 id="s1">연봉 실수령액 계산 방법, 월급에서 뭐가 빠지나요<small>연봉 5,000만원 = 월 세전 4,166,666원 기준</small></h2>
+<p class="v2-lead"><span class="v2-ans">세전 월급에서 4대보험 404,870원과 소득세·지방소득세 239,050원을 빼면 실수령액 3,522,740원이에요.</span> 4대보험은 요율이 정해져 있어 누구나 같고, 소득세는 부양가족 수에 따라 달라져요.</p>
+<div class="v2-flow" aria-label="연봉 실수령액 계산 순서">
+  <div class="v2-s"><span>세전 월급</span><b>4,166,666원</b><span>연봉 ÷ 12</span></div><div class="v2-op">−</div>
+  <div class="v2-s"><span>4대보험</span><b>404,870원</b><span>연금·건보·요양·고용</span></div><div class="v2-op">−</div>
+  <div class="v2-s"><span>소득세+지방세</span><b>239,050원</b><span>간이세액표</span></div><div class="v2-op">=</div>
+  <div class="v2-s v2-out"><span>월 실수령액</span><b>3,522,740원</b><span>공제율 15.5%</span></div>
 </div>
-<div class="ax-wg-out" id="out"></div>
-<p class="ax-wg-note">국민연금 상한·하한은 2026년 7월~2027년 6월 적용분(상한 659만·하한 41만)입니다. 소득세를 포함한 최종 실수령액은 <a href="/tax/salary-net-pay/">연봉 실수령액 계산기</a>에서 확인하세요.</p>
-</div>`;
+<div class="v2-tbl"><table><caption>연봉 5,000만원 월급 공제 항목별 금액과 요율 (2026년)</caption><thead><tr><th>항목</th><th>요율 (근로자)</th><th>월 공제액</th><th>기준</th></tr></thead><tbody>
+<tr><th scope="row">국민연금</th><td>4.75%</td><td class="v2-net">197,910</td><td>기준소득월액 상한 659만원 · 하한 41만원</td></tr>
+<tr><th scope="row">건강보험</th><td>3.595%</td><td class="v2-net">149,790</td><td>보수월액 기준</td></tr>
+<tr><th scope="row">장기요양</th><td>0.4724%</td><td class="v2-net">19,680</td><td>소득의 0.9448% 중 근로자 절반</td></tr>
+<tr><th scope="row">고용보험</th><td>0.9%</td><td class="v2-net">37,490</td><td>실업급여 요율 1.8% 중 근로자 절반</td></tr>
+<tr><th scope="row">소득세</th><td>간이세액표</td><td class="v2-net">217,320</td><td>부양가족 1명 · 2026.3.1 표</td></tr>
+<tr><th scope="row">지방소득세</th><td>소득세의 10%</td><td class="v2-net">21,730</td><td>소득세에 붙는 지방세</td></tr>
+<tr class="v2-hi"><th scope="row">공제 합계</th><td>15.5%</td><td class="v2-net">643,920</td><td>실수령 3,522,740원</td></tr>
+</tbody></table></div>
+<p class="v2-fn">소득세 217,320원은 홈택스 근로소득 간이세액표 조회값(월급여 4,166,666원 · 가족 1명)과 같아요.</p>
 
-export const htmlBefore = `<h1>2026 연봉 실수령액 표, 4대보험 올라 월급 얼마나 줄었나</h1>
-<p class="ax-by">MoneyDoc 편집팀 · 2026년 9월 1일 기준 · 약 8분</p>
+<h2 id="s2">2026년 연봉 실수령액 표, 연봉 3000·4000·5000·7000·1억은 월 얼마인가요<small>2,400만원부터 2억까지 · 본인 1명 · 비과세 0원</small></h2>
+<p><span class="v2-ans">연봉 3,000만원은 월 2,217,910원, 5,000만원 3,522,740원, 7,000만원 4,771,000원, 1억은 6,471,100원이에요.</span> 모바일에서는 실수령액과 공제율만 먼저 보이고, "전체 항목 보기"를 누르면 세전·4대보험·세금까지 펼쳐져요.</p>
+<div class="v2-tbl v2-compact" id="mainTbl"><table><caption>2026년 연봉 실수령액 표 (연봉 2,400만원부터 2억까지, 본인 1명 비과세 0원)</caption><thead><tr><th>연봉</th><th>월 실수령</th><th>공제율</th><th class="v2-x">월 세전</th><th class="v2-x">4대보험</th><th class="v2-x">소득세+지방세</th></tr></thead><tbody>
+<tr><th scope="row">2,400만</th><td class="v2-net">1,784,190</td><td>10.8%</td><td class="v2-x">2,000,000</td><td class="v2-x">194,340</td><td class="v2-x">21,470</td></tr>
+<tr><th scope="row">3,000만</th><td class="v2-net">2,217,910</td><td>11.3%</td><td class="v2-x">2,500,000</td><td class="v2-x">242,930</td><td class="v2-x">39,160</td></tr>
+<tr><th scope="row">3,600만</th><td class="v2-net">2,626,700</td><td>12.4%</td><td class="v2-x">3,000,000</td><td class="v2-x">291,520</td><td class="v2-x">81,780</td></tr>
+<tr><th scope="row">4,000만</th><td class="v2-net">2,893,710</td><td>13.2%</td><td class="v2-x">3,333,333</td><td class="v2-x">323,890</td><td class="v2-x">115,730</td></tr>
+<tr><th scope="row">4,500만</th><td class="v2-net">3,213,400</td><td>14.3%</td><td class="v2-x">3,750,000</td><td class="v2-x">364,390</td><td class="v2-x">172,210</td></tr>
+<tr class="v2-hi"><th scope="row">5,000만</th><td class="v2-net">3,522,740</td><td>15.5%</td><td class="v2-x">4,166,666</td><td class="v2-x">404,870</td><td class="v2-x">239,050</td></tr>
+<tr><th scope="row">5,500만</th><td class="v2-net">3,833,760</td><td>16.4%</td><td class="v2-x">4,583,333</td><td class="v2-x">445,360</td><td class="v2-x">304,210</td></tr>
+<tr><th scope="row">6,000만</th><td class="v2-net">4,145,120</td><td>17.1%</td><td class="v2-x">5,000,000</td><td class="v2-x">485,870</td><td class="v2-x">369,010</td></tr>
+<tr><th scope="row">7,000만</th><td class="v2-net">4,771,000</td><td>18.2%</td><td class="v2-x">5,833,333</td><td class="v2-x">566,820</td><td class="v2-x">495,510</td></tr>
+<tr><th scope="row">8,000만</th><td class="v2-net">5,301,360</td><td>20.5%</td><td class="v2-x">6,666,666</td><td class="v2-x">644,160</td><td class="v2-x">721,140</td></tr>
+<tr><th scope="row">9,000만</th><td class="v2-net">5,883,720</td><td>21.6%</td><td class="v2-x">7,500,000</td><td class="v2-x">685,570</td><td class="v2-x">930,710</td></tr>
+<tr><th scope="row">1억</th><td class="v2-net">6,471,100</td><td>22.3%</td><td class="v2-x">8,333,333</td><td class="v2-x">726,950</td><td class="v2-x">1,135,280</td></tr>
+<tr><th scope="row">1.2억</th><td class="v2-net">7,532,100</td><td>24.7%</td><td class="v2-x">10,000,000</td><td class="v2-x">809,760</td><td class="v2-x">1,658,140</td></tr>
+<tr><th scope="row">1.5억</th><td class="v2-net">8,937,170</td><td>28.5%</td><td class="v2-x">12,500,000</td><td class="v2-x">933,940</td><td class="v2-x">2,628,890</td></tr>
+<tr><th scope="row">2억</th><td class="v2-net">11,238,560</td><td>32.6%</td><td class="v2-x">16,666,666</td><td class="v2-x">1,140,900</td><td class="v2-x">4,287,200</td></tr>
+</tbody></table></div>
+<button class="v2-more" type="button" data-more="mainTbl">전체 항목 보기</button>
+<p class="v2-fn">단위: 원. 국세청 2026.3.1 간이세액표 원본 + 2026년 4대보험 요율. 이 표의 소득세는 홈택스 조회값과 원 단위까지 같아요.</p>
+<section class="v2-widget" aria-label="내 상황 계산">
+  <h4>내 상황으로 바로 보기</h4><p class="v2-note">이 글의 표와 같은 산식(국세청 간이세액표 2026.3 + 공단 요율)으로 계산해요.</p>
+  <div class="v2-grid">
+    <div><label>연봉 (만원)</label><input id="wa" type="number" inputmode="numeric" value="5000" min="1200" max="30000" step="100"></div>
+    <div><label>부양가족 (본인 포함)</label><select id="wd"><option value="1" selected>1명</option><option value="2">2명</option><option value="3">3명</option><option value="4">4명</option><option value="5">5명</option><option value="6">6명</option></select></div>
+    <div><label>8~20세 자녀</label><select id="wk"><option value="0" selected>0명</option><option value="1">1명</option><option value="2">2명</option><option value="3">3명</option></select></div>
+    <div><label>비과세 (월, 만원)</label><input id="wn" type="number" inputmode="numeric" value="0" min="0" max="100" step="5"></div>
+  </div>
+  <div class="v2-result">
+    <div class="v2-main"><span>월 실수령</span><b id="wnet">—</b></div>
+    <div><span>4대보험</span><b id="wins">—</b></div>
+    <div><span>소득세+지방세</span><b id="wtax">—</b></div>
+    <div><span>공제율</span><b id="wpct">—</b></div>
+  </div>
+</section>
+<div class="v2-note"><b>연봉 7,908만원부터 국민연금이 더 안 늘어요.</b> 월 급여 659만원이 국민연금 기준소득월액 상한이라 그 위로는 연금 보험료가 같아요. 대신 소득세 누진이 커져서 공제율은 계속 올라요.</div>
 
-<svg class="ax-hero" viewBox="0 0 1100 563" role="img" aria-label="2026 연봉 실수령액 — 국민연금 9.5% 건강보험 7.19%로 인상">
-<rect width="1100" height="563" fill="#f7f2ea"/>
-<path d="M820 0h280v240a60 60 0 0 1-60 60H820z" fill="#f6e3de"/>
-<circle cx="1012" cy="72" r="46" fill="#f2d9d2" opacity=".55"/>
-<rect x="72" y="160" width="104" height="42" rx="9" fill="#c4452f"/>
-<text x="124" y="189" font-size="19" font-weight="800" text-anchor="middle" fill="#fff" letter-spacing="-.5">급여·세금</text>
-<text x="72" y="282" font-size="57" font-weight="800" fill="#2b2723" letter-spacing="-2.6">2026 연봉</text>
-<rect x="70" y="312" width="330" height="26" fill="#f2cfc8"/>
-<text x="72" y="349" font-size="57" font-weight="800" fill="#c4452f" letter-spacing="-2.6">실수령액 표</text>
-<text x="72" y="400" font-size="21" font-weight="700" fill="#6f6858" letter-spacing="-.8">4대보험 인상 · 연봉 5천 기준 월 13,070원 더</text>
-<rect x="0" y="545" width="1100" height="18" fill="#c4452f"/>
-<g transform="translate(640 150)">
-  <ellipse cx="200" cy="292" rx="175" ry="19" fill="#e8ded0" opacity=".55"/>
-  <rect x="40" y="150" width="72" height="120" rx="7" fill="#d9bd6a" stroke="#6b6255" stroke-width="4"/>
-  <rect x="132" y="96" width="72" height="174" rx="7" fill="#d9bd6a" stroke="#6b6255" stroke-width="4"/>
-  <rect x="224" y="52" width="72" height="218" rx="7" fill="#f2cfc8" stroke="#c4452f" stroke-width="4"/>
-  <path d="M60 128l82-46 84-44" fill="none" stroke="#c4452f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="60" cy="128" r="9" fill="#c4452f"/><circle cx="142" cy="82" r="9" fill="#c4452f"/><circle cx="226" cy="38" r="9" fill="#c4452f"/>
-  <text x="76" y="292" font-size="15" font-weight="700" text-anchor="middle" fill="#8a8172">국민연금</text>
-  <text x="168" y="292" font-size="15" font-weight="700" text-anchor="middle" fill="#8a8172">건강보험</text>
-  <text x="260" y="292" font-size="15" font-weight="700" text-anchor="middle" fill="#c4452f">장기요양</text>
-</g>
-</svg>
-
-<p class="ax-intro">2026년부터 국민연금이 <b>9%에서 9.5%로</b>, 건강보험이 <b>7.09%에서 7.19%로</b> 올랐습니다. 여기에 기준소득월액 상한까지 인상되면서 연봉이 그대로여도 실수령액이 줄었습니다. 연봉 5천만원 기준으로 4대보험만 <b>월 13,070원, 연 156,840원</b> 더 나갑니다. 아래 표는 국세청 2026.3 근로소득 간이세액표 원본과 2026년 9월 4대보험 요율로 계산했으며, 홈택스 조회값과 원 단위까지 일치합니다.</p>
-
-<a class="ax-cta" href="/tax/salary-net-pay/">
-<span><b>내 연봉 실수령액 바로 계산하기</b><i>연봉·부양가족·비과세만 넣으면 됩니다</i></span>
-<em>실수령액 계산하기</em></a>
-
-<div class="ax-toc"><b>이 글에서는</b><a href="#m1">계산 구조</a><a href="#m2">실수령액 표 2단계</a><a href="#m3">실수령액 늘리기</a><a href="#tips">알아두면 좋은 것</a><a href="#faq">자주 묻는 질문</a><a href="#src">근거 자료</a></div>`;
-
-export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 계산 구조</b><span>무엇이 얼마나 빠지나</span></div>
-
-<div class="ax-st"><div class="ax-n">1</div><div class="ax-sb">
-<h3>연봉 실수령액은 어떻게 계산하나요</h3>
-<p>세전 월급에서 <b>4대보험 4가지</b>와 <b>소득세·지방소득세</b>를 뺀 금액이 실수령액입니다. 4대보험은 요율이 정해져 있어 계산이 단순하고, 소득세는 부양가족 수에 따라 달라집니다.</p>
-<figure class="ax-il">
-<svg viewBox="0 0 860 300" role="img" aria-label="세전 월급에서 국민연금 건강보험 장기요양 고용보험과 소득세 지방소득세를 빼면 실수령액입니다">
-<rect width="860" height="300" fill="#f6f1e9"/>
-<ellipse cx="430" cy="270" rx="290" ry="16" fill="#e8ded0" opacity=".5"/>
-<g transform="translate(50 60)">
-  <rect x="0" y="0" width="176" height="148" rx="12" fill="#fdfcfa" stroke="#6b6255" stroke-width="4"/>
-  <text x="88" y="60" font-size="22" font-weight="800" text-anchor="middle" fill="#2b2723" letter-spacing="-.8">세전 월급</text>
-  <text x="88" y="94" font-size="15" font-weight="600" text-anchor="middle" fill="#8a8172">연봉 ÷ 12</text>
-  <text x="88" y="124" font-size="14" font-weight="600" text-anchor="middle" fill="#8a8172">비과세 제외</text>
-</g>
-<text x="256" y="140" font-size="36" font-weight="800" text-anchor="middle" fill="#6b6255">−</text>
-<g transform="translate(292 34)">
-  <rect x="0" y="0" width="184" height="90" rx="10" fill="#fdfcfa" stroke="#6b6255" stroke-width="3.5"/>
-  <text x="92" y="34" font-size="15" font-weight="800" text-anchor="middle" fill="#2b2723">4대보험</text>
-  <text x="92" y="58" font-size="12" text-anchor="middle" fill="#8a8172">국민연금 4.75% · 건보 3.595%</text>
-  <text x="92" y="76" font-size="12" text-anchor="middle" fill="#8a8172">장기요양 · 고용 0.9%</text>
-  <rect x="0" y="104" width="184" height="90" rx="10" fill="#fdfcfa" stroke="#6b6255" stroke-width="3.5"/>
-  <text x="92" y="138" font-size="15" font-weight="800" text-anchor="middle" fill="#2b2723">소득세 + 지방세</text>
-  <text x="92" y="162" font-size="12" text-anchor="middle" fill="#8a8172">간이세액표 · 부양가족별</text>
-  <text x="92" y="180" font-size="12" text-anchor="middle" fill="#8a8172">지방세 = 소득세 10%</text>
-</g>
-<line x1="500" y1="140" x2="552" y2="140" stroke="#3d7a3d" stroke-width="7" stroke-linecap="round"/>
-<path d="M540 126l16 14-16 14" fill="none" stroke="#3d7a3d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-<g transform="translate(578 60)">
-  <rect x="0" y="0" width="228" height="148" rx="12" fill="#fdf4f1" stroke="#c4452f" stroke-width="4"/>
-  <text x="114" y="60" font-size="24" font-weight="800" text-anchor="middle" fill="#c4452f" letter-spacing="-.8">월 실수령액</text>
-  <text x="114" y="98" font-size="15" font-weight="600" text-anchor="middle" fill="#c4452f" opacity=".85">통장에 찍히는 금액</text>
-  <text x="114" y="126" font-size="14" font-weight="600" text-anchor="middle" fill="#8a8172">공제율 보통 11~23%</text>
-</g>
-</svg>
-<figcaption>소득세법 제47조·제50조·제55조·제59조·제134조 · 4대보험 요율 2026년 9월 기준</figcaption>
-</figure>
-<div class="ax-tw"><table>
-<thead><tr><th>공제 항목</th><th>요율 (근로자 부담)</th><th>연봉 5,000만 월 공제</th></tr></thead>
-<tbody>
-<tr><td>국민연금</td><td>4.75% (상한 월 659만)</td><td>197,910원</td></tr>
-<tr><td>건강보험</td><td>3.595%</td><td>149,790원</td></tr>
-<tr><td>장기요양</td><td>건강보험료의 13.14%</td><td>19,680원</td></tr>
-<tr><td>고용보험</td><td>0.9%</td><td>37,490원</td></tr>
-<tr class="ax-hi"><td>4대보험 합계</td><td>약 9.72%</td><td><b>404,870원</b></td></tr>
-<tr><td>소득세</td><td>간이세액표 (부양 1명)</td><td>217,320원</td></tr>
-<tr><td>지방소득세</td><td>소득세의 10%</td><td>21,730원</td></tr>
-<tr class="ax-hi"><td>공제 합계</td><td>15.5%</td><td><b>643,920원</b></td></tr>
-</tbody></table>
-<p class="ax-tn">연봉 5,000만원(월 세전 4,166,666원), 부양가족 1명(본인), 비과세 0원 기준.</p></div>
-</div></div>
-
-<div class="ax-mh ax-b" id="m2"><b>2단계 — 실수령액 표</b><span>연봉 구간별 금액</span></div>
-
-<div class="ax-st ax-b2"><div class="ax-n">2</div><div class="ax-sb">
-<h3>2026 연봉 실수령액 표, 3000만원부터 1억까지</h3>
-<p>부양가족 1명(본인), 비과세 0원 기준입니다. 부양가족이 늘거나 식대 같은 비과세가 있으면 실수령액이 올라갑니다.</p>
-<div class="ax-tw"><table>
-<thead><tr><th>연봉</th><th>월 세전</th><th>4대보험</th><th>소득세+지방세</th><th>월 실수령</th><th>공제율</th></tr></thead>
-<tbody>
-<tr><td>2,400만</td><td>2,000,000</td><td>194,340</td><td>21,470</td><td><b>1,784,190</b></td><td>10.8%</td></tr>
-<tr><td>3,000만</td><td>2,500,000</td><td>242,930</td><td>39,160</td><td><b>2,217,910</b></td><td>11.3%</td></tr>
-<tr><td>3,600만</td><td>3,000,000</td><td>291,520</td><td>81,780</td><td><b>2,626,700</b></td><td>12.4%</td></tr>
-<tr><td>4,000만</td><td>3,333,333</td><td>323,890</td><td>115,730</td><td><b>2,893,710</b></td><td>13.2%</td></tr>
-<tr class="ax-hi"><td>5,000만</td><td>4,166,666</td><td>404,870</td><td>239,050</td><td><b>3,522,740</b></td><td>15.5%</td></tr>
-<tr><td>6,000만</td><td>5,000,000</td><td>485,870</td><td>369,010</td><td><b>4,145,120</b></td><td>17.1%</td></tr>
-<tr><td>7,000만</td><td>5,833,333</td><td>566,820</td><td>495,510</td><td><b>4,771,000</b></td><td>18.2%</td></tr>
-<tr><td>8,000만</td><td>6,666,666</td><td>644,160</td><td>721,140</td><td><b>5,301,360</b></td><td>20.5%</td></tr>
-<tr><td>9,000만</td><td>7,500,000</td><td>685,570</td><td>930,710</td><td><b>5,883,720</b></td><td>21.6%</td></tr>
-<tr><td>1억</td><td>8,333,333</td><td>726,950</td><td>1,135,280</td><td><b>6,471,100</b></td><td>22.3%</td></tr>
-<tr><td>1.2억</td><td>10,000,000</td><td>809,760</td><td>1,658,140</td><td><b>7,532,100</b></td><td>24.7%</td></tr>
-<tr><td>1.5억</td><td>12,500,000</td><td>933,940</td><td>2,628,890</td><td><b>8,937,170</b></td><td>28.5%</td></tr>
-</tbody></table>
-<p class="ax-tn">단위: 원. 부양가족 1명·비과세 0원·2026년 9월 요율 기준. MoneyDoc 계산기 엔진으로 산출했습니다.</p></div>
-<div class="ax-warn"><span>주의</span><p>연봉 8,000만원부터 4대보험 증가폭이 확 꺾입니다. 월 급여가 <b>659만원</b>을 넘으면 국민연금이 상한에 걸려 더 이상 늘지 않기 때문입니다.</p></div>
-</div></div>
-
-<div class="ax-st ax-b2"><div class="ax-n">3</div><div class="ax-sb">
-<h3>연봉 7000 8000 9000 1억 실수령액은 얼마인가요</h3>
-<p>고연봉 구간은 소득세 누진 때문에 공제율이 빠르게 올라갑니다. 연봉이 2배가 돼도 실수령액은 2배가 되지 않습니다.</p>
-<div class="ax-cp">
-  <div><em>연봉 7,000만</em><b>4,771,000원</b><i>공제율 18.2% · 연 5,725만</i></div>
-  <div><em>연봉 8,000만</em><b>5,301,360원</b><i>공제율 20.6% · 연 6,362만</i></div>
-  <div><em>연봉 9,000만</em><b>5,883,720원</b><i>공제율 21.7% · 연 7,060만</i></div>
-  <div class="ax-hi"><em>연봉 1억</em><b>6,471,100원</b><i>공제율 22.3% · 연 7,765만</i></div>
-</div>
-<p class="ax-nt">연봉 5,000만원과 1억원을 비교하면 세전은 정확히 2배지만 실수령액은 <b>1.84배</b>입니다. 차액 월 295만원 중 약 122만원이 세금과 보험료로 빠집니다.</p>
-<figure class="ax-ig">
-<svg viewBox="0 0 660 170" role="img" aria-label="연봉이 오를수록 공제율이 올라 실수령액 증가폭이 둔화됩니다">
-<text x="0" y="18" font-size="13" font-weight="700" fill="currentColor" letter-spacing="-.3">연봉이 오를수록 공제율이 커집니다</text>
-<line x1="0" y1="130" x2="620" y2="130" stroke="currentColor" stroke-width="1.5" opacity=".3"/>
-<g>
-<rect x="20" y="94" width="52" height="36" fill="currentColor" opacity=".45"/><text x="46" y="148" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">3천만</text><text x="46" y="86" font-size="11.5" font-weight="700" text-anchor="middle" fill="currentColor">11.3%</text>
-<rect x="118" y="80" width="52" height="50" fill="currentColor" opacity=".45"/><text x="144" y="148" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">4천만</text><text x="144" y="72" font-size="11.5" font-weight="700" text-anchor="middle" fill="currentColor">13.2%</text>
-<rect x="216" y="66" width="52" height="64" fill="currentColor" opacity=".45"/><text x="242" y="148" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">5천만</text><text x="242" y="58" font-size="11.5" font-weight="700" text-anchor="middle" fill="currentColor">15.5%</text>
-<rect x="314" y="52" width="52" height="78" fill="currentColor" opacity=".45"/><text x="340" y="148" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">7천만</text><text x="340" y="44" font-size="11.5" font-weight="700" text-anchor="middle" fill="currentColor">18.2%</text>
-<rect x="412" y="38" width="52" height="92" fill="#c4452f" opacity=".85"/><text x="438" y="148" font-size="11" text-anchor="middle" fill="#c4452f">1억</text><text x="438" y="30" font-size="11.5" font-weight="700" text-anchor="middle" fill="#c4452f">22.3%</text>
-<rect x="510" y="18" width="52" height="112" fill="#c4452f" opacity=".85"/><text x="536" y="148" font-size="11" text-anchor="middle" fill="#c4452f">1.5억</text><text x="536" y="10" font-size="11.5" font-weight="700" text-anchor="middle" fill="#c4452f">28.5%</text>
-</g>
-</svg>
-<figcaption>소득세법 제55조 종합소득세율 (누진) · 4대보험 요율 2026년 9월 기준</figcaption>
-</figure>
-<div class="ax-btns">
-<a class="ax-btn" href="/tax/salary-net-pay/"><b>연봉 실수령액 계산기</b><span>내 연봉·부양가족으로 정확히</span></a>
-<a class="ax-btn" href="/tax/four-major-insurance/"><b>4대보험료 계산기</b><span>회사 부담분까지 함께 확인</span></a>
-</div>
-</div></div>
-
-<div class="ax-mh" id="m3"><b>3단계 — 실수령액 늘리기</b><span>부양가족 · 비과세</span></div>
-
-<div class="ax-st"><div class="ax-n">4</div><div class="ax-sb">
-<h3>부양가족과 비과세로 월급 실수령액 늘리는 법</h3>
-<p>연봉이 같아도 실수령액은 달라집니다. 세전 급여를 바꿀 수 없다면 <b>부양가족 등록</b>과 <b>비과세 항목</b> 두 가지가 실질적으로 손댈 수 있는 부분입니다.</p>
-<div class="ax-tw"><table>
-<thead><tr><th>가족 구성</th><th>월 소득세</th><th>월 실수령</th><th>본인만 대비</th></tr></thead>
-<tbody>
-<tr><td>본인만</td><td>217,320</td><td>3,522,740</td><td>-</td></tr>
-<tr><td>배우자 포함</td><td>189,190</td><td>3,553,690</td><td>+30,950</td></tr>
-<tr><td>배우자 + 자녀 1명</td><td>108,320</td><td>3,642,640</td><td>+119,900</td></tr>
-<tr class="ax-hi"><td>배우자 + 자녀 2명</td><td>64,570</td><td>3,690,770</td><td><b>+168,030</b></td></tr>
-</tbody></table>
-<p class="ax-tn">연봉 5,000만원 기준. 인적공제는 1인당 연 150만원이고, 8~20세 자녀는 간이세액표 자녀 조정(1명 20,830원·2명 45,830원)이 추가로 빠집니다.</p></div>
-<p class="ax-nt">비과세는 4대보험과 소득세를 <b>동시에</b> 줄입니다. 식대는 월 20만원까지 비과세이고, 이만큼은 보험료 산정 기준에서도 빠집니다.</p>
-<div class="ax-tw"><table>
-<thead><tr><th>비과세 (월)</th><th>4대보험</th><th>월 실수령</th><th>비과세 0원 대비</th></tr></thead>
-<tbody>
-<tr><td>0원</td><td>404,870</td><td>3,522,740</td><td>-</td></tr>
-<tr class="ax-hi"><td>20만원 (식대)</td><td>385,430</td><td>3,571,550</td><td><b>+48,810</b></td></tr>
-<tr><td>30만원</td><td>375,710</td><td>3,595,960</td><td>+73,220</td></tr>
-</tbody></table>
-<p class="ax-tn">연봉 5,000만원 기준. 같은 연봉이라도 식대 20만원이 비과세로 잡히면 연 58만원을 더 받습니다.</p></div>
-<div class="ax-warn"><span>주의</span><p>비과세로 잡히면 국민연금 기준소득월액도 줄어들어 <b>나중에 받을 연금액이 함께 줄어듭니다.</b> 당장의 실수령액과 노후 연금 사이의 선택입니다.</p></div>
-</div></div>
-
-<h2 class="ax-sec" id="tips">알아두면 좋은 것</h2>
-<ul class="ax-tips">
-<li>국민연금 기준소득월액 상한은 매년 7월에 바뀝니다. 2026년 7월부터 2027년 6월까지는 상한 659만원, 하한 41만원입니다.</li>
-<li>월급이 659만원(연봉 약 7,900만원)을 넘으면 국민연금은 더 이상 늘지 않습니다. 고연봉일수록 4대보험 부담률이 오히려 낮아집니다.</li>
-<li>회사 급여명세서의 소득세는 간이세액표에 따른 개략값입니다. 실제 세금은 다음 해 연말정산에서 확정되고, 그때 환급이나 추가 납부가 생깁니다.</li>
-<li>건강보험료는 매년 4월에 전년도 보수총액을 기준으로 정산합니다. 연봉이 오른 해에는 4월에 추가 납부가 나올 수 있습니다.</li>
-<li>4대보험은 회사도 비슷한 금액을 함께 부담합니다. 산재보험까지 포함하면 회사 부담이 근로자 부담보다 큽니다.</li>
-</ul>
-
-<h2 class="ax-sec" id="faq">자주 묻는 질문</h2>
-
-<details class="ax-acc" open><summary>연봉 5000만원이면 월 실수령액은 얼마인가요?</summary>
-<div class="ax-ab"><p>부양가족 1명·비과세 0원 기준으로 월 <b>3,522,740원</b>입니다. 세전 4,166,666원에서 4대보험 404,870원, 소득세와 지방소득세 239,050원이 빠집니다. 공제율은 15.5%입니다.</p>
-<p class="ax-law">소득세법 제134조 (간이세액표) · 4대보험 요율 2026년 9월</p></div></details>
-
-<details class="ax-acc"><summary>연봉 1억이면 실수령액이 얼마나 되나요?</summary>
-<div class="ax-ab"><p>월 <b>6,471,100원</b>, 연 7,765만원입니다. 공제율 22.3%로 연봉 5,000만원(15.5%)보다 크게 높습니다. 세전은 정확히 2배인데 실수령액은 1.84배입니다.</p>
-<p class="ax-law">소득세법 제55조 (종합소득세율)</p></div></details>
-
-<details class="ax-acc"><summary>2026년에 실수령액이 줄어든 이유가 뭔가요?</summary>
-<div class="ax-ab"><p>국민연금 보험료율이 9%에서 9.5%로, 건강보험료율이 7.09%에서 7.19%로 올랐고 장기요양보험료율도 건강보험료의 12.95%에서 13.14%로 인상됐습니다. 연봉 5,000만원 기준 4대보험만 월 13,070원, 연 156,840원 늘었습니다.</p>
-<p class="ax-law">국민연금공단·건강보험공단 2026년 요율 고시</p></div></details>
-
-<details class="ax-acc"><summary>월급 실수령액으로 연봉을 거꾸로 계산할 수 있나요?</summary>
-<div class="ax-ab"><p>가능하지만 정확하지 않습니다. 공제율이 연봉 구간마다 다르고 부양가족·비과세에 따라 달라지기 때문입니다. 대략 월 실수령액 × 12 ÷ 0.85 정도가 연봉 5,000만원대의 기준이고, 고연봉일수록 나누는 값이 작아집니다.</p>
-<p class="ax-law">위 실수령액 표의 공제율 참고</p></div></details>
-
-<details class="ax-acc"><summary>세전 세후 차이가 명세서와 다릅니다.</summary>
-<div class="ax-ab"><p>회사 명세서의 소득세는 매월 간이세액표로 떼는 개략값이라 실제 세금과 다릅니다. 차이는 다음 해 연말정산에서 정산됩니다. 4대보험은 요율이 고정이라 명세서와 일치해야 정상입니다.</p>
-<p class="ax-law">소득세법 제134조</p></div></details>
-
-<div class="ax-sum">
-<h4>정리</h4>
-<ul>
-<li>실수령액 = 세전 월급 − <b>4대보험(약 9.72%)</b> − 소득세 − 지방소득세.</li>
-<li>2026년 요율은 국민연금 <b>4.75%</b>, 건강보험 <b>3.595%</b>, 장기요양 건보료의 <b>13.14%</b>, 고용보험 <b>0.9%</b>입니다.</li>
-<li>연봉 5,000만원 월 실수령 <b>3,522,740원</b>, 1억 <b>6,471,100원</b>입니다.</li>
-<li>월 급여 <b>659만원</b>을 넘으면 국민연금이 상한에 걸립니다.</li>
-<li>부양가족 등록과 비과세 항목이 실수령액을 늘리는 현실적인 두 가지 방법입니다.</li>
-</ul>
-<a class="ax-cta" href="/tax/salary-net-pay/">
-<span><b>연봉 실수령액 계산기로 내 금액 확인하기</b><i>부양가족·자녀·비과세까지 반영</i></span>
-<em>실수령액 계산하기</em></a>
+<h2 id="s3">2026년 4대보험 요율, 월급에서 얼마나 떼나요<small>요율은 법으로 정해져 있어 회사가 달라도 같아요</small></h2>
+<p class="v2-lead"><span class="v2-ans">근로자가 내는 몫은 국민연금 4.75%, 건강보험 3.595%, 장기요양 0.4724%, 고용보험 0.9%예요.</span> 회사도 같은 비율을 따로 내요. 국민연금은 2026년에 총 9%에서 9.5%로 올라 근로자 몫이 4.5%에서 4.75%가 됐고, 연봉 5,000만원이면 월 10,420원 더 내요.</p>
+<div class="v2-tbl v2-text"><table><caption>2026년 4대보험 요율과 근로자 부담 (연봉 5,000만원 기준 월 공제액)</caption><thead><tr><th>항목</th><th>전체 요율</th><th>근로자 몫</th><th>월 공제액</th></tr></thead><tbody>
+<tr><th scope="row">국민연금</th><td data-l="전체 요율">9.5% (2025년 9%)</td><td data-l="근로자 몫">4.75%</td><td data-l="월 공제액">197,910원</td></tr>
+<tr><th scope="row">건강보험</th><td data-l="전체 요율">7.19%</td><td data-l="근로자 몫">3.595%</td><td data-l="월 공제액">149,790원</td></tr>
+<tr><th scope="row">장기요양보험</th><td data-l="전체 요율">소득의 0.9448%</td><td data-l="근로자 몫">0.4724%</td><td data-l="월 공제액">19,680원</td></tr>
+<tr><th scope="row">고용보험 (실업급여)</th><td data-l="전체 요율">1.8%</td><td data-l="근로자 몫">0.9%</td><td data-l="월 공제액">37,490원</td></tr>
+</tbody></table></div>
+<p class="v2-fn">국민연금 기준소득월액 상한 659만원 · 하한 41만원 (2026.7~2027.6). 국민연금 요율은 2032년까지 해마다 0.5%씩 올라 총 13%가 돼요.</p>
+<div class="v2-tl" aria-label="국민연금 보험료율 인상 일정">
+  <div><i>2025</i><b>총 9%</b><span>근로자 4.5%</span><em>지난해</em></div>
+  <div class="v2-go"><i>2026</i><b>총 9.5%</b><span>근로자 4.75%</span><em>지금</em></div>
+  <div><i>2027</i><b>총 10%</b><span>근로자 5%</span><em>내년</em></div>
+  <div><i>2032</i><b>총 13%</b><span>근로자 6.5%</span><em>마지막</em></div>
 </div>
 
-<h2 class="ax-sec" id="src">근거 자료</h2>
-
-<p class="ax-collected">4대보험 요율은 2026년 9월 1일 기준으로 확인한 값입니다. 소득세 산식은 소득세법 조문에 따릅니다.</p>
-
-<div class="ax-lawq"><b>2026년 4대보험 요율 (근로자 부담)</b>
-<p>국민연금 4.75% (총 9.5%) · 기준소득월액 상한 6,590,000원 / 하한 410,000원 (2026.7~2027.6 적용) — 국민연금공단·보건복지부<br>
-건강보험 3.595% (총 7.19%) — 국민건강보험공단<br>
-장기요양보험 소득 대비 0.9448% (건강보험료의 13.14%), 근로자 절반 부담 — 국민건강보험공단<br>
-고용보험(실업급여) 0.9% (총 1.8%) — 고용노동부</p></div>
-
-<div class="ax-lawq"><b>소득세 산출 근거</b>
-<p>소득세법 제47조(근로소득공제) · 제50조(기본공제) · 제55조(세율) · 제59조(근로소득세액공제) · 제59조의2(간이세액표 자녀 조정) · 제134조(근로소득 간이세액표). 지방소득세는 지방세법에 따라 소득세의 10%.</p></div>
-
-<div class="ax-src"><b>출처 · 국민연금공단, 국민건강보험공단, 고용노동부, 국세청</b><br>
-계산 산식은 <a href="https://www.moel.go.kr/" target="_blank" rel="noopener">고용노동부</a> 연봉 계산 산식을 따르며, 세율·공제는 국세청 소득세법 기준입니다. 요율은
-<a href="https://www.nps.or.kr/" target="_blank" rel="noopener">국민연금공단</a> ·
-<a href="https://www.nhis.or.kr/" target="_blank" rel="noopener">국민건강보험공단</a>에서 확인할 수 있습니다.<br><br>
-회사 급여명세서의 소득세는 간이세액표에 따른 개략값이라 이 계산 결과와 차이가 날 수 있으며, 실제 세액은 연말정산에서 확정됩니다. 본 결과는 참고용입니다.</div>`;
-
-export const asideHtml = `<div class="ax-side"><h4>연봉 계산기</h4>
-<a class="ax-rel" href="/tax/salary-net-pay/">연봉 실수령액 계산기<span>부양가족·비과세 반영</span></a>
-<a class="ax-rel" href="/tax/four-major-insurance/">4대보험료 계산기<span>근로자+회사 부담 동시</span></a>
+<h2 id="s4">연봉 100만원 인상되면 실수령액은 얼마나 늘어나나요<small>연봉 협상은 세후로 계산해야 해요</small></h2>
+<p class="v2-lead"><span class="v2-ans">연봉 5,000만원에서 100만원 오르면 1년에 761,880원, 인상액의 76%만 통장에 남아요.</span> 남는 비율은 연봉대마다 다르고, 국민연금 상한을 지나면 오히려 조금 올라가요.</p>
+<div class="v2-tbl"><table><caption>연봉 인상액별 실수령액 증가와 남는 비율 (본인 1명 · 비과세 0원)</caption><thead><tr><th>연봉 변화</th><th>인상액 (연)</th><th>실수령 증가 (연)</th><th>남는 비율</th></tr></thead><tbody>
+<tr><th scope="row">5,000만 → 5,100만</th><td>+100만</td><td class="v2-net">+761,880</td><td>76%</td></tr>
+<tr><th scope="row">5,000만 → 5,300만</th><td>+300만</td><td class="v2-net">+2,285,640</td><td>76%</td></tr>
+<tr><th scope="row">5,000만 → 5,500만</th><td>+500만</td><td class="v2-net">+3,732,240</td><td>75%</td></tr>
+<tr><th scope="row">5,000만 → 6,000만</th><td>+1,000만</td><td class="v2-net">+7,468,560</td><td>75%</td></tr>
+<tr><th scope="row">7,800만 → 8,000만</th><td>+200만</td><td class="v2-net">+1,370,520</td><td>69%</td></tr>
+<tr><th scope="row">8,000만 → 8,500만</th><td>+500만</td><td class="v2-net">+3,494,160</td><td>70%</td></tr>
+</tbody></table></div>
+<p class="v2-fn">남는 비율 = 실수령 증가 ÷ 인상액. 연봉 7,800만 → 8,000만 구간은 국민연금 상한 때문에 비율이 잠깐 높아져요.</p>
+<div class="v2-tips">
+  <div><b>협상 팁</b>"연봉 300만원 인상"은 5,000만원대에서 월 <em>190,470원</em>이에요. 월 단위 세후 금액으로 바꿔 말하면 체감이 정확해져요.</div>
 </div>
 
-<div class="ax-side"><h4>이 글의 단계</h4>
-<ol>
-<li><a href="#m1">계산 구조</a></li>
-<li><a href="#m2">2026 실수령액 표</a></li>
-<li><a href="#m2">연봉 7000~1억</a></li>
-<li><a href="#m3">실수령액 늘리기</a></li>
-<li><a href="#faq">자주 묻는 질문</a></li>
-</ol></div>
+<h2 id="s5">연봉 실수령액 늘리는 방법 (부양가족·비과세 식대)<small>세전 급여를 못 바꿀 때 손댈 수 있는 두 가지</small></h2>
+<p><span class="v2-ans">배우자와 자녀 2명을 부양가족으로 신고하면 월 168,030원, 식대 20만원이 비과세로 잡히면 월 48,810원이 더 들어와요.</span> 회사에 부양가족을 정확히 신고하는 것과 식대 같은 비과세를 급여 구성에 넣는 것, 이 두 가지가 현실적인 방법이에요.</p>
+<div class="v2-tbl"><table><caption>부양가족 수에 따른 소득세와 실수령액 (연봉 5,000만원)</caption><thead><tr><th>가족 구성</th><th>월 소득세</th><th>월 실수령</th><th>본인만 대비</th></tr></thead><tbody>
+<tr><th scope="row">본인만</th><td>217,320</td><td class="v2-net">3,522,740</td><td>기준</td></tr>
+<tr><th scope="row">배우자</th><td>189,190</td><td class="v2-net">3,553,690</td><td>+30,950</td></tr>
+<tr><th scope="row">배우자 + 자녀 1명 (8~20세)</th><td>108,320</td><td class="v2-net">3,642,640</td><td>+119,900</td></tr>
+<tr class="v2-hi"><th scope="row">배우자 + 자녀 2명</th><td>64,570</td><td class="v2-net">3,690,770</td><td>+168,030</td></tr>
+</tbody></table></div>
+<p class="v2-fn">간이세액표는 부양가족 수로 구간이 나뉘고, 8세 이상 20세 이하 자녀가 있으면 세액을 더 빼요.</p>
+<div class="v2-tbl"><table><caption>비과세 식대 금액별 실수령액 차이 (연봉 5,000만원)</caption><thead><tr><th>비과세 (월)</th><th>4대보험</th><th>소득세+지방세</th><th>월 실수령</th><th>0원 대비</th></tr></thead><tbody>
+<tr><th scope="row">0원</th><td>404,870</td><td>239,050</td><td class="v2-net">3,522,740</td><td>기준</td></tr>
+<tr><th scope="row">10만원</th><td>395,150</td><td>224,360</td><td class="v2-net">3,547,150</td><td>+24,410</td></tr>
+<tr class="v2-hi"><th scope="row">20만원 (식대 한도)</th><td>385,430</td><td>209,680</td><td class="v2-net">3,571,550</td><td>+48,810</td></tr>
+<tr><th scope="row">30만원</th><td>375,710</td><td>194,990</td><td class="v2-net">3,595,960</td><td>+73,220</td></tr>
+</tbody></table></div>
+<p class="v2-fn">식대 비과세 한도는 월 20만원. 비과세는 4대보험 산정 기준에서도 빠져 두 쪽에서 동시에 줄어요.</p>
+<div class="v2-note"><b>주의</b> 비과세로 잡히면 국민연금 기준소득월액도 줄어 나중에 받을 연금이 조금 줄어요. 당장의 실수령과 노후 연금 사이의 선택이에요.</div>
 
-<div class="ax-side"><h4>같은 분류의 글</h4>
-<a class="ax-rel" href="/law/severance-pay/">퇴직금 계산 방법과 평균임금 산정기준<span>퇴직금</span></a>
-<a class="ax-rel" href="/tax/four-major-insurance-guide/">4대보험 요율 2026, 얼마나 올랐나<span>연봉</span></a>
-<a class="ax-rel" href="/tax/comprehensive-income-tax-guide/">연말정산 환급금 계산과 공제 항목<span>연봉</span></a>
+<h2 id="s6">급여명세서 실수령액이 계산과 다른 이유는 무엇인가요<small>차이가 난다면 이 다섯 가지 중 하나예요</small></h2>
+<p><span class="v2-ans">비과세 식대, 부양가족 신고, 원천징수 비율(80·120%), 상여가 있는 달, 4월·7월 정산. 이 다섯 가지 중 하나예요.</span> 각각 얼마나 차이 나는지 적었어요.</p>
+<div class="v2-tips">
+  <div><b>① 비과세 식대가 급여에 섞여 있다</b>월 20만원이 비과세면 실수령이 <em>+48,810원</em> 올라가요. 명세서에서 "식대" 항목을 확인하세요.</div>
+  <div><b>② 부양가족 신고 인원이 다르다</b>배우자 1명 추가만으로 소득세가 월 <em>28,130원</em> 줄어요. 소득·세액공제신고서를 냈는지 확인하세요.</div>
+  <div><b>③ 회사가 원천징수 비율 80%·120%를 적용했다</b>근로자가 신청하면 소득세를 80%나 120%로 뗄 수 있어요. 5,000만원 기준 100% 217,320원 → 80% 173,850원.</div>
+  <div><b>④ 상여·성과급이 있는 달이다</b>그 달 급여에 합산돼 간이세액표 구간이 올라가요. 연말정산에서 정산돼요.</div>
+  <div><b>⑤ 4월·7월 정산 달이다</b>4월은 전년 보수 기준 건강보험 정산, 7월은 국민연금 기준소득월액 상·하한 변경이 반영돼요.</div>
+</div>
+
+<h2 id="s7">월급 실수령액이 매달 다른 이유는 무엇인가요 (1월·4월·7월)<small>같은 연봉인데 어떤 달은 다르게 들어오는 이유</small></h2>
+<p><span class="v2-ans">1~2월 연말정산, 3월 간이세액표 개정, 4월 건강보험 정산, 7월 국민연금 상한 변경. 이 네 달에 금액이 바뀌어요.</span> </p>
+<div class="v2-tl" aria-label="실수령액이 달라지는 달">
+  <div><i>1~2월</i><b>연말정산</b><span>환급 또는 추가 납부. 전년 소득세 확정</span></div>
+  <div class="v2-go"><i>3월</i><b>간이세액표 개정</b><span>2026.3.1 표부터 소득세 변경</span></div>
+  <div><i>4월</i><b>건강보험 정산</b><span>전년 보수 기준. 연봉 오른 해는 추가 납부</span></div>
+  <div class="v2-go"><i>7월</i><b>국민연금 상·하한 변경</b><span>상한 659만원 · 하한 41만원 적용</span></div>
+</div>
+
+<h2 id="faq">자주 묻는 질문</h2>
+<div class="v2-faqs">
+<details class="v2-faq" open><summary><i>Q</i><span>연봉 5000 실수령액은 월 얼마인가요?</span></summary><div><i>A</i><p>부양가족 본인 1명, 비과세 0원 기준 월 <b>3,522,740원</b>이에요. 세전 4,166,666원에서 4대보험 404,870원, 소득세·지방소득세 239,050원이 빠져 공제율 15.5%예요. 홈택스 간이세액표 조회값과 같은 숫자예요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>연봉 1억이면 실수령액은 얼마인가요?</span></summary><div><i>A</i><p>월 <b>6,471,100원</b>, 공제율 22.3%예요. 5,000만원의 실수령 3,522,740원과 비교하면 세전은 2배지만 실수령은 1.84배예요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>2026년에 실수령액이 줄어든 이유가 뭔가요?</span></summary><div><i>A</i><p>국민연금 요율이 총 9%에서 9.5%로 올라 근로자 몫이 4.5%에서 4.75%가 됐어요. 연봉 5,000만원이면 국민연금만 월 10,420원 더 내요. 소득세는 2026년 3월 간이세액표 개정으로 따로 바뀌었어요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>회사 명세서 소득세가 이 글과 다른데 왜 그런가요?</span></summary><div><i>A</i><p>다섯 가지를 확인하세요. 비과세 식대(월 20만원)가 급여에 포함돼 있는지, 부양가족 신고 인원, 회사가 80%·120% 원천징수 비율을 적용했는지, 상여가 있는 달인지, 4월 건보 정산·7월 국민연금 상한 변경 달인지예요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>월 실수령액으로 연봉을 거꾸로 알 수 있나요?</span></summary><div><i>A</i><p>공제율이 연봉마다 달라 단순 나눗셈은 틀려요. 위 표에서 실수령액이 가까운 줄을 찾거나, 연봉 실수령액 계산기의 "실수령액 → 연봉" 기능을 쓰면 정확해요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>소득세는 매달 이렇게 확정되는 건가요?</span></summary><div><i>A</i><p>아니에요. 매달 빠지는 소득세는 간이세액표에 따른 선납이고, 다음 해 1~2월 연말정산에서 실제 세액과 정산해 환급받거나 더 내요. 이 글의 숫자는 매달 통장에 들어오는 금액 기준이에요.</p></div></details>
+</div>
+<section class="v2-sum" aria-label="정리"><div class="v2-hd"><small>이 글 한 줄 정리</small><b>정리</b></div><ul>
+<li>실수령액 = 세전 월급 − 4대보험 − 소득세(간이세액표) − 지방소득세(소득세의 10%).</li>
+<li>연봉 5,000만원 월 3,522,740원, 1억 6,471,100원. 국민연금 요율 인상으로 5,000만원이면 월 10,420원 더 빠져요.</li>
+<li>월 급여 659만원(연봉 약 7,908만원)을 넘으면 국민연금은 더 늘지 않아요.</li>
+<li>부양가족 신고와 비과세 식대가 실수령을 늘리는 현실적인 방법이에요.</li>
+</ul></section>
+<a class="v2-cta" href="/tax/salary-net-pay/">연봉 실수령액 계산기 바로가기</a>
+<h2 id="src">출처</h2>
+<div class="v2-src">
+<b>법령</b>소득세법 제134조(원천징수), 제12조(비과세 식사대 월 20만원). 소득세법 시행령 제194조(간이세액표 적용, 100분의 80·120 신청). 국민연금법 부칙(2026년 사업장가입자 기여금 1만분의 475, 2032년까지 단계 인상). 국민건강보험법 시행령(보험료율 1만분의 719). 노인장기요양보험법 시행령 제4조(장기요양보험료율 100만분의 9,448). 고용보험 및 산업재해보상보험의 보험료징수 등에 관한 법률 시행령 제12조(실업급여 보험료율 1천분의 18).
+<b>행정규칙·정부 안내</b>보건복지부 고시 국민연금 기준소득월액 하한액과 상한액(하한 410천원 · 상한 6,590천원, 2026.7~2027.6). 국세청 근로소득 간이세액표(2026.3.1 이후) 엑셀 원본을 그대로 옮겨 계산. 최저임금위원회 2026년 최저임금 결정현황(시급 10,320원).
+<b>정부 도구</b>홈택스 근로소득 간이세액표 조회값과 5케이스 원 단위 일치 (2026-09-02). 4대보험은 공단 요율로 계산해 4대사회보험 정보연계센터 모의계산과 대조했어요.
+</div>
+<div class="v2-rel"><a href="/tax/salary-net-pay/"><b>계산기</b>연봉 실수령액 계산기</a><a href="/tax/four-major-insurance-guide/"><b>세금 가이드</b>2026 4대보험 요율, 회사 부담까지</a><a href="/tax/comprehensive-income-tax-guide/"><b>세금 가이드</b>종합소득세 계산, 세율 구간</a></div>
+<div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
+  <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
+    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>
+    <button class="v2-btn" id="md-inter-go">바로 이동</button></div>
 </div>`;
 
 export const faqLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
+  "mainEntity": [
     {
       "@type": "Question",
-      "name": "연봉 5000만원이면 월 실수령액은 얼마인가요?",
+      "name": "연봉 5000 실수령액은 월 얼마인가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "부양가족 1명·비과세 0원 기준으로 월 3,522,740원입니다. 세전 4,166,666원에서 4대보험 404,870원, 소득세와 지방소득세 239,050원이 빠집니다. 공제율은 15.5%입니다. 소득세법 제134조 (간이세액표) · 4대보험 요율 2026년 9월"
+        "text": "부양가족 본인 1명, 비과세 0원 기준 월 3,522,740원이에요. 세전 4,166,666원에서 4대보험 404,870원, 소득세·지방소득세 239,050원이 빠져 공제율 15.5%예요. 홈택스 간이세액표 조회값과 같은 숫자예요."
       }
     },
     {
       "@type": "Question",
-      "name": "연봉 1억이면 실수령액이 얼마나 되나요?",
+      "name": "연봉 1억이면 실수령액은 얼마인가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "월 6,471,100원, 연 7,765만원입니다. 공제율 22.3%로 연봉 5,000만원(15.5%)보다 크게 높습니다. 세전은 정확히 2배인데 실수령액은 1.84배입니다. 소득세법 제55조 (종합소득세율)"
+        "text": "월 6,471,100원, 공제율 22.3%예요. 5,000만원의 실수령 3,522,740원과 비교하면 세전은 2배지만 실수령은 1.84배예요."
       }
     },
     {
@@ -299,24 +221,32 @@ export const faqLd = {
       "name": "2026년에 실수령액이 줄어든 이유가 뭔가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "국민연금 보험료율이 9%에서 9.5%로, 건강보험료율이 7.09%에서 7.19%로 올랐고 장기요양보험료율도 건강보험료의 12.95%에서 13.14%로 인상됐습니다. 연봉 5,000만원 기준 4대보험만 월 13,070원, 연 156,840원 늘었습니다. 국민연금공단·건강보험공단 2026년 요율 고시"
+        "text": "국민연금 요율이 총 9%에서 9.5%로 올라 근로자 몫이 4.5%에서 4.75%가 됐어요. 연봉 5,000만원이면 국민연금만 월 10,420원 더 내요. 소득세는 2026년 3월 간이세액표 개정으로 따로 바뀌었어요."
       }
     },
     {
       "@type": "Question",
-      "name": "월급 실수령액으로 연봉을 거꾸로 계산할 수 있나요?",
+      "name": "회사 명세서 소득세가 이 글과 다른데 왜 그런가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "가능하지만 정확하지 않습니다. 공제율이 연봉 구간마다 다르고 부양가족·비과세에 따라 달라지기 때문입니다. 대략 월 실수령액 × 12 ÷ 0.85 정도가 연봉 5,000만원대의 기준이고, 고연봉일수록 나누는 값이 작아집니다. 위 실수령액 표의 공제율 참고"
+        "text": "다섯 가지를 확인하세요. 비과세 식대(월 20만원)가 급여에 포함돼 있는지, 부양가족 신고 인원, 회사가 80%·120% 원천징수 비율을 적용했는지, 상여가 있는 달인지, 4월 건보 정산·7월 국민연금 상한 변경 달인지예요."
       }
     },
     {
       "@type": "Question",
-      "name": "세전 세후 차이가 명세서와 다릅니다.",
+      "name": "월 실수령액으로 연봉을 거꾸로 알 수 있나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "회사 명세서의 소득세는 매월 간이세액표로 떼는 개략값이라 실제 세금과 다릅니다. 차이는 다음 해 연말정산에서 정산됩니다. 4대보험은 요율이 고정이라 명세서와 일치해야 정상입니다. 소득세법 제134조"
+        "text": "공제율이 연봉마다 달라 단순 나눗셈은 틀려요. 위 표에서 실수령액이 가까운 줄을 찾거나, 연봉 실수령액 계산기의 \"실수령액 → 연봉\" 기능을 쓰면 정확해요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "소득세는 매달 이렇게 확정되는 건가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니에요. 매달 빠지는 소득세는 간이세액표에 따른 선납이고, 다음 해 1~2월 연말정산에서 실제 세액과 정산해 환급받거나 더 내요. 이 글의 숫자는 매달 통장에 들어오는 금액 기준이에요."
       }
     }
-  ],
+  ]
 };

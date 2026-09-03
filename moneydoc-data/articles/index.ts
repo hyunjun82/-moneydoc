@@ -10,13 +10,6 @@ export const GUIDES: GuideLink[] = [
     "blurb": "평균임금 vs 통상임금 · 퇴사일 직전 3개월"
   },
   {
-    "cat": "tax",
-    "catLabel": "세금",
-    "href": "/tax/salary-net-pay-guide/",
-    "title": "2026 연봉 실수령액 표, 4대보험 올라 월급 얼마나 줄었나",
-    "blurb": "2026년 4대보험 요율 + 간이세액표 반영"
-  },
-  {
     "cat": "realestate",
     "catLabel": "부동산",
     "href": "/realestate/transfer-tax-guide/",
@@ -113,6 +106,13 @@ export const GUIDES: GuideLink[] = [
     "href": "/government/unemployment-benefit-guide/",
     "title": "2026년 실업급여 얼마나 받나요, 조건부터 금액과 신청 방법까지",
     "blurb": "하루 66,048원 · 210일 · 신청 4단계와 회차별 구직활동"
+  },
+  {
+    "cat": "tax",
+    "catLabel": "세금",
+    "href": "/tax/salary-net-pay-guide/",
+    "title": "2026년 연봉 실수령액 표, 연봉 3000부터 1억까지 월급 얼마 받나요",
+    "blurb": "연봉 2,400만~2억 실수령액 표 · 4대보험 요율 · 명세서와 다른 이유"
   },
   {
     "cat": "government",
