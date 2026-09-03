@@ -14,4 +14,6 @@ export const ARTICLES = [
   { slug: 'part-time-insurance-guide', cat: 'tax', catLabel: '세금', crumb: '아르바이트 4대보험', blurb: '주 15시간·월 60시간 기준 · 시간별 보험료 · 사업주 의무' },
   { slug: 'comprehensive-income-tax-guide', cat: 'tax', catLabel: '세금', crumb: '종합소득세', blurb: '세율 8구간·누진공제 · 소득별 세금표 · 신고 대상 판정 · 홈택스 5단계' },
   { slug: 'freelancer-tax-guide', cat: 'tax', catLabel: '세금', crumb: '프리랜서 3.3%', blurb: '3.3% 구조 · 단순경비율 · 수입별 환급액 표 · 5월 신고 흐름' },
+  { slug: 'acquisition-tax-guide', cat: 'realestate', catLabel: '부동산', crumb: '취득세', blurb: '6억·9억 세율 · 집값별 세금표 · 생애최초 200만원 · 8%·12% 중과' },
+  { slug: 'transfer-tax-guide', cat: 'realestate', catLabel: '부동산', crumb: '양도소득세', blurb: '2년 보유 비과세 · 12억 초과분 계산 · 장기보유특별공제 80% · 2개월 예정신고' },
 ];

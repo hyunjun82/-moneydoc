@@ -945,4 +945,90 @@ function mdSalary(annual, dependents, kids, nontaxable){
   ['fr','fe','fd'].forEach(function(id){document.getElementById(id).addEventListener('input',frrender)}); frrender();
 
   },
+  "acquisition-tax-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
+
+  function acqTax(price, houses, adjusted, area){
+    function std(p){ return p <= 600000000 ? 0.01 : p <= 900000000 ? Math.round(((p / 100000000) * (2/3) - 3) * 100) / 10000 : 0.03; }
+    var rate, heavy = false;
+    if (houses <= 1) rate = std(price);
+    else if (houses === 2) { if (adjusted) { rate = 0.08; heavy = true; } else rate = std(price); }
+    else if (houses === 3) { rate = adjusted ? 0.12 : 0.08; heavy = true; }
+    else { rate = 0.12; heavy = true; }
+    var acqv = Math.round(price * rate);
+    var rrate = !heavy ? 0.002 : (rate === 0.08 ? 0.006 : 0.010);
+    var rural = area > 85 ? Math.round(price * rrate) : 0;
+    var edu = heavy ? Math.round(price * (0.04 - 0.02) * 0.2) : Math.round(acqv * 0.1);
+    return { rate: rate, acq: acqv, rural: rural, edu: edu, total: acqv + rural + edu };
+  }
+
+  function arender(){ var p=(+document.getElementById('ap').value||0)*1e8, h=+document.getElementById('ah').value||1, adj=document.getElementById('aa').value==='1', m=+document.getElementById('am').value||84; var r=acqTax(p,h,adj,m);
+    document.getElementById('aacq').textContent=won(r.acq)+'원'; document.getElementById('aedu').textContent=won(r.edu)+'원'; document.getElementById('arur').textContent=won(r.rural)+'원'; document.getElementById('atot').textContent=won(r.total)+'원'; }
+  ['ap','ah','aa','am'].forEach(function(id){document.getElementById(id).addEventListener('input',arender);document.getElementById(id).addEventListener('change',arender)}); arender();
+
+  },
+  "transfer-tax-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
+
+  var TBR = [[14000000,0.06,0],[50000000,0.15,1260000],[88000000,0.24,5760000],[150000000,0.35,15440000],[300000000,0.38,19940000],[500000000,0.4,25940000],[1000000000,0.42,35940000],[null,0.45,65940000]];
+  function trtax(sale, acq, hold, lived){
+    var gain = sale - acq;
+    var meets = hold >= 2;
+    if (meets && sale <= 1200000000) return { gain: gain, target: 0, ltbc: 0, base: 0, total: 0 };
+    var target = meets && sale > 1200000000 ? Math.round(gain * (sale - 1200000000) / sale) : gain;
+    var ltbc = 0;
+    if (hold >= 2 && lived >= 2) ltbc = Math.min(Math.min(Math.min(hold, 10) * 0.04, 0.40) + Math.min(Math.min(lived, 10) * 0.04, 0.40), 0.80);
+    else if (hold >= 3) ltbc = Math.min(0.06 + (hold - 3) * 0.02, 0.30);
+    var income = Math.round(target * (1 - ltbc));
+    var base = Math.max(0, income - 2500000);
+    var tax = 0;
+    if (hold < 1) tax = Math.round(base * 0.7);
+    else if (hold < 2) tax = Math.round(base * 0.6);
+    else { for (var i = 0; i < TBR.length; i++) { if (TBR[i][0] === null || base <= TBR[i][0]) { tax = Math.round(base * TBR[i][1] - TBR[i][2]); break; } } }
+    tax = Math.max(0, tax);
+    var local = Math.round(tax * 0.1);
+    return { gain: gain, target: target, ltbc: +ltbc.toFixed(4), base: base, total: tax + local };
+  }
+
+  function trrender(){ var s=(+document.getElementById('ts').value||0)*1e8, a=(+document.getElementById('ta').value||0)*1e8, h=+document.getElementById('th').value||0, l=+document.getElementById('tl').value||0; var r=trtax(s,a,h,l);
+    document.getElementById('tgain').textContent=won(r.gain)+'원'; document.getElementById('ttarget').textContent=won(r.target)+'원'; document.getElementById('tltbc').textContent=(r.ltbc*100).toFixed(0)+'%'; document.getElementById('ttot').textContent=won(r.total)+'원'; }
+  ['ts','ta','th','tl'].forEach(function(id){document.getElementById(id).addEventListener('input',trrender)}); trrender();
+
+  },
 };
