@@ -1252,4 +1252,80 @@ function mdSalary(annual, dependents, kids, nontaxable){
   ['bh','bi'].forEach(function(id){document.getElementById(id).addEventListener('input',bprender);document.getElementById(id).addEventListener('change',bprender)}); bprender();
 
   },
+  "parental-leave-pay-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
+
+  function leavePay(monthly, months){
+    var p1 = Math.max(Math.min(monthly * 1, 2500000), 700000);
+    var p2 = Math.max(Math.min(monthly * 1, 2000000), 700000);
+    var p3 = Math.max(Math.min(monthly * 0.8, 1600000), 700000);
+    var m1 = Math.min(months, 3);
+    var m2 = Math.max(0, Math.min(months - 3, 3));
+    var m3 = Math.max(0, months - 3 - 3);
+    return { p1: Math.round(p1), p2: Math.round(p2), p3: Math.round(p3), total: Math.round(p1 * m1 + p2 * m2 + p3 * m3) };
+  }
+
+  function plrender(){ var m=(+document.getElementById('pm').value||0)*1e4, l=+document.getElementById('pl').value||1; if(m<=0)return; var r=leavePay(m,l);
+    document.getElementById('pp1').textContent=won(r.p1)+'원'; document.getElementById('pp2').textContent=won(r.p2)+'원'; document.getElementById('pp3').textContent=won(r.p3)+'원'; document.getElementById('ptot').textContent=won(r.total)+'원'; }
+  ['pm','pl'].forEach(function(id){document.getElementById(id).addEventListener('input',plrender)}); plrender();
+
+  },
+  "basic-livelihood-eligibility-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
+
+  var MEDIAN = {"1":2564238,"2":4199292,"3":5359036,"4":6494738,"5":7556719,"6":8555952};
+  function livelihood(size, income){
+    var m = MEDIAN[String(size)] || 7618369;
+    function t(rate){ return Math.round(m * rate); }
+    return {
+      median: m,
+      live: { th: t(0.32), ok: income <= t(0.32) },
+      med: { th: t(0.40), ok: income <= t(0.40) },
+      house: { th: t(0.48), ok: income <= t(0.48) },
+      edu: { th: t(0.50), ok: income <= t(0.50) }
+    };
+  }
+
+  function lrender(){ var s=+document.getElementById('lh').value||1, i=(+document.getElementById('li').value||0)*1e4; var r=livelihood(s,i);
+    function set(id,o){ document.getElementById(id).textContent=(o.ok?'대상 ':'대상 아님 ')+'('+won(o.th)+'원)'; }
+    set('llive',r.live); set('lmed',r.med); set('lhouse',r.house); set('ledu',r.edu); }
+  ['lh','li'].forEach(function(id){document.getElementById(id).addEventListener('input',lrender)}); lrender();
+
+  },
 };

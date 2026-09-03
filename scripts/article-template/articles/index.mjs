@@ -22,4 +22,6 @@ export const ARTICLES = [
   { slug: 'unpaid-wages-guide', cat: 'law', catLabel: '법률', crumb: '임금체불', blurb: '14일 지급기한 · 연 20% 지연이자 표 · 진정 절차 · 대지급금 요건' },
   { slug: 'severance-claim-form-guide', cat: 'law', catLabel: '법률', crumb: '퇴직금 지급명령', blurb: '지급명령 신청서 · 소장 양식 · 인지대 계산표 · 관할 법원 · 2주 이의' },
   { slug: 'basic-pension-guide', cat: 'government', catLabel: '정부지원금', crumb: '기초연금', blurb: '65세·선정기준액 · 소득인정액 계산 · 국민연금 연계 · 신청 4단계' },
+  { slug: 'parental-leave-pay-guide', cat: 'government', catLabel: '정부지원금', crumb: '육아휴직 급여', blurb: '구간별 상한 250·200·160만 · 통상임금별 표 · 6+6 특례 · 신청 4단계' },
+  { slug: 'basic-livelihood-eligibility-guide', cat: 'government', catLabel: '정부지원금', crumb: '기초생활수급', blurb: '중위소득 4종 기준표 · 소득인정액 · 급여 내용 · 신청 서류' },
 ];

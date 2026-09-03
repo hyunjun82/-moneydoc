@@ -1,366 +1,238 @@
-// 자동 생성: scripts/convert-previews.mjs — 직접 수정하지 말 것
-// 원본: public/_preview/12-육아휴직급여.html
+// 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
+// 원본: public/_preview/article-v2-parental-leave-pay-guide.html
 export const meta = {
-  title: "육아휴직 급여, 1년 받으면 2,310만원인 이유",
-  description: "육아휴직 급여는 1~3개월 통상임금 100%(상한 250만), 4~6개월 100%(상한 200만), 7개월부터 80%(상한 160만)입니다. 12개월이면 2,310만원. 사후지급금은 시행령 개정으로 폐지돼 매달 전액 받습니다.",
-  datePublished: "2026-09-01",
-  dateModified: "2026-09-01",
+  title: "2026년 육아휴직 급여 조건과 금액, 신청 방법부터 6+6 특례까지",
+  description: "통상임금 300만원이면 육아휴직 12개월 동안 23,100,000원을 받아요. 첫 3개월은 월 2,500,000원, 4개월째부터는 2,000,000원이에요. 지급 조건, 월별 상한, 신청 방법, 부모가 함께 쓰는 특례를 정리했어요.",
+  datePublished: "2026-09-02",
+  dateModified: "2026-09-02",
   url: "https://moneydoc.kr/government/parental-leave-pay-guide/",
+  image: "https://moneydoc.kr/og/parental-leave-pay-guide.png",
+  imageAlt: "육아휴직 급여. 통상임금 300만원이면 12개월 동안 23,100,000원",
 };
 
-export const widgetKey = "parental";
+export const scriptKey = "parental-leave-pay-guide";
 
-export const widgetHtml = `<div class="ax-wg" id="wg1">
-<div class="ax-wg-h"><b>육아휴직 급여 계산</b>
-<span>휴직 시작일 기준 월 통상임금과 사용할 개월수를 넣으면 단계별 금액이 나옵니다</span></div>
-<div class="ax-wg-in">
-  <label class="ax-wg-f"><em>월 통상임금 (원)</em><input type="number" id="sal" value="3000000" step="100000" min="0"></label>
-  <label class="ax-wg-f"><em>사용 개월수</em><input type="number" id="mon" value="12" step="1" min="1" max="18"></label>
+export const html = `<h1>2026년 육아휴직 급여 조건과 금액, 신청 방법부터 6+6 특례까지</h1>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행령 지급액 기준과 1원 단위 일치 · 2026-09-02</span></div>
+<img class="v2-hero" src="/og/parental-leave-pay-guide.png" width="1200" height="630" alt="육아휴직 급여. 통상임금 300만원이면 12개월 동안 23,100,000원">
+<p class="v2-lead v2-intro">육아휴직 급여는 통상임금을 기준으로 주되 기간에 따라 상한이 달라져요. 통상임금이 300만원이라면 첫 3개월은 월 2,500,000원, 4개월째부터 6개월째까지는 2,000,000원, 7개월째부터는 1,600,000원이에요. 12개월을 다 쓰면 23,100,000원이에요. 누가 쓸 수 있는지, 월별로 얼마인지, 부모가 함께 쓰면 얼마나 늘어나는지, 어디에 신청하는지 정리했어요.</p>
+<section class="v2-answer" aria-label="즉답">
+  <div class="v2-lbl">내 통상임금을 눌러 12개월 합계를 확인해 보세요</div>
+  <div class="v2-chips" id="qchips" data-q='[{&quot;big&quot;:&quot;21,600,000원&quot;,&quot;unit&quot;:&quot;12개월 합계&quot;,&quot;sub&quot;:&quot;첫 3개월 2,000,000원 · 7개월째부터 1,600,000원&quot;},{&quot;big&quot;:&quot;23,100,000원&quot;,&quot;unit&quot;:&quot;12개월 합계&quot;,&quot;sub&quot;:&quot;첫 3개월 2,500,000원 · 7개월째부터 1,600,000원&quot;},{&quot;big&quot;:&quot;23,100,000원&quot;,&quot;unit&quot;:&quot;12개월 합계&quot;,&quot;sub&quot;:&quot;첫 3개월 2,500,000원 · 7개월째부터 1,600,000원&quot;}]'><button type="button" data-i="0" aria-pressed="false">200만원</button><button type="button" data-i="1" aria-pressed="true">300만원</button><button type="button" data-i="2" aria-pressed="false">400만원</button></div>
+  <div class="v2-big" id="qnet">23,100,000원<small>12개월 합계</small></div>
+  <div class="v2-sub" id="qsub">첫 3개월 2,500,000원 · 7개월째부터 1,600,000원</div>
+  <div class="v2-split">
+    <div class="v2-box"><b>고용보험 180일이 필요해요</b><span>육아휴직을 시작하기 전 피보험 단위기간이 합쳐서 180일 이상이어야 해요</span></div>
+    <div class="v2-box"><b>기간은 1년, 조건 맞으면 1년 6개월</b><span>부모가 각각 3개월 이상 쓰면 6개월을 더 쓸 수 있어 9,600,000원을 더 받아요</span></div>
+  </div>
+</section>
+<a class="v2-cta" href="/government/parental-leave-pay/">육아휴직 급여 계산기 바로가기</a>
+<details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">육아휴직 조건, 누가 얼마나 쓸 수 있나요</a></li><li><a href="#s2">육아휴직 급여, 월마다 얼마 나오나요</a></li><li><a href="#s3">6+6 부모육아휴직제는 얼마나 더 받나요</a></li><li><a href="#s4">육아휴직 급여 신청 방법은 어떻게 되나요</a></li><li><a href="#s5">복직 후와 육아기 근로시간 단축은 어떻게 되나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
+<section class="v2-kk" aria-label="한눈에 보는 요약">
+  <div class="v2-hd"><small>한눈에 보는 육아휴직 급여</small><b>핵심콕콕</b></div>
+  <dl>
+    <div class="v2-row"><dt>대상 자녀</dt><dd>만 8세 이하 또는 초등학교 2학년 이하</dd></div>
+    <div class="v2-row"><dt>고용보험 요건</dt><dd>육아휴직 시작 전 피보험 단위기간 합산 180일 이상</dd></div>
+    <div class="v2-row"><dt>기간</dt><dd>1년 이내. 조건을 채우면 6개월을 더 써서 1년 6개월</dd></div>
+    <div class="v2-row"><dt>1~3개월</dt><dd>통상임금 전액. 상한 2,500,000원, 하한 700,000원</dd></div>
+    <div class="v2-row"><dt>4~6개월</dt><dd>통상임금 전액. 상한 2,000,000원</dd></div>
+    <div class="v2-row"><dt>7개월째부터</dt><dd>통상임금의 80%. 상한 1,600,000원</dd></div>
+    <div class="v2-row"><dt>300만원 12개월</dt><dd>합계 23,100,000원</dd></div>
+    <div class="v2-row"><dt>신청 기한</dt><dd>휴직 시작 1개월 뒤부터 끝난 날 이후 12개월 이내</dd></div>
+  </dl>
+</section>
+
+<h2 id="s1">육아휴직 조건, 누가 얼마나 쓸 수 있나요<small>자녀 나이와 고용보험 가입 기간을 봐요</small></h2>
+<p class="v2-lead"><span class="v2-ans">만 8세 이하 또는 초등학교 2학년 이하 자녀를 키우는 근로자면 신청할 수 있어요.</span> 임신 중인 여성 근로자도 모성 보호를 위해 쓸 수 있어요. 급여를 받으려면 육아휴직을 시작하기 전 고용보험 피보험 단위기간이 합쳐서 180일 이상이어야 해요.</p>
+<div class="v2-tbl v2-text"><table><caption>육아휴직 사용 조건</caption><thead><tr><th>항목</th><th>기준</th></tr></thead><tbody>
+<tr><th scope="row">자녀 나이</th><td data-l="기준">만 8세 이하 또는 초등학교 2학년 이하</td></tr>
+<tr><th scope="row">고용보험</th><td data-l="기준">휴직 시작 전 피보험 단위기간 합산 180일 이상</td></tr>
+<tr><th scope="row">최소 기간</th><td data-l="기준">30일 이상 부여받아야 급여 대상이에요</td></tr>
+<tr><th scope="row">기본 기간</th><td data-l="기준">1년 이내</td></tr>
+<tr><th scope="row">연장 조건</th><td data-l="기준">부모가 각각 3개월 이상 사용했거나 한부모, 장애아동 부모면 6개월 추가</td></tr>
+<tr><th scope="row">분할 사용</th><td data-l="기준">나눠서 쓸 수 있고 합산한 기간으로 급여를 계산해요</td></tr>
+<tr><th scope="row">해고 금지</th><td data-l="기준">육아휴직을 이유로 해고하거나 불리하게 대우할 수 없어요</td></tr>
+</tbody></table></div>
+<p class="v2-fn">육아휴직 요건은 남녀고용평등법 제19조, 급여 요건은 고용보험법 제70조제1항에 있어요.</p>
+<div class="v2-note"><b>복직 후 같은 자리로 돌아가야 해요</b> 사업주는 휴직 전과 같은 업무나 같은 수준의 임금을 주는 직무에 복귀시켜야 해요. 육아휴직 기간은 근속기간에 들어가요.</div>
+
+<h2 id="s2">육아휴직 급여, 월마다 얼마 나오나요<small>기간이 지날수록 상한이 낮아져요</small></h2>
+<p class="v2-lead"><span class="v2-ans">통상임금 300만원이면 첫 3개월 월 2,500,000원, 4~6개월 2,000,000원, 7개월째부터 1,600,000원이에요.</span> 상한에 걸리지 않으면 통상임금을 그대로 받아요. 통상임금이 200만원이면 첫 6개월은 2,000,000원을 받고, 7개월째부터는 80%인 1,600,000원이에요.</p>
+<h3>급여 상한과 하한은 얼마인가요</h3>
+<div class="v2-tbl"><table><caption>육아휴직 급여 구간별 지급 기준</caption><thead><tr><th>기간</th><th>지급률</th><th>상한</th><th>하한</th></tr></thead><tbody>
+<tr class="v2-hi"><th scope="row">1~3개월</th><td>통상임금 전액</td><td class="v2-net">2,500,000원</td><td>700,000원</td></tr>
+<tr><th scope="row">4~6개월</th><td>통상임금 전액</td><td class="v2-net">2,000,000원</td><td>700,000원</td></tr>
+<tr><th scope="row">7개월째부터</th><td>통상임금의 80%</td><td class="v2-net">1,600,000원</td><td>700,000원</td></tr>
+</tbody></table></div>
+<p class="v2-fn">고용보험법 시행령 제95조제1항의 월별 지급액 기준이에요. 한 달을 채우지 못하면 휴직한 일수에 비례해 계산해요.</p>
+<div class="v2-flow" aria-label="통상임금 300만원일 때 받는 흐름">
+  <div class="v2-s"><span>1~3개월</span><b>2,500,000원</b><span>월 상한 적용</span></div><div class="v2-op">→</div>
+  <div class="v2-s"><span>4~6개월</span><b>2,000,000원</b><span>상한이 낮아져요</span></div><div class="v2-op">→</div>
+  <div class="v2-s"><span>7~12개월</span><b>1,600,000원</b><span>통상임금의 80%</span></div><div class="v2-op">=</div>
+  <div class="v2-s v2-out"><span>12개월 합계</span><b>23,100,000원</b><span>월평균 약 1,925,000원</span></div>
 </div>
-<div class="ax-wg-out" id="out"></div>
-<p class="ax-wg-note">근거: 고용보험법 시행령 제95조 제1항. 상한은 250만/200만/160만, 하한은 모든 구간 70만원입니다. 1개월을 채우지 못한 달은 휴직 일수에 비례해 계산합니다(같은 조 제3항).</p>
-</div>`;
+<div class="v2-tbl v2-compact" id="salTbl3"><table><caption>통상임금별 육아휴직 급여 (12개월 기준)</caption><thead><tr><th>통상임금</th><th class="v2-x">1~3개월</th><th class="v2-x">4~6개월</th><th>7개월째부터</th><th>12개월 합계</th></tr></thead><tbody>
+<tr><th scope="row">150만원</th><td class="v2-x">1,500,000</td><td class="v2-x">1,500,000</td><td>1,200,000</td><td class="v2-net">16,200,000</td></tr>
+<tr><th scope="row">200만원</th><td class="v2-x">2,000,000</td><td class="v2-x">2,000,000</td><td>1,600,000</td><td class="v2-net">21,600,000</td></tr>
+<tr><th scope="row">250만원</th><td class="v2-x">2,500,000</td><td class="v2-x">2,000,000</td><td>1,600,000</td><td class="v2-net">23,100,000</td></tr>
+<tr class="v2-hi"><th scope="row">300만원</th><td class="v2-x">2,500,000</td><td class="v2-x">2,000,000</td><td>1,600,000</td><td class="v2-net">23,100,000</td></tr>
+<tr><th scope="row">400만원</th><td class="v2-x">2,500,000</td><td class="v2-x">2,000,000</td><td>1,600,000</td><td class="v2-net">23,100,000</td></tr>
+</tbody></table></div>
+<button class="v2-more" type="button" data-more="salTbl3">구간별 금액까지 보기</button>
+<p class="v2-fn">단위: 원. 통상임금이 낮아도 월 700,000원은 보장돼요. 통상임금 80만원이면 12개월에 9,000,000원이에요.</p>
+<section class="v2-widget" aria-label="내 육아휴직 급여 계산">
+  <h4>내 통상임금으로 바로 보기</h4><p class="v2-note">월 통상임금과 휴직 개월수를 넣으면 구간별 금액과 합계가 나와요. 부모가 함께 쓰는 특례는 반영하지 않은 금액이에요.</p>
+  <div class="v2-grid">
+    <div><label>월 통상임금 (만원)</label><input id="pm" type="number" inputmode="numeric" value="300" min="70" max="1000" step="10"></div>
+    <div><label>휴직 개월수</label><input id="pl" type="number" inputmode="numeric" value="12" min="1" max="18" step="1"></div>
+  </div>
+  <div class="v2-result">
+    <div class="v2-main"><span>1~3개월</span><b id="pp1">—</b></div>
+    <div><span>4~6개월</span><b id="pp2">—</b></div>
+    <div><span>7개월째부터</span><b id="pp3">—</b></div>
+    <div><span>합계</span><b id="ptot">—</b></div>
+  </div>
+</section>
 
-export const htmlBefore = `<h1>육아휴직 급여, 1년 받으면 2,310만원인 이유</h1>
-<p class="ax-by">MoneyDoc 편집팀 · 2026년 9월 1일 기준 · 약 7분</p>
-
-<svg class="ax-hero" viewBox="0 0 1100 563" role="img" aria-label="육아휴직 급여는 1에서 3개월 250만원, 4에서 6개월 200만원, 7개월부터 160만원">
-<rect width="1100" height="563" fill="#f7f2ea"/>
-<path d="M820 0h280v250a60 60 0 0 1-60 60H820z" fill="#dfe9e2"/>
-<circle cx="1006" cy="76" r="48" fill="#cfded4" opacity=".55"/>
-<rect x="72" y="160" width="112" height="42" rx="9" fill="#2f6b52"/>
-<text x="128" y="189" font-size="19" font-weight="800" text-anchor="middle" fill="#fff" letter-spacing="-.5">정부지원금</text>
-<text x="72" y="282" font-size="57" font-weight="800" fill="#2b2723" letter-spacing="-2.6">육아휴직 1년</text>
-<rect x="70" y="312" width="392" height="26" fill="#cfe0d6"/>
-<text x="72" y="349" font-size="57" font-weight="800" fill="#2f6b52" letter-spacing="-2.6">급여는 2,310만원</text>
-<text x="72" y="400" font-size="21" font-weight="700" fill="#6f6858" letter-spacing="-.8">250만 → 200만 → 160만 · 3단계로 줄어듭니다</text>
-<rect x="0" y="545" width="1100" height="18" fill="#2f6b52"/>
-<g transform="translate(648 196)">
-  <ellipse cx="196" cy="228" rx="168" ry="17" fill="#e8ded0" opacity=".55"/>
-  <rect x="40" y="128" width="72" height="100" rx="10" fill="#2f6b52"/>
-  <text x="76" y="182" font-size="15" font-weight="800" text-anchor="middle" fill="#fff">250</text>
-  <text x="76" y="248" font-size="12" font-weight="700" text-anchor="middle" fill="#6f6858">1~3월</text>
-  <rect x="152" y="158" width="72" height="70" rx="10" fill="#4d8a70"/>
-  <text x="188" y="198" font-size="15" font-weight="800" text-anchor="middle" fill="#fff">200</text>
-  <text x="188" y="248" font-size="12" font-weight="700" text-anchor="middle" fill="#6f6858">4~6월</text>
-  <rect x="264" y="180" width="72" height="48" rx="10" fill="#7fae97"/>
-  <text x="300" y="211" font-size="15" font-weight="800" text-anchor="middle" fill="#fff">160</text>
-  <text x="300" y="248" font-size="12" font-weight="700" text-anchor="middle" fill="#6f6858">7월~</text>
-  <text x="188" y="112" font-size="13" font-weight="700" text-anchor="middle" fill="#6f6858">월 상한 (만원)</text>
-</g>
-</svg>
-
-<p class="ax-intro">육아휴직 급여는 <b>기간이 지날수록 줄어듭니다</b>. 처음 3개월은 통상임금 100%를 월 250만원까지, 다음 3개월은 100%를 200만원까지, 7개월째부터는 80%를 160만원까지 받습니다. 통상임금이 250만원 이상이면 12개월 합계가 <b>2,310만원</b>으로 고정됩니다. 예전처럼 25%를 복직 후에 받는 사후지급금은 이제 없습니다.</p>
-
-<a class="ax-cta" href="/government/parental-leave-pay/">
-<span><b>내 육아휴직 급여 계산하기</b><i>통상임금과 사용 개월수만 넣으면 됩니다</i></span>
-<em>육아휴직 급여 계산하기</em></a>
-
-<div class="ax-toc"><b>이 글에서는</b><a href="#m1">3단계 급여 구조</a><a href="#m2">상한과 하한</a><a href="#m3">지급 방식과 기간</a><a href="#tips">알아두면 좋은 것</a><a href="#faq">자주 묻는 질문</a><a href="#src">근거 자료</a></div>`;
-
-export const htmlAfter = `<div class="ax-mh" id="m1"><b>1단계 — 급여 구조</b><span>3개월마다 달라진다</span></div>
-
-<div class="ax-st"><div class="ax-n">1</div><div class="ax-sb">
-<h3>육아휴직 급여는 월 얼마인가요</h3>
-<p>고용보험법 시행령 제95조는 육아휴직 기간을 <b>세 구간</b>으로 나눠 다른 금액을 정하고 있습니다. 기준이 되는 것은 휴직을 <b>시작한 날의 월 통상임금</b>입니다. 휴직 중에 회사 임금이 올라도 급여는 바뀌지 않습니다.</p>
-<div class="ax-tw"><table>
-<thead><tr><th>기간</th><th>지급률</th><th>월 상한</th><th>월 하한</th></tr></thead>
-<tbody>
-<tr class="ax-hi"><td>1~3개월</td><td>통상임금 <b>100%</b></td><td><b>250만원</b></td><td>70만원</td></tr>
-<tr><td>4~6개월</td><td>통상임금 <b>100%</b></td><td>200만원</td><td>70만원</td></tr>
-<tr><td>7개월~종료</td><td>통상임금 <b>80%</b></td><td>160만원</td><td>70만원</td></tr>
-</tbody></table>
-<p class="ax-tn">고용보험법 시행령 제95조 제1항 (개정 2024. 12. 24.). 통상임금은 휴직 시작일 기준으로 한 번 정해집니다.</p></div>
-<figure class="ax-ig">
-<svg viewBox="0 0 660 172" role="img" aria-label="육아휴직 12개월 급여는 250만원 3개월, 200만원 3개월, 160만원 6개월을 합쳐 2310만원">
-<text x="0" y="18" font-size="13" font-weight="700" fill="currentColor" letter-spacing="-.3">통상임금 250만원 이상일 때 12개월 누적</text>
-<rect x="0" y="42" width="152" height="54" rx="8" fill="none" stroke="#2f6b52" stroke-width="1.6"/>
-<text x="76" y="64" font-size="12.5" font-weight="800" text-anchor="middle" fill="#2f6b52">250만 × 3개월</text>
-<text x="76" y="83" font-size="11.5" font-weight="700" text-anchor="middle" fill="#2f6b52" opacity=".8">750만원</text>
-<text x="163" y="74" font-size="15" font-weight="700" fill="currentColor" opacity=".5">+</text>
-<rect x="184" y="42" width="152" height="54" rx="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".55"/>
-<text x="260" y="64" font-size="12.5" font-weight="800" text-anchor="middle" fill="currentColor">200만 × 3개월</text>
-<text x="260" y="83" font-size="11.5" font-weight="700" text-anchor="middle" fill="currentColor" opacity=".65">600만원</text>
-<text x="347" y="74" font-size="15" font-weight="700" fill="currentColor" opacity=".5">+</text>
-<rect x="368" y="42" width="152" height="54" rx="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".55"/>
-<text x="444" y="64" font-size="12.5" font-weight="800" text-anchor="middle" fill="currentColor">160만 × 6개월</text>
-<text x="444" y="83" font-size="11.5" font-weight="700" text-anchor="middle" fill="currentColor" opacity=".65">960만원</text>
-<line x1="520" y1="69" x2="558" y2="69" stroke="#2f6b52" stroke-width="2" stroke-linecap="round"/>
-<polygon points="549,64 549,74 558,69" fill="#2f6b52"/>
-<rect x="558" y="42" width="102" height="54" rx="8" fill="#2f6b52"/>
-<text x="609" y="66" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">2,310만원</text>
-<text x="609" y="84" font-size="10.5" text-anchor="middle" fill="#fff" opacity=".8">12개월 총액</text>
-<text x="0" y="128" font-size="11.5" font-weight="600" fill="currentColor" opacity=".62" letter-spacing="-.3">통상임금이 250만원이든 500만원이든 총액은 같습니다. 상한이 먼저 걸리기 때문입니다.</text>
-<text x="0" y="150" font-size="11.5" font-weight="600" fill="currentColor" opacity=".62" letter-spacing="-.3">18개월까지 쓰면 160만원 구간이 6개월 늘어 3,270만원이 됩니다.</text>
-</svg>
-<figcaption>「고용보험법 시행령」 제95조 제1항 (육아휴직 급여)</figcaption>
-</figure>
-</div></div>
-
-<div class="ax-st"><div class="ax-n">2</div><div class="ax-sb">
-<h3>통상임금이 얼마여야 상한을 다 받나요</h3>
-<p>구간마다 상한이 다르기 때문에 <b>구간별로 필요한 통상임금이 다릅니다</b>. 1~3개월 상한을 채우려면 250만원, 4~6개월은 200만원, 7개월 이후는 통상임금의 80%가 160만원이 되어야 하므로 <b>200만원</b>이면 됩니다.</p>
-<div class="ax-tw"><table>
-<thead><tr><th>월 통상임금</th><th>1~3개월</th><th>4~6개월</th><th>7개월~</th><th>12개월 총액</th></tr></thead>
-<tbody>
-<tr><td>80만원</td><td>800,000</td><td>800,000</td><td>700,000</td><td>9,000,000</td></tr>
-<tr><td>150만원</td><td>1,500,000</td><td>1,500,000</td><td>1,200,000</td><td>16,200,000</td></tr>
-<tr><td>200만원</td><td>2,000,000</td><td>2,000,000</td><td><b>1,600,000</b></td><td>21,600,000</td></tr>
-<tr class="ax-hi"><td>250만원 이상</td><td><b>2,500,000</b></td><td><b>2,000,000</b></td><td><b>1,600,000</b></td><td><b>23,100,000</b></td></tr>
-<tr><td>500만원</td><td>2,500,000</td><td>2,000,000</td><td>1,600,000</td><td>23,100,000</td></tr>
-</tbody></table>
-<p class="ax-tn">단위: 원. MoneyDoc 계산기 엔진으로 산출한 값입니다. 굵은 글씨는 상한에 걸린 금액입니다.</p></div>
-<p class="ax-nt">통상임금 <b>200만원과 500만원의 차이는 12개월에 150만원</b>뿐입니다. 4개월째부터는 상한이 200만원, 160만원으로 낮아져 두 사람이 똑같은 금액을 받기 때문입니다. 소득이 높을수록 대체율이 낮아지는 구조입니다.</p>
-<div class="ax-tw"><table>
-<thead><tr><th>월 통상임금</th><th>12개월 급여 총액</th><th>같은 기간 임금 대비</th></tr></thead>
-<tbody>
-<tr><td>200만원</td><td>21,600,000원</td><td><b>90.0%</b></td></tr>
-<tr><td>300만원</td><td>23,100,000원</td><td>64.2%</td></tr>
-<tr><td>400만원</td><td>23,100,000원</td><td>48.1%</td></tr>
-<tr><td>500만원</td><td>23,100,000원</td><td>38.5%</td></tr>
-</tbody></table>
-<p class="ax-tn">대체율 = 12개월 급여 총액 ÷ (월 통상임금 × 12). 상한 때문에 소득이 높을수록 비율이 급격히 떨어집니다.</p></div>
-</div></div>
-
-<div class="ax-mh ax-b" id="m2"><b>2단계 — 지급 방식</b><span>이제 매달 전액</span></div>
-
-<div class="ax-st"><div class="ax-n">3</div><div class="ax-sb">
-<h3>사후지급금이 폐지되면 뭐가 달라지나요</h3>
-<p>예전에는 육아휴직 급여의 <b>75%만 휴직 중에 주고, 나머지 25%는 복직해서 6개월을 일한 뒤에</b> 한꺼번에 지급했습니다. 이를 사후지급금이라 불렀습니다. 이 조항은 <b>고용보험법 시행령 제95조 제4항</b>이었는데, <b>2024년 12월 24일 개정으로 삭제</b>됐습니다. 지금은 매달 전액을 받습니다.</p>
-<div class="ax-tw"><table>
-<thead><tr><th>구분</th><th>사후지급금이 있던 때</th><th>현재</th></tr></thead>
-<tbody>
-<tr><td>휴직 중 매달 수령</td><td>급여의 75%</td><td><b>급여의 100%</b></td></tr>
-<tr><td>1~3개월 실수령 (상한 기준)</td><td>1,875,000원</td><td><b>2,500,000원</b></td></tr>
-<tr><td>나머지 25% 수령 시점</td><td>복직 후 6개월 근무 뒤</td><td><b>해당 없음</b></td></tr>
-<tr><td>복직하지 않으면</td><td>25% 미지급</td><td><b>이미 다 받음</b></td></tr>
-</tbody></table>
-<p class="ax-tn">고용보험법 시행령 제95조 제4항이 삭제(2024. 12. 24.)되면서 분할 지급 근거가 사라졌습니다.</p></div>
-<figure class="ax-ig">
-<svg viewBox="0 0 660 190" role="img" aria-label="사후지급금이 있던 때는 75퍼센트만 매달 받고 25퍼센트를 복직 6개월 뒤 받았지만 지금은 100퍼센트를 매달 받습니다">
-<text x="0" y="18" font-size="13" font-weight="700" fill="currentColor" letter-spacing="-.3">1~3개월 상한 250만원 기준 · 실제 손에 들어오는 시점</text>
-<text x="0" y="48" font-size="11.5" font-weight="700" fill="currentColor" opacity=".62">이전</text>
-<rect x="52" y="34" width="300" height="26" rx="5" fill="currentColor" opacity=".28"/>
-<text x="202" y="52" font-size="11.5" font-weight="800" text-anchor="middle" fill="currentColor">휴직 중 매달 1,875,000원 (75%)</text>
-<rect x="356" y="34" width="140" height="26" rx="5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="4 3" opacity=".55"/>
-<text x="426" y="52" font-size="11" font-weight="700" text-anchor="middle" fill="currentColor" opacity=".7">복직 6개월 후 25%</text>
-<text x="0" y="100" font-size="11.5" font-weight="700" fill="#2f6b52">현재</text>
-<rect x="52" y="86" width="444" height="26" rx="5" fill="#2f6b52"/>
-<text x="274" y="104" font-size="11.5" font-weight="800" text-anchor="middle" fill="#fff">휴직 중 매달 2,500,000원 (100%)</text>
-<line x1="52" y1="128" x2="496" y2="128" stroke="currentColor" stroke-width="1" opacity=".3"/>
-<text x="52" y="146" font-size="10.5" font-weight="600" fill="currentColor" opacity=".55">휴직 시작</text>
-<text x="496" y="146" font-size="10.5" font-weight="600" text-anchor="end" fill="currentColor" opacity=".55">휴직 종료</text>
-<text x="0" y="176" font-size="11.5" font-weight="600" fill="currentColor" opacity=".62" letter-spacing="-.3">가장 돈이 필요한 휴직 기간에 전액이 들어옵니다. 총액이 늘어난 것이 아니라 시점이 당겨진 것입니다.</text>
-</svg>
-<figcaption>「고용보험법 시행령」 제95조 제4항 삭제 (2024. 12. 24.)</figcaption>
-</figure>
-</div></div>
-
-<div class="ax-mh" id="m3"><b>3단계 — 기간과 자격</b><span>1년 6개월의 조건</span></div>
-
-<div class="ax-st"><div class="ax-n">4</div><div class="ax-sb">
-<h3>육아휴직 1년 6개월은 누가 쓸 수 있나요</h3>
-<p>육아휴직 기간은 원칙적으로 <b>1년 이내</b>입니다. 다만 남녀고용평등법 제19조 제2항은 세 경우에 <b>6개월을 추가</b>할 수 있게 하고 있습니다. 아무나 1년 6개월을 쓰는 것이 아닙니다.</p>
-<div class="ax-tw"><table>
-<thead><tr><th>구분</th><th>조건</th><th>기간</th></tr></thead>
-<tbody>
-<tr><td>일반</td><td>만 8세 이하 또는 초등 2학년 이하 자녀 양육</td><td>1년</td></tr>
-<tr class="ax-hi"><td>부모 모두 사용</td><td>같은 자녀에 대해 <b>부모가 각각 3개월 이상</b> 사용한 경우의 부 또는 모</td><td><b>1년 6개월</b></td></tr>
-<tr><td>한부모</td><td>한부모가족지원법 제4조 제1호의 부 또는 모</td><td>1년 6개월</td></tr>
-<tr><td>장애아동</td><td>고용노동부령으로 정하는 장애아동의 부 또는 모</td><td>1년 6개월</td></tr>
-</tbody></table>
-<p class="ax-tn">남녀고용평등법 제19조 제2항 (개정 2024. 10. 22.). 추가 6개월도 급여는 7개월 이후 기준(80%, 상한 160만원)이 그대로 적용됩니다.</p></div>
-<p class="ax-nt">두 번째 줄이 핵심입니다. 부부가 <b>각각 3개월 이상</b>을 써야 두 사람 모두 6개월씩 늘어납니다. 한 사람이 12개월 쓰고 배우자가 2개월만 쓰면 조건을 못 채웁니다. 18개월을 다 쓰면 급여 총액은 <b>3,270만원</b>이 됩니다.</p>
-<p>급여를 받으려면 <b>휴직 시작 전 고용보험 피보험 단위기간이 합산 180일 이상</b>이어야 하고, 육아휴직을 <b>30일 이상</b> 부여받아야 합니다. 신청은 휴직 시작 후 1개월이 지난 시점부터 <b>휴직이 끝난 날 이후 12개월 이내</b>에 해야 합니다.</p>
-<figure class="ax-ig">
-<svg viewBox="0 0 660 160" role="img" aria-label="육아휴직 급여 신청 가능 기간은 휴직 시작 1개월 후부터 휴직 종료 12개월 이내입니다">
-<text x="0" y="18" font-size="13" font-weight="700" fill="currentColor" letter-spacing="-.3">급여 신청이 가능한 기간</text>
-<line x1="14" y1="76" x2="646" y2="76" stroke="currentColor" stroke-width="1.6" opacity=".35"/>
-<circle cx="60" cy="76" r="6" fill="currentColor" opacity=".5"/>
-<text x="60" y="60" font-size="11" font-weight="700" text-anchor="middle" fill="currentColor" opacity=".7">휴직 시작</text>
-<circle cx="150" cy="76" r="6" fill="#2f6b52"/>
-<text x="150" y="60" font-size="11" font-weight="800" text-anchor="middle" fill="#2f6b52">+1개월</text>
-<circle cx="380" cy="76" r="6" fill="currentColor" opacity=".5"/>
-<text x="380" y="60" font-size="11" font-weight="700" text-anchor="middle" fill="currentColor" opacity=".7">휴직 종료</text>
-<circle cx="600" cy="76" r="6" fill="#2f6b52"/>
-<text x="600" y="60" font-size="11" font-weight="800" text-anchor="middle" fill="#2f6b52">종료 +12개월</text>
-<rect x="150" y="94" width="450" height="22" rx="5" fill="#2f6b52" opacity=".85"/>
-<text x="375" y="110" font-size="11.5" font-weight="800" text-anchor="middle" fill="#fff">신청 가능 구간</text>
-<rect x="60" y="94" width="90" height="22" rx="5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="4 3" opacity=".5"/>
-<text x="0" y="148" font-size="11.5" font-weight="600" fill="currentColor" opacity=".62" letter-spacing="-.3">기한을 넘기면 받을 수 없습니다. 보통 매달 신청해 매달 받습니다.</text>
-</svg>
-<figcaption>「고용보험법」 제70조 제1항·제2항 (육아휴직 급여)</figcaption>
-</figure>
-</div></div>
-
-<h2 class="ax-sec" id="tips">알아두면 좋은 것</h2>
-<ul class="ax-tips">
-<li>기준이 되는 통상임금은 <b>휴직 시작일</b>의 금액입니다. 승진이나 임금 인상이 예정돼 있다면 그 이후에 시작하는 편이 유리할 수 있습니다.</li>
-<li>육아휴직 기간은 <b>근속기간에 포함</b>됩니다(남녀고용평등법 제19조 제4항). 퇴직금 산정 기간에서 빠지지 않습니다.</li>
-<li>출산전후휴가와 겹치는 기간은 육아휴직 급여 대상에서 제외됩니다. 출산휴가가 끝난 다음 날부터 육아휴직이 시작되는 것이 일반적입니다.</li>
-<li>분할해서 써도 기간을 <b>합산</b>해 급여 구간을 계산합니다. 3개월 쓰고 복직했다가 다시 쓰면, 두 번째 휴직은 4개월째부터로 이어집니다.</li>
-<li>한 달을 채우지 못한 달은 <b>휴직한 일수에 비례</b>해 계산합니다. 월 중간에 시작하거나 끝나도 손해 보지 않습니다.</li>
-<li>사업주는 육아휴직을 이유로 해고하거나 불리한 처우를 할 수 없고, 복직 시 <b>휴직 전과 같은 업무 또는 같은 수준의 임금</b>을 주는 자리에 복귀시켜야 합니다.</li>
-</ul>
-
-<h2 class="ax-sec" id="faq">자주 묻는 질문</h2>
-
-<details class="ax-acc" open><summary>육아휴직 급여는 월 얼마인가요?</summary>
-<div class="ax-ab"><p>1~3개월은 통상임금 100%로 <b>월 250만원</b>까지, 4~6개월은 100%로 <b>200만원</b>까지, 7개월째부터는 80%로 <b>160만원</b>까지입니다. 모든 구간의 하한은 70만원입니다. 통상임금이 250만원 이상이면 12개월 합계가 2,310만원입니다.</p>
-<p class="ax-law">고용보험법 시행령 제95조 제1항</p></div></details>
-
-<details class="ax-acc"><summary>육아휴직 사후지급금은 아직 있나요?</summary>
-<div class="ax-ab"><p>없습니다. 급여의 25%를 복직 6개월 뒤에 주던 근거 조항인 <b>고용보험법 시행령 제95조 제4항이 2024년 12월 24일 개정으로 삭제</b>됐습니다. 지금은 휴직 기간 중에 매달 전액을 받습니다.</p>
-<p class="ax-law">고용보험법 시행령 제95조 제4항 삭제 (2024. 12. 24.)</p></div></details>
-
-<details class="ax-acc"><summary>육아휴직을 1년 6개월 쓰려면 어떻게 해야 하나요?</summary>
-<div class="ax-ab"><p>같은 자녀에 대해 <b>부모가 각각 3개월 이상</b> 육아휴직을 사용해야 합니다. 그 외에 한부모가족지원법상 한부모이거나 장애아동의 부모인 경우에도 6개월을 추가할 수 있습니다. 한쪽만 오래 쓰는 것으로는 조건을 채우지 못합니다.</p>
-<p class="ax-law">남녀고용평등과 일·가정 양립 지원에 관한 법률 제19조 제2항</p></div></details>
-
-<details class="ax-acc"><summary>육아휴직 급여를 받으려면 얼마나 일해야 하나요?</summary>
-<div class="ax-ab"><p>육아휴직을 시작한 날 이전에 고용보험 <b>피보험 단위기간이 합산 180일 이상</b>이어야 합니다. 한 회사에서 연속으로 채울 필요는 없고 여러 직장의 기간을 합산합니다. 또한 육아휴직을 30일 이상 부여받아야 합니다.</p>
-<p class="ax-law">고용보험법 제70조 제1항</p></div></details>
-
-<details class="ax-acc"><summary>통상임금이 500만원이면 급여도 더 많나요?</summary>
-<div class="ax-ab"><p>아닙니다. 상한이 걸리기 때문에 통상임금 250만원인 사람과 <b>똑같이 2,310만원</b>을 받습니다. 임금 대비 대체율로 보면 250만원인 사람은 77%, 500만원인 사람은 38.5%입니다.</p>
-<p class="ax-law">고용보험법 시행령 제95조 제1항 (각 호 단서의 상한)</p></div></details>
-
-<details class="ax-acc"><summary>급여 신청은 언제까지 해야 하나요?</summary>
-<div class="ax-ab"><p>육아휴직을 시작한 날 이후 <b>1개월이 지난 시점부터, 휴직이 끝난 날 이후 12개월 이내</b>에 신청해야 합니다. 이 기간을 넘기면 받을 수 없습니다. 실무에서는 대부분 매달 신청해 매달 수령합니다.</p>
-<p class="ax-law">고용보험법 제70조 제2항</p></div></details>
-
-<details class="ax-acc"><summary>육아휴직 기간도 퇴직금에 들어가나요?</summary>
-<div class="ax-ab"><p>들어갑니다. 남녀고용평등법 제19조 제4항이 <b>육아휴직 기간을 근속기간에 포함</b>한다고 정하고 있습니다. 다만 퇴직금의 기준이 되는 평균임금은 퇴직 직전 3개월로 산정하므로, 복직 후 3개월이 지난 뒤 퇴직하는 것이 일반적으로 유리합니다.</p>
-<p class="ax-law">남녀고용평등법 제19조 제4항 · 근로자퇴직급여 보장법 제8조</p></div></details>
-
-<div class="ax-sum">
-<h4>정리</h4>
-<ul>
-<li>급여는 <b>1~3개월 100%(상한 250만)</b>, 4~6개월 100%(상한 200만), 7개월부터 80%(상한 160만)입니다.</li>
-<li>모든 구간의 <b>하한은 70만원</b>입니다.</li>
-<li>통상임금 250만원 이상이면 12개월 총액은 <b>2,310만원</b>, 18개월이면 3,270만원입니다.</li>
-<li>사후지급금은 시행령 제95조 제4항이 삭제되어 <b>폐지</b>됐습니다. 매달 전액 받습니다.</li>
-<li>1년 6개월은 <b>부모가 각각 3개월 이상</b> 쓴 경우, 한부모, 장애아동 부모만 가능합니다.</li>
-<li>피보험 단위기간 <b>180일 이상</b>, 신청은 휴직 종료 후 <b>12개월 이내</b>입니다.</li>
-</ul>
-<a class="ax-cta" href="/government/parental-leave-pay/">
-<span><b>육아휴직 급여 계산기로 확인하기</b><i>통상임금·개월수로 즉시 계산</i></span>
-<em>육아휴직 급여 계산하기</em></a>
+<h2 id="s3">6+6 부모육아휴직제는 얼마나 더 받나요<small>부모가 함께 쓰면 상한이 크게 올라가요</small></h2>
+<p class="v2-lead"><span class="v2-ans">자녀가 태어난 뒤 18개월이 될 때까지 부모가 모두 육아휴직을 쓰면 첫 6개월 상한이 올라가요.</span> 첫 달과 둘째 달은 각각 250만원, 셋째 달 300만원, 넷째 달 350만원, 다섯째 달 400만원, 여섯째 달 450만원까지 받을 수 있어요. 부모 각각에게 적용되기 때문에 두 사람이 합치면 금액이 커져요.</p>
+<div class="v2-tbl"><table><caption>부모가 함께 쓸 때 첫 6개월 상한 (각자 기준)</caption><thead><tr><th>사용 개월</th><th>월 상한</th></tr></thead><tbody>
+<tr><th scope="row">첫 번째 달</th><td class="v2-net">250만원</td></tr>
+<tr><th scope="row">두 번째 달</th><td class="v2-net">250만원</td></tr>
+<tr><th scope="row">세 번째 달</th><td class="v2-net">300만원</td></tr>
+<tr><th scope="row">네 번째 달</th><td class="v2-net">350만원</td></tr>
+<tr><th scope="row">다섯 번째 달</th><td class="v2-net">400만원</td></tr>
+<tr class="v2-hi"><th scope="row">여섯 번째 달</th><td class="v2-net">450만원</td></tr>
+</tbody></table></div>
+<p class="v2-fn">고용보험법 시행령 제95조의3제1항의 상한액이에요. 7개월째부터는 통상임금의 80%에 상한 160만원이 적용돼요.</p>
+<div class="v2-tips">
+  <div><b>같은 시기에 쓰지 않아도 돼요</b>부모의 휴직 기간이 겹치지 않아도 적용돼요. 순서대로 써도 특례를 받을 수 있어요.</div>
+  <div><b>자녀가 18개월이 되기 전이어야 해요</b>출생 후 18개월이 지나면 이 특례는 적용되지 않아요. 시기를 미리 계획하세요.</div>
+  <div><b>한부모는 첫 3개월 상한이 달라요</b>한부모가족지원법상 모 또는 부는 첫 3개월 상한이 300만원이에요.</div>
 </div>
+<p><span class="v2-ans">기간을 1년 6개월로 늘리면 9,600,000원을 더 받아요.</span> 통상임금 300만원 기준으로 12개월이면 23,100,000원, 18개월이면 32,700,000원이에요. 부모가 각각 3개월 이상 사용해야 6개월을 더 쓸 수 있어요.</p>
 
-<h2 class="ax-sec" id="src">근거 자료</h2>
-
-<p class="ax-collected">아래는 국가법령정보센터에서 확인한 조문입니다. 고용보험법은 시행 2026. 8. 20. (법률 제21372호, 2026. 2. 19. 일부개정) 기준입니다.</p>
-
-<div class="ax-lawq"><b>고용보험법 제70조 (육아휴직 급여) 제1항</b>
-<p>고용노동부장관은 「남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률」 제19조제1항에 따른 육아휴직을 30일 또는 같은 법 제19조제6항에 따른 육아휴직을 7일(「근로기준법」 제74조에 따른 출산전후휴가기간과 중복되는 기간은 각각 제외한다) 이상 부여받은 피보험자 중 육아휴직을 시작한 날 이전에 제41조에 따른 <b>피보험 단위기간이 합산하여 180일 이상</b>인 피보험자에게 육아휴직 급여를 지급한다.</p></div>
-
-<div class="ax-lawq"><b>고용보험법 제70조 제2항 (신청 기한)</b>
-<p>제1항에 따른 육아휴직 급여를 지급받으려는 사람은 <b>육아휴직을 시작한 날 이후 1개월부터 육아휴직이 끝난 날 이후 12개월 이내</b>에 신청하여야 한다.</p></div>
-
-<div class="ax-lawq"><b>고용보험법 시행령 제95조 (육아휴직 급여) 제1항 &lt;개정 2024. 12. 24.&gt;</b>
-<p>1. 육아휴직 시작일부터 3개월까지: 육아휴직 시작일을 기준으로 한 월 통상임금에 해당하는 금액. 다만, 해당 금액이 <b>250만원</b>을 넘는 경우에는 250만원으로 하고, 해당 금액이 70만원보다 적은 경우에는 70만원으로 한다.<br>
-2. 육아휴직 4개월째부터 6개월째까지: … 다만, 해당 금액이 <b>200만원</b>을 넘는 경우에는 200만원으로 하고, 해당 금액이 70만원보다 적은 경우에는 70만원으로 한다.<br>
-3. 육아휴직 7개월째부터 종료일까지: 육아휴직 시작일을 기준으로 한 월 통상임금의 <b>100분의 80</b>에 해당하는 금액. 다만, 해당 금액이 <b>160만원</b>을 넘는 경우에는 160만원으로 하고, 해당 금액이 70만원보다 적은 경우에는 70만원으로 한다.</p></div>
-
-<div class="ax-lawq"><b>고용보험법 시행령 제95조 제3항·제4항</b>
-<p>③ 육아휴직 급여의 지급대상 기간이 1개월을 채우지 못하는 경우에는 제1항에 따른 월별 지급액을 <b>해당 월에 휴직한 일수에 비례하여 계산</b>한 금액을 지급액으로 한다.<br>
-④ <b>삭제 &lt;2024. 12. 24.&gt;</b> — 사후지급금(급여의 25%를 복직 후 지급)의 근거 조항이 삭제된 것입니다.</p></div>
-
-<div class="ax-lawq"><b>남녀고용평등과 일·가정 양립 지원에 관한 법률 제19조 제2항 &lt;개정 2024. 10. 22.&gt;</b>
-<p>육아휴직의 기간은 <b>1년 이내</b>로 한다. 다만, 다음 각 호의 어느 하나에 해당하는 근로자의 경우 <b>6개월 이내에서 추가로</b> 육아휴직을 사용할 수 있다.<br>
-1. 같은 자녀를 대상으로 <b>부모가 모두 육아휴직을 각각 3개월 이상 사용한 경우</b>의 부 또는 모<br>
-2. 「한부모가족지원법」 제4조제1호의 부 또는 모<br>
-3. 고용노동부령으로 정하는 <b>장애아동</b>의 부 또는 모</p></div>
-
-<div class="ax-lawq"><b>남녀고용평등법 제19조 제3항·제4항 (신분 보장)</b>
-<p>③ 사업주는 육아휴직을 이유로 해고나 그 밖의 불리한 처우를 하여서는 아니 되며, 육아휴직 기간에는 그 근로자를 해고하지 못한다.<br>
-④ 사업주는 육아휴직을 마친 후에는 휴직 전과 같은 업무 또는 같은 수준의 임금을 지급하는 직무에 복귀시켜야 한다. 또한 제2항의 <b>육아휴직 기간은 근속기간에 포함</b>한다.</p></div>
-
-<div class="ax-src"><b>출처 · 국가법령정보센터, 고용노동부</b><br>
-조문은 <a href="https://www.law.go.kr/법령/고용보험법/제70조" target="_blank" rel="noopener">고용보험법 제70조</a>, <a href="https://www.law.go.kr/법령/고용보험법시행령/제95조" target="_blank" rel="noopener">같은 법 시행령 제95조</a>, <a href="https://www.law.go.kr/법령/남녀고용평등과 일·가정 양립 지원에 관한 법률/제19조" target="_blank" rel="noopener">남녀고용평등법 제19조</a>에서 확인했습니다. 신청과 지급은 <a href="https://www.work24.go.kr/" target="_blank" rel="noopener">고용24</a>에서 처리합니다.<br><br>
-6+6 부모육아휴직제 등 별도 특례가 적용되는 경우에는 첫 6개월 급여가 위 표와 달라질 수 있습니다. 회사의 임금 체계에 따라 통상임금 산정이 달라질 수 있으므로, 정확한 금액은 관할 고용센터에서 확인하시기 바랍니다. 본 계산 결과는 참고용입니다.</div>`;
-
-export const asideHtml = `<div class="ax-side"><h4>정부지원금 계산기</h4>
-<a class="ax-rel" href="/government/parental-leave-pay/">육아휴직 급여 계산기<span>통상임금·개월수</span></a>
-<a class="ax-rel" href="/government/basic-livelihood-eligibility/">기초생활 수급 판정<span>중위소득 기준</span></a>
-<a class="ax-rel" href="/government/basic-pension/">기초연금 계산기<span>65세 이상</span></a>
+<h2 id="s4">육아휴직 급여 신청 방법은 어떻게 되나요<small>고용보험 홈페이지나 고용센터</small></h2>
+<p class="v2-lead"><span class="v2-ans">육아휴직을 시작한 날 이후 1개월부터 끝난 날 이후 12개월 이내에 신청해야 해요.</span> 고용보험 홈페이지에서 온라인으로 내거나 거주지 관할 고용센터에 방문해 낼 수 있어요. 보통 한 달 단위로 신청하고, 회사가 확인서를 먼저 제출해야 처리돼요.</p>
+<div class="v2-steps">
+  <div><i>1단계</i><b>회사에 육아휴직 신청</b><span>휴직 시작 예정일 30일 전까지 회사에 신청해요</span><em>30일 전</em></div>
+  <div><i>2단계</i><b>회사가 확인서 제출</b><span>사업주가 육아휴직 확인서를 고용센터에 내요</span><em>회사 몫</em></div>
+  <div><i>3단계</i><b>급여 신청</b><span>휴직 시작 1개월 뒤부터 고용보험 홈페이지에서 신청해요</span><em>매월</em><a class="v2-go" href="https://www.ei.go.kr" target="_blank" rel="noopener">고용보험 바로가기</a></div>
+  <div><i>4단계</i><b>지급</b><span>심사를 거쳐 계좌로 입금돼요. 금액을 미리 확인해 두면 좋아요</span><em>보통 2주 안</em><a class="v2-go" href="/government/parental-leave-pay/">육아휴직 급여 계산기</a></div>
 </div>
+<div class="v2-tbl v2-text"><table><caption>신청할 때 챙길 것</caption><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><th scope="row">신청 기한</th><td data-l="내용">휴직 시작 1개월 뒤부터 끝난 날 이후 12개월 이내</td></tr>
+<tr><th scope="row">필요 서류</th><td data-l="내용">육아휴직 급여 신청서, 사업주가 낸 확인서</td></tr>
+<tr><th scope="row">통상임금 증빙</th><td data-l="내용">급여명세서나 근로계약서가 필요할 수 있어요</td></tr>
+<tr><th scope="row">휴직 중 취업</th><td data-l="내용">이직하거나 정해진 기준 이상 일했다면 신청서에 적어야 해요</td></tr>
+<tr><th scope="row">입금 계좌</th><td data-l="내용">본인 명의 계좌로만 받을 수 있어요</td></tr>
+</tbody></table></div>
+<p class="v2-fn">신청 기한은 고용보험법 제70조제2항이에요. 기한을 넘기면 받지 못할 수 있어요.</p>
 
-<div class="ax-side"><h4>이 글의 단계</h4>
-<ol>
-<li><a href="#m1">3단계 급여 구조</a></li>
-<li><a href="#m1">통상임금별 총액</a></li>
-<li><a href="#m2">사후지급금 폐지</a></li>
-<li><a href="#m3">1년 6개월 조건</a></li>
-<li><a href="#faq">자주 묻는 질문</a></li>
-</ol></div>
+<h2 id="s5">복직 후와 육아기 근로시간 단축은 어떻게 되나요<small>전일 휴직 대신 시간을 줄일 수도 있어요</small></h2>
+<p class="v2-lead"><span class="v2-ans">휴직 대신 근로시간을 줄이는 육아기 근로시간 단축을 쓸 수 있어요.</span> 일을 계속하면서 줄인 시간만큼 급여를 지원받는 제도예요. 육아휴직을 쓰지 않고 남겨 둔 기간을 단축으로 바꿔 쓸 수도 있어요. 소득이 크게 줄지 않아 복직 부담이 적어요.</p>
+<div class="v2-tips">
+  <div><b>휴직 기간도 근속으로 쳐요</b>육아휴직 기간은 근속기간에 들어가요. 퇴직금과 연차 계산에서 불이익이 없어요.</div>
+  <div><b>건강보험료는 낮춰 줘요</b>휴직 기간에는 보험료 경감 제도가 있어요. 복직 후 정산되니 미리 확인해 두세요.</div>
+  <div><b>해고나 불이익은 금지예요</b>육아휴직을 이유로 해고하거나 불리하게 대우하면 법 위반이에요. 노동청에 신고할 수 있어요.</div>
+  <div><b>복직 후 같은 업무로</b>휴직 전과 같은 업무나 같은 수준의 임금을 주는 자리로 복귀시켜야 해요.</div>
+</div>
+<div class="v2-tbl"><table><caption>휴직 개월수에 따른 급여 합계 (통상임금 300만원 기준)</caption><thead><tr><th>휴직 기간</th><th>합계</th></tr></thead><tbody>
+<tr><th scope="row">3개월</th><td class="v2-net">7,500,000원</td></tr>
+<tr><th scope="row">6개월</th><td class="v2-net">13,500,000원</td></tr>
+<tr class="v2-hi"><th scope="row">12개월</th><td class="v2-net">23,100,000원</td></tr>
+<tr><th scope="row">18개월</th><td class="v2-net">32,700,000원</td></tr>
+</tbody></table></div>
+<p class="v2-fn">18개월은 부모가 각각 3개월 이상 사용한 경우처럼 연장 요건을 채운 경우예요.</p>
 
-<div class="ax-side"><h4>같은 분류의 글</h4>
-<a class="ax-rel" href="undefined">퇴직금 계산 방법과 평균임금<span>퇴직금</span></a>
-<a class="ax-rel" href="undefined">4대보험 요율 2026<span>급여</span></a>
-<a class="ax-rel" href="/law/annual-leave-allowance-guide/">연차수당 계산과 소멸<span>연차</span></a>
+<h2 id="faq">자주 묻는 질문</h2>
+<div class="v2-faqs">
+<details class="v2-faq" open><summary><i>Q</i><span>육아휴직 급여는 얼마 받나요?</span></summary><div><i>A</i><p>통상임금 300만원이면 첫 3개월 월 2,500,000원, 12개월 합계 <b>23,100,000원</b>이에요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>육아휴직 급여 상한은 얼마인가요?</span></summary><div><i>A</i><p>1~3개월은 2,500,000원, 4~6개월은 2,000,000원, 7개월째부터는 1,600,000원이에요. 하한은 700,000원이에요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>육아휴직 조건이 어떻게 되나요?</span></summary><div><i>A</i><p>만 8세 이하 또는 초등학교 2학년 이하 자녀를 키우면 쓸 수 있어요. 급여는 고용보험 피보험 단위기간 180일 이상이어야 받아요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>육아휴직을 1년 6개월 쓸 수 있나요?</span></summary><div><i>A</i><p>같은 자녀에 대해 부모가 각각 3개월 이상 썼거나 한부모, 장애아동 부모면 6개월을 더 쓸 수 있어요. 통상임금 300만원이면 9,600,000원을 더 받아요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>6+6 부모육아휴직제가 뭔가요?</span></summary><div><i>A</i><p>자녀 출생 후 18개월 안에 부모가 모두 육아휴직을 쓰면 첫 6개월 상한이 250만원에서 450만원까지 올라가는 제도예요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>육아휴직 급여 신청 방법은 어떻게 되나요?</span></summary><div><i>A</i><p>휴직 시작 1개월 뒤부터 고용보험 홈페이지나 고용센터에서 신청해요. 끝난 날 이후 12개월 이내에 내야 해요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>육아휴직 기간도 근속에 들어가나요?</span></summary><div><i>A</i><p>들어가요. 퇴직금과 연차 계산에서 불이익이 없고, 복직 후에는 같은 업무나 같은 수준의 임금을 주는 자리로 돌아가야 해요.</p></div></details>
+</div>
+<section class="v2-sum" aria-label="정리"><div class="v2-hd"><small>이 글 한 줄 정리</small><b>정리</b></div><ul>
+<li>첫 3개월은 통상임금 전액에 상한 2,500,000원, 4~6개월은 2,000,000원이에요.</li>
+<li>7개월째부터는 통상임금의 80%에 상한 1,600,000원이에요. 300만원이면 12개월에 23,100,000원이에요.</li>
+<li>부모가 함께 쓰면 첫 6개월 상한이 250만원에서 450만원까지 올라가요.</li>
+<li>신청은 휴직 시작 1개월 뒤부터, 끝난 날 이후 12개월 이내에 해야 해요.</li>
+</ul></section>
+<a class="v2-cta" href="/government/parental-leave-pay/">육아휴직 급여 계산기 바로가기</a>
+<h2 id="src">출처</h2>
+<div class="v2-src">
+<b>법령</b>남녀고용평등과 일·가정 양립 지원에 관한 법률 제19조(육아휴직 대상과 1년, 부모 각각 3개월 이상 사용 시 6개월 추가, 해고 금지, 복귀 의무), 제19조의2(육아기 근로시간 단축). 고용보험법 제70조(육아휴직 급여 요건 180일, 신청 기한). 고용보험법 시행령 제95조(구간별 지급액과 상한·하한), 제95조의3(출생 후 18개월 이내 부모 모두 사용 시 특례 상한).
+<b>정부 도구</b>고용보험 육아휴직 급여 모의계산과 이 글의 금액이 같은 기준이에요 (2026-09-02 대조).
+</div>
+<div class="v2-rel"><a href="/government/parental-leave-pay/"><b>계산기</b>육아휴직 급여 계산기</a><a href="/government/maternity-leave-pay/"><b>정부지원금 계산기</b>출산휴가 급여 계산기</a><a href="/government/unemployment-benefit-guide/"><b>정부지원금 가이드</b>2026년 실업급여 얼마나 받나요</a></div>
+<div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
+  <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
+    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>
+    <button class="v2-btn" id="md-inter-go">바로 이동</button></div>
 </div>`;
 
 export const faqLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
+  "mainEntity": [
     {
       "@type": "Question",
-      "name": "육아휴직 급여는 월 얼마인가요?",
+      "name": "육아휴직 급여는 얼마 받나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "1~3개월은 통상임금 100%로 월 250만원까지, 4~6개월은 100%로 200만원까지, 7개월째부터는 80%로 160만원까지입니다. 모든 구간의 하한은 70만원입니다. 통상임금이 250만원 이상이면 12개월 합계가 2,310만원입니다. 고용보험법 시행령 제95조 제1항"
+        "text": "통상임금 300만원이면 첫 3개월 월 2,500,000원, 12개월 합계 23,100,000원이에요."
       }
     },
     {
       "@type": "Question",
-      "name": "육아휴직 사후지급금은 아직 있나요?",
+      "name": "육아휴직 급여 상한은 얼마인가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "없습니다. 급여의 25%를 복직 6개월 뒤에 주던 근거 조항인 고용보험법 시행령 제95조 제4항이 2024년 12월 24일 개정으로 삭제됐습니다. 지금은 휴직 기간 중에 매달 전액을 받습니다. 고용보험법 시행령 제95조 제4항 삭제 (2024. 12. 24.)"
+        "text": "1~3개월은 2,500,000원, 4~6개월은 2,000,000원, 7개월째부터는 1,600,000원이에요. 하한은 700,000원이에요."
       }
     },
     {
       "@type": "Question",
-      "name": "육아휴직을 1년 6개월 쓰려면 어떻게 해야 하나요?",
+      "name": "육아휴직 조건이 어떻게 되나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "같은 자녀에 대해 부모가 각각 3개월 이상 육아휴직을 사용해야 합니다. 그 외에 한부모가족지원법상 한부모이거나 장애아동의 부모인 경우에도 6개월을 추가할 수 있습니다. 한쪽만 오래 쓰는 것으로는 조건을 채우지 못합니다. 남녀고용평등과 일·가정 양립 지원에 관한 법률 제19조 제2항"
+        "text": "만 8세 이하 또는 초등학교 2학년 이하 자녀를 키우면 쓸 수 있어요. 급여는 고용보험 피보험 단위기간 180일 이상이어야 받아요."
       }
     },
     {
       "@type": "Question",
-      "name": "육아휴직 급여를 받으려면 얼마나 일해야 하나요?",
+      "name": "육아휴직을 1년 6개월 쓸 수 있나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "육아휴직을 시작한 날 이전에 고용보험 피보험 단위기간이 합산 180일 이상이어야 합니다. 한 회사에서 연속으로 채울 필요는 없고 여러 직장의 기간을 합산합니다. 또한 육아휴직을 30일 이상 부여받아야 합니다. 고용보험법 제70조 제1항"
+        "text": "같은 자녀에 대해 부모가 각각 3개월 이상 썼거나 한부모, 장애아동 부모면 6개월을 더 쓸 수 있어요. 통상임금 300만원이면 9,600,000원을 더 받아요."
       }
     },
     {
       "@type": "Question",
-      "name": "통상임금이 500만원이면 급여도 더 많나요?",
+      "name": "6+6 부모육아휴직제가 뭔가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "아닙니다. 상한이 걸리기 때문에 통상임금 250만원인 사람과 똑같이 2,310만원을 받습니다. 임금 대비 대체율로 보면 250만원인 사람은 77%, 500만원인 사람은 38.5%입니다. 고용보험법 시행령 제95조 제1항 (각 호 단서의 상한)"
+        "text": "자녀 출생 후 18개월 안에 부모가 모두 육아휴직을 쓰면 첫 6개월 상한이 250만원에서 450만원까지 올라가는 제도예요."
       }
     },
     {
       "@type": "Question",
-      "name": "급여 신청은 언제까지 해야 하나요?",
+      "name": "육아휴직 급여 신청 방법은 어떻게 되나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "육아휴직을 시작한 날 이후 1개월이 지난 시점부터, 휴직이 끝난 날 이후 12개월 이내에 신청해야 합니다. 이 기간을 넘기면 받을 수 없습니다. 실무에서는 대부분 매달 신청해 매달 수령합니다. 고용보험법 제70조 제2항"
+        "text": "휴직 시작 1개월 뒤부터 고용보험 홈페이지나 고용센터에서 신청해요. 끝난 날 이후 12개월 이내에 내야 해요."
       }
     },
     {
       "@type": "Question",
-      "name": "육아휴직 기간도 퇴직금에 들어가나요?",
+      "name": "육아휴직 기간도 근속에 들어가나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "들어갑니다. 남녀고용평등법 제19조 제4항이 육아휴직 기간을 근속기간에 포함한다고 정하고 있습니다. 다만 퇴직금의 기준이 되는 평균임금은 퇴직 직전 3개월로 산정하므로, 복직 후 3개월이 지난 뒤 퇴직하는 것이 일반적으로 유리합니다. 남녀고용평등법 제19조 제4항 · 근로자퇴직급여 보장법 제8조"
+        "text": "들어가요. 퇴직금과 연차 계산에서 불이익이 없고, 복직 후에는 같은 업무나 같은 수준의 임금을 주는 자리로 돌아가야 해요."
       }
     }
-  ],
+  ]
 };
