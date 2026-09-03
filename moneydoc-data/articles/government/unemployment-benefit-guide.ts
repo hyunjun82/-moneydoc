@@ -74,12 +74,12 @@ export const html = `<h1>2026년 실업급여 얼마나 받나요, 조건부터 
   <div class="v2-s v2-out"><span>하한 적용</span><b>66,048원</b><span>2026년 하한 66,048원</span></div>
 </div>
 <div class="v2-tbl v2-compact" id="salTbl"><table><caption>2026년 실업급여 월급별 하루 금액 표 (퇴사 전 월급 200만원부터 500만원까지)</caption><thead><tr><th>퇴사 전 월급</th><th>하루 평균임금</th><th>60%</th><th>실제 하루 금액</th><th>적용</th><th class="v2-x">5년 근무 총액</th></tr></thead><tbody>
-<tr><th scope="row">200만원</th><td>66,666</td><td>40,000</td><td class="v2-net">66,048</td><td>하한 적용</td><td class="v2-x">13,870,080</td></tr>
+<tr><th scope="row">200만원</th><td>66,667</td><td>40,000</td><td class="v2-net">66,048</td><td>하한 적용</td><td class="v2-x">13,870,080</td></tr>
 <tr><th scope="row">250만원</th><td>83,333</td><td>50,000</td><td class="v2-net">66,048</td><td>하한 적용</td><td class="v2-x">13,870,080</td></tr>
 <tr class="v2-hi"><th scope="row">300만원</th><td>100,000</td><td>60,000</td><td class="v2-net">66,048</td><td>하한 적용</td><td class="v2-x">13,870,080</td></tr>
-<tr><th scope="row">350만원</th><td>116,666</td><td>70,000</td><td class="v2-net">68,100</td><td>상한 적용</td><td class="v2-x">14,301,000</td></tr>
+<tr><th scope="row">350만원</th><td>116,667</td><td>70,000</td><td class="v2-net">68,100</td><td>상한 적용</td><td class="v2-x">14,301,000</td></tr>
 <tr><th scope="row">400만원</th><td>133,333</td><td>80,000</td><td class="v2-net">68,100</td><td>상한 적용</td><td class="v2-x">14,301,000</td></tr>
-<tr><th scope="row">500만원</th><td>166,666</td><td>100,000</td><td class="v2-net">68,100</td><td>상한 적용</td><td class="v2-x">14,301,000</td></tr>
+<tr><th scope="row">500만원</th><td>166,667</td><td>100,000</td><td class="v2-net">68,100</td><td>상한 적용</td><td class="v2-x">14,301,000</td></tr>
 </tbody></table></div>
 <button class="v2-more" type="button" data-more="salTbl">총액까지 보기</button>
 <p class="v2-fn">단위: 원. 하루 평균임금 = 3개월 임금 ÷ 90일. 총액은 5년 근무·50세 미만(210일) 기준. 고용24 모의계산 결과와 같아요.</p>
@@ -113,9 +113,9 @@ export const html = `<h1>2026년 실업급여 얼마나 받나요, 조건부터 
 <h2 id="s4">2026년 실업급여 상한액 하한액, 왜 다들 66,048원인가요<small>법과 정부 계산기가 다른 드문 경우라 어느 쪽이 맞는지 확인했어요</small></h2>
 <p class="v2-lead"><span class="v2-ans">2026년 상한은 하루 68,100원이 맞아요.</span> 고용보험법 시행령이 2025년 12월 23일 개정돼 기초일액 상한이 113,500원이 됐고, 그 60%가 68,100원이에요. 그런데 고용24 간편 모의계산은 아직 옛 상한(66,000원)으로 계산해서, 월급이 아무리 높아도 66,048원으로 나와요. 이 글과 계산기는 법령을 따라요.</p>
 <div class="v2-tbl"><table><caption>2025년과 2026년 실업급여 상한액 하한액 비교</caption><thead><tr><th>구분</th><th>2025년</th><th>2026년</th><th>근거</th></tr></thead><tbody>
-<tr><th scope="row">하루 하한</th><td>64,192</td><td class="v2-net">66,048</td><td>최저임금 10,320 × 8h × 80%</td></tr>
-<tr><th scope="row">하루 상한</th><td>66,000</td><td class="v2-net">68,100</td><td>시행령 §68 기초일액 113,500 × 60%</td></tr>
-<tr><th scope="row">한 달(30일) 최대</th><td>1,980,000</td><td class="v2-net">2,043,000</td><td>상한 × 30</td></tr>
+<tr><th scope="row">하루 하한</th><td>64,192</td><td class="v2-net">66,048</td><td>최저임금(2025년 10,030원, 2026년 10,320원) × 8시간 × 80%</td></tr>
+<tr><th scope="row">하루 상한</th><td>개정 전 기준</td><td class="v2-net">68,100</td><td>시행령 §68 기초일액 113,500 × 60% (2025.12.23 개정)</td></tr>
+<tr><th scope="row">한 달(30일) 최대</th><td>1,925,760 (하한 기준)</td><td class="v2-net">2,043,000</td><td>상한 × 30일</td></tr>
 </tbody></table></div>
 
 <h2 id="s5">실업급여 신청 방법 4단계 (이직확인서부터 첫 지급까지)<small>퇴사 다음 날부터 12개월 안에 다 받아야 하니 바로 시작하세요</small></h2>

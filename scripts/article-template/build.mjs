@@ -8,6 +8,7 @@
  * 순서
  *   1. articles/<slug>.mjs 가 엔진 값으로 스펙을 만든다
  *   2. lint.mjs 품질 게이트 (FAIL 이면 여기서 멈춤)
+ *   2b. factcheck.mjs 사실 대조: 글의 모든 숫자·조문이 엔진 값 또는 evidence/<slug>/*.json 에 있어야 함 (brief/<slug>.json 필수)
  *   3. 위젯 산식 포트를 엔진과 대조 (1원이라도 다르면 실패)
  *   4. render.mjs → public/_preview/article-v2-<slug>.html, og-<slug>.svg
  *   5. render-og.mjs → public/_preview/og-<slug>.png (1200×630)
@@ -20,6 +21,7 @@ import { execFileSync } from 'node:child_process';
 import { createRequire } from 'node:module';
 import { render, ROOT } from './render.mjs';
 import { lint } from './lint.mjs';
+import { factCheck, collectEngineNums } from './factcheck.mjs';
 import { ARTICLES } from './articles/index.mjs';
 
 const require = createRequire(import.meta.url);
@@ -37,7 +39,14 @@ for (const slug of slugs) {
   const entry = ARTICLES.find((a) => a.slug === slug);
   if (!entry) { console.error(`✗ ${slug}: articles/index.mjs 에 없음`); failed++; continue; }
   const mod = await import(`./articles/${slug}.mjs`);
-  const a = mod.default({ calculators, loadSpec, VERIFIED });
+  // 스펙이 쓰는 계산기 결과·상수의 숫자를 전부 기록해 둔다 (사실 대조의 '엔진 값' 화이트리스트)
+  const usedSpecs = [];
+  const loadSpecTracked = (p) => { const sp = loadSpec(p); usedSpecs.push(sp); return sp; };
+  const eng = collectEngineNums(calculators, usedSpecs);
+  // derive(v): 엔진 상수의 산술 파생값(상한×30일 등)을 엔진 값으로 등록한다. 손으로 친 숫자는 여기 못 넣는다(인자가 식이어야 함)
+  const derive = (v) => { eng.nums.add(String(v)); eng.nums.add(String(Math.round(v))); return v; };
+  const a = mod.default({ calculators: eng.calculators, loadSpec: loadSpecTracked, VERIFIED, derive });
+  for (const sp of usedSpecs) collectEngineNums({}, [sp]).nums.forEach((n) => eng.nums.add(n));
   if (a.slug !== slug) throw new Error(`${slug}: 스펙 slug 불일치 (${a.slug})`);
 
   // 2. 품질 게이트
@@ -62,6 +71,21 @@ for (const slug of slugs) {
 
   // 4. 렌더
   const { html, heroSvg } = render(a);
+
+  // 2b. 사실 대조 (근거 JSON + 엔진 값)
+  const briefPath = path.join(ROOT, 'scripts/article-template/brief', `${slug}.json`);
+  const evDir = path.join(ROOT, 'scripts/article-template/evidence', slug);
+  if (!fs.existsSync(briefPath)) { console.error(`✗ ${slug}: brief/${slug}.json 없음 (키워드·출처 파일이 있어야 글을 낼 수 있다)`); failed++; continue; }
+  const brief = JSON.parse(fs.readFileSync(briefPath, 'utf8'));
+  const evidence = fs.existsSync(evDir) ? fs.readdirSync(evDir).filter((f) => f.endsWith('.json')).map((f) => JSON.parse(fs.readFileSync(path.join(evDir, f), 'utf8'))) : [];
+  if (evidence.length < brief.sources.length) { console.error(`✗ ${slug}: 근거 ${evidence.length}/${brief.sources.length} — evidence.mjs 먼저`); failed++; continue; }
+  const fc = factCheck({ html, evidence, engineNums: eng.nums, brief });
+  if (fc.problems.length) {
+    console.error(`✗ ${slug}: 사실 대조 FAIL (${fc.problems.length})`);
+    for (const p of fc.problems) console.error(`   - ${p}`);
+    failed++; continue;
+  }
+  console.log(`  사실 대조 통과 · 근거 ${evidence.length}건 · 엔진 값 ${eng.nums.size}개${fc.coverage != null ? ` · 검색어 커버 ${(fc.coverage * 100).toFixed(0)}%` : ''}`);
   const prev = path.join(ROOT, 'public/_preview');
   fs.mkdirSync(prev, { recursive: true });
   const htmlPath = path.join(prev, `article-v2-${slug}.html`);

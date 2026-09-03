@@ -1,0 +1,122 @@
+{
+  "slug": "unemployment-benefit-guide",
+  "keyword": "실업급여",
+  "calc": "government/unemployment-benefit",
+  "mustInclude": [
+    "실업급여 조건",
+    "실업급여 얼마",
+    "실업급여 신청 방법",
+    "실업급여 상한액",
+    "자발적 퇴사"
+  ],
+  "queries": [
+    "실업급여 조건",
+    "실업급여 얼마나 받나요",
+    "실업급여 신청 방법",
+    "실업급여 상한액 2026",
+    "실업급여 하한액",
+    "실업급여 몇 개월",
+    "실업급여 자발적 퇴사",
+    "실업급여 계약 만료",
+    "실업급여 신청 기간",
+    "실업급여 구직활동 횟수",
+    "실업급여 실업인정",
+    "실업급여 이직확인서",
+    "실업급여 알바",
+    "실업급여 조기재취업수당",
+    "실업급여 건강보험",
+    "실업급여 180일"
+  ],
+  "sources": [
+    {
+      "label": "고용보험법 (수급요건·일액·수급기간·소정급여일수·이직사유·조기재취업수당)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법",
+      "must": [
+        "제40조",
+        "제46조",
+        "제50조",
+        "제58조",
+        "제64조"
+      ]
+    },
+    {
+      "label": "고용보험법 시행령 (기초일액 상한 §68, 조기재취업수당 §84)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법시행령",
+      "must": [
+        "제68조",
+        "11만3500원"
+      ]
+    },
+    {
+      "label": "고용보험법 시행규칙 (취업 인정 기준 §92)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법시행규칙",
+      "must": [
+        "제92조"
+      ]
+    },
+    {
+      "label": "정당한 이직 사유 (시행규칙 별표2, 법제처 생활법령)",
+      "kind": "gov",
+      "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=722&ccfNo=2&cciNo=1&cnpClsNo=1",
+      "must": [
+        "임금체불",
+        "별표 2"
+      ]
+    },
+    {
+      "label": "실업의 인정 (법제처 생활법령)",
+      "kind": "gov",
+      "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=722&ccfNo=2&cciNo=2&cnpClsNo=2",
+      "must": [
+        "재취업활동"
+      ]
+    },
+    {
+      "label": "실업인정 및 재취업지원규정 (고용노동부 예규, 실업인정일 지정 기준)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/행정규칙/실업인정및재취업지원규정",
+      "must": [
+        "14일",
+        "28일"
+      ]
+    },
+    {
+      "label": "정책브리핑: 실업급여 지급 요건 강화, 무엇이 달라지나 (회차별 재취업활동)",
+      "kind": "gov",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148902998",
+      "must": [
+        "4주 1회",
+        "4주 2회"
+      ]
+    },
+    {
+      "label": "고용24 실업급여 제도 안내 (신청 절차·부정수급)",
+      "kind": "gov",
+      "url": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000411",
+      "must": [
+        "이직확인서",
+        "실업인정"
+      ]
+    },
+    {
+      "label": "국민건강보험법 (임의계속가입 §110)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/국민건강보험법",
+      "must": [
+        "제110조"
+      ]
+    },
+    {
+      "label": "최저임금위원회 연도별 최저임금 결정현황 (2026년 시급 10,320원)",
+      "kind": "gov",
+      "url": "https://www.minimumwage.go.kr/minWage/policy/decisionMain.do",
+      "must": [
+        "10,320",
+        "2,156,880"
+      ]
+    }
+  ]
+}

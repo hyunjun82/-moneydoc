@@ -5,7 +5,7 @@
  */
 import { won, man, docs } from '../render.mjs';
 
-export default function article({ calculators, loadSpec, VERIFIED }) {
+export default function article({ calculators, loadSpec, VERIFIED, derive = (v) => v }) {
   const spec = loadSpec('government/unemployment-benefit');
   const C = spec.constants;
   const ub = (monthlySalary, insuredYears, isElderlyOrDisabled = false) => calculators['unemployment-benefit']({ monthlySalary, insuredYears, isElderlyOrDisabled }, spec);
@@ -15,8 +15,11 @@ export default function article({ calculators, loadSpec, VERIFIED }) {
   const YEARS = [[0.5, '1년 미만'], [2, '1~3년'], [4, '3~5년'], [7, '5~10년'], [12, '10년 이상']];
   const DAYS = YEARS.map(([y, label]) => ({ label, u: ub(3e6, y, false).benefitDays, o: ub(3e6, y, true).benefitDays }));
   const QUICK = [2.5e6, 3e6, 4e6].map((m) => ({ m, r: ub(m, 5) }));
-  const capSalary = Math.ceil(C.DAILY_UPPER_LIMIT / 0.6 * 30 / 1e4) * 1e4;
-  const floorSalary = Math.floor(C.DAILY_LOWER_LIMIT / 0.6 * 30 / 1e4) * 1e4;
+  const capSalary = derive(Math.ceil(C.DAILY_UPPER_LIMIT / 0.6 * 30 / 1e4) * 1e4);   // 상한이 걸리기 시작하는 월급 (상한 ÷ 60% × 30일, 만원 올림)
+  const floorSalary = derive(Math.floor(C.DAILY_LOWER_LIMIT / 0.6 * 30 / 1e4) * 1e4); // 하한이 걸리는 월급 상단
+  const capMonth = derive(C.DAILY_UPPER_LIMIT * 30);                                  // 상한 × 30일
+  const MINWAGE_2025 = 10030;                                                        // 2025 최저임금 시급 (근거: 최저임금위원회 결정현황)
+  const LOW_2025 = derive(MINWAGE_2025 * 8 * 0.8);                                   // 2025 하한 = 시급 × 8시간 × 80%
   const TOOL_CAP = 66048;
   const mo = (d) => `약 ${Math.round(d / 30)}개월`;
 
@@ -98,7 +101,7 @@ export default function article({ calculators, loadSpec, VERIFIED }) {
           { label: '하한 적용', value: `${won(R.dailyBenefit)}원`, sub: `2026년 하한 ${won(C.DAILY_LOWER_LIMIT)}원` },
         ] },
         { type: 'table', id: 'salTbl', compact: true, moreLabel: '총액까지 보기', x: [5], net: 3, caption: '2026년 실업급여 월급별 하루 금액 표 (퇴사 전 월급 200만원부터 500만원까지)', headers: ['퇴사 전 월급', '하루 평균임금', '60%', '실제 하루 금액', '적용', '5년 근무 총액'],
-          rows: SAL.map(({ m, r }) => ({ hi: m === 3e6, cells: [`${man(m)}원`, won(m * 3 / 90 | 0), won(r.rawBenefit), won(r.dailyBenefit), r.rawBenefit < C.DAILY_LOWER_LIMIT ? '하한 적용' : r.rawBenefit > C.DAILY_UPPER_LIMIT ? '상한 적용' : '60% 그대로', won(r.totalBenefit)] })),
+          rows: SAL.map(({ m, r }) => ({ hi: m === 3e6, cells: [`${man(m)}원`, won(r.rawDailyWage), won(r.rawBenefit), won(r.dailyBenefit), r.rawBenefit < C.DAILY_LOWER_LIMIT ? '하한 적용' : r.rawBenefit > C.DAILY_UPPER_LIMIT ? '상한 적용' : '60% 그대로', won(r.totalBenefit)] })),
           fn: `단위: 원. 하루 평균임금 = 3개월 임금 ÷ 90일. 총액은 5년 근무·50세 미만(${R.benefitDays}일) 기준. 고용24 모의계산 결과와 같아요.` },
         { type: 'widget', label: '내 실업급여 계산', title: '내 월급으로 바로 보기', note: '이 글의 표와 같은 산식이에요. 퇴사 전 3개월 평균 월급, 고용보험 가입기간, 나이만 고르세요.',
           inputs: [
@@ -136,9 +139,9 @@ export default function article({ calculators, loadSpec, VERIFIED }) {
       { id: 's4', h2: '2026년 실업급여 상한액 하한액, 왜 다들 66,048원인가요', sub: '법과 정부 계산기가 다른 드문 경우라 어느 쪽이 맞는지 확인했어요', blocks: [
         { type: 'p', lead: true, ans: `2026년 상한은 하루 ${won(C.DAILY_UPPER_LIMIT)}원이 맞아요.`, text: `고용보험법 시행령이 2025년 12월 23일 개정돼 기초일액 상한이 113,500원이 됐고, 그 60%가 ${won(C.DAILY_UPPER_LIMIT)}원이에요. 그런데 고용24 간편 모의계산은 아직 옛 상한(66,000원)으로 계산해서, 월급이 아무리 높아도 ${won(TOOL_CAP)}원으로 나와요. 이 글과 계산기는 법령을 따라요.` },
         { type: 'table', net: 2, caption: '2025년과 2026년 실업급여 상한액 하한액 비교', headers: ['구분', '2025년', '2026년', '근거'], rows: [
-          { cells: ['하루 하한', '64,192', won(C.DAILY_LOWER_LIMIT), '최저임금 10,320 × 8h × 80%'] },
-          { cells: ['하루 상한', '66,000', won(C.DAILY_UPPER_LIMIT), '시행령 §68 기초일액 113,500 × 60%'] },
-          { cells: ['한 달(30일) 최대', '1,980,000', won(C.DAILY_UPPER_LIMIT * 30), '상한 × 30'] },
+          { cells: ['하루 하한', won(LOW_2025), won(C.DAILY_LOWER_LIMIT), `최저임금(2025년 ${won(MINWAGE_2025)}원, 2026년 10,320원) × 8시간 × 80%`] },
+          { cells: ['하루 상한', '개정 전 기준', won(C.DAILY_UPPER_LIMIT), '시행령 §68 기초일액 113,500 × 60% (2025.12.23 개정)'] },
+          { cells: ['한 달(30일) 최대', won(LOW_2025 * 30 > 0 ? derive(LOW_2025 * 30) : 0) + ' (하한 기준)', won(capMonth), '상한 × 30일'] },
         ] },
       ] },
 

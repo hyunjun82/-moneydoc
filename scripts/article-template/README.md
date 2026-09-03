@@ -64,6 +64,29 @@ npx tsc --noEmit -p . && npx next build                # 페이지 빌드
 
 서류 칩: `docs([{label, href}])` (href 없으면 회색 = 병원·회사 발급).
 
+
+## 키워드 → 글 (한 편 만드는 실제 순서)
+
+사용자가 키워드(주제어 · 연관검색어 · 자모 자동완성 · 지식iN 실제 질문)를 주면 아래 순서로 간다. 손으로 숫자를 치는 단계가 없다.
+
+```
+brief/<slug>.json      키워드·검색어·필수 키워드·출처 URL (정부·법령 페이지). 여기서 시작
+      ↓  node scripts/article-template/evidence.mjs <slug>
+evidence/<slug>/N.json 출처 페이지 본문 텍스트 + N.png 전체 캡처 (Playwright). must 문구가 없으면 저장 안 됨
+      ↓  articles/<slug>.mjs 스펙 작성 (숫자는 엔진 값 · 파생값은 derive() · 문장은 근거 텍스트 기반)
+      ↓  node scripts/article-template/build.mjs <slug>
+lint(형식) → 사실 대조(factcheck) → 위젯 산식 엔진 대조 → HTML → og PNG → Next 페이지
+```
+
+**사실 대조(factcheck.mjs)가 막는 것**: 글의 모든 숫자는 ① 엔진 결과·상수 ② `derive()`로 등록한 산술 파생값 ③ 근거 텍스트에 있는 값, 셋 중 하나여야 한다. 조문("제68조", "별표2")은 근거 텍스트에 있어야 한다. `mustInclude` 키워드는 제목·소제목·FAQ 에 있어야 하고 `queries`(실제 검색어)는 80% 이상 본문에 등장해야 한다. 하나라도 어긋나면 빌드 FAIL. 면제는 단위 없는 31 이하 숫자(세 가지, 4단계)와 연도뿐.
+
+**brief 작성 규칙**
+- `sources`: 법령은 law.go.kr(조문이 iframe 이라 evidence.mjs 가 처리), 제도 안내는 정부 사이트(고용24·정부24·생활법령·정책브리핑), 수치는 발표 기관 원문(최저임금위원회 등). 블로그·뉴스 금지.
+- `must`: 그 페이지에 꼭 있어야 하는 문구(조문 번호·핵심 숫자). 법령은 "11만3500원"처럼 한글 혼용 표기이므로 그대로 적는다(대조기는 113500 으로도 읽는다).
+- 지식iN 복붙 같은 텍스트 소스는 `{ "label", "file": "evidence/<slug>/qna.txt" }` 로.
+
+실업급여 글이 기준 샘플: `brief/unemployment-benefit-guide.json` → 근거 10건 → `articles/unemployment-benefit-guide.mjs`.
+
 ## 글 규칙 (lint 가 검사)
 
 - 해요체. 합니다·입니다 금지. 문장 100자 이하(표·칩 제외). 대시(—)·파이프(|) 금지.

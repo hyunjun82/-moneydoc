@@ -54,3 +54,6 @@ components/GenericCalculator.tsx.backup
 
 # 로컬 글 미리보기 (배포 제외)
 /public/_preview/
+
+# 근거 캡처(PNG)는 용량이 커서 제외, JSON 텍스트는 커밋
+scripts/article-template/evidence/**/*.png
