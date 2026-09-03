@@ -160,12 +160,13 @@ export const html = `<h1>2026년 연봉 실수령액 표, 연봉 3000부터 1억
 
 <h2 id="s7">월급 실수령액이 매달 다른 이유는 무엇인가요 (1월·4월·7월)<small>같은 연봉인데 어떤 달은 다르게 들어오는 이유</small></h2>
 <p><span class="v2-ans">1~2월 연말정산, 3월 간이세액표 개정, 4월 건강보험 정산, 7월 국민연금 상한 변경. 이 네 달에 금액이 바뀌어요.</span> </p>
-<div class="v2-tl" aria-label="실수령액이 달라지는 달">
-  <div><i>1~2월</i><b>연말정산</b><span>환급 또는 추가 납부. 전년 소득세 확정</span></div>
-  <div class="v2-go"><i>3월</i><b>간이세액표 개정</b><span>2026.3.1 표부터 소득세 변경</span></div>
-  <div><i>4월</i><b>건강보험 정산</b><span>전년 보수 기준. 연봉 오른 해는 추가 납부</span></div>
-  <div class="v2-go"><i>7월</i><b>국민연금 상·하한 변경</b><span>상한 659만원 · 하한 41만원 적용</span></div>
-</div>
+<div class="v2-tbl v2-text"><table><caption>월급 실수령액이 달라지는 달과 이유</caption><thead><tr><th>시기</th><th>무엇이 바뀌나</th><th>금액 방향</th></tr></thead><tbody>
+<tr><th scope="row">1~2월</th><td data-l="무엇이 바뀌나">연말정산으로 전년 소득세 확정</td><td data-l="금액 방향">환급 또는 추가 납부</td></tr>
+<tr><th scope="row">3월</th><td data-l="무엇이 바뀌나">간이세액표 개정분 반영</td><td data-l="금액 방향">소득세 변동</td></tr>
+<tr><th scope="row">4월</th><td data-l="무엇이 바뀌나">전년 보수 기준 건강보험 정산</td><td data-l="금액 방향">연봉 올랐으면 추가 납부</td></tr>
+<tr><th scope="row">7월</th><td data-l="무엇이 바뀌나">국민연금 기준소득월액 상·하한 변경 (상한 659만원)</td><td data-l="금액 방향">고소득자는 국민연금 증가</td></tr>
+</tbody></table></div>
+<p class="v2-fn">이 네 달은 같은 연봉이어도 실수령액이 달라져요. 나머지 달은 대체로 같은 금액이 들어와요.</p>
 
 <h2 id="faq">자주 묻는 질문</h2>
 <div class="v2-faqs">

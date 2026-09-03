@@ -26,10 +26,12 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
   const R89 = sev('2021-03-02', '2026-03-01', 3e6);                    // 3개월 총일수가 짧은 경우 (12~2월 = 90일)
   const dailyGap = derive(Math.round(R89.avgDailyWage - R.avgDailyWage));
   const LABOR = 'https://labor.moel.go.kr/anmtDclrCntr/main.do';
+  // 근로기준법 제37조 지연이자 연 20% (퇴사 14일 경과 후부터)
+  const LATE = [30, 60, 90, 180].map((d) => ({ d, interest: derive(Math.floor(R.severance * 0.2 * d / 365)) }));
 
   return {
     slug: 'severance-pay-guide', cat: 'law', catLabel: '법률', crumb: '퇴직금',
-    title: '퇴직금 계산 방법과 지급기준, 내 퇴직금 얼마인가요',
+    title: '퇴직금 계산 방법과 지급기준, 평균임금부터 14일 지급기한까지',
     description: `월급 300만원으로 5년 일하고 그만두면 퇴직금은 ${won(R.severance)}원이에요. 퇴직금은 평균임금 기준이라 상여금과 연차수당까지 들어가요. 계산 순서, 근속별·월급별 금액표, 14일 지급기한, 못 받았을 때 신고 방법을 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `고용노동부 퇴직금 계산기와 1원 단위 일치 · ${VERIFIED}`,
@@ -133,19 +135,19 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
         ] },
       ] },
 
-      { id: 's4', h2: '퇴직금 지급기준과 지급기한, 언제까지 줘야 하나요', sub: '퇴사한 날부터 14일', blocks: [
-        { type: 'p', lead: true, ans: '퇴사한 날부터 14일 안에 줘야 해요.', text: '당사자가 합의하면 기일을 늦출 수 있지만, 합의 없이 넘기면 체불이에요. 늦게 준 기간에는 지연이자가 붙어요.' },
-        { type: 'timeline', label: '퇴직금 받는 순서', items: [
-          { step: '퇴사일', title: '지급사유 발생', text: '마지막 근무일 다음 날부터 계산', mark: true },
-          { step: '14일', title: '지급 기한', text: '이 안에 안 주면 체불', tag: '법정 기한', mark: true },
-          { step: '그 뒤', title: '지연이자 연 20%', text: '미지급 기간에 대해 발생' },
-          { step: '진정', title: '노동청 신고', text: '노동포털에서 온라인 접수', tag: '무료' },
+      { id: 's4', h2: '퇴직금 지급기준과 지급기한, 언제까지 줘야 하나요', sub: '퇴사한 날부터 14일, 늦으면 지연이자 연 20%', blocks: [
+        { type: 'p', lead: true, ans: '퇴사한 날부터 14일 안에 줘야 해요.', text: `당사자가 합의하면 기일을 늦출 수 있지만, 합의 없이 넘기면 체불이에요. 지연이자는 연 20%라 늦어질수록 붙는 금액이 커져요.` },
+        { type: 'table', net: 2, caption: `퇴직금 ${won(R.severance)}원을 못 받았을 때 붙는 지연이자`, headers: ['지연 기간', '지연이자 (연 20%)', '받을 금액'],
+          rows: LATE.map(({ d, interest }) => ({ hi: d === 90, cells: [`${d}일`, `${won(interest)}원`, `${won(derive(R.severance + interest))}원`] })),
+          fn: '지연이자는 퇴사 14일이 지난 다음 날부터 계산해요. 회사가 도산하거나 천재지변 같은 사정이 있으면 이자가 붙지 않는 기간이 있어요.' },
+        { type: 'tips', items: [
+          { title: '먼저 서면으로 요청하세요', text: '문자나 메일로 지급을 요청하고 기록을 남기세요. 나중에 진정이나 소송에서 증거가 돼요. 근로계약서와 급여명세서도 챙겨 두세요.' },
+          { title: '안 주면 노동청에 진정', text: `고용노동부 노동포털에서 온라인으로 낼 수 있어요. 무료이고 10분이면 접수돼요. 관할 고용노동청이 회사를 불러 조사해요.` },
+          { title: '회사가 도산했다면', text: '국가가 대신 주는 대지급금 제도가 있어요. 도산 사실과 미지급 사실을 확인받아야 하고, 한도가 정해져 있어요.' },
         ] },
         { type: 'steps', items: [
-          { title: '회사에 서면으로 요청', text: '문자나 메일로 남겨 두세요. 지급 요청 기록이 나중에 증거가 돼요', meta: '준비물: 근로계약서·급여명세서' },
-          { title: '임금체불 진정 접수', text: '고용노동부 노동포털에서 온라인으로 낼 수 있어요. 관할 고용노동청이 조사해요', meta: '무료 · 온라인 10분', link: { label: '임금체불 진정', href: LABOR } },
-          { title: '금액 확인', text: '받아야 할 금액을 미리 계산해 두면 진정서에 적기 쉬워요. 입사일과 퇴사일, 3개월 임금만 넣으면 돼요', meta: '3분', link: { label: '퇴직금 계산기', href: '/law/severance-pay/' } },
-          { title: '체당금 신청', text: '회사가 도산해 못 받으면 국가가 대신 주는 대지급금 제도가 있어요', meta: '도산·미지급 확인 필요' },
+          { title: '받을 금액 계산', text: '입사일과 퇴사일, 퇴사 전 3개월 임금을 넣으면 정확한 금액이 나와요', meta: '3분', link: { label: '퇴직금 계산기', href: '/law/severance-pay/' } },
+          { title: '진정 접수', text: '노동포털에서 임금체불 진정을 접수하면 관할 고용노동청이 조사해요', meta: '무료 · 온라인 10분', link: { label: '임금체불 진정', href: LABOR } },
         ] },
       ] },
 

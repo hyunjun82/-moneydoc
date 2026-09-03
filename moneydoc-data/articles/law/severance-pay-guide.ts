@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-severance-pay-guide.html
 export const meta = {
-  title: "퇴직금 계산 방법과 지급기준, 내 퇴직금 얼마인가요",
+  title: "퇴직금 계산 방법과 지급기준, 평균임금부터 14일 지급기한까지",
   description: "월급 300만원으로 5년 일하고 그만두면 퇴직금은 14,673,913원이에요. 퇴직금은 평균임금 기준이라 상여금과 연차수당까지 들어가요. 계산 순서, 근속별·월급별 금액표, 14일 지급기한, 못 받았을 때 신고 방법을 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "severance-pay-guide";
 
-export const html = `<h1>퇴직금 계산 방법과 지급기준, 내 퇴직금 얼마인가요</h1>
+export const html = `<h1>퇴직금 계산 방법과 지급기준, 평균임금부터 14일 지급기한까지</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용노동부 퇴직금 계산기와 1원 단위 일치 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/severance-pay-guide.png" width="1200" height="630" alt="퇴직금 계산 방법. 월급 300만원으로 5년 일하면 퇴직금 14,673,913원">
 <p class="v2-lead v2-intro">퇴직금은 "월급 곱하기 근속연수"가 아니에요. 퇴사 직전 3개월 평균임금으로 계산하고, 그 안에 상여금과 연차수당까지 들어가요. 월급 300만원으로 5년 일했다면 14,673,913원이고, 같은 조건에서 상여금 600만원과 연차수당이 있으면 17,608,697원으로 늘어요. 계산 순서, 근속별 금액표, 지급 기한과 못 받았을 때 할 일을 순서대로 정리했어요.</p>
@@ -99,19 +99,23 @@ export const html = `<h1>퇴직금 계산 방법과 지급기준, 내 퇴직금 
   <div><b>평균임금이 통상임금보다 적으면</b>통상임금을 평균임금으로 써요. 결근이 많아 3개월 임금이 적어진 사람을 보호하는 규정이에요.</div>
 </div>
 
-<h2 id="s4">퇴직금 지급기준과 지급기한, 언제까지 줘야 하나요<small>퇴사한 날부터 14일</small></h2>
-<p class="v2-lead"><span class="v2-ans">퇴사한 날부터 14일 안에 줘야 해요.</span> 당사자가 합의하면 기일을 늦출 수 있지만, 합의 없이 넘기면 체불이에요. 늦게 준 기간에는 지연이자가 붙어요.</p>
-<div class="v2-tl" aria-label="퇴직금 받는 순서">
-  <div class="v2-go"><i>퇴사일</i><b>지급사유 발생</b><span>마지막 근무일 다음 날부터 계산</span></div>
-  <div class="v2-go"><i>14일</i><b>지급 기한</b><span>이 안에 안 주면 체불</span><em>법정 기한</em></div>
-  <div><i>그 뒤</i><b>지연이자 연 20%</b><span>미지급 기간에 대해 발생</span></div>
-  <div><i>진정</i><b>노동청 신고</b><span>노동포털에서 온라인 접수</span><em>무료</em></div>
+<h2 id="s4">퇴직금 지급기준과 지급기한, 언제까지 줘야 하나요<small>퇴사한 날부터 14일, 늦으면 지연이자 연 20%</small></h2>
+<p class="v2-lead"><span class="v2-ans">퇴사한 날부터 14일 안에 줘야 해요.</span> 당사자가 합의하면 기일을 늦출 수 있지만, 합의 없이 넘기면 체불이에요. 지연이자는 연 20%라 늦어질수록 붙는 금액이 커져요.</p>
+<div class="v2-tbl"><table><caption>퇴직금 14,673,913원을 못 받았을 때 붙는 지연이자</caption><thead><tr><th>지연 기간</th><th>지연이자 (연 20%)</th><th>받을 금액</th></tr></thead><tbody>
+<tr><th scope="row">30일</th><td>241,215원</td><td class="v2-net">14,915,128원</td></tr>
+<tr><th scope="row">60일</th><td>482,430원</td><td class="v2-net">15,156,343원</td></tr>
+<tr class="v2-hi"><th scope="row">90일</th><td>723,645원</td><td class="v2-net">15,397,558원</td></tr>
+<tr><th scope="row">180일</th><td>1,447,290원</td><td class="v2-net">16,121,203원</td></tr>
+</tbody></table></div>
+<p class="v2-fn">지연이자는 퇴사 14일이 지난 다음 날부터 계산해요. 회사가 도산하거나 천재지변 같은 사정이 있으면 이자가 붙지 않는 기간이 있어요.</p>
+<div class="v2-tips">
+  <div><b>먼저 서면으로 요청하세요</b>문자나 메일로 지급을 요청하고 기록을 남기세요. 나중에 진정이나 소송에서 증거가 돼요. 근로계약서와 급여명세서도 챙겨 두세요.</div>
+  <div><b>안 주면 노동청에 진정</b>고용노동부 노동포털에서 온라인으로 낼 수 있어요. 무료이고 10분이면 접수돼요. 관할 고용노동청이 회사를 불러 조사해요.</div>
+  <div><b>회사가 도산했다면</b>국가가 대신 주는 대지급금 제도가 있어요. 도산 사실과 미지급 사실을 확인받아야 하고, 한도가 정해져 있어요.</div>
 </div>
 <div class="v2-steps">
-  <div><i>1단계</i><b>회사에 서면으로 요청</b><span>문자나 메일로 남겨 두세요. 지급 요청 기록이 나중에 증거가 돼요</span><em>준비물: 근로계약서·급여명세서</em></div>
-  <div><i>2단계</i><b>임금체불 진정 접수</b><span>고용노동부 노동포털에서 온라인으로 낼 수 있어요. 관할 고용노동청이 조사해요</span><em>무료 · 온라인 10분</em><a class="v2-go" href="https://labor.moel.go.kr/anmtDclrCntr/main.do" target="_blank" rel="noopener">임금체불 진정</a></div>
-  <div><i>3단계</i><b>금액 확인</b><span>받아야 할 금액을 미리 계산해 두면 진정서에 적기 쉬워요. 입사일과 퇴사일, 3개월 임금만 넣으면 돼요</span><em>3분</em><a class="v2-go" href="/law/severance-pay/">퇴직금 계산기</a></div>
-  <div><i>4단계</i><b>체당금 신청</b><span>회사가 도산해 못 받으면 국가가 대신 주는 대지급금 제도가 있어요</span><em>도산·미지급 확인 필요</em></div>
+  <div><i>1단계</i><b>받을 금액 계산</b><span>입사일과 퇴사일, 퇴사 전 3개월 임금을 넣으면 정확한 금액이 나와요</span><em>3분</em><a class="v2-go" href="/law/severance-pay/">퇴직금 계산기</a></div>
+  <div><i>2단계</i><b>진정 접수</b><span>노동포털에서 임금체불 진정을 접수하면 관할 고용노동청이 조사해요</span><em>무료 · 온라인 10분</em><a class="v2-go" href="https://labor.moel.go.kr/anmtDclrCntr/main.do" target="_blank" rel="noopener">임금체불 진정</a></div>
 </div>
 
 <h2 id="s5">퇴직금 중간정산은 언제 되나요<small>법에 정해진 사유만 가능해요</small></h2>

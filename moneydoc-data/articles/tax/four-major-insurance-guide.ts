@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-four-major-insurance-guide.html
 export const meta = {
-  title: "2026년 4대보험 요율과 계산, 월급에서 떼는 돈과 회사 부담",
+  title: "2026년 4대보험 요율과 계산, 월급에서 떼는 돈부터 회사 부담까지",
   description: "월 보수 300만원이면 근로자가 내는 4대보험은 291,520원이고 회사는 320,020원을 내요. 국민연금 4.75%, 건강보험 3.595%, 장기요양, 고용보험 요율과 월급별 공제액 표, 4월 건강보험 정산까지 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "four-major-insurance-guide";
 
-export const html = `<h1>2026년 4대보험 요율과 계산, 월급에서 떼는 돈과 회사 부담</h1>
+export const html = `<h1>2026년 4대보험 요율과 계산, 월급에서 떼는 돈부터 회사 부담까지</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">4대사회보험 모의계산 일치 · 법령 요율 확인 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/four-major-insurance-guide.png" width="1200" height="630" alt="2026년 4대보험 요율. 월 보수 300만원이면 근로자 291,520원, 회사 320,020원">
 <p class="v2-lead v2-intro">급여명세서에서 세금보다 크게 빠지는 게 4대보험이에요. 월 보수 300만원이면 근로자가 291,520원을 내고, 회사는 산재보험까지 더해 320,020원을 내요. 요율은 법으로 정해져 있어 회사가 달라도 같아요. 항목별 요율과 월급별 공제액 표, 회사가 내는 몫, 4월과 7월에 금액이 바뀌는 이유를 정리했어요.</p>
@@ -123,11 +123,12 @@ export const html = `<h1>2026년 4대보험 요율과 계산, 월급에서 떼�
   <div><b>4대보험 가입 내역이 궁금하면</b>4대사회보험 정보연계센터에서 가입내역확인서를 온라인으로 뗄 수 있어요. 이직·대출 서류로 자주 쓰여요.</div>
   <div><b>퇴사하면</b>직장가입자 자격이 끝나 지역가입자로 바뀌어요. 보험료가 오르면 임의계속가입으로 직장 수준을 최대 36개월 유지할 수 있어요.</div>
 </div>
-<div class="v2-steps">
-  <div><i>1단계</i><b>가입내역 확인</b><span>4대사회보험 정보연계센터에서 가입 이력과 납부 내역을 조회해요</span><em>공동인증서 · 5분</em><a class="v2-go" href="https://www.4insure.or.kr/pbiz/main/main.do" target="_blank" rel="noopener">가입내역 조회</a></div>
-  <div><i>2단계</i><b>예상 보험료 계산</b><span>월 보수와 업종을 넣으면 근로자와 회사 부담이 한 번에 나와요</span><em>1분</em><a class="v2-go" href="/tax/four-major-insurance/">4대보험 계산기</a></div>
-  <div><i>3단계</i><b>국민연금 예상 수령액 확인</b><span>지금 내는 보험료로 나중에 얼마를 받는지 공단에서 조회할 수 있어요</span><em>공동인증서</em><a class="v2-go" href="https://www.nps.or.kr/" target="_blank" rel="noopener">국민연금공단</a></div>
-</div>
+<div class="v2-tbl v2-text"><table><caption>4대보험 관련 서류와 조회, 어디서 하나요</caption><thead><tr><th>하려는 것</th><th>어디서</th><th>준비물</th></tr></thead><tbody>
+<tr><th scope="row">가입내역확인서 발급</th><td data-l="어디서"><a class="v2-doc" href="https://www.4insure.or.kr/pbiz/main/main.do" target="_blank" rel="noopener">4대사회보험 정보연계센터</a></td><td class="v2-docs" data-l="준비물">공동인증서</td></tr>
+<tr><th scope="row">국민연금 예상수령액 조회</th><td data-l="어디서"><a class="v2-doc" href="https://www.nps.or.kr/" target="_blank" rel="noopener">국민연금공단</a></td><td class="v2-docs" data-l="준비물">공동인증서</td></tr>
+<tr><th scope="row">내 보험료 미리 계산</th><td data-l="어디서"><a class="v2-doc" href="/tax/four-major-insurance/">4대보험료 계산기</a></td><td class="v2-docs" data-l="준비물">월 보수·업종</td></tr>
+</tbody></table></div>
+<p class="v2-fn">가입내역확인서는 이직이나 대출 심사에서 재직 증빙으로 자주 쓰여요.</p>
 
 <h2 id="s5">4대보험 가입 대상은 누구인가요<small>주 15시간과 월 60시간이 기준이에요</small></h2>
 <p><span class="v2-ans">한 달 60시간 이상, 주 15시간 이상 일하면 4대보험에 가입해요.</span> 이 기준보다 적게 일하면 산재보험만 적용되는 경우가 많아요. 아르바이트도 시간 기준을 넘으면 정규직과 같은 요율로 가입해요.</p>

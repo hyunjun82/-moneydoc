@@ -3,7 +3,7 @@
  *   숫자는 전부 엔진(four-major-insurance: 근로자 + 회사 통합)이 만든다.
  *   요율·부담 비율·정산 문장은 claims 로 법령 원문을 인용해 둔다.
  */
-import { won, man } from '../render.mjs';
+import { won, man, docs } from '../render.mjs';
 
 export default function article({ calculators, loadSpec, VERIFIED, derive = (v) => v }) {
   const spec = loadSpec('tax/four-major-insurance');
@@ -30,7 +30,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
   return {
     slug: 'four-major-insurance-guide', cat: 'tax', catLabel: '세금', crumb: '4대보험',
-    title: '2026년 4대보험 요율과 계산, 월급에서 떼는 돈과 회사 부담',
+    title: '2026년 4대보험 요율과 계산, 월급에서 떼는 돈부터 회사 부담까지',
     description: `월 보수 300만원이면 근로자가 내는 4대보험은 ${won(R.employeeTotal)}원이고 회사는 ${won(R.employerTotal)}원을 내요. 국민연금 4.75%, 건강보험 3.595%, 장기요양, 고용보험 요율과 월급별 공제액 표, 4월 건강보험 정산까지 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `4대사회보험 모의계산 일치 · 법령 요율 확인 · ${VERIFIED}`,
@@ -153,11 +153,11 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           { title: '4대보험 가입 내역이 궁금하면', text: '4대사회보험 정보연계센터에서 가입내역확인서를 온라인으로 뗄 수 있어요. 이직·대출 서류로 자주 쓰여요.' },
           { title: '퇴사하면', text: '직장가입자 자격이 끝나 지역가입자로 바뀌어요. 보험료가 오르면 임의계속가입으로 직장 수준을 최대 36개월 유지할 수 있어요.' },
         ] },
-        { type: 'steps', items: [
-          { title: '가입내역 확인', text: '4대사회보험 정보연계센터에서 가입 이력과 납부 내역을 조회해요', meta: '공동인증서 · 5분', link: { label: '가입내역 조회', href: INSURE4 } },
-          { title: '예상 보험료 계산', text: '월 보수와 업종을 넣으면 근로자와 회사 부담이 한 번에 나와요', meta: '1분', link: { label: '4대보험 계산기', href: '/tax/four-major-insurance/' } },
-          { title: '국민연금 예상 수령액 확인', text: '지금 내는 보험료로 나중에 얼마를 받는지 공단에서 조회할 수 있어요', meta: '공동인증서', link: { label: '국민연금공단', href: NPS } },
-        ] },
+        { type: 'table', text: true, caption: '4대보험 관련 서류와 조회, 어디서 하나요', headers: ['하려는 것', '어디서', '준비물'], rows: [
+          { docs: true, cells: ['가입내역확인서 발급', docs([{ label: '4대사회보험 정보연계센터', href: INSURE4 }]), '공동인증서'] },
+          { docs: true, cells: ['국민연금 예상수령액 조회', docs([{ label: '국민연금공단', href: NPS }]), '공동인증서'] },
+          { docs: true, cells: ['내 보험료 미리 계산', docs([{ label: '4대보험료 계산기', href: '/tax/four-major-insurance/' }]), '월 보수·업종'] },
+        ], fn: '가입내역확인서는 이직이나 대출 심사에서 재직 증빙으로 자주 쓰여요.' },
       ] },
 
       { id: 's5', h2: '4대보험 가입 대상은 누구인가요', sub: '주 15시간과 월 60시간이 기준이에요', blocks: [

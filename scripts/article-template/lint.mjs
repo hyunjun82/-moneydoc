@@ -97,6 +97,12 @@ export function lint(a) {
     }
   }
   if (h2s < 5) add('sections', `H2 ${h2s}개 (5개 이상)`);
+  // 시각화는 글 내용에 맞게 고른다. 같은 종류를 한 글에서 2번 넘게 쓰면 템플릿 복제 신호.
+  const blockKinds = a.sections.flatMap((s) => s.blocks.map((b) => b.type));
+  for (const kind of ['timeline', 'steps', 'tree', 'flow']) {
+    const n = blockKinds.filter((k) => k === kind).length;
+    if (n > 1) add('sections', `${kind} 블록 ${n}개 — 같은 시각화 반복 (글마다 내용에 맞는 것 하나만)`);
+  }
   if (tables < 2) add('sections', `표 ${tables}개 (2개 이상)`);
 
   // 꼬리
