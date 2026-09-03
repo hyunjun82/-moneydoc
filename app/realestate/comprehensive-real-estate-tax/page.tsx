@@ -4,8 +4,9 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/realestate/comprehensive-real-estate-tax.json";
 
 export const metadata: Metadata = {
-  title: "종합부동산세 계산기 — 2026년 기준",
-  description: "보유 주택의 공시가 합계와 1세대 1주택자 여부를 입력하면 종합부동산세 산출세액이 계산됩니다. 공시가에서 공제(1주택 12억, 일반 9억)를 빼고 60% 공정시장가액비율을 곱한 금액이 과세표준입니다.",
+  title: "종합부동산세 계산기 (2026년 기준)",
+  description:
+    "공정시장가액 60% 적용 + 1주택자 12억 공제. 주택별 공시가격(최대 3채)과 1주택자라면 연령·보유연수를 입력하면 종합부동산세를 계산합니다. 1세대1주택 12억·그 외 9억 공제, 공정시장가액비율 60%, 재산세액 공제, 고령자·장기보유 세액공제(합계 80% 한도), 농어촌특별세.",
   alternates: { canonical: "/realestate/comprehensive-real-estate-tax/" },
 };
 

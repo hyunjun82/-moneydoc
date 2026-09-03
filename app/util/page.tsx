@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "유틸 계산기 — 5종 | MoneyDoc",
+  title: "유틸 계산기 5종 | MoneyDoc",
   description: "퍼센트·나이·날짜·할부·현금서비스 — 일상 계산 도구",
   alternates: { canonical: "/util/" },
 };

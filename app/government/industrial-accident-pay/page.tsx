@@ -4,8 +4,9 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/government/industrial-accident-pay.json";
 
 export const metadata: Metadata = {
-  title: "산재 휴업급여 계산기 — 2026년 기준",
-  description: "월 평균임금과 휴업 일수 입력 시 산재 휴업급여 산출.",
+  title: "산재 휴업급여 계산기 (2026년 기준)",
+  description:
+    "평균임금의 70% × 휴업일수 (최저 82,560원/일). 산재 휴업급여 계산. 사고로 일하지 못한 기간 동안 평균임금 × 70% 지급 (최저 82,560원/일, 2026 최저시급 10,320 × 8h). 근로복지공단 신청.",
   alternates: { canonical: "/government/industrial-accident-pay/" },
 };
 

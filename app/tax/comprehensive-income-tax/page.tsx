@@ -4,9 +4,9 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/tax/comprehensive-income-tax.json";
 
 export const metadata: Metadata = {
-  title: "종합소득세 계산기 — 2026 누진세율 기준",
+  title: "종합소득세 계산기 (2026년 기준)",
   description:
-    "사업소득·임대소득·기타소득 합산 종합소득세를 정부 공식 산식(소득세법 §55, §50, §59의2)으로 계산. 인적공제·자녀세액공제·추가공제 자동 반영. 5케이스 검증 완료.",
+    "사업소득·임대소득·기타소득 합산 종합소득세. 근로소득·사업소득·이자·배당·임대·연금·기타소득 등 1년치 총합을 입력하면 부양가족 인적공제 → 누진세율 → 자녀세액공제 → 표준세액공제 7만 → 지방세 10% 순으로 자동 계산. 5월 종합소득세 신고 시 활용.",
   alternates: { canonical: "/tax/comprehensive-income-tax/" },
 };
 

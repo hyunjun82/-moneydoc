@@ -96,6 +96,22 @@ function presets(def: InputDef): number[] {
   return [...out].sort((a, b) => a - b).slice(0, 9);
 }
 
+/** 비율 칩: 기본값 주변의 흔한 값 (소수형이면 0.03 → 3%) */
+function pctPresets(def: InputDef, fraction: boolean): number[] {
+  const d = typeof def.default === "number" ? def.default : 0;
+  const min = def.min ?? 0, max = def.max ?? (fraction ? 1 : 100);
+  const base = fraction ? [0.02, 0.03, 0.035, 0.04, 0.045, 0.05, 0.06, 0.07, 0.1, 0.15, 0.2, 0.3] : [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+  const out = new Set<number>(base.filter((v) => v >= min && v <= max && Math.abs(v - d) <= (fraction ? 0.12 : 60)));
+  if (d > 0) out.add(d);
+  return [...out].sort((a, b) => a - b).slice(0, 8);
+}
+/** 라벨에서 단위 추정: "배기량 (cc)" → cc, "휴업 일수" → 일 */
+function guessUnit(label: string): string {
+  const m = /\(([^)]*)\)\s*$/.exec(label); if (m && m[1].length <= 4 && !/\d/.test(m[1])) return m[1];
+  if (/일수/.test(label)) return "일"; if (/월수/.test(label)) return "개월"; if (/연령|나이/.test(label)) return "세"; if (/연수|년수/.test(label)) return "년";
+  return "";
+}
+
 function normalizeOptions(def: InputDef): Option[] {
   return (def.options ?? []).map((o) => (typeof o === "string" ? { value: o, label: o } : o));
 }
@@ -184,7 +200,11 @@ export function GenericCalculator({ spec }: { spec: Spec }) {
       if (i.type === "boolean" || i.type === "checkbox") return i.label;
       if (i.type === "select") return normalizeOptions(i).find((o) => String(o.value) === String(v))?.label ?? String(v);
       if (i.type === "currency") return `${i.label} ${manwon(Number(v) || 0)}원`;
-      if (typeof v === "number") return `${i.label} ${v}${i.unit ?? ""}`;
+      if (typeof v === "number") {
+        const isPct = /rate|ratio|pct|percent/i.test(i.id) || /률|율|%/.test(i.label);
+        if (isPct) return `${i.label} ${+(((i.max ?? 1) <= 1 ? v * 100 : v)).toFixed(2)}%`;
+        return `${i.label} ${v}${i.unit ?? guessUnit(i.label)}`;
+      }
       return `${i.label} ${String(v)}`;
     })
     .slice(0, 4)
@@ -332,21 +352,27 @@ function Field({ def, value, onChange }: { def: InputDef; value: unknown; onChan
   }
 
   const isCurrency = t === "currency";
-  const chips = isCurrency ? presets(def) : [];
+  // 비율 입력: 엔진은 0.04 같은 소수를 받지만 화면은 4% 로 보여준다 (id 에 rate/ratio, 라벨에 률·율)
+  const isPct = !isCurrency && (/rate|ratio|pct|percent/i.test(def.id) || /률|율|%/.test(def.label));
+  const fraction = isPct && (def.max ?? 1) <= 1;           // 0~1 소수형
+  const shown = fraction ? +(n * 100).toFixed(4) : n;
+  const unit = def.unit ?? (isCurrency ? "원" : isPct ? "%" : guessUnit(def.label));
+  const chips = isCurrency ? presets(def) : isPct ? pctPresets(def, fraction) : [];
+  const set = (raw: string) => { const v = Number(String(raw).replace(/[^0-9.\-]/g, "")) || 0; onChange(fraction ? +(v / 100).toFixed(6) : v); };
   return (
     <div className="gc-f">
       {label}
       <div className="gc-in">
         <input
           type="text" inputMode="decimal"
-          value={isCurrency ? n.toLocaleString("ko-KR") : String(n)}
-          onChange={(e) => onChange(isCurrency ? parseKrw(e.target.value) : Number(String(e.target.value).replace(/[^0-9.\-]/g, "")) || 0)}
+          value={isCurrency ? n.toLocaleString("ko-KR") : String(shown)}
+          onChange={(e) => (isCurrency ? onChange(parseKrw(e.target.value)) : set(e.target.value))}
         />
-        <span>{def.unit ?? (isCurrency ? "원" : "")}</span>
+        <span>{unit}</span>
       </div>
       {chips.length > 1 && (
         <div className="gc-chips">
-          {chips.map((c) => <button key={c} type="button" className={c === n ? "on" : ""} onClick={() => onChange(c)}>{manwon(c)}</button>)}
+          {chips.map((c) => <button key={c} type="button" className={Math.abs(c - n) < 1e-9 ? "on" : ""} onClick={() => onChange(c)}>{isCurrency ? manwon(c) : `${+((fraction ? c * 100 : c)).toFixed(2)}%`}</button>)}
         </div>
       )}
     </div>

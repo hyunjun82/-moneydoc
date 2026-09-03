@@ -4,8 +4,9 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/tax/vat-general.json";
 
 export const metadata: Metadata = {
-  title: "부가세 (일반과세자) 계산기 — 2026년 기준",
-  description: "매출·매입 부가세 입력 시 납부 또는 환급액 산출.",
+  title: "부가세 (일반과세자) 계산기 (2026년 기준)",
+  description:
+    "매출 부가세 - 매입 부가세 = 납부세액. 분기별 매출 부가세(매출 ÷ 11) - 매입 부가세(공제 가능 항목 영수증 기준) = 납부세액. 음수면 환급. 1·4분기는 1월·7월 25일까지 신고.",
   alternates: { canonical: "/tax/vat-general/" },
 };
 

@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { GuideList } from "@/components/GuideList";
 
 export const metadata: Metadata = {
-  title: "보험·자동차 계산기 — 2종 | MoneyDoc",
+  title: "보험·자동차 계산기 2종 | MoneyDoc",
   description: "실손보험 자기부담금·자동차세 (배기량·연식)·지방교육세 — 1~4세대 표준약관 + 지방세법 §127 (금감원·행정안전부 공식 산식)",
   alternates: { canonical: "/insurance/" },
 };

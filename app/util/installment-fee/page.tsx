@@ -4,8 +4,9 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/util/installment-fee.json";
 
 export const metadata: Metadata = {
-  title: "신용카드 할부 수수료 계산기 — 2026년 기준",
-  description: "할부 원금·개월·수수료율 입력 시 월 결제액과 총 수수료 산출.",
+  title: "신용카드 할부 수수료 계산기 (2026년 기준)",
+  description:
+    "원리금균등 방식 월 결제액 + 총 수수료. 신용카드 할부 수수료 계산. 결제금액·할부개월·연이율 입력. 보통 3개월 무이자, 6개월+ 유이자(연 13~20%). 할부 회당 원리금균등 산식 적용.",
   alternates: { canonical: "/util/installment-fee/" },
 };
 

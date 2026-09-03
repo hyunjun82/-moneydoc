@@ -4,8 +4,9 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/government/maternity-leave-pay.json";
 
 export const metadata: Metadata = {
-  title: "출산휴가 급여 계산기 — 2026년 기준",
-  description: "월 통상임금과 다태 여부 입력 시 출산휴가 총 급여 산출.",
+  title: "출산휴가 급여 계산기 (2026년 기준)",
+  description:
+    "90일 (다태 120일) + 고용보험 월 220만 상한. 출산휴가 급여 계산. 90일(다태 120일) 통상임금 100%. 우선지원대상기업은 정부 90일+사업주 차액 60일, 대기업은 사업주 60일+정부 30일. 월 220만원 정부 한도.",
   alternates: { canonical: "/government/maternity-leave-pay/" },
 };
 

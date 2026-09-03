@@ -4,8 +4,9 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/realestate/acquisition-tax.json";
 
 export const metadata: Metadata = {
-  title: "취득세 계산기 — 2026년 기준",
-  description: "주택 매매 시 부담하는 취득세를 계산합니다. 매매가액·보유 주택 수(취득 후 기준)·조정대상지역 여부·전용면적을 입력하면 취득세 + 농어촌특별세 + 지방교육세 합계가 자동 산출됩니다.",
+  title: "취득세 계산기 (2026년 기준)",
+  description:
+    "주택 매매·취득 시 납부 취득세 + 농특세 + 지방교육세. 주택 매매 시 잔금 60일 이내 납부하는 취득세를 계산. 매매가 + 취득 후 보유 주택 수 + 조정대상지역 + 전용면적 입력. 1주택 6억 이하 1.1%부터 다주택 조정 12%(+지방교육)까지 케이스별 자동 적용.",
   alternates: { canonical: "/realestate/acquisition-tax/" },
 };
 

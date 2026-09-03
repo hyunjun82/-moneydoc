@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { GuideList } from "@/components/GuideList";
 
 export const metadata: Metadata = {
-  title: "정부지원금 계산기 — 11종 | MoneyDoc",
+  title: "정부지원금 계산기 11종 | MoneyDoc",
   description: "기초연금·실업급여·육아휴직급여·산재보험·근로/자녀장려금·기초생활수급·청년월세지원·기준중위소득 — 2026년 기준 보건복지부·고용노동부 공식 산식 + 실업급여·근로장려금·청년미래적금 가이드",
   alternates: { canonical: "/government/" },
 };

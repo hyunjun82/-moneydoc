@@ -13,6 +13,7 @@ type CalcSpec = {
   source: any;
   guide?: any;
   related?: string[];
+  lastVerified?: string;
 };
 
 export function CalculatorShell({
@@ -92,6 +93,8 @@ export function CalculatorShell({
     inLanguage: "ko",
     isAccessibleForFree: true,
     offers: { "@type": "Offer", price: 0, priceCurrency: "KRW" },
+    publisher: { "@type": "Organization", name: "MoneyDoc", url: "https://moneydoc.kr/" },
+    ...(spec.lastVerified ? { dateModified: spec.lastVerified } : {}),
   };
 
   return (

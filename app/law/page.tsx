@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { GuideList } from "@/components/GuideList";
 
 export const metadata: Metadata = {
-  title: "법률 계산기 — 6종 | MoneyDoc",
+  title: "법률 계산기 6종 | MoneyDoc",
   description: "양육비·이혼 위자료·상속분·퇴직금·연차수당·임금체불 — 서울가정법원 양육비 산정기준표 + 민법 §1009 + 근로기준법 §60·§34",
   alternates: { canonical: "/law/" },
 };

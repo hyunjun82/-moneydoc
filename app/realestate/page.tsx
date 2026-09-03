@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { GuideList } from "@/components/GuideList";
 
 export const metadata: Metadata = {
-  title: "부동산 계산기 — 10종 | MoneyDoc",
+  title: "부동산 계산기 10종 | MoneyDoc",
   description: "양도세·취득세·중개수수료·종부세·재산세·ROI — 지방세법·소득세법 §89 기반",
   alternates: { canonical: "/realestate/" },
 };

@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { GuideList } from "@/components/GuideList";
 
 export const metadata: Metadata = {
-  title: "세금 계산기 — 15종 | MoneyDoc",
+  title: "세금 계산기 15종 | MoneyDoc",
   description: "연봉 실수령·종합소득세·증여세·상속세·퇴직소득세·주식양도세·부가세·자녀세액공제·일용직 원천징수 — 국세청 2026 간이세액표 + 소득세법 §55 누진세율",
   alternates: { canonical: "/tax/" },
 };

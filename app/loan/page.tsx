@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { GuideList } from "@/components/GuideList";
 
 export const metadata: Metadata = {
-  title: "대출 계산기 — 9종 | MoneyDoc",
+  title: "대출 계산기 9종 | MoneyDoc",
   description: "원리금균등·원금균등·DSR·LTV·DTI·주담대·전세자금대출·신용대출·자동차대출 — 월 상환액·총이자·중도상환수수료 (2025.6.27 가계부채 관리방안 반영)",
   alternates: { canonical: "/loan/" },
 };

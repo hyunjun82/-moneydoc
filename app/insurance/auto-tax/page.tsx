@@ -4,8 +4,9 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/insurance/auto-tax.json";
 
 export const metadata: Metadata = {
-  title: "자동차세 계산기 — 2026년 기준",
-  description: "배기량·연식·영업용 입력 시 자동차세 + 지방교육세 자동 산출. 위택스 표준 기준.",
+  title: "자동차세 계산기 (정기) (2026년 기준)",
+  description:
+    "지방세법 §127 + 연식별 경감 (3년 이상). 차량 배기량(cc)·연식·영업용 여부 입력 시 자동차세 + 지방교육세 자동 산출. 매년 6월·12월 절반씩 분납. 1월에 1년 일시납 시 10% 할인. 위택스에서 직접 납부 가능.",
   alternates: { canonical: "/insurance/auto-tax/" },
 };
 

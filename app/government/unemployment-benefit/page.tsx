@@ -4,8 +4,9 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/government/unemployment-benefit.json";
 
 export const metadata: Metadata = {
-  title: "실업급여 일액 계산기 (2026년 기준)",
-  description: "월 평균임금과 고용보험 가입연수, 50세 이상 또는 장애인 여부를 입력하면 실업급여 일액과 총 수령액이 산출됩니다. 일액은 평균임금의 60%이며, 상·하한이 적용됩니다.",
+  title: "실업급여 계산기 (2026년 기준)",
+  description:
+    "고용보험법 §46, 일액 상한 68,100원 / 하한 66,048원 (2026.1.1 시행). 월 평균임금과 고용보험 가입연수, 50세 이상 또는 장애인 여부를 입력하면 실업급여 일액과 총 수령액이 산출됩니다. 일액은 평균임금의 60%이며, 상·하한이 적용됩니다.",
   alternates: { canonical: "/government/unemployment-benefit/" },
 };
 

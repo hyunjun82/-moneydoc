@@ -4,8 +4,9 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/tax/gift-tax.json";
 
 export const metadata: Metadata = {
-  title: "증여세 계산기 — 2026년 기준",
-  description: "증여재산과 수증자 관계를 입력하면 증여세가 산출됩니다. 공제는 10년 합산 한도이며, 동일 수증자에게 10년 내 추가 증여 시 합산 신고 필수.",
+  title: "증여세 계산기 (2026년 기준)",
+  description:
+    "상증법 §53 수증자별 증여재산공제 + 누진세율. 받은 증여 재산(현금·주식·부동산·차량 등)과 증여자와의 관계를 입력하면 관계별 공제 → 과세표준 → 누진세율 자동 계산. 증여받은 날부터 3개월 이내 신고해야 가산세 X.",
   alternates: { canonical: "/tax/gift-tax/" },
 };
 

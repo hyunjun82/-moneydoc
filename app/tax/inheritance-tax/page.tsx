@@ -4,8 +4,9 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/tax/inheritance-tax.json";
 
 export const metadata: Metadata = {
-  title: "상속세 계산기 — 2026년 기준",
-  description: "상속재산 총액과 배우자 유무를 입력하면 상속세가 산출됩니다.",
+  title: "상속세 계산기 (2026년 기준)",
+  description:
+    "상속세 및 증여세법 §26 누진세율 + max(일괄 5억, 기초 2억 + 인적공제). 상속재산 총액(부동산+예금+주식 등 시가) + 배우자/자녀 수 입력. 일괄공제 5억 또는 인적공제(2억+자녀5천만/명) 중 큰 것 + 배우자공제(법정상속분 5억~30억) 자동 계산. 사망일부터 6개월.",
   alternates: { canonical: "/tax/inheritance-tax/" },
 };
 

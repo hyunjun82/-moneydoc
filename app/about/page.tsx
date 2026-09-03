@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "소개 — MoneyDoc",
+  title: "MoneyDoc 소개",
   description:
     "MoneyDoc은 한국 금융·세금·법률 계산기 66종을 운영합니다. 모든 산식을 법령 원문과 대조하고 359개 케이스로 자동 검증합니다.",
   alternates: { canonical: "/about/" },

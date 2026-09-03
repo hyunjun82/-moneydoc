@@ -4,8 +4,9 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/savings/installment-savings.json";
 
 export const metadata: Metadata = {
-  title: "적금 계산기 — 2026년 단리/복리 + 비과세 자동 차감 | MoneyDoc",
-  description: "월 납입금·기간·이율 입력 시 만기 수령액 자동 계산. 단리/복리 토글, 비과세종합저축 자격 시 0원 세금. 한국은행 표준 산식 + 금감원 finlife 검증.",
+  title: "적금 계산기 (2026년 기준)",
+  description:
+    "월 적금 만기 수령액. 단리·복리 선택, 이자에서 세금 15.4% 자동 차감 (만 65세 이상 등 비과세 자격자는 0%). 정해진 금액 매월 납입하는 정기적금 만기 계산. 월 납입액·이자율·기간 입력. 단리 기준 (첫 달 납입금만 만기까지 12개월 이자, 마지막 달은 1개월 이자).",
   alternates: { canonical: "/savings/installment-savings/" },
 };
 

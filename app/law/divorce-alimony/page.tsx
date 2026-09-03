@@ -4,8 +4,9 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/law/divorce-alimony.json";
 
 export const metadata: Metadata = {
-  title: "이혼 위자료 시뮬레이터 — 2026년 기준",
-  description: "결혼기간과 유책 정도(low/medium/high) 입력 시 위자료 추정.",
+  title: "이혼 위자료 산정기준표 (2026년 기준)",
+  description:
+    "[참고용 추정] 판례 통계 기반, 실제 위자료는 법원 재량. 이혼 위자료 산정. 혼인기간·과실 정도(낮음/보통/높음)·재산상태 입력. 2025년 평균 위자료 3,000만 (혼인 10년+ 외도·폭력)~1억 사이.",
   alternates: { canonical: "/law/divorce-alimony/" },
 };
 

@@ -4,8 +4,9 @@ import { GenericCalculator } from "@/components/GenericCalculator";
 import spec from "@/data/calculators/law/annual-leave-allowance.json";
 
 export const metadata: Metadata = {
-  title: "연차수당 계산기 — 2026년 기준",
-  description: "월 통상임금과 미사용 연차 일수 입력 시 연차수당 산출.",
+  title: "연차수당 계산기 (2026년 기준)",
+  description:
+    "월급 / 209시간 × 8시간 × 미사용 일수. 연차수당 계산. 통상임금 × 미사용 연차일수. 1년차 11일, 2년차 15일, 3년차+ 추가 1일씩 (최대 25일). 미사용분은 다음 해 6월까지 사용 또는 수당.",
   alternates: { canonical: "/law/annual-leave-allowance/" },
 };
 
