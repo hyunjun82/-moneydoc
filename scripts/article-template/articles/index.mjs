@@ -31,4 +31,5 @@ export const ARTICLES = [
   { slug: 'certified-mail-guide', cat: 'law', catLabel: '법률', crumb: '내용증명', blurb: '작성 항목 8가지 · 세 통 준비 · 발송 절차 · 효력과 시효 · 보증금 문구' },
   { slug: 'deposit-return-suit-guide', cat: 'law', catLabel: '법률', crumb: '보증금 반환 소송', blurb: '이사 전 임차권등기 · 내용증명 · 지급명령 · 소장 접수 · 비용' },
   { slug: 'personal-rehabilitation-guide', cat: 'law', catLabel: '법률', crumb: '개인회생', blurb: '신청 자격 판정 · 가용소득 변제금 · 3년 변제 · 서류 7종 · 면책 제외' },
+  { slug: 'unemployment-apply-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 신청 방법', blurb: '신청 5단계 · 12개월 기한 · 대기기간 7일 · 실업인정' },
 ];

@@ -74,7 +74,11 @@ for (const slug of slugs) {
 
   // 2b. 사실 대조 (근거 JSON + 엔진 값)
   const briefPath = path.join(ROOT, 'scripts/article-template/brief', `${slug}.json`);
-  const evDir = path.join(ROOT, 'scripts/article-template/evidence', slug);
+  // 스포크는 허브와 같은 법령을 쓴다. brief 의 reuseEvidence 로 허브 근거를 그대로 쓴다.
+  const briefPeek = fs.existsSync(path.join(ROOT, 'scripts/article-template/brief', `${slug}.json`))
+    ? JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/article-template/brief', `${slug}.json`), 'utf8'))
+    : {};
+  const evDir = path.join(ROOT, 'scripts/article-template/evidence', briefPeek.reuseEvidence ?? slug);
   if (!fs.existsSync(briefPath)) { console.error(`✗ ${slug}: brief/${slug}.json 없음 (키워드·출처 파일이 있어야 글을 낼 수 있다)`); failed++; continue; }
   const brief = JSON.parse(fs.readFileSync(briefPath, 'utf8'));
   const evidence = fs.existsSync(evDir) ? fs.readdirSync(evDir).filter((f) => f.endsWith('.json')).map((f) => JSON.parse(fs.readFileSync(path.join(evDir, f), 'utf8'))) : [];

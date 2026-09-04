@@ -257,6 +257,13 @@ export const GUIDES: GuideLink[] = [
   {
     "cat": "government",
     "catLabel": "정부지원금",
+    "href": "/unemployment/apply/",
+    "title": "실업급여 신청 방법 5단계, 고용24 구직신청부터 실업인정까지",
+    "blurb": "신청 5단계 · 12개월 기한 · 대기기간 7일 · 실업인정"
+  },
+  {
+    "cat": "government",
+    "catLabel": "정부지원금",
     "href": "/gov/earned-income-tax-credit-guide/",
     "title": "근로장려금 지급일 2026, 8월 27일 지급",
     "blurb": "단독 165만 · 홑벌이 285만 · 맞벌이 330만"
