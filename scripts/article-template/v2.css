@@ -133,3 +133,4 @@ h3{font-size:19px;font-weight:700;letter-spacing:-.6px;margin:34px 0 8px;line-he
 .tbl.text td{white-space:normal}
 .tbl .go{display:inline-block;white-space:nowrap;margin-left:8px;font-size:12px;font-weight:700;color:var(--brand);border:1.5px solid var(--brand);border-radius:999px;padding:3px 9px;text-decoration:none}
 .tbl .go:after{content:" →"}
+.note .go{display:inline-block;white-space:nowrap;margin-left:6px;font-size:12px;font-weight:700;color:var(--brand);border:1.5px solid var(--brand);border-radius:999px;padding:3px 9px;text-decoration:none;vertical-align:middle}.note .go:after{content:" →"}

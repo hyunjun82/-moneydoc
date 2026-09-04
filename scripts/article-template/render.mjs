@@ -25,7 +25,7 @@ const ext = (href) => /^https?:/.test(href) ? ' target="_blank" rel="noopener"' 
 const B = {
   p: (b) => `<p${b.lead ? ' class="lead"' : ''}>${b.ans ? `<span class="ans">${b.ans}</span> ` : ''}${b.text ?? ''}</p>`,
   h3: (b) => `<h3${b.id ? ` id="${b.id}"` : ''}>${b.text}</h3>`,
-  note: (b) => `<div class="note"><b>${b.title}</b> ${b.text}</div>`,
+  note: (b) => `<div class="note"><b>${b.title}</b> ${b.text}${b.link ? ` <a class="go" href="${b.link.href}"${ext(b.link.href)}>${b.link.label}</a>` : ''}</div>`,
   fn: (b) => `<p class="fn">${b.text}</p>`,
   html: (b) => b.html,
 

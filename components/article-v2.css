@@ -231,3 +231,5 @@
 .md-v2 .v2-tbl.v2-text td{white-space:normal}
 .md-v2 .v2-tbl .v2-go{display:inline-block;white-space:nowrap;margin-left:8px;font-size:12px;font-weight:700;color:var(--brand);border:1.5px solid var(--brand);border-radius:999px;padding:3px 9px;text-decoration:none}
 .md-v2 .v2-tbl .v2-go:after{content:" →"}
+.md-v2 .v2-note .v2-go{display:inline-block;white-space:nowrap;margin-left:6px;font-size:12px;font-weight:700;color:var(--brand);border:1.5px solid var(--brand);border-radius:999px;padding:3px 9px;text-decoration:none;vertical-align:middle}
+.md-v2 .v2-note .v2-go:after{content:" →"}

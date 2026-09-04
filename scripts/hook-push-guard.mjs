@@ -16,6 +16,9 @@
  * 하나라도 FAIL 이면 exit 2 → 명령 자체가 막힌다. Claude 가 잊어도, 몰라도 못 넘어간다.
  *
  * 허브 목록은 scripts/title-system/titles.*-v2.json 에서 자동으로 찾는다. 새 주제를 만들면 저절로 들어간다.
+ *
+ * 실측한 우회 경로 (2026-09-04). 전부 막혀야 한다. 바꾸면 다시 돌려 볼 것:
+ *   git commit -a · git add -A/. · git add 글파일 · git add 폴더/ · git commit -m x 경로 · push-changes.bat · PowerShell 도구
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -51,11 +54,22 @@ try {
   changed = isPush
     ? exec('git', ['diff', '--name-only', 'origin/main..HEAD'], 20000).split('\n')
     : exec('git', ['diff', '--cached', '--name-only'], 20000).split('\n');
-  // -a / --all 은 git commit 명령줄에 붙은 것만 본다 (같은 줄, 다른 명령으로 넘어가기 전까지)
-  if (isCommit && /\bgit\s+commit\b[^\n;&|]*\s(-a\b|--all\b)/.test(cmd)) changed = changed.concat(exec('git', ['diff', '--name-only'], 20000).split('\n'));
-  // `git add .` 이나 `git add -A` 처럼 전체를 올릴 때만 작업 트리를 센다.
-  // `.gitignore` 같은 점으로 시작하는 파일명이 `git add .` 로 오인되지 않게 점이 단독 인수인 경우로 한정한다.
-  if (isCommit && /\bgit\s+add\s+(-A\b|\.(?=\s|$))/.test(cmd)) changed = changed.concat(exec('git', ['status', '--porcelain'], 20000).split('\n').map((l) => l.slice(3)));
+
+  // 훅은 명령 실행 "전" 에 돈다. `git add 파일 && git commit` 을 치면 훅 시점엔 아직 스테이지가 비어 있다.
+  // 명령줄에 적힌 경로는 곧 올라갈 파일이다. 작업 트리의 변경 파일 중 명령줄 토큰(파일·폴더)에 해당하는 것을 전부 포함한다.
+  // 실측: 이 처리가 없을 때 `git add 글파일`, `git add 폴더/`, `git commit 경로`, push-changes.bat 이 전부 통과됐다.
+  const dirty = exec('git', ['status', '--porcelain'], 20000).split('\n')
+    .map((l) => l.slice(3).trim()).map((p) => (p.includes(' -> ') ? p.split(' -> ')[1] : p)).filter(Boolean);
+  const wantsAll = /\bgit\s+commit\b[^\n;&|]*\s(-a\b|--all\b)/.test(cmd)   // git commit -a  (명령줄에 붙은 것만)
+    || /\bgit\s+add\s+(-A\b|--all\b|\.(?=\s|$))/.test(cmd)                 // git add -A / git add .  (.gitignore 는 아님)
+    || /push-changes\.bat/.test(cmd);                                       // 안에서 git add -A 를 한다
+  if (wantsAll) changed = changed.concat(dirty);
+  else {
+    const tokens = cmd.split(/\s+/)
+      .map((t) => t.replace(/^["']|["']$/g, '').replace(/^\.\//, '').replace(/\/+$/, ''))
+      .filter((t) => t && !t.startsWith('-'));                                // 실측: `git add app` 은 슬래시가 없어 경로 모양 조건에 걸러졌다. 변경 파일과 맞는 토큰이면 전부
+    changed = changed.concat(dirty.filter((p) => tokens.some((t) => p === t || p.startsWith(t + '/'))));
+  }
 } catch { /* origin 이 없거나 첫 커밋이면 전부 검사한다 */ changed = ['app/']; }
 changed = changed.map((x) => x.trim()).filter(Boolean);
 

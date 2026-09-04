@@ -16,6 +16,7 @@
  *       node scripts/gate.mjs <허브> --quick   느린 검사(계산기 전수) 건너뜀
  */
 import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 
@@ -160,8 +161,13 @@ for (const f of files) {
     else {
       const plain = body.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
       const has = (x) => plain.includes(String(x ?? '').replace(/\s+/g, ' ').trim());
-      if (fs.existsSync(specPath) && new Date(r.date) < fs.statSync(specPath).mtime)
-        fail(tag, `글을 ${fs.statSync(specPath).mtime.toISOString().slice(0, 10)} 에 고쳤는데 검토일이 ${r.date} 다. 다시 읽어야 한다`);
+      // 날짜로는 "검토 뒤에 글이 바뀌었나" 를 못 잡는다 (같은 날 고치고 읽는 게 정상 흐름이라).
+      // 검토 때 읽은 스펙의 해시를 적게 하고, 지금 스펙과 다르면 다시 읽게 한다.
+      if (fs.existsSync(specPath)) {
+        const cur = createHash('sha256').update(fs.readFileSync(specPath)).digest('hex').slice(0, 12);
+        if (!r.specHash) fail(tag, `검토 기록에 specHash 가 없다. 글을 읽은 뒤 지금 스펙 해시 ${cur} 를 적어라`);
+        else if (r.specHash !== cur) fail(tag, `검토(${r.specHash}) 뒤에 글이 바뀌었다(${cur}). 다시 읽고 specHash 를 갱신해라`);
+      }
       if (!r.query) fail(tag, '검토에 검색어(query)가 없다');
       const firstH2 = body.indexOf('<h2 id=');
       const top = (firstH2 > 0 ? body.slice(0, firstH2) : body).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
