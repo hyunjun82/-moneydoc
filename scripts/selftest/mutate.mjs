@@ -130,6 +130,39 @@ const CASES = [
   { n: 20, name: '검토 기록의 답을 페이지에 없는 문장으로',
     plan: true, slug: 'waiting', field: 'reviewAns',
     to: '이 문장은 페이지 어디에도 없습니다', useGate: true },
+
+  // ── 2차 (2026-09-04): 아직 시험하지 않은 결함 유형 ───────────────────────
+  { n: 21, name: '계산기 버튼을 계획과 반대로', plan: true, slug: 'waiting', field: 'calcFlip' },
+  { n: 22, name: '계획에 있는 시각 장치를 글에 안 넣음', plan: true, slug: 'waiting', field: 'shapeAdd' },
+  { n: 23, name: 'mustCover 에 제목에 없는 말', plan: true, slug: 'waiting', field: 'mustCoverBogus' },
+  { n: 24, name: 'titleKeyword 를 검색어에 없는 말로', plan: true, slug: 'waiting', field: 'titleKeywordBogus' },
+  { n: 25, name: '검토한 답 개수가 소제목보다 적음', plan: true, slug: 'waiting', field: 'dropAnswer' },
+  { n: 26, name: '두 글이 같은 제목', plan: true, slug: 'waiting', field: 'dupTitle' },
+
+  { n: 27, name: 'FAQ 질문이 물음표로 안 끝남',
+    file: S('waiting'), slug: 'unemployment-waiting-guide',
+    from: "['실업급여 대기기간은 언제부터 세나요?'", to: "['실업급여 대기기간은 언제부터 세나'" },
+
+  { n: 28, name: 'FAQ 답이 회피',
+    file: S('waiting'), slug: 'unemployment-waiting-guide',
+    from: "'퇴사일이 아니라 고용센터에 실업을 신고한 날부터 7일이에요.'",
+    to: "'사람마다 달라요. 고용센터에 문의하세요.'" },
+
+  { n: 29, name: '한 글에 같은 소제목 두 번',
+    file: S('waiting'), slug: 'unemployment-waiting-guide',
+    from: "h2: '대기기간에도 급여가 나오나요'", to: "h2: '실업급여 대기기간 7일은 무엇인가요'" },
+
+  { n: 30, name: '외부 링크가 https 가 아님',
+    file: S('180days'), slug: 'unemployment-180days-guide',
+    from: "'https://www.ei.go.kr'", to: "'http://www.ei.go.kr'" },
+
+  { n: 31, name: '표 헤더를 지움',
+    file: S('days'), slug: 'unemployment-days-guide',
+    from: "headers: ['고용보험 가입기간', '50세 미만', '50세 이상 또는 장애인', '차이']", to: "headers: []" },
+
+  { n: 32, name: '근거에 없는 조문을 각주에 씀',
+    file: S('waiting'), slug: 'unemployment-waiting-guide',
+    from: '제49조', to: '제999조', all: true },
 ];
 
 /** 계획서를 바꾸는 돌연변이 */
@@ -145,6 +178,17 @@ function mutatePlan(c) {
     if (!hit) return { skip: `계획서에 ${c.slug} 없음` };
     if (c.field === 'title') hit.title = c.to;
     if (c.field === 'reviewAns') { if (!hit.review?.h2Answers?.length) return { skip: '검토 기록 없음' }; hit.review.h2Answers[0].ans = c.to; }
+    if (c.field === 'calcFlip') { if (!hit.calc) return { skip: 'calc 없음' }; hit.calc.on = !hit.calc.on; }
+    if (c.field === 'shapeAdd') hit.shape = [...(hit.shape ?? []), 'tree'];
+    if (c.field === 'mustCoverBogus') hit.mustCover = [...(hit.mustCover ?? []), '없는말123'];
+    if (c.field === 'titleKeywordBogus') { if (!hit.review) return { skip: '검토 기록 없음' }; hit.review.titleKeyword = '아무도검색하지않는말'; }
+    if (c.field === 'dropAnswer') { if (!hit.review?.h2Answers?.length) return { skip: '검토 기록 없음' }; hit.review.h2Answers.pop(); }
+    if (c.field === 'dupTitle') {
+      let other = null;
+      (function w2(o) { if (Array.isArray(o)) o.forEach(w2); else if (o && typeof o === 'object') { if (o.slug && o.slug !== c.slug && o.title && !other) other = o; else Object.values(o).forEach(w2); } })(d);
+      if (!other) return { skip: '다른 글 없음' };
+      hit.title = other.title;
+    }
     fs.writeFileSync(PLAN, JSON.stringify(d, null, 2) + '\n');
     const g = gate();
     return { caught: g.code !== 0, where: '게이트', out: g.out };

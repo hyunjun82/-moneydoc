@@ -228,7 +228,24 @@ for (const dir of fs.existsSync(path.join('app', hub)) ? fs.readdirSync(path.joi
   for (const m of duplicateCheck(pages)) warn('[중복 문장]', m);
 }
 
-// ── 9. 느린 검사 ─────────────────────────────────────────────────────────
+// ── 9. 제목-소제목 (빠르다. --quick 에서도 돈다) ─────────────────────────
+// 훅은 --quick 으로 돈다. 이 검사가 느린 뭉치에 있어서 훅이 mustCover 위반을 놓쳤다.
+// 돌연변이 23번으로 잡았다.
+try { execFileSync('node', ['scripts/title-system/check-outline.mjs', PLAN], { stdio: 'pipe' }); }
+catch (e) { fail('[제목-소제목]', (e.stdout?.toString() ?? '').trim().split(String.fromCharCode(10)).slice(-3).join(' | ')); }
+
+// ── 10. 두 글이 같은 제목을 쓰는지 ───────────────────────────────────────
+// 같은 제목이 둘이면 포털이 어느 쪽을 띄울지 정하지 못한다. 돌연변이 26번으로 잡았다.
+{
+  const byTitle = new Map();
+  for (const sp of spokes) {
+    const k = sp.title.replace(/\s+/g, '');
+    if (byTitle.has(k)) fail(`[${sp.slug}]`, `제목이 ${byTitle.get(k)} 와 똑같다: "${sp.title}"`);
+    else byTitle.set(k, sp.slug);
+  }
+}
+
+// ── 11. 느린 검사 ─────────────────────────────────────────────────────────
 if (!quick) {
   const run = (label, args) => {
     try { execFileSync('node', args, { stdio: 'pipe' }); return true; }
@@ -236,7 +253,6 @@ if (!quick) {
   };
   run('계산기 정확도', ['scripts/verify-system/verify-3way.mjs', '--all', '--no-gov']);
   run('상수 출처', ['scripts/verify-system/check-constants.mjs']);
-  run('제목-소제목', ['scripts/title-system/check-outline.mjs', PLAN]);
 }
 
 // ── 결과 ─────────────────────────────────────────────────────────────────
