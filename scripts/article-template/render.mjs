@@ -163,7 +163,7 @@ export function render(a) {
 ${a.answer.boxes.map((b) => `    <div class="box"><b>${b.title}</b><span>${b.text}</span></div>`).join('\n')}
   </div>
 </section>
-<!--CALC_START--><a class="cta" href="${a.calc.href}">${a.calc.label}</a><!--CALC_END-->
+${a.calc ? `<!--CALC_START--><a class="cta" href="${a.calc.href}">${a.calc.label}</a><!--CALC_END-->` : ''}
 <details class="toc"><summary>목차 (${toc.length}개 질문)<span>열기</span></summary><ol>${toc.map(([id, t]) => `<li><a href="#${id}">${t}</a></li>`).join('')}</ol></details>
 <section class="kk" aria-label="한눈에 보는 요약">
   <div class="hd"><small>${a.keyPoints.title}</small><b>핵심콕콕</b></div>
@@ -182,7 +182,7 @@ ${a.faq.map(([q, ans], i) => `<details class="faq"${i === 0 ? ' open' : ''}><sum
 <section class="sum" aria-label="정리"><div class="hd"><small>이 글 한 줄 정리</small><b>정리</b></div><ul>
 ${a.summary.map((s) => `<li>${s}</li>`).join('\n')}
 </ul></section>
-<a class="cta" href="${a.calc.href}">${a.calc.label}</a>
+${a.calc ? `<a class="cta" href="${a.calc.href}">${a.calc.label}</a>` : ''}
 <h2 id="src">출처</h2>
 <div class="src">
 ${a.sources.map(([k, v]) => `<b>${k}</b>${v}`).join('\n')}

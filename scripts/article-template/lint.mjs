@@ -57,7 +57,9 @@ export function lint(a) {
   if (!a.intro || strip(a.intro).length < 80) add('intro', '서론 없음 또는 80자 미만');
   checkText('intro', a.intro, { law: false });
   if (!a.hero?.alt) add('hero', 'alt 없음');
-  if (!a.calc?.href?.startsWith('/')) add('calc', 'CTA 는 내 사이트 링크여야 함');
+  // 계산기 CTA 는 선택이다. 계산기가 내는 숫자가 그 글의 답일 때만 단다.
+  // 답이 절차나 조건인 글에 버튼을 달면 갈 이유가 없는 곳으로 보내게 된다.
+  if (a.calc && !a.calc.href?.startsWith('/')) add('calc', 'CTA 를 달았으면 내 사이트 링크여야 함');
   if (!a.answer?.quick?.some((q) => q.selected)) add('answer', '즉답 칩 selected 없음');
   for (const b of a.answer?.boxes ?? []) checkText('answer.box', `${b.title}. ${b.text}`, { law: false });
   for (const [k, v] of a.keyPoints?.rows ?? []) checkText(`핵심콕콕 ${k}`, v, { law: false, len: 120 });

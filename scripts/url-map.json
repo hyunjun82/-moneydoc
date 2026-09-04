@@ -76,6 +76,10 @@
     "law/certified-mail-guide": "certified-mail",
     "law/deposit-return-suit-guide": "deposit-return",
     "law/personal-rehabilitation-guide": "rehabilitation",
-    "government/unemployment-apply-guide": "unemployment/apply"
+    "government/unemployment-apply-guide": "unemployment/apply",
+    "government/unemployment-eligibility-guide": "unemployment/eligibility",
+    "government/unemployment-180days-guide": "unemployment/180days",
+    "government/unemployment-voluntary-guide": "unemployment/voluntary",
+    "government/unemployment-days-guide": "unemployment/days"
   }
 }

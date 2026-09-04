@@ -32,4 +32,8 @@ export const ARTICLES = [
   { slug: 'deposit-return-suit-guide', cat: 'law', catLabel: '법률', crumb: '보증금 반환 소송', blurb: '이사 전 임차권등기 · 내용증명 · 지급명령 · 소장 접수 · 비용' },
   { slug: 'personal-rehabilitation-guide', cat: 'law', catLabel: '법률', crumb: '개인회생', blurb: '신청 자격 판정 · 가용소득 변제금 · 3년 변제 · 서류 7종 · 면책 제외' },
   { slug: 'unemployment-apply-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 신청 방법', blurb: '신청 5단계 · 12개월 기한 · 대기기간 7일 · 실업인정' },
+  { slug: 'unemployment-eligibility-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 수급자격', blurb: '조건 4가지 · 180일 계산 · 기준기간 18개월 · 이직 사유 제한' },
+  { slug: 'unemployment-180days-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 180일', blurb: '보수가 나간 날만 계산 · 주휴일 포함 · 근무 형태별 기간표 · 24개월 특례' },
+  { slug: 'unemployment-voluntary-guide', cat: 'government', catLabel: '정부지원금', crumb: '자발적 퇴사 실업급여', blurb: '인정 사유 17가지 · 사유별 증빙 서류 · 1년 내 2개월 요건 · 이직확인서 정정' },
+  { slug: 'unemployment-days-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 소정급여일수', blurb: '구간별 일수표 · 50세 가산 · 이직 당시 나이 기준 · 3년 내 합산' },
 ];
