@@ -80,6 +80,9 @@
     "government/unemployment-eligibility-guide": "unemployment/eligibility",
     "government/unemployment-180days-guide": "unemployment/180days",
     "government/unemployment-voluntary-guide": "unemployment/voluntary",
-    "government/unemployment-days-guide": "unemployment/days"
+    "government/unemployment-days-guide": "unemployment/days",
+    "government/unemployment-contract-end-guide": "unemployment/contract-end",
+    "government/unemployment-layoff-guide": "unemployment/layoff",
+    "government/unemployment-amount-guide": "unemployment/amount"
   }
 }

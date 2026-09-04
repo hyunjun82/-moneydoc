@@ -36,4 +36,7 @@ export const ARTICLES = [
   { slug: 'unemployment-180days-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 180일', blurb: '보수가 나간 날만 계산 · 주휴일 포함 · 근무 형태별 기간표 · 24개월 특례' },
   { slug: 'unemployment-voluntary-guide', cat: 'government', catLabel: '정부지원금', crumb: '자발적 퇴사 실업급여', blurb: '인정 사유 17가지 · 사유별 증빙 서류 · 1년 내 2개월 요건 · 이직확인서 정정' },
   { slug: 'unemployment-days-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 소정급여일수', blurb: '구간별 일수표 · 50세 가산 · 이직 당시 나이 기준 · 3년 내 합산' },
+  { slug: 'unemployment-contract-end-guide', cat: 'government', catLabel: '정부지원금', crumb: '계약만료 실업급여', blurb: '계약만료는 정당한 사유 · 재계약 거절 판단 · 조건 저하 · 180일 합산' },
+  { slug: 'unemployment-layoff-guide', cat: 'government', catLabel: '정부지원금', crumb: '권고사직 실업급여', blurb: '회사 사정이면 정당한 사유 · 사직서 문구 · 지원금 제한 · 자진퇴사 처리 대응' },
+  { slug: 'unemployment-amount-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 상한액 하한액', blurb: '2026년 상한 하한 · 월급 구간별 일액표 · 최저임금 연동 · 월 환산' },
 ];
