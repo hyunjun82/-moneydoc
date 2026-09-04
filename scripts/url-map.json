@@ -83,6 +83,7 @@
     "government/unemployment-days-guide": "unemployment/days",
     "government/unemployment-contract-end-guide": "unemployment/contract-end",
     "government/unemployment-layoff-guide": "unemployment/layoff",
-    "government/unemployment-amount-guide": "unemployment/amount"
+    "government/unemployment-amount-guide": "unemployment/amount",
+    "government/unemployment-exit-code-guide": "unemployment/exit-code"
   }
 }

@@ -118,7 +118,7 @@ export const html = `<h1>실업급여 180일 계산법, 주 며칠 일해야 채
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제40조(구직급여의 수급 요건과 기준기간), 제41조(피보험 단위기간).
-<b>정부 도구</b>고용보험 홈페이지의 피보험자격 이력으로 회사별 기간을 확인할 수 있어요 (2026-09-02 확인).
+<b>정부 도구</b>고용24 이직확인서 작성 안내의 피보험단위기간 설명과 대조했어요. 주 40시간 5일 근무는 주 6일로 계산한다고 나와 있어요 (2026-09-02 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/eligibility/"><b>다음 질문</b>실업급여 수급자격 4가지 조건, 180일과 이직 사유 정리</a><a href="/unemployment/apply/"><b>다음 질문</b>실업급여 신청 방법 5단계, 고용24 구직신청부터 실업인정까지</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
