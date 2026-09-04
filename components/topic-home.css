@@ -1,0 +1,97 @@
+/* 주제 허브(TopicHome) 전용. 홈 화면 톤을 그대로 쓰되 주제 하나에 맞춘다. */
+
+.th-hero {
+  max-width: 1120px; margin: 8px auto 0; padding: 28px 20px 8px;
+  display: grid; grid-template-columns: 1fr 300px; gap: 28px; align-items: center;
+}
+.th-hero-in h1 {
+  font-size: 40px; line-height: 1.22; letter-spacing: -0.035em; font-weight: 800;
+  color: var(--text); margin: 10px 0 14px;
+}
+.th-hero-in h1 em { font-style: normal; color: var(--point, #c0392b); }
+.th-tag {
+  display: inline-block; font-size: 12.5px; font-weight: 800; letter-spacing: -0.01em;
+  color: var(--ink); background: var(--tint, #eef4f2); border-radius: 999px; padding: 5px 11px;
+}
+.th-sub { font-size: 16.5px; font-weight: 700; color: var(--text); margin: 0 0 4px; }
+.th-sub2 { font-size: 14.5px; color: var(--muted); margin: 0 0 18px; }
+.th-cta {
+  display: inline-block; background: var(--ink); color: #fff; font-weight: 800; font-size: 15.5px;
+  padding: 13px 22px; border-radius: 12px; text-decoration: none;
+}
+.th-cta:hover { filter: brightness(1.08); }
+.th-foot { font-size: 12.5px; color: var(--muted); margin: 14px 0 0; display: flex; align-items: center; gap: 6px; }
+.th-foot .dot { width: 6px; height: 6px; border-radius: 50%; background: #1f8a6b; display: inline-block; }
+
+.th-card {
+  background: var(--card, #fdfbf6); border: 1px solid var(--line, #e7e2d8); border-radius: 16px;
+  padding: 22px; display: flex; flex-direction: column; gap: 3px; box-shadow: var(--shadow);
+}
+.th-card-lbl { font-size: 13px; font-weight: 700; color: var(--muted); }
+.th-card-big {
+  font-size: 34px; font-weight: 800; letter-spacing: -0.03em; color: var(--text);
+  font-variant-numeric: tabular-nums; margin: 2px 0 8px;
+}
+.th-card-big small { font-size: 16px; font-weight: 700; margin-left: 3px; color: var(--muted); }
+.th-card-l { font-size: 13.5px; color: var(--muted); }
+
+.th-quick-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.th-q {
+  background: var(--card, #fdfbf6); border: 1px solid var(--line, #e7e2d8); border-radius: 14px;
+  padding: 18px; display: flex; flex-direction: column; gap: 2px;
+}
+.th-q.on { border-color: var(--ink); box-shadow: 0 0 0 2px rgba(31,58,58,.08); }
+.th-q-chip { font-size: 13px; font-weight: 800; color: var(--ink); }
+.th-q-big {
+  font-size: 26px; font-weight: 800; letter-spacing: -0.03em; color: var(--text);
+  font-variant-numeric: tabular-nums; margin-top: 4px;
+}
+.th-q-unit { font-size: 12.5px; font-weight: 700; color: var(--muted); }
+.th-q-sub { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+
+.th-boxes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 14px; }
+.th-box {
+  background: #fff; border: 1px solid var(--line, #e7e2d8); border-radius: 12px; padding: 15px 17px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.th-box b { font-size: 14.5px; font-weight: 800; color: var(--text); }
+.th-box span { font-size: 13.5px; color: var(--muted); line-height: 1.55; }
+
+.th-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.th-c {
+  background: var(--card, #fdfbf6); border: 1px solid var(--line, #e7e2d8); border-radius: 14px;
+  padding: 20px; text-decoration: none; display: flex; flex-direction: column; gap: 6px;
+  transition: transform .15s, box-shadow .15s, border-color .15s;
+}
+.th-c:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); border-color: var(--ink); }
+.th-c-title { font-size: 16px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); line-height: 1.4; }
+.th-c-sub { font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+.th-c-go { font-size: 13px; font-weight: 800; color: var(--ink); margin-top: 4px; }
+.th-c.soon { opacity: .5; pointer-events: none; }
+
+.th-kk {
+  background: var(--card, #fdfbf6); border: 1px solid var(--line, #e7e2d8); border-radius: 16px;
+  padding: 8px 20px; margin: 0;
+}
+.th-kk-row { display: grid; grid-template-columns: 190px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line, #efeae0); }
+.th-kk-row:last-child { border-bottom: 0; }
+.th-kk-row dt { font-size: 14px; font-weight: 800; color: var(--ink); margin: 0; }
+.th-kk-row dd { font-size: 14.5px; color: var(--text); margin: 0; line-height: 1.6; }
+
+/* 본문은 글 템플릿 폭을 그대로 쓰되 허브 안에서는 상단 여백만 줄인다 */
+.th-body .md-v2 main { padding-top: 0; }
+.th-body .md-v2 h1,
+.th-body .md-v2 .v2-meta,
+.th-body .md-v2 .v2-hero,
+.th-body .md-v2 .v2-crumb,
+.th-body .md-v2 .v2-answer,
+.th-body .md-v2 .v2-kk,
+.th-body .md-v2 .v2-cta { display: none; }
+
+@media (max-width: 900px) {
+  .th-hero { grid-template-columns: 1fr; gap: 18px; padding-top: 18px; }
+  .th-hero-in h1 { font-size: 30px; }
+  .th-quick-grid, .th-cards { grid-template-columns: 1fr; }
+  .th-boxes { grid-template-columns: 1fr; }
+  .th-kk-row { grid-template-columns: 1fr; gap: 4px; }
+}

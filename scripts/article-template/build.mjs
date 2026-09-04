@@ -93,6 +93,22 @@ for (const slug of slugs) {
   const pngPath = path.join(prev, `og-${slug}.png`);
   fs.writeFileSync(htmlPath, html, 'utf8');
   fs.writeFileSync(svgPath, heroSvg, 'utf8');
+
+  // 4b. 허브 랜딩용 구조 데이터 (글 블록이 아니라 주제 홈 화면을 그리는 데 쓴다)
+  const landing = {
+    hero: a.hero,
+    calc: a.calc,
+    badge: a.badge,
+    basis: a.basis,
+    readMinutes: a.readMinutes,
+    quick: a.answer.quick.map(({ chip, big, unit, sub, selected }) => ({ chip, big, unit, sub, selected: !!selected })),
+    boxes: a.answer.boxes,
+    keyPoints: a.keyPoints,
+    sections: a.sections.map((s) => ({ id: s.id, h2: s.h2, sub: s.sub })),
+    faq: (a.faq ?? []).map(([q, ans]) => ({ q, a: ans })),
+    related: a.related ?? [],
+  };
+  fs.writeFileSync(path.join(prev, `landing-${slug}.json`), JSON.stringify(landing, null, 1), 'utf8');
   console.log(`✓ ${slug}: ${path.relative(ROOT, htmlPath)} ${(html.length / 1024).toFixed(0)}KB`);
 
   // 5. 대표 이미지

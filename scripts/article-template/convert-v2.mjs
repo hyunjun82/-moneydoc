@@ -140,6 +140,8 @@ export const scriptKey = ${JSON.stringify(a.slug)};
 export const html = \`${esc(c.html)}\`;
 
 export const faqLd = ${JSON.stringify(c.faqLd, null, 2)};
+
+export const landing = ${JSON.stringify(readLanding(a), null, 2)};
 `;
 }
 
@@ -159,6 +161,11 @@ function hubRoute(a) {
   return { route: NOCALC[a.cat + '/' + a.slug] ?? (a.cat + '/' + a.slug), client: null };
 }
 
+function readLanding(a) {
+  const p = path.join(ROOT, 'public/_preview', `landing-${a.slug}.json`);
+  return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null;
+}
+
 function pageFile(a) {
   const { route, client } = hubRoute(a);
   const url = 'https://moneydoc.kr/' + route + '/';
@@ -166,10 +173,14 @@ function pageFile(a) {
   const catHref = '/' + (a.cat === 'government' ? 'gov' : a.cat) + '/';
   const importLine = client ? 'import { ' + comp + ' } from "./' + client + '";' + NL : '';
   const calcProp = client ? '      calculator={<' + comp + ' />}' + NL : '';
+  const isSpoke = route.includes('/');
+  // 주제 홈(TopicHome) 은 만들어 뒀지만 디자인이 아직 못 미쳐 보류. 지금은 허브도 글 템플릿을 쓴다.
+  const USE_TOPIC_HOME = false;
+  const Comp = !isSpoke && USE_TOPIC_HOME ? 'TopicHome' : 'HubPage';
   return [
     'import type { Metadata } from "next";',
-    'import { HubPage } from "@/components/HubPage";',
-    importLine + 'import { meta, faqLd, html, scriptKey } from "@/data/articles/' + a.cat + '/' + a.slug + '";',
+    'import { ' + Comp + ' } from "@/components/' + Comp + '";',
+    importLine + 'import { meta, faqLd, html, scriptKey' + (!isSpoke && USE_TOPIC_HOME ? ', landing' : '') + ' } from "@/data/articles/' + a.cat + '/' + a.slug + '";',
     '',
     'const PAGE_URL = ' + JSON.stringify(url) + ';',
     '',
@@ -192,9 +203,10 @@ function pageFile(a) {
     '',
     'export default function Page() {',
     '  return (',
-    '    <HubPage',
+    '    <' + Comp,
     '      meta={meta}',
     '      html={html}',
+    (!isSpoke && USE_TOPIC_HOME) ? '      landing={landing}' : null,
     '      faqLd={faqLd}',
     '      scriptKey={scriptKey}',
     '      url={PAGE_URL}',
@@ -205,7 +217,7 @@ function pageFile(a) {
     '  );',
     '}',
     '',
-  ].join(NL);
+  ].filter((x) => x !== null).join(NL);
 }
 
 // ── 실행 ─────────────────────────────────────────────────────────────────
