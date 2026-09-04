@@ -34,6 +34,7 @@ export const ARTICLES = [
   { slug: 'unemployment-apply-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 신청 방법', blurb: '신청 5단계 · 12개월 기한 · 대기기간 7일 · 실업인정' },
   { slug: 'unemployment-eligibility-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 수급자격', blurb: '조건 4가지 · 180일 계산 · 기준기간 18개월 · 이직 사유 제한' },
   { slug: 'unemployment-180days-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 180일', blurb: '보수가 나간 날만 계산 · 주휴일 포함 · 근무 형태별 기간표 · 24개월 특례' },
+  { slug: 'unemployment-merge-periods-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 합산기간', blurb: '전 직장 상실일부터 3년 이내면 합산 · 소정급여일수와 180일은 다른 시계 · 수급 이력이 있으면 제외' },
   { slug: 'unemployment-voluntary-guide', cat: 'government', catLabel: '정부지원금', crumb: '자발적 퇴사 실업급여', blurb: '인정 사유 17가지 · 사유별 증빙 서류 · 1년 내 2개월 요건 · 이직확인서 정정' },
   { slug: 'unemployment-days-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 소정급여일수', blurb: '구간별 일수표 · 50세 가산 · 이직 당시 나이 기준 · 3년 내 합산' },
   { slug: 'unemployment-contract-end-guide', cat: 'government', catLabel: '정부지원금', crumb: '계약만료 실업급여', blurb: '계약만료는 정당한 사유 · 재계약 거절 판단 · 조건 저하 · 180일 합산' },

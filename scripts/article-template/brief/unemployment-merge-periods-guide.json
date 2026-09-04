@@ -1,0 +1,23 @@
+{
+  "slug": "unemployment-merge-periods-guide",
+  "keyword": "실업급여 합산기간",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "합산기간",
+    "고용보험"
+  ],
+  "queries": [
+    "실업급여 합산",
+    "실업급여 합산기간",
+    "실업급여 피보험기간",
+    "실업급여 가입기간",
+    "실업급여 이직",
+    "실업급여 재수급",
+    "실업급여 일수",
+    "실업급여 조건",
+    "실업급여 180일",
+    "실업급여 기간"
+  ],
+  "sources": []
+}
