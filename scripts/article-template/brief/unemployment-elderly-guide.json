@@ -1,0 +1,24 @@
+{
+  "slug": "unemployment-elderly-guide",
+  "keyword": "65세 이상 실업급여",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "65세 이상",
+    "나이 상한",
+    "계속 근로"
+  ],
+  "queries": [
+    "실업급여 나이",
+    "실업급여 나이 상한",
+    "실업급여 나이 몇살까지",
+    "실업급여 조건",
+    "실업급여 대상",
+    "실업급여 퇴직",
+    "실업급여 자격",
+    "실업급여 기준",
+    "실업급여 180일",
+    "실업급여 퇴사사유"
+  ],
+  "sources": []
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "unemployment-sickness-guide",
+  "keyword": "질병 퇴사 실업급여",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "질병",
+    "퇴사",
+    "진단서"
+  ],
+  "queries": [
+    "실업급여 조건",
+    "실업급여 신청기간",
+    "실업급여 기간",
+    "실업급여 수급기간",
+    "실업급여 연장",
+    "실업급여 자격",
+    "실업급여 퇴사",
+    "실업급여 신청",
+    "실업급여 180일",
+    "실업급여 이직확인서"
+  ],
+  "sources": []
+}

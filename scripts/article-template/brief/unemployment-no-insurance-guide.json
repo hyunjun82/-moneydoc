@@ -1,0 +1,24 @@
+{
+  "slug": "unemployment-no-insurance-guide",
+  "keyword": "고용보험 미가입 실업급여",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "고용보험 미가입",
+    "소급 가입",
+    "확인청구"
+  ],
+  "queries": [
+    "고용보험 미가입",
+    "실업급여 확인청구",
+    "실업급여 소급",
+    "실업급여 조건",
+    "실업급여 180일",
+    "실업급여 신청",
+    "실업급여 피보험기간",
+    "실업급여 대상",
+    "실업급여 기준",
+    "실업급여 자격"
+  ],
+  "sources": []
+}

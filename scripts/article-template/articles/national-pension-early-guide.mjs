@@ -142,7 +142,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       ] },
 
       { id: 's4', h2: '연기연금과 비교하면 어느 쪽이 낫나요', sub: '미루면 1개월에 0.6%씩 늘어요', blocks: [
-        { type: 'p', lead: true, ans: `연금을 미루면 1개월마다 0.6%씩 늘어요. 5년을 미루면 ${won(deferPension)}원이 돼요.`, text: `조기수령이 1년에 6%씩 깎는 것과 반대로, 연기연금은 1년에 7.2%씩 늘어나요. 정상수령액이 100만원이면 5년 연기로 ${won(deferMonthly)}원이 더해져요. 소득이 있고 건강하다면 미루는 쪽이 유리할 수 있어요.` },
+        { type: 'p', lead: true, ans: `연금을 미루면 1개월마다 0.6%씩 늘어요. 5년을 미루면 ${won(deferPension)}원이 돼요.`, text: `조기수령이 1년에 6%씩 깎는 것과 반대로, 연기연금은 1개월 0.6%가 열두 달 쌓여요. 정상수령액이 100만원이면 5년 연기로 ${won(deferMonthly)}원이 더해져요. 소득이 있고 건강하다면 미루는 쪽이 유리할 수 있어요.` },
         { type: 'table', net: 2, caption: '조기수령과 연기연금 비교 (정상수령 100만원 기준)', headers: ['선택', '월 연금액', '정상 대비'], rows: [
           { cells: ['5년 조기수령', `${won(R.reducedPension)}원`, `${won(cut)}원 적음`] },
           { cells: ['3년 조기수령', `${won(AGES[2].r.reducedPension)}원`, `${won(derive(NORMAL - AGES[2].r.reducedPension))}원 적음`] },

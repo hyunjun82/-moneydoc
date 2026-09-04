@@ -159,7 +159,7 @@ function mdSalary(annual, dependents, kids, nontaxable){
         { type: 'tips', items: [{ title: '협상 팁', text: `"연봉 300만원 인상"은 5,000만원대에서 월 <em>${won(raise300m)}원</em>이에요. 월 단위 세후 금액으로 바꿔 말하면 체감이 정확해져요.` }] },
       ] },
 
-      { id: 's5', h2: '연봉 실수령액 늘리는 방법 (부양가족·비과세 식대)', sub: '세전 급여를 못 바꿀 때 손댈 수 있는 두 가지', blocks: [
+      { id: 's5', h2: '연봉 실수령액을 늘리려면 어떻게 하나요 (부양가족·비과세 식대)', sub: '세전 급여를 못 바꿀 때 손댈 수 있는 두 가지', blocks: [
         { type: 'p', ans: `배우자와 자녀 2명을 부양가족으로 신고하면 월 ${won(famGain(3))}원, 식대 20만원이 비과세로 잡히면 월 ${won(ntGain(2))}원이 더 들어와요.`, text: '회사에 부양가족을 정확히 신고하는 것과 식대 같은 비과세를 급여 구성에 넣는 것, 이 두 가지가 현실적인 방법이에요.' },
         { type: 'table', net: 2, caption: '부양가족 수에 따른 소득세와 실수령액 (연봉 5,000만원)', headers: ['가족 구성', '월 소득세', '월 실수령', '본인만 대비'],
           rows: FAMILY.map(({ label, r }, i) => ({ hi: i === 3, cells: [label, won(r.monthlyIncomeTax), won(r.netMonthly), i === 0 ? '기준' : `+${won(famGain(i))}`] })),

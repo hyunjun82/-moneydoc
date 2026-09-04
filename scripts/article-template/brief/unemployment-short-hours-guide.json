@@ -1,0 +1,23 @@
+{
+  "slug": "unemployment-short-hours-guide",
+  "keyword": "주 15시간 미만 실업급여",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "주 15시간 미만",
+    "초단시간"
+  ],
+  "queries": [
+    "실업급여 조건",
+    "실업급여 180일",
+    "실업급여 기간",
+    "실업급여 알바",
+    "실업급여 단기알바",
+    "실업급여 기준",
+    "실업급여 가입기간",
+    "실업급여 일용직",
+    "실업급여 대상",
+    "실업급여 자격"
+  ],
+  "sources": []
+}

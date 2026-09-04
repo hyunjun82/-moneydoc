@@ -41,7 +41,7 @@ export const html = `<h1>실업급여 구직외활동 인정 범위, 취업특�
 </section>
 
 <h2 id="s1">구직외활동 인정 범위는 어디까지인가요<small>규정이 유형을 정해 두었어요</small></h2>
-<p class="v2-lead"><span class="v2-ans">훈련 수강과 고용센터 프로그램 참여, 직업소개 지시에 응한 경우가 들어가요.</span> 입사지원이나 면접처럼 직접 일자리를 찾는 활동만 인정되는 게 아니에요. 다만 유형이 정해져 있어서 아무 활동이나 되지는 않아요.</p>
+<p class="v2-lead"><span class="v2-ans">규정이 정한 유형은 8가지예요. 훈련 수강과 고용센터 프로그램 참여, 직업소개 지시에 응한 경우가 들어가요.</span> 입사지원이나 면접처럼 직접 일자리를 찾는 활동만 인정되는 게 아니에요. 다만 유형이 정해져 있어서 아무 활동이나 되지는 않아요.</p>
 <div class="v2-tbl"><table><caption>재취업활동으로 인정되는 유형</caption><thead><tr><th>인정되는 활동</th><th>조건</th></tr></thead><tbody>
 <tr class="v2-hi"><th scope="row">고용노동부장관이 인정한 훈련과정 수강</th><td>정해진 과정이어야 해요</td></tr>
 <tr class="v2-hi"><th scope="row">국가나 지자체가 훈련비용을 지원하는 과정 수강</th><td>출결 관리가 되는 과정만 해당해요</td></tr>

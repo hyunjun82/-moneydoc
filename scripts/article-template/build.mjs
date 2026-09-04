@@ -94,7 +94,7 @@ for (const slug of slugs) {
   const fc = factCheck({ html, evidence, engineNums: eng.nums, brief, claims: a.claims });
   // "쓴 것" 뿐 아니라 "안 쓴 것" 도 본다. 근거에 답이 있는데 회피했는지, 일수와 총액이 맞는지.
   // 이 두 검사가 없어서 회피 답 4편과 계산 오류 1편이 라이브로 나갔다 (2026-09-04).
-  fc.problems.push(...answerCheck({ html, evidence }), ...arithmeticCheck({ html, engineNums: eng.nums }), ...renderAccidentCheck({ html }), ...faqAndH2Check({ html }));
+  fc.problems.push(...answerCheck({ html, evidence }), ...arithmeticCheck({ html, engineNums: eng.nums, enabled: brief.calc === 'government/unemployment-benefit' }), ...renderAccidentCheck({ html }), ...faqAndH2Check({ html }));
   if (fc.problems.length) {
     console.error(`✗ ${slug}: 사실 대조 FAIL (${fc.problems.length})`);
     for (const p of fc.problems) console.error(`   - ${p}`);

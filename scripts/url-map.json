@@ -103,6 +103,11 @@
     "government/unemployment-extension-guide": "unemployment/extension",
     "government/unemployment-other-activity-guide": "unemployment/other-activity",
     "government/unemployment-unpaid-wage-quit-guide": "unemployment/unpaid-wage-quit",
-    "government/unemployment-commute-guide": "unemployment/commute"
+    "government/unemployment-commute-guide": "unemployment/commute",
+    "government/unemployment-merge-periods-guide": "unemployment/merge-periods",
+    "government/unemployment-no-insurance-guide": "unemployment/no-insurance",
+    "government/unemployment-short-hours-guide": "unemployment/short-hours",
+    "government/unemployment-elderly-guide": "unemployment/elderly",
+    "government/unemployment-sickness-guide": "unemployment/sickness"
   }
 }

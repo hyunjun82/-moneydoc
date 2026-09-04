@@ -36,7 +36,9 @@ export function faqAndH2Check({ html }) {
     const src = h.indexOf('<h2 id="src">');
     h = first < 0 ? '' : h.slice(first, src > first ? src : h.length);
     h = h.replace(/<p class="fn">[\s\S]*?<\/p>/g, ' ')          // 각주는 법령 인용
-         .replace(/<details class="faq"[\s\S]*?<\/details>/g, ' '); // FAQ 는 본문을 요약하는 자리
+         .replace(/<details class="faq"[\s\S]*?<\/details>/g, ' ')  // FAQ 는 본문을 요약하는 자리
+         .replace(/<table[\s\S]*?<\/table>/g, ' ')                   // 표는 행 이름이 여러 표에 나오는 게 정상
+         .replace(/<section class="sum"[\s\S]*?<\/section>/g, ' ');   // "한 줄 정리" 는 본문 답을 되풀이하는 자리
     // 태그 자리에 공백을 넣으면 <b>제목</b> 이 뒤 문장에 붙어 같은 문장이 달라 보인다.
     // 태그는 줄바꿈으로 끊고, 그 줄 안에서 문장을 자른다.
     const NLc = String.fromCharCode(10);

@@ -73,8 +73,12 @@ export function answerCheck({ html, evidence }) {
  * 엔진이 낸 하루 지급액으로 곱해 검산한다. 안 맞으면 둘 중 하나가 틀린 것이다.
  * (월 환산액처럼 총액이 아닌 금액은 500만원 문턱에서 걸러진다)
  */
-export function arithmeticCheck({ html, engineNums }) {
+export function arithmeticCheck({ html, engineNums, enabled = true }) {
   const problems = [];
+  // 이 검사는 "하루 지급액 × 일수 = 총액" 이라는 실업급여 산식을 전제한다.
+  // 퇴직금(평균임금 × 30일 × 재직년수)처럼 산식이 다른 글에 걸면 오탐이다. 실측으로 8건 나왔다.
+  // 그래서 그 산식을 쓰는 글에서만 돈다 (build.mjs 가 brief.calc 로 판단).
+  if (!enabled) return problems;
   const text = String(html).replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
   const dailies = [...engineNums].map(Number).filter((n) => Number.isFinite(n) && n >= 30000 && n <= 200000);
   if (!dailies.length) return problems;
@@ -84,7 +88,9 @@ export function arithmeticCheck({ html, engineNums }) {
     const wons = [...sent.matchAll(/([\d,]{9,})원/g)].map((m) => Number(m[1].replace(/,/g, ''))).filter((w) => w >= 5_000_000);
     if (!days.length || !wons.length) continue;
     for (const w of wons) {
-      const ok = days.some((d) => dailies.some((v) => Math.abs(v * d - w) <= 2));
+      // 곱셈(일액 × 일수 = 총액)뿐 아니라 나눗셈(총액 ÷ 일수 = 평균임금)도 정상이다.
+      // 평균임금 글의 "3개월 총액 9,000,000원을 92일로 나눠" 가 곱셈만 보다 오탐으로 걸렸다.
+      const ok = days.some((d) => dailies.some((v) => Math.abs(v * d - w) <= 2 || Math.abs(w / d - v) <= 1));
       if (!ok) {
         const guess = dailies.map((v) => days.map((d) => `${v.toLocaleString('ko-KR')}×${d}=${(v * d).toLocaleString('ko-KR')}`)).flat().slice(0, 3);
         problems.push(`일수와 총액이 안 맞는다: ${days.join('·')}일 과 ${w.toLocaleString('ko-KR')}원 (엔진 값으로는 ${guess.join(' / ')}) ← "${sent.trim().slice(0, 80)}"`);
