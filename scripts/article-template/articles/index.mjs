@@ -50,4 +50,9 @@ export const ARTICLES = [
   { slug: 'unemployment-by-salary-guide', cat: 'government', catLabel: '정부지원금', crumb: '월급별 실업급여', blurb: '월급 구간별 일액표 · 상한 하한 적용 지점 · 30일 환산 · 평균임금 기준' },
   { slug: 'unemployment-confirmation-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 이직확인서', blurb: '발급 요청 · 회사가 안 낼 때 · 사유 정정 · 평균임금 확인' },
   { slug: 'unemployment-documents-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 신청 서류', blurb: '본인 것과 회사 것 구분 · 발급처 · 사유별 자료 · 방문 전 확인 순서' },
+  { slug: 'unemployment-daily-worker-guide', cat: 'government', catLabel: '정부지원금', crumb: '일용직 실업급여', blurb: '추가 요건 2가지 · 근로일 3분의 1 · 건설일용 14일 · 대기기간 예외' },
+  { slug: 'unemployment-waiting-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 대기기간', blurb: '신고일부터 7일 · 첫 회차 7일치 · 건설일용 예외 · 흔한 오해 5가지' },
+  { slug: 'unemployment-deadline-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 신청기간', blurb: '이직일 다음 날부터 12개월 · 지연별 손해 계산 · 연장 사유 · 최대 4년' },
+  { slug: 'unemployment-total-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 총 수령액', blurb: '조건별 총액표 · 회차별 금액 · 개월 환산 · 첫 회차가 적은 이유' },
+  { slug: 'unemployment-average-wage-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 평균임금', blurb: '3개월 총액 ÷ 총 일수 · 제외 기간 5가지 · 통상임금 비교 · 정정 요청' },
 ];

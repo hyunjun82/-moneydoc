@@ -15,25 +15,95 @@
     "실업급여 신청 절차",
     "고용24 구직신청",
     "수급자격 신청자 교육",
-    "실업급여 신청 서류",
-    "이직확인서 발급 요청",
-    "실업인정일 출석",
-    "대기기간 7일",
-    "실업급여 첫 지급일",
-    "실업급여 신청 기간 12개월",
+    "실업급여 신청 순서",
     "워크넷 구직등록",
-    "실업급여 온라인 신청"
+    "실업급여 온라인 신청",
+    "수급자격 인정 신청",
+    "실업급여 어디서 신청",
+    "실업급여 신청 5단계",
+    "고용센터 방문 신청",
+    "실업인정 신고"
   ],
   "sources": [
-    { "label": "고용보험법 (제42조 실업의 신고, 제43조 수급자격 인정, 제44조 실업의 인정, 제48조 수급기간, 제49조 대기기간)", "kind": "law", "url": "https://www.law.go.kr/법령/고용보험법", "must": ["제42조(실업의 신고)"] },
-    { "label": "고용보험법 시행령", "kind": "law", "url": "https://www.law.go.kr/법령/고용보험법시행령", "must": ["구직급여"] },
-    { "label": "고용보험법 시행규칙 (취업 인정 기준)", "kind": "law", "url": "https://www.law.go.kr/법령/고용보험법시행규칙", "must": ["재취업"] },
-    { "label": "정당한 이직 사유 (시행규칙 별표2)", "kind": "gov", "url": "https://www.law.go.kr/법령/고용보험법시행규칙", "must": ["이직"] },
-    { "label": "실업의 인정 (법제처 생활법령)", "kind": "gov", "url": "https://easylaw.go.kr", "must": ["실업"] },
-    { "label": "실업인정 및 재취업지원규정", "kind": "law", "url": "https://www.law.go.kr/행정규칙/실업인정및재취업지원규정", "must": ["실업인정"] },
-    { "label": "정책브리핑", "kind": "gov", "url": "https://www.korea.kr", "must": ["실업급여"] },
-    { "label": "고용24 실업급여 안내", "kind": "gov", "url": "https://www.work24.go.kr", "must": ["실업급여"] },
-    { "label": "국민건강보험법", "kind": "law", "url": "https://www.law.go.kr/법령/국민건강보험법", "must": ["제110조"] },
-    { "label": "최저임금위원회", "kind": "gov", "url": "https://www.minimumwage.go.kr", "must": ["10,320"] }
+    {
+      "label": "고용보험법 (제42조 실업의 신고, 제43조 수급자격 인정, 제44조 실업의 인정, 제48조 수급기간, 제49조 대기기간)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법",
+      "must": [
+        "제42조(실업의 신고)"
+      ]
+    },
+    {
+      "label": "고용보험법 시행령",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법시행령",
+      "must": [
+        "구직급여"
+      ]
+    },
+    {
+      "label": "고용보험법 시행규칙 (취업 인정 기준)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법시행규칙",
+      "must": [
+        "재취업"
+      ]
+    },
+    {
+      "label": "정당한 이직 사유 (시행규칙 별표2)",
+      "kind": "gov",
+      "url": "https://www.law.go.kr/법령/고용보험법시행규칙",
+      "must": [
+        "이직"
+      ]
+    },
+    {
+      "label": "실업의 인정 (법제처 생활법령)",
+      "kind": "gov",
+      "url": "https://easylaw.go.kr",
+      "must": [
+        "실업"
+      ]
+    },
+    {
+      "label": "실업인정 및 재취업지원규정",
+      "kind": "law",
+      "url": "https://www.law.go.kr/행정규칙/실업인정및재취업지원규정",
+      "must": [
+        "실업인정"
+      ]
+    },
+    {
+      "label": "정책브리핑",
+      "kind": "gov",
+      "url": "https://www.korea.kr",
+      "must": [
+        "실업급여"
+      ]
+    },
+    {
+      "label": "고용24 실업급여 안내",
+      "kind": "gov",
+      "url": "https://www.work24.go.kr",
+      "must": [
+        "실업급여"
+      ]
+    },
+    {
+      "label": "국민건강보험법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/국민건강보험법",
+      "must": [
+        "제110조"
+      ]
+    },
+    {
+      "label": "최저임금위원회",
+      "kind": "gov",
+      "url": "https://www.minimumwage.go.kr",
+      "must": [
+        "10,320"
+      ]
+    }
   ]
 }

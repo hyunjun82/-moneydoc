@@ -94,6 +94,11 @@
     "government/unemployment-payday-guide": "unemployment/payday",
     "government/unemployment-by-salary-guide": "unemployment/by-salary",
     "government/unemployment-confirmation-guide": "unemployment/confirmation",
-    "government/unemployment-documents-guide": "unemployment/documents"
+    "government/unemployment-documents-guide": "unemployment/documents",
+    "government/unemployment-daily-worker-guide": "unemployment/daily-worker",
+    "government/unemployment-waiting-guide": "unemployment/waiting",
+    "government/unemployment-deadline-guide": "unemployment/deadline",
+    "government/unemployment-total-guide": "unemployment/total",
+    "government/unemployment-average-wage-guide": "unemployment/average-wage"
   }
 }

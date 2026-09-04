@@ -1,31 +1,27 @@
 {
-  "slug": "unemployment-benefit-guide",
-  "keyword": "실업급여",
+  "slug": "unemployment-daily-worker-guide",
+  "keyword": "일용직 실업급여",
   "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
   "mustInclude": [
-    "실업급여 조건",
-    "실업급여 얼마",
-    "실업급여 신청 방법",
-    "실업급여 상한액",
-    "자발적 퇴사"
+    "일용직",
+    "조건",
+    "일용근로",
+    "신고"
   ],
   "queries": [
-    "실업급여 조건",
-    "실업급여 얼마나 받나요",
-    "실업급여 신청 방법",
-    "실업급여 상한액 2026",
-    "실업급여 하한액",
-    "실업급여 몇 개월",
-    "실업급여 자발적 퇴사",
-    "실업급여 계약 만료",
-    "실업급여 신청 기간",
-    "실업급여 구직활동 횟수",
-    "실업급여 실업인정",
-    "실업급여 이직확인서",
-    "실업급여 알바",
-    "실업급여 조기재취업수당",
-    "실업급여 건강보험",
-    "실업급여 180일"
+    "일용직 실업급여",
+    "일용근로자 실업급여",
+    "건설일용 실업급여",
+    "일용직 실업급여 조건",
+    "일용직 실업급여 신청",
+    "일용근로 신고",
+    "실업급여 일용직 3분의 1",
+    "건설일용 14일",
+    "일용직 고용보험",
+    "일용직 180일",
+    "실업급여 일당",
+    "일용근로내용 확인신고"
   ],
   "sources": [
     {
@@ -124,14 +120,6 @@
       "url": "https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&recordCountPerPage=10&systClId=SC00000349&systId=SI00000343",
       "must": [
         "경영상 필요 및 회사불황"
-      ]
-    },
-    {
-      "label": "실업크레딧 지원 (고용24 제도안내)",
-      "kind": "gov",
-      "url": "https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&recordCountPerPage=10&systClId=SC00000259&systId=SI00000381&systCnntId=CI00002129",
-      "must": [
-        "실업크레딧"
       ]
     }
   ]
