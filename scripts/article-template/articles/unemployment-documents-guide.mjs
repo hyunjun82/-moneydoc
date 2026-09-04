@@ -30,7 +30,7 @@ export default function article({ VERIFIED }) {
 
   return {
     slug: 'unemployment-documents-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 신청 서류',
-    title: '실업급여 신청 서류 목록과 발급처, 준비물 챙기는 법',
+    title: '실업급여 서류, 신청 준비물 목록과 발급받는 곳',
     description: `실업급여 신청에 본인이 챙길 건 신분증과 계좌예요. 나머지는 회사가 내는 서류고요. 퇴사 사유에 따라 더 필요한 자료까지 발급처와 함께 정리했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 신고·제출 규정과 고용24 안내 대조 · ${VERIFIED}`,
@@ -69,7 +69,7 @@ export default function article({ VERIFIED }) {
     sections: [
       { id: 's1', h2: '실업급여 신청 서류 목록은 무엇인가요', sub: '본인 것과 회사 것으로 나뉘어요', blocks: [
         { type: 'p', lead: true, ans: '본인이 챙길 건 신분증과 본인 명의 계좌 두 가지예요.', text: '나머지는 회사가 처리하거나 온라인으로 하는 것들이에요. 고용보험 상실 신고와 이직확인서는 회사가 고용센터에 내고, 구직신청과 수급자격 신청자 교육은 고용24에서 해요.' },
-        { type: 'table', net: 2, caption: '실업급여 신청 서류 목록과 처리 주체', headers: ['서류', '누가', '어디서', '왜 필요한가요'],
+        { type: 'table', net: 2, caption: '실업급여 필요서류 목록과 처리 주체', headers: ['서류', '누가', '어디서', '왜 필요한가요'],
           rows: BASIC.map((b, i) => ({ hi: i < 2, cells: [b.doc, b.who, b.where, b.why] })),
           fn: '실업 신고에는 구직 신청과 수급자격 인정 신청이 함께 들어가요. 이직확인서는 회사가 제출하는 서류예요.' },
         { type: 'note', title: '방문 전에 온라인부터 끝내세요', text: '구직신청과 교육이 끝나 있어야 출석 신청이 이어져요. 순서를 지키면 한 번에 끝나요.' },
@@ -77,7 +77,7 @@ export default function article({ VERIFIED }) {
 
       { id: 's2', h2: '각 서류는 어디서 발급받나요', sub: '회사, 온라인, 공공기관', blocks: [
         { type: 'p', lead: true, ans: '회사에서 받는 것, 온라인에서 하는 것, 공공기관에서 떼는 것 세 갈래예요.', text: '근로계약서와 급여명세서는 회사에 요청해요. 주민등록 초본이나 가족관계증명서는 정부24에서 뗄 수 있어요. 진단서는 진료받은 병원에서 받고요.' },
-        { type: 'table', text: true, caption: '어디서 무엇을 하나요', headers: ['하는 일', '창구'], rows: [
+        { type: 'table', text: true, caption: '서류별 발급처와 창구', headers: ['하는 일', '창구'], rows: [
           { cells: ['구직신청과 수급자격 신청자 교육', '고용24'], link: { label: '고용24 바로가기', href: WORK24 } },
           { cells: ['이직확인서 처리 여부와 피보험자격 이력 확인', '고용보험 홈페이지'], link: { label: '고용보험 홈페이지', href: EI } },
           { cells: ['주민등록 초본, 가족관계증명서', '정부24나 주민센터'], link: { label: '정부24 바로가기', href: GOV24 } },
@@ -90,19 +90,20 @@ export default function article({ VERIFIED }) {
 
       { id: 's3', h2: '이직확인서는 누가 제출하나요', sub: '회사가 고용센터에 내요', blocks: [
         { type: 'p', lead: true, ans: '회사가 작성해 고용센터에 제출해요. 본인이 들고 가는 서류가 아니에요.', text: '법은 구직급여를 받으려는 사람이 이직확인서 발급을 요청할 수 있다고 정하고, 고용센터가 사업주에게 제출을 요청하면 사업주는 제출해야 한다고 정해요.' },
+        { type: 'p', ans: '요청하면 회사는 10일 이내에 발급해야 해요.', text: '끝까지 안 주면 300만원 이하의 과태료가 부과돼요.', link: { href: '/unemployment/confirmation/', label: '이직확인서 발급과 정정' } },
         { type: 'p', ans: '처리 여부는 본인이 확인할 수 있어요.', text: '고용보험 홈페이지에서 제출됐는지, 어떤 사유로 신고됐는지 볼 수 있어요. 사유가 실제와 다르면 수급자격 판단이 달라지니 신청 전에 확인하는 게 안전해요.' },
         { type: 'note', title: '서류가 늦어도 신청은 하세요', text: '신고일을 기준으로 대기기간과 인정일이 정해져요. 회사 서류를 기다리다 신고가 늦어지면 그만큼 못 받는 날이 생겨요.' },
       ] },
 
       { id: 's4', h2: '사유별로 더 내야 하는 서류가 있나요', sub: '자진퇴사라면 사정을 보여 줘야 해요', blocks: [
-        { type: 'p', lead: true, ans: '회사가 그만두게 한 경우가 아니라면, 인정 사유를 보여 주는 자료가 필요해요.', text: '자발적으로 그만뒀더라도 정당한 사유에 해당하면 수급자격이 인정돼요. 다만 사유가 있었다는 것을 자료로 보여 주지 못하면 인정받기 어려워요.' },
+        { type: 'p', lead: true, link: { href: '/unemployment/voluntary/', label: '사유별 증빙 서류 전체' }, ans: '회사가 그만두게 한 경우가 아니라면, 인정 사유를 보여 주는 자료가 필요해요.', text: '자발적으로 그만뒀더라도 정당한 사유에 해당하면 수급자격이 인정돼요. 다만 사유가 있었다는 것을 자료로 보여 주지 못하면 인정받기 어려워요.' },
         { type: 'table', net: 2, caption: '퇴사 사유별로 더 챙길 자료', headers: ['퇴사 사유', '준비할 자료'],
           rows: BY_REASON.map((b) => ({ cells: [b.case, b.doc] })),
           fn: '고용센터가 사안에 따라 다른 자료를 요구할 수 있어요. 여기 적힌 건 사유를 보여 주기 위해 흔히 쓰이는 자료예요.' },
         { type: 'note', title: '자료가 부족해도 신청하세요', text: '고용센터가 추가 자료를 요청하는 경우가 많아요. 보완할 기회가 있으니 신청 자체를 미루지 마세요.' },
       ] },
 
-      { id: 's5', h2: '방문 전에 준비물을 어떻게 챙기나요', sub: '순서대로 하나씩 확인해요', blocks: [
+      { id: 's5', h2: '방문 전에 준비물을 어떻게 챙기나요', sub: '고용센터에 무엇을 가져가나요', blocks: [
         { type: 'p', lead: true, ans: '회사 서류 처리 여부를 먼저 보고, 온라인 절차를 끝낸 뒤 신분증과 계좌를 챙겨 나가면 돼요.', text: '이 순서가 어긋나면 헛걸음을 하게 돼요. 특히 수급자격 신청자 교육을 듣지 않으면 출석해도 신청이 이어지지 않아요.' },
         { type: 'table', text: true, caption: '방문 전 확인 순서', headers: ['순서', '확인할 것'], rows: [
           { cells: ['1', '회사가 고용보험 상실 신고를 했는지'] },

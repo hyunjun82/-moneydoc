@@ -33,7 +33,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
   return {
     slug: 'unemployment-days-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 소정급여일수',
-    title: '실업급여 소정급여일수 표, 나이와 가입기간별 며칠 받나',
+    title: '실업급여 일수, 나이와 가입기간별 소정급여일수 표',
     description: `실업급여를 며칠 받는지는 나이와 고용보험 가입기간 두 가지로 정해져요. 가장 짧으면 ${MIN.under}일, 가장 길면 ${MAX.over}일이에요. 구간별 표와 50세 기준으로 갈리는 지점을 정리했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 소정급여일수 별표1 원문 대조 · ${VERIFIED}`,
@@ -73,8 +73,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     sections: [
       { id: 's1', h2: '소정급여일수는 무엇으로 정해지나요', sub: '나이와 가입기간 두 가지', blocks: [
         { type: 'p', lead: true, ans: '고용보험 가입기간과 이직 당시 나이 두 가지로만 정해져요.', text: '월급이 얼마인지, 어떤 사유로 그만뒀는지는 일수에 영향을 주지 않아요. 월급은 하루 지급액을 정하고, 일수는 따로 정해져요. 그래서 월급이 적어도 오래 다녔으면 받는 날은 길어요.' },
+        { type: 'p', ans: '일수를 따지기 전에 수급자격부터 돼야 해요.', text: '고용보험 가입 180일, 취업하지 못한 상태, 이직 사유, 재취업 노력 네 가지를 채워야 소정급여일수가 정해져요.', link: { href: '/unemployment/eligibility/', label: '수급자격 4가지 조건' } },
         { type: 'p', ans: '세기 시작하는 날은 대기기간이 끝난 다음 날이에요.', text: '신고한 날부터 바로 세는 게 아니에요. 대기기간 7일이 끝난 다음 날부터 세기 시작해서 정해진 일수가 되는 날까지예요. 그래서 신고일과 첫 지급일 사이에 시간이 걸려요.' },
-        { type: 'note', title: '임신이나 육아로 미뤘다면 그만큼 유예돼요', text: '소정급여일수 안에 임신, 출산, 육아 같은 사유로 수급기간을 연장했다면 그 기간만큼 미뤄서 지급해요. 일수가 없어지는 게 아니에요.' },
+        { type: 'note', title: '임신이나 육아로 미뤘다면 그만큼 유예돼요', text: '소정급여일수 안에 임신, 출산, 육아 같은 사유로 수급기간을 연장했다면 그 기간만큼 미뤄서 지급해요. 일수가 없어지는 게 아니에요.', link: { href: '/unemployment/extension/', label: '수급기간 연장' } },
       ] },
 
       { id: 's2', h2: '나이와 가입기간별 소정급여일수 표는 어떻게 되나요', sub: '50세를 기준으로 두 갈래', blocks: [
@@ -110,6 +111,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           { cells: ['정해진 소정급여일수', '수급자격 인정 통지와 수급자격증'] },
           { cells: ['남은 일수', '실업인정을 받을 때마다 확인할 수 있어요'] },
           { cells: ['수급기간 종료일', '이직일 다음 날부터 12개월이 되는 날'] },
+          { cells: ['총 얼마 받는지', '하루 지급액에 소정급여일수를 곱해요'], link: { href: '/unemployment/total/', label: '총 수령액 계산' } },
         ], fn: '일수가 남아도 수급기간이 지나면 받을 수 없어요. 신청을 미루지 마세요.' },
       ] },
     ],

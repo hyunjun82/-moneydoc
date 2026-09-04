@@ -29,8 +29,9 @@ export default function Page() {
       faqLd={faqLd}
       scriptKey={scriptKey}
       url={PAGE_URL}
-      catHref="/gov/"
-      catLabel="정부지원금"
+      catHref="/"
+      catLabel="홈"
+      navActive="gov"
       crumb="육아휴직 급여"
     />
   );

@@ -29,9 +29,10 @@ export default function Page() {
       faqLd={faqLd}
       scriptKey={scriptKey}
       url={PAGE_URL}
-      catHref="/law/"
-      catLabel="법률"
-      crumb="퇴직금 지급명령"
+      catHref="/severance/"
+      catLabel="퇴직금"
+      navActive="law"
+      crumb="지급명령"
     />
   );
 }

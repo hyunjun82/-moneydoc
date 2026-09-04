@@ -64,11 +64,12 @@ export const html = `<h1>통근 곤란 퇴사 실업급여 조건, 왕복 몇 �
 
 <h2 id="s4">회사 이전과 본인 이사는 다르게 보나요<small>이사 이유를 봐요</small></h2>
 <p class="v2-lead"><span class="v2-ans">회사 사정으로 멀어진 경우는 그대로 인정되고, 본인이 이사한 경우는 이유를 봐요.</span> 규정이 인정하는 건 배우자나 부양해야 할 친족과의 동거를 위한 거소 이전이에요. 결혼이나 가족 부양처럼 피하기 어려운 사정이 있어야 한다는 뜻이에요.</p>
+<p><span class="v2-ans">통근 곤란도 정당한 이직 사유 목록의 하나예요.</span> 임금체불이나 괴롭힘처럼 다른 사유가 함께 있으면 그쪽으로도 다툴 수 있어요. <a class="v2-go" href="/unemployment/voluntary/">자발적 퇴사 인정 사유 전체</a></p>
 <p><span class="v2-ans">단순히 옮기고 싶어서 이사한 경우는 다릅니다.</span> 그 경우는 통근 곤란 사유에 들어가지 않아요. 전직을 하기 위해 그만둔 것으로 보면 오히려 수급자격 제한 사유가 될 수 있어요.</p>
 <div class="v2-tbl v2-text"><table><caption>준비할 자료</caption><thead><tr><th>상황</th><th>준비할 자료</th></tr></thead><tbody>
 <tr><th scope="row">사업장이 이전함</th><td data-l="준비할 자료">이전 공지, 변경된 사업장 주소</td></tr>
 <tr><th scope="row">먼 지점으로 전근</th><td data-l="준비할 자료">인사발령 문서</td></tr>
-<tr><th scope="row">가족과 동거를 위한 이사</th><td data-l="준비할 자료">주민등록 초본, 가족관계증명서</td></tr>
+<tr><th scope="row">가족과 동거를 위한 이사</th><td data-l="준비할 자료">주민등록 초본, 가족관계증명서<a class="v2-go" href="https://www.gov.kr" target="_blank" rel="noopener">정부24 바로가기</a></td></tr>
 <tr><th scope="row">통근 시간 비교</th><td data-l="준비할 자료">이전 전후 대중교통 경로 검색 결과</td></tr>
 <tr><th scope="row">근무지와 거주지</th><td data-l="준비할 자료">근로계약서와 주민등록 초본</td></tr>
 </tbody></table></div>
@@ -76,6 +77,7 @@ export const html = `<h1>통근 곤란 퇴사 실업급여 조건, 왕복 몇 �
 
 <h2 id="s5">통근곤란 증빙은 무엇으로 하나요<small>주소와 경로를 함께 보여 줘요</small></h2>
 <p class="v2-lead"><span class="v2-ans">주소가 바뀐 사실과 그로 인해 왕복 시간이 3시간을 넘게 됐다는 점을 함께 보여 주면 돼요.</span> 주민등록 초본으로 거주지를, 이전 공지나 인사발령으로 사업장을 확인할 수 있어요. 여기에 대중교통 경로 화면을 더하면 시간이 드러나요.</p>
+<p><span class="v2-ans">이직확인서에 11번 개인사정으로 찍히면 막힐 수 있어요.</span> 통근 곤란으로 그만뒀다면 12번으로 신고되는 게 맞아요. 코드부터 확인하세요. <a class="v2-go" href="/unemployment/exit-code/">이직코드 종류와 뜻</a></p>
 <p><span class="v2-ans">이직확인서 사유도 확인하세요.</span> 회사가 개인사정으로 신고하면 제한 사유로 분류될 수 있어요. 정정을 요청하고, 응하지 않으면 위 자료를 고용센터에 내면 돼요.</p>
 <div class="v2-note"><b>이사 전에 자료를 챙기세요</b> 이전 공지나 인사발령 문서는 재직 중에 받아 두는 편이 쉬워요. 퇴사 뒤에는 요청이 번거로워져요.</div>
 

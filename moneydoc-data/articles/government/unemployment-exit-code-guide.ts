@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-exit-code-guide.html
 export const meta = {
-  title: "실업급여 이직코드 종류와 뜻, 23번 32번은 무슨 사유인가요",
+  title: "실업급여 코드 종류와 뜻, 23번 32번은 무슨 사유인가요",
   description: "이직코드는 회사가 이직확인서에 적는 상실사유 구분코드예요. 23번은 경영상 인원감축, 32번은 계약기간 만료예요. 코드 9가지와 수급 여부를 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-exit-code-guide";
 
-export const html = `<h1>실업급여 이직코드 종류와 뜻, 23번 32번은 무슨 사유인가요</h1>
+export const html = `<h1>실업급여 코드 종류와 뜻, 23번 32번은 무슨 사유인가요</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용24 상실사유 구분코드 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-exit-code-guide.png" width="1200" height="630" alt="실업급여 이직코드 9가지와 수급 여부">
 <p class="v2-lead v2-intro">실업급여를 신청하면 회사가 이직확인서를 내요. 거기에 왜 그만뒀는지를 숫자로 적는데 이걸 상실사유 구분코드, 흔히 이직코드라고 불러요. 고용센터는 이 코드에서 판단을 시작하기 때문에, 실제 사정과 다른 코드가 찍히면 받을 수 있는데도 막힐 수 있어요. 코드가 몇 가지인지, 많이 묻는 23번과 32번이 무슨 뜻인지, 틀렸을 때 어떻게 고치는지 정리했어요.</p>
@@ -43,6 +43,7 @@ export const html = `<h1>실업급여 이직코드 종류와 뜻, 23번 32번은
 <h2 id="s1">이직코드는 어디에 적히나요<small>회사가 내는 이직확인서에 적어요</small></h2>
 <p class="v2-lead"><span class="v2-ans">회사가 제출하는 이직확인서의 이직사유란에 코드로 적어요.</span> 이직사유는 고용보험 상실신고의 상실사유와 같아요. 회사는 근로자가 실제로 그만두게 된 사유를 적어야 하고, 코드만 쓰는 게 아니라 구체적인 사유도 함께 적게 되어 있어요.</p>
 <p><span class="v2-ans">고용센터는 이 코드에서 심사를 시작해요.</span> 수급자격은 이직 사유가 제한 사유에 해당하지 않아야 인정되는데, 그 첫 판단 자료가 회사가 적어 낸 코드예요. 그래서 코드가 무엇으로 찍혔는지 확인하는 게 신청 전에 할 일 중 하나예요.</p>
+<p><span class="v2-ans">11번이라고 무조건 끝은 아니에요.</span> 개인 사정으로 찍혔어도 실제로는 임금체불이나 괴롭힘, 통근 곤란 같은 정당한 사유였다면 자료를 내고 다툴 수 있어요. <a class="v2-go" href="/unemployment/voluntary/">자발적 퇴사 인정 사유</a></p>
 <div class="v2-note"><b>코드는 회사가 정해요</b> 근로자가 고를 수 없어요. 그래서 퇴사 전에 어떤 사유로 신고할 것인지 미리 확인해 두면 나중에 다툴 일이 줄어요.</div>
 
 <h2 id="s2">이직코드 종류에는 무엇이 있나요<small>네 갈래 9가지</small></h2>
@@ -75,17 +76,19 @@ export const html = `<h1>실업급여 이직코드 종류와 뜻, 23번 32번은
 <h2 id="s4">32번은 무슨 사유인가요<small>계약기간 만료와 공사 종료예요</small></h2>
 <p class="v2-lead"><span class="v2-ans">32번은 계약기간 만료, 공사 종료예요.</span> 계약직으로 일하다 기간이 끝난 경우와 건설 현장에서 공사가 끝나 그만두게 된 경우가 여기에 들어가요. 계약기간의 만료로 계속 다닐 수 없게 된 것이라 정당한 이직 사유로 봐요.</p>
 <p><span class="v2-ans">재계약을 거절했다면 달라질 수 있어요.</span> 회사가 같은 조건으로 재계약을 제안했는데 본인이 거절했다면, 계속 일할 수 있었던 것으로 보아 판단이 갈릴 수 있어요. 코드가 32번이어도 고용센터가 사정을 따로 확인하는 경우가 있어요.</p>
+<p><span class="v2-ans">재계약 거절이 걸리는 경우는 따로 정리했어요.</span> 같은 조건으로 계속 일할 수 있었는데 본인이 거절했는지, 조건이 낮아져서 거절했는지에 따라 판단이 달라져요. <a class="v2-go" href="/unemployment/contract-end/">계약만료와 재계약 거절</a></p>
 <div class="v2-note"><b>31번은 정년이에요</b> 같은 기간만료 갈래에 있고 판단도 비슷해요. 정년으로 계속 다닐 수 없게 된 경우라 수급자격이 인정돼요.</div>
 
 <h2 id="s5">이직코드가 잘못 적혔으면 어떻게 고치나요<small>정정 요청과 자료 제출</small></h2>
 <p class="v2-lead"><span class="v2-ans">회사에 이직확인서 정정을 요청하고, 안 되면 실제 사정을 보여 주는 자료를 고용센터에 내요.</span> 가장 흔한 경우가 권고사직인데 11번 개인사정으로 신고된 거예요. 이 상태로 두면 자진퇴사로 분류돼 수급자격이 막힐 수 있어요. 회사가 정정에 응하지 않아도 방법이 있어요.</p>
+<p><span class="v2-ans">정정은 이직확인서를 다시 내게 하는 절차예요.</span> 회사가 요청을 받으면 10일 이내에 발급해 줘야 하고, 끝까지 안 주면 300만원 이하의 과태료가 부과돼요. <a class="v2-go" href="/unemployment/confirmation/">이직확인서 발급과 정정</a></p>
 <p><span class="v2-ans">고용센터는 코드만 보고 결정하지 않아요.</span> 본인이 낸 문자, 메일, 면담 기록, 급여명세서 같은 자료를 함께 봐요. 실제 사정이 다르다는 것을 보여 주면 코드와 다르게 판단될 수 있어요.</p>
 <div class="v2-tbl v2-text"><table><caption>코드가 다를 때 준비할 것</caption><thead><tr><th>상황</th><th>준비할 자료</th></tr></thead><tbody>
 <tr><th scope="row">권고사직인데 11번으로 신고됨</th><td data-l="준비할 자료">권고 사실이 담긴 문자나 메일, 면담 기록</td></tr>
 <tr><th scope="row">임금체불로 나왔는데 11번으로 신고됨</th><td data-l="준비할 자료">급여명세서, 통장 내역, 체불 진정 접수증</td></tr>
 <tr><th scope="row">계약만료인데 자진퇴사로 신고됨</th><td data-l="준비할 자료">근로계약서에 적힌 계약 기간</td></tr>
 <tr><th scope="row">26번으로 신고됐는데 사실과 다름</th><td data-l="준비할 자료">징계 사유가 없었음을 보여 주는 자료</td></tr>
-<tr><th scope="row">이직확인서가 아직 안 올라옴</th><td data-l="준비할 자료">고용보험 홈페이지에서 처리 여부를 확인해요</td></tr>
+<tr><th scope="row">이직확인서가 아직 안 올라옴</th><td data-l="준비할 자료">고용보험 홈페이지에서 처리 여부를 확인해요<a class="v2-go" href="https://www.ei.go.kr" target="_blank" rel="noopener">고용보험 홈페이지</a></td></tr>
 </tbody></table></div>
 <p class="v2-fn">수급자격이 인정되지 않았다면 그 결정에 대해 심사를 청구할 수 있어요. 기한이 있으니 통지를 받으면 바로 확인하세요.</p>
 

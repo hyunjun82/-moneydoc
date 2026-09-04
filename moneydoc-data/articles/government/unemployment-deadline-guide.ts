@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-deadline-guide.html
 export const meta = {
-  title: "실업급여 신청기간 12개월, 늦게 신청하면 얼마나 손해인가",
+  title: "실업급여 신청기간, 언제까지 신청해야 하나요",
   description: "실업급여는 이직일 다음 날부터 12개월 안에 받아야 해요. 소정급여일수가 남아 있어도 이 기간이 지나면 끝나요. 늦게 신청했을 때 얼마를 못 받는지 계산했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-deadline-guide";
 
-export const html = `<h1>실업급여 신청기간 12개월, 늦게 신청하면 얼마나 손해인가</h1>
+export const html = `<h1>실업급여 신청기간, 언제까지 신청해야 하나요</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 수급기간 규정 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-deadline-guide.png" width="1200" height="630" alt="실업급여 신청기간 12개월과 늦게 신청했을 때 손해">
 <p class="v2-lead v2-intro">실업급여에는 두 개의 시계가 있어요. 하나는 며칠을 받느냐인 소정급여일수, 다른 하나는 언제까지 받을 수 있느냐인 수급기간이에요. 수급기간은 이직일 다음 날부터 12개월이고, 이 기간이 지나면 일수가 남아 있어도 지급이 끝나요. 소정급여일수가 긴 사람일수록 늦게 신청하면 손해가 커져요.</p>
@@ -53,6 +53,7 @@ export const html = `<h1>실업급여 신청기간 12개월, 늦게 신청하면
 
 <h2 id="s2">12개월은 언제부터 세나요<small>이직일 다음 날이에요</small></h2>
 <p class="v2-lead"><span class="v2-ans">회사를 그만둔 날의 다음 날부터 세요.</span> 신청한 날이나 이직확인서가 처리된 날이 아니에요. 그래서 회사 서류를 기다리다 두 달이 지나면, 그 두 달은 이미 수급기간에서 빠져나간 거예요.</p>
+<p><span class="v2-ans">며칠 받는지가 손해 크기를 정해요.</span> 소정급여일수는 나이와 가입기간으로 120일에서 270일 사이로 정해져요. 길수록 늦게 신청하면 더 많이 잘려요. <a class="v2-go" href="/unemployment/days/">소정급여일수 표</a></p>
 <p><span class="v2-ans">재취업했다가 다시 그만두면 새로 시작해요.</span> 새로 수급자격을 인정받으면 그 수급자격을 기준으로 지급해요. 다만 앞의 자격으로 받던 급여는 거기서 정리돼요.</p>
 <div class="v2-note"><b>이직일은 이직확인서에 적혀요</b> 사직서를 낸 날과 실제 이직일이 다를 수 있어요. 취업규칙에 퇴직 효력 발생 시점이 따로 있으면 그 날이 이직일이 돼요.</div>
 
@@ -74,6 +75,7 @@ export const html = `<h1>실업급여 신청기간 12개월, 늦게 신청하면
 
 <h2 id="s5">신청기간을 늘릴 수 있는 경우가 있나요<small>취업할 수 없는 사정이 있을 때</small></h2>
 <p class="v2-lead"><span class="v2-ans">임신, 출산, 육아, 질병, 부상처럼 취업할 수 없는 사정이 있으면 그 기간만큼 늘려 줘요.</span> 수급기간에 그 사유로 취업할 수 없었던 기간을 더해요. 다만 무한정 늘어나는 게 아니라 최대 4년까지예요.</p>
+<p><span class="v2-ans">연장 사유와 절차는 따로 정리했어요.</span> 임신, 출산, 육아, 질병처럼 취업할 수 없는 사정이면 수급기간 안에 신고해야 해요. <a class="v2-go" href="/unemployment/extension/">수급기간 연장</a></p>
 <p><span class="v2-ans">연장은 신고해야 인정돼요.</span> 자동으로 되지 않아요. 수급기간 안에 그 사실을 신고해야 하고, 늦으면 인정받기 어려워요. 아파서 못 다니게 됐다면 그 시점에 바로 알리는 게 맞아요.</p>
 <div class="v2-tbl v2-text"><table><caption>기한과 관련해 확인할 것</caption><thead><tr><th>확인할 것</th><th>왜 중요한가요</th></tr></thead><tbody>
 <tr><th scope="row">이직일</th><td data-l="왜 중요한가요">여기 다음 날부터 12개월을 세요</td></tr>

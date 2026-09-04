@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-eligibility-guide.html
 export const meta = {
-  title: "실업급여 수급자격 4가지 조건, 180일과 이직 사유 정리",
+  title: "실업급여 수급자격, 4가지 조건과 180일 이직 사유 정리",
   description: "실업급여 수급자격은 고용보험법이 정한 4가지 조건을 모두 채워야 해요. 180일 이상 가입, 취업하지 못한 상태, 이직 사유가 제한 사유가 아닐 것, 재취업 노력이에요. 일용근로자는 2가지가 더 붙어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-eligibility-guide";
 
-export const html = `<h1>실업급여 수급자격 4가지 조건, 180일과 이직 사유 정리</h1>
+export const html = `<h1>실업급여 수급자격, 4가지 조건과 180일 이직 사유 정리</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 수급 요건 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-eligibility-guide.png" width="1200" height="630" alt="실업급여 수급자격 4가지 조건. 180일, 미취업 상태, 이직 사유, 재취업 노력">
 <p class="v2-lead v2-intro">실업급여를 받으려면 회사를 그만둔 것만으로는 안 돼요. 고용보험법 제40조가 정한 조건을 모두 채워야 해요. 일반 근로자에게 붙는 조건은 네 가지고, 마지막에 일용근로자로 일했다면 두 가지가 더 붙어요. 인터넷에는 다섯 가지라고 적힌 곳이 많은데, 그건 일용근로자에게만 해당하는 항목을 섞어 센 거예요. 네 가지가 각각 무엇인지, 어디서 자주 막히는지 정리했어요.</p>
@@ -50,12 +50,13 @@ export const html = `<h1>실업급여 수급자격 4가지 조건, 180일과 이
   <div class="v2-verdict v2-ok" data-verdict><b>수급자격 조건을 채웠어요</b> 고용센터에 수급자격 인정을 신청하면 돼요. 인정 여부는 고용센터가 결정해요.</div>
 </div>
 <div class="v2-tbl v2-text"><table><caption>네 가지 조건과 자주 막히는 곳</caption><thead><tr><th>조건</th><th>무슨 뜻인가요</th><th>어디서 막히나요</th></tr></thead><tbody>
-<tr><th scope="row">180일 이상 가입</th><td data-l="무슨 뜻인가요">기준기간 동안 피보험 단위기간이 합산 180일 이상</td><td data-l="어디서 막히나요">다닌 날이 아니라 보수가 나간 날만 세서 모자란 경우</td></tr>
+<tr><th scope="row">180일 이상 가입</th><td data-l="무슨 뜻인가요">기준기간 동안 피보험 단위기간이 합산 180일 이상</td><td data-l="어디서 막히나요">다닌 날이 아니라 보수가 나간 날만 세서 모자란 경우<a class="v2-go" href="/unemployment/180days/">180일 계산법 보기</a></td></tr>
 <tr><th scope="row">취업하지 못한 상태</th><td data-l="무슨 뜻인가요">일할 의사와 능력이 있는데 일하지 못하는 상태</td><td data-l="어디서 막히나요">사업자등록이 있거나 이미 다른 일을 시작한 경우</td></tr>
-<tr><th scope="row">이직 사유</th><td data-l="무슨 뜻인가요">법이 정한 수급자격 제한 사유에 해당하지 않을 것</td><td data-l="어디서 막히나요">회사가 적어 낸 사유가 실제와 다른 경우</td></tr>
-<tr><th scope="row">재취업 노력</th><td data-l="무슨 뜻인가요">재취업을 위한 노력을 적극적으로 할 것</td><td data-l="어디서 막히나요">실업인정일에 활동을 신고하지 않아 그 회차가 빠지는 경우</td></tr>
+<tr><th scope="row">이직 사유</th><td data-l="무슨 뜻인가요">법이 정한 수급자격 제한 사유에 해당하지 않을 것</td><td data-l="어디서 막히나요">회사가 적어 낸 사유가 실제와 다른 경우<a class="v2-go" href="/unemployment/voluntary/">자발적 퇴사 인정 사유</a></td></tr>
+<tr><th scope="row">재취업 노력</th><td data-l="무슨 뜻인가요">재취업을 위한 노력을 적극적으로 할 것</td><td data-l="어디서 막히나요">실업인정일에 활동을 신고하지 않아 그 회차가 빠지는 경우<a class="v2-go" href="/unemployment/job-search/">구직활동 인정 기준</a></td></tr>
 </tbody></table></div>
 <p class="v2-fn">네 가지 요건은 고용보험법 제40조제1항 제1호부터 제4호예요. 같은 항 단서에 따라 제5호와 제6호는 최종 이직 당시 일용근로자였던 사람만 해당해요.</p>
+<p><span class="v2-ans">조건을 채우면 며칠 받는지는 따로 정해져요.</span> 소정급여일수는 나이와 가입기간으로 정해져요. 1년 미만이면 120일, 10년 이상이면 240일이고 50세 이상이면 구간마다 더 받아요. <a class="v2-go" href="/unemployment/days/">소정급여일수 표</a></p>
 <div class="v2-note"><b>다섯 가지라는 설명이 많은 이유</b> 법 조항은 1호부터 6호까지 있어요. 그런데 5호와 6호는 최종 이직 당시 일용근로자였던 사람만 해당한다고 단서에 적혀 있어요. 일반 근로자에게 붙는 조건은 네 가지예요.</div>
 
 <h2 id="s2">고용보험 180일은 어떻게 채우나요<small>보수 지급의 기초가 된 날을 합산해요</small></h2>
@@ -67,7 +68,15 @@ export const html = `<h1>실업급여 수급자격 4가지 조건, 180일과 이
 <tr><th scope="row">주 15시간 미만이고 주 2일 이하로 일했고, 24개월 중 90일 이상 그렇게 일한 경우</th><td data-l="기준기간">이직일 이전 24개월</td></tr>
 </tbody></table></div>
 <p class="v2-fn">기준기간은 고용보험법 제40조제2항이에요. 늘어나는 사유와 한도가 같은 항 각 호에 정해져 있어요.</p>
-<div class="v2-note"><b>전에 실업급여를 받았다면 그 앞은 빠져요</b> 마지막으로 피보험자격을 취득한 날 이전에 구직급여를 받은 사실이 있으면, 그 구직급여와 관련된 자격 상실일 이전의 단위기간은 세지 않아요.</div>
+<div class="v2-tbl v2-text"><table><caption>가입기간을 셀 때 흔히 놓치는 것</caption><thead><tr><th>상황</th><th>어떻게 되나요</th></tr></thead><tbody>
+<tr><th scope="row">전에 실업급여를 받은 적이 있음</th><td data-l="어떻게 되나요">그 구직급여와 관련된 자격 상실일 이전의 단위기간은 세지 않아요</td></tr>
+<tr><th scope="row">여러 회사를 다님</th><td data-l="어떻게 되나요">기준기간 안이면 합산해요. 각 회사 기간을 더해서 180일을 봐요</td></tr>
+<tr><th scope="row">중간에 공백이 김</th><td data-l="어떻게 되나요">기준기간을 벗어난 기간은 빠져요</td></tr>
+<tr><th scope="row">고용보험 적용 제외로 일함</th><td data-l="어떻게 되나요">단위기간에 들어가지 않아요</td></tr>
+<tr><th scope="row">주휴일이 유급</th><td data-l="어떻게 되나요">보수가 나간 날이라 들어가요</td></tr>
+<tr><th scope="row">무급휴일과 결근</th><td data-l="어떻게 되나요">보수가 나가지 않아 빠져요</td></tr>
+</tbody></table></div>
+<p class="v2-fn">이전 수급분 제외는 고용보험법 제41조제2항이에요. 합산과 공백은 같은 조와 제40조제2항이 함께 정해요.</p>
 
 <h2 id="s3">이직 사유가 비자발적이어야 한다는 건 무슨 뜻인가요<small>법이 정한 제한 사유에 걸리지 않으면 돼요</small></h2>
 <p class="v2-lead"><span class="v2-ans">법은 비자발적이어야 한다고 적지 않고, 정해진 제한 사유에 해당하지 않을 것이라고 적어요.</span> 제한 사유는 크게 두 갈래예요. 하나는 중대한 귀책사유로 해고된 경우고, 다른 하나는 자기 사정으로 그만둔 경우예요. 그래서 스스로 그만뒀더라도 고용노동부령이 정한 정당한 사유에 해당하면 수급자격이 인정돼요.</p>
@@ -83,7 +92,25 @@ export const html = `<h1>실업급여 수급자격 4가지 조건, 180일과 이
 <h2 id="s5">4가지를 다 채웠는지 어디서 확인하나요<small>단위기간은 고용보험, 인정은 고용센터</small></h2>
 <p class="v2-lead"><span class="v2-ans">피보험 단위기간은 고용보험 홈페이지에서 보고, 최종 판단은 고용센터가 해요.</span> 수급자격은 신청해서 인정을 받아야 확정돼요. 법도 수급 요건을 갖췄다는 사실을 인정해 줄 것을 신청하라고 정하고, 고용센터가 인정 여부를 결정해 알려 준다고 해요. 그래서 혼자 판단해서 신청을 미루는 것보다, 애매하면 신청해 보는 편이 나아요.</p>
 <p><span class="v2-ans">여러 회사를 다녔다면 마지막 회사를 기준으로 봐요.</span> 마지막 회사에 들어가기 전에도 이직한 적이 있고 그 이직으로 구직급여를 받은 적이 없다면, 마지막에 이직한 사업을 기준으로 수급자격을 판단해요. 다만 마지막 이직 당시 일용근로자였고 단위기간이 1개월 미만이라 자격을 갖추지 못했다면, 일용근로자가 아닌 근로자로서 마지막으로 이직한 사업을 기준으로 봐요.</p>
-<div class="v2-note"><b>조건이 되면 금액은 세 가지로 정해져요</b> 평균임금, 고용보험 가입 기간, 나이예요. 월 평균임금 300만만원에 가입 3년이면 하루 66,048원을 180일 동안 받아 모두 11,888,640원이에요.</div>
+<div class="v2-tbl"><table><caption>상황별 수급자격 판정 (자주 묻는 14가지)</caption><thead><tr><th>상황</th><th>판정</th><th>무엇을 봐야 하나요</th></tr></thead><tbody>
+<tr><th scope="row">회사가 그만두라고 해서 나옴</th><td>대체로 인정</td><td class="v2-net">이직확인서가 권고사직으로 신고됐는지</td></tr>
+<tr><th scope="row">계약기간이 끝남</th><td>대체로 인정</td><td class="v2-net">재계약 제안이 있었는지</td></tr>
+<tr><th scope="row">임금이 두 달 넘게 밀림</th><td>인정</td><td class="v2-net">이직일 전 1년 이내에 2개월 이상인지</td></tr>
+<tr><th scope="row">회사가 이전해 통근이 멀어짐</th><td>인정</td><td class="v2-net">왕복 3시간을 넘는지</td></tr>
+<tr><th scope="row">직장 내 괴롭힘을 겪음</th><td>인정</td><td class="v2-net">신고나 조사 기록이 있는지</td></tr>
+<tr><th scope="row">아파서 일을 계속할 수 없음</th><td>인정될 수 있음</td><td class="v2-net">진단서와 휴직 요청 기록</td></tr>
+<tr><th scope="row">육아 때문에 그만둠</th><td>인정될 수 있음</td><td class="v2-net">휴직이 허용되지 않았다는 사실</td></tr>
+<tr class="v2-hi"><th scope="row">더 좋은 회사로 옮기려고 먼저 그만둠</th><td>인정 안 됨</td><td class="v2-net">전직을 위한 이직은 제한 사유</td></tr>
+<tr><th scope="row">창업하려고 그만둠</th><td>인정 안 됨</td><td class="v2-net">자영업을 위한 이직도 제한 사유</td></tr>
+<tr><th scope="row">본인 잘못으로 징계해고됨</th><td>제한될 수 있음</td><td class="v2-net">중대한 귀책사유에 해당하는지</td></tr>
+<tr><th scope="row">가입기간이 5개월뿐</th><td>인정 안 됨</td><td class="v2-net">전 직장 기간이 합산되는지 먼저 확인</td></tr>
+<tr><th scope="row">이미 다른 일을 시작함</th><td>인정 안 됨</td><td class="v2-net">취업하지 못한 상태여야 해요</td></tr>
+<tr><th scope="row">사업자등록이 살아 있음</th><td>인정 안 됨</td><td class="v2-net">휴업신고 등으로 실제 미영업을 증명하면 예외</td></tr>
+<tr><th scope="row">65세 넘어 그만둠</th><td>사정에 따라</td><td class="v2-net">65세 전부터 계속 근로했는지</td></tr>
+</tbody></table></div>
+<p class="v2-fn">판정은 고용센터가 이직확인서와 본인이 낸 자료를 함께 보고 결정해요. 이 표는 어디를 확인해야 하는지 보여 주는 것이고, 같은 상황이라도 사정에 따라 달라질 수 있어요.</p>
+<p><span class="v2-ans">애매하면 신청부터 하세요.</span> 혼자 판단해서 미루는 게 가장 손해예요. 수급기간 12개월은 이직일 다음 날부터 흐르기 때문에, 고민하는 동안 받을 수 있는 날이 줄어들어요. 신청해서 인정을 받지 못하더라도 그 결정에 대해 심사를 청구할 수 있어요.</p>
+<div class="v2-note"><b>조건이 되면 금액은 세 가지로 정해져요</b> 평균임금, 고용보험 가입 기간, 나이예요. 월 평균임금 300만원에 가입 3년이면 하루 66,048원을 180일 동안 받아 모두 11,888,640원이에요.</div>
 
 <h2 id="faq">자주 묻는 질문</h2>
 <div class="v2-faqs">

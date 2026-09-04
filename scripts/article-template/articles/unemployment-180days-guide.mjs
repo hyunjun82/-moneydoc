@@ -30,7 +30,7 @@ export default function article({ loadSpec, VERIFIED, derive = (v) => v }) {
 
   return {
     slug: 'unemployment-180days-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 180일',
-    title: '실업급여 180일 계산법, 주 며칠 일해야 채워지나요',
+    title: '실업급여 180일, 주 며칠 일해야 채워지는지 계산법',
     description: `실업급여 180일은 다닌 날이 아니라 보수가 나간 날을 세요. 유급 주휴일이 들어가서 주 5일 근무자는 ${W5.weeks}주, 달력으로 ${W5.months}개월이면 채워져요. 근무 형태별로 얼마나 걸리는지 정리했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 피보험 단위기간 원문 대조 · ${VERIFIED}`,
@@ -83,7 +83,7 @@ export default function article({ loadSpec, VERIFIED, derive = (v) => v }) {
       { id: 's2', h2: '180일 계산법은 어떻게 되나요', sub: '주당 쌓이는 날을 세고 180으로 나눠요', blocks: [
         { type: 'p', lead: true, ans: '한 주에 며칠이 쌓이는지 세고, 180을 그 숫자로 나누면 필요한 주가 나와요.', text: '주 5일 근무자는 근무 5일에 유급 주휴 1일이 더해져 한 주에 6일이 쌓여요. 180을 6으로 나누면 30주고, 달력으로는 210일이에요. 주휴일은 한 주 동안 정해진 근무일을 다 채워야 붙기 때문에, 결근이 잦으면 그만큼 늦어져요.' },
         { type: 'p', ans: '주 15시간 미만이면 주휴가 붙지 않아요.', text: '이때는 실제 근무일만 쌓여서 속도가 확 느려져요. 대신 이런 근로자를 위해 세는 구간을 24개월로 늘려 주는 특례가 따로 있어요.' },
-        { type: 'note', title: '한 회사에서 다 채우지 않아도 돼요', text: '기준기간 안에 여러 회사에서 일했다면 그 기간을 합산해요. 각각은 짧아도 합쳐서 180일이면 조건을 채운 거예요.' },
+        { type: 'note', title: '한 회사에서 다 채우지 않아도 돼요', text: '기준기간 안에 여러 회사에서 일했다면 그 기간을 합산해요. 각각은 짧아도 합쳐서 180일이면 조건을 채운 거예요. 180일은 수급자격 네 가지 조건 중 하나예요.', link: { href: '/unemployment/eligibility/', label: '수급자격 4가지 조건' } },
       ] },
 
       { id: 's3', h2: '주 5일 일하면 180일을 언제 채우나요', sub: `${W5.weeks}주, 달력으로 ${W5.months}개월`, blocks: [

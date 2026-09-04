@@ -29,9 +29,10 @@ export default function Page() {
       faqLd={faqLd}
       scriptKey={scriptKey}
       url={PAGE_URL}
-      catHref="/gov/"
-      catLabel="정부지원금"
-      crumb="실업급여 이직확인서"
+      catHref="/unemployment/"
+      catLabel="실업급여"
+      navActive="gov"
+      crumb="이직확인서"
     />
   );
 }

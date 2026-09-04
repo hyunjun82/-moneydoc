@@ -29,8 +29,9 @@ export default function Page() {
       faqLd={faqLd}
       scriptKey={scriptKey}
       url={PAGE_URL}
-      catHref="/insurance/"
-      catLabel="보험·자동차"
+      catHref="/"
+      catLabel="홈"
+      navActive="insurance"
       crumb="자동차세"
     />
   );

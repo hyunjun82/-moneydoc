@@ -29,8 +29,9 @@ export default function Page() {
       faqLd={faqLd}
       scriptKey={scriptKey}
       url={PAGE_URL}
-      catHref="/loan/"
-      catLabel="대출"
+      catHref="/"
+      catLabel="홈"
+      navActive="loan"
       crumb="스트레스 DSR"
     />
   );

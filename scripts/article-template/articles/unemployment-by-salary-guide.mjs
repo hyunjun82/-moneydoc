@@ -30,26 +30,26 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
   return {
     slug: 'unemployment-by-salary-guide', cat: 'government', catLabel: '정부지원금', crumb: '월급별 실업급여',
-    title: '월급별 실업급여 1일 수령액 표, 내 월급이면 얼마인가요',
-    description: `월급별로 실업급여 하루 얼마를 받는지 표로 정리했어요. 월 ${man(LOWEST.w)}만원이든 ${man(HIGHEST.w)}만원이든 하루 차이는 ${won(GAP)}원뿐이에요. 상한과 하한에 걸리는 지점을 함께 봤어요.`,
+    title: '실업급여 지급액, 월급 구간별 1일 수령액 표',
+    description: `월급별로 실업급여 하루 얼마를 받는지 표로 정리했어요. 월 ${man(LOWEST.w)}원이든 ${man(HIGHEST.w)}원이든 하루 차이는 ${won(GAP)}원뿐이에요. 상한과 하한에 걸리는 지점을 함께 봤어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 구직급여일액 원문 대조 · ${VERIFIED}`,
     calc: { href: '/unemployment/calculator/', label: '표에 없는 월급 계산해 보기' },
     hero: {
       tag: '정부지원금', line1: '월급별 실업급여 1일 수령액', line2: '내 월급이면 얼마인가요',
-      sub1: `월 ${man(LOWEST.w)}만원과 ${man(HIGHEST.w)}만원의 하루 차이가 ${won(GAP)}원이에요`,
+      sub1: `월 ${man(LOWEST.w)}원과 ${man(HIGHEST.w)}원의 하루 차이가 ${won(GAP)}원이에요`,
       sub2: '월급이 두 배 넘게 차이 나도 받는 돈은 비슷해요',
       foot: `고용보험법 구직급여일액 원문 대조 · ${VERIFIED} 검증`,
-      card: { label: `월 ${man(3e6)}만원이면`, big: won(R3.dailyBenefit), unit: '원', l1: '하루 지급액', l2: `한 달 30일이면 ${won(derive(R3.dailyBenefit * 30))}원` },
-      alt: `월급별 실업급여 1일 수령액 표. 월 ${man(3e6)}만원이면 하루 ${won(R3.dailyBenefit)}원`,
+      card: { label: `월 ${man(3e6)}원이면`, big: won(R3.dailyBenefit), unit: '원', l1: '하루 지급액', l2: `한 달 30일이면 ${won(derive(R3.dailyBenefit * 30))}원` },
+      alt: `월급별 실업급여 1일 수령액 표. 월 ${man(3e6)}원이면 하루 ${won(R3.dailyBenefit)}원`,
     },
     intro: `실업급여가 하루 얼마인지는 평균임금으로 정해져요. 원칙은 평균임금의 60퍼센트인데, 위아래로 막아 둔 금액이 있어서 실제로는 좁은 범위에 몰려요. 월급별로 하루 얼마를 받는지 표로 만들었어요. 어느 구간에서 하한액에 걸리고 어디부터 상한액에 걸리는지 한눈에 보여요.`,
     answer: {
       label: '내 월급대를 눌러 확인해 보세요',
       quick: [
-        { chip: `월 ${man(2e6)}만원`, selected: true, big: `${won(ub(2e6).dailyBenefit)}원`, unit: '하루', sub: '하한액이 적용돼요' },
-        { chip: `월 ${man(3e6)}만원`, selected: false, big: `${won(R3.dailyBenefit)}원`, unit: '하루', sub: `60퍼센트로는 ${won(R3.rawBenefit)}원이라 하한액이 적용돼요` },
-        { chip: `월 ${man(5e6)}만원`, selected: false, big: `${won(ub(5e6).dailyBenefit)}원`, unit: '하루', sub: '상한액이 적용돼요' },
+        { chip: `월 ${man(2e6)}원`, selected: true, big: `${won(ub(2e6).dailyBenefit)}원`, unit: '하루', sub: '하한액이 적용돼요' },
+        { chip: `월 ${man(3e6)}원`, selected: false, big: `${won(R3.dailyBenefit)}원`, unit: '하루', sub: `60퍼센트로는 ${won(R3.rawBenefit)}원이라 하한액이 적용돼요` },
+        { chip: `월 ${man(5e6)}원`, selected: false, big: `${won(ub(5e6).dailyBenefit)}원`, unit: '하루', sub: '상한액이 적용돼요' },
       ],
       boxes: [
         { title: '월급 차이만큼 벌어지지 않아요', text: `월급이 ${won(WAGE_GAP)}원 차이 나도 하루 지급액은 ${won(GAP)}원 차이예요` },
@@ -63,28 +63,29 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
         ['기초일액', '이직 전 3개월 임금 총액 ÷ 그 기간 총 일수'],
         ['하한액', `하루 ${won(C.DAILY_LOWER_LIMIT)}원`],
         ['상한액', `하루 ${won(C.DAILY_UPPER_LIMIT)}원`],
-        [`월 ${man(3e6)}만원이면`, `하루 ${won(R3.dailyBenefit)}원`],
+        [`월 ${man(3e6)}원이면`, `하루 ${won(R3.dailyBenefit)}원`],
         ['총액을 가르는 것', '하루 금액이 아니라 소정급여일수'],
       ],
     },
     sections: [
       { id: 's1', h2: '실업급여 1일 수령액은 어떻게 정해지나요', sub: '기초일액의 60퍼센트', blocks: [
         { type: 'p', lead: true, ans: '기초일액에 100분의 60을 곱한 금액이 구직급여일액이에요.', text: '기초일액은 이직 당시의 평균임금이에요. 이직 전 3개월간 지급된 임금 총액을 그 기간의 총 일수로 나눈 금액이라, 월급을 30으로 나눈 값과 비슷하게 나와요. 여기에 60퍼센트를 곱해요.' },
+        { type: 'p', ans: '위아래 한도가 하루 66,048원과 68,100원이에요.', text: '2026년 기준이고, 하한액은 최저임금에서 나오고 상한액은 대통령령으로 정해요.', link: { href: '/unemployment/amount/', label: '상한액 하한액 자세히' } },
         { type: 'p', ans: '그 값이 하한보다 낮으면 하한액을 줘요.', text: '계산 결과가 최저구직급여일액보다 낮으면 최저구직급여일액을 지급해요. 반대로 기초일액이 정해진 상한을 넘으면 상한까지만 인정해요. 그래서 실제 금액은 두 값 사이에 몰려요.' },
-        { type: 'note', title: '통상임금이 더 크면 그쪽을 써요', text: '산정한 평균임금이 통상임금보다 적으면 통상임금을 기초일액으로 해요. 마지막 이직 당시 일용근로자였다면 이 규정은 적용되지 않아요.' },
+        { type: 'note', title: '통상임금이 더 크면 그쪽을 써요', text: '산정한 평균임금이 통상임금보다 적으면 통상임금을 기초일액으로 해요. 마지막 이직 당시 일용근로자였다면 이 규정은 적용되지 않아요.', link: { href: '/unemployment/average-wage/', label: '평균임금 산정법' } },
       ] },
 
       { id: 's2', h2: '월급별 1일 수령액 표는 어떻게 되나요', sub: '구간별로 정리했어요', blocks: [
-        { type: 'p', lead: true, ans: `월 ${man(LOWEST.w)}만원부터 ${man(HIGHEST.w)}만원까지 하루 지급액을 계산했어요.`, text: `표의 60퍼센트 값이 하한액보다 낮으면 하한액이 적용되고, 상한을 넘으면 상한액이 적용돼요. 어느 구간에서 갈리는지 표에서 바로 보여요.` },
+        { type: 'p', lead: true, ans: `월 ${man(LOWEST.w)}원부터 ${man(HIGHEST.w)}원까지 하루 지급액을 계산했어요.`, text: `표의 60퍼센트 값이 하한액보다 낮으면 하한액이 적용되고, 상한을 넘으면 상한액이 적용돼요. 어느 구간에서 갈리는지 표에서 바로 보여요.` },
         { type: 'table', net: 2, caption: '월급별 실업급여 1일 수령액과 월 환산', headers: ['월 평균임금', '60퍼센트로 계산', '하루 지급액', '30일 환산', '적용'],
-          rows: ROWS.map((r) => ({ hi: r.w === 3e6, cells: [`${man(r.w)}만원`, `${won(r.raw)}원`, `${won(r.daily)}원`, `${won(r.month)}원`, r.hit] })),
+          rows: ROWS.map((r) => ({ hi: r.w === 3e6, cells: [`${man(r.w)}원`, `${won(r.raw)}원`, `${won(r.daily)}원`, `${won(r.month)}원`, r.hit] })),
           fn: '구직급여일액은 기초일액의 100분의 60이고, 그 값이 최저구직급여일액보다 낮으면 최저구직급여일액을 지급해요. 30일 환산은 이해를 돕기 위한 값이고 실제로는 인정된 날수만큼 지급돼요.' },
-        { type: 'note', title: '표에 없는 월급은 계산기로 보세요', text: '평균임금과 가입기간, 나이를 넣으면 하루 금액과 소정급여일수, 총액이 함께 나와요.' },
+        { type: 'note', title: '표에 없는 월급은 계산기로 보세요', text: '평균임금과 가입기간, 나이를 넣으면 하루 금액과 소정급여일수, 총액이 함께 나와요. 총액이 궁금하면 하루 금액에 소정급여일수를 곱하면 돼요.', link: { href: '/unemployment/total/', label: '총 수령액 계산' } },
       ] },
 
       { id: 's3', h2: '월급이 높아도 더 못 받는 구간이 있나요', sub: '상한액에 걸려요', blocks: [
         { type: 'p', lead: true, ans: `있어요. 일정 구간을 넘으면 월급이 아무리 올라도 하루 ${won(C.DAILY_UPPER_LIMIT)}원에서 멈춰요.`, text: `기초일액 자체에 상한이 있어서 하루 ${won(C.BASE_DAILY_WAGE_CAP)}원까지만 인정해요. 그 위로는 계산에 반영되지 않아요. 표에서 상한액이라고 표시된 구간이 여기예요.` },
-        { type: 'p', ans: '그래서 고소득일수록 대체율이 낮아져요.', text: `월 ${man(4e6)}만원을 받던 사람도 월 ${man(6e6)}만원을 받던 사람도 하루 금액이 같아요. 실업급여는 생활을 최소한 받쳐 주는 제도라 위쪽을 막아 둔 거예요.` },
+        { type: 'p', ans: '그래서 고소득일수록 대체율이 낮아져요.', text: `월 ${man(4e6)}원을 받던 사람도 월 ${man(6e6)}원을 받던 사람도 하루 금액이 같아요. 실업급여는 생활을 최소한 받쳐 주는 제도라 위쪽을 막아 둔 거예요.` },
         { type: 'note', title: '퇴직 전에 월급을 올려도 소용없어요', text: '상한에 이미 걸리는 구간이라면 평균임금이 올라도 하루 금액은 그대로예요.' },
       ] },
 
@@ -108,7 +109,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     ],
     faq: [
       ['월 300만원이면 실업급여가 하루 얼마인가요?', `${won(R3.dailyBenefit)}원이에요. 60퍼센트로 계산하면 ${won(R3.rawBenefit)}원인데 하한액이 적용돼요.`],
-      ['월급이 두 배면 실업급여도 두 배인가요?', `아니에요. 월 ${man(LOWEST.w)}만원과 ${man(HIGHEST.w)}만원의 하루 차이가 ${won(GAP)}원뿐이에요.`],
+      ['월급이 두 배면 실업급여도 두 배인가요?', `아니에요. 월 ${man(LOWEST.w)}원과 ${man(HIGHEST.w)}원의 하루 차이가 ${won(GAP)}원뿐이에요.`],
       ['실업급여는 월급의 몇 퍼센트인가요?', '기초일액의 60퍼센트가 원칙이에요. 다만 상한과 하한에 걸리면 그 금액이 적용돼요.'],
       ['월급이 적으면 얼마를 받나요?', `하루 ${won(C.DAILY_LOWER_LIMIT)}원이 하한이에요. 다만 하루 소정근로시간이 8시간보다 짧으면 더 낮아질 수 있어요.`],
       ['한 달에 얼마가 들어오나요?', '인정된 날수에 하루 금액을 곱한 금액이에요. 회차마다 날수가 달라서 금액도 달라져요.'],
@@ -116,7 +117,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     ],
     summary: [
       '구직급여일액은 기초일액의 60퍼센트이고 상한과 하한에 막혀요.',
-      `월 ${man(LOWEST.w)}만원과 ${man(HIGHEST.w)}만원의 하루 차이가 ${won(GAP)}원뿐이에요.`,
+      `월 ${man(LOWEST.w)}원과 ${man(HIGHEST.w)}원의 하루 차이가 ${won(GAP)}원뿐이에요.`,
       '기준은 세전 월급이 아니라 이직 전 3개월 평균임금이에요.',
       '총액을 가르는 건 하루 금액이 아니라 소정급여일수예요.',
     ],

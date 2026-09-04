@@ -1,8 +1,8 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-payday-guide.html
 export const meta = {
-  title: "실업급여 지급일 언제 들어오나요, 회차별 입금 날짜",
-  description: "실업급여는 정해진 날짜에 자동으로 나오지 않아요. 실업인정을 받아야 그 인정된 일수분이 지급돼요. 회차별 입금 날짜를 어디서 보는지와 첫 회차가 적은 이유를 정리했어요.",
+  title: "실업급여 지급일, 회차별 입금 날짜와 안 들어올 때",
+  description: "실업급여는 통상 실업인정을 받은 다음 날에 계좌로 들어와요. 매달 같은 날이 아니라 내 실업인정일을 따라가요. 회차별 입금 날짜를 어디서 보는지와 안 들어올 때 확인 순서를 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
   url: "https://moneydoc.kr/government/unemployment-payday-guide/",
@@ -12,18 +12,18 @@ export const meta = {
 
 export const scriptKey = "unemployment-payday-guide";
 
-export const html = `<h1>실업급여 지급일 언제 들어오나요, 회차별 입금 날짜</h1>
+export const html = `<h1>실업급여 지급일, 회차별 입금 날짜와 안 들어올 때</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 지급일 규정 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-payday-guide.png" width="1200" height="630" alt="실업급여 지급일과 회차별 입금 날짜">
-<p class="v2-lead v2-intro">실업급여는 매달 25일 같은 고정된 날에 들어오는 게 아니에요. 실업인정을 받아야 그 회차가 지급되고, 인정일이 사람마다 다르기 때문에 입금일도 사람마다 달라요. 언제 들어오는지, 회차별 날짜는 어디서 보는지, 첫 회차가 유독 적은 이유는 무엇인지 정리했어요.</p>
+<p class="v2-lead v2-intro">실업급여는 통상 실업인정을 받은 다음 날에 등록한 계좌로 들어와요. 매달 25일처럼 고정된 날이 아니라 내 실업인정일을 따라가요. 인정일이 4주 간격이면 입금도 4주 간격이에요. 첫 회차만 대기기간 7일이 빠져 7일치가 들어와요.</p>
 <section class="v2-answer" aria-label="즉답">
   <div class="v2-lbl">내 상황을 눌러 확인해 보세요</div>
   <div class="v2-chips" id="qchips" data-q='[{&quot;big&quot;:&quot;7일치&quot;,&quot;unit&quot;:&quot;지급&quot;,&quot;sub&quot;:&quot;대기기간 7일이 빠져서 약 462,336원이에요&quot;},{&quot;big&quot;:&quot;28일치&quot;,&quot;unit&quot;:&quot;지급&quot;,&quot;sub&quot;:&quot;4주 간격이면 약 1,849,344원이에요&quot;},{&quot;big&quot;:&quot;인정 확인&quot;,&quot;unit&quot;:&quot;먼저 볼 것&quot;,&quot;sub&quot;:&quot;실업인정이 났는지부터 확인하세요&quot;}]'><button type="button" data-i="0" aria-pressed="true">첫 회차예요</button><button type="button" data-i="1" aria-pressed="false">2차 이후예요</button><button type="button" data-i="2" aria-pressed="false">아직 안 들어와요</button></div>
   <div class="v2-big" id="qnet">7일치<small>지급</small></div>
   <div class="v2-sub" id="qsub">대기기간 7일이 빠져서 약 462,336원이에요</div>
   <div class="v2-split">
+    <div class="v2-box"><b>보통 인정 다음 날이에요</b><span>고용24 안내가 통상 실업인정을 받은 다음 날에 지정 계좌로 입금된다고 적어요</span></div>
     <div class="v2-box"><b>인정받은 일수분만 나와요</b><span>법이 실업의 인정을 받은 일수분을 지급한다고 정해요</span></div>
-    <div class="v2-box"><b>지급할 날짜는 알려 줘요</b><span>고용센터가 각 수급자격자에게 지급할 날짜를 정해 알려 주게 되어 있어요</span></div>
   </div>
 </section>
 
@@ -41,7 +41,8 @@ export const html = `<h1>실업급여 지급일 언제 들어오나요, 회차�
 </section>
 
 <h2 id="s1">실업인정 후 며칠 만에 지급되나요<small>인정을 받아야 지급이 시작돼요</small></h2>
-<p class="v2-lead"><span class="v2-ans">실업인정을 받으면 그 인정된 일수분이 지급되고, 지급할 날짜는 고용센터가 정해 알려 줘요.</span> 법은 구직급여를 실업의 인정을 받은 일수분으로 지급한다고 정하고, 각 수급자격자에게 지급할 날짜를 정해 알려야 한다고 정해요. 그래서 인정이 나지 않으면 아무것도 나가지 않아요.</p>
+<p class="v2-lead"><span class="v2-ans">통상 실업인정을 받은 다음 날에 본인이 지정한 계좌로 들어와요.</span> 고용24 실업급여 안내에 그렇게 적혀 있어요. 법은 구직급여를 실업의 인정을 받은 일수분으로 지급한다고 정하고, 각 수급자격자에게 지급할 날짜를 정해 알려야 한다고 정해요. 그래서 인정이 나지 않으면 아무것도 나가지 않아요.</p>
+<p><span class="v2-ans">한 번에 4주치가 들어오는 게 보통이에요.</span> 실업인정이 4주 간격이면 그 4주에 인정된 일수분이 한꺼번에 지급돼요. 하루 66,048원인 사람이면 28일치가 약 1,849,344원이에요. 4차부터는 인정일 간격이 7일에서 28일 사이라 회차마다 금액이 달라져요.</p>
 <div class="v2-tl" aria-label="실업 신고부터 첫 입금까지">
   <div><i>기준일</i><b>실업 신고</b><span>고용센터에 출석해 실업을 신고해요. 이 날짜가 모든 계산의 기준이 돼요</span></div>
   <div><i>1~7일</i><b>대기기간</b><span>신고일부터 7일은 대기기간이라 지급되지 않아요</span></div>
@@ -49,7 +50,7 @@ export const html = `<h1>실업급여 지급일 언제 들어오나요, 회차�
   <div><i>인정 후</i><b>첫 지급</b><span>대기기간을 뺀 7일치가 등록한 계좌로 들어와요</span></div>
   <div><i>이후</i><b>회차별 지급</b><span>인정일마다 그 기간에 인정된 일수분이 들어와요</span></div>
 </div>
-<div class="v2-note"><b>온라인으로 인정받아도 마찬가지예요</b> 인터넷으로 실업인정을 신청한 회차도 인정이 처리된 뒤에 지급돼요. 처리에 시간이 걸릴 수 있어요.</div>
+<div class="v2-note"><b>온라인으로 인정받아도 마찬가지예요</b> 인터넷으로 실업인정을 신청한 회차도 인정이 처리된 뒤에 지급돼요. 처리에 시간이 걸릴 수 있어요. 첫 회차가 유독 늦고 적게 느껴지는 건 앞의 7일이 대기기간이라 그래요. <a class="v2-go" href="/unemployment/waiting/">대기기간 7일이란</a></div>
 
 <h2 id="s2">입금 시간은 언제인가요<small>지급일에 계좌로 들어와요</small></h2>
 <p class="v2-lead"><span class="v2-ans">고용센터가 알려 준 지급일에 등록한 계좌로 들어와요.</span> 시간까지 법으로 정해져 있지는 않아요. 지급일 오전에 들어오는 경우가 많지만 은행 처리에 따라 달라질 수 있어요. 하루가 지나도 확인되지 않으면 고용센터에 물어보는 게 빨라요.</p>
@@ -65,10 +66,10 @@ export const html = `<h1>실업급여 지급일 언제 들어오나요, 회차�
 <p class="v2-lead"><span class="v2-ans">고용보험 홈페이지에서 지급 내역을 볼 수 있고, 다음 인정일은 수급자격증에 적혀 있어요.</span> 회차마다 며칠치가 인정되어 얼마가 나갔는지 확인할 수 있어요. 금액이 회차마다 달라 보이면 인정된 날수가 달라서인 경우가 대부분이에요.</p>
 <p><span class="v2-ans">회차별 금액이 다른 건 정상이에요.</span> 첫 회차는 대기기간이 빠져 7일치고, 이후에는 인정일 간격에 따라 28일치가 되기도 하고 더 짧아지기도 해요. 4차부터는 간격이 7일에서 28일 사이에서 정해지기 때문에 금액이 들쭉날쭉해 보여요.</p>
 <div class="v2-tbl v2-text"><table><caption>어디서 무엇을 확인하나요</caption><thead><tr><th>확인할 것</th><th>어디서 보나요</th></tr></thead><tbody>
-<tr><th scope="row">지급 내역과 금액</th><td data-l="어디서 보나요">고용보험 홈페이지</td></tr>
+<tr><th scope="row">지급 내역과 금액</th><td data-l="어디서 보나요">고용보험 홈페이지<a class="v2-go" href="https://www.ei.go.kr" target="_blank" rel="noopener">고용보험 홈페이지</a></td></tr>
 <tr><th scope="row">다음 실업인정일</th><td data-l="어디서 보나요">수급자격증에 적혀 있어요</td></tr>
 <tr><th scope="row">이번 회차 인정 일수</th><td data-l="어디서 보나요">실업인정 결과에서 확인해요</td></tr>
-<tr><th scope="row">남은 소정급여일수</th><td data-l="어디서 보나요">수급자격증과 지급 내역</td></tr>
+<tr><th scope="row">남은 소정급여일수</th><td data-l="어디서 보나요">수급자격증과 지급 내역<a class="v2-go" href="/unemployment/total/">총 얼마 받나</a></td></tr>
 <tr><th scope="row">등록 계좌</th><td data-l="어디서 보나요">신청할 때 등록한 본인 명의 계좌</td></tr>
 </tbody></table></div>
 <p class="v2-fn">지급일과 지급 방법은 고용보험법 제56조예요. 인정된 일수분을 지급하고, 지급할 날짜는 따로 정해 알려 줘요.</p>
@@ -87,16 +88,16 @@ export const html = `<h1>실업급여 지급일 언제 들어오나요, 회차�
 
 <h2 id="faq">자주 묻는 질문</h2>
 <div class="v2-faqs">
-<details class="v2-faq" open><summary><i>Q</i><span>실업급여는 언제 들어오나요?</span></summary><div><i>A</i><p>실업인정을 받은 뒤에 그 인정된 일수분이 지급돼요. 지급할 날짜는 고용센터가 정해 알려 줘요.</p></div></details>
-<details class="v2-faq"><summary><i>Q</i><span>매달 같은 날에 들어오나요?</span></summary><div><i>A</i><p>아니에요. 실업인정일이 사람마다 달라서 입금일도 달라요.</p></div></details>
+<details class="v2-faq" open><summary><i>Q</i><span>실업급여는 언제 들어오나요?</span></summary><div><i>A</i><p>통상 실업인정을 받은 다음 날에 등록한 계좌로 들어와요. 연휴가 끼면 하루 이틀 밀릴 수 있어요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>매달 같은 날에 들어오나요?</span></summary><div><i>A</i><p>아니에요. 내 실업인정일을 따라가요. 인정일이 4주 간격이면 입금도 4주 간격이에요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>첫 회차가 왜 적나요?</span></summary><div><i>A</i><p>대기기간 7일이 빠지기 때문이에요. 1차는 7일치가 나와요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>회차마다 금액이 다른 이유는요?</span></summary><div><i>A</i><p>하루 금액이 바뀐 게 아니라 인정된 날수가 달라서예요. 4차부터는 인정일 간격이 7일에서 28일 사이라 더 그래요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>지급일이 공휴일이면 어떻게 되나요?</span></summary><div><i>A</i><p>은행 처리를 거치기 때문에 영업일 기준으로 하루 이틀 밀릴 수 있어요.</p></div></details>
-<details class="v2-faq"><summary><i>Q</i><span>돈이 안 들어오면 어디에 문의하나요?</span></summary><div><i>A</i><p>실업인정이 처리됐는지 먼저 확인하고, 정상인데 안 들어왔다면 관할 고용센터에 문의하세요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>돈이 안 들어오면 어디에 문의하나요?</span></summary><div><i>A</i><p>관할 고용센터예요. 전화는 고용노동부 상담센터 1350번이에요. 전화 전에 실업인정이 처리됐는지, 등록 계좌가 그대로인지 먼저 확인하세요.</p></div></details>
 </div>
 <section class="v2-sum" aria-label="정리"><div class="v2-hd"><small>이 글 한 줄 정리</small><b>정리</b></div><ul>
-<li>실업급여는 정해진 날에 자동으로 나오지 않고 실업인정을 받아야 지급돼요.</li>
-<li>지급할 날짜는 고용센터가 정해 알려 줘요.</li>
+<li>통상 실업인정을 받은 다음 날에 등록한 계좌로 들어와요.</li>
+<li>매달 같은 날이 아니라 내 실업인정일을 따라가요.</li>
 <li>첫 회차는 대기기간 7일이 빠져 7일치가 들어와요.</li>
 <li>회차별 금액이 다른 건 인정된 날수가 달라서예요.</li>
 </ul></section>
@@ -104,6 +105,7 @@ export const html = `<h1>실업급여 지급일 언제 들어오나요, 회차�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제44조(실업의 인정), 제49조(대기기간), 제56조(지급일 및 지급 방법), 실업인정 및 재취업지원규정 제9조(출석 여부의 확인), 제12조(실업인정일의 지정).
+<b>정부 안내</b>고용24 실업급여 안내(2026년 8월 25일 수정)의 지급 절차 설명이에요.
 <b>정부 도구</b>고용보험 홈페이지의 지급 내역 화면에서 회차별 일수와 금액을 확인했어요 (2026-09-02 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/round-1/"><b>다음 질문</b>실업급여 1차 실업인정, 교육 이수와 첫 구직활동 신고</a><a href="/unemployment/round-4/"><b>다음 질문</b>실업급여 4차 실업인정, 회차별 인정일 간격과 심층상담</a></div>
@@ -122,7 +124,7 @@ export const faqLd = {
       "name": "실업급여는 언제 들어오나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "실업인정을 받은 뒤에 그 인정된 일수분이 지급돼요. 지급할 날짜는 고용센터가 정해 알려 줘요."
+        "text": "통상 실업인정을 받은 다음 날에 등록한 계좌로 들어와요. 연휴가 끼면 하루 이틀 밀릴 수 있어요."
       }
     },
     {
@@ -130,7 +132,7 @@ export const faqLd = {
       "name": "매달 같은 날에 들어오나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "아니에요. 실업인정일이 사람마다 달라서 입금일도 달라요."
+        "text": "아니에요. 내 실업인정일을 따라가요. 인정일이 4주 간격이면 입금도 4주 간격이에요."
       }
     },
     {
@@ -162,7 +164,7 @@ export const faqLd = {
       "name": "돈이 안 들어오면 어디에 문의하나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "실업인정이 처리됐는지 먼저 확인하고, 정상인데 안 들어왔다면 관할 고용센터에 문의하세요."
+        "text": "관할 고용센터예요. 전화는 고용노동부 상담센터 1350번이에요. 전화 전에 실업인정이 처리됐는지, 등록 계좌가 그대로인지 먼저 확인하세요."
       }
     }
   ]
@@ -173,15 +175,15 @@ export const landing = {
     "tag": "정부지원금",
     "line1": "실업급여 지급일",
     "line2": "언제 들어오나요",
-    "sub1": "월급처럼 매달 같은 날 나오는 게 아니에요",
-    "sub2": "실업인정을 받은 일수분을 인정일 뒤에 지급해요",
+    "sub1": "통상 실업인정을 받은 다음 날에 계좌로 들어와요",
+    "sub2": "매달 같은 날이 아니라 내 실업인정일을 따라가요",
     "foot": "고용보험법 지급일 규정 원문 대조 · 2026-09-02 검증",
     "card": {
-      "label": "기준",
-      "big": "실업인정일",
-      "unit": "기준",
-      "l1": "인정받은 일수분이 지급돼요",
-      "l2": "지급할 날짜는 따로 알려 줘요"
+      "label": "보통 언제 들어오나",
+      "big": "다음 날",
+      "unit": "실업인정 뒤",
+      "l1": "고용24 안내 기준이에요",
+      "l2": "연휴가 끼면 하루 이틀 밀릴 수 있어요"
     },
     "alt": "실업급여 지급일과 회차별 입금 날짜"
   },
@@ -213,12 +215,12 @@ export const landing = {
   ],
   "boxes": [
     {
-      "title": "인정받은 일수분만 나와요",
-      "text": "법이 실업의 인정을 받은 일수분을 지급한다고 정해요"
+      "title": "보통 인정 다음 날이에요",
+      "text": "고용24 안내가 통상 실업인정을 받은 다음 날에 지정 계좌로 입금된다고 적어요"
     },
     {
-      "title": "지급할 날짜는 알려 줘요",
-      "text": "고용센터가 각 수급자격자에게 지급할 날짜를 정해 알려 주게 되어 있어요"
+      "title": "인정받은 일수분만 나와요",
+      "text": "법이 실업의 인정을 받은 일수분을 지급한다고 정해요"
     }
   ],
   "keyPoints": {
@@ -280,11 +282,11 @@ export const landing = {
   "faq": [
     {
       "q": "실업급여는 언제 들어오나요?",
-      "a": "실업인정을 받은 뒤에 그 인정된 일수분이 지급돼요. 지급할 날짜는 고용센터가 정해 알려 줘요."
+      "a": "통상 실업인정을 받은 다음 날에 등록한 계좌로 들어와요. 연휴가 끼면 하루 이틀 밀릴 수 있어요."
     },
     {
       "q": "매달 같은 날에 들어오나요?",
-      "a": "아니에요. 실업인정일이 사람마다 달라서 입금일도 달라요."
+      "a": "아니에요. 내 실업인정일을 따라가요. 인정일이 4주 간격이면 입금도 4주 간격이에요."
     },
     {
       "q": "첫 회차가 왜 적나요?",
@@ -300,7 +302,7 @@ export const landing = {
     },
     {
       "q": "돈이 안 들어오면 어디에 문의하나요?",
-      "a": "실업인정이 처리됐는지 먼저 확인하고, 정상인데 안 들어왔다면 관할 고용센터에 문의하세요."
+      "a": "관할 고용센터예요. 전화는 고용노동부 상담센터 1350번이에요. 전화 전에 실업인정이 처리됐는지, 등록 계좌가 그대로인지 먼저 확인하세요."
     }
   ],
   "related": [

@@ -22,7 +22,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
   return {
     slug: 'unemployment-deadline-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 신청기간',
-    title: '실업급여 신청기간 12개월, 늦게 신청하면 얼마나 손해인가',
+    title: '실업급여 신청기간, 언제까지 신청해야 하나요',
     description: `실업급여는 이직일 다음 날부터 12개월 안에 받아야 해요. 소정급여일수가 남아 있어도 이 기간이 지나면 끝나요. 늦게 신청했을 때 얼마를 못 받는지 계산했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 수급기간 규정 원문 대조 · ${VERIFIED}`,
@@ -73,6 +73,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
       { id: 's2', h2: '12개월은 언제부터 세나요', sub: '이직일 다음 날이에요', blocks: [
         { type: 'p', lead: true, ans: '회사를 그만둔 날의 다음 날부터 세요.', text: '신청한 날이나 이직확인서가 처리된 날이 아니에요. 그래서 회사 서류를 기다리다 두 달이 지나면, 그 두 달은 이미 수급기간에서 빠져나간 거예요.' },
+        { type: 'p', ans: '며칠 받는지가 손해 크기를 정해요.', text: '소정급여일수는 나이와 가입기간으로 120일에서 270일 사이로 정해져요. 길수록 늦게 신청하면 더 많이 잘려요.', link: { href: '/unemployment/days/', label: '소정급여일수 표' } },
         { type: 'p', ans: '재취업했다가 다시 그만두면 새로 시작해요.', text: '새로 수급자격을 인정받으면 그 수급자격을 기준으로 지급해요. 다만 앞의 자격으로 받던 급여는 거기서 정리돼요.' },
         { type: 'note', title: '이직일은 이직확인서에 적혀요', text: '사직서를 낸 날과 실제 이직일이 다를 수 있어요. 취업규칙에 퇴직 효력 발생 시점이 따로 있으면 그 날이 이직일이 돼요.' },
       ] },
@@ -93,6 +94,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
       { id: 's5', h2: '신청기간을 늘릴 수 있는 경우가 있나요', sub: '취업할 수 없는 사정이 있을 때', blocks: [
         { type: 'p', lead: true, ans: '임신, 출산, 육아, 질병, 부상처럼 취업할 수 없는 사정이 있으면 그 기간만큼 늘려 줘요.', text: '수급기간에 그 사유로 취업할 수 없었던 기간을 더해요. 다만 무한정 늘어나는 게 아니라 최대 4년까지예요.' },
+        { type: 'p', ans: '연장 사유와 절차는 따로 정리했어요.', text: '임신, 출산, 육아, 질병처럼 취업할 수 없는 사정이면 수급기간 안에 신고해야 해요.', link: { href: '/unemployment/extension/', label: '수급기간 연장' } },
         { type: 'p', ans: '연장은 신고해야 인정돼요.', text: '자동으로 되지 않아요. 수급기간 안에 그 사실을 신고해야 하고, 늦으면 인정받기 어려워요. 아파서 못 다니게 됐다면 그 시점에 바로 알리는 게 맞아요.' },
         { type: 'table', text: true, caption: '기한과 관련해 확인할 것', headers: ['확인할 것', '왜 중요한가요'], rows: [
           { cells: ['이직일', '여기 다음 날부터 12개월을 세요'] },

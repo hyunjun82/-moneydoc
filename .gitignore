@@ -59,3 +59,6 @@ components/GenericCalculator.tsx.backup
 
 # 근거 캡처(PNG)는 용량이 커서 제외, JSON 텍스트는 커밋
 scripts/article-template/evidence/**/*.png
+
+# 검증 리포트는 실행할 때마다 새로 생기는 산출물이라 커밋하지 않는다
+scripts/verify-system/reports/

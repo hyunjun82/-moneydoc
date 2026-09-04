@@ -65,6 +65,7 @@ export const html = `<h1>일용직 실업급여 조건과 수급 중 일용근�
 
 <h2 id="s4">수급 중 일용근로는 어떻게 신고하나요<small>일한 날은 취업으로 봐요</small></h2>
 <p class="v2-lead"><span class="v2-ans">일용근로자로 근로를 제공한 날은 취업으로 보기 때문에 실업인정일에 신고해야 해요.</span> 시행규칙이 일용근로자로 근로를 제공하는 경우를 취업의 인정기준에 넣어 두었어요. 하루만 일했어도 그 날은 실업으로 인정되지 않아요. 신고하면 그 날만 빠지고 나머지 날은 그대로 지급돼요.</p>
+<p><span class="v2-ans">신고 방법은 아르바이트와 같아요.</span> 실업인정 신청서의 취업 사실란에 일한 날짜와 받은 돈을 적어요. <a class="v2-go" href="/unemployment/part-time-job/">일한 날 신고 방법</a></p>
 <p><span class="v2-ans">일용으로 수급자격을 받은 사람은 다르게 봐요.</span> 일용근로자로 수급자격을 인정받은 사람이 실업인정대상기간 중에 정해진 방식으로 근로를 제공하는 경우는 재취업활동을 한 것으로 보기도 해요. 본인이 어느 쪽인지는 고용센터에서 확인하는 게 정확해요.</p>
 <div class="v2-tbl v2-text"><table><caption>수급 중 일용으로 일했을 때</caption><thead><tr><th>상황</th><th>어떻게 되나요</th></tr></thead><tbody>
 <tr><th scope="row">하루 일하고 신고함</th><td data-l="어떻게 되나요">그 날만 인정되지 않고 나머지는 지급돼요</td></tr>
@@ -77,11 +78,12 @@ export const html = `<h1>일용직 실업급여 조건과 수급 중 일용근�
 
 <h2 id="s5">일용직도 대기기간 7일이 있나요<small>건설일용은 없어요</small></h2>
 <p class="v2-lead"><span class="v2-ans">일반적으로는 있지만, 마지막 이직 당시 건설일용근로자였다면 대기기간이 없어요.</span> 법은 실업 신고일부터 7일간을 대기기간으로 보아 구직급여를 지급하지 않는다고 정하면서, 최종 이직 당시 건설일용근로자였던 사람은 예외로 두었어요. 그래서 신고일부터 바로 계산해요.</p>
+<p><span class="v2-ans">대기기간이 있으면 첫 회차가 7일치예요.</span> 실업 신고일부터 7일은 급여가 나오지 않는 기간이에요. <a class="v2-go" href="/unemployment/waiting/">대기기간 7일</a></p>
 <p><span class="v2-ans">첫 회차 금액이 다르게 나와요.</span> 대기기간이 없으면 첫 회차에 인정되는 날수가 더 많아요. 같은 날 신고해도 건설일용 여부에 따라 첫 입금액이 달라지는 이유예요.</p>
 <div class="v2-tbl v2-text"><table><caption>일용직이 신청 전에 확인할 것</caption><thead><tr><th>확인할 것</th><th>왜 필요한가요</th></tr></thead><tbody>
 <tr><th scope="row">최근 근로일 수</th><td data-l="왜 필요한가요">신청일 전 기간의 3분의 1 미만인지 봐요</td></tr>
 <tr><th scope="row">건설업 종사 여부</th><td data-l="왜 필요한가요">14일 연속 무근로 특례와 대기기간 예외에 걸려요</td></tr>
-<tr><th scope="row">근로내용 확인신고</th><td data-l="왜 필요한가요">회사가 신고해야 근로일이 확인돼요</td></tr>
+<tr><th scope="row">근로내용 확인신고</th><td data-l="왜 필요한가요">회사가 신고해야 근로일이 확인돼요<a class="v2-go" href="https://www.ei.go.kr" target="_blank" rel="noopener">고용보험 홈페이지</a></td></tr>
 <tr><th scope="row">합산한 피보험 단위기간</th><td data-l="왜 필요한가요">여러 현장 기간을 합쳐 180일이 되는지</td></tr>
 <tr><th scope="row">다른 사업 이직 이력</th><td data-l="왜 필요한가요">제한 사유가 있으면 90일 요건이 붙어요</td></tr>
 </tbody></table></div>

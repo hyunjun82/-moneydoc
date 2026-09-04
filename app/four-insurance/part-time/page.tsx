@@ -29,8 +29,9 @@ export default function Page() {
       faqLd={faqLd}
       scriptKey={scriptKey}
       url={PAGE_URL}
-      catHref="/tax/"
-      catLabel="세금"
+      catHref="/four-insurance/"
+      catLabel="4대보험"
+      navActive="tax"
       crumb="아르바이트 4대보험"
     />
   );

@@ -29,8 +29,9 @@ export default function Page() {
       faqLd={faqLd}
       scriptKey={scriptKey}
       url={PAGE_URL}
-      catHref="/savings/"
-      catLabel="저축"
+      catHref="/"
+      catLabel="홈"
+      navActive="savings"
       crumb="적금 이자"
     />
   );

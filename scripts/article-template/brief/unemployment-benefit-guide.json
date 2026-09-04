@@ -133,6 +133,24 @@
       "must": [
         "실업크레딧"
       ]
+    },
+    {
+      "label": "고용24 실업인정 인터넷 신청 매뉴얼 (1·4차 출석, 회차별 재취업활동 횟수)",
+      "kind": "gov",
+      "url": "https://eiac.ei.go.kr/ei/common/dnfile/manual.pdf",
+      "must": [
+        "4차 실업인정일을 제외",
+        "4주간 최소 2회"
+      ]
+    },
+    {
+      "label": "고용노동부 인터넷상담: 실업인정 회차별 재취업활동 횟수와 출석 회차 (2023-08)",
+      "kind": "gov",
+      "url": "https://www.moel.go.kr/minwon/fastcounsel/fastcounselView.do?inetDcssMngId=202308011332502681000",
+      "must": [
+        "출석만 가능",
+        "2회이상"
+      ]
     }
   ]
 }

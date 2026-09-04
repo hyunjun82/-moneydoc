@@ -23,7 +23,7 @@ const ext = (href) => /^https?:/.test(href) ? ' target="_blank" rel="noopener"' 
 
 // ───────── 블록 렌더러 ─────────
 const B = {
-  p: (b) => `<p${b.lead ? ' class="lead"' : ''}>${b.ans ? `<span class="ans">${b.ans}</span> ` : ''}${b.text ?? ''}</p>`,
+  p: (b) => `<p${b.lead ? ' class="lead"' : ''}>${b.ans ? `<span class="ans">${b.ans}</span> ` : ''}${b.text ?? ''}${b.link ? ` <a class="go" href="${b.link.href}"${ext(b.link.href)}>${b.link.label}</a>` : ''}</p>`,
   h3: (b) => `<h3${b.id ? ` id="${b.id}"` : ''}>${b.text}</h3>`,
   note: (b) => `<div class="note"><b>${b.title}</b> ${b.text}${b.link ? ` <a class="go" href="${b.link.href}"${ext(b.link.href)}>${b.link.label}</a>` : ''}</div>`,
   fn: (b) => `<p class="fn">${b.text}</p>`,

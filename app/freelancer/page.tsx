@@ -29,8 +29,9 @@ export default function Page() {
       faqLd={faqLd}
       scriptKey={scriptKey}
       url={PAGE_URL}
-      catHref="/tax/"
-      catLabel="세금"
+      catHref="/"
+      catLabel="홈"
+      navActive="tax"
       crumb="프리랜서 3.3%"
     />
   );

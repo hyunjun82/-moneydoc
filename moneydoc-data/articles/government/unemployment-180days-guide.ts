@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-180days-guide.html
 export const meta = {
-  title: "실업급여 180일 계산법, 주 며칠 일해야 채워지나요",
+  title: "실업급여 180일, 주 며칠 일해야 채워지는지 계산법",
   description: "실업급여 180일은 다닌 날이 아니라 보수가 나간 날을 세요. 유급 주휴일이 들어가서 주 5일 근무자는 30주, 달력으로 6.9개월이면 채워져요. 근무 형태별로 얼마나 걸리는지 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-180days-guide";
 
-export const html = `<h1>실업급여 180일 계산법, 주 며칠 일해야 채워지나요</h1>
+export const html = `<h1>실업급여 180일, 주 며칠 일해야 채워지는지 계산법</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 피보험 단위기간 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-180days-guide.png" width="1200" height="630" alt="실업급여 180일 계산법. 주 5일 근무자는 6.9개월">
 <p class="v2-lead v2-intro">실업급여를 받으려면 고용보험에 180일 이상 들어 있어야 해요. 그런데 이 180일은 회사를 다닌 날을 세는 게 아니에요. 보수가 나가는 기초가 된 날만 세기 때문에, 같은 6개월을 다녀도 근무 형태에 따라 채워지기도 하고 모자라기도 해요. 무엇을 세는지, 근무 형태별로 얼마나 걸리는지, 내 일수는 어디서 보는지 정리했어요.</p>
@@ -56,7 +56,7 @@ export const html = `<h1>실업급여 180일 계산법, 주 며칠 일해야 채
 <h2 id="s2">180일 계산법은 어떻게 되나요<small>주당 쌓이는 날을 세고 180으로 나눠요</small></h2>
 <p class="v2-lead"><span class="v2-ans">한 주에 며칠이 쌓이는지 세고, 180을 그 숫자로 나누면 필요한 주가 나와요.</span> 주 5일 근무자는 근무 5일에 유급 주휴 1일이 더해져 한 주에 6일이 쌓여요. 180을 6으로 나누면 30주고, 달력으로는 210일이에요. 주휴일은 한 주 동안 정해진 근무일을 다 채워야 붙기 때문에, 결근이 잦으면 그만큼 늦어져요.</p>
 <p><span class="v2-ans">주 15시간 미만이면 주휴가 붙지 않아요.</span> 이때는 실제 근무일만 쌓여서 속도가 확 느려져요. 대신 이런 근로자를 위해 세는 구간을 24개월로 늘려 주는 특례가 따로 있어요.</p>
-<div class="v2-note"><b>한 회사에서 다 채우지 않아도 돼요</b> 기준기간 안에 여러 회사에서 일했다면 그 기간을 합산해요. 각각은 짧아도 합쳐서 180일이면 조건을 채운 거예요.</div>
+<div class="v2-note"><b>한 회사에서 다 채우지 않아도 돼요</b> 기준기간 안에 여러 회사에서 일했다면 그 기간을 합산해요. 각각은 짧아도 합쳐서 180일이면 조건을 채운 거예요. 180일은 수급자격 네 가지 조건 중 하나예요. <a class="v2-go" href="/unemployment/eligibility/">수급자격 4가지 조건</a></div>
 
 <h2 id="s3">주 5일 일하면 180일을 언제 채우나요<small>30주, 달력으로 6.9개월</small></h2>
 <p class="v2-lead"><span class="v2-ans">주 5일 근무자는 30주 만에 채워요. 달력으로 6.9개월이에요.</span> 한 주에 6일씩 쌓이기 때문이에요. 흔히 6개월만 다니면 된다고 알고 있는데, 그건 180일을 달력 날짜로 착각한 거예요. 반대로 8개월은 넘게 다녀야 한다고 걱정하는 경우도 있는데 그것도 아니에요.</p>
@@ -90,7 +90,7 @@ export const html = `<h1>실업급여 180일 계산법, 주 며칠 일해야 채
 <p class="v2-lead"><span class="v2-ans">고용보험 홈페이지에서 본인 인증을 하면 피보험자격 이력을 볼 수 있어요.</span> 회사별 취득일과 상실일이 나오기 때문에 기준기간 안에 어디를 얼마나 다녔는지 확인할 수 있어요. 다만 단위기간이 며칠인지는 회사가 낸 이직확인서에 적히기 때문에, 정확한 일수는 그 서류를 봐야 해요.</p>
 <p><span class="v2-ans">이직확인서에 적힌 일수가 틀릴 수도 있어요.</span> 단위기간과 이직 전 소정근로시간이 잘못 적히면 수급자격뿐 아니라 금액과 일수까지 달라져요. 신청 전에 숫자를 꼭 확인하고, 다르면 회사에 정정을 요청하세요.</p>
 <div class="v2-tbl v2-text"><table><caption>어디서 무엇을 확인하나요</caption><thead><tr><th>확인할 것</th><th>어디서 보나요</th></tr></thead><tbody>
-<tr><th scope="row">다닌 회사와 기간</th><td data-l="어디서 보나요">고용보험 홈페이지 피보험자격 이력</td></tr>
+<tr><th scope="row">다닌 회사와 기간</th><td data-l="어디서 보나요">고용보험 홈페이지 피보험자격 이력<a class="v2-go" href="https://www.ei.go.kr" target="_blank" rel="noopener">고용보험 홈페이지</a></td></tr>
 <tr><th scope="row">피보험 단위기간 일수</th><td data-l="어디서 보나요">회사가 제출한 이직확인서</td></tr>
 <tr><th scope="row">이직 전 소정근로시간</th><td data-l="어디서 보나요">이직확인서. 금액과 일수에 함께 영향을 줘요</td></tr>
 <tr><th scope="row">최종 판단</th><td data-l="어디서 보나요">고용센터의 수급자격 인정</td></tr>

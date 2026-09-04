@@ -25,7 +25,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
   const MONTH_GAP = derive(MONTH_HIGH - MONTH_LOW);
   const MIN_WAGE = 10320;                                    // 2026년 최저임금 시급 (최저임금위원회)
   const LOWER_CALC = derive(Math.round(MIN_WAGE * 0.8 * 8)); // 최저기초일액 × 100분의 80
-  const CAP_WAGE = derive(Math.round(C.BASE_DAILY_WAGE_CAP * 30.4));
+  // 엔진은 평균임금을 monthlySalary*3/90, 즉 월급÷30 으로 잡는다. 이 글의 표도 같은 기준이다.
+  // 여기만 30.4 를 쓰는 바람에 상한 도달 월급이 45,400원 어긋나 있었다 (2026-09-04 검토에서 발견).
+  const CAP_WAGE = derive(Math.round(C.BASE_DAILY_WAGE_CAP * 30));
   const R = ub(3e6);
   const EI = 'https://www.ei.go.kr';
 
@@ -48,9 +50,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     answer: {
       label: '내 월급을 눌러 확인해 보세요',
       quick: [
-        { chip: `월 ${man(2e6)}만원`, selected: true, big: `${won(ub(2e6).dailyBenefit)}원`, unit: '하루 지급액', sub: '하한액이 적용돼요' },
-        { chip: `월 ${man(3e6)}만원`, selected: false, big: `${won(R.dailyBenefit)}원`, unit: '하루 지급액', sub: `60퍼센트로 치면 ${won(R.rawBenefit)}원이라 하한액이 적용돼요` },
-        { chip: `월 ${man(5e6)}만원`, selected: false, big: `${won(ub(5e6).dailyBenefit)}원`, unit: '하루 지급액', sub: '상한액이 적용돼요' },
+        { chip: `월 ${man(2e6)}원`, selected: true, big: `${won(ub(2e6).dailyBenefit)}원`, unit: '하루 지급액', sub: '하한액이 적용돼요' },
+        { chip: `월 ${man(3e6)}원`, selected: false, big: `${won(R.dailyBenefit)}원`, unit: '하루 지급액', sub: `60퍼센트로 치면 ${won(R.rawBenefit)}원이라 하한액이 적용돼요` },
+        { chip: `월 ${man(5e6)}원`, selected: false, big: `${won(ub(5e6).dailyBenefit)}원`, unit: '하루 지급액', sub: '상한액이 적용돼요' },
       ],
       boxes: [
         { title: '상한과 하한 차이가 작아요', text: `하루 ${won(GAP)}원, 한 달 30일로 쳐도 ${won(MONTH_GAP)}원 차이예요` },
@@ -70,8 +72,8 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     },
     sections: [
       { id: 's1', h2: '2026년 실업급여 하루 상한액은 얼마인가요', sub: `하루 ${won(C.DAILY_UPPER_LIMIT)}원`, blocks: [
-        { type: 'p', lead: true, ans: `2026년 실업급여 하루 상한액은 ${won(C.DAILY_UPPER_LIMIT)}원이에요.`, text: `평균임금의 60퍼센트가 이 금액을 넘어도 더 주지 않아요. 기초일액 자체에도 한도가 있어서 하루 ${won(C.BASE_DAILY_WAGE_CAP)}원까지만 인정해요. 월로 환산하면 대략 ${won(CAP_WAGE)}원이 넘는 월급은 금액 계산에서 더 반영되지 않는다는 뜻이에요.` },
-        { type: 'p', ans: '그래서 고소득자일수록 대체율이 낮아져요.', text: `월 ${man(5e6)}만원을 받던 사람도 하루 ${won(ub(5e6).dailyBenefit)}원이고, 월 ${man(7e6)}만원을 받던 사람도 같은 ${won(ub(7e6).dailyBenefit)}원이에요. 실업급여는 생활을 최소한 받쳐 주는 제도라 위쪽을 막아 둔 거예요.` },
+        { type: 'p', lead: true, ans: `2026년 실업급여 하루 상한액은 ${won(C.DAILY_UPPER_LIMIT)}원이에요.`, text: `평균임금의 60퍼센트가 이 금액을 넘어도 더 주지 않아요. 기초일액 자체에도 한도가 있어서 하루 ${won(C.BASE_DAILY_WAGE_CAP)}원까지만 인정해요. 월급을 30으로 나눠 보면 월 ${won(CAP_WAGE)}원부터는 더 올라도 하루 금액이 그대로예요. 실제 평균임금은 3개월 임금 총액을 그 기간 총 일수로 나누기 때문에 며칠 차이로 조금씩 달라져요.` },
+        { type: 'p', ans: '그래서 고소득자일수록 대체율이 낮아져요.', text: `월 ${man(5e6)}원을 받던 사람도 하루 ${won(ub(5e6).dailyBenefit)}원이고, 월 ${man(7e6)}원을 받던 사람도 같은 ${won(ub(7e6).dailyBenefit)}원이에요. 실업급여는 생활을 최소한 받쳐 주는 제도라 위쪽을 막아 둔 거예요.` },
         { type: 'note', title: '상한액은 해마다 정해져요', text: '기초일액의 상한액은 대통령령으로 정하도록 되어 있어서 매년 바뀔 수 있어요. 이 글의 금액은 2026년 기준이에요.' },
       ] },
 
@@ -84,15 +86,15 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { id: 's3', h2: '상한액과 하한액은 왜 있나요', sub: '월급이 달라도 금액이 비슷해지는 이유', blocks: [
         { type: 'p', lead: true, ans: `위아래를 막아 두었기 때문에 실제로 받는 금액은 ${won(C.DAILY_LOWER_LIMIT)}원에서 ${won(C.DAILY_UPPER_LIMIT)}원 사이로 좁아져요.`, text: `차이가 하루 ${won(GAP)}원이라, 월급이 두 배 차이 나도 실업급여는 거의 같아요. 이 점을 모르고 월급이 많으니 실업급여도 많겠지 하고 생활비를 잡으면 어긋나요.` },
         { type: 'table', net: 2, caption: '월급별 하루 지급액과 상한 하한 적용 여부', headers: ['월 평균임금', '60퍼센트로 계산', '실제 하루 지급액', '적용'],
-          rows: WAGES.map((r) => ({ hi: r.w === 3e6, cells: [`${man(r.w)}만원`, `${won(r.raw)}원`, `${won(r.daily)}원`, r.hit] })),
+          rows: WAGES.map((r) => ({ hi: r.w === 3e6, cells: [`${man(r.w)}원`, `${won(r.raw)}원`, `${won(r.daily)}원`, r.hit] })),
           fn: '구직급여일액은 기초일액의 100분의 60이고, 그 값이 최저구직급여일액보다 낮으면 최저구직급여일액을 지급해요. 기초일액에는 상한이 있어요.' },
-        { type: 'note', title: '금액보다 일수가 총액을 가릅니다', text: '하루 금액은 사람마다 크게 다르지 않아요. 총액을 가르는 건 소정급여일수예요. 가입기간과 나이를 먼저 확인해 보세요.' },
+        { type: 'note', title: '금액보다 일수가 총액을 가릅니다', text: '하루 금액은 사람마다 크게 다르지 않아요. 총액을 가르는 건 소정급여일수예요. 가입기간과 나이로 120일에서 270일 사이로 정해져요.', link: { href: '/unemployment/days/', label: '소정급여일수 표' } },
       ] },
 
       { id: 's4', h2: '하루 금액을 월로 치면 얼마인가요', sub: `30일 기준 ${won(MONTH_LOW)}원에서 ${won(MONTH_HIGH)}원`, blocks: [
         { type: 'p', lead: true, ans: `한 달을 30일로 보면 ${won(MONTH_LOW)}원에서 ${won(MONTH_HIGH)}원이에요.`, text: `다만 실제로는 딱 30일씩 들어오지 않아요. 실업인정일 간격에 따라 28일치가 들어오는 달도 있고 다른 달도 있어요. 첫 회차는 대기기간 7일이 빠져서 더 적게 들어와요.` },
         { type: 'p', ans: '세금은 떼지 않아요.', text: '실업급여는 근로소득이 아니라서 소득세를 원천징수하지 않아요. 통장에 찍히는 금액이 그대로 손에 쥐는 금액이에요.' },
-        { type: 'note', title: '회차마다 금액이 달라 보이는 이유', text: '하루 금액이 바뀐 게 아니라 인정된 날수가 달라서예요. 며칠치인지 확인하면 계산이 맞아떨어져요.' },
+        { type: 'note', title: '회차마다 금액이 달라 보이는 이유', text: '하루 금액이 바뀐 게 아니라 인정된 날수가 달라서예요. 며칠치인지 확인하면 계산이 맞아떨어져요. 내 월급대가 어디에 걸리는지는 구간별 표로 보면 빨라요.', link: { href: '/unemployment/by-salary/', label: '월급 구간별 표' } },
       ] },
 
       { id: 's5', h2: '작년과 얼마나 달라졌나요', sub: '하한액은 최저임금을 따라 움직여요', blocks: [
@@ -103,6 +105,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           { cells: ['이직 전 1일 소정근로시간', '이직확인서. 하한액 계산에 쓰여요'] },
           { cells: ['정해진 하루 지급액', '수급자격 인정 통지와 수급자격증'] },
           { cells: ['적용 연도', '이직일이 속한 해의 기준으로 정해져요'] },
+          { cells: ['총 얼마 받는지', '하루 지급액에 소정급여일수를 곱해요'], link: { href: '/unemployment/total/', label: '총 수령액 계산' } },
         ], fn: '이직확인서의 평균임금이나 소정근로시간이 잘못 적히면 금액이 달라져요. 신청 전에 확인하세요.' },
       ] },
     ],

@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-job-search-guide.html
 export const meta = {
-  title: "실업급여 구직활동 인정 기준과 증빙 만드는 법",
+  title: "실업급여 구직활동 인정 기준과 증빙 남기는 법",
   description: "실업급여 구직활동은 지원하고 끝이 아니라 인정을 받아야 해요. 같은 회사 반복 지원이나 탐문만 하는 경우는 인정되지 않아요. 인정되는 활동과 안 되는 활동, 증빙 만드는 법을 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-job-search-guide";
 
-export const html = `<h1>실업급여 구직활동 인정 기준과 증빙 만드는 법</h1>
+export const html = `<h1>실업급여 구직활동 인정 기준과 증빙 남기는 법</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-job-search-guide.png" width="1200" height="630" alt="실업급여 구직활동 인정 기준과 인정되지 않는 활동">
 <p class="v2-lead v2-intro">실업인정일에 활동을 신고하면 담당직원이 근로 의사와 능력을 가지고 적극적으로 재취업활동을 했는지 확인해요. 형식만 갖춘 활동은 인정되지 않고, 필요하면 지원한 회사에 사실관계를 확인하기도 해요. 무엇이 인정되고 무엇이 걸리는지, 증빙은 어떻게 남기는지 정리했어요.</p>
@@ -42,6 +42,7 @@ export const html = `<h1>실업급여 구직활동 인정 기준과 증빙 만�
 
 <h2 id="s1">구직활동 인정 기준은 무엇인가요<small>적극적으로 했는지를 봐요</small></h2>
 <p class="v2-lead"><span class="v2-ans">근로 의사와 능력을 가지고 적극적으로 재취업활동을 했는지가 기준이에요.</span> 담당직원은 실업인정 신청서에 적은 활동 내용을 보고 판단해요. 필요하면 본인이나 지원한 회사 담당자를 상대로 사실관계를 확인할 수 있어요. 그래서 실제로 하지 않은 활동을 적으면 확인 과정에서 드러나요.</p>
+<p><span class="v2-ans">입사지원만 활동은 아니에요.</span> 훈련 수강이나 고용센터 프로그램 참여 같은 구직 외 활동도 인정돼요. 다만 4차까지는 그것만으로 채울 수 있고 5차부터는 1회 이상이 구직활동이어야 해요. <a class="v2-go" href="/unemployment/other-activity/">구직 외 활동 인정 범위</a></p>
 <p><span class="v2-ans">자영업을 준비하는 경우도 기준이 있어요.</span> 근로자 채용을 위한 구인광고, 자영업 장소 물색이나 장소계약, 시장조사 활동 자료, 관계기관 협의처럼 적극적으로 준비했는지를 봐요. 장소만 둘러보고 오는 것으로는 부족해요.</p>
 <div class="v2-note"><b>지시받은 활동은 꼭 하세요</b> 담당자가 지시한 구직활동을 정당한 사유 없이 하지 않으면 인정되지 않아요. 지시를 거부하면 지급이 정지될 수도 있어요.</div>
 
@@ -80,7 +81,7 @@ export const html = `<h1>실업급여 구직활동 인정 기준과 증빙 만�
 <p><span class="v2-ans">같은 날 여러 건을 몰아 하지 마세요.</span> 활동을 며칠에 나눠 하면 기록이 자연스럽고 설명하기도 쉬워요. 인정일 직전에 몰아서 하면 형식적 활동으로 볼 여지가 생겨요.</p>
 <div class="v2-tbl v2-text"><table><caption>활동별로 남길 증빙</caption><thead><tr><th>활동</th><th>남길 자료</th></tr></thead><tbody>
 <tr><th scope="row">구직 사이트 입사지원</th><td data-l="남길 자료">지원 완료 화면이나 지원 내역</td></tr>
-<tr><th scope="row">워크넷 입사지원</th><td data-l="남길 자료">워크넷 지원 이력</td></tr>
+<tr><th scope="row">워크넷 입사지원</th><td data-l="남길 자료">워크넷 지원 이력<a class="v2-go" href="https://www.work24.go.kr" target="_blank" rel="noopener">고용24 바로가기</a></td></tr>
 <tr><th scope="row">면접 응시</th><td data-l="남길 자료">면접확인서</td></tr>
 <tr><th scope="row">훈련 수강</th><td data-l="남길 자료">수강 등록 내역과 출결 기록</td></tr>
 <tr><th scope="row">직업지도 프로그램 참여</th><td data-l="남길 자료">참여 확인 자료</td></tr>
@@ -90,6 +91,7 @@ export const html = `<h1>실업급여 구직활동 인정 기준과 증빙 만�
 
 <h2 id="s5">같은 회사에 반복 지원해도 인정되나요<small>반복 지원은 인정되지 않아요</small></h2>
 <p class="v2-lead"><span class="v2-ans">동일 사업장만 반복해서 지원하는 경우는 적극적인 재취업활동으로 보지 않아요.</span> 한 곳에 계속 넣는 것은 실제 재취업 의사를 보여 주기 어렵다고 보는 거예요. 지원처를 넓히고 직종과 조건도 현실에 맞게 잡아야 인정받기 쉬워요.</p>
+<p><span class="v2-ans">몇 번 해야 하는지는 회차마다 달라요.</span> 일반 수급자는 2차부터 4차까지 4주에 1회, 5차부터 4주에 2회예요. <a class="v2-go" href="/unemployment/round-4/">회차별 기준</a></p>
 <p><span class="v2-ans">조건을 너무 좁게 잡아도 걸릴 수 있어요.</span> 경력과 나이, 기능, 노동시장 상황을 볼 때 받아들여지기 거의 불가능한 조건만 고집하는 경우도 인정되지 않아요. 구인공고의 요건과 본인 구직신청서 내용이 현저히 다른 지원도 마찬가지예요.</p>
 <div class="v2-note"><b>허위 활동은 부정수급이 될 수 있어요</b> 하지 않은 활동을 했다고 신고하면 거짓 신고예요. 그 회차 급여가 나오지 않는 데서 끝나지 않고 반환과 추가징수로 이어질 수 있어요.</div>
 

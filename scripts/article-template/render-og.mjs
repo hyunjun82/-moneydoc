@@ -10,7 +10,9 @@ import { chromium } from 'playwright';
 const [svgPath, pngPath] = process.argv.slice(2);
 if (!svgPath || !pngPath) { console.error('usage: render-og.mjs <svg> <png>'); process.exit(1); }
 const svg = fs.readFileSync(svgPath, 'utf8');
-const font = fs.readFileSync(path.resolve('public/fonts/PretendardVariable.woff2')).toString('base64');
+// 폰트 경로는 저장소 기준으로 고정한다. 상대 경로로 두면 어느 폴더에서 실행했느냐에 따라 죽는다(실측).
+const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '../..');
+const font = fs.readFileSync(path.join(ROOT, 'public/fonts/PretendardVariable.woff2')).toString('base64');
 const html = `<!doctype html><meta charset="utf-8"><style>@font-face{font-family:Pretendard;src:url(data:font/woff2;base64,${font}) format('woff2');font-weight:45 920}html,body{margin:0;background:#fff}svg{display:block;width:1200px;height:630px}</style>${svg.replace(/<svg /, '<svg width="1200" height="630" ')}`;
 const b = await chromium.launch({ headless: true });
 const p = await b.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });

@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-apply-guide.html
 export const meta = {
-  title: "실업급여 신청 방법 5단계, 고용24 구직신청부터 실업인정까지",
+  title: "실업급여 신청 방법, 고용24 구직신청부터 실업인정까지 5단계",
   description: "실업급여 신청은 5단계예요. 회사 서류 확인, 고용24 구직신청, 수급자격 신청자 교육, 고용센터 출석, 실업인정 순서로 진행해요. 각 단계에서 무엇을 하는지 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-apply-guide";
 
-export const html = `<h1>실업급여 신청 방법 5단계, 고용24 구직신청부터 실업인정까지</h1>
+export const html = `<h1>실업급여 신청 방법, 고용24 구직신청부터 실업인정까지 5단계</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 신고·인정 절차 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-apply-guide.png" width="1200" height="630" alt="실업급여 신청 방법 5단계. 고용24 구직신청부터 실업인정까지">
 <p class="v2-lead v2-intro">실업급여는 퇴사했다고 저절로 나오지 않아요. 직접 고용센터에 실업을 신고하고 수급자격을 인정받아야 시작돼요. 법에서 말하는 실업 신고에는 구직 신청과 수급자격 인정 신청이 함께 들어가기 때문에, 고용24에서 구직등록을 먼저 하고 고용센터에 나가는 순서가 돼요. 각 단계에서 무엇을 하는지 정리했어요.</p>
@@ -52,6 +52,7 @@ export const html = `<h1>실업급여 신청 방법 5단계, 고용24 구직신�
 
 <h2 id="s2">1단계, 회사 서류는 무엇을 확인하나요<small>상실 신고와 이직확인서</small></h2>
 <p class="v2-lead"><span class="v2-ans">고용보험 상실 신고와 이직확인서가 처리됐는지 확인해요.</span> 둘 다 회사가 고용센터에 내는 서류예요. 상실 신고가 되어야 절차가 시작되고, 이직확인서에 적힌 이직 사유와 평균임금이 심사의 출발점이 돼요. 처리 여부는 고용보험 홈페이지에서 볼 수 있어요.</p>
+<p><span class="v2-ans">들고 갈 서류는 신분증과 본인 명의 계좌뿐이에요.</span> 나머지는 회사가 내거나 온라인으로 처리돼요. <a class="v2-go" href="/unemployment/documents/">신청 준비물 목록</a></p>
 <p><span class="v2-ans">본인이 발급을 요청할 수 있어요.</span> 법은 구직급여를 받으려는 사람이 이직확인서 발급을 요청할 수 있다고 정해요. 퇴사할 때 미리 요청해 두면 다음 단계가 빨라져요.</p>
 <div class="v2-note"><b>서류가 늦어도 신청은 하세요</b> 신고일을 기준으로 대기기간과 인정일이 정해져요. 서류를 기다리다 신고가 늦어지면 그만큼 못 받는 날이 생겨요.</div>
 
@@ -79,6 +80,7 @@ export const html = `<h1>실업급여 신청 방법 5단계, 고용24 구직신�
 
 <h2 id="s6">5단계, 실업인정은 어떻게 받나요<small>지정된 날에 활동을 신고해요</small></h2>
 <p class="v2-lead"><span class="v2-ans">실업 신고일부터 1주에서 4주 사이로 정해진 실업인정일에 재취업활동을 신고해요.</span> 고용센터가 직전 실업인정일 다음 날부터 그 실업인정일까지의 각 날에 대해 실업을 인정해 줘요. 인정받은 날에 대해서만 지급되기 때문에, 활동을 하지 않거나 신고하지 않으면 그 회차는 받지 못해요.</p>
+<p><span class="v2-ans">미루면 받을 날이 줄어요.</span> 수급기간 12개월은 이직일 다음 날부터 흘러요. 서류를 기다리느라 신고를 미루면 그만큼 손해예요. <a class="v2-go" href="/unemployment/deadline/">언제까지 신청하나</a></p>
 <p><span class="v2-ans">1차 인정일은 신고일부터 14일이 되는 날이에요.</span> 2차와 3차는 직전 인정일 다음 날부터 28일이 되는 날이고, 4차부터는 7일에서 28일 사이에서 담당자가 정해요. 그래서 4차부터 사람마다 날짜가 달라져요.</p>
 <div class="v2-tbl v2-text"><table><caption>이어서 볼 것</caption><thead><tr><th>궁금한 것</th><th>어디서 보나요</th></tr></thead><tbody>
 <tr><th scope="row">무엇을 챙겨 가나요</th><td data-l="어디서 보나요">실업급여 신청 서류 목록과 발급처</td></tr>

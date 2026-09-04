@@ -53,6 +53,7 @@ export const html = `<h1>조기재취업수당 조건과 신청 방법, 남은 �
 
 <h2 id="s2">남은 급여의 절반을 다 받나요<small>미지급일수의 2분의 1이에요</small></h2>
 <p class="v2-lead"><span class="v2-ans">남은 일수를 다 주는 게 아니라, 미지급일수의 2분의 1에 구직급여일액을 곱한 금액을 줘요.</span> 예를 들어 소정급여일수 180일 중 90일을 남기고 취업했다면, 그 절반인 45일치를 받아요. 하루 66,048원이면 약 2,972,160원이에요.</p>
+<p><span class="v2-ans">남은 급여를 그대로 받는 것과 비교해 보세요.</span> 끝까지 실업급여를 받으면 남은 일수를 다 받지만, 그동안 소득이 없어요. 총액이 얼마인지 먼저 알아야 판단이 돼요. <a class="v2-go" href="/unemployment/total/">총 수령액 계산</a></p>
 <p><span class="v2-ans">받고 나면 그만큼 받은 것으로 봐요.</span> 조기재취업수당을 받으면, 그 금액을 구직급여일액으로 나눈 일수만큼 구직급여를 지급한 것으로 처리해요. 나중에 다시 실업급여를 받을 때 가입기간 계산에 영향이 있을 수 있어요.</p>
 <div class="v2-tbl"><table><caption>소정급여일수 180일인 사람의 예시</caption><thead><tr><th>항목</th><th>값</th></tr></thead><tbody>
 <tr><th scope="row">소정급여일수</th><td>180일</td></tr>
@@ -65,12 +66,13 @@ export const html = `<h1>조기재취업수당 조건과 신청 방법, 남은 �
 
 <h2 id="s3">신청 방법과 시기는 어떻게 되나요<small>12개월이 지난 뒤에 청구해요</small></h2>
 <p class="v2-lead"><span class="v2-ans">재취업하거나 사업을 시작한 날부터 12개월이 지난 뒤에 조기재취업 수당청구서를 내요.</span> 취업하자마자 신청하는 게 아니에요. 12개월 이상 계속 고용되었는지를 확인해야 하기 때문에 그만큼 기다렸다가 청구하도록 되어 있어요. 청구서는 신청지 관할 고용센터에 냅니다.</p>
+<p><span class="v2-ans">절반 이상 남았는지가 첫 관문이에요.</span> 소정급여일수는 나이와 가입기간으로 120일에서 270일 사이로 정해져요. 내 일수를 알아야 절반이 언제인지 계산돼요. <a class="v2-go" href="/unemployment/days/">소정급여일수 표</a></p>
 <p><span class="v2-ans">65세 이상은 바로 낼 수 있어요.</span> 이직일 당시 65세 이상인 사람은 재취직하거나 사업을 시작한 날부터 청구서를 제출할 수 있어요. 12개월을 기다리지 않아도 돼요.</p>
 <div class="v2-tbl v2-text"><table><caption>신청할 때 챙길 것</caption><thead><tr><th>챙길 것</th><th>왜 필요한가요</th></tr></thead><tbody>
 <tr><th scope="row">조기재취업 수당청구서</th><td data-l="왜 필요한가요">고용센터에 내는 기본 서류예요</td></tr>
 <tr><th scope="row">재직 증명 자료</th><td data-l="왜 필요한가요">12개월 이상 계속 고용되었는지 확인해요</td></tr>
 <tr><th scope="row">사업자등록증과 사업 실적</th><td data-l="왜 필요한가요">창업한 경우에 필요해요</td></tr>
-<tr><th scope="row">수급자격증</th><td data-l="왜 필요한가요">남은 일수와 일액을 확인해요</td></tr>
+<tr><th scope="row">수급자격증</th><td data-l="왜 필요한가요">남은 일수와 일액을 확인해요<a class="v2-go" href="https://www.ei.go.kr" target="_blank" rel="noopener">고용보험 홈페이지</a></td></tr>
 <tr><th scope="row">취업 신고 이력</th><td data-l="왜 필요한가요">취업 사실을 이미 신고했어야 해요</td></tr>
 </tbody></table></div>
 <p class="v2-fn">청구서 제출 시기는 고용보험법 시행령 제86조제2항이에요. 재취업한 날부터 12개월 이후에 제출해요.</p>

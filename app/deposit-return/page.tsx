@@ -29,8 +29,9 @@ export default function Page() {
       faqLd={faqLd}
       scriptKey={scriptKey}
       url={PAGE_URL}
-      catHref="/law/"
-      catLabel="법률"
+      catHref="/"
+      catLabel="홈"
+      navActive="law"
       crumb="보증금 반환 소송"
     />
   );

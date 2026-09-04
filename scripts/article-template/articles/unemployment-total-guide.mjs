@@ -31,13 +31,13 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
   return {
     slug: 'unemployment-total-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 총 수령액',
     title: '실업급여 총 수령액 계산, 한 달에 얼마씩 몇 달 받나요',
-    description: `실업급여 총액은 하루 지급액에 소정급여일수를 곱한 금액이에요. 월 ${man(3e6)}만원에 가입 3년이면 ${R.benefitDays}일 동안 모두 ${won(R.totalBenefit)}원이에요. 조건별 총액을 표로 정리했어요.`,
+    description: `실업급여 총액은 하루 지급액에 소정급여일수를 곱한 금액이에요. 월 ${man(3e6)}원에 가입 3년이면 ${R.benefitDays}일 동안 모두 ${won(R.totalBenefit)}원이에요. 조건별 총액을 표로 정리했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 급여 산정 원문 대조 · ${VERIFIED}`,
     calc: { href: '/unemployment/calculator/', label: '내 총 수령액 계산해 보기' },
     hero: {
       tag: '정부지원금', line1: '실업급여 총 수령액', line2: '다 합치면 얼마인가요',
-      sub1: `월 ${man(3e6)}만원에 가입 3년이면 모두 ${won(R.totalBenefit)}원이에요`,
+      sub1: `월 ${man(3e6)}원에 가입 3년이면 모두 ${won(R.totalBenefit)}원이에요`,
       sub2: `${R.benefitDays}일을 회차로 나눠서 받아요`,
       foot: `고용보험법 급여 산정 원문 대조 · ${VERIFIED} 검증`,
       card: { label: '월 300만원 가입 3년', big: won(R.totalBenefit), unit: '원', l1: `하루 ${won(R.dailyBenefit)}원 × ${R.benefitDays}일`, l2: `한 달 30일로 치면 약 ${MONTHS}개월` },
@@ -47,9 +47,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     answer: {
       label: '내 조건을 눌러 확인해 보세요',
       quick: [
-        { chip: `월 ${man(3e6)}만원 · 1년`, selected: true, big: won(ub(3e6, 1).totalBenefit), unit: '총 수령액', sub: `${ub(3e6, 1).benefitDays}일 동안 받아요` },
-        { chip: `월 ${man(3e6)}만원 · 3년`, selected: false, big: won(R.totalBenefit), unit: '총 수령액', sub: `${R.benefitDays}일 동안 받아요` },
-        { chip: `월 ${man(3e6)}만원 · 12년`, selected: false, big: won(ub(3e6, 12).totalBenefit), unit: '총 수령액', sub: `${ub(3e6, 12).benefitDays}일 동안 받아요` },
+        { chip: `월 ${man(3e6)}원 · 1년`, selected: true, big: won(ub(3e6, 1).totalBenefit), unit: '총 수령액', sub: `${ub(3e6, 1).benefitDays}일 동안 받아요` },
+        { chip: `월 ${man(3e6)}원 · 3년`, selected: false, big: won(R.totalBenefit), unit: '총 수령액', sub: `${R.benefitDays}일 동안 받아요` },
+        { chip: `월 ${man(3e6)}원 · 12년`, selected: false, big: won(ub(3e6, 12).totalBenefit), unit: '총 수령액', sub: `${ub(3e6, 12).benefitDays}일 동안 받아요` },
       ],
       boxes: [
         { title: '총액 = 하루 금액 × 일수', text: '두 숫자만 알면 계산이 끝나요' },
@@ -62,31 +62,32 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
         ['계산식', '구직급여일액 × 소정급여일수'],
         ['하루 금액을 정하는 것', '이직 전 평균임금'],
         ['일수를 정하는 것', '고용보험 가입기간과 나이'],
-        [`월 ${man(3e6)}만원 가입 3년`, `${won(R.totalBenefit)}원 (${R.benefitDays}일)`],
+        [`월 ${man(3e6)}원 가입 3년`, `${won(R.totalBenefit)}원 (${R.benefitDays}일)`],
         ['50세 이상 가산', `같은 조건에서 ${won(BONUS)}원 더 받아요`],
         ['받는 방식', '한 번에 주지 않고 실업인정 회차마다 나눠서 지급해요'],
       ],
     },
     sections: [
       { id: 's1', h2: '총 수령액은 어떻게 계산하나요', sub: '하루 금액에 일수를 곱해요', blocks: [
-        { type: 'p', lead: true, ans: '구직급여일액에 소정급여일수를 곱하면 총액이에요.', text: `하루 금액은 기초일액의 60퍼센트이고 상한과 하한에 막혀요. 일수는 고용보험 가입기간과 나이로 정해져요. 월 ${man(3e6)}만원에 가입 3년이면 하루 ${won(R.dailyBenefit)}원에 ${R.benefitDays}일이라 모두 ${won(R.totalBenefit)}원이에요.` },
+        { type: 'p', lead: true, ans: '구직급여일액에 소정급여일수를 곱하면 총액이에요.', text: `하루 금액은 기초일액의 60퍼센트이고 상한과 하한에 막혀요. 일수는 고용보험 가입기간과 나이로 정해져요. 월 ${man(3e6)}원에 가입 3년이면 하루 ${won(R.dailyBenefit)}원에 ${R.benefitDays}일이라 모두 ${won(R.totalBenefit)}원이에요.` },
         { type: 'p', ans: '한 번에 주지는 않아요.', text: `실업인정을 받은 일수분씩 나눠서 지급해요. 첫 회차는 대기기간 7일이 빠져 약 ${won(FIRST)}원이고, 인정일 간격이 28일인 회차는 약 ${won(ROUND28)}원이에요.` },
         { type: 'table', net: 2, caption: '조건별 실업급여 총 수령액', headers: ['월 평균임금', '가입기간', '하루 지급액', '소정급여일수', '총 수령액'],
-          rows: ROWS.map((r) => ({ hi: r.w === 3e6 && r.y === 3, cells: [`${man(r.w)}만원`, `${r.y}년`, `${won(r.daily)}원`, `${r.days}일`, `${won(r.total)}원`] })),
+          rows: ROWS.map((r) => ({ hi: r.w === 3e6 && r.y === 3, cells: [`${man(r.w)}원`, `${r.y}년`, `${won(r.daily)}원`, `${r.days}일`, `${won(r.total)}원`] })),
           fn: '구직급여일액은 기초일액의 100분의 60이고 상한과 하한이 있어요. 소정급여일수는 피보험기간과 연령에 따라 정해져요. 50세 미만 기준이에요.' },
       ] },
 
       { id: 's2', h2: '실업급여 한달 얼마씩 들어오나요', sub: '회차마다 인정된 일수만큼이에요', blocks: [
         { type: 'p', lead: true, ans: '고정된 월급처럼 나오지 않고, 실업인정 회차마다 그 기간에 인정된 일수분이 들어와요.', text: `1차 인정일은 신고일부터 14일이 되는 날이고 대기기간 7일이 빠져 7일치예요. 2차와 3차는 28일 간격이라 28일치가 나와요. 4차부터는 간격이 7일에서 28일 사이에서 정해져서 회차마다 금액이 달라져요.` },
-        { type: 'p', ans: '그래서 매달 같은 금액을 기대하면 어긋나요.', text: `월 ${man(3e6)}만원인 사람이 28일치를 받으면 약 ${won(ROUND28)}원인데, 간격이 짧게 잡힌 회차에는 그보다 적게 들어와요. 총액이 줄어드는 게 아니라 나눠지는 방식이 다를 뿐이에요.` },
-        { type: 'note', title: '세금은 떼지 않아요', text: '실업급여는 근로소득이 아니라 소득세를 원천징수하지 않아요. 통장에 찍히는 금액이 그대로예요.' },
+        { type: 'p', ans: '그래서 매달 같은 금액을 기대하면 어긋나요.', text: `월 ${man(3e6)}원인 사람이 28일치를 받으면 약 ${won(ROUND28)}원인데, 간격이 짧게 잡힌 회차에는 그보다 적게 들어와요. 총액이 줄어드는 게 아니라 나눠지는 방식이 다를 뿐이에요.` },
+        { type: 'note', title: '세금은 떼지 않아요', text: '실업급여는 근로소득이 아니라 소득세를 원천징수하지 않아요. 통장에 찍히는 금액이 그대로예요. 언제 들어오는지는 따로 정리했어요.', link: { href: '/unemployment/payday/', label: '지급일 언제 들어오나' } },
       ] },
 
       { id: 's3', h2: '실업급여 몇달 동안 받을 수 있나요', sub: '소정급여일수를 달로 환산해요', blocks: [
         { type: 'p', lead: true, ans: `소정급여일수를 30으로 나누면 대략적인 개월 수가 나와요. ${R.benefitDays}일이면 약 ${MONTHS}개월이에요.`, text: '가입기간이 1년 미만이면 가장 짧고, 10년 이상이면 가장 길어요. 나이가 50세 이상이거나 장애인이면 구간마다 가산이 붙어요.' },
+        { type: 'p', ans: '일수는 나이와 가입기간으로 정해져요.', text: '1년 미만이면 120일, 10년 이상이면 240일이고 50세 이상이거나 장애인이면 구간마다 30일씩 더 받아요.', link: { href: '/unemployment/days/', label: '소정급여일수 표' } },
         { type: 'p', ans: '다만 12개월 안에 다 써야 해요.', text: '이직일 다음 날부터 12개월이 지나면 일수가 남아 있어도 지급이 끝나요. 소정급여일수가 긴 사람이 늦게 신청하면 다 못 쓰고 끝날 수 있어요.' },
         { type: 'table', text: true, caption: '조건별로 몇 달인가요', headers: ['월 평균임금', '가입기간', '소정급여일수', '30일 기준 개월'],
-          rows: ROWS.map((r) => ({ hi: r.y === 12, cells: [`${man(r.w)}만원`, `${r.y}년`, `${r.days}일`, `약 ${r.months}개월`] })),
+          rows: ROWS.map((r) => ({ hi: r.y === 12, cells: [`${man(r.w)}원`, `${r.y}년`, `${r.days}일`, `약 ${r.months}개월`] })),
           fn: '개월 수는 30일로 나눈 어림값이에요. 실제로는 인정일 간격에 따라 달라져요.' },
       ] },
 
@@ -98,7 +99,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
       { id: 's5', h2: '내 총 수령액은 어디서 확인하나요', sub: '수급자격증과 고용보험 홈페이지', blocks: [
         { type: 'p', lead: true, ans: '수급자격을 인정받으면 하루 지급액과 소정급여일수가 정해져 통지돼요. 둘을 곱하면 총액이에요.', text: '고용보험 홈페이지에서 회차별 지급 내역과 남은 일수도 볼 수 있어요. 실제로 받은 금액과 남은 금액을 함께 확인할 수 있어요.' },
-        { type: 'p', ans: '50세 이상이거나 장애인이면 더 받아요.', text: `가입기간이 같아도 소정급여일수에 가산이 붙어요. 월 ${man(3e6)}만원에 가입 3년인 사람이라면 ${won(BONUS)}원을 더 받게 돼요. 1년 미만 구간에는 가산이 붙지 않아요.` },
+        { type: 'p', ans: '50세 이상이거나 장애인이면 더 받아요.', text: `가입기간이 같아도 소정급여일수에 가산이 붙어요. 월 ${man(3e6)}원에 가입 3년인 사람이라면 ${won(BONUS)}원을 더 받게 돼요. 1년 미만 구간에는 가산이 붙지 않아요.` },
         { type: 'table', text: true, caption: '총액과 관련해 확인할 것', headers: ['확인할 것', '어디서 보나요'], rows: [
           { cells: ['하루 지급액', '수급자격 인정 통지와 수급자격증'] },
           { cells: ['소정급여일수', '수급자격증에 적혀 있어요'] },
@@ -109,19 +110,19 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       ] },
     ],
     faq: [
-      ['실업급여 총 수령액은 어떻게 계산하나요?', `하루 지급액에 소정급여일수를 곱해요. 월 ${man(3e6)}만원에 가입 3년이면 ${won(R.dailyBenefit)}원 × ${R.benefitDays}일로 ${won(R.totalBenefit)}원이에요.`],
+      ['실업급여 총 수령액은 어떻게 계산하나요?', `하루 지급액에 소정급여일수를 곱해요. 월 ${man(3e6)}원에 가입 3년이면 ${won(R.dailyBenefit)}원 × ${R.benefitDays}일로 ${won(R.totalBenefit)}원이에요.`],
       ['실업급여 한 달에 얼마 받나요?', `고정 금액이 아니에요. 인정일 간격이 28일인 회차면 약 ${won(ROUND28)}원이고, 첫 회차는 대기기간이 빠져 약 ${won(FIRST)}원이에요.`],
       ['실업급여 몇 달 받나요?', `소정급여일수를 30으로 나눈 값이에요. ${R.benefitDays}일이면 약 ${MONTHS}개월이에요.`],
-      ['실업급여 최대 금액은 얼마인가요?', `가입 10년 이상에 50세 이상이면 소정급여일수가 가장 길어요. 하루 상한액에 그 일수를 곱한 금액이 최대예요.`],
-      ['실업급여 4개월이면 얼마인가요?', `4개월은 약 120일이에요. 가입 1년 미만 구간이 여기에 해당하고, 월 300만원이면 ${won(ub(3e6, 1).totalBenefit)}원이에요.`],
+      ['실업급여 최대 금액은 얼마인가요?', `가입 10년 이상에 50세 이상이면 270일로 가장 길어요. 월 500만원이면 하루 ${won(ub(5e6, 12, true).dailyBenefit)}원에 270일이라 ${won(ub(5e6, 12, true).totalBenefit)}원이에요.`],
+      ['실업급여 4개월이면 얼마인가요?', `4개월은 약 120일이에요. 가입 1년 미만이면 소정급여일수가 120일이라 월 300만원 기준 ${won(ub(3e6, 0.5).totalBenefit)}원이에요. 가입 1년을 넘으면 150일이 되어 ${won(ub(3e6, 1).totalBenefit)}원이 돼요.`],
       ['실업급여 전체 얼마를 받는지 어떻게 아나요?', '수급자격증에 적힌 하루 지급액과 소정급여일수를 곱하면 전체 금액이 나와요.'],
       ['월급이 많으면 총액도 많나요?', '하루 금액이 상한과 하한에 막혀 있어서 크게 차이 나지 않아요. 총액을 가르는 건 소정급여일수예요.'],
-      ['50세 이상이면 얼마나 더 받나요?', `구간마다 소정급여일수가 늘어나요. 월 ${man(3e6)}만원에 가입 3년이면 ${won(BONUS)}원을 더 받아요.`],
+      ['50세 이상이면 얼마나 더 받나요?', `구간마다 소정급여일수가 늘어나요. 월 ${man(3e6)}원에 가입 3년이면 ${won(BONUS)}원을 더 받아요.`],
       ['총액을 다 못 받는 경우도 있나요?', '이직일 다음 날부터 12개월이 지나면 일수가 남아도 끝나요. 늦게 신청할수록 위험해요.'],
     ],
     summary: [
       '총액은 구직급여일액에 소정급여일수를 곱한 금액이에요.',
-      `월 ${man(3e6)}만원에 가입 3년이면 ${R.benefitDays}일 동안 ${won(R.totalBenefit)}원이에요.`,
+      `월 ${man(3e6)}원에 가입 3년이면 ${R.benefitDays}일 동안 ${won(R.totalBenefit)}원이에요.`,
       '한 번에 주지 않고 실업인정 회차마다 인정된 일수분씩 지급해요.',
       '12개월 안에 다 써야 하니 늦게 신청하면 총액을 못 채울 수 있어요.',
     ],

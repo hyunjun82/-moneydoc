@@ -18,7 +18,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
   return {
     slug: 'unemployment-waiting-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 대기기간',
-    title: '실업급여 대기기간 7일이란, 첫 급여는 언제 들어오나요',
+    title: '실업급여 대기기간, 7일 동안 왜 안 나오나요',
     description: `실업 신고일부터 7일은 대기기간이라 급여가 나오지 않아요. 그래서 첫 회차는 ${FIRST_DAYS}일치예요. 대기기간이 없는 경우와 이 기간에 일했을 때까지 정리했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 대기기간 규정 원문 대조 · ${VERIFIED}`,
@@ -69,12 +69,14 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
       { id: 's2', h2: '대기기간에도 급여가 나오나요', sub: '나오지 않아요', blocks: [
         { type: 'p', lead: true, ans: '나오지 않아요. 뒤로 밀리는 것도 아니라 그냥 없는 날이 돼요.', text: `하루 ${won(R.dailyBenefit)}원을 받는 사람이라면 ${WAIT}일치인 약 ${won(LOST)}원이 처음부터 빠지는 셈이에요. 소정급여일수에서 차감되는 건 아니지만 받을 수 있는 날이 그만큼 늦게 시작해요.` },
+        { type: 'p', ans: '1차 인정일에 고용센터로 나가요.', text: '1차와 4차는 인터넷 실업인정이 안 되고 출석해야 해요.', link: { href: '/unemployment/round-1/', label: '1차 실업인정에 하는 일' } },
         { type: 'p', ans: '소정급여일수는 대기기간 뒤부터 세요.', text: '법은 소정급여일수를 대기기간이 끝난 다음 날부터 계산하기 시작한다고 정해요. 그래서 대기기간이 소정급여일수를 깎지는 않아요. 시작점을 뒤로 미룰 뿐이에요.' },
         { type: 'note', title: '수급기간 12개월은 계속 흘러요', text: '이직일 다음 날부터 12개월이라는 큰 시계는 대기기간과 상관없이 돌아가요. 그래서 신고가 늦으면 손해가 커져요.' },
       ] },
 
       { id: 's3', h2: '첫 급여는 언제 들어오나요', sub: '1차 실업인정을 받은 뒤예요', blocks: [
         { type: 'p', lead: true, ans: `1차 실업인정일에 인정을 받은 뒤에 ${FIRST_DAYS}일치가 들어와요.`, text: `1차 실업인정일은 실업신고일부터 14일이 되는 날이에요. 그중 앞의 ${WAIT}일이 대기기간이니 인정되는 날은 ${FIRST_DAYS}일이에요. 월 300만원을 받던 사람이면 약 ${won(FIRST_PAY)}원이에요.` },
+        { type: 'p', ans: '입금은 보통 실업인정을 받은 다음 날이에요.', text: '고용24 안내에 통상 실업인정을 받은 다음 날 지정 계좌로 입금된다고 적혀 있어요.', link: { href: '/unemployment/payday/', label: '지급일 언제 들어오나' } },
         { type: 'p', ans: '첫 회차가 적은 게 정상이에요.', text: '2차부터는 인정일 간격이 28일이라 인정되는 날수가 늘어요. 그래서 회차가 올라가면 금액이 커져요. 첫 회차만 보고 계산이 틀렸다고 생각할 필요는 없어요.' },
         { type: 'table', net: 2, caption: '첫 회차 금액이 나오는 과정', headers: ['항목', '값'], rows: [
           { cells: ['1차 실업인정일까지', '실업신고일부터 14일'] },

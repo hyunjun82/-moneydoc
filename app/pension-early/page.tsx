@@ -29,8 +29,9 @@ export default function Page() {
       faqLd={faqLd}
       scriptKey={scriptKey}
       url={PAGE_URL}
-      catHref="/pension/"
-      catLabel="연금"
+      catHref="/"
+      catLabel="홈"
+      navActive="pension"
       crumb="국민연금 조기수령"
     />
   );

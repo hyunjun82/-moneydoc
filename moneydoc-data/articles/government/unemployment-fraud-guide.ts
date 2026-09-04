@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-fraud-guide.html
 export const meta = {
-  title: "실업급여 부정수급 처벌과 반환 금액, 추가징수 기준",
+  title: "실업급여 부정수급 처벌, 반환 금액과 추가징수 기준",
   description: "실업급여 부정수급이 적발되면 받은 돈을 돌려주고 그 금액의 2배 이하를 더 냅니다. 회사와 짜고 했으면 5배 이하까지 가요. 제재가 어떻게 쌓이는지 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-fraud-guide";
 
-export const html = `<h1>실업급여 부정수급 처벌과 반환 금액, 추가징수 기준</h1>
+export const html = `<h1>실업급여 부정수급 처벌, 반환 금액과 추가징수 기준</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 지급 제한과 반환명령 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-fraud-guide.png" width="1200" height="630" alt="실업급여 부정수급 처벌과 반환, 추가징수 기준">
 <p class="v2-lead v2-intro">실업급여 부정수급은 큰돈을 속인 경우만 해당하는 게 아니에요. 하루 일한 것을 신고하지 않거나, 하지 않은 구직활동을 했다고 적은 것도 거짓 신고예요. 걸리면 그 회차 급여가 안 나오는 데서 끝나지 않고 받은 돈을 돌려주고 더 내야 해요. 무엇이 부정수급인지, 얼마를 물어내는지, 제재가 어떻게 쌓이는지 정리했어요.</p>
@@ -42,6 +42,7 @@ export const html = `<h1>실업급여 부정수급 처벌과 반환 금액, 추�
 
 <h2 id="s1">어떤 행위가 부정수급인가요<small>거짓이나 그 밖의 부정한 방법</small></h2>
 <p class="v2-lead"><span class="v2-ans">거짓이나 그 밖의 부정한 방법으로 실업급여를 받았거나 받으려 한 경우예요.</span> 법은 받은 경우뿐 아니라 받으려 한 경우도 함께 적어요. 실제로 돈이 나가지 않았어도 거짓으로 신고한 것 자체가 대상이라는 뜻이에요. 액수가 크지 않아도 마찬가지예요.</p>
+<p><span class="v2-ans">하루 알바를 신고하지 않은 것도 여기 들어가요.</span> 실업인정을 받으려는 기간에 일한 사실이 있으면 금액과 상관없이 신고해야 해요. <a class="v2-go" href="/unemployment/part-time-job/">알바 신고 방법</a></p>
 <p><span class="v2-ans">가장 흔한 게 신고 의무를 지키지 않는 경우예요.</span> 실업인정대상기간에 일을 하고도 신고하지 않거나, 하지 않은 재취업활동을 했다고 적는 경우예요. 법이 이 두 가지를 따로 짚어서 제재 방식을 달리 정해 두었어요.</p>
 <div class="v2-note"><b>하루라도 일했으면 적으세요</b> 신고하면 그 날만 빠지고 나머지 날은 그대로 나와요. 숨기면 그 기간 전부가 날아가고 반환까지 이어져요.</div>
 
@@ -75,6 +76,7 @@ export const html = `<h1>실업급여 부정수급 처벌과 반환 금액, 추�
 
 <h2 id="s5">형사처벌도 받나요<small>반환과 별개로 형사 문제가 될 수 있어요</small></h2>
 <p class="v2-lead"><span class="v2-ans">반환과 추가징수는 행정 제재이고, 사안에 따라 형사 문제로 이어질 수 있어요.</span> 거짓 서류를 만들거나 회사와 짜고 사실과 다른 증명을 낸 경우가 그래요. 부정수급으로 확인되면 조사 과정에서 사실관계를 확인하고 필요한 조치를 해요.</p>
+<p><span class="v2-ans">허위 구직활동도 같은 문제예요.</span> 입사지원을 하지 않고 했다고 적거나, 면접에 응하지 않고 응한 것으로 신고하는 경우예요. <a class="v2-go" href="/unemployment/job-search/">구직활동 인정 기준</a></p>
 <p><span class="v2-ans">사업주도 함께 책임을 져요.</span> 근로자가 사업주와 공모해 부정하게 받은 경우, 사업주도 그 사람과 연대해 반환과 추가징수의 책임을 져요. 회사가 서류를 꾸며 주는 게 회사에도 위험한 이유예요.</p>
 <div class="v2-tbl v2-text"><table><caption>실업급여 부정수급 사례와 적발되는 이유</caption><thead><tr><th>부정수급 사례</th><th>왜 걸리나요</th></tr></thead><tbody>
 <tr><th scope="row">일하고 신고하지 않음</th><td data-l="왜 걸리나요">소득 자료와 고용보험 신고로 확인돼요</td></tr>

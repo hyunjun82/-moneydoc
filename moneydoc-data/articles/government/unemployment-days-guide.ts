@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-days-guide.html
 export const meta = {
-  title: "실업급여 소정급여일수 표, 나이와 가입기간별 며칠 받나",
+  title: "실업급여 일수, 나이와 가입기간별 소정급여일수 표",
   description: "실업급여를 며칠 받는지는 나이와 고용보험 가입기간 두 가지로 정해져요. 가장 짧으면 120일, 가장 길면 270일이에요. 구간별 표와 50세 기준으로 갈리는 지점을 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-days-guide";
 
-export const html = `<h1>실업급여 소정급여일수 표, 나이와 가입기간별 며칠 받나</h1>
+export const html = `<h1>실업급여 일수, 나이와 가입기간별 소정급여일수 표</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 소정급여일수 별표1 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-days-guide.png" width="1200" height="630" alt="실업급여 소정급여일수 표. 가장 짧으면 120일, 가장 길면 270일">
 <p class="v2-lead v2-intro">실업급여를 얼마 받느냐만큼 며칠 받느냐도 중요해요. 하루 지급액이 같아도 일수가 다르면 총액이 크게 벌어지거든요. 이 일수를 소정급여일수라고 하는데, 월급이나 퇴사 사유와는 상관없이 나이와 고용보험 가입기간 두 가지로만 정해져요. 구간별로 며칠인지, 50세를 기준으로 얼마나 달라지는지, 내 일수는 어디서 확인하는지 정리했어요.</p>
@@ -42,8 +42,9 @@ export const html = `<h1>실업급여 소정급여일수 표, 나이와 가입�
 
 <h2 id="s1">소정급여일수는 무엇으로 정해지나요<small>나이와 가입기간 두 가지</small></h2>
 <p class="v2-lead"><span class="v2-ans">고용보험 가입기간과 이직 당시 나이 두 가지로만 정해져요.</span> 월급이 얼마인지, 어떤 사유로 그만뒀는지는 일수에 영향을 주지 않아요. 월급은 하루 지급액을 정하고, 일수는 따로 정해져요. 그래서 월급이 적어도 오래 다녔으면 받는 날은 길어요.</p>
+<p><span class="v2-ans">일수를 따지기 전에 수급자격부터 돼야 해요.</span> 고용보험 가입 180일, 취업하지 못한 상태, 이직 사유, 재취업 노력 네 가지를 채워야 소정급여일수가 정해져요. <a class="v2-go" href="/unemployment/eligibility/">수급자격 4가지 조건</a></p>
 <p><span class="v2-ans">세기 시작하는 날은 대기기간이 끝난 다음 날이에요.</span> 신고한 날부터 바로 세는 게 아니에요. 대기기간 7일이 끝난 다음 날부터 세기 시작해서 정해진 일수가 되는 날까지예요. 그래서 신고일과 첫 지급일 사이에 시간이 걸려요.</p>
-<div class="v2-note"><b>임신이나 육아로 미뤘다면 그만큼 유예돼요</b> 소정급여일수 안에 임신, 출산, 육아 같은 사유로 수급기간을 연장했다면 그 기간만큼 미뤄서 지급해요. 일수가 없어지는 게 아니에요.</div>
+<div class="v2-note"><b>임신이나 육아로 미뤘다면 그만큼 유예돼요</b> 소정급여일수 안에 임신, 출산, 육아 같은 사유로 수급기간을 연장했다면 그 기간만큼 미뤄서 지급해요. 일수가 없어지는 게 아니에요. <a class="v2-go" href="/unemployment/extension/">수급기간 연장</a></div>
 
 <h2 id="s2">나이와 가입기간별 소정급여일수 표는 어떻게 되나요<small>50세를 기준으로 두 갈래</small></h2>
 <p class="v2-lead"><span class="v2-ans">1년 미만 120일부터 10년 이상 240일까지고, 50세 이상은 구간마다 더 받아요.</span> 가입기간이 길수록 일수가 늘어나요. 여기에 이직 당시 50세 이상이거나 장애인이면 가산이 붙어서, 가장 긴 경우는 270일이에요. 다만 1년 미만 구간에는 가산이 붙지 않아요.</p>
@@ -77,10 +78,11 @@ export const html = `<h1>실업급여 소정급여일수 표, 나이와 가입�
 <p class="v2-lead"><span class="v2-ans">수급자격을 인정받으면 소정급여일수가 정해져 통지되고, 고용보험 홈페이지에서 남은 일수를 볼 수 있어요.</span> 실업인정을 받을 때마다 인정된 날수만큼 줄어들어요. 활동을 신고하지 않아 인정받지 못한 회차가 있으면 그만큼 못 받는 날이 생기지만, 남은 일수 자체가 줄지는 않아요.</p>
 <p><span class="v2-ans">다 쓰기 전에 수급기간이 끝날 수도 있어요.</span> 소정급여일수가 남아 있어도 이직일 다음 날부터 12개월이 지나면 지급이 끝나요. 그래서 일수가 길수록 늦게 신청했을 때 손해가 커져요. 퇴사하면 바로 신청하는 게 좋아요.</p>
 <div class="v2-tbl v2-text"><table><caption>어디서 무엇을 확인하나요</caption><thead><tr><th>확인할 것</th><th>어디서 보나요</th></tr></thead><tbody>
-<tr><th scope="row">고용보험 가입기간</th><td data-l="어디서 보나요">고용보험 홈페이지 피보험자격 이력</td></tr>
+<tr><th scope="row">고용보험 가입기간</th><td data-l="어디서 보나요">고용보험 홈페이지 피보험자격 이력<a class="v2-go" href="https://www.ei.go.kr" target="_blank" rel="noopener">고용보험 홈페이지</a></td></tr>
 <tr><th scope="row">정해진 소정급여일수</th><td data-l="어디서 보나요">수급자격 인정 통지와 수급자격증</td></tr>
 <tr><th scope="row">남은 일수</th><td data-l="어디서 보나요">실업인정을 받을 때마다 확인할 수 있어요</td></tr>
 <tr><th scope="row">수급기간 종료일</th><td data-l="어디서 보나요">이직일 다음 날부터 12개월이 되는 날</td></tr>
+<tr><th scope="row">총 얼마 받는지</th><td data-l="어디서 보나요">하루 지급액에 소정급여일수를 곱해요<a class="v2-go" href="/unemployment/total/">총 수령액 계산</a></td></tr>
 </tbody></table></div>
 <p class="v2-fn">일수가 남아도 수급기간이 지나면 받을 수 없어요. 신청을 미루지 마세요.</p>
 

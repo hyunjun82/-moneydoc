@@ -29,8 +29,9 @@ export default function Page() {
       faqLd={faqLd}
       scriptKey={scriptKey}
       url={PAGE_URL}
-      catHref="/realestate/"
-      catLabel="부동산"
+      catHref="/"
+      catLabel="홈"
+      navActive="realestate"
       crumb="취득세"
     />
   );

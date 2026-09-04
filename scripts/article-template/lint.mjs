@@ -75,6 +75,9 @@ export function lint(a) {
     }
     for (const b of s.blocks) {
       const w = `${s.id}/${b.type}`;
+      // 렌더러가 link 를 그리는 블록은 정해져 있다. 다른 블록에 달면 조용히 사라진다.
+      // 표(2026-09-04)와 p(같은 날) 에서 실제로 링크가 사라진 채 배포됐다. 이제는 lint 가 막는다.
+      if (b.link && !['p', 'note'].includes(b.type)) add(w, `이 블록은 link 를 렌더하지 않는다 (p·note 만 가능, 표는 행에 link)`);
       switch (b.type) {
         case 'p': checkText(w, `${b.ans ?? ''} ${b.text ?? ''}`); break;
         case 'h3': if (BAD_DASH.test(b.text)) add(w, '대시·파이프'); if (!PAA.test(b.text)) add(w, `검색어형이 아님: "${b.text}"`); break;
