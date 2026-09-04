@@ -25,10 +25,11 @@ const CASES = [
     from: "ans: '통상 실업인정을 받은 다음 날에 본인이 지정한 계좌로 들어와요.'",
     to: "ans: '인정일이 사람마다 달라서 입금일도 사람마다 달라요.'",
     expect: '근거 ' },
-  { name: '단위 겹침 (만만원)',
-    file: `${A}/unemployment-by-salary-guide.mjs`, slug: 'unemployment-by-salary-guide',
-    from: '${man(2e6)}원', to: '${man(2e6)}만원',
-    expect: null, gate: '단위가 겹쳐 붙었다' },
+  // 단위 겹침은 mutate.mjs 5번이 맡는다. 여기서는 빌드 시점 검사 셋만 본다.
+  { name: '렌더 사고 (문장 속 undefined)',
+    file: `${A}/unemployment-waiting-guide.mjs`, slug: 'unemployment-waiting-guide',
+    from: "sub: '이 기간은 급여가 나오지 않아요'", to: "sub: `${globalThis.__none?.x}이 기간은 급여가 나오지 않아요`",
+    expect: '렌더 사고' },
 ];
 
 let pass = 0;

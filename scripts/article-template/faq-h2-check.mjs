@@ -26,6 +26,31 @@ export function faqAndH2Check({ html }) {
     problems.push(`외부 링크가 https 가 아니다: ${m[1]}`);
   }
 
+  // 한 글 안에서 같은 문장이 두 번 나오는지. duplicateCheck 는 글 **사이**만 봤고,
+  // 줄 단위로 보면 한 문단 안의 반복을 놓친다. 그래서 문장 단위로 자른다 (돌연변이 40번).
+  {
+    // 범위는 **본문 섹션만**. 제목은 h1 과 메타에, 소제목은 목차와 본문에 정상적으로 두 번 나오고,
+    // 히어로 문구가 본문에 다시 나오는 것도 요약이라 정상이다. 그걸 다 세면 오탐만 쌓인다.
+    let h = html.replace(/<style[\s\S]*?<\/style>/g, ' ').replace(/<script[\s\S]*?<\/script>/g, ' ');
+    const first = h.indexOf('<h2 id="s');
+    const src = h.indexOf('<h2 id="src">');
+    h = first < 0 ? '' : h.slice(first, src > first ? src : h.length);
+    h = h.replace(/<p class="fn">[\s\S]*?<\/p>/g, ' ')          // 각주는 법령 인용
+         .replace(/<details class="faq"[\s\S]*?<\/details>/g, ' '); // FAQ 는 본문을 요약하는 자리
+    // 태그 자리에 공백을 넣으면 <b>제목</b> 이 뒤 문장에 붙어 같은 문장이 달라 보인다.
+    // 태그는 줄바꿈으로 끊고, 그 줄 안에서 문장을 자른다.
+    const NLc = String.fromCharCode(10);
+    const lines = h.replace(/<[^>]+>/g, NLc).replace(/&[a-z#0-9]+;/g, ' ').split(NLc);
+    const seen2 = new Set();
+    for (const raw of lines.flatMap((l) => l.split(/(?<=[.!?])\s+/))) {
+      const t = raw.replace(/\s+/g, ' ').trim();
+      if (t.length < 20 || !/[가-힣]/.test(t)) continue;
+      const k = t.replace(/\s+/g, '');
+      if (seen2.has(k)) problems.push(`같은 문장이 한 글에 두 번 나온다: "${t.slice(0, 60)}"`);
+      seen2.add(k);
+    }
+  }
+
   // 한 글 안에서 소제목이 겹치는지
   const h2s = [...html.matchAll(/<h2 id="s\d+">([^<]+)/g)]
     .map((m) => strip(m[1].replace(/<small>[\s\S]*/, '')));

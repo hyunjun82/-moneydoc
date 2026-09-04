@@ -84,7 +84,13 @@ for (const slug of slugs) {
   if (!fs.existsSync(briefPath)) { console.error(`✗ ${slug}: brief/${slug}.json 없음 (키워드·출처 파일이 있어야 글을 낼 수 있다)`); failed++; continue; }
   const brief = JSON.parse(fs.readFileSync(briefPath, 'utf8'));
   const evidence = fs.existsSync(evDir) ? fs.readdirSync(evDir).filter((f) => f.endsWith('.json')).map((f) => JSON.parse(fs.readFileSync(path.join(evDir, f), 'utf8'))) : [];
-  if (evidence.length < brief.sources.length) { console.error(`✗ ${slug}: 근거 ${evidence.length}/${brief.sources.length} — evidence.mjs 먼저`); failed++; continue; }
+  // 근거를 남의 폴더에서 빌려 쓰면(reuseEvidence) 그 원본 brief 의 출처 수와 맞춰야 한다.
+  // 자기 brief 수(12)만 보다가 근거 파일이 14→13 으로 줄어도 통과했다 (돌연변이 47번).
+  const ownerBrief = briefPeek.reuseEvidence
+    ? JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/article-template/brief', `${briefPeek.reuseEvidence}.json`), 'utf8'))
+    : brief;
+  const needEv = Math.max(brief.sources.length, ownerBrief.sources.length);
+  if (evidence.length < needEv) { console.error(`✗ ${slug}: 근거 ${evidence.length}/${needEv} — evidence.mjs 먼저`); failed++; continue; }
   const fc = factCheck({ html, evidence, engineNums: eng.nums, brief, claims: a.claims });
   // "쓴 것" 뿐 아니라 "안 쓴 것" 도 본다. 근거에 답이 있는데 회피했는지, 일수와 총액이 맞는지.
   // 이 두 검사가 없어서 회피 답 4편과 계산 오류 1편이 라이브로 나갔다 (2026-09-04).

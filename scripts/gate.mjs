@@ -234,7 +234,24 @@ for (const dir of fs.existsSync(path.join('app', hub)) ? fs.readdirSync(path.joi
 try { execFileSync('node', ['scripts/title-system/check-outline.mjs', PLAN], { stdio: 'pipe' }); }
 catch (e) { fail('[제목-소제목]', (e.stdout?.toString() ?? '').trim().split(String.fromCharCode(10)).slice(-3).join(' | ')); }
 
-// ── 10. 두 글이 같은 제목을 쓰는지 ───────────────────────────────────────
+// ── 10. 계획서의 소제목과 글의 소제목이 같은지 ──────────────────────────
+// 계획서가 단일 진실 원천인데 둘이 어긋나도 아무도 안 봤다. 돌연변이 46번으로 잡았다.
+// (check-outline 은 mustCover 가 h2 안에 있는지만 보고, 목록이 같은지는 안 봤다)
+for (const f of files) {
+  const sp = bySlug.get(slugOf(f));
+  if (!sp?.h2?.length) continue;
+  const real = [...read(f).matchAll(/<h2 id="s\d+">([^<]+)/g)]
+    .map((m) => m[1].replace(/<small>[\s\S]*/, '').replace(/\s+/g, ' ').trim());
+  const plan_ = sp.h2.map((x) => x.replace(/\s+/g, ' ').trim());
+  if (real.length !== plan_.length) fail(`[${sp.slug}]`, `계획서 소제목 ${plan_.length}개인데 글에는 ${real.length}개`);
+  else for (let i = 0; i < real.length; i++) {
+    if (real[i] !== plan_[i]) fail(`[${sp.slug}]`, `소제목 ${i + 1}번이 계획서와 다르다
+       계획서: "${plan_[i]}"
+       글    : "${real[i]}"`);
+  }
+}
+
+// ── 11. 두 글이 같은 제목을 쓰는지 ───────────────────────────────────────
 // 같은 제목이 둘이면 포털이 어느 쪽을 띄울지 정하지 못한다. 돌연변이 26번으로 잡았다.
 {
   const byTitle = new Map();
@@ -245,7 +262,7 @@ catch (e) { fail('[제목-소제목]', (e.stdout?.toString() ?? '').trim().split
   }
 }
 
-// ── 11. 느린 검사 ─────────────────────────────────────────────────────────
+// ── 12. 느린 검사 ─────────────────────────────────────────────────────────
 if (!quick) {
   const run = (label, args) => {
     try { execFileSync('node', args, { stdio: 'pipe' }); return true; }

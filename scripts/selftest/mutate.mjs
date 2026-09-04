@@ -163,6 +163,57 @@ const CASES = [
   { n: 32, name: '근거에 없는 조문을 각주에 씀',
     file: S('waiting'), slug: 'unemployment-waiting-guide',
     from: '제49조', to: '제999조', all: true },
+
+  // ── 3차 (2026-09-04): 검사가 없어 보이는 곳을 노린다 ─────────────────────
+  { n: 33, name: '연도를 위조 (2026 → 2030)',
+    file: S('waiting'), slug: 'unemployment-waiting-guide',
+    from: "basis: '2026년 9월 기준'", to: "basis: '2030년 9월 기준'" },
+
+  { n: 34, name: '히어로 카드에 글 어디에도 없는 숫자',
+    file: S('waiting'), slug: 'unemployment-waiting-guide',
+    from: "card: { label: '대기기간', big: String(WAIT)", to: "card: { label: '대기기간', big: '937'" },
+
+  { n: 35, name: '인용의 근거 번호가 없는 번호',
+    file: S('waiting'), slug: 'unemployment-waiting-guide',
+    from: "{ src: 1, quote: '실업의 신고일부터", to: "{ src: 77, quote: '실업의 신고일부터" },
+
+  { n: 36, name: '퍼센트 값 위조',
+    file: S('amount'), slug: 'unemployment-amount-guide',
+    from: '평균임금의 60퍼센트', to: '평균임금의 65퍼센트', all: true },
+
+  { n: 37, name: '반말 종결 (~한다)',
+    file: S('waiting'), slug: 'unemployment-waiting-guide',
+    from: '나오지 않아요. 뒤로 밀리는 것도 아니라 그냥 없는 날이 돼요.',
+    to: '나오지 않는다. 뒤로 밀리는 것도 아니라 그냥 없는 날이 된다.' },
+
+  { n: 38, name: '자기 자신을 가리키는 내부링크',
+    file: S('waiting'), slug: 'unemployment-waiting-guide',
+    from: "link: { href: '/unemployment/payday/'", to: "link: { href: '/unemployment/waiting/'", useGate: true },
+
+  { n: 39, name: 'related 에 죽은 링크',
+    file: S('waiting'), slug: 'unemployment-waiting-guide',
+    from: "href: '/unemployment/round-1/' }", to: "href: '/unemployment/없는글999/' }", useGate: true },
+
+  { n: 40, name: '같은 문장을 한 글 안에서 두 번',
+    file: S('waiting'), slug: 'unemployment-waiting-guide',
+    from: "text: '퇴사하고 한 달 뒤에 신고했다면 그 신고일부터 7일을 세요.",
+    to: "text: '신고일부터 이레 동안은 급여가 나오지 않는 기간이에요. 신고일부터 이레 동안은 급여가 나오지 않는 기간이에요." },
+
+  { n: 41, name: '히어로 alt 를 지움',
+    file: S('waiting'), slug: 'unemployment-waiting-guide',
+    from: "alt: `실업급여 대기기간 7일과 첫 회차 ${FIRST_DAYS}일치`", to: "alt: ''" },
+
+  { n: 42, name: '검토 기록의 query 를 지움', plan: true, slug: 'waiting', field: 'dropQuery' },
+  { n: 43, name: '검토 기록의 hardWords 를 지움', plan: true, slug: 'waiting', field: 'dropHard' },
+  { n: 44, name: 'deeperThanHub 를 한 낱말로', plan: true, slug: 'waiting', field: 'shortDeeper' },
+  { n: 45, name: '검토 기록의 specHash 를 지움', plan: true, slug: 'waiting', field: 'dropHash' },
+  { n: 46, name: '계획서에만 있는 소제목 추가', plan: true, slug: 'waiting', field: 'addH2' },
+
+  { n: 47, name: '근거 파일을 하나 지움', evidenceDrop: true, slug: 'unemployment-waiting-guide' },
+
+  { n: 48, name: '표 행의 셀 수가 헤더와 다름',
+    file: S('days'), slug: 'unemployment-days-guide',
+    from: "cells: [b.label, `${b.under}일`, `${b.over}일`, b.gap ? `+${b.gap}일` : '가산 없음']", to: "cells: [b.label, `${b.under}일`, `${b.over}일`]" },
 ];
 
 /** 계획서를 바꾸는 돌연변이 */
@@ -183,6 +234,11 @@ function mutatePlan(c) {
     if (c.field === 'mustCoverBogus') hit.mustCover = [...(hit.mustCover ?? []), '없는말123'];
     if (c.field === 'titleKeywordBogus') { if (!hit.review) return { skip: '검토 기록 없음' }; hit.review.titleKeyword = '아무도검색하지않는말'; }
     if (c.field === 'dropAnswer') { if (!hit.review?.h2Answers?.length) return { skip: '검토 기록 없음' }; hit.review.h2Answers.pop(); }
+    if (c.field === 'dropQuery') { if (!hit.review) return { skip: '검토 기록 없음' }; delete hit.review.query; }
+    if (c.field === 'dropHard') { if (!hit.review) return { skip: '검토 기록 없음' }; delete hit.review.hardWords; }
+    if (c.field === 'shortDeeper') { if (!hit.review) return { skip: '검토 기록 없음' }; hit.review.deeperThanHub = '깊음'; }
+    if (c.field === 'dropHash') { if (!hit.review) return { skip: '검토 기록 없음' }; delete hit.review.specHash; }
+    if (c.field === 'addH2') hit.h2 = [...(hit.h2 ?? []), '계획서에만 있는 소제목인가요'];
     if (c.field === 'dupTitle') {
       let other = null;
       (function w2(o) { if (Array.isArray(o)) o.forEach(w2); else if (o && typeof o === 'object') { if (o.slug && o.slug !== c.slug && o.title && !other) other = o; else Object.values(o).forEach(w2); } })(d);
@@ -195,10 +251,25 @@ function mutatePlan(c) {
   } finally { fs.writeFileSync(PLAN, orig); }
 }
 
+/** 근거 파일 하나를 잠시 치운다 */
+function mutateEvidence(c) {
+  const dir = 'scripts/article-template/evidence/unemployment-benefit-guide';
+  if (!fs.existsSync(dir)) return { skip: '근거 폴더 없음' };
+  const files = fs.readdirSync(dir).filter((x) => x.endsWith('.json'));
+  if (!files.length) return { skip: '근거 파일 없음' };
+  const target = `${dir}/${files[files.length - 1]}`;
+  const orig = fs.readFileSync(target, 'utf8');
+  try {
+    fs.unlinkSync(target);
+    const b = build(c.slug);
+    return { caught: b.code !== 0, where: '빌드', out: b.out };
+  } finally { fs.writeFileSync(target, orig); build(c.slug); }
+}
+
 let caught = 0, tested = 0, escaped = [];
 for (const c of CASES) {
   if (only && c.n !== only) continue;
-  const r = c.plan ? mutatePlan(c) : mutateFile(c);
+  const r = c.evidenceDrop ? mutateEvidence(c) : c.plan ? mutatePlan(c) : mutateFile(c);
   if (r.skip) { console.log(`— ${String(c.n).padStart(2)} ${c.name}  (건너뜀: ${r.skip})`); continue; }
   tested++;
   if (r.caught) { caught++; console.log(`✓ ${String(c.n).padStart(2)} ${c.name}  [${r.where}]`); }

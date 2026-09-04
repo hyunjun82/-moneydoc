@@ -23,7 +23,8 @@ export function factCheck({ html, evidence, engineNums, brief, claims }) {
 
   // 1) 숫자
   const seen = new Set();
-  const re = /(\d[\d,]*(?:\.\d+)?)\s*(%|원|만원|만|억|일|개월|년|세|시간|회|명|배|㎡|cc)?/g;
+  // '퍼센트' 가 빠져 있어 "65퍼센트" 가 단위 없는 숫자로 새어 나갔다 (돌연변이 36번)
+  const re = /(\d[\d,]*(?:\.\d+)?)\s*(%|퍼센트|원|만원|만|억|일|개월|년|세|시간|회|명|배|㎡|cc)?/g;
   let m;
   while ((m = re.exec(text))) {
     const raw = m[1], unit = m[2] ?? '';
@@ -37,17 +38,21 @@ export function factCheck({ html, evidence, engineNums, brief, claims }) {
     if (engineNums.has(num) || engineNums.has(String(v))) continue;
     if (unit === '만' || unit === '만원') { if (engineNums.has(String(v * 1e4)) || inEvidence(num + '만') || inEvidence(String(v * 1e4))) continue; }
     if (unit === '억') { if (engineNums.has(String(v * 1e8)) || inEvidence(num + '억') || inEvidence(String(v * 1e8))) continue; }
-    if (unit === '%') {
+    if (unit === '%' || unit === '퍼센트') {
       // 4.75% = 엔진 상수 0.0475, 또는 법령의 "1만분의 475" / "1천분의 95" / "100분의 60" / "100만분의 9,448" 표기
       const frac = String(+(v / 100).toFixed(10));
       if (engineNums.has(frac)) continue;
       const half = String(+(v * 2 / 100).toFixed(10));           // 근로자 절반 표기(3.595% ← 1만분의 719 의 절반)
       const hits = [[100, '100분의'], [1000, '1천분의'], [10000, '1만분의'], [1000000, '100만분의']].some(([d, w]) => {
-        const n1 = Math.round(v / 100 * d), n2 = Math.round(v * 2 / 100 * d);
+        const n1 = Math.round(v / 100 * d);
         const ok = (n) => Number.isInteger(n) && (inEvidence(`${w}${n}`) || inEvidence(`${w}${n.toLocaleString('ko-KR')}`));
-        return ok(n1) || ok(n2);
+        // 절반 표기(3.595% ← 1만분의 719 의 절반)는 보험료율처럼 작은 값에만 쓴다.
+        // 이 조건이 열려 있어서 "65퍼센트" 가 근거의 "100분의130"(그 두 배)을 만나 통과했다. 돌연변이 36번.
+        if (v <= 10) { const n2 = Math.round(v * 2 / 100 * d); if (ok(n2)) return true; }
+        return ok(n1);
       });
-      if (hits || engineNums.has(half) || inEvidence(num + '%') || inEvidence(`${num}퍼센트`)) continue;
+      if (hits || (v <= 10 && engineNums.has(half)) || inEvidence(num + '%') || inEvidence(`${num}퍼센트`)) continue;
+      problems.push(`비율 근거 없음: ${raw}${unit}`); continue;
     }
     if (inEvidence(num)) continue;
     const at = text.slice(Math.max(0, m.index - 40), m.index + 40).trim();

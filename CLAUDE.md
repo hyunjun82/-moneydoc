@@ -65,7 +65,7 @@ FAIL 우선. 🔴 산식·데이터 → engine.js / 🟡 정책 갱신 → JSON 
 ## 7. 장치가 진짜 잡는지 (숫자로 댄다)
 
 ```bash
-node scripts/selftest/mutate.mjs  # 결함 32종 32/32   (gate 8/8 · hook 13/13 · build-checks 4/4)
+node scripts/selftest/mutate.mjs  # 결함 48종 48/48   (gate 8/8 · hook 13/13 · build-checks 4/4)
 ```
 
 검사기를 고쳤으면 여기부터. "작동한다"는 말 대신 숫자를 댄다.
@@ -74,5 +74,5 @@ node scripts/selftest/mutate.mjs  # 결함 32종 32/32   (gate 8/8 · hook 13/13
 ## 8. 푸시
 
 `verify-3way --all` PASS · `check-constants` PASS · 글 만졌으면 `gate.mjs` PASS ·
-검사기 고쳤으면 `mutate.mjs` 32/32 · `tsc --noEmit` 0 · 잘림 확인 →
+검사기 고쳤으면 `mutate.mjs` 48/48 · `tsc --noEmit` 0 · 잘림 확인 →
 push-changes.bat → Cloudflare 빌드 확인 → push 후 `verify-3way --all`(--no-gov 빼고) 재확인.

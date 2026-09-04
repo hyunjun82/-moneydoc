@@ -17,6 +17,9 @@ const strip = (s) => String(s ?? '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' 
 const sentences = (s) => strip(s).split(/(?<=[.!?])\s+/).filter((x) => x.length > 1);
 const BAD_DASH = /[—|]/;
 const FORMAL = /(합니다|입니다|됩니다|습니다|십시오)(?=[\s.,!?)]|$)/;
+// 반말 종결도 해요체가 아니다. 합니다체만 보다가 "~한다/~된다" 가 그냥 지나갔다 (돌연변이 37번).
+// 법령 인용은 각주(fn)에 두므로 여기 걸리지 않는다.
+const PLAIN = /(한다|된다|이다|아니다|있다|없다|같다)(?=[\s.,!?)]|$)/;
 const LAW_INLINE = /(§\s?\d+|제\d+조|시행령\s*제|시행규칙\s*제|별표\s?\d)/;
 const SELF_REF = /(검증했어요|확인했어요|맞춰 봤|대조했어요)/;
 // 번역투·AI투 (fluent-korean · korean-report-style 규칙 중 기계 검사 가능한 것만). 걸리면 FAIL.
@@ -47,6 +50,7 @@ export function lint(a) {
     const t = strip(text);
     if (BAD_DASH.test(t)) add(where, `대시·파이프 사용: "${t.slice(0, 40)}"`);
     if (FORMAL.test(t)) add(where, `합니다체: "${t.match(FORMAL)[0]}"`);
+    if (PLAIN.test(t)) add(where, `반말 종결: "${t.match(PLAIN)[0]}" (해요체로 쓴다)`);
     if (law && LAW_INLINE.test(t)) add(where, `본문 법 조문 인용: "${t.match(LAW_INLINE)[0]}" (출처·각주로)`);
     if (SELF_REF.test(t)) add(where, `자기 언급: "${t.match(SELF_REF)[0]}"`);
     for (const [re, why] of AWKWARD) if (re.test(t)) add(where, `번역투: ${why} ← "${t.match(re)[0]}"`);
@@ -120,6 +124,18 @@ export function lint(a) {
 
   // 꼬리
   if ((a.faq?.length ?? 0) < 5) add('faq', `${a.faq?.length ?? 0}개 (5개 이상)`);
+  // 히어로 카드는 본문 요약이다. 카드에 적은 숫자가 글 어디에도 없으면 둘이 어긋난 것이다.
+  // 검사가 없어서 대기기간 7일 글의 카드만 14 로 바꿔도 통과했다 (돌연변이 34번).
+  {
+    // 히어로 카드는 OG 이미지에만 들어간다. "7을 14로" 같은 의미 뒤바뀜은 기계가 못 가린다
+    // (본문 다른 곳에 14가 정당하게 있을 수 있다). 여기서는 **글 어디에도 없는 숫자**만 잡는다.
+    const bodyText = JSON.stringify([a.intro, a.answer, a.keyPoints, a.sections, a.faq, a.summary]);
+    const cardNums = String(`${a.hero?.card?.big ?? ''} ${a.hero?.card?.l1 ?? ''} ${a.hero?.card?.l2 ?? ''}`).match(/\d[\d,]*/g) ?? [];
+    for (const n of cardNums) {
+      if (!bodyText.replace(/,/g, '').includes(n.replace(/,/g, ''))) add('hero.card', `카드의 "${n}" 이 본문에 없다. 카드와 본문이 어긋났다`);
+    }
+  }
+
   for (const [q, ans] of a.faq ?? []) { if (!/\?$/.test(q)) add('faq', `질문은 ?로 끝나야 함: "${q}"`); checkText(`faq ${q.slice(0, 12)}`, ans, { law: false, len: 120 }); }
   if ((a.summary?.length ?? 0) < 3) add('summary', '정리 3줄 이상');
   const srcKeys = (a.sources ?? []).map(([k]) => k);
