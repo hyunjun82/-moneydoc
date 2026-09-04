@@ -24,10 +24,12 @@ type Props = {
   catLabel: string;
   crumb: string;
   catHref: string;
+  /** 헤더에서 켤 카테고리. 빵부스러기(주제 구조)와 별개다 */
+  navActive?: string;
   calculator?: React.ReactNode;
 };
 
-export function HubPage({ meta, html, faqLd, scriptKey, url, catLabel, crumb, catHref, calculator }: Props) {
+export function HubPage({ meta, html, faqLd, scriptKey, url, catLabel, crumb, catHref, navActive, calculator }: Props) {
   const i = html.indexOf(START);
   const j = html.indexOf(END);
   const hasSlot = i >= 0 && j > i;
@@ -51,26 +53,34 @@ export function HubPage({ meta, html, faqLd, scriptKey, url, catLabel, crumb, ca
     publisher: { "@type": "Organization", name: "MoneyDoc", url: "https://moneydoc.kr/" },
   };
 
+  // 허브(catHref === "/")는 홈 › 실업급여 두 단계, 스포크는 홈 › 실업급여 › 수급자격 세 단계
+  const isHub = catHref === "/";
   const breadcrumbLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "홈", item: "https://moneydoc.kr/" },
-      { "@type": "ListItem", position: 2, name: catLabel, item: `https://moneydoc.kr${catHref}` },
-      { "@type": "ListItem", position: 3, name: crumb, item: url },
-    ],
+    itemListElement: isHub
+      ? [
+          { "@type": "ListItem", position: 1, name: "홈", item: "https://moneydoc.kr/" },
+          { "@type": "ListItem", position: 2, name: crumb, item: url },
+        ]
+      : [
+          { "@type": "ListItem", position: 1, name: "홈", item: "https://moneydoc.kr/" },
+          { "@type": "ListItem", position: 2, name: catLabel, item: `https://moneydoc.kr${catHref}` },
+          { "@type": "ListItem", position: 3, name: crumb, item: url },
+        ],
   };
 
   return (
     <>
-      <Header active={catHref.replace(/\//g, "")} />
+      <Header active={navActive ?? catHref.replace(/\//g, "")} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <div className="md-v2">
         <main>
           <div className="v2-crumb">
-            <a href="/">홈</a> › <a href={catHref}>{catLabel}</a> › {crumb}
+            <a href="/">홈</a> ›{" "}
+            {isHub ? crumb : (<><a href={catHref}>{catLabel}</a> › {crumb}</>)}
           </div>
           <div dangerouslySetInnerHTML={{ __html: before }} />
           {calculator ? <div id="calc">{calculator}</div> : <div dangerouslySetInnerHTML={{ __html: inner }} />}

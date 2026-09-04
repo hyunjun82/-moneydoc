@@ -166,7 +166,7 @@ footer code{font-family:var(--mono);font-size:11.5px}
     ${body}
     <footer>
       <p>출처 <code>실업급여_연관검색어.xlsx</code> · <code>실업급여_지식인.csv</code></p>
-      <p>집계 <code>scripts/keyword-data/analyze.mjs · cluster.mjs · mine.mjs</code></p>
+      <p>집계 <code>scripts/keyword-data/analyze.mjs · mine.mjs</code></p>
       <p>제목 규칙 <code>titles.confirmed-21.json</code> — 어미를 돌리고 "까지"는 15% 이하. 이 62편은 2%입니다.</p>
     </footer>
   </main>

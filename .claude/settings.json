@@ -1,0 +1,21 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "node scripts/check-truncation.mjs" },
+          { "type": "command", "command": "node scripts/hook-verify.mjs" }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          { "type": "command", "command": "node scripts/hook-push-guard.mjs" }
+        ]
+      }
+    ]
+  }
+}

@@ -38,8 +38,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Claude Code worktrees & settings
-.claude/
+# Claude Code worktrees 등은 무시하되, 훅 등록(settings.json)은 저장소에 둔다.
+# 훅이 게이트를 강제하는 장치라 체크아웃마다 있어야 한다. 폴더째 제외하면 안의 파일을 되살릴 수 없어 * 로 쓴다.
+.claude/*
+!.claude/settings.json
 .playwright-mcp/
 
 # Preview HTML mockups (디자인 시안, 폐기 예정)

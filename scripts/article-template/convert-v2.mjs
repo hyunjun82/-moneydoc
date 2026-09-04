@@ -161,6 +161,23 @@ function hubRoute(a) {
   return { route: NOCALC[a.cat + '/' + a.slug] ?? (a.cat + '/' + a.slug), client: null };
 }
 
+/**
+ * 빵부스러기는 주제 구조를 따른다.
+ *   허브  : 홈 › 실업급여
+ *   스포크: 홈 › 실업급여 › 수급자격
+ * 카테고리(정부지원금)를 앞에 두지 않는다. 허브가 주제이지 카테고리의 하위가 아니다.
+ */
+function crumbOf(a, route) {
+  const seg = route.split('/');
+  if (seg.length === 1) return { hubHref: null, hubLabel: null, crumb: a.crumb };
+  const hubSlug = seg[0];
+  const hubArticle = LIST.find((x) => hubRoute(x).route === hubSlug);
+  const hubLabel = hubArticle ? hubArticle.crumb : hubSlug;
+  // 스포크 이름 앞의 허브 이름을 뗀다. "실업급여 › 실업급여 수급자격" 처럼 겹치지 않게
+  const crumb = a.crumb.startsWith(hubLabel + ' ') ? a.crumb.slice(hubLabel.length + 1) : a.crumb;
+  return { hubHref: '/' + hubSlug + '/', hubLabel, crumb };
+}
+
 function readLanding(a) {
   const p = path.join(ROOT, 'public/_preview', `landing-${a.slug}.json`);
   return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null;
@@ -170,7 +187,10 @@ function pageFile(a) {
   const { route, client } = hubRoute(a);
   const url = 'https://moneydoc.kr/' + route + '/';
   const comp = client ? client.replace(/[^A-Za-z0-9_]/g, '') : null;
-  const catHref = '/' + (a.cat === 'government' ? 'gov' : a.cat) + '/';
+  const bc = crumbOf(a, route);
+  const catHref = bc.hubHref ?? '/';
+  const catLabel = bc.hubLabel ?? '홈';
+  const navActive = a.cat === 'government' ? 'gov' : a.cat;   // 헤더 하이라이트는 카테고리를 따른다
   const importLine = client ? 'import { ' + comp + ' } from "./' + client + '";' + NL : '';
   const calcProp = client ? '      calculator={<' + comp + ' />}' + NL : '';
   const isSpoke = route.includes('/');
@@ -211,8 +231,9 @@ function pageFile(a) {
     '      scriptKey={scriptKey}',
     '      url={PAGE_URL}',
     '      catHref=' + JSON.stringify(catHref),
-    '      catLabel=' + JSON.stringify(a.catLabel),
-    '      crumb=' + JSON.stringify(a.crumb),
+    '      catLabel=' + JSON.stringify(catLabel),
+    '      navActive=' + JSON.stringify(navActive),
+    '      crumb=' + JSON.stringify(bc.crumb),
     calcProp + '    />',
     '  );',
     '}',

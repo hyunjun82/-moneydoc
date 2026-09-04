@@ -46,7 +46,10 @@ ${b.questions.map((q, i) => `  <div class="q"><div><b>${q.q}</b><small>${q.hint}
         if (i === 0) return `<th scope="row">${c}</th>`;
         const cl = [b.x?.includes(i) && 'x', b.net === i && 'net', r.docs && i === r.cells.length - 1 && 'docs'].filter(Boolean);
         const dl = b.text ? ` data-l="${esc(b.headers[i])}"` : '';
-        return `<td${cl.length ? ` class="${cl.join(' ')}"` : ''}${dl}>${c}</td>`;
+        // 행에 link 를 달면 마지막 칸에 버튼으로 붙인다. 예전에는 조용히 버려서 링크가 사라졌다
+        const lk = r.link && i === r.cells.length - 1
+          ? `<a class="go" href="${r.link.href}"${ext(r.link.href)}>${r.link.label}</a>` : '';
+        return `<td${cl.length ? ` class="${cl.join(' ')}"` : ''}${dl}>${c}${lk}</td>`;
       }).join('');
       return `<tr${hi}>${cells}</tr>`;
     }).join('\n');

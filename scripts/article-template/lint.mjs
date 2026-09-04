@@ -65,7 +65,7 @@ export function lint(a) {
   for (const [k, v] of a.keyPoints?.rows ?? []) checkText(`핵심콕콕 ${k}`, v, { law: false, len: 120 });
 
   // 섹션
-  let tables = 0, h2s = 0;
+  let tables = 0, h2s = 0, visuals = 0;
   for (const s of a.sections) {
     if (s.h2) {
       h2s++;
@@ -80,6 +80,9 @@ export function lint(a) {
         case 'h3': if (BAD_DASH.test(b.text)) add(w, '대시·파이프'); if (!PAA.test(b.text)) add(w, `검색어형이 아님: "${b.text}"`); break;
         case 'note': checkText(w, `${b.title}. ${b.text}`); break;
         case 'fn': break;
+        case 'tree': case 'timeline': case 'steps': case 'flow':
+          visuals++;
+          break;
         case 'table':
           tables++;
           if (!b.caption) add(w, '캡션 없음');
@@ -105,7 +108,9 @@ export function lint(a) {
     const n = blockKinds.filter((k) => k === kind).length;
     if (n > 1) add('sections', `${kind} 블록 ${n}개 — 같은 시각화 반복 (글마다 내용에 맞는 것 하나만)`);
   }
-  if (tables < 2) add('sections', `표 ${tables}개 (2개 이상)`);
+  // 시각 장치는 글의 주제가 부르는 것을 쓴다. 표 개수를 강제하면 억지 표가 생긴다.
+  // 어떤 장치를 쓸지는 계획서(shape)가 정하고, 실제로 들어갔는지는 gate.mjs 가 본다.
+  if (tables + visuals === 0) add('sections', '시각 장치가 하나도 없음 (표·트리·타임라인·절차·흐름도 중 하나)');
 
   // 꼬리
   if ((a.faq?.length ?? 0) < 5) add('faq', `${a.faq?.length ?? 0}개 (5개 이상)`);
