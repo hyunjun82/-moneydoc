@@ -99,6 +99,10 @@
     "government/unemployment-waiting-guide": "unemployment/waiting",
     "government/unemployment-deadline-guide": "unemployment/deadline",
     "government/unemployment-total-guide": "unemployment/total",
-    "government/unemployment-average-wage-guide": "unemployment/average-wage"
+    "government/unemployment-average-wage-guide": "unemployment/average-wage",
+    "government/unemployment-extension-guide": "unemployment/extension",
+    "government/unemployment-other-activity-guide": "unemployment/other-activity",
+    "government/unemployment-unpaid-wage-quit-guide": "unemployment/unpaid-wage-quit",
+    "government/unemployment-commute-guide": "unemployment/commute"
   }
 }
