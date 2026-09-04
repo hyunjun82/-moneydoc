@@ -6,6 +6,7 @@
     "dev": "next dev",
     "prebuild": "node scripts/gen-sitemap.mjs && node scripts/gen-feed.mjs",
     "build": "next build",
+    "postbuild": "node scripts/clean-preview.mjs",
     "start": "next start",
     "lint": "next lint",
     "verify": "node moneydoc-data/verify/verify-all.js && node scripts/verify-engine-vs-cases.mjs && node scripts/verify-default-state.mjs"

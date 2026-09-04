@@ -14,7 +14,7 @@ const pages = [];
   for (const e of fs.readdirSync(d, { withFileTypes: true })) {
     const p = path.join(d, e.name);
     if (e.isDirectory()) {
-      // _next 는 에셋, _preview 는 배포되지 않는 로컬 미리보기
+      // _next 는 에셋, _preview 는 postbuild 에서 걷어내는 로컬 미리보기
       if (e.name !== '_next' && e.name !== '_preview') walk(p);
     } else if (e.name === 'index.html') pages.push(p);
   }

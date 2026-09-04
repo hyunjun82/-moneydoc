@@ -1,0 +1,40 @@
+{
+  "_설명": "사용자가 확정한 가이드 21편 제목. 어미를 다양화한 최종본. 임의로 바꾸지 않는다.",
+  "_확정일": "2026-09-03",
+  "_규칙": [
+    "소제목 4개 이상이 제목 안에 들어간다",
+    "행동 키워드(신청·조회·양식·계산·발급)를 담는다",
+    "어미를 돌린다. '까지'로 끝나는 제목은 전체의 15%를 넘지 않는다",
+    "확정된 제목은 바꾸지 않는다. 바꿔야 하면 먼저 물어본다"
+  ],
+
+  "titles": [
+    { "n": 1,  "slug": "four-major-insurance-guide",        "title": "2026년 4대보험 요율과 계산, 월급에서 떼는 돈과 회사 부담", "ending": "명사" },
+    { "n": 2,  "slug": "part-time-insurance-guide",         "title": "아르바이트도 4대보험 내나요, 주 15시간 기준과 보험료 계산", "ending": "질문+명사" },
+    { "n": 3,  "slug": "comprehensive-income-tax-guide",    "title": "종합소득세 세율과 계산 방법, 5월 홈택스 신고 순서까지", "ending": "까지" },
+    { "n": 4,  "slug": "freelancer-tax-guide",              "title": "프리랜서 3.3% 환급받는 법, 경비율과 5월 신고 총정리", "ending": "총정리" },
+    { "n": 5,  "slug": "acquisition-tax-guide",             "title": "집 살 때 취득세 세율과 계산, 생애최초 감면과 다주택 중과", "ending": "명사" },
+    { "n": 6,  "slug": "transfer-tax-guide",                "title": "1주택 양도세 비과세 요건, 2년 보유와 12억 초과분 계산법", "ending": "계산법" },
+    { "n": 7,  "slug": "property-tax-guide",                "title": "재산세 계산과 세율, 7월 9월 납부 시기와 조회 방법", "ending": "명사" },
+    { "n": 8,  "slug": "comprehensive-real-estate-tax-guide","title": "종합부동산세 누가 내나요, 공시가 합산과 1주택 12억 공제", "ending": "질문+명사" },
+    { "n": 9,  "slug": "annual-leave-allowance-guide",      "title": "연차수당 계산과 발생 기준, 안 쓴 연차 언제 얼마로 받나", "ending": "여운" },
+    { "n": 10, "slug": "unpaid-wages-guide",                "title": "임금체불 진정 넣는 방법, 지연이자 20%와 대지급금 신청", "ending": "명사" },
+    { "n": 11, "slug": "severance-claim-form-guide",        "title": "퇴직금 못 받았을 때 지급명령 신청서 쓰는 법과 양식", "ending": "방법" },
+    { "n": 12, "slug": "basic-pension-guide",               "title": "2026년 기초연금 조건과 금액, 소득 얼마까지 받을 수 있나", "ending": "여운" },
+    { "n": 13, "slug": "parental-leave-pay-guide",          "title": "2026년 육아휴직 급여 얼마 받나요, 조건과 신청 방법 정리", "ending": "질문+정리" },
+    { "n": 14, "slug": "basic-livelihood-eligibility-guide","title": "2026년 기초생활수급 조건 확인하기, 소득인정액과 급여 4종", "ending": "권유" },
+    { "n": 15, "slug": "dsr-limit-guide",                   "title": "스트레스 DSR 3단계 계산, 내 대출 한도 얼마나 줄어드나", "ending": "여운" },
+    { "n": 16, "slug": "national-pension-early-guide",      "title": "국민연금 조기수령 손해일까, 감액률과 손익분기 나이 계산", "ending": "질문+명사" },
+    { "n": 17, "slug": "installment-savings-guide",         "title": "적금 만기에 실제로 받는 돈, 이자 계산과 15.4% 세금", "ending": "명사" },
+    { "n": 18, "slug": "auto-tax-guide",                    "title": "자동차세 배기량별 계산과 1월 연납 신청, 얼마나 아끼나", "ending": "여운" },
+    { "n": 19, "slug": "certified-mail-guide",              "title": "내용증명 쓰는 법과 양식 다운로드, 임대차와 채권 회수", "ending": "명사" },
+    { "n": 20, "slug": "deposit-return-suit-guide",         "title": "보증금 못 받았을 때 소송 절차, 내용증명부터 소장 접수까지", "ending": "까지" },
+    { "n": 21, "slug": "personal-rehabilitation-guide",     "title": "개인회생 신청 조건과 절차, 준비 서류와 변제금 계산", "ending": "명사" }
+  ],
+
+  "_기존3편": [
+    { "slug": "unemployment-benefit-guide", "title": "2026년 실업급여 얼마나 받나요, 조건부터 금액과 신청 방법까지" },
+    { "slug": "salary-net-pay-guide",       "title": "2026년 연봉 실수령액 표, 연봉 3000부터 1억까지 월급 얼마 받나요" },
+    { "slug": "severance-pay-guide",        "title": "퇴직금 계산 방법과 지급기준, 평균임금부터 14일 지급기한까지" }
+  ]
+}
