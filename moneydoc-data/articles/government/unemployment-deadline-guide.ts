@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-deadline-guide.html
 export const meta = {
-  title: "실업급여 신청기간, 언제까지 신청해야 하나요",
+  title: "실업급여 신청기간, 퇴사 후 언제까지 받나요",
   description: "실업급여는 이직일 다음 날부터 12개월 안에 받아야 해요. 소정급여일수가 남아 있어도 이 기간이 지나면 끝나요. 늦게 신청했을 때 얼마를 못 받는지 계산했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-deadline-guide";
 
-export const html = `<h1>실업급여 신청기간, 언제까지 신청해야 하나요</h1>
+export const html = `<h1>실업급여 신청기간, 퇴사 후 언제까지 받나요</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 수급기간 규정 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-deadline-guide.png" width="1200" height="630" alt="실업급여 신청기간 12개월과 늦게 신청했을 때 손해">
 <p class="v2-lead v2-intro">실업급여에는 두 개의 시계가 있어요. 하나는 며칠을 받느냐인 소정급여일수, 다른 하나는 언제까지 받을 수 있느냐인 수급기간이에요. 수급기간은 이직일 다음 날부터 12개월이고, 이 기간이 지나면 일수가 남아 있어도 지급이 끝나요. 소정급여일수가 긴 사람일수록 늦게 신청하면 손해가 커져요.</p>

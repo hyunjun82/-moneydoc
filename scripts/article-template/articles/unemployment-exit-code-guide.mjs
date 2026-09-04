@@ -25,7 +25,7 @@ export default function article({ VERIFIED }) {
 
   return {
     slug: 'unemployment-exit-code-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 이직코드',
-    title: '실업급여 코드 종류와 뜻, 23번 32번은 무슨 사유인가요',
+    title: '실업급여 코드 종류, 23번과 32번은 무슨 뜻인가요',
     description: `이직코드는 회사가 이직확인서에 적는 상실사유 구분코드예요. 23번은 경영상 인원감축, 32번은 계약기간 만료예요. 코드 ${CODES.length}가지와 수급 여부를 정리했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용24 상실사유 구분코드 원문 대조 · ${VERIFIED}`,

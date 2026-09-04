@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-daily-worker-guide.html
 export const meta = {
-  title: "일용직 실업급여 조건과 수급 중 일용근로 신고 기준",
+  title: "일용직 실업급여 조건, 수급 중 일한 날 신고 기준",
   description: "일용직은 일반 근로자의 네 가지 조건에 두 가지가 더 붙어요. 신청 전 근로일이 총 일수의 3분의 1 미만이어야 하고, 건설일용은 14일 연속 근로내역이 없으면 인정돼요. 수급 중 일용근로 신고까지 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-daily-worker-guide";
 
-export const html = `<h1>일용직 실업급여 조건과 수급 중 일용근로 신고 기준</h1>
+export const html = `<h1>일용직 실업급여 조건, 수급 중 일한 날 신고 기준</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 일용근로자 요건 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-daily-worker-guide.png" width="1200" height="630" alt="일용직 실업급여 조건과 수급 중 일용근로 신고 기준">
 <p class="v2-lead v2-intro">일용직도 실업급여를 받을 수 있어요. 다만 일반 근로자와 조건이 달라요. 법이 정한 네 가지 요건 뒤에 두 가지가 더 붙는데, 이 두 가지는 마지막 이직 당시 일용근로자였던 사람에게만 해당해요. 계속 일이 있는 상태로는 받기 어렵게 만들어 둔 장치예요. 조건이 무엇인지, 수급 중에 일용으로 일하면 어떻게 신고하는지 정리했어요.</p>

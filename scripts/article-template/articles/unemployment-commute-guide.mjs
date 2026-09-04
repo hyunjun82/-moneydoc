@@ -17,7 +17,7 @@ export default function article({ VERIFIED }) {
 
   return {
     slug: 'unemployment-commute-guide', cat: 'government', catLabel: '정부지원금', crumb: '통근 곤란 퇴사 실업급여',
-    title: '통근 곤란 퇴사 실업급여 조건, 왕복 몇 시간이면 인정되나',
+    title: '실업급여 통근곤란, 왕복 몇 시간이면 인정되나요',
     description: `통근 곤란은 정당한 이직 사유예요. 통상의 교통수단으로 사업장 왕복에 3시간 이상 걸리게 됐을 때를 말해요. 어떤 사정이 인정되고 무엇으로 증명하는지 정리했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 시행규칙 별표2 원문 대조 · ${VERIFIED}`,

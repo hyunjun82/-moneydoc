@@ -30,7 +30,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
   return {
     slug: 'unemployment-total-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 총 수령액',
-    title: '실업급여 계산, 한달에 얼마씩 몇개월 받나요',
+    title: '실업급여 계산, 한 달에 얼마씩 몇 개월 받나요',
     description: `실업급여 총액은 하루 지급액에 소정급여일수를 곱한 금액이에요. 월 ${man(3e6)}원에 가입 3년이면 ${R.benefitDays}일 동안 모두 ${won(R.totalBenefit)}원이에요. 조건별 총액을 표로 정리했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 급여 산정 원문 대조 · ${VERIFIED}`,

@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-exit-code-guide.html
 export const meta = {
-  title: "실업급여 코드 종류와 뜻, 23번 32번은 무슨 사유인가요",
+  title: "실업급여 코드 종류, 23번과 32번은 무슨 뜻인가요",
   description: "이직코드는 회사가 이직확인서에 적는 상실사유 구분코드예요. 23번은 경영상 인원감축, 32번은 계약기간 만료예요. 코드 9가지와 수급 여부를 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-exit-code-guide";
 
-export const html = `<h1>실업급여 코드 종류와 뜻, 23번 32번은 무슨 사유인가요</h1>
+export const html = `<h1>실업급여 코드 종류, 23번과 32번은 무슨 뜻인가요</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용24 상실사유 구분코드 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-exit-code-guide.png" width="1200" height="630" alt="실업급여 이직코드 9가지와 수급 여부">
 <p class="v2-lead v2-intro">실업급여를 신청하면 회사가 이직확인서를 내요. 거기에 왜 그만뒀는지를 숫자로 적는데 이걸 상실사유 구분코드, 흔히 이직코드라고 불러요. 고용센터는 이 코드에서 판단을 시작하기 때문에, 실제 사정과 다른 코드가 찍히면 받을 수 있는데도 막힐 수 있어요. 코드가 몇 가지인지, 많이 묻는 23번과 32번이 무슨 뜻인지, 틀렸을 때 어떻게 고치는지 정리했어요.</p>

@@ -22,7 +22,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
   return {
     slug: 'unemployment-deadline-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 신청기간',
-    title: '실업급여 신청기간, 언제까지 신청해야 하나요',
+    title: '실업급여 신청기간, 퇴사 후 언제까지 받나요',
     description: `실업급여는 이직일 다음 날부터 12개월 안에 받아야 해요. 소정급여일수가 남아 있어도 이 기간이 지나면 끝나요. 늦게 신청했을 때 얼마를 못 받는지 계산했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 수급기간 규정 원문 대조 · ${VERIFIED}`,

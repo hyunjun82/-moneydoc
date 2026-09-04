@@ -19,7 +19,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
   return {
     slug: 'unemployment-eligibility-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 수급자격',
-    title: '실업급여 수급자격, 4가지 조건과 180일 이직 사유 정리',
+    title: '실업급여 수급자격, 4가지 조건과 이직 사유 기준',
     description: `실업급여 수급자격은 고용보험법이 정한 4가지 조건을 모두 채워야 해요. 180일 이상 가입, 취업하지 못한 상태, 이직 사유가 제한 사유가 아닐 것, 재취업 노력이에요. 일용근로자는 2가지가 더 붙어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `고용보험법 수급 요건 원문 대조 · ${VERIFIED}`,

@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-total-guide.html
 export const meta = {
-  title: "실업급여 계산, 한달에 얼마씩 몇개월 받나요",
+  title: "실업급여 계산, 한 달에 얼마씩 몇 개월 받나요",
   description: "실업급여 총액은 하루 지급액에 소정급여일수를 곱한 금액이에요. 월 300만원에 가입 3년이면 180일 동안 모두 11,888,640원이에요. 조건별 총액을 표로 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-total-guide";
 
-export const html = `<h1>실업급여 계산, 한달에 얼마씩 몇개월 받나요</h1>
+export const html = `<h1>실업급여 계산, 한 달에 얼마씩 몇 개월 받나요</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 급여 산정 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-total-guide.png" width="1200" height="630" alt="실업급여 총 수령액 계산. 월 300만원 가입 3년이면 11,888,640원">
 <p class="v2-lead v2-intro">실업급여를 얼마나 받을지 계획을 세우려면 총액을 알아야 해요. 총액은 간단해요. 하루 지급액에 소정급여일수를 곱하면 끝이에요. 그런데 하루 지급액은 상한과 하한에 막혀 있어서 사람마다 크게 다르지 않고, 총액을 가르는 건 사실상 소정급여일수예요. 조건별로 얼마가 되는지 표로 정리했어요.</p>

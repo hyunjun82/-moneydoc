@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-apply-guide.html
 export const meta = {
-  title: "실업급여 신청 방법, 고용24 구직신청부터 실업인정까지 5단계",
+  title: "실업급여 신청 방법, 서류 확인부터 실업인정까지",
   description: "실업급여 신청은 5단계예요. 회사 서류 확인, 고용24 구직신청, 수급자격 신청자 교육, 고용센터 출석, 실업인정 순서로 진행해요. 각 단계에서 무엇을 하는지 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-apply-guide";
 
-export const html = `<h1>실업급여 신청 방법, 고용24 구직신청부터 실업인정까지 5단계</h1>
+export const html = `<h1>실업급여 신청 방법, 서류 확인부터 실업인정까지</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 신고·인정 절차 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-apply-guide.png" width="1200" height="630" alt="실업급여 신청 방법 5단계. 고용24 구직신청부터 실업인정까지">
 <p class="v2-lead v2-intro">실업급여는 퇴사했다고 저절로 나오지 않아요. 직접 고용센터에 실업을 신고하고 수급자격을 인정받아야 시작돼요. 법에서 말하는 실업 신고에는 구직 신청과 수급자격 인정 신청이 함께 들어가기 때문에, 고용24에서 구직등록을 먼저 하고 고용센터에 나가는 순서가 돼요. 각 단계에서 무엇을 하는지 정리했어요.</p>

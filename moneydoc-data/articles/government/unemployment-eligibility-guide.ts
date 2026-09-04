@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-eligibility-guide.html
 export const meta = {
-  title: "실업급여 수급자격, 4가지 조건과 180일 이직 사유 정리",
+  title: "실업급여 수급자격, 4가지 조건과 이직 사유 기준",
   description: "실업급여 수급자격은 고용보험법이 정한 4가지 조건을 모두 채워야 해요. 180일 이상 가입, 취업하지 못한 상태, 이직 사유가 제한 사유가 아닐 것, 재취업 노력이에요. 일용근로자는 2가지가 더 붙어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-eligibility-guide";
 
-export const html = `<h1>실업급여 수급자격, 4가지 조건과 180일 이직 사유 정리</h1>
+export const html = `<h1>실업급여 수급자격, 4가지 조건과 이직 사유 기준</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 수급 요건 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-eligibility-guide.png" width="1200" height="630" alt="실업급여 수급자격 4가지 조건. 180일, 미취업 상태, 이직 사유, 재취업 노력">
 <p class="v2-lead v2-intro">실업급여를 받으려면 회사를 그만둔 것만으로는 안 돼요. 고용보험법 제40조가 정한 조건을 모두 채워야 해요. 일반 근로자에게 붙는 조건은 네 가지고, 마지막에 일용근로자로 일했다면 두 가지가 더 붙어요. 인터넷에는 다섯 가지라고 적힌 곳이 많은데, 그건 일용근로자에게만 해당하는 항목을 섞어 센 거예요. 네 가지가 각각 무엇인지, 어디서 자주 막히는지 정리했어요.</p>

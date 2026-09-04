@@ -23,7 +23,7 @@ export default function article({ VERIFIED }) {
 
   return {
     slug: 'unemployment-round-4-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 4차 실업인정',
-    title: '실업급여 4차 실업인정, 회차별 인정일 간격과 심층상담',
+    title: '실업급여 4차 실업인정, 출석 회차와 인정일 간격',
     description: `실업급여 4차 실업인정일은 인터넷 신청이 안 되고 고용센터에 직접 가는 날이에요. 날짜는 3차 인정일 다음 날부터 7일에서 28일 사이에서 담당자가 정하고, 취업을 못 했으면 심층상담을 받아요. 재취업활동은 4차까지 4주에 1회, 5차부터 2회예요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 5,
     badge: `실업인정 및 재취업지원규정 · 고용24 안내 대조 · ${VERIFIED}`,

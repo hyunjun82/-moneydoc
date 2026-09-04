@@ -10,7 +10,7 @@ export default function article({ VERIFIED }) {
 
   return {
     slug: 'unemployment-contract-end-guide', cat: 'government', catLabel: '정부지원금', crumb: '계약만료 실업급여',
-    title: '계약만료 실업급여 되나요, 재계약 거절했을 때 수급 여부',
+    title: '계약만료 실업급여, 재계약 거절하면 못 받나요',
     description: `계약기간이 끝나 회사를 계속 다닐 수 없게 된 경우는 정당한 이직 사유예요. 다만 회사가 재계약을 제안했는데 거절하면 갈릴 수 있어요. 조건이 나빠진 재계약을 거절한 경우까지 정리했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 시행규칙 별표2 원문 대조 · ${VERIFIED}`,

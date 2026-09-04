@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-contract-end-guide.html
 export const meta = {
-  title: "계약만료 실업급여 되나요, 재계약 거절했을 때 수급 여부",
+  title: "계약만료 실업급여, 재계약 거절하면 못 받나요",
   description: "계약기간이 끝나 회사를 계속 다닐 수 없게 된 경우는 정당한 이직 사유예요. 다만 회사가 재계약을 제안했는데 거절하면 갈릴 수 있어요. 조건이 나빠진 재계약을 거절한 경우까지 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-contract-end-guide";
 
-export const html = `<h1>계약만료 실업급여 되나요, 재계약 거절했을 때 수급 여부</h1>
+export const html = `<h1>계약만료 실업급여, 재계약 거절하면 못 받나요</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 시행규칙 별표2 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-contract-end-guide.png" width="1200" height="630" alt="계약만료 실업급여와 재계약 거절 시 수급 여부">
 <p class="v2-lead v2-intro">계약직으로 일하다 기간이 끝나면 실업급여를 받을 수 있어요. 시행규칙 목록에 계약기간의 만료로 회사를 계속 다닐 수 없게 된 경우가 정당한 이직 사유로 그대로 들어 있거든요. 문제는 회사가 재계약을 하자고 했는데 본인이 거절한 경우예요. 이때는 스스로 그만둔 것으로 볼 여지가 생겨요. 어떤 경우에 갈리는지, 조건이 나빠진 재계약은 어떻게 보는지 정리했어요.</p>

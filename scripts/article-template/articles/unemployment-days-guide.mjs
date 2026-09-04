@@ -33,7 +33,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
   return {
     slug: 'unemployment-days-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 소정급여일수',
-    title: '실업급여 일수, 나이와 가입기간별 소정급여일수 표',
+    title: '실업급여 일수, 나이와 가입기간별로 며칠 받나요',
     description: `실업급여를 며칠 받는지는 나이와 고용보험 가입기간 두 가지로 정해져요. 가장 짧으면 ${MIN.under}일, 가장 길면 ${MAX.over}일이에요. 구간별 표와 50세 기준으로 갈리는 지점을 정리했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 소정급여일수 별표1 원문 대조 · ${VERIFIED}`,

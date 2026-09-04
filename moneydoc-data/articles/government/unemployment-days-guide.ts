@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-days-guide.html
 export const meta = {
-  title: "실업급여 일수, 나이와 가입기간별 소정급여일수 표",
+  title: "실업급여 일수, 나이와 가입기간별로 며칠 받나요",
   description: "실업급여를 며칠 받는지는 나이와 고용보험 가입기간 두 가지로 정해져요. 가장 짧으면 120일, 가장 길면 270일이에요. 구간별 표와 50세 기준으로 갈리는 지점을 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-days-guide";
 
-export const html = `<h1>실업급여 일수, 나이와 가입기간별 소정급여일수 표</h1>
+export const html = `<h1>실업급여 일수, 나이와 가입기간별로 며칠 받나요</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 소정급여일수 별표1 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-days-guide.png" width="1200" height="630" alt="실업급여 소정급여일수 표. 가장 짧으면 120일, 가장 길면 270일">
 <p class="v2-lead v2-intro">실업급여를 얼마 받느냐만큼 며칠 받느냐도 중요해요. 하루 지급액이 같아도 일수가 다르면 총액이 크게 벌어지거든요. 이 일수를 소정급여일수라고 하는데, 월급이나 퇴사 사유와는 상관없이 나이와 고용보험 가입기간 두 가지로만 정해져요. 구간별로 며칠인지, 50세를 기준으로 얼마나 달라지는지, 내 일수는 어디서 확인하는지 정리했어요.</p>

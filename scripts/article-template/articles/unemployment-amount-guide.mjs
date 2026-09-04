@@ -33,7 +33,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
   return {
     slug: 'unemployment-amount-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 상한액 하한액',
-    title: '2026년 실업급여 상한액 하한액, 하루 얼마까지 받나요',
+    title: '2026년 실업급여 상한액과 하한액, 하루 얼마까지 받나요',
     description: `2026년 실업급여는 하루 최대 ${won(C.DAILY_UPPER_LIMIT)}원, 최소 ${won(C.DAILY_LOWER_LIMIT)}원이에요. 둘 차이가 ${won(GAP)}원뿐이라 월급이 달라도 받는 금액은 비슷해요. 월급 구간별로 정리했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 구직급여일액 원문 대조 · ${VERIFIED}`,

@@ -30,7 +30,7 @@ export default function article({ loadSpec, VERIFIED, derive = (v) => v }) {
 
   return {
     slug: 'unemployment-180days-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 180일',
-    title: '실업급여 180일, 주 며칠 일해야 채워지는지 계산법',
+    title: '실업급여 180일, 주 며칠 일해야 채워지나요',
     description: `실업급여 180일은 다닌 날이 아니라 보수가 나간 날을 세요. 유급 주휴일이 들어가서 주 5일 근무자는 ${W5.weeks}주, 달력으로 ${W5.months}개월이면 채워져요. 근무 형태별로 얼마나 걸리는지 정리했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 피보험 단위기간 원문 대조 · ${VERIFIED}`,

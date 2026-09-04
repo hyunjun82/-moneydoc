@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-commute-guide.html
 export const meta = {
-  title: "통근 곤란 퇴사 실업급여 조건, 왕복 몇 시간이면 인정되나",
+  title: "실업급여 통근곤란, 왕복 몇 시간이면 인정되나요",
   description: "통근 곤란은 정당한 이직 사유예요. 통상의 교통수단으로 사업장 왕복에 3시간 이상 걸리게 됐을 때를 말해요. 어떤 사정이 인정되고 무엇으로 증명하는지 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-commute-guide";
 
-export const html = `<h1>통근 곤란 퇴사 실업급여 조건, 왕복 몇 시간이면 인정되나</h1>
+export const html = `<h1>실업급여 통근곤란, 왕복 몇 시간이면 인정되나요</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 시행규칙 별표2 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-commute-guide.png" width="1200" height="630" alt="통근 곤란 퇴사 실업급여 조건과 왕복 3시간 기준">
 <p class="v2-lead v2-intro">회사가 멀어져서 그만두는 경우가 있어요. 이때도 실업급여를 받을 수 있어요. 시행규칙이 통근 곤란을 정당한 이직 사유로 정해 두었거든요. 다만 기준이 분명해요. 통상의 교통수단으로 사업장 왕복에 드는 시간이 3시간 이상이어야 하고, 그렇게 된 사정이 정해진 경우여야 해요. 무엇이 인정되는지 정리했어요.</p>

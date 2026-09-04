@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-payday-guide.html
 export const meta = {
-  title: "실업급여 지급일, 회차별 입금 날짜와 안 들어올 때",
+  title: "실업급여 지급일, 입금 날짜와 안 들어올 때 확인 순서",
   description: "실업급여는 통상 실업인정을 받은 다음 날에 계좌로 들어와요. 매달 같은 날이 아니라 내 실업인정일을 따라가요. 회차별 입금 날짜를 어디서 보는지와 안 들어올 때 확인 순서를 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-payday-guide";
 
-export const html = `<h1>실업급여 지급일, 회차별 입금 날짜와 안 들어올 때</h1>
+export const html = `<h1>실업급여 지급일, 입금 날짜와 안 들어올 때 확인 순서</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 지급일 규정 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-payday-guide.png" width="1200" height="630" alt="실업급여 지급일과 회차별 입금 날짜">
 <p class="v2-lead v2-intro">실업급여는 통상 실업인정을 받은 다음 날에 등록한 계좌로 들어와요. 매달 25일처럼 고정된 날이 아니라 내 실업인정일을 따라가요. 인정일이 4주 간격이면 입금도 4주 간격이에요. 첫 회차만 대기기간 7일이 빠져 7일치가 들어와요.</p>

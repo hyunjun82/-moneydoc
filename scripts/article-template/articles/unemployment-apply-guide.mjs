@@ -21,7 +21,7 @@ export default function article({ VERIFIED }) {
 
   return {
     slug: 'unemployment-apply-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 신청 방법',
-    title: '실업급여 신청 방법, 고용24 구직신청부터 실업인정까지 5단계',
+    title: '실업급여 신청 방법, 서류 확인부터 실업인정까지',
     description: `실업급여 신청은 5단계예요. 회사 서류 확인, 고용24 구직신청, 수급자격 신청자 교육, 고용센터 출석, 실업인정 순서로 진행해요. 각 단계에서 무엇을 하는지 정리했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 신고·인정 절차 원문 대조 · ${VERIFIED}`,
