@@ -84,6 +84,16 @@
     "government/unemployment-contract-end-guide": "unemployment/contract-end",
     "government/unemployment-layoff-guide": "unemployment/layoff",
     "government/unemployment-amount-guide": "unemployment/amount",
-    "government/unemployment-exit-code-guide": "unemployment/exit-code"
+    "government/unemployment-exit-code-guide": "unemployment/exit-code",
+    "government/unemployment-round-4-guide": "unemployment/round-4",
+    "government/unemployment-job-search-guide": "unemployment/job-search",
+    "government/unemployment-round-1-guide": "unemployment/round-1",
+    "government/unemployment-part-time-job-guide": "unemployment/part-time-job",
+    "government/unemployment-fraud-guide": "unemployment/fraud",
+    "government/unemployment-early-reemployment-guide": "unemployment/early-reemployment",
+    "government/unemployment-payday-guide": "unemployment/payday",
+    "government/unemployment-by-salary-guide": "unemployment/by-salary",
+    "government/unemployment-confirmation-guide": "unemployment/confirmation",
+    "government/unemployment-documents-guide": "unemployment/documents"
   }
 }
