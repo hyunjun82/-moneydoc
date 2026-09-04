@@ -90,7 +90,7 @@ export const html = `<h1>실업급여 수급자격, 4가지 조건과 이직 사
 <div class="v2-note"><b>하루라도 일했으면 신고하세요</b> 일한 사실을 숨기면 부정수급이 돼요. 신고하면 그 날만 빠지지만, 숨기면 받은 돈을 돌려주고 추가로 징수될 수 있어요.</div>
 
 <h2 id="s5">4가지를 다 채웠는지 어디서 확인하나요<small>단위기간은 고용보험, 인정은 고용센터</small></h2>
-<p class="v2-lead"><span class="v2-ans">피보험 단위기간은 고용보험 홈페이지에서 보고, 최종 판단은 고용센터가 해요.</span> 수급자격은 신청해서 인정을 받아야 확정돼요. 법도 수급 요건을 갖췄다는 사실을 인정해 줄 것을 신청하라고 정하고, 고용센터가 인정 여부를 결정해 알려 준다고 해요. 그래서 혼자 판단해서 신청을 미루는 것보다, 애매하면 신청해 보는 편이 나아요.</p>
+<p class="v2-lead"><span class="v2-ans">피보험 단위기간은 고용보험 홈페이지에서 보고, 최종 판단은 고용센터가 해요.</span> 수급자격은 신청해서 인정을 받아야 확정돼요. 법도 수급 요건을 갖췄다는 사실을 인정해 줄 것을 신청하라고 정하고, 고용센터가 인정할지 정해서 알려 준다고 해요. 그래서 혼자 판단해서 신청을 미루는 것보다, 애매하면 신청해 보는 편이 나아요.</p>
 <p><span class="v2-ans">여러 회사를 다녔다면 마지막 회사를 기준으로 봐요.</span> 마지막 회사에 들어가기 전에도 이직한 적이 있고 그 이직으로 구직급여를 받은 적이 없다면, 마지막에 이직한 사업을 기준으로 수급자격을 판단해요. 다만 마지막 이직 당시 일용근로자였고 단위기간이 1개월 미만이라 자격을 갖추지 못했다면, 일용근로자가 아닌 근로자로서 마지막으로 이직한 사업을 기준으로 봐요.</p>
 <div class="v2-tbl"><table><caption>상황별 수급자격 판정 (자주 묻는 14가지)</caption><thead><tr><th>상황</th><th>판정</th><th>무엇을 봐야 하나요</th></tr></thead><tbody>
 <tr><th scope="row">회사가 그만두라고 해서 나옴</th><td>대체로 인정</td><td class="v2-net">이직확인서가 권고사직으로 신고됐는지</td></tr>
@@ -104,7 +104,7 @@ export const html = `<h1>실업급여 수급자격, 4가지 조건과 이직 사
 <tr><th scope="row">창업하려고 그만둠</th><td>인정 안 됨</td><td class="v2-net">자영업을 위한 이직도 제한 사유</td></tr>
 <tr><th scope="row">본인 잘못으로 징계해고됨</th><td>제한될 수 있음</td><td class="v2-net">중대한 귀책사유에 해당하는지</td></tr>
 <tr><th scope="row">가입기간이 5개월뿐</th><td>인정 안 됨</td><td class="v2-net">전 직장 기간이 합산되는지 먼저 확인</td></tr>
-<tr><th scope="row">이미 다른 일을 시작함</th><td>인정 안 됨</td><td class="v2-net">취업하지 못한 상태여야 해요</td></tr>
+<tr><th scope="row">이미 다른 일을 시작했어요</th><td>인정 안 됨</td><td class="v2-net">취업하지 못한 상태여야 해요</td></tr>
 <tr><th scope="row">사업자등록이 살아 있음</th><td>인정 안 됨</td><td class="v2-net">휴업신고 등으로 실제 미영업을 증명하면 예외</td></tr>
 <tr><th scope="row">65세 넘어 그만둠</th><td>사정에 따라</td><td class="v2-net">65세 전부터 계속 근로했는지</td></tr>
 </tbody></table></div>
@@ -119,7 +119,7 @@ export const html = `<h1>실업급여 수급자격, 4가지 조건과 이직 사
 <details class="v2-faq"><summary><i>Q</i><span>자발적으로 그만두면 무조건 안 되나요?</span></summary><div><i>A</i><p>아니에요. 법은 정해진 제한 사유에 해당하지 않을 것이라고 정해요. 고용노동부령이 정한 정당한 사유에 해당하면 스스로 그만둬도 인정돼요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>180일을 세는 기간은 얼마인가요?</span></summary><div><i>A</i><p>원칙은 이직일 이전 18개월이에요. 질병이나 부상으로 30일 이상 보수를 못 받았으면 그 일수를 더해 최대 3년까지, 주 15시간 미만 근로가 조건에 맞으면 24개월이 돼요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>전에 실업급여를 받은 적이 있으면 어떻게 되나요?</span></summary><div><i>A</i><p>그때 구직급여와 관련된 자격 상실일 이전의 단위기간은 세지 않아요. 그 뒤로 다시 180일을 채워야 해요.</p></div></details>
-<details class="v2-faq"><summary><i>Q</i><span>조건이 되는지 혼자 판단해도 되나요?</span></summary><div><i>A</i><p>수급자격은 고용센터가 인정 여부를 결정해요. 애매하면 신청해서 판단을 받는 편이 나아요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>조건이 되는지 혼자 판단해도 되나요?</span></summary><div><i>A</i><p>수급자격은 고용센터가 인정할지 정해요. 애매하면 신청해서 판단을 받는 편이 나아요.</p></div></details>
 </div>
 <section class="v2-sum" aria-label="정리"><div class="v2-hd"><small>이 글 한 줄 정리</small><b>정리</b></div><ul>
 <li>일반 근로자의 수급자격 조건은 네 가지고, 모두 채워야 해요.</li>
@@ -189,7 +189,7 @@ export const faqLd = {
       "name": "조건이 되는지 혼자 판단해도 되나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "수급자격은 고용센터가 인정 여부를 결정해요. 애매하면 신청해서 판단을 받는 편이 나아요."
+        "text": "수급자격은 고용센터가 인정할지 정해요. 애매하면 신청해서 판단을 받는 편이 나아요."
       }
     }
   ]
@@ -331,7 +331,7 @@ export const landing = {
     },
     {
       "q": "조건이 되는지 혼자 판단해도 되나요?",
-      "a": "수급자격은 고용센터가 인정 여부를 결정해요. 애매하면 신청해서 판단을 받는 편이 나아요."
+      "a": "수급자격은 고용센터가 인정할지 정해요. 애매하면 신청해서 판단을 받는 편이 나아요."
     }
   ],
   "related": [

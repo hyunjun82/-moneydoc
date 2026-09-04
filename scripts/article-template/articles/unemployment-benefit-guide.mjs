@@ -148,7 +148,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       { id: 's5', h2: '실업급여 신청 방법 4단계 (이직확인서부터 첫 지급까지)', sub: '퇴사 다음 날부터 12개월 안에 다 받아야 하니 바로 시작하세요', blocks: [
         { type: 'p', lead: true, ans: '이직확인서 확인, 워크넷 구직등록, 고용센터 수급자격 신청, 4주마다 실업인정. 이 네 단계예요.', text: '첫 돈은 보통 신청 후 2~3주 뒤에 들어와요.' },
         { type: 'steps', items: [
-          { title: '이직확인서 확인', text: '회사가 고용보험에 제출해요. 고용24에서 처리 여부를 확인하고, 안 냈으면 회사에 요청하세요(요청받은 날부터 10일 내 제출 의무)', meta: '준비물: 없음 · 퇴사 후 바로', link: { label: '이직확인서 확인', href: 'https://www.work24.go.kr/cm/f/c/0100/selectUnifySearch.do?topQuerySearchArea=all&topQueryData=%EC%9D%B4%EC%A7%81%ED%99%95%EC%9D%B8%EC%84%9C' } },
+          { title: '이직확인서 확인', text: '회사가 고용보험에 제출해요. 고용24에서 처리됐는지 확인하고, 안 냈으면 회사에 요청하세요(요청받은 날부터 10일 내 제출 의무)', meta: '준비물: 없음 · 퇴사 후 바로', link: { label: '이직확인서 확인', href: 'https://www.work24.go.kr/cm/f/c/0100/selectUnifySearch.do?topQuerySearchArea=all&topQueryData=%EC%9D%B4%EC%A7%81%ED%99%95%EC%9D%B8%EC%84%9C' } },
           { title: '워크넷 구직등록', text: '고용24(옛 워크넷)에서 이력서 등록 후 구직 신청. 온라인 수급자격 교육(약 1시간)도 미리 들어두면 빨라요', meta: '준비물: 공동인증서 · 10분', link: { label: '구직등록 바로가기', href: WORK24 } },
           { title: '고용센터 수급자격 신청', text: '거주지 관할 고용센터 방문(첫 회는 방문 필수). 신분증 지참. 여기서 1차 실업인정일이 정해져요', meta: '준비물: 신분증 · 30분', link: { label: '고용센터 찾기', href: WORK24 } },
           { title: '실업인정 (4주마다)', text: '구직활동 증빙(입사지원·면접·교육)을 내면 그 기간 급여가 지급돼요. 2·3차부터는 온라인 가능', meta: '첫 지급: 신청 후 약 2~3주' },

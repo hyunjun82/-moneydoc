@@ -84,7 +84,7 @@ export const html = `<h1>실업급여 지급일, 입금 날짜와 안 들어올 
 <tr><th scope="row">4</th><td data-l="확인할 것">지급일로 안내받은 날짜가 지났는지</td></tr>
 <tr><th scope="row">5</th><td data-l="확인할 것">위가 모두 정상이면 관할 고용센터에 문의</td></tr>
 </tbody></table></div>
-<p class="v2-fn">인정이 나지 않으면 지급 자체가 이루어지지 않아요. 먼저 인정 여부를 확인하는 게 빠릅니다.</p>
+<p class="v2-fn">인정이 나지 않으면 지급 자체가 되지 않아요. 인정이 났는지 먼저 보는 게 빨라요.</p>
 
 <h2 id="faq">자주 묻는 질문</h2>
 <div class="v2-faqs">

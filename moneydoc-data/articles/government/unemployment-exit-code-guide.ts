@@ -88,7 +88,7 @@ export const html = `<h1>실업급여 코드 종류, 23번과 32번은 무슨 �
 <tr><th scope="row">임금체불로 나왔는데 11번으로 신고됨</th><td data-l="준비할 자료">급여명세서, 통장 내역, 체불 진정 접수증</td></tr>
 <tr><th scope="row">계약만료인데 자진퇴사로 신고됨</th><td data-l="준비할 자료">근로계약서에 적힌 계약 기간</td></tr>
 <tr><th scope="row">26번으로 신고됐는데 사실과 다름</th><td data-l="준비할 자료">징계 사유가 없었음을 보여 주는 자료</td></tr>
-<tr><th scope="row">이직확인서가 아직 안 올라옴</th><td data-l="준비할 자료">고용보험 홈페이지에서 처리 여부를 확인해요<a class="v2-go" href="https://www.ei.go.kr" target="_blank" rel="noopener">고용보험 홈페이지</a></td></tr>
+<tr><th scope="row">이직확인서가 아직 안 올라왔어요</th><td data-l="준비할 자료">고용보험 홈페이지에서 처리됐는지 확인해요<a class="v2-go" href="https://www.ei.go.kr" target="_blank" rel="noopener">고용보험 홈페이지</a></td></tr>
 </tbody></table></div>
 <p class="v2-fn">수급자격이 인정되지 않았다면 그 결정에 대해 심사를 청구할 수 있어요. 기한이 있으니 통지를 받으면 바로 확인하세요.</p>
 

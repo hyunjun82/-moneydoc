@@ -67,7 +67,7 @@ export const html = `<h1>실업급여 통근곤란, 왕복 몇 시간이면 인�
 <p><span class="v2-ans">통근 곤란도 정당한 이직 사유 목록의 하나예요.</span> 임금체불이나 괴롭힘처럼 다른 사유가 함께 있으면 그쪽으로도 다툴 수 있어요. <a class="v2-go" href="/unemployment/voluntary/">자발적 퇴사 인정 사유 전체</a></p>
 <p><span class="v2-ans">단순히 옮기고 싶어서 이사한 경우는 다릅니다.</span> 그 경우는 통근 곤란 사유에 들어가지 않아요. 전직을 하기 위해 그만둔 것으로 보면 오히려 수급자격 제한 사유가 될 수 있어요.</p>
 <div class="v2-tbl v2-text"><table><caption>준비할 자료</caption><thead><tr><th>상황</th><th>준비할 자료</th></tr></thead><tbody>
-<tr><th scope="row">사업장이 이전함</th><td data-l="준비할 자료">이전 공지, 변경된 사업장 주소</td></tr>
+<tr><th scope="row">회사가 다른 곳으로 옮겼어요</th><td data-l="준비할 자료">이전 공지, 변경된 사업장 주소</td></tr>
 <tr><th scope="row">먼 지점으로 전근</th><td data-l="준비할 자료">인사발령 문서</td></tr>
 <tr><th scope="row">가족과 동거를 위한 이사</th><td data-l="준비할 자료">주민등록 초본, 가족관계증명서<a class="v2-go" href="https://www.gov.kr" target="_blank" rel="noopener">정부24 바로가기</a></td></tr>
 <tr><th scope="row">통근 시간 비교</th><td data-l="준비할 자료">이전 전후 대중교통 경로 검색 결과</td></tr>

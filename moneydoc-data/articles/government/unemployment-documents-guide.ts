@@ -98,13 +98,13 @@ export const html = `<h1>실업급여 서류, 신청 준비물 목록과 발급�
 <tr><th scope="row">6</th><td data-l="확인할 것">퇴사 사유에 따라 필요한 자료가 있는지</td></tr>
 </tbody></table></div>
 <p class="v2-fn">고용보험 홈페이지에서 1번과 2번을 한 번에 확인할 수 있어요.</p>
-<div class="v2-note"><b>방문할 고용센터를 먼저 확인하세요</b> 거주지 관할 고용센터로 가야 해요. 방문 전에 운영 시간과 예약 여부를 확인해 두면 기다리는 시간을 줄일 수 있어요.</div>
+<div class="v2-note"><b>방문할 고용센터를 먼저 확인하세요</b> 거주지 관할 고용센터로 가야 해요. 방문 전에 운영 시간과 예약이 필요한지 확인해 두면 기다리는 시간을 줄일 수 있어요.</div>
 
 <h2 id="faq">자주 묻는 질문</h2>
 <div class="v2-faqs">
 <details class="v2-faq" open><summary><i>Q</i><span>실업급여 신청에 무슨 서류가 필요한가요?</span></summary><div><i>A</i><p>본인이 들고 갈 건 신분증과 본인 명의 계좌예요. 이직확인서와 고용보험 상실 신고는 회사가 처리해요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>이직확인서를 본인이 발급받아 가야 하나요?</span></summary><div><i>A</i><p>아니에요. 회사가 고용센터에 제출하는 서류예요. 처리 여부는 고용보험 홈페이지에서 확인할 수 있어요.</p></div></details>
-<details class="v2-faq"><summary><i>Q</i><span>회사 서류가 늦어지면 신청을 미뤄야 하나요?</span></summary><div><i>A</i><p>아니에요. 신고일을 기준으로 대기기간과 인정일이 정해지니 신청부터 하세요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>회사 서류가 늦어지면 신청을 미뤄야 하나요?</span></summary><div><i>A</i><p>아니에요. 신분증과 계좌만 있으면 갈 수 있어요. 회사 서류는 뒤따라 처리돼요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>자진퇴사면 무슨 자료가 더 필요한가요?</span></summary><div><i>A</i><p>인정 사유를 보여 주는 자료가 필요해요. 임금체불이면 급여명세서와 체불 진정 접수증, 통근 곤란이면 주민등록 초본 같은 자료예요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>주민등록 초본은 어디서 떼나요?</span></summary><div><i>A</i><p>정부24나 주민센터에서 뗄 수 있어요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>교육을 안 들으면 신청이 되나요?</span></summary><div><i>A</i><p>수급자격 신청자 교육을 마쳐야 다음 단계로 갈 수 있어요. 방문 전에 온라인으로 들어 두세요.</p></div></details>
@@ -153,7 +153,7 @@ export const faqLd = {
       "name": "회사 서류가 늦어지면 신청을 미뤄야 하나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "아니에요. 신고일을 기준으로 대기기간과 인정일이 정해지니 신청부터 하세요."
+        "text": "아니에요. 신분증과 계좌만 있으면 갈 수 있어요. 회사 서류는 뒤따라 처리돼요."
       }
     },
     {
@@ -303,7 +303,7 @@ export const landing = {
     },
     {
       "q": "회사 서류가 늦어지면 신청을 미뤄야 하나요?",
-      "a": "아니에요. 신고일을 기준으로 대기기간과 인정일이 정해지니 신청부터 하세요."
+      "a": "아니에요. 신분증과 계좌만 있으면 갈 수 있어요. 회사 서류는 뒤따라 처리돼요."
     },
     {
       "q": "자진퇴사면 무슨 자료가 더 필요한가요?",

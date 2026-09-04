@@ -34,7 +34,7 @@ export const html = `<h1>일용직 실업급여 조건, 수급 중 일한 날 �
     <div class="v2-row"><dt>일용근로자란</dt><dd>1개월 미만 동안 고용되는 사람</dd></div>
     <div class="v2-row"><dt>공통 요건</dt><dd>180일, 미취업 상태, 이직 사유, 재취업 노력</dd></div>
     <div class="v2-row"><dt>추가 요건 1</dt><dd>신청일이 속한 달의 직전 달 초일부터 신청일까지 근로일이 총 일수의 3분의 1 미만</dd></div>
-    <div class="v2-row"><dt>건설일용 특례</dt><dd>신청일 이전 14일간 연속하여 근로내역이 없을 것</dd></div>
+    <div class="v2-row"><dt>건설일용 특례</dt><dd>신청일 앞 14일 동안 이어서 일한 날이 없을 것</dd></div>
     <div class="v2-row"><dt>추가 요건 2</dt><dd>다른 사업에서 제한 사유로 이직한 적이 있으면 단위기간 중 90일 이상 일용근로</dd></div>
     <div class="v2-row"><dt>대기기간</dt><dd>건설일용근로자는 대기기간 없이 신고일부터 계산</dd></div>
   </dl>
@@ -47,7 +47,7 @@ export const html = `<h1>일용직 실업급여 조건, 수급 중 일한 날 �
 <tr><th scope="row">적용 대상</th><td>모든 근로자</td><td class="v2-net">1개월 미만 동안 고용되는 사람</td></tr>
 <tr><th scope="row">기본 요건</th><td>180일, 미취업 상태, 이직 사유, 재취업 노력 네 가지</td><td class="v2-net">위 네 가지에 두 가지가 더 붙어요</td></tr>
 <tr class="v2-hi"><th scope="row">근로일 요건</th><td>없어요</td><td class="v2-net">신청일이 속한 달의 직전 달 초일부터 신청일까지 근로일 수가 그 기간 총 일수의 3분의 1 미만</td></tr>
-<tr><th scope="row">건설일용 특례</th><td>해당 없음</td><td class="v2-net">신청일 이전 14일간 연속하여 근로내역이 없으면 위 요건 대신 인정</td></tr>
+<tr><th scope="row">건설일용 특례</th><td>해당 없음</td><td class="v2-net">신청일 앞 14일 동안 이어서 일한 날이 없으면 위 요건 대신 인정</td></tr>
 <tr><th scope="row">다른 사업 이직</th><td>해당 없음</td><td class="v2-net">제한 사유로 이직한 사실이 있으면 단위기간 중 90일 이상 일용근로를 해야 해요</td></tr>
 <tr><th scope="row">대기기간</th><td>신고일부터 7일</td><td class="v2-net">건설일용근로자는 대기기간 없이 신고일부터 계산</td></tr>
 </tbody></table></div>
@@ -55,7 +55,7 @@ export const html = `<h1>일용직 실업급여 조건, 수급 중 일한 날 �
 
 <h2 id="s2">일용직 실업급여 조건은 무엇이 다른가요<small>근로일 비율을 봐요</small></h2>
 <p class="v2-lead"><span class="v2-ans">신청일이 속한 달의 직전 달 초일부터 신청일까지 근로일 수가 그 기간 총 일수의 3분의 1 미만이어야 해요.</span> 예를 들어 그 기간이 45일이라면 근로일이 15일 미만이어야 한다는 뜻이에요. 일이 계속 있는 상태로는 실업으로 보기 어렵다는 취지예요.</p>
-<p><span class="v2-ans">건설일용근로자는 다른 길이 있어요.</span> 이직 당시 한국표준산업분류 대분류상 건설업에 종사한 일용근로자라면, 신청일 이전 14일간 연속하여 근로내역이 없으면 이 요건을 채운 것으로 봐요. 둘 중 하나에 해당하면 돼요.</p>
+<p><span class="v2-ans">건설일용근로자는 다른 길이 있어요.</span> 이직 당시 한국표준산업분류 대분류상 건설업에 종사한 일용근로자라면, 신청일 앞 14일 동안 이어서 일한 날이 없으면 이 요건을 채운 것으로 봐요. 둘 중 하나에 해당하면 돼요.</p>
 <div class="v2-note"><b>신청 시점을 잘 잡아야 해요</b> 근로일 비율은 신청일을 기준으로 계산해요. 일이 몰린 직후보다 끊긴 뒤에 신청하는 편이 요건을 채우기 쉬워요.</div>
 
 <h2 id="s3">다른 회사에서 그만둔 적이 있으면 어떻게 되나요<small>90일 이상 일용근로 요건</small></h2>
@@ -68,7 +68,7 @@ export const html = `<h1>일용직 실업급여 조건, 수급 중 일한 날 �
 <p><span class="v2-ans">신고 방법은 아르바이트와 같아요.</span> 실업인정 신청서의 취업 사실란에 일한 날짜와 받은 돈을 적어요. <a class="v2-go" href="/unemployment/part-time-job/">일한 날 신고 방법</a></p>
 <p><span class="v2-ans">일용으로 수급자격을 받은 사람은 다르게 봐요.</span> 일용근로자로 수급자격을 인정받은 사람이 실업인정대상기간 중에 정해진 방식으로 근로를 제공하는 경우는 재취업활동을 한 것으로 보기도 해요. 본인이 어느 쪽인지는 고용센터에서 확인하는 게 정확해요.</p>
 <div class="v2-tbl v2-text"><table><caption>수급 중 일용으로 일했을 때</caption><thead><tr><th>상황</th><th>어떻게 되나요</th></tr></thead><tbody>
-<tr><th scope="row">하루 일하고 신고함</th><td data-l="어떻게 되나요">그 날만 인정되지 않고 나머지는 지급돼요</td></tr>
+<tr><th scope="row">하루 일하고 신고했어요</th><td data-l="어떻게 되나요">그 날만 인정되지 않고 나머지는 지급돼요</td></tr>
 <tr><th scope="row">일하고 신고하지 않음</th><td data-l="어떻게 되나요">그 실업인정대상기간 전부가 부지급돼요</td></tr>
 <tr><th scope="row">두 번 이상 신고 누락</th><td data-l="어떻게 되나요">이후의 구직급여 전부가 막혀요</td></tr>
 <tr><th scope="row">하루 대가가 구직급여일액 이상</th><td data-l="어떻게 되나요">금액 기준으로도 취업에 해당해요</td></tr>
@@ -93,7 +93,7 @@ export const html = `<h1>일용직 실업급여 조건, 수급 중 일한 날 �
 <div class="v2-faqs">
 <details class="v2-faq" open><summary><i>Q</i><span>일용직도 실업급여를 받을 수 있나요?</span></summary><div><i>A</i><p>받을 수 있어요. 일반 근로자의 네 가지 조건에 두 가지가 더 붙어요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>일용직 실업급여 조건은 무엇이 다른가요?</span></summary><div><i>A</i><p>신청일이 속한 달의 직전 달 초일부터 신청일까지 근로일이 그 기간 총 일수의 3분의 1 미만이어야 해요.</p></div></details>
-<details class="v2-faq"><summary><i>Q</i><span>건설 일용은 기준이 다른가요?</span></summary><div><i>A</i><p>신청일 이전 14일간 연속하여 근로내역이 없으면 인정돼요. 대기기간 7일도 없어요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>건설 일용은 기준이 다른가요?</span></summary><div><i>A</i><p>신청일 앞 14일 동안 이어서 일한 날이 없으면 인정돼요. 대기기간 7일도 없어요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>일용근로자가 무엇인가요?</span></summary><div><i>A</i><p>1개월 미만 동안 고용되는 사람이에요. 법에 그렇게 정의되어 있어요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>수급 중에 하루 일하면 신고해야 하나요?</span></summary><div><i>A</i><p>일용근로자로 근로를 제공한 날은 취업으로 봐요. 신고하면 그 날만 빠지고 나머지는 지급돼요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>여러 현장에서 일한 기간도 합쳐지나요?</span></summary><div><i>A</i><p>기준기간 안이면 합산해요. 현장이 바뀌었다고 처음부터 다시 세지 않아요.</p></div></details>
@@ -142,7 +142,7 @@ export const faqLd = {
       "name": "건설 일용은 기준이 다른가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "신청일 이전 14일간 연속하여 근로내역이 없으면 인정돼요. 대기기간 7일도 없어요."
+        "text": "신청일 앞 14일 동안 이어서 일한 날이 없으면 인정돼요. 대기기간 7일도 없어요."
       }
     },
     {
@@ -242,7 +242,7 @@ export const landing = {
       ],
       [
         "건설일용 특례",
-        "신청일 이전 14일간 연속하여 근로내역이 없을 것"
+        "신청일 앞 14일 동안 이어서 일한 날이 없을 것"
       ],
       [
         "추가 요건 2",
@@ -292,7 +292,7 @@ export const landing = {
     },
     {
       "q": "건설 일용은 기준이 다른가요?",
-      "a": "신청일 이전 14일간 연속하여 근로내역이 없으면 인정돼요. 대기기간 7일도 없어요."
+      "a": "신청일 앞 14일 동안 이어서 일한 날이 없으면 인정돼요. 대기기간 7일도 없어요."
     },
     {
       "q": "일용근로자가 무엇인가요?",

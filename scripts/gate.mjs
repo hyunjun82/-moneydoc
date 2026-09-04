@@ -19,6 +19,7 @@ import fs from 'node:fs';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { duplicateCheck } from './article-template/answer-check.mjs';
 
 const ROOT = process.cwd();
 const hub = process.argv[2];
@@ -219,7 +220,15 @@ for (const dir of fs.existsSync(path.join('app', hub)) ? fs.readdirSync(path.joi
   if (m[1] !== `/${hub}/`) fail(`[${hub}/${dir}]`, `빵부스러기가 주제 구조가 아니다: catHref="${m[1]}" (기대 "/${hub}/")`);
 }
 
-// ── 8. 느린 검사 ─────────────────────────────────────────────────────────
+// ── 8. 형제 글끼리 문장을 베꼈는지 ───────────────────────────────────────
+// 같은 문장이 여러 글에 그대로 있으면 포털이 중복으로 보고, 독자도 다시 읽는 느낌을 받는다.
+// 실측으로 3건 나왔다 (심사청구 안내가 세 글에 똑같이, FAQ 답이 두 글에 똑같이).
+{
+  const pages = files.map((f) => ({ slug: slugOf(f), html: read(f) })).filter((x) => bySlug.has(x.slug));
+  for (const m of duplicateCheck(pages)) warn('[중복 문장]', m);
+}
+
+// ── 9. 느린 검사 ─────────────────────────────────────────────────────────
 if (!quick) {
   const run = (label, args) => {
     try { execFileSync('node', args, { stdio: 'pipe' }); return true; }
