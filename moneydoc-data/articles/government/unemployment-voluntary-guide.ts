@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-voluntary-guide.html
 export const meta = {
-  title: "자발적 퇴사 실업급여 인정 사유와 증빙 서류 총정리",
+  title: "자발적 퇴사 실업급여 인정 사유와 증빙 서류",
   description: "자발적 퇴사라도 시행규칙 별표 2의 인정 사유에 해당하면 실업급여를 받아요. 임금체불, 직장 내 괴롭힘, 통근 곤란, 질병, 육아 등을 사유별 증빙 서류와 함께 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-voluntary-guide";
 
-export const html = `<h1>자발적 퇴사 실업급여 인정 사유와 증빙 서류 총정리</h1>
+export const html = `<h1>자발적 퇴사 실업급여 인정 사유와 증빙 서류</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">고용보험법 시행규칙 별표2 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-voluntary-guide.png" width="1200" height="630" alt="자발적 퇴사 실업급여 인정 사유 17가지와 증빙 서류">
 <p class="v2-lead v2-intro">자진퇴사하면 실업급여를 못 받는다고 알고 계신 분이 많아요. 그런데 법은 그렇게 적지 않았어요. 정해진 제한 사유에 해당하지 않으면 된다고 했고, 정당한 사유는 시행규칙에 목록으로 나와 있어요. 임금이 밀렸거나, 괴롭힘을 당했거나, 회사가 멀어졌거나, 아파서 그만둔 경우가 모두 들어가요. 인정 사유가 무엇인지, 사유마다 어떤 증빙 서류가 필요한지 정리했어요.</p>

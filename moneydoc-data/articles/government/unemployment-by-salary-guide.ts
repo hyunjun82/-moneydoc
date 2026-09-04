@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-by-salary-guide.html
 export const meta = {
-  title: "실업급여 지급액, 월급 구간별 1일 수령액 표",
+  title: "실업급여 금액, 월급별 하루 얼마 받나요",
   description: "월급별로 실업급여 하루 얼마를 받는지 표로 정리했어요. 월 180만원이든 600만원이든 하루 차이는 2,052원뿐이에요. 상한과 하한에 걸리는 지점을 함께 봤어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-by-salary-guide";
 
-export const html = `<h1>실업급여 지급액, 월급 구간별 1일 수령액 표</h1>
+export const html = `<h1>실업급여 금액, 월급별 하루 얼마 받나요</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 구직급여일액 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-by-salary-guide.png" width="1200" height="630" alt="월급별 실업급여 1일 수령액 표. 월 300만원이면 하루 66,048원">
 <p class="v2-lead v2-intro">실업급여가 하루 얼마인지는 평균임금으로 정해져요. 원칙은 평균임금의 60퍼센트인데, 위아래로 막아 둔 금액이 있어서 실제로는 좁은 범위에 몰려요. 월급별로 하루 얼마를 받는지 표로 만들었어요. 어느 구간에서 하한액에 걸리고 어디부터 상한액에 걸리는지 한눈에 보여요.</p>
@@ -27,7 +27,7 @@ export const html = `<h1>실업급여 지급액, 월급 구간별 1일 수령액
   </div>
 </section>
 <!--CALC_START--><a class="v2-cta" href="/unemployment/calculator/">표에 없는 월급 계산해 보기</a><!--CALC_END-->
-<details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">실업급여 1일 수령액은 어떻게 정해지나요</a></li><li><a href="#s2">월급별 1일 수령액 표는 어떻게 되나요</a></li><li><a href="#s3">월급이 높아도 더 못 받는 구간이 있나요</a></li><li><a href="#s4">월급이 적으면 얼마를 보장받나요</a></li><li><a href="#s5">한 달에 실제로 얼마가 들어오나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
+<details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">실업급여 금액은 어떻게 정해지나요</a></li><li><a href="#s2">월급별로 하루 얼마를 받나요</a></li><li><a href="#s3">월급이 높아도 더 못 받는 구간이 있나요</a></li><li><a href="#s4">월급이 적으면 얼마를 보장받나요</a></li><li><a href="#s5">한 달에 실제로 얼마가 들어오나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 월급별 금액</small><b>핵심콕콕</b></div>
   <dl>
@@ -40,15 +40,16 @@ export const html = `<h1>실업급여 지급액, 월급 구간별 1일 수령액
   </dl>
 </section>
 
-<h2 id="s1">실업급여 1일 수령액은 어떻게 정해지나요<small>기초일액의 60퍼센트</small></h2>
+<h2 id="s1">실업급여 금액은 어떻게 정해지나요<small>기초일액의 60퍼센트</small></h2>
 <p class="v2-lead"><span class="v2-ans">기초일액에 100분의 60을 곱한 금액이 구직급여일액이에요.</span> 기초일액은 이직 당시의 평균임금이에요. 이직 전 3개월간 지급된 임금 총액을 그 기간의 총 일수로 나눈 금액이라, 월급을 30으로 나눈 값과 비슷하게 나와요. 여기에 60퍼센트를 곱해요.</p>
 <p><span class="v2-ans">위아래 한도가 하루 66,048원과 68,100원이에요.</span> 2026년 기준이고, 하한액은 최저임금에서 나오고 상한액은 대통령령으로 정해요. <a class="v2-go" href="/unemployment/amount/">상한액 하한액 자세히</a></p>
+<p><span class="v2-ans">상한액이 실업급여 최대금액, 하한액이 최저금액이에요.</span> 검색할 때 최대 금액이나 최저 금액으로 부르는 게 이 두 값이에요.</p>
 <p><span class="v2-ans">그 값이 하한보다 낮으면 하한액을 줘요.</span> 계산 결과가 최저구직급여일액보다 낮으면 최저구직급여일액을 지급해요. 반대로 기초일액이 정해진 상한을 넘으면 상한까지만 인정해요. 그래서 실제 금액은 두 값 사이에 몰려요.</p>
 <div class="v2-note"><b>통상임금이 더 크면 그쪽을 써요</b> 산정한 평균임금이 통상임금보다 적으면 통상임금을 기초일액으로 해요. 마지막 이직 당시 일용근로자였다면 이 규정은 적용되지 않아요. <a class="v2-go" href="/unemployment/average-wage/">평균임금 산정법</a></div>
 
-<h2 id="s2">월급별 1일 수령액 표는 어떻게 되나요<small>구간별로 정리했어요</small></h2>
+<h2 id="s2">월급별로 하루 얼마를 받나요<small>구간별로 정리했어요</small></h2>
 <p class="v2-lead"><span class="v2-ans">월 180만원부터 600만원까지 하루 지급액을 계산했어요.</span> 표의 60퍼센트 값이 하한액보다 낮으면 하한액이 적용되고, 상한을 넘으면 상한액이 적용돼요. 어느 구간에서 갈리는지 표에서 바로 보여요.</p>
-<div class="v2-tbl"><table><caption>월급별 실업급여 1일 수령액과 월 환산</caption><thead><tr><th>월 평균임금</th><th>60퍼센트로 계산</th><th>하루 지급액</th><th>30일 환산</th><th>적용</th></tr></thead><tbody>
+<div class="v2-tbl"><table><caption>월급별 실업급여 하루 지급액과 월 환산</caption><thead><tr><th>월 평균임금</th><th>60퍼센트로 계산</th><th>하루 지급액</th><th>30일 환산</th><th>적용</th></tr></thead><tbody>
 <tr><th scope="row">180만원</th><td>36,000원</td><td class="v2-net">66,048원</td><td>1,981,440원</td><td>하한액</td></tr>
 <tr><th scope="row">200만원</th><td>40,000원</td><td class="v2-net">66,048원</td><td>1,981,440원</td><td>하한액</td></tr>
 <tr><th scope="row">220만원</th><td>44,000원</td><td class="v2-net">66,048원</td><td>1,981,440원</td><td>하한액</td></tr>
@@ -259,12 +260,12 @@ export const landing = {
   "sections": [
     {
       "id": "s1",
-      "h2": "실업급여 1일 수령액은 어떻게 정해지나요",
+      "h2": "실업급여 금액은 어떻게 정해지나요",
       "sub": "기초일액의 60퍼센트"
     },
     {
       "id": "s2",
-      "h2": "월급별 1일 수령액 표는 어떻게 되나요",
+      "h2": "월급별로 하루 얼마를 받나요",
       "sub": "구간별로 정리했어요"
     },
     {

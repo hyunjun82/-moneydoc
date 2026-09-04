@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-total-guide.html
 export const meta = {
-  title: "실업급여 총 수령액 계산, 한 달에 얼마씩 몇 달 받나요",
+  title: "실업급여 계산, 한달에 얼마씩 몇개월 받나요",
   description: "실업급여 총액은 하루 지급액에 소정급여일수를 곱한 금액이에요. 월 300만원에 가입 3년이면 180일 동안 모두 11,888,640원이에요. 조건별 총액을 표로 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-total-guide";
 
-export const html = `<h1>실업급여 총 수령액 계산, 한 달에 얼마씩 몇 달 받나요</h1>
+export const html = `<h1>실업급여 계산, 한달에 얼마씩 몇개월 받나요</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 급여 산정 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-total-guide.png" width="1200" height="630" alt="실업급여 총 수령액 계산. 월 300만원 가입 3년이면 11,888,640원">
 <p class="v2-lead v2-intro">실업급여를 얼마나 받을지 계획을 세우려면 총액을 알아야 해요. 총액은 간단해요. 하루 지급액에 소정급여일수를 곱하면 끝이에요. 그런데 하루 지급액은 상한과 하한에 막혀 있어서 사람마다 크게 다르지 않고, 총액을 가르는 건 사실상 소정급여일수예요. 조건별로 얼마가 되는지 표로 정리했어요.</p>
@@ -27,7 +27,7 @@ export const html = `<h1>실업급여 총 수령액 계산, 한 달에 얼마씩
   </div>
 </section>
 <!--CALC_START--><a class="v2-cta" href="/unemployment/calculator/">내 총 수령액 계산해 보기</a><!--CALC_END-->
-<details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">총 수령액은 어떻게 계산하나요</a></li><li><a href="#s2">실업급여 한달 얼마씩 들어오나요</a></li><li><a href="#s3">실업급여 몇달 동안 받을 수 있나요</a></li><li><a href="#s4">첫 회차는 왜 적게 들어오나요</a></li><li><a href="#s5">내 총 수령액은 어디서 확인하나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
+<details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">실업급여 총 수령액은 어떻게 계산하나요</a></li><li><a href="#s2">실업급여 한달 얼마씩 들어오나요</a></li><li><a href="#s3">실업급여 몇개월 동안 받을 수 있나요</a></li><li><a href="#s4">첫 회차는 왜 적게 들어오나요</a></li><li><a href="#s5">내 총 수령액은 어디서 확인하나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 총 수령액</small><b>핵심콕콕</b></div>
   <dl>
@@ -40,7 +40,7 @@ export const html = `<h1>실업급여 총 수령액 계산, 한 달에 얼마씩
   </dl>
 </section>
 
-<h2 id="s1">총 수령액은 어떻게 계산하나요<small>하루 금액에 일수를 곱해요</small></h2>
+<h2 id="s1">실업급여 총 수령액은 어떻게 계산하나요<small>하루 금액에 일수를 곱해요</small></h2>
 <p class="v2-lead"><span class="v2-ans">구직급여일액에 소정급여일수를 곱하면 총액이에요.</span> 하루 금액은 기초일액의 60퍼센트이고 상한과 하한에 막혀요. 일수는 고용보험 가입기간과 나이로 정해져요. 월 300만원에 가입 3년이면 하루 66,048원에 180일이라 모두 11,888,640원이에요.</p>
 <p><span class="v2-ans">한 번에 주지는 않아요.</span> 실업인정을 받은 일수분씩 나눠서 지급해요. 첫 회차는 대기기간 7일이 빠져 약 462,336원이고, 인정일 간격이 28일인 회차는 약 1,849,344원이에요.</p>
 <div class="v2-tbl"><table><caption>조건별 실업급여 총 수령액</caption><thead><tr><th>월 평균임금</th><th>가입기간</th><th>하루 지급액</th><th>소정급여일수</th><th>총 수령액</th></tr></thead><tbody>
@@ -60,7 +60,7 @@ export const html = `<h1>실업급여 총 수령액 계산, 한 달에 얼마씩
 <p><span class="v2-ans">그래서 매달 같은 금액을 기대하면 어긋나요.</span> 월 300만원인 사람이 28일치를 받으면 약 1,849,344원인데, 간격이 짧게 잡힌 회차에는 그보다 적게 들어와요. 총액이 줄어드는 게 아니라 나눠지는 방식이 다를 뿐이에요.</p>
 <div class="v2-note"><b>세금은 떼지 않아요</b> 실업급여는 근로소득이 아니라 소득세를 원천징수하지 않아요. 통장에 찍히는 금액이 그대로예요. 언제 들어오는지는 따로 정리했어요. <a class="v2-go" href="/unemployment/payday/">지급일 언제 들어오나</a></div>
 
-<h2 id="s3">실업급여 몇달 동안 받을 수 있나요<small>소정급여일수를 달로 환산해요</small></h2>
+<h2 id="s3">실업급여 몇개월 동안 받을 수 있나요<small>소정급여일수를 달로 환산해요</small></h2>
 <p class="v2-lead"><span class="v2-ans">소정급여일수를 30으로 나누면 대략적인 개월 수가 나와요. 180일이면 약 6개월이에요.</span> 가입기간이 1년 미만이면 가장 짧고, 10년 이상이면 가장 길어요. 나이가 50세 이상이거나 장애인이면 구간마다 가산이 붙어요.</p>
 <p><span class="v2-ans">일수는 나이와 가입기간으로 정해져요.</span> 1년 미만이면 120일, 10년 이상이면 240일이고 50세 이상이거나 장애인이면 구간마다 30일씩 더 받아요. <a class="v2-go" href="/unemployment/days/">소정급여일수 표</a></p>
 <p><span class="v2-ans">다만 12개월 안에 다 써야 해요.</span> 이직일 다음 날부터 12개월이 지나면 일수가 남아 있어도 지급이 끝나요. 소정급여일수가 긴 사람이 늦게 신청하면 다 못 쓰고 끝날 수 있어요.</p>
@@ -292,7 +292,7 @@ export const landing = {
   "sections": [
     {
       "id": "s1",
-      "h2": "총 수령액은 어떻게 계산하나요",
+      "h2": "실업급여 총 수령액은 어떻게 계산하나요",
       "sub": "하루 금액에 일수를 곱해요"
     },
     {
@@ -302,7 +302,7 @@ export const landing = {
     },
     {
       "id": "s3",
-      "h2": "실업급여 몇달 동안 받을 수 있나요",
+      "h2": "실업급여 몇개월 동안 받을 수 있나요",
       "sub": "소정급여일수를 달로 환산해요"
     },
     {

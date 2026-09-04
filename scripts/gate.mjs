@@ -58,12 +58,21 @@ const BAR = HUB ? {
 const STOP = new Set(['정리','총정리','방법','기준','조건','계산','신청','얼마','언제','어디','무엇',
   '되나요','받나요','있나요','인가요','하나요','까지','부터','받기','하는','그리고','또는', plan.keyword]);
 const strip = (w) => w.replace(/(은|는|이|가|을|를|의|에|도|만|과|와|로|랑)$/, '');
+const titleMiss = (part, pool) => part.replace(/[^가-힣0-9a-zA-Z% ]/g, ' ').split(/\s+/).map(strip)
+  .filter((w) => w.length >= 2 && !STOP.has(w))
+  .filter((w) => !pool.includes(w.replace(/\s+/g, '')));
+
+// 제목 검사는 기계가 확실히 아는 것만 한다.
+//  (1) 앞부분은 실측 검색어여야 한다.
+//  (2) 1인칭과 클릭베이트 어구는 검색어가 될 수 없다. "내 월급이면 얼마인가요" 가 이렇게 라이브까지 갔다(2026-09-04).
+// 뒷부분의 낱말이 지어낸 말인지는 기계가 못 가른다. "월급별" 은 평범한 말이고 "1일 수령액" 은 지어낸 말인데
+// 둘 다 코퍼스에 없다. 그래서 세지 않고, 사람이 읽고 판단해 review.titleWhy 에 적는다(7번 검사).
+const CLICKBAIT = /(^|\s)(내|제|나의|우리)\s|총정리|완벽\s?정리|한눈에\s?보는|모든\s?것|끝판왕|필독|충격|이것만/;
 for (const s of spokes) {
   const head = s.title.split(',')[0];
-  const miss = head.replace(/[^가-힣0-9a-zA-Z% ]/g, ' ').split(/\s+/).map(strip)
-    .filter((w) => w.length >= 2 && !STOP.has(w))
-    .filter((w) => !CORPUS.includes(w.replace(/\s+/g, '')));
+  const miss = titleMiss(head, CORPUS);
   if (miss.length) (s.tier === 'A' ? fail : warn)(`[${s.slug}]`, `제목 앞부분에 실측 검색어가 아닌 말: ${miss.join(' · ')} — "${s.title}"`);
+  if (CLICKBAIT.test(s.title)) fail(`[${s.slug}]`, `제목에 1인칭이나 클릭베이트 어구가 있다 — "${s.title}"`);
 }
 
 // ── 2. 근거가 현행인지 ───────────────────────────────────────────────────
@@ -188,6 +197,11 @@ for (const f of files) {
         else if (!has(a.ans)) fail(tag, `"${a.h2}" 의 답이 페이지 원문에 그대로 없다: "${a.ans.slice(0, 30)}…"`);
         if (/(사람마다 달라|확인해 보세요|물어보세요)/.test(a.ans)) fail(tag, `"${a.h2}" 의 답이 회피다: "${a.ans.slice(0, 30)}…"`);
       }
+      // 제목이 어느 실측 검색어에서 나왔는지 적게 하고, 그 검색어가 실제로 수집 데이터에 있는지 대조한다.
+      // 기계는 "월급별"(평범한 말)과 "1일 수령액"(지어낸 말)을 못 가른다. 그래서 사람이 근거를 대게 한다.
+      if (!r.titleKeyword) fail(tag, '제목이 어느 실측 검색어에서 나왔는지(titleKeyword) 적지 않았다');
+      else if (!CORPUS.includes(r.titleKeyword.replace(/\s+/g, '')))
+        fail(tag, `titleKeyword "${r.titleKeyword}" 가 수집한 검색어에 없다. 지어낸 말이다`);
       if (!Array.isArray(r.hardWords)) fail(tag, '어려운 말 목록(hardWords)이 없다. 없으면 빈 배열');
       if (!Array.isArray(r.removed)) fail(tag, '지운 군더더기 목록(removed)이 없다. 없으면 빈 배열');
       if (!r.deeperThanHub || r.deeperThanHub.length < 20) fail(tag, '허브보다 무엇이 깊은지(deeperThanHub) 적지 않았다');

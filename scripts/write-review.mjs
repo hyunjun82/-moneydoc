@@ -7,6 +7,7 @@
  *
  * 무엇을 자동으로 채우나 (전부 빌드된 페이지에서 그대로 읽어 온다)
  *   firstScreenAnswer  첫 소제목 앞 서론 원문
+ * 사람이 적는 것에 titleKeyword 가 있다. 제목이 나온 실측 검색어를 그대로 적는다(게이트가 코퍼스와 대조).
  *   h2Answers          소제목마다 그 아래 첫 답 문장(span.ans) 원문
  *   specHash           지금 스펙 파일 해시
  * 사람이 적는 것: query · hardWords · removed · deeperThanHub. 즉 "읽고 판단한 결과" 만.
@@ -39,6 +40,7 @@ const review = {
   date: new Date().toISOString().slice(0, 10),
   specHash: createHash('sha256').update(fs.readFileSync(specPath)).digest('hex').slice(0, 12),
   query: one('query'),
+  titleKeyword: one('titleKeyword'),
   firstScreenAnswer,
   h2Answers,
   hardWords: arg('hard'),

@@ -30,7 +30,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
   return {
     slug: 'unemployment-by-salary-guide', cat: 'government', catLabel: '정부지원금', crumb: '월급별 실업급여',
-    title: '실업급여 지급액, 월급 구간별 1일 수령액 표',
+    title: '실업급여 금액, 월급별 하루 얼마 받나요',
     description: `월급별로 실업급여 하루 얼마를 받는지 표로 정리했어요. 월 ${man(LOWEST.w)}원이든 ${man(HIGHEST.w)}원이든 하루 차이는 ${won(GAP)}원뿐이에요. 상한과 하한에 걸리는 지점을 함께 봤어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 구직급여일액 원문 대조 · ${VERIFIED}`,
@@ -68,16 +68,17 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       ],
     },
     sections: [
-      { id: 's1', h2: '실업급여 1일 수령액은 어떻게 정해지나요', sub: '기초일액의 60퍼센트', blocks: [
+      { id: 's1', h2: '실업급여 금액은 어떻게 정해지나요', sub: '기초일액의 60퍼센트', blocks: [
         { type: 'p', lead: true, ans: '기초일액에 100분의 60을 곱한 금액이 구직급여일액이에요.', text: '기초일액은 이직 당시의 평균임금이에요. 이직 전 3개월간 지급된 임금 총액을 그 기간의 총 일수로 나눈 금액이라, 월급을 30으로 나눈 값과 비슷하게 나와요. 여기에 60퍼센트를 곱해요.' },
         { type: 'p', ans: '위아래 한도가 하루 66,048원과 68,100원이에요.', text: '2026년 기준이고, 하한액은 최저임금에서 나오고 상한액은 대통령령으로 정해요.', link: { href: '/unemployment/amount/', label: '상한액 하한액 자세히' } },
+        { type: 'p', ans: '상한액이 실업급여 최대금액, 하한액이 최저금액이에요.', text: '검색할 때 최대 금액이나 최저 금액으로 부르는 게 이 두 값이에요.' },
         { type: 'p', ans: '그 값이 하한보다 낮으면 하한액을 줘요.', text: '계산 결과가 최저구직급여일액보다 낮으면 최저구직급여일액을 지급해요. 반대로 기초일액이 정해진 상한을 넘으면 상한까지만 인정해요. 그래서 실제 금액은 두 값 사이에 몰려요.' },
         { type: 'note', title: '통상임금이 더 크면 그쪽을 써요', text: '산정한 평균임금이 통상임금보다 적으면 통상임금을 기초일액으로 해요. 마지막 이직 당시 일용근로자였다면 이 규정은 적용되지 않아요.', link: { href: '/unemployment/average-wage/', label: '평균임금 산정법' } },
       ] },
 
-      { id: 's2', h2: '월급별 1일 수령액 표는 어떻게 되나요', sub: '구간별로 정리했어요', blocks: [
+      { id: 's2', h2: '월급별로 하루 얼마를 받나요', sub: '구간별로 정리했어요', blocks: [
         { type: 'p', lead: true, ans: `월 ${man(LOWEST.w)}원부터 ${man(HIGHEST.w)}원까지 하루 지급액을 계산했어요.`, text: `표의 60퍼센트 값이 하한액보다 낮으면 하한액이 적용되고, 상한을 넘으면 상한액이 적용돼요. 어느 구간에서 갈리는지 표에서 바로 보여요.` },
-        { type: 'table', net: 2, caption: '월급별 실업급여 1일 수령액과 월 환산', headers: ['월 평균임금', '60퍼센트로 계산', '하루 지급액', '30일 환산', '적용'],
+        { type: 'table', net: 2, caption: '월급별 실업급여 하루 지급액과 월 환산', headers: ['월 평균임금', '60퍼센트로 계산', '하루 지급액', '30일 환산', '적용'],
           rows: ROWS.map((r) => ({ hi: r.w === 3e6, cells: [`${man(r.w)}원`, `${won(r.raw)}원`, `${won(r.daily)}원`, `${won(r.month)}원`, r.hit] })),
           fn: '구직급여일액은 기초일액의 100분의 60이고, 그 값이 최저구직급여일액보다 낮으면 최저구직급여일액을 지급해요. 30일 환산은 이해를 돕기 위한 값이고 실제로는 인정된 날수만큼 지급돼요.' },
         { type: 'note', title: '표에 없는 월급은 계산기로 보세요', text: '평균임금과 가입기간, 나이를 넣으면 하루 금액과 소정급여일수, 총액이 함께 나와요. 총액이 궁금하면 하루 금액에 소정급여일수를 곱하면 돼요.', link: { href: '/unemployment/total/', label: '총 수령액 계산' } },

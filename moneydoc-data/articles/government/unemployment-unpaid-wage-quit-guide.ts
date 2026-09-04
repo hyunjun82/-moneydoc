@@ -1,7 +1,7 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-unemployment-unpaid-wage-quit-guide.html
 export const meta = {
-  title: "임금체불 실업급여 신청, 자진퇴사로 적혔을 때까지",
+  title: "임금체불 실업급여 신청, 자진퇴사로 적혔을 때",
   description: "임금체불로 그만두면 자진퇴사여도 실업급여를 받아요. 다만 그 사유가 이직일 전 1년 이내에 2개월 이상 발생했어야 해요. 신청 순서와 자진퇴사로 적혔을 때 대응을 정리했어요.",
   datePublished: "2026-09-02",
   dateModified: "2026-09-02",
@@ -12,7 +12,7 @@ export const meta = {
 
 export const scriptKey = "unemployment-unpaid-wage-quit-guide";
 
-export const html = `<h1>임금체불 실업급여 신청, 자진퇴사로 적혔을 때까지</h1>
+export const html = `<h1>임금체불 실업급여 신청, 자진퇴사로 적혔을 때</h1>
 <div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행규칙 별표2 원문 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/unemployment-unpaid-wage-quit-guide.png" width="1200" height="630" alt="임금체불 실업급여 신청 조건과 자진퇴사로 적혔을 때 대응">
 <p class="v2-lead v2-intro">월급 밀려서 퇴사하는 경우가 적지 않아요. 이때 스스로 사직서를 냈더라도 실업급여를 받을 수 있어요. 시행규칙이 임금체불을 정당한 이직 사유로 정해 두었거든요. 다만 조건이 하나 더 붙어요. 그 사유가 이직일 전 1년 이내에 2개월 이상 발생했어야 해요. 조건과 증명 방법, 회사가 자진퇴사로 신고했을 때 어떻게 하는지 정리했어요.</p>

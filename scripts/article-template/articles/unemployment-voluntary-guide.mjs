@@ -30,7 +30,7 @@ export default function article({ VERIFIED }) {
 
   return {
     slug: 'unemployment-voluntary-guide', cat: 'government', catLabel: '정부지원금', crumb: '자발적 퇴사 실업급여',
-    title: '자발적 퇴사 실업급여 인정 사유와 증빙 서류 총정리',
+    title: '자발적 퇴사 실업급여 인정 사유와 증빙 서류',
     description: `자발적 퇴사라도 시행규칙 별표 2의 인정 사유에 해당하면 실업급여를 받아요. 임금체불, 직장 내 괴롭힘, 통근 곤란, 질병, 육아 등을 사유별 증빙 서류와 함께 정리했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 8,
     badge: `고용보험법 시행규칙 별표2 원문 대조 · ${VERIFIED}`,

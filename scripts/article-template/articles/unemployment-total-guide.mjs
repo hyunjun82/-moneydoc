@@ -30,7 +30,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
   return {
     slug: 'unemployment-total-guide', cat: 'government', catLabel: '정부지원금', crumb: '실업급여 총 수령액',
-    title: '실업급여 총 수령액 계산, 한 달에 얼마씩 몇 달 받나요',
+    title: '실업급여 계산, 한달에 얼마씩 몇개월 받나요',
     description: `실업급여 총액은 하루 지급액에 소정급여일수를 곱한 금액이에요. 월 ${man(3e6)}원에 가입 3년이면 ${R.benefitDays}일 동안 모두 ${won(R.totalBenefit)}원이에요. 조건별 총액을 표로 정리했어요.`,
     datePublished: '2026-09-04', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `고용보험법 급여 산정 원문 대조 · ${VERIFIED}`,
@@ -68,7 +68,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       ],
     },
     sections: [
-      { id: 's1', h2: '총 수령액은 어떻게 계산하나요', sub: '하루 금액에 일수를 곱해요', blocks: [
+      { id: 's1', h2: '실업급여 총 수령액은 어떻게 계산하나요', sub: '하루 금액에 일수를 곱해요', blocks: [
         { type: 'p', lead: true, ans: '구직급여일액에 소정급여일수를 곱하면 총액이에요.', text: `하루 금액은 기초일액의 60퍼센트이고 상한과 하한에 막혀요. 일수는 고용보험 가입기간과 나이로 정해져요. 월 ${man(3e6)}원에 가입 3년이면 하루 ${won(R.dailyBenefit)}원에 ${R.benefitDays}일이라 모두 ${won(R.totalBenefit)}원이에요.` },
         { type: 'p', ans: '한 번에 주지는 않아요.', text: `실업인정을 받은 일수분씩 나눠서 지급해요. 첫 회차는 대기기간 7일이 빠져 약 ${won(FIRST)}원이고, 인정일 간격이 28일인 회차는 약 ${won(ROUND28)}원이에요.` },
         { type: 'table', net: 2, caption: '조건별 실업급여 총 수령액', headers: ['월 평균임금', '가입기간', '하루 지급액', '소정급여일수', '총 수령액'],
@@ -82,7 +82,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
         { type: 'note', title: '세금은 떼지 않아요', text: '실업급여는 근로소득이 아니라 소득세를 원천징수하지 않아요. 통장에 찍히는 금액이 그대로예요. 언제 들어오는지는 따로 정리했어요.', link: { href: '/unemployment/payday/', label: '지급일 언제 들어오나' } },
       ] },
 
-      { id: 's3', h2: '실업급여 몇달 동안 받을 수 있나요', sub: '소정급여일수를 달로 환산해요', blocks: [
+      { id: 's3', h2: '실업급여 몇개월 동안 받을 수 있나요', sub: '소정급여일수를 달로 환산해요', blocks: [
         { type: 'p', lead: true, ans: `소정급여일수를 30으로 나누면 대략적인 개월 수가 나와요. ${R.benefitDays}일이면 약 ${MONTHS}개월이에요.`, text: '가입기간이 1년 미만이면 가장 짧고, 10년 이상이면 가장 길어요. 나이가 50세 이상이거나 장애인이면 구간마다 가산이 붙어요.' },
         { type: 'p', ans: '일수는 나이와 가입기간으로 정해져요.', text: '1년 미만이면 120일, 10년 이상이면 240일이고 50세 이상이거나 장애인이면 구간마다 30일씩 더 받아요.', link: { href: '/unemployment/days/', label: '소정급여일수 표' } },
         { type: 'p', ans: '다만 12개월 안에 다 써야 해요.', text: '이직일 다음 날부터 12개월이 지나면 일수가 남아 있어도 지급이 끝나요. 소정급여일수가 긴 사람이 늦게 신청하면 다 못 쓰고 끝날 수 있어요.' },
