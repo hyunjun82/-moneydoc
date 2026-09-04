@@ -115,3 +115,24 @@ export function duplicateCheck(pages) {
   }
   return problems;
 }
+
+/**
+ * 렌더 사고 — undefined·NaN·[object Object] 가 독자에게 보이는지.
+ * 게이트에 있던 검사는 ">undefined<" 처럼 태그 사이에 홀로 있는 경우만 봤다.
+ * 문장 속에 섞이면("undefined이 기간은…") 그냥 지나갔다. 돌연변이 시험 15번으로 잡았다.
+ * 이제 본문 글자 전체에서 찾고, 빌드 시점에 막는다.
+ */
+export function renderAccidentCheck({ html }) {
+  const text = String(html)
+    .replace(/<script[\s\S]*?<\/script>/g, ' ')
+    .replace(/<style[\s\S]*?<\/style>/g, ' ')
+    .replace(/<[^>]+>/g, ' ');
+  const problems = [];
+  for (const [re, what] of [[/undefined/, 'undefined'], [/NaN/, 'NaN'], [/\[object Object\]/, '[object Object]']]) {
+    const m = text.match(re);
+    if (!m) continue;
+    const i = text.indexOf(m[0]);
+    problems.push(`렌더 사고: 본문에 ${what} 가 보인다 ← "${text.slice(Math.max(0, i - 40), i + 40).replace(/\s+/g, ' ').trim()}"`);
+  }
+  return problems;
+}

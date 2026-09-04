@@ -27,7 +27,7 @@ export const html = `<h1>2026년 실업급여 얼마나 받나요, 조건부터 
   </div>
 </section>
 <!--CALC_START--><a class="v2-cta" href="/unemployment/calculator/">실업급여 계산기 바로가기</a><!--CALC_END-->
-<details class="v2-toc"><summary>목차 (9개 질문)<span>열기</span></summary><ol><li><a href="#s1">실업급여 조건, 나도 받을 수 있나요 (수급자격 판정)</a></li><li><a href="#s2">실업급여 얼마나 받나요 (월급별 하루 금액 표)</a></li><li><a href="#s3">실업급여 몇 개월 받나요 (가입기간·나이별 일수)</a></li><li><a href="#s4">2026년 실업급여 상한액 하한액, 왜 다들 66,048원인가요</a></li><li><a href="#s5">실업급여 신청 방법 4단계 (이직확인서부터 첫 지급까지)</a></li><li><a href="#s5b">실업급여 구직활동 몇 번 해야 하나요 (실업인정 회차별 기준)</a></li><li><a href="#s6">실업급여 받다가 취업하면, 알바하면 어떻게 되나요</a></li><li><a href="#reasons">자발적 퇴사인데 실업급여 받는 경우, 정당한 이직 사유 전체</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
+<details class="v2-toc"><summary>목차 (9개 질문)<span>열기</span></summary><ol><li><a href="#s1">실업급여 조건, 나도 받을 수 있나요 (수급자격 판정)</a></li><li><a href="#s2">실업급여 얼마나 받나요 (월급별 하루 금액 표)</a></li><li><a href="#s3">실업급여 몇 개월 받나요 (가입기간·나이별 일수)</a></li><li><a href="#s4">2026년 실업급여 상한액 하한액, 왜 다들 66,048원인가요</a></li><li><a href="#s5">실업급여 신청 방법은 어떻게 되나요 (이직확인서부터 첫 지급까지)</a></li><li><a href="#s5b">실업급여 구직활동 몇 번 해야 하나요 (실업인정 회차별 기준)</a></li><li><a href="#s6">실업급여 받다가 취업하면, 알바하면 어떻게 되나요</a></li><li><a href="#reasons">자발적 퇴사인데 실업급여를 받는 경우는 언제인가요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 2026 실업급여</small><b>핵심콕콕</b></div>
   <dl>
@@ -50,7 +50,7 @@ export const html = `<h1>2026년 실업급여 얼마나 받나요, 조건부터 
   <div class="v2-q"><div><b>③ 지금 일할 수 있고, 구직활동을 할 건가요?</b><small>질병·출산으로 당장 못 하면 "수급기간 연기" 신청 후 나중에 받아요</small></div><div class="v2-sw"><button type="button" data-q="2" data-v="1" aria-pressed="true">예</button><button type="button" data-q="2" data-v="0" aria-pressed="false">아니오</button></div></div>
   <div class="v2-verdict v2-ok" data-verdict><b>받을 수 있어요</b>고용센터에 수급자격을 신청하세요. 아래 4단계대로 하면 돼요.</div>
 </div>
-<h3 id="reasons">자발적 퇴사인데 실업급여 받는 경우, 정당한 이직 사유 전체</h3>
+<h3 id="reasons">자발적 퇴사인데 실업급여를 받는 경우는 언제인가요</h3>
 <p><span class="v2-ans">아래 사유 중 하나면 스스로 사표를 냈어도 받을 수 있어요.</span> 법에 정해진 목록 그대로예요. 핵심은 서류예요. 온라인으로 뗄 수 있는 서류는 발급 페이지로 바로 연결해 뒀고, 병원·회사에서만 받을 수 있는 건 어디서 받는지 적었어요.</p>
 <div class="v2-tbl v2-text"><table><caption>자발적 퇴사여도 실업급여를 받을 수 있는 정당한 이직 사유 (시행규칙 별표2)</caption><thead><tr><th>구분</th><th>사유</th><th>준비 서류 (발급처)</th></tr></thead><tbody>
 <tr><th scope="row">임금·근로조건</th><td data-l="사유">퇴사 전 1년 안에 2개월 이상: 임금체불, 최저임금 미달, 채용 때 약속보다 낮아진 근로조건, 연장근로 제한 위반, 휴업으로 평균임금 70% 미만 지급</td><td class="v2-docs" data-l="준비 서류 (발급처)"><span class="v2-doc v2-off">급여명세서·근로계약서 (회사)</span><a class="v2-doc" href="https://www.4insure.or.kr/pbiz/main/main.do" target="_blank" rel="noopener">4대보험 가입내역확인서</a><a class="v2-doc" href="https://labor.moel.go.kr/anmtDclrCntr/main.do" target="_blank" rel="noopener">임금체불 진정 (노동포털)</a></td></tr>
@@ -118,7 +118,7 @@ export const html = `<h1>2026년 실업급여 얼마나 받나요, 조건부터 
 <tr><th scope="row">한 달(30일) 최대</th><td>1,925,760 (하한 기준)</td><td class="v2-net">2,043,000</td><td>상한 × 30일</td></tr>
 </tbody></table></div>
 
-<h2 id="s5">실업급여 신청 방법 4단계 (이직확인서부터 첫 지급까지)<small>퇴사 다음 날부터 12개월 안에 다 받아야 하니 바로 시작하세요</small></h2>
+<h2 id="s5">실업급여 신청 방법은 어떻게 되나요 (이직확인서부터 첫 지급까지)<small>퇴사 다음 날부터 12개월 안에 다 받아야 하니 바로 시작하세요</small></h2>
 <p class="v2-lead"><span class="v2-ans">이직확인서 확인, 워크넷 구직등록, 고용센터 수급자격 신청, 4주마다 실업인정. 이 네 단계예요.</span> 첫 돈은 보통 신청 후 2~3주 뒤에 들어와요.</p>
 <div class="v2-steps">
   <div><i>1단계</i><b>이직확인서 확인</b><span>회사가 고용보험에 제출해요. 고용24에서 처리됐는지 확인하고, 안 냈으면 회사에 요청하세요(요청받은 날부터 10일 내 제출 의무)</span><em>준비물: 없음 · 퇴사 후 바로</em><a class="v2-go" href="https://www.work24.go.kr/cm/f/c/0100/selectUnifySearch.do?topQuerySearchArea=all&topQueryData=%EC%9D%B4%EC%A7%81%ED%99%95%EC%9D%B8%EC%84%9C" target="_blank" rel="noopener">이직확인서 확인</a></div>
@@ -354,7 +354,7 @@ export const landing = {
     },
     {
       "id": "s5",
-      "h2": "실업급여 신청 방법 4단계 (이직확인서부터 첫 지급까지)",
+      "h2": "실업급여 신청 방법은 어떻게 되나요 (이직확인서부터 첫 지급까지)",
       "sub": "퇴사 다음 날부터 12개월 안에 다 받아야 하니 바로 시작하세요"
     },
     {
