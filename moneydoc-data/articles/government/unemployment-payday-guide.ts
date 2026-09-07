@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 지급일, 입금 날짜와 안 들어올 때 확인 순서",
   description: "실업급여는 통상 실업인정을 받은 다음 날에 계좌로 들어와요. 매달 같은 날이 아니라 내 실업인정일을 따라가요. 회차별 입금 날짜를 어디서 보는지와 안 들어올 때 확인 순서를 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-payday-guide/",
   image: "https://moneydoc.kr/og/unemployment-payday-guide.png",
   imageAlt: "실업급여 지급일과 회차별 입금 날짜",

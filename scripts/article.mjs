@@ -1,0 +1,279 @@
+#!/usr/bin/env node
+/**
+ * 글 한 편을 대화창 없이 끝까지 낸다. 사람은 결과 파일만 본다.
+ *
+ *   node scripts/article.mjs <spoke> [--hub=unemployment] [--rounds=3] [--model=claude-opus-5]
+ *   node scripts/article.mjs unemployment-last-round-guide
+ *
+ * 순서 (새 검사기 없음. 있는 것 사이에 claude -p 를 끼운 것뿐)
+ *   1 계획       titles.<hub>-v2.json 에서 제목·소제목·mustCover·links 를 읽는다 (제목은 사람이 계획서에 적는다)
+ *   2 brief      없으면 계획서로 만든다. 근거는 허브 것을 같이 쓴다(reuseEvidence)
+ *   3 수집       evidence.mjs  → 정부 페이지 본문 JSON + 전체 캡처 PNG      (Playwright)
+ *   4 허브 파악  moneydoc.kr/<hub>/ 본문 + 이웃 글 소제목 전부                (Playwright)
+ *   5 작성       claude -p 가 근거·캡처·허브·예시 스펙을 읽고 articles/<slug>.mjs 를 낸다
+ *   6 대조·발행  build.mjs  → 숫자·조문이 근거 JSON·엔진 값에 없으면 FAIL → FAIL 목록을 claude -p 에 넣어 고침 (rounds 회)
+ */
+import fs from 'node:fs';
+import path from 'node:path';
+import { spawnSync } from 'node:child_process';
+import { pathToFileURL } from 'node:url';
+import { chromium } from 'playwright';
+
+const ROOT = process.cwd();
+const AT = path.join(ROOT, 'scripts/article-template');
+const argv = process.argv.slice(2);
+const arg = (k, d) => (argv.find((a) => a.startsWith(`--${k}=`)) ?? '').slice(k.length + 3) || d;
+const target = argv.find((a) => !a.startsWith('--'));
+if (!target) { console.error('usage: node scripts/article.mjs <spoke|slug> [--hub=] [--rounds=3] [--model=]'); process.exit(1); }
+const ROUNDS = Number(arg('rounds', 3));
+const MODEL = arg('model', '');
+const t0 = Date.now();
+const log = (m) => console.log(`[${((Date.now() - t0) / 1000).toFixed(0).padStart(4)}s] ${m}`);
+const stripTags = (h) => h.replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/g, ' ').replace(/\s+/g, ' ').trim();
+
+// ── 1. 계획 ─────────────────────────────────────────────────────────────
+const plans = fs.readdirSync(path.join(ROOT, 'scripts/title-system')).filter((f) => /^titles\..+-v2\.json$/.test(f)).map((f) => f.slice(7, -8));
+const hub = arg('hub') || plans.find((h) => target.startsWith(`${h}-`)) || (plans.length === 1 ? plans[0] : null);
+if (!hub) { console.error(`hub 를 정할 수 없다. --hub= 로 지정 (있는 것: ${plans.join(', ')})`); process.exit(1); }
+const spoke = target.replace(new RegExp(`^${hub}-`), '').replace(/-guide$/, '');
+const slug = `${hub}-${spoke}-guide`;
+const plan = JSON.parse(fs.readFileSync(path.join(ROOT, `scripts/title-system/titles.${hub}-v2.json`), 'utf8'));
+const spokes = plan.groups.flatMap((g) => g.spokes);
+const sp = spokes.find((s) => s.slug === spoke);
+if (!sp) { console.error(`계획서에 '${spoke}' 가 없다. 1단계(제목·소제목)는 사람이 titles.${hub}-v2.json 에 적는다.`); process.exit(1); }
+const { ARTICLES } = await import(pathToFileURL(path.join(AT, 'articles/index.mjs')).href);
+const spokeSlugs = new Set(spokes.map((s) => `${hub}-${s.slug}-guide`));
+const hubEntry = ARTICLES.find((a) => a.slug.startsWith(`${hub}-`) && !spokeSlugs.has(a.slug)) ?? ARTICLES.find((a) => a.slug.startsWith(`${hub}-`));
+const hubSlug = hubEntry?.slug ?? `${hub}-benefit-guide`;
+log(`계획 ${slug} · 제목 "${sp.title}" · 소제목 ${sp.h2?.length ?? 0} · 허브 ${hubSlug}`);
+
+// ── 2. brief ────────────────────────────────────────────────────────────
+const briefPath = path.join(AT, 'brief', `${slug}.json`);
+if (!fs.existsSync(briefPath)) {
+  const hubBrief = JSON.parse(fs.readFileSync(path.join(AT, 'brief', `${hubSlug}.json`), 'utf8'));
+  const brief = { slug, keyword: sp.title, calc: hubBrief.calc, reuseEvidence: hubSlug, mustInclude: sp.mustCover ?? [], queries: [], sources: [] };
+  fs.writeFileSync(briefPath, JSON.stringify(brief, null, 2) + '\n', 'utf8');
+  log(`brief 생성 (근거는 ${hubSlug} 것을 같이 씀)`);
+}
+const brief = JSON.parse(fs.readFileSync(briefPath, 'utf8'));
+const evOwner = brief.reuseEvidence ?? slug;
+const evDir = path.join(AT, 'evidence', evOwner);
+
+// ── 3. 수집 ─────────────────────────────────────────────────────────────
+const ownerBrief = brief.reuseEvidence ? JSON.parse(fs.readFileSync(path.join(AT, 'brief', `${evOwner}.json`), 'utf8')) : brief;
+const evCount = () => (fs.existsSync(evDir) ? fs.readdirSync(evDir).filter((f) => f.endsWith('.json')).length : 0);
+if (evCount() < ownerBrief.sources.length) {
+  log(`근거 수집 evidence.mjs ${evOwner} (${evCount()}/${ownerBrief.sources.length})`);
+  const r = spawnSync(process.execPath, [path.join(AT, 'evidence.mjs'), evOwner, '--skip-existing'], { stdio: 'inherit' });
+  if (r.status !== 0) { console.error('근거 수집 실패'); process.exit(1); }
+}
+const evidence = fs.readdirSync(evDir).filter((f) => f.endsWith('.json')).sort((a, b) => parseInt(a) - parseInt(b))
+  .map((f) => ({ ...JSON.parse(fs.readFileSync(path.join(evDir, f), 'utf8')), json: path.join(evDir, f), png: path.join(evDir, f.replace('.json', '.png')) }));
+log(`근거 ${evidence.length}건 · ${evidence.reduce((a, e) => a + e.text.length, 0).toLocaleString()}자`);
+
+// ── 4. 허브 파악 (Playwright, 라이브) ────────────────────────────────────
+let hubText = '';
+try {
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage({ locale: 'ko-KR' });
+  await page.goto(`https://moneydoc.kr/${hub}/`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await page.waitForTimeout(3000);
+  // innerText 는 접힌 표·숨긴 열을 빼서 1/3 만 나왔다(8,447/26,241자). textContent 로 전부 읽는다
+  hubText = (await page.evaluate(() => {
+    for (const el of document.querySelectorAll('script,style,noscript,header,footer,nav')) el.remove();
+    return document.body.textContent;
+  })).replace(/[ \t]+/g, ' ').replace(/\s*\n\s*/g, '\n').replace(/\n{3,}/g, '\n\n').trim();
+  await browser.close();
+  log(`허브 라이브 본문 ${hubText.length.toLocaleString()}자 (전체 텍스트)`);
+} catch (e) {
+  const local = path.join(ROOT, 'public/_preview', `article-v2-${hubSlug}.html`);
+  hubText = fs.existsSync(local) ? stripTags(fs.readFileSync(local, 'utf8')) : '';
+  log(`허브 라이브 실패(${e.message.split('\n')[0]}) → 로컬 미리보기 ${hubText.length}자`);
+}
+const neighbors = fs.readdirSync(path.join(ROOT, 'public/_preview')).filter((f) => f.startsWith(`landing-${hub}-`) && f.endsWith('.json'))
+  .map((f) => { const j = JSON.parse(fs.readFileSync(path.join(ROOT, 'public/_preview', f), 'utf8')); return `${f.slice(8, -5)}: ${j.sections.map((s) => s.h2).join(' | ')}`; });
+
+// ── 4b. 죽은 링크 걸러내기 ───────────────────────────────────────────────
+// 계획서 links 는 "언젠가 쓸 글"까지 적혀 있다. 아직 없는 글로 링크하면 404 다.
+// build.mjs 는 링크가 사는지 안 본다(그건 gate 가 하던 일). 그래서 쓰기 전에 여기서 뺀다.
+const pageExists = (to) => fs.existsSync(path.join(ROOT, `app/${hubEntry?.cat ?? 'government'}/${hub}/${to}/page.tsx`))
+  || fs.existsSync(path.join(ROOT, `app/${hub}/${to}/page.tsx`))
+  || fs.existsSync(path.join(AT, 'articles', `${hub}-${to}-guide.mjs`));
+const liveLinks = (sp.links ?? []).filter((l) => pageExists(l.to));
+const deadLinks = (sp.links ?? []).filter((l) => !pageExists(l.to));
+if (deadLinks.length) log(`죽은 링크 제외: ${deadLinks.map((l) => `/${hub}/${l.to}/`).join(' ')} (아직 글이 없음)`);
+if (!liveLinks.length) log('경고: 살아 있는 내부 링크가 없다. related 로만 잇는다');
+
+// ── 5. 작성 ─────────────────────────────────────────────────────────────
+const specPath = path.join(AT, 'articles', `${slug}.mjs`);
+const shape = sp.shape?.[0];
+const hasShape = (s) => (spokes.find((x) => `${hub}-${x.slug}-guide` === s)?.shape?.includes(shape) ? 1 : 0);
+const example = spokes.map((s) => `${hub}-${s.slug}-guide`).filter((s) => s !== slug && fs.existsSync(path.join(AT, 'articles', `${s}.mjs`)))
+  .sort((a, b) => hasShape(b) - hasShape(a))[0];
+const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
+const INLINE_MAX = 20000;
+const evBlock = evidence.map((e) => (e.text.length <= INLINE_MAX
+  ? `### 근거 ${e.n} · ${e.label}\n출처 ${e.url ?? e.file}\n캡처 ${e.png}\n\n${e.text}\n`
+  : `### 근거 ${e.n} · ${e.label} (${e.text.length.toLocaleString()}자, 길어서 파일로)\n출처 ${e.url}\n텍스트 ${e.json}  <- 필요한 조문은 Grep 으로 찾아 Read 로 읽는다\n캡처 ${e.png}\n`)).join('\n');
+
+const HEAD = `너는 MoneyDoc 가이드 글 스펙(articles/<slug>.mjs)을 쓰는 작성기다. 대화하지 않는다. 출력은 아래 "출력 형식" 그대로만.
+
+## 출력 형식 (이것 외에 아무것도 출력하지 않는다. 코드 펜스 금지)
+첫 줄:  // index: {"crumb":"빵부스러기 라벨(예: 실업급여 합산기간)","blurb":"목록용 한 줄 요약. 가운뎃점으로 구분. 60자 이하"}
+둘째 줄부터: 스펙 모듈 전체. export default function article({ calculators, loadSpec, VERIFIED, derive }) { ... return {...}; }
+
+## 절대 규칙
+- slug 는 '${slug}', title 은 계획서 그대로 '${sp.title}'. 소제목(h2)은 계획서 목록을 그 순서로 전부 쓰고 다른 h2 를 만들지 않는다.
+- 숫자는 엔진 값(calculators·loadSpec·derive)이거나 아래 근거 텍스트에 글자 그대로 있는 값만. 근거에 없으면 그 숫자를 쓰지 않는다. 추정·기억 금지. 이 규칙은 build.mjs 가 기계로 대조하고 어기면 FAIL 이다.
+- 조문(제N조)은 본문에 쓰지 않는다. 각주(fn)·출처(sources)에만.
+- 해요체. 문장 100자 이하. 대시·파이프 금지. 반말 종결(~한다·~된다) 금지. 합니다체 금지.
+- 시각 장치: 계획서 shape 는 반드시 넣는다. 그 위에 근거에 회차별·금액별·조건별 비교가 있으면 표(caption 필수)로 보여 준다. 허브 글이 표로 답한 수준을 스포크도 지킨다. 다만 내용 없는 억지 표는 만들지 않는다.
+- 히어로 card.big 과 즉답 quick.big 은 근거에 있는 확정 숫자만. "사람마다 달라요" 같은 말과 같이 두지 않는다. 확정 숫자가 없으면 big 은 예/아니요 또는 명사 한 단어.
+- 작업 순서: 먼저 캡처 PNG 를 전부 Read 로 연다(표·주석은 텍스트에 안 나온다). 긴 법령은 Grep 으로 계획서 mustCover 와 관련 조문을 찾아 Read 한다. 그 다음에 쓴다. 읽지 않고 쓰면 거부된다.
+- 내부 링크는 아래 "쓸 수 있는 링크" 목록에 있는 것만 쓴다. 목록에 없는 /${hub}/... 주소는 아직 글이 없어 404 다. 절대 만들지 않는다. related 도 이 목록과 '/${hub}/' 안에서만 고른다.
+- 계산기는 calc.on 이 true 일 때만.
+- 근거에 답이 있는 질문에 "사람마다 달라요"·"안내받아요" 같은 회피 답을 쓰지 않는다. 근거의 답을 쓴다.
+- 이웃 글이 이미 답한 소제목·문장을 되풀이하지 않는다.
+- 예시 스펙의 구조·헬퍼 사용법(won, man, docs, derive 등)을 그대로 따른다. 예시의 내용은 베끼지 않는다.
+`;
+
+const CONTEXT = `
+## 계획서 (이 글)
+${JSON.stringify({ slug: sp.slug, title: sp.title, h2: sp.h2, mustCover: sp.mustCover, calc: sp.calc, shape: sp.shape, evidence: sp.evidence }, null, 1)}
+
+## 쓸 수 있는 링크 (여기 없는 /${hub}/ 주소는 404 다)
+${liveLinks.map((l) => `- /${hub}/${l.to}/  ${l.why}`).join('\n') || '- (없음)'}
+- /${hub}/  주제 홈${sp.calc?.on ? `\n- ${plan.calculator?.route ?? `/${hub}/calculator/`}  계산기` : ''}
+${neighbors.map((n) => `- /${hub}/${n.split(':')[0].replace(new RegExp(`^${hub}-`), '').replace(/-guide$/, '')}/`).join('\n')}
+
+## 쓰기 규칙 (WRITING.md)
+${read('scripts/article-template/WRITING.md')}
+
+## 스펙 형식 (README)
+${read('scripts/article-template/README.md')}
+
+## 예시 스펙 (형식 참고: scripts/article-template/articles/${example}.mjs)
+${read(`scripts/article-template/articles/${example}.mjs`)}
+
+## 허브 글 본문 (moneydoc.kr/${hub}/ 라이브). 허브가 이미 답한 것은 짧게 링크로 넘긴다
+${hubText.slice(0, 30000)}
+
+## 이웃 글 소제목 (여기 있는 질문은 다시 쓰지 않는다)
+${neighbors.join('\n')}
+
+## 근거 (정부·법령 페이지 원문. 캡처 PNG 는 Read 로 열어 표·주석을 본다)
+${evBlock}
+`;
+
+function claudeBin() {
+  for (const c of ['claude', 'claude.cmd', 'claude.exe']) {
+    const r = spawnSync(c, ['--version'], { encoding: 'utf8', shell: false });
+    if (r.status === 0) return { bin: c, shell: false };
+  }
+  const r = spawnSync('claude', ['--version'], { encoding: 'utf8', shell: true });
+  if (r.status === 0) return { bin: 'claude', shell: true };
+  throw new Error('claude CLI 를 찾을 수 없다');
+}
+const CLI = claudeBin();
+let cost = 0;
+function claude(prompt, label, retry = false) {
+  log(`claude -p ${label} (입력 ${prompt.length.toLocaleString()}자)`);
+  const args = ['-p', '--output-format', 'json', '--allowedTools', 'Read,Grep,Glob', '--max-turns', '80', ...(MODEL ? ['--model', MODEL] : [])];
+  const r = spawnSync(CLI.bin, args, { input: prompt, encoding: 'utf8', maxBuffer: 256 * 1024 * 1024, shell: CLI.shell, timeout: 30 * 60 * 1000 });
+  if (r.error) throw r.error;
+  let j;
+  try { j = JSON.parse(r.stdout); } catch { throw new Error(`claude 출력 파싱 실패: ${(r.stdout || r.stderr).slice(0, 500)}`); }
+  cost += j.total_cost_usd ?? 0;
+  if (j.is_error) throw new Error(`claude 오류: ${String(j.result).slice(0, 500)}`);
+  log(`  ${j.num_turns}턴 · $${(j.total_cost_usd ?? 0).toFixed(2)}`);
+  // 1턴 = 캡처도 법령도 안 열고 쓴 것. 첫 작성은 반드시 읽고 써야 한다. 한 번은 다시 시킨다
+  if (label === '작성' && (j.num_turns ?? 0) < 3) {
+    if (retry) throw new Error(`작성기가 두 번 다 근거를 읽지 않고 썼다 (${j.num_turns}턴)`);
+    log('  근거를 읽지 않고 씀(턴 수 부족) → 거부, 다시');
+    return claude(`${prompt}\n\n(이전 시도는 캡처와 법령을 열지 않아 거부됐다. 반드시 PNG 를 Read 하고 법령을 Grep 한 뒤에 쓴다.)`, label, true);
+  }
+  return String(j.result ?? '');
+}
+function saveSpec(out) {
+  let s = out.replace(/\r/g, '').trim();
+  s = s.replace(/^```[a-z]*\n/, '').replace(/\n```\s*$/, '');
+  // 작성기가 앞에 설명 한 줄을 붙이는 경우가 있다. 첫 줄만 보지 말고 어디 있든 찾아 그 앞을 버린다
+  const m = s.match(/^[ \t]*\/\/ index:[ \t]*(\{.*\})[ \t]*$/m);
+  if (!m) throw new Error(`'// index: {...}' 줄이 없다:\n${s.slice(0, 300)}`);
+  const idx = JSON.parse(m[1]);
+  s = s.slice(s.indexOf(m[0]) + m[0].length).trim() + '\n';
+  if (!/export default function article/.test(s)) throw new Error('스펙에 export default function article 이 없다');
+  fs.writeFileSync(specPath, s, 'utf8');
+  // index.mjs 한 줄
+  const ip = path.join(AT, 'articles/index.mjs');
+  let idxSrc = fs.readFileSync(ip, 'utf8');
+  const q = (v) => String(v ?? '').replace(/'/g, '');
+  const line = `  { slug: '${slug}', cat: '${hubEntry?.cat ?? 'government'}', catLabel: '${hubEntry?.catLabel ?? ''}', crumb: '${q(idx.crumb)}', blurb: '${q(idx.blurb)}' },`;
+  if (idxSrc.includes(`slug: '${slug}'`)) idxSrc = idxSrc.replace(new RegExp(`^.*slug: '${slug}'.*$`, 'm'), line);
+  else idxSrc = idxSrc.replace(/\n\];/, `\n${line}\n];`);
+  fs.writeFileSync(ip, idxSrc, 'utf8');
+}
+async function syntaxCheck() {
+  try { await import(`${pathToFileURL(specPath).href}?t=${Date.now()}`); return null; }
+  catch (e) { return `스펙 문법 오류: ${e.message}`; }
+}
+function build() {
+  const r = spawnSync(process.execPath, [path.join(AT, 'build.mjs'), slug], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+  const out = (r.stdout ?? '') + (r.stderr ?? '');
+  const fails = out.split('\n').filter((l) => /^\s+- |✗/.test(l)).map((l) => l.trim());
+  return { ok: r.status === 0, fails: fails.length ? fails : (r.status === 0 ? [] : [out.slice(-2000)]), out };
+}
+/** 죽은 내부 링크는 build 가 안 본다. 여기서 잡아 FAIL 로 되돌린다 */
+function deadLinkCheck() {
+  const html = fs.readFileSync(path.join(ROOT, 'public/_preview', `article-v2-${slug}.html`), 'utf8');
+  const hrefs = [...new Set([...html.matchAll(/href="(\/[a-z0-9\-/]*\/)"/g)].map((m) => m[1]))];
+  return hrefs.filter((h) => {
+    if (h === '/' || h === `/${hub}/` || h === `/${hubEntry?.cat ?? 'government'}/`) return false;
+    if (h === (plan.calculator?.route ?? '')) return false;
+    return !fs.existsSync(path.join(ROOT, 'app', h.replace(/^\/|\/$/g, ''), 'page.tsx'));
+  }).map((h) => `죽은 링크 ${h} — 그 글이 아직 없다. 링크를 빼거나 '쓸 수 있는 링크' 목록의 주소로 바꾼다`);
+}
+/**
+ * 미리보기까지가 아니라 실제 Next 페이지까지 낸다. build.mjs 는 --all 일 때만 convert 를 부른다.
+ * 주소는 url-map.json 이 정한다. 등록이 없으면 /government/unemployment-last-round-guide/ 같은
+ * 엉뚱한 주소로 나가고 빵부스러기도 카테고리 밑으로 붙는다. 그래서 convert 전에 넣는다.
+ */
+const CAT = hubEntry?.cat ?? 'government';
+const route = `${hub}/${spoke}`;
+function publish() {
+  const mapPath = path.join(ROOT, 'scripts/url-map.json');
+  const map = JSON.parse(fs.readFileSync(mapPath, 'utf8'));
+  const key = `${CAT}/${slug}`;
+  const nocalc = map['_계산기없는허브'] ?? (map['_계산기없는허브'] = {});
+  if (nocalc[key] !== route) { nocalc[key] = route; fs.writeFileSync(mapPath, `${JSON.stringify(map, null, 2)}\n`, 'utf8'); log(`url-map 등록 ${key} -> /${route}/`); }
+  const r = spawnSync(process.execPath, [path.join(AT, 'convert-v2.mjs')], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+  // 잘못된 주소로 먼저 나간 페이지가 있으면 치운다
+  const strayDir = path.join(ROOT, 'app', CAT, slug);
+  if (fs.existsSync(strayDir)) { fs.rmSync(strayDir, { recursive: true, force: true }); log(`엉뚱한 주소 페이지 삭제 app/${CAT}/${slug}/`); }
+  const page = path.join(ROOT, 'app', route, 'page.tsx');
+  return { ok: r.status === 0 && fs.existsSync(page), made: [page], out: (r.stdout ?? '') + (r.stderr ?? '') };
+}
+
+// ── 6. 작성 → 대조 → 고침 ─────────────────────────────────────────────
+let fails = [];
+for (let round = 1; round <= ROUNDS; round++) {
+  const prompt = round === 1
+    ? `${HEAD}${CONTEXT}\n\n이제 '${slug}' 스펙을 출력 형식대로 낸다.`
+    : `${HEAD}\n## 지금 스펙 (scripts/article-template/articles/${slug}.mjs)\n${fs.readFileSync(specPath, 'utf8')}\n\n## build.mjs 가 막은 것 (${fails.length}건, 전부 고친다. 근거에 없는 숫자는 지운다)\n${fails.map((f) => `- ${f}`).join('\n')}\n${CONTEXT}\n\n고친 스펙 전체를 출력 형식대로 낸다. 막힌 것 외에는 바꾸지 않는다.`;
+  saveSpec(claude(prompt, round === 1 ? '작성' : `수정 ${round - 1}`));
+  const syn = await syntaxCheck();
+  const b = syn ? { ok: false, fails: [syn] } : build();
+  fails = b.fails;
+  if (b.ok) fails = deadLinkCheck();          // 대조는 통과했어도 404 링크가 있으면 다시
+  if (b.ok && !fails.length) {
+    const p = publish();
+    if (!p.ok) { console.error(`발행(convert-v2) 실패:\n${p.out.slice(-2000)}`); process.exit(1); }
+    log(`OK 대조 통과 · 죽은 링크 0 · 발행 완료 (${round}회) · 총 $${cost.toFixed(2)}`);
+    console.log(`\n미리보기  public/_preview/article-v2-${slug}.html\n페이지    ${p.made.map((x) => path.relative(ROOT, x)).join(' ')}\n썸네일    public/og/${slug}.png\n스펙      scripts/article-template/articles/${slug}.mjs`);
+    process.exit(0);
+  }
+  log(`FAIL ${fails.length}건`);
+  fails.slice(0, 40).forEach((f) => console.log(`   ${f}`));
+}
+console.error(`\n${ROUNDS}회 안에 통과 못 함. 마지막 FAIL 목록 위에 있음. 스펙은 남겨 둠: ${specPath}`);
+process.exit(1);

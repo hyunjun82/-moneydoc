@@ -4,6 +4,7 @@
  *
  *   node scripts/write-review.mjs <hub> <slug> --query="검색어" --deeper="..." \
  *        --hard="말 → 풀이" --hard="..." --removed="지운 것" [--h2ans=1,2,3...]
+ *        --found="[①-…] …" ×3+  또는  --foundFile=<한 줄에 한 항목인 텍스트 파일>  (명령줄 길이 한계. 83건이 안 넘어갔다 2026-09-06)
  *
  * 무엇을 자동으로 채우나 (전부 빌드된 페이지에서 그대로 읽어 온다)
  *   firstScreenAnswer  첫 소제목 앞 서론 원문
@@ -22,6 +23,7 @@ const [hub, slug, ...rest] = process.argv.slice(2);
 if (!hub || !slug) { console.error('usage: write-review.mjs <hub> <slug> --query="..." --deeper="..." [--hard=".."] [--removed=".."]'); process.exit(1); }
 const arg = (k) => rest.filter((a) => a.startsWith(`--${k}=`)).map((a) => a.slice(k.length + 3));
 const one = (k) => arg(k)[0] ?? '';
+const foundLines = [...arg('found'), ...arg('foundFile').flatMap((p) => fs.readFileSync(p, 'utf8').replace(/\r/g, '').split('\n').map((s) => s.trim()).filter(Boolean))];
 
 const page = `public/_preview/article-v2-${hub}-${slug}-guide.html`;
 const specPath = `scripts/article-template/articles/${hub}-${slug}-guide.mjs`;
@@ -36,7 +38,21 @@ const h2Answers = h.split(/<h2 id="s\d+">/).slice(1).map((p) => {
   return { h2, ans };
 }).filter((x) => x.h2 && !/자주 묻는 질문|출처/.test(x.h2));
 
-const review = {
+const prev = (() => { try { const d = JSON.parse(fs.readFileSync(planPath, 'utf8')); let h = null;
+  (function w(o) { if (Array.isArray(o)) o.forEach(w); else if (o && typeof o === 'object') { if (o.slug === slug) h = o; else Object.values(o).forEach(w); } })(d);
+  return h?.review ?? null; } catch { return null; } })();
+const refresh = rest.includes('--refresh');
+if (refresh && !prev) { console.error('--refresh 는 기존 검토 기록이 있어야 한다'); process.exit(1); }
+const review = refresh ? {
+  // 글의 블록 순서만 바꾼 경우: 검토 판단(검색어·어려운 말·적대 검토)은 그대로 두고, 해시와 페이지에서 읽는 값만 새로 뽑는다.
+  ...prev,
+  date: new Date().toISOString().slice(0, 10),
+  specHash: createHash('sha256').update(fs.readFileSync(specPath)).digest('hex').slice(0, 12),
+  firstScreenAnswer,
+  h2Answers,
+  removed: [...(prev.removed ?? []), ...arg('removed')],
+  ...(foundLines.length ? { adversarial: foundLines } : {}),
+} : {
   date: new Date().toISOString().slice(0, 10),
   specHash: createHash('sha256').update(fs.readFileSync(specPath)).digest('hex').slice(0, 12),
   query: one('query'),
@@ -46,6 +62,9 @@ const review = {
   hardWords: arg('hard'),
   removed: arg('removed'),
   deeperThanHub: one('deeper'),
+  // 6단계 적대 검토 결과. 글을 쓰지 않은 검토자가 REVIEW.md 세 관점으로 읽고 낸 항목을 그대로 옮긴다.
+  // 형식은 "[①-제목] "…" → 왜" 이고, 고쳤으면 뒤에 " ⇒ 고침: …" 을 붙인다. 문제 없던 관점은 "[②] 없음".
+  adversarial: foundLines,
 };
 
 const plan = JSON.parse(fs.readFileSync(planPath, 'utf8'));

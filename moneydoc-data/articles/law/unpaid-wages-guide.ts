@@ -3,8 +3,8 @@
 export const meta = {
   title: "임금체불 진정 방법과 지연이자, 신고 절차부터 대지급금까지",
   description: "퇴사하고 14일이 지나도 임금을 못 받으면 연 20%의 지연이자가 붙어요. 500만원을 90일 못 받으면 이자가 246,575원이에요. 진정 접수 방법, 조사 절차, 회사가 도산했을 때 받는 대지급금까지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/law/unpaid-wages-guide/",
   image: "https://moneydoc.kr/og/unpaid-wages-guide.png",
   imageAlt: "임금체불 지연이자. 500만원을 90일 못 받으면 이자 246,575원",

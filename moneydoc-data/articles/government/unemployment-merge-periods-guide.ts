@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 합산기간, 전 직장 고용보험도 더해지나요",
   description: "전 직장을 그만둔 날부터 3년 안에 다시 취업했다면 그 기간이 합산돼요. 다만 며칠 받는지를 정하는 시계와 180일 요건을 세는 시계가 달라요. 두 시계를 갈라서 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-merge-periods-guide/",
   image: "https://moneydoc.kr/og/unemployment-merge-periods-guide.png",
   imageAlt: "실업급여 합산기간. 전 직장 상실일부터 3년 이내면 합산",
@@ -76,7 +76,7 @@ export const html = `<h1>실업급여 합산기간, 전 직장 고용보험도 �
 <div class="v2-note"><b>신청만 하고 안 받았다면 다른 이야기예요</b> 실제로 지급받은 사실이 기준이에요. 애매하면 고용보험 홈페이지에서 지급 이력을 먼저 확인하세요.</div>
 
 <h2 id="s5">내 합산기간은 어디서 확인하나요<small>고용보험 홈페이지의 피보험자격 이력</small></h2>
-<p class="v2-lead"><span class="v2-ans">고용보험 홈페이지에서 본인 인증을 하면 회사별 취득일과 상실일이 나와요.</span> 그 날짜로 공백이 3년을 넘는지 직접 셀 수 있어요. 다만 최종 판단은 고용센터가 하니 애매하면 신청해서 확인받는 편이 나아요. <a class="v2-go" href="https://www.ei.go.kr" target="_blank" rel="noopener">고용보험 홈페이지</a></p>
+<p class="v2-lead"><span class="v2-ans">고용보험 홈페이지에서 본인 인증을 하면 회사별 취득일과 상실일이 나와요.</span> 그 날짜로 공백이 3년을 넘는지 직접 셀 수 있어요. 다만 신고 자체가 빠져 있다면 이력에 아무것도 안 나와요. 그때는 확인청구로 되살릴 수 있어요. <a class="v2-go" href="/unemployment/no-insurance/">미가입일 때 확인청구</a></p>
 <p><span class="v2-ans">단위기간 일수는 이직확인서에 적혀요.</span> 회사별 며칠이 단위기간으로 잡혔는지는 회사가 낸 이직확인서에 나와요. 숫자가 이상하면 정정을 요청할 수 있어요. <a class="v2-go" href="/unemployment/eligibility/">수급자격 4가지 조건</a></p>
 <div class="v2-tbl v2-text"><table><caption>어디서 무엇을 확인하나요</caption><thead><tr><th>확인할 것</th><th>어디서 보나요</th></tr></thead><tbody>
 <tr><th scope="row">회사별 취득일과 상실일</th><td data-l="어디서 보나요">고용보험 홈페이지 피보험자격 이력</td></tr>

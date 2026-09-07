@@ -3,7 +3,7 @@
 export const meta = {
   title: "국민연금 조기수령 감액과 손익분기, 조건부터 연기연금 비교까지",
   description: "정상수령 월 100만원인 사람이 60세부터 받으면 700,000원으로 30% 깎여요. 감액률표, 손익분기 나이, 신청 조건, 연기연금과의 비교를 한 번에 정리했어요.",
-  datePublished: "2026-09-02",
+  datePublished: "2026-09-03",
   dateModified: "2026-09-02",
   url: "https://moneydoc.kr/pension/national-pension-early-guide/",
   image: "https://moneydoc.kr/og/national-pension-early-guide.png",

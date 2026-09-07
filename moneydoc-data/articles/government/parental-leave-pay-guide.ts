@@ -3,8 +3,8 @@
 export const meta = {
   title: "2026년 육아휴직 급여 조건과 금액, 신청 방법부터 6+6 특례까지",
   description: "통상임금 300만원이면 육아휴직 12개월 동안 23,100,000원을 받아요. 첫 3개월은 월 2,500,000원, 4개월째부터는 2,000,000원이에요. 지급 조건, 월별 상한, 신청 방법, 부모가 함께 쓰는 특례를 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/government/parental-leave-pay-guide/",
   image: "https://moneydoc.kr/og/parental-leave-pay-guide.png",
   imageAlt: "육아휴직 급여. 통상임금 300만원이면 12개월 동안 23,100,000원",

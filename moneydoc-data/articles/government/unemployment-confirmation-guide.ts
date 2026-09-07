@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 이직확인서 발급 요청과 정정 방법",
   description: "이직확인서에는 이직 사유와 피보험단위기간, 평균임금, 1일 소정근로시간이 적혀요. 하나만 틀려도 수급자격이나 금액이 달라져요. 발급 요청과 정정 방법을 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-confirmation-guide/",
   image: "https://moneydoc.kr/og/unemployment-confirmation-guide.png",
   imageAlt: "실업급여 이직확인서 발급 요청과 정정 방법",

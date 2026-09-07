@@ -99,7 +99,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       ] },
 
       { id: 's5', h2: '내 합산기간은 어디서 확인하나요', sub: '고용보험 홈페이지의 피보험자격 이력', blocks: [
-        { type: 'p', lead: true, ans: '고용보험 홈페이지에서 본인 인증을 하면 회사별 취득일과 상실일이 나와요.', text: '그 날짜로 공백이 3년을 넘는지 직접 셀 수 있어요. 다만 최종 판단은 고용센터가 하니 애매하면 신청해서 확인받는 편이 나아요.', link: { label: '고용보험 홈페이지', href: EI } },
+        { type: 'p', lead: true, ans: '고용보험 홈페이지에서 본인 인증을 하면 회사별 취득일과 상실일이 나와요.', text: '그 날짜로 공백이 3년을 넘는지 직접 셀 수 있어요. 다만 신고 자체가 빠져 있다면 이력에 아무것도 안 나와요. 그때는 확인청구로 되살릴 수 있어요.', link: { href: '/unemployment/no-insurance/', label: '미가입일 때 확인청구' } },
         { type: 'p', ans: '단위기간 일수는 이직확인서에 적혀요.', text: '회사별 며칠이 단위기간으로 잡혔는지는 회사가 낸 이직확인서에 나와요. 숫자가 이상하면 정정을 요청할 수 있어요.', link: { href: '/unemployment/eligibility/', label: '수급자격 4가지 조건' } },
         { type: 'table', text: true, caption: '어디서 무엇을 확인하나요', headers: ['확인할 것', '어디서 보나요'], rows: [
           { cells: ['회사별 취득일과 상실일', '고용보험 홈페이지 피보험자격 이력'] },

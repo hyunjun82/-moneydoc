@@ -1,0 +1,47 @@
+{
+  "slug": "unemployment-pension-credit-guide",
+  "keyword": "실업급여 국민연금",
+  "calc": "government/unemployment-benefit",
+  "mustInclude": [
+    "국민연금",
+    "실업크레딧",
+    "신청"
+  ],
+  "queries": [
+    "실업급여 국민연금",
+    "실업급여 실업크레딧",
+    "실업급여 국민연금 신청",
+    "실업급여 국민연금 금액",
+    "실업급여 국민연금 납부",
+    "국민연금 추가산입",
+    "국민연금 납부예외"
+  ],
+  "sources": [
+    {
+      "label": "국민연금법 (실업 크레딧 §19의2, 가입기간 §17, 노령연금 §61·§63)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/국민연금법",
+      "must": [
+        "제19조의2",
+        "제17조"
+      ]
+    },
+    {
+      "label": "국민연금법 시행령 (실업 크레딧 인정소득·신청 §25의2 등)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/국민연금법시행령",
+      "must": [
+        "제25조"
+      ]
+    },
+    {
+      "label": "고용보험법 (구직급여 수급자격 §40, 수급기간 §48)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법",
+      "must": [
+        "제40조",
+        "제48조"
+      ]
+    }
+  ]
+}

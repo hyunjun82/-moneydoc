@@ -79,17 +79,22 @@ export function arithmeticCheck({ html, engineNums, enabled = true }) {
   // 퇴직금(평균임금 × 30일 × 재직년수)처럼 산식이 다른 글에 걸면 오탐이다. 실측으로 8건 나왔다.
   // 그래서 그 산식을 쓰는 글에서만 돈다 (build.mjs 가 brief.calc 로 판단).
   if (!enabled) return problems;
-  const text = String(html).replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+  // 표는 뺀다. 표 행은 엔진 값을 그대로 찍은 것이고, 여러 행이 한 줄로 이어져 다른 행의 일수와 금액이 짝지어진다.
+  const text = String(html).replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<table[\s\S]*?<\/table>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
   const dailies = [...engineNums].map(Number).filter((n) => Number.isFinite(n) && n >= 30000 && n <= 200000);
   if (!dailies.length) return problems;
-
   for (const sent of text.split(/(?<=[.!?])\s+/)) {
-    const days = [...sent.matchAll(/(\d{2,3})일(?![액치])/g)].map((m) => Number(m[1])).filter((d) => d >= 60 && d <= 400);
-    const wons = [...sent.matchAll(/([\d,]{9,})원/g)].map((m) => Number(m[1].replace(/,/g, ''))).filter((w) => w >= 5_000_000);
-    if (!days.length || !wons.length) continue;
-    for (const w of wons) {
-      // 곱셈(일액 × 일수 = 총액)뿐 아니라 나눗셈(총액 ÷ 일수 = 평균임금)도 정상이다.
-      // 평균임금 글의 "3개월 총액 9,000,000원을 92일로 나눠" 가 곱셈만 보다 오탐으로 걸렸다.
+    // 일수는 금액 **앞 40자 안**에 있는 것만 짝짓는다. 멀리 있는 일수는 다른 이야기다.
+    // "고용보험 180일", "합쳐 180일 이상" 은 요건 일수라 소정급여일수가 아니다. 퇴직금 글에서 오탐 3건.
+    // 엔진 값이면 무조건 넘기는 방식은 안 된다. 150일 총액을 120일 자리에 넣어도 엔진 값이라 통과했다 (돌연변이 2번 재발).
+    for (const wm of sent.matchAll(/([\d,]{9,})원/g)) {
+      const w = Number(wm[1].replace(/,/g, ''));
+      if (w < 5_000_000) continue;
+      const before = sent.slice(Math.max(0, wm.index - 40), wm.index);
+      const days = [...before.matchAll(/(\d{2,3})일(?![액치])/g)]
+        .filter((m) => !/(고용보험|가입|단위기간|피보험|합쳐|합산)\s*$/.test(before.slice(0, m.index)) && !/^\s*(이상|을 채)/.test(before.slice(m.index + m[0].length)))
+        .map((m) => Number(m[1])).filter((d) => d >= 60 && d <= 400);
+      if (!days.length) continue;
       const ok = days.some((d) => dailies.some((v) => Math.abs(v * d - w) <= 2 || Math.abs(w / d - v) <= 1));
       if (!ok) {
         const guess = dailies.map((v) => days.map((d) => `${v.toLocaleString('ko-KR')}×${d}=${(v * d).toLocaleString('ko-KR')}`)).flat().slice(0, 3);

@@ -3,8 +3,8 @@
 export const meta = {
   title: "종합부동산세 대상과 계산, 공시가 합산부터 1주택 공제까지",
   description: "가진 집의 공시가격을 합쳐 9억원, 1세대 1주택은 12억원을 넘으면 종합부동산세 대상이에요. 공시가 15억원인 한 채면 691,201원이에요. 합산 기준, 세율, 재산세액공제, 고령자와 장기보유 공제를 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/realestate/comprehensive-real-estate-tax-guide/",
   image: "https://moneydoc.kr/og/comprehensive-real-estate-tax-guide.png",
   imageAlt: "종합부동산세 계산. 공시가격 15억원인 1주택은 691,201원",

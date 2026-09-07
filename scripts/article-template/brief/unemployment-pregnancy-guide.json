@@ -1,0 +1,62 @@
+{
+  "slug": "unemployment-pregnancy-guide",
+  "keyword": "실업급여 임신 퇴사",
+  "calc": "government/unemployment-benefit",
+  "mustInclude": [
+    "임신",
+    "육아",
+    "수급기간"
+  ],
+  "queries": [
+    "실업급여 임신 퇴사",
+    "실업급여 육아 퇴사",
+    "실업급여 수급기간 연기",
+    "실업급여 임신 연기",
+    "실업급여 임신 출산",
+    "실업급여 육아휴직"
+  ],
+  "sources": [
+    {
+      "label": "고용보험법 (수급기간 연장 §48, 이직 사유 제한 §58, 상병급여 §63)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법",
+      "must": [
+        "제48조",
+        "제63조"
+      ]
+    },
+    {
+      "label": "고용보험법 시행령 (수급기간 연장 사유 §70)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법시행령",
+      "must": [
+        "제70조"
+      ]
+    },
+    {
+      "label": "고용보험법 시행규칙 (정당한 이직 사유 별표2, 수급기간 연장 신고)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법시행규칙",
+      "must": [
+        "제92조"
+      ]
+    },
+    {
+      "label": "정당한 이직 사유 (법제처 생활법령)",
+      "kind": "gov",
+      "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=722&ccfNo=2&cciNo=1&cnpClsNo=1",
+      "must": [
+        "임신"
+      ]
+    },
+    {
+      "label": "고용24 실업급여 제도 안내 (수급기간·신청 절차)",
+      "kind": "gov",
+      "url": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000411",
+      "must": [
+        "수급기간"
+      ],
+      "wait": 8000
+    }
+  ]
+}

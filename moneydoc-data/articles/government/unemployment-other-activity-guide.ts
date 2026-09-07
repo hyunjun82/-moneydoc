@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 구직외활동 인정 범위, 취업특강과 직업심리검사",
   description: "입사지원 말고도 인정되는 활동이 있어요. 정해진 훈련과정 수강, 고용센터 직업지도 프로그램 참여, 직업소개 지시에 응한 경우가 들어가요. 인정 범위와 안 되는 경우를 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-other-activity-guide/",
   image: "https://moneydoc.kr/og/unemployment-other-activity-guide.png",
   imageAlt: "실업급여 구직외활동 인정 범위와 인정되지 않는 경우",
@@ -83,7 +83,7 @@ export const html = `<h1>실업급여 구직외활동 인정 범위, 취업특�
 <p><span class="v2-ans">형식만 갖춘 활동은 제재로 이어져요.</span> 워크넷 입사지원을 했더라도 형식적 구직활동으로 두 번 이상 확인되면 워크넷 입사지원이 제한돼요. 활동을 채우는 것보다 실제로 하는 게 중요해요.</p>
 <div class="v2-tbl v2-text"><table><caption>활동을 신고하기 전에 확인할 것</caption><thead><tr><th>확인할 것</th><th>왜 필요한가요</th></tr></thead><tbody>
 <tr><th scope="row">이번 회차에 요구되는 활동</th><td data-l="왜 필요한가요">수급자격증과 안내 내용을 봐요</td></tr>
-<tr><th scope="row">훈련과정이 인정 대상인지</th><td data-l="왜 필요한가요">고용노동부 인정 과정이나 국가 지원 과정인지<a class="v2-go" href="https://www.work24.go.kr" target="_blank" rel="noopener">고용24 바로가기</a></td></tr>
+<tr><th scope="row">훈련과정이 인정 대상인지</th><td data-l="왜 필요한가요">고용노동부 인정 과정이나 국가 지원 과정인지<a class="v2-go" href="/unemployment/job-search/">구직활동 인정 기준</a></td></tr>
 <tr><th scope="row">출결 기록</th><td data-l="왜 필요한가요">출결 관리가 되는 과정이어야 해요</td></tr>
 <tr><th scope="row">프로그램 참여 확인 자료</th><td data-l="왜 필요한가요">신고할 때 설명하기 쉬워요</td></tr>
 <tr><th scope="row">구직활동 포함 여부</th><td data-l="왜 필요한가요">구직외활동만으로 되는 회차인지 확인해요</td></tr>

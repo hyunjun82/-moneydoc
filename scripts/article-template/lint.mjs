@@ -58,7 +58,8 @@ export function lint(a) {
   };
 
   // 머리
-  if (!a.title || a.title.length < 20 || a.title.length > 60) add('title', `길이 ${a.title?.length ?? 0} (20~60)`);
+  // 제목 상한 42자. 고리가 검토 지적을 제목에 덧붙여 49자 명사 나열로 늘렸다 (2026-09-06 startup). 라이브 최장은 39자.
+  if (!a.title || a.title.length < 20 || a.title.length > 42) add('title', `길이 ${a.title?.length ?? 0} (20~42)`);
   if (BAD_DASH.test(a.title)) add('title', '대시·파이프');
   if (!a.description || a.description.length < 80 || a.description.length > 200) add('description', `길이 ${a.description?.length ?? 0} (80~200)`);
   if (!a.intro || strip(a.intro).length < 80) add('intro', '서론 없음 또는 80자 미만');
@@ -68,6 +69,10 @@ export function lint(a) {
   // 답이 절차나 조건인 글에 버튼을 달면 갈 이유가 없는 곳으로 보내게 된다.
   if (a.calc && !a.calc.href?.startsWith('/')) add('calc', 'CTA 를 달았으면 내 사이트 링크여야 함');
   if (!a.answer?.quick?.some((q) => q.selected)) add('answer', '즉답 칩 selected 없음');
+  // 칩·카드의 큰 글씨는 숫자·명사·예/아니요다. "끊겨요 / 개업일부터" 처럼 서술어가 큰 글씨로 들어가면 뜻이 잘려 읽힌다 (2026-09-06 실측, startup).
+  const BIG_BAD = /(?<!아니)요$|[다죠네]$|나요/;
+  for (const q of a.answer?.quick ?? []) if (BIG_BAD.test(String(q.big ?? '').trim())) add('answer.quick', `칩 큰 글씨 "${q.big}" 는 서술어다. 숫자·명사·예/아니요만`);
+  if (BIG_BAD.test(String(a.hero?.card?.big ?? '').trim())) add('hero.card', `카드 큰 글씨 "${a.hero.card.big}" 는 서술어다. 숫자·명사·예/아니요만`);
   for (const b of a.answer?.boxes ?? []) checkText('answer.box', `${b.title}. ${b.text}`, { law: false });
   for (const [k, v] of a.keyPoints?.rows ?? []) checkText(`핵심콕콕 ${k}`, v, { law: false, len: 120 });
 

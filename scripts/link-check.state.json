@@ -1,0 +1,114 @@
+{
+  "https://www.ei.go.kr": {
+    "date": "2026-09-05",
+    "status": 200,
+    "title": "고용24",
+    "ok": true,
+    "why": ""
+  },
+  "https://www.4insure.or.kr/pbiz/main/main.do": {
+    "date": "2026-09-05",
+    "status": 200,
+    "title": "4대사회보험 정보연계센터",
+    "ok": true,
+    "why": ""
+  },
+  "https://labor.moel.go.kr/anmtDclrCntr/main.do": {
+    "date": "2026-09-05",
+    "status": 200,
+    "title": "고용노동부 노동포털",
+    "ok": true,
+    "why": ""
+  },
+  "https://www.work24.go.kr/cm/main.do": {
+    "date": "2026-09-06",
+    "status": 200,
+    "title": "고용24",
+    "ok": true,
+    "why": ""
+  },
+  "https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=13100000015": {
+    "date": "2026-09-05",
+    "status": 200,
+    "title": "�ֹε��ǥ �(�ʺ�) �߱� | �ο��ȳ� �� ��û | ����24",
+    "ok": true,
+    "why": ""
+  },
+  "https://efamily.scourt.go.kr/index.jsp": {
+    "date": "2026-09-05",
+    "status": 200,
+    "title": "대한민국 법원 전자가족관계등록시스템",
+    "ok": true,
+    "why": ""
+  },
+  "https://www.work24.go.kr/cm/f/c/0100/selectUnifySearch.do?topQuerySearchArea=all&topQueryData=%EC%9D%B4%EC%A7%81%ED%99%95%EC%9D%B8%EC%84%9C": {
+    "date": "2026-09-05",
+    "status": 200,
+    "title": "전체 | 통합검색",
+    "ok": true,
+    "why": ""
+  },
+  "https://www.gov.kr": {
+    "date": "2026-09-05",
+    "status": 200,
+    "title": "정부24",
+    "ok": true,
+    "why": ""
+  },
+  "https://www.work24.go.kr": {
+    "date": "2026-09-05",
+    "status": 200,
+    "title": "고용24",
+    "ok": true,
+    "why": ""
+  },
+  "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do": {
+    "date": "2026-09-05",
+    "status": 200,
+    "title": "모의계산 &lt; 민원서비스 | 국민건강보험",
+    "ok": true,
+    "why": ""
+  },
+  "https://www.nhis.or.kr/nhis/minwon/retrievePibuChwidukPsblYn.do": {
+    "date": "2026-09-05",
+    "status": 200,
+    "title": "피부양자 취득 가능 여부 조회 &lt; 모의계산 &lt; 민원서비스 | 국민건강보험",
+    "ok": true,
+    "why": ""
+  },
+  "https://www.moel.go.kr": {
+    "date": "2026-09-05",
+    "status": 200,
+    "title": "내일을 위한 고용노동부 - 고용노동부가 밝은 미래를 열어드립니다",
+    "ok": true,
+    "why": ""
+  },
+  "https://ecfs.scourt.go.kr": {
+    "date": "2026-09-05",
+    "status": 200,
+    "title": "",
+    "ok": true,
+    "why": ""
+  },
+  "https://help.scourt.go.kr/nm/min_1/min_1_7/index.html": {
+    "date": "2026-09-05",
+    "status": 0,
+    "title": "",
+    "ok": false,
+    "why": "연결 실패: fetch failed"
+  },
+  "https://www.nps.or.kr/": {
+    "date": "2026-09-05",
+    "status": 200,
+    "title": "국민연금공단",
+    "ok": true,
+    "why": ""
+  },
+  "https://labor.moel.go.kr/minwonApply/minwonApply.do?searchGubun=1": {
+    "date": "2026-09-06",
+    "status": 200,
+    "title": "고용노동부 노동포털",
+    "ok": true,
+    "why": ""
+  }
+}

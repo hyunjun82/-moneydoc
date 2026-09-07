@@ -3,7 +3,7 @@
 export const meta = {
   title: "2026년 기초생활수급 조건과 급여, 소득인정액부터 신청 서류까지",
   description: "1인 가구 소득인정액이 820,556원 이하면 생계급여를 받아요. 기준 중위소득, 급여 4종의 선정기준, 소득인정액 계산, 신청 서류를 한 번에 정리했어요.",
-  datePublished: "2026-09-02",
+  datePublished: "2026-09-03",
   dateModified: "2026-09-02",
   url: "https://moneydoc.kr/government/basic-livelihood-eligibility-guide/",
   image: "https://moneydoc.kr/og/basic-livelihood-eligibility-guide.png",

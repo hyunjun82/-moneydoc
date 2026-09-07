@@ -3,8 +3,8 @@
 export const meta = {
   title: "아르바이트 4대보험 가입 기준과 보험료, 주 15시간부터 퇴사 후까지",
   description: "한 달 60시간, 주 15시간이 아르바이트 4대보험 가입을 가르는 기준이에요. 주 20시간 일하면 월 보수 1,073,280원에 보험료 104,280원을 내요. 가입 기준과 시간별 보험료, 사업주 의무, 퇴사 후 건강보험까지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/tax/part-time-insurance-guide/",
   image: "https://moneydoc.kr/og/part-time-insurance-guide.png",
   imageAlt: "아르바이트 4대보험 가입 기준. 주 20시간이면 월 보수 1,073,280원에 보험료 104,280원",
@@ -99,10 +99,10 @@ export const html = `<h1>아르바이트 4대보험 가입 기준과 보험료, 
 </div>
 
 <h2 id="s4">알바를 그만두면 건강보험은 어떻게 되나요<small>지역가입자로 바뀌고, 임의계속가입을 쓸 수 있어요</small></h2>
-<p><span class="v2-ans">직장가입자 자격이 끝나 지역가입자로 바뀌어요.</span> 지역가입자 보험료는 소득뿐 아니라 재산과 자동차까지 보고 매겨서, 직장 다닐 때보다 오르는 경우가 있어요. 이럴 때 쓰는 게 임의계속가입이에요.</p>
+<p><span class="v2-ans">직장가입자 자격이 끝나 지역가입자로 바뀌어요.</span> 지역가입자 보험료는 소득뿐 아니라 재산까지 보고 매겨서, 직장 다닐 때보다 오르는 경우가 있어요. 이럴 때 쓰는 게 임의계속가입이에요.</p>
 <div class="v2-tbl v2-text"><table><caption>알바를 그만둔 뒤 건강보험 선택지</caption><thead><tr><th>방법</th><th>조건</th><th>보험료</th></tr></thead><tbody>
 <tr><th scope="row">가족의 피부양자로 들어가기</th><td data-l="조건">소득과 재산이 기준 아래일 것</td><td data-l="보험료">따로 안 냄</td></tr>
-<tr><th scope="row">지역가입자</th><td data-l="조건">피부양자가 안 되면 자동으로 전환</td><td data-l="보험료">소득·재산·자동차로 계산</td></tr>
+<tr><th scope="row">지역가입자</th><td data-l="조건">피부양자가 안 되면 자동으로 전환</td><td data-l="보험료">소득과 재산으로 계산</td></tr>
 <tr><th scope="row">임의계속가입</th><td data-l="조건">직장가입 기간이 1년 이상</td><td data-l="보험료">직장 다닐 때 내던 수준으로 최대 36개월</td></tr>
 </tbody></table></div>
 <p class="v2-fn">임의계속가입은 신청 뒤 첫 보험료를 납부기한부터 2개월 안에 내야 자격이 유지돼요.</p>
@@ -127,7 +127,7 @@ export const html = `<h1>아르바이트 4대보험 가입 기준과 보험료, 
 <details class="v2-faq"><summary><i>Q</i><span>주 20시간 알바면 보험료가 얼마인가요?</span></summary><div><i>A</i><p>2026년 최저임금 기준 월 보수 1,073,280원에 근로자 부담이 <b>104,280원</b>이에요. 회사는 산재보험까지 더해 114,480원을 내요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>사장님이 4대보험을 안 넣어 주는데 어떻게 하나요?</span></summary><div><i>A</i><p>가입은 법으로 정해진 의무라 합의로 뺄 수 없어요. 4대사회보험 정보연계센터에서 내 가입 이력을 확인하고, 누락됐다면 공단에 확인 청구를 하거나 고용노동청에 신고할 수 있어요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>알바도 퇴직금을 받나요?</span></summary><div><i>A</i><p>1년 이상 계속 일하고 4주 평균 주 15시간 이상이면 받아요. 4대보험 가입 여부와는 별개예요.</p></div></details>
-<details class="v2-faq"><summary><i>Q</i><span>알바를 그만두면 건강보험료가 오르나요?</span></summary><div><i>A</i><p>지역가입자로 바뀌면서 소득뿐 아니라 재산과 자동차까지 보고 계산해요. 직장가입 기간이 1년 이상이면 임의계속가입으로 직장 수준을 최대 36개월 유지할 수 있어요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>알바를 그만두면 건강보험료가 오르나요?</span></summary><div><i>A</i><p>지역가입자로 바뀌면서 소득뿐 아니라 재산까지 보고 계산해요. 직장가입 기간이 1년 이상이면 임의계속가입으로 직장 수준을 최대 36개월 유지할 수 있어요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>여러 곳에서 알바하면 4대보험은 어떻게 되나요?</span></summary><div><i>A</i><p>각 사업장에서 근무시간을 따로 따져요. 두 곳 모두 기준을 넘으면 양쪽에서 가입하고, 국민연금은 소득을 합쳐 상한 안에서 부과해요.</p></div></details>
 </div>
 <section class="v2-sum" aria-label="정리"><div class="v2-hd"><small>이 글 한 줄 정리</small><b>정리</b></div><ul>
@@ -191,7 +191,7 @@ export const faqLd = {
       "name": "알바를 그만두면 건강보험료가 오르나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "지역가입자로 바뀌면서 소득뿐 아니라 재산과 자동차까지 보고 계산해요. 직장가입 기간이 1년 이상이면 임의계속가입으로 직장 수준을 최대 36개월 유지할 수 있어요."
+        "text": "지역가입자로 바뀌면서 소득뿐 아니라 재산까지 보고 계산해요. 직장가입 기간이 1년 이상이면 임의계속가입으로 직장 수준을 최대 36개월 유지할 수 있어요."
       }
     },
     {
@@ -345,7 +345,7 @@ export const landing = {
     },
     {
       "q": "알바를 그만두면 건강보험료가 오르나요?",
-      "a": "지역가입자로 바뀌면서 소득뿐 아니라 재산과 자동차까지 보고 계산해요. 직장가입 기간이 1년 이상이면 임의계속가입으로 직장 수준을 최대 36개월 유지할 수 있어요."
+      "a": "지역가입자로 바뀌면서 소득뿐 아니라 재산까지 보고 계산해요. 직장가입 기간이 1년 이상이면 임의계속가입으로 직장 수준을 최대 36개월 유지할 수 있어요."
     },
     {
       "q": "여러 곳에서 알바하면 4대보험은 어떻게 되나요?",

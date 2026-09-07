@@ -1,0 +1,77 @@
+{
+  "slug": "unemployment-harassment-guide",
+  "keyword": "직장내 괴롭힘 실업급여",
+  "calc": "government/unemployment-benefit",
+  "mustInclude": [
+    "직장 내 괴롭힘",
+    "신고",
+    "증빙"
+  ],
+  "queries": [
+    "직장내 괴롭힘 실업급여",
+    "실업급여 직장내 괴롭힘",
+    "실업급여 직장내 괴롭힘 증빙",
+    "실업급여 직장내 괴롭힘 서류",
+    "실업급여 직장내 괴롭힘 증거",
+    "직장내 괴롭힘 신고",
+    "직장내 괴롭힘 요건",
+    "직장내 괴롭힘"
+  ],
+  "sources": [
+    {
+      "label": "근로기준법 (직장 내 괴롭힘의 금지 §76의2, 발생 시 조치 §76의3, 벌칙 §109, 과태료 §116)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/근로기준법",
+      "must": [
+        "제76조의2",
+        "제76조의3",
+        "3천만원",
+        "500만원"
+      ]
+    },
+    {
+      "label": "고용보험법 (이직 사유에 따른 수급자격의 제한 §58)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법",
+      "must": [
+        "제58조"
+      ]
+    },
+    {
+      "label": "정당한 이직 사유 (시행규칙 별표2, 법제처 생활법령)",
+      "kind": "gov",
+      "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=722&ccfNo=2&cciNo=1&cnpClsNo=1",
+      "must": [
+        "직장 내 괴롭힘",
+        "별표 2"
+      ]
+    },
+    {
+      "label": "고용24 이직확인서 제도 안내 (이직사유 기재·상실사유 구분코드·과태료)",
+      "kind": "gov",
+      "url": "https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&recordCountPerPage=10&systClId=SC00000349&systId=SI00000343",
+      "must": [
+        "개인사정으로 인한 자진퇴사",
+        "300만원"
+      ]
+    },
+    {
+      "label": "고용노동부 노동포털 익명신고센터 (신고 화면)",
+      "kind": "gov",
+      "url": "https://labor.moel.go.kr/anmtDclrCntr/main.do",
+      "must": [
+        "신고"
+      ],
+      "wait": 8000
+    },
+    {
+      "label": "고용노동부 노동포털 근로기준 분야 민원신청 (진정·청원 신청 화면)",
+      "kind": "gov",
+      "url": "https://labor.moel.go.kr/minwonApply/minwonApply.do?searchGubun=1",
+      "must": [
+        "진정"
+      ],
+      "wait": 8000
+    }
+  ]
+}

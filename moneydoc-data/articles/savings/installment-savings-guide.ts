@@ -3,8 +3,8 @@
 export const meta = {
   title: "적금 이자 계산과 세금, 단리 복리부터 만기 실수령액까지",
   description: "월 50만원을 24개월 동안 연 4% 적금에 넣으면 이자가 513,015원, 세금을 뗀 만기 실수령액은 12,434,011원이에요. 단리와 복리 차이, 이자소득세, 비과세 조건을 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/savings/installment-savings-guide/",
   image: "https://moneydoc.kr/og/installment-savings-guide.png",
   imageAlt: "적금 이자 계산. 월 50만원을 24개월 넣으면 만기에 12,434,011원",

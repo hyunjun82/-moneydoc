@@ -3,8 +3,8 @@
 export const meta = {
   title: "프리랜서 3.3% 원천징수와 환급, 경비율부터 5월 신고까지",
   description: "프리랜서가 300만원을 받으면 3.3%인 99,000원을 떼고 2,901,000원이 들어와요. 3.3%가 어떻게 나뉘는지, 단순경비율로 소득금액이 얼마가 되는지, 5월에 신고하면 얼마를 돌려받는지 표로 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/tax/freelancer-tax-guide/",
   image: "https://moneydoc.kr/og/freelancer-tax-guide.png",
   imageAlt: "프리랜서 3.3% 원천징수. 300만원을 받으면 99,000원을 떼고 2,901,000원이 들어와요",

@@ -3,8 +3,8 @@
 export const meta = {
   title: "보증금 반환 소송 절차와 양식, 내용증명부터 소장 접수까지",
   description: "계약이 끝났는데 보증금을 못 받았다면 내용증명, 임차권등기명령, 지급명령, 소송 순서로 움직여요. 이사 전에 무엇을 해야 하는지, 어디에 어떤 서류를 내는지, 비용과 기간은 어떤지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/law/deposit-return-suit-guide/",
   image: "https://moneydoc.kr/og/deposit-return-suit-guide.png",
   imageAlt: "보증금 반환 소송 절차. 내용증명과 임차권등기명령을 거쳐 지급명령과 소송으로 이어져요",

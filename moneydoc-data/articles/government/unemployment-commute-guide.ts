@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 통근곤란, 왕복 몇 시간이면 인정되나요",
   description: "통근 곤란은 정당한 이직 사유예요. 통상의 교통수단으로 사업장 왕복에 3시간 이상 걸리게 됐을 때를 말해요. 어떤 사정이 인정되고 무엇으로 증명하는지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-commute-guide/",
   image: "https://moneydoc.kr/og/unemployment-commute-guide.png",
   imageAlt: "통근 곤란 퇴사 실업급여 조건과 왕복 3시간 기준",

@@ -3,8 +3,8 @@
 export const meta = {
   title: "퇴직금 못 받았을 때 지급명령과 소장, 양식부터 제출까지",
   description: "퇴직금 14,673,913원을 못 받았다면 지급명령 인지대는 전자소송 기준 6,300원이에요. 지급명령 신청서와 소장 양식을 어디서 받는지, 인지대와 송달료는 얼마인지, 어느 법원에 내는지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/law/severance-claim-form-guide/",
   image: "https://moneydoc.kr/og/severance-claim-form-guide.png",
   imageAlt: "퇴직금 지급명령 인지대. 청구금액 14,673,913원이면 6,300원",

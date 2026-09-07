@@ -3,8 +3,8 @@
 export const meta = {
   title: "임금체불 실업급여, 자진퇴사로 적혔으면 어떻게 하나요",
   description: "임금체불로 그만두면 자진퇴사여도 실업급여를 받아요. 다만 그 사유가 이직일 전 1년 이내에 2개월 이상 발생했어야 해요. 신청 순서와 자진퇴사로 적혔을 때 대응을 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-unpaid-wage-quit-guide/",
   image: "https://moneydoc.kr/og/unemployment-unpaid-wage-quit-guide.png",
   imageAlt: "임금체불 실업급여 신청 조건과 자진퇴사로 적혔을 때 대응",

@@ -82,7 +82,14 @@ const planDir = path.join(cwd, 'scripts/title-system');
 const hubs = fs.existsSync(planDir)
   ? fs.readdirSync(planDir).map((f) => f.match(/^titles\.(.+)-v2\.json$/)?.[1]).filter(Boolean)
   : [];
-if (contentTouched) {
+// .claude/skip-gate 파일이 있으면 글 게이트만 건너뛴다. 계산기 검증(2번)은 그대로 돈다.
+// 사람이 화면으로 글을 다 읽었는데 검토 기록 파일이 아직 없을 때 쓴다.
+// 환경변수로 하면 안 된다 — 훅은 별도 프로세스로 떠서 명령줄 앞에 붙인 변수가 닿지 않는다(실측 2026-09-07).
+// 쓰고 나면 지운다. 남아 있으면 게이트가 계속 꺼진 채로 돈다.
+const SKIP = path.join(cwd, '.claude/skip-gate');
+const skipGate = fs.existsSync(SKIP);
+if (skipGate) process.stdout.write('[주의] .claude/skip-gate 가 있어 글 게이트를 건너뛴다 (계산기 검증은 그대로). 끝나면 지워라\n');
+if (contentTouched && !skipGate) {
   for (const hub of hubs) {
     try {
       exec(process.execPath, ['scripts/gate.mjs', hub, '--quick'], 120000);
@@ -102,4 +109,4 @@ try {
   block('verify-3way 실행 실패', tail((e.stdout || '') + (e.stderr || '') + (e.message || ''), 8));
 }
 
-process.stdout.write(`[allowed] ${contentTouched ? `gate PASS (${hubs.join(', ')})` : '글 변경 없음, 글 게이트 생략'} · verify-3way PASS\n`);
+process.stdout.write(`[allowed] ${!contentTouched ? '글 변경 없음, 글 게이트 생략' : skipGate ? '글 게이트 건너뜀(.claude/skip-gate)' : `gate PASS (${hubs.join(', ')})`} · verify-3way PASS\n`);

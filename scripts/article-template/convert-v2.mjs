@@ -98,8 +98,12 @@ function convert(a) {
   const style = /<style>([\s\S]*?)<\/style>/.exec(raw)?.[1];
   const mainRaw = /<main>([\s\S]*?)<\/main>/.exec(raw)?.[1];
   const script = [...raw.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => m[1]).join('\n');
-  const faqLdRaw = [...raw.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
-    .map((m) => JSON.parse(m[1])).find((j) => j['@type'] === 'FAQPage');
+  const lds = [...raw.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => JSON.parse(m[1]));
+  const faqLdRaw = lds.find((j) => j['@type'] === 'FAQPage');
+  // 발행일·수정일은 글마다 다르다. 상수로 박아 두면 모든 스포크가 같은 날 발행된 것으로 나간다 (적대 검토가 잡음).
+  const artLd = lds.find((j) => j['@type'] === 'Article') ?? {};
+  const datePublished = artLd.datePublished ?? '2026-09-02';
+  const dateModified = artLd.dateModified ?? datePublished;
   if (!title || !desc || !style || !mainRaw || !script || !faqLdRaw) throw new Error(`${a.file}: 추출 실패`);
 
   let body = mainRaw.replace(/<div class="crumb">[\s\S]*?<\/div>\s*/, '');       // 빵부스러기는 페이지가 담당
@@ -114,7 +118,7 @@ function convert(a) {
   fs.copyFileSync(ogSrc, path.join(ROOT, `public/og/${a.slug}.png`));
 
   return {
-    title, desc, hero,
+    title, desc, hero, datePublished, dateModified,
     html: prefixHtml(body).trim(),
     css: transformCss(style),
     js: prefixScript(script, classes).trim(),
@@ -128,8 +132,8 @@ function dataFile(a, c) {
 export const meta = {
   title: ${JSON.stringify(c.title)},
   description: ${JSON.stringify(c.desc)},
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: ${JSON.stringify(c.datePublished)},
+  dateModified: ${JSON.stringify(c.dateModified)},
   url: ${JSON.stringify(`https://moneydoc.kr/${a.cat}/${a.slug}/`)},
   image: ${JSON.stringify(`https://moneydoc.kr/og/${a.slug}.png`)},
   imageAlt: ${JSON.stringify(c.hero)},

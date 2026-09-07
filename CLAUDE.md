@@ -51,10 +51,10 @@ FAIL 우선. 🔴 산식·데이터 → engine.js / 🟡 정책 갱신 → JSON 
  1 제목·소제목  실측 검색어에서만. 계획서에 저장
  2 근거 수집    node scripts/article-template/evidence.mjs <slug>
  3 근거 읽기    주장마다 원문을 스펙의 claims 에 인용
- 4 글 작성      scripts/article-template/articles/<slug>.mjs
+ 4 글 작성      **WRITING.md 먼저** → scripts/article-template/articles/<slug>.mjs
  5 빌드         node scripts/article-template/build.mjs <slug>
- 6 독자 검토    검색어를 들고 페이지를 처음부터 끝까지 읽는다
- 7 검토 기록    node scripts/write-review.mjs <주제> <slug> --query= --titleKeyword= --hard= --removed= --deeper=
+ 6 적대 검토    **글을 안 쓴 검토자**(Agent)가 REVIEW.md 세 관점으로 읽는다. 글쓴이 자기 검토 금지
+ 7 검토 기록    node scripts/write-review.mjs <주제> <slug> --query= --titleKeyword= --hard= --removed= --deeper= --found=×3+
  8 게이트       node scripts/gate.mjs <주제>   PASS 여야 **다음 글**
 ```
 
@@ -65,7 +65,7 @@ FAIL 우선. 🔴 산식·데이터 → engine.js / 🟡 정책 갱신 → JSON 
 ## 7. 장치가 진짜 잡는지 (숫자로 댄다)
 
 ```bash
-node scripts/selftest/mutate.mjs  # 결함 48종 48/48   (gate 8/8 · hook 13/13 · build-checks 4/4)
+node scripts/selftest/mutate.mjs  # 결함 58종 58/58   (gate 8/8 · hook 13/13 · build-checks 4/4)
 ```
 
 검사기를 고쳤으면 여기부터. "작동한다"는 말 대신 숫자를 댄다.
@@ -74,5 +74,5 @@ node scripts/selftest/mutate.mjs  # 결함 48종 48/48   (gate 8/8 · hook 13/13
 ## 8. 푸시
 
 `verify-3way --all` PASS · `check-constants` PASS · 글 만졌으면 `gate.mjs` PASS ·
-검사기 고쳤으면 `mutate.mjs` 48/48 · `tsc --noEmit` 0 · 잘림 확인 →
+검사기 고쳤으면 `mutate.mjs` 58/58 · `tsc --noEmit` 0 · 잘림 확인 →
 push-changes.bat → Cloudflare 빌드 확인 → push 후 `verify-3way --all`(--no-gov 빼고) 재확인.

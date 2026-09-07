@@ -3,8 +3,8 @@
 export const meta = {
   title: "1주택 양도세 비과세 요건과 계산, 2년 보유부터 12억 초과분까지",
   description: "2년 이상 보유한 1주택을 12억원 이하로 팔면 양도세가 없어요. 15억원에 팔면 초과분에만 세금이 붙어 2,821,500원이에요. 비과세 요건, 12억 초과분 계산, 장기보유특별공제, 신고 기한을 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/realestate/transfer-tax-guide/",
   image: "https://moneydoc.kr/og/transfer-tax-guide.png",
   imageAlt: "1주택 양도세 비과세 요건. 2년 이상 보유한 집을 12억원 이하로 팔면 세금이 없어요",

@@ -3,7 +3,7 @@
 export const meta = {
   title: "2026년 기초연금 수급 조건과 금액, 선정기준액부터 신청까지",
   description: "65세 이상이고 소득인정액이 단독가구 2,470,000원 이하면 기초연금을 받아요. 단독가구는 월 349,700원, 부부가구는 559,520원이에요. 선정기준액, 소득인정액, 국민연금 연계 감액, 신청 방법을 정리했어요.",
-  datePublished: "2026-09-02",
+  datePublished: "2026-09-03",
   dateModified: "2026-09-02",
   url: "https://moneydoc.kr/government/basic-pension-guide/",
   image: "https://moneydoc.kr/og/basic-pension-guide.png",

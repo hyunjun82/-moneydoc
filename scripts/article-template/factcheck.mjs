@@ -59,6 +59,40 @@ export function factCheck({ html, evidence, engineNums, brief, claims }) {
     problems.push(`숫자 근거 없음: ${raw}${unit}  ← "…${at}…"`);
   }
 
+  // 1.5) 부과 항목어: "무엇이 계산에 들어가느냐" 를 정하는 낱말은 인용으로 뒷받침해야 한다.
+  // 왜. 건강보험료 글에서 지역보험료 부과 항목으로 '자동차' 를 썼는데 그렇게 말하는 조문을 대지 못했다.
+  // 숫자가 아니라 명사라 숫자 검사에 걸리지 않았고, 사람이 읽다가 겨우 잡았다 (돌연변이 50번).
+  //
+  // 두 번 좁힌다. 안 그러면 취득세 글의 '토지' 처럼 주제 자체인 낱말까지 잡아 오탐이 난다.
+  //   (1) 사전: 계산의 밑이 되는 항목으로 쓰이는 낱말만. 세목 이름(재산세 등)은 뺀다.
+  //   (2) 문맥: 그 낱말 둘레 30자 안에 '부과·산정·매기다·보험료·과세표준' 같은 말이 있을 때만 본다.
+  // 그러고도 남으면 claims 에 그 낱말이 든 인용이 있어야 한다. 즉 어느 조문이 그렇게 말하는지 대야 한다.
+  const ITEM_WORDS = ['자동차', '토지', '건물', '전세', '월세', '보증금', '예금', '적금', '주식', '펀드', '가상자산',
+    '금융소득', '연금소득', '이자소득', '배당소득', '사업소득', '임대소득', '기타소득'];
+  const CALC_CTX = /부과|산정|매겨|매기|반영|포함|들어가|잡혀|잡히|보험료|과세표준|점수/;
+  // 대칭으로 본다. 본문에서 "계산에 들어간다"는 문맥으로 썼다면, 근거에도 같은 문맥으로 나와야 한다.
+  // 근거 어딘가에 그 낱말이 있다는 것만으로는 안 된다. 미가입 글의 근거에 '자동차' 가 47회 나오지만
+  // 전부 화물자동차·자동차손해배상이지 보험료 부과 이야기가 아니었다.
+  const inCalcCtx = (src, w) => {
+    for (const m of src.matchAll(new RegExp(w, 'g'))) {
+      const at = src.slice(Math.max(0, m.index - 60), m.index + w.length + 60);
+      if (CALC_CTX.test(at)) return at.replace(/\s+/g, ' ').trim();
+    }
+    return null;
+  };
+  const quoted = (claims ?? []).map((c) => c.quote).join(' ');
+  // 부칙은 빼고 본다. 부칙의 적용례·경과조치에 남은 옛 항목이 지금도 쓰인다는 근거가 되면 안 된다.
+  // 실제로 '자동차에 대한 보험료부과점수' 는 2022년 부칙에만 남아 있고 지금 별표 4 는 재산만 본다.
+  const body = (t) => { const i = t.search(/부\s?칙\s*</); return i > 0 ? t.slice(0, i) : t; };
+  const evRaw = evidence.map((e) => body(e.text)).join('\n');
+  for (const w of ITEM_WORDS) {
+    if (quoted.includes(w)) continue;
+    const used = inCalcCtx(text, w);
+    if (!used) continue;
+    if (inCalcCtx(evRaw, w)) continue;
+    problems.push(`항목어 "${w}" 를 계산에 들어간다고 썼는데 근거에 그런 말이 없다  ← "…${used}…"`);
+  }
+
   // 2) 조문
   for (const c of new Set([...text.matchAll(/(제\d+조(?:의\d+)?|별표\s?\d+|§\s?\d+)/g)].map((x) => x[1].replace(/\s/g, '')))) {
     const n = c.replace(/^§/, '제').replace(/^제(\d+)$/, '제$1조');

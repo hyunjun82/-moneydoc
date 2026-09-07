@@ -1,0 +1,74 @@
+{
+  "slug": "unemployment-repeat-guide",
+  "keyword": "실업급여 반복수급",
+  "calc": "government/unemployment-benefit",
+  "mustInclude": [
+    "반복수급",
+    "감액",
+    "실업인정"
+  ],
+  "queries": [
+    "실업급여 반복수급",
+    "실업급여 감액 시행",
+    "반복수급자 기준",
+    "반복수급자 실업인정",
+    "실업급여 반복수급자 구직활동",
+    "실업급여 감액제도"
+  ],
+  "sources": [
+    {
+      "label": "고용보험법 (수급요건 §40, 실업인정 §44, 소정급여일수 §50, 반환 §62)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법",
+      "must": [
+        "제40조",
+        "제44조",
+        "제50조"
+      ]
+    },
+    {
+      "label": "고용보험법 시행규칙 (재취업활동 §87, 취업 인정 §92)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법시행규칙",
+      "must": [
+        "제87조"
+      ]
+    },
+    {
+      "label": "실업인정 및 재취업지원 규정 (고용노동부 예규) — 반복수급자 실업인정 기준",
+      "kind": "gov",
+      "url": "https://www.law.go.kr/행정규칙/실업인정및재취업지원규정",
+      "must": [
+        "반복"
+      ],
+      "wait": 9000
+    },
+    {
+      "label": "정책브리핑: 실업급여 지급 요건 강화 (반복·장기 수급자 재취업활동 기준)",
+      "kind": "gov",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148902998",
+      "must": [
+        "반복 수급자"
+      ],
+      "wait": 8000
+    },
+    {
+      "label": "고용노동부 인터넷상담: 회차별 재취업활동 횟수 (반복·장기수급자 강화)",
+      "kind": "gov",
+      "url": "https://www.moel.go.kr/minwon/fastcounsel/fastcounselView.do?inetDcssMngId=202308011332502681000",
+      "must": [
+        "반복수급자"
+      ],
+      "wait": 8000
+    },
+    {
+      "label": "고용24 실업급여 제도 안내 (반복·장기수급자 담당자 안내, 온라인 실업인정)",
+      "kind": "gov",
+      "url": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000411",
+      "must": [
+        "반복수급자"
+      ],
+      "wait": 8000
+    }
+  ]
+}

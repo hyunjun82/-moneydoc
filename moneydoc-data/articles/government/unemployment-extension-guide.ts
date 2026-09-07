@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 연장 조건, 개별연장급여와 훈련연장급여 차이",
   description: "소정급여일수를 다 써도 연장급여를 받을 수 있는 경우가 있어요. 훈련연장급여는 일액의 100퍼센트, 개별연장급여와 특별연장급여는 70퍼센트예요. 조건과 차이를 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-extension-guide/",
   image: "https://moneydoc.kr/og/unemployment-extension-guide.png",
   imageAlt: "실업급여 연장급여 세 종류와 조건",

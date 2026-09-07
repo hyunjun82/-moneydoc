@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 주 15시간 미만, 초단시간 근로자도 되나요",
   description: "주 15시간 미만이면 고용보험에서 원칙적으로 빠져요. 다만 그 사업에서 3개월 이상 계속 일했다면 적용 대상이에요. 기준기간이 24개월로 늘어나는 특례까지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-short-hours-guide/",
   image: "https://moneydoc.kr/og/unemployment-short-hours-guide.png",
   imageAlt: "주 15시간 미만 초단시간 근로자의 고용보험 적용 기준",
@@ -48,7 +48,7 @@ export const html = `<h1>실업급여 주 15시간 미만, 초단시간 근로�
   <div class="v2-q"><div><b>고용보험 이력에 그 회사가 잡혀 있나요</b><small>고용보험 홈페이지에서 확인해요</small></div><div class="v2-sw"><button type="button" data-q="2" data-v="1" aria-pressed="true">예</button><button type="button" data-q="2" data-v="0" aria-pressed="false">아니오</button></div></div>
   <div class="v2-verdict v2-ok" data-verdict><b>적용 대상이에요</b>고용보험에 들어가고, 나머지 조건을 채우면 실업급여를 신청할 수 있어요.</div>
 </div>
-<div class="v2-note"><b>이력부터 확인하세요</b> 짧게 일한 자리는 신고가 빠져 있는 경우가 많아요. 고용보험 홈페이지에서 먼저 보세요. <a class="v2-go" href="https://www.ei.go.kr" target="_blank" rel="noopener">고용보험 홈페이지</a></div>
+<div class="v2-note"><b>이력부터 확인하세요</b> 짧게 일한 자리는 신고가 빠져 있는 경우가 많아요. 신고가 없으면 근로자가 직접 확인청구를 할 수 있어요. <a class="v2-go" href="/unemployment/no-insurance/">미가입일 때 확인청구</a></div>
 
 <h2 id="s2">초단시간 근로자가 되는 경우는 언제인가요<small>시간과 계속 근로 기간으로 갈려요</small></h2>
 <p class="v2-lead"><span class="v2-ans">1개월 소정근로시간이 60시간 미만이거나 1주 소정근로시간이 15시간 미만이면 초단시간으로 보고 원칙적으로 적용에서 빼요.</span> 둘 중 하나만 해당해도 그렇게 봐요. 실제로 일한 시간이 아니라 근로계약에서 정한 시간이 기준이에요.</p>

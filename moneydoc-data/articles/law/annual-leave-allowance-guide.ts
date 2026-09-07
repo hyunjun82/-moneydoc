@@ -3,8 +3,8 @@
 export const meta = {
   title: "연차수당 계산과 발생 기준, 입사 1년부터 미사용 수당 지급까지",
   description: "월 통상임금 300만원이면 연차 하루가 114,832원이라 5일을 못 쓰면 574,160원을 받아요. 연차가 며칠 생기는지, 1년 미만은 어떻게 되는지, 미사용 수당은 언제 받는지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/law/annual-leave-allowance-guide/",
   image: "https://moneydoc.kr/og/annual-leave-allowance-guide.png",
   imageAlt: "연차수당 계산. 월 통상임금 300만원이면 하루 114,832원, 5일이면 574,160원",

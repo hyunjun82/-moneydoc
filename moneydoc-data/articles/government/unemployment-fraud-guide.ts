@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 부정수급 처벌, 반환 금액과 추가징수 기준",
   description: "실업급여 부정수급이 적발되면 받은 돈을 돌려주고 그 금액의 2배 이하를 더 냅니다. 회사와 짜고 했으면 5배 이하까지 가요. 제재가 어떻게 쌓이는지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-fraud-guide/",
   image: "https://moneydoc.kr/og/unemployment-fraud-guide.png",
   imageAlt: "실업급여 부정수급 처벌과 반환, 추가징수 기준",

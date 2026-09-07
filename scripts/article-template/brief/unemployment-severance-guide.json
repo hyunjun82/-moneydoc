@@ -1,0 +1,56 @@
+{
+  "slug": "unemployment-severance-guide",
+  "keyword": "실업급여 퇴직금",
+  "calc": "government/unemployment-benefit",
+  "mustInclude": [
+    "퇴직금",
+    "같이",
+    "신고"
+  ],
+  "queries": [
+    "실업급여 퇴직금",
+    "실업급여 퇴직금 같이",
+    "실업급여 퇴직금 신고",
+    "실업급여 퇴직금 차이",
+    "실업급여 퇴직금 수령",
+    "퇴직금 지급기한"
+  ],
+  "sources": [
+    {
+      "label": "고용보험법 (수급요건 §40, 임금일액 §45, 근로 신고 §47, 반환·제재 §61·62)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법",
+      "must": [
+        "제40조",
+        "제45조",
+        "제47조"
+      ]
+    },
+    {
+      "label": "근로자퇴직급여 보장법 (설정 §4, 지급 §8·§9)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/근로자퇴직급여보장법",
+      "must": [
+        "제4조",
+        "제9조"
+      ]
+    },
+    {
+      "label": "근로기준법 (평균임금 §2)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/근로기준법",
+      "must": [
+        "제2조"
+      ]
+    },
+    {
+      "label": "소득세법 (퇴직소득 §22, 비과세 §12)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법",
+      "must": [
+        "제22조",
+        "제12조"
+      ]
+    }
+  ]
+}

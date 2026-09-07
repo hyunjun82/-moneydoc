@@ -3,8 +3,8 @@
 export const meta = {
   title: "퇴직금 계산 방법과 지급기준, 평균임금부터 14일 지급기한까지",
   description: "월급 300만원으로 5년 일하고 그만두면 퇴직금은 14,673,913원이에요. 퇴직금은 평균임금 기준이라 상여금과 연차수당까지 들어가요. 계산 순서, 근속별·월급별 금액표, 14일 지급기한, 못 받았을 때 신고 방법을 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/law/severance-pay-guide/",
   image: "https://moneydoc.kr/og/severance-pay-guide.png",
   imageAlt: "퇴직금 계산 방법. 월급 300만원으로 5년 일하면 퇴직금 14,673,913원",

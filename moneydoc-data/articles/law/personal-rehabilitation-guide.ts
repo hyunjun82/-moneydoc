@@ -3,8 +3,8 @@
 export const meta = {
   title: "개인회생 신청 조건과 절차, 준비 서류부터 변제 계획까지",
   description: "개인회생은 소득이 있는 사람이 3년 동안 갚고 나머지를 면책받는 제도예요. 신청 자격과 채무 한도, 변제금이 정해지는 방식, 절차와 기간, 준비할 서류를 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/law/personal-rehabilitation-guide/",
   image: "https://moneydoc.kr/og/personal-rehabilitation-guide.png",
   imageAlt: "개인회생 신청 조건과 절차. 원칙적으로 3년 동안 변제하고 나머지를 면책받아요",

@@ -3,8 +3,8 @@
 export const meta = {
   title: "고용보험 미가입 실업급여 받는 법, 소급 가입과 확인청구",
   description: "회사가 고용보험을 신고하지 않았어도 실업급여를 포기할 필요는 없어요. 가입 신고는 사업주 의무라서, 근로자가 확인청구를 하면 소급해서 자격을 인정받을 수 있어요. 절차와 한도를 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-no-insurance-guide/",
   image: "https://moneydoc.kr/og/unemployment-no-insurance-guide.png",
   imageAlt: "고용보험 미가입 시 확인청구로 소급 가입. 한도 3년",
@@ -42,7 +42,7 @@ export const html = `<h1>고용보험 미가입 실업급여 받는 법, 소급 
 
 <h2 id="s1">고용보험 미가입이면 실업급여를 못 받나요<small>신고가 안 된 것이라 되살릴 수 있어요</small></h2>
 <p class="v2-lead"><span class="v2-ans">받을 수 있어요. 고용보험은 요건을 갖추면 당연히 적용되고, 신고는 사업주가 해야 할 일이라서 안 했다고 자격이 없어지지 않아요.</span> 법은 근로자를 고용하는 사업에 고용보험을 적용한다고 정하고, 자격 취득 신고를 사업주 의무로 두었어요. 회사가 안 했다면 그건 회사의 미이행이지 근로자의 자격 문제가 아니에요.</p>
-<p><span class="v2-ans">다만 그대로 두면 기록이 없어서 심사가 막혀요.</span> 고용센터는 신고된 이력으로 판단해요. 그래서 기록을 만들어 두는 절차가 필요하고, 그게 확인청구예요. <a class="v2-go" href="/unemployment/eligibility/">수급자격 4가지 조건</a></p>
+<p><span class="v2-ans">다만 그대로 두면 기록이 없어서 심사가 막혀요.</span> 고용센터는 신고된 이력으로 판단해요. 그래서 기록을 만들어 두는 절차가 필요하고, 그게 확인청구예요.</p>
 <div class="v2-note"><b>적용 제외인 경우는 다릅니다</b> 1개월 소정근로시간이 60시간 미만이거나 1주 15시간 미만이면 원칙적으로 적용에서 빠져요. 다만 3개월 이상 계속 일했으면 적용 대상이에요.</div>
 
 <h2 id="s2">피보험자격 확인청구는 어떻게 하나요<small>근로자가 직접 고용센터에 청구해요</small></h2>
@@ -80,7 +80,7 @@ export const html = `<h1>고용보험 미가입 실업급여 받는 법, 소급 
 <tr><th scope="row">일한 기간을 줄여서 말함</th><td data-l="준비할 자료">입금 내역의 첫 달과 마지막 달</td></tr>
 <tr><th scope="row">확인 결과가 불리하게 나옴</th><td data-l="준비할 자료">그 결정에 대해 심사를 청구할 수 있어요</td></tr>
 </tbody></table></div>
-<div class="v2-note"><b>이력은 여기서 확인해요</b> 지금 어떤 회사가 신고되어 있는지는 고용보험 홈페이지에서 볼 수 있어요. <a class="v2-go" href="https://www.ei.go.kr" target="_blank" rel="noopener">고용보험 홈페이지</a></div>
+<div class="v2-note"><b>이력은 여기서 확인해요</b> 지금 어떤 회사가 신고되어 있는지, 회사별로 언제 들어가고 언제 빠졌는지 이력으로 볼 수 있어요. <a class="v2-go" href="/unemployment/merge-periods/">이력 읽는 법</a></div>
 
 <h2 id="faq">자주 묻는 질문</h2>
 <div class="v2-faqs">

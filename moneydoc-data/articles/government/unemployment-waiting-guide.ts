@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 대기기간, 7일 동안 왜 안 나오나요",
   description: "실업 신고일부터 7일은 대기기간이라 급여가 나오지 않아요. 그래서 첫 회차는 7일치예요. 대기기간이 없는 경우와 이 기간에 일했을 때까지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-waiting-guide/",
   image: "https://moneydoc.kr/og/unemployment-waiting-guide.png",
   imageAlt: "실업급여 대기기간 7일과 첫 회차 7일치",

@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 평균임금 산정 방법, 어떤 수당이 들어가나요",
   description: "실업급여의 기준은 월급이 아니라 평균임금이에요. 이직일 이전 3개월간 임금 총액을 그 기간 총 일수로 나눠요. 어떤 수당이 들어가고 어떤 기간이 빠지는지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-average-wage-guide/",
   image: "https://moneydoc.kr/og/unemployment-average-wage-guide.png",
   imageAlt: "실업급여 평균임금 산정 방법과 포함되는 수당",

@@ -3,8 +3,8 @@
 export const meta = {
   title: "내용증명 작성 방법과 양식, 임대차부터 채권 회수까지",
   description: "내용증명은 언제 어떤 내용을 보냈는지 우체국이 증명해 주는 우편이에요. 무엇을 적어야 하는지, 세 통을 어떻게 준비하는지, 어떤 힘이 있는지, 보증금 반환과 임금 청구에 어떻게 쓰는지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/law/certified-mail-guide/",
   image: "https://moneydoc.kr/og/certified-mail-guide.png",
   imageAlt: "내용증명 작성 방법. 원본 한 통과 등본 두 통을 우체국에 제출해요",

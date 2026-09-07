@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 신청기간, 퇴사 후 언제까지 받나요",
   description: "실업급여는 이직일 다음 날부터 12개월 안에 받아야 해요. 소정급여일수가 남아 있어도 이 기간이 지나면 끝나요. 늦게 신청했을 때 얼마를 못 받는지 계산했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-deadline-guide/",
   image: "https://moneydoc.kr/og/unemployment-deadline-guide.png",
   imageAlt: "실업급여 신청기간 12개월과 늦게 신청했을 때 손해",

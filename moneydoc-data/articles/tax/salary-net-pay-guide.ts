@@ -3,8 +3,8 @@
 export const meta = {
   title: "2026년 연봉 실수령액 표, 연봉 3000부터 1억까지 월급 얼마 받나요",
   description: "연봉 5,000만원이면 2026년 월 실수령액은 3,522,740원이에요. 국세청 간이세액표 원본으로 계산해 홈택스 조회값과 원 단위까지 같은 실수령액 표(2,400만원부터 2억까지), 4대보험 요율, 실수령액 늘리는 법, 명세서와 다른 이유를 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/tax/salary-net-pay-guide/",
   image: "https://moneydoc.kr/og/salary-net-pay-guide.png",
   imageAlt: "2026년 연봉 실수령액 표. 연봉 5,000만원이면 월 3,522,740원, 1억이면 월 6,471,100원",

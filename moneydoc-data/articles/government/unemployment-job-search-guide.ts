@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 구직활동 인정 기준과 증빙 남기는 법",
   description: "실업급여 구직활동은 지원하고 끝이 아니라 인정을 받아야 해요. 같은 회사 반복 지원이나 탐문만 하는 경우는 인정되지 않아요. 인정되는 활동과 안 되는 활동, 증빙 만드는 법을 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-job-search-guide/",
   image: "https://moneydoc.kr/og/unemployment-job-search-guide.png",
   imageAlt: "실업급여 구직활동 인정 기준과 인정되지 않는 활동",

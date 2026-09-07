@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 일수, 나이와 가입기간별로 며칠 받나요",
   description: "실업급여를 며칠 받는지는 나이와 고용보험 가입기간 두 가지로 정해져요. 가장 짧으면 120일, 가장 길면 270일이에요. 구간별 표와 50세 기준으로 갈리는 지점을 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-days-guide/",
   image: "https://moneydoc.kr/og/unemployment-days-guide.png",
   imageAlt: "실업급여 소정급여일수 표. 가장 짧으면 120일, 가장 길면 270일",

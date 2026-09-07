@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 조기재취업수당 조건과 신청 방법",
   description: "조기재취업수당은 소정급여일수를 2분의 1 이상 남기고 재취업했을 때 받아요. 금액은 구직급여일액에 미지급일수의 2분의 1을 곱한 금액이에요. 조건과 신청 시기를 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-early-reemployment-guide/",
   image: "https://moneydoc.kr/og/unemployment-early-reemployment-guide.png",
   imageAlt: "조기재취업수당 조건과 금액 계산",

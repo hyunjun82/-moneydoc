@@ -148,7 +148,7 @@ export function render(a) {
 <meta name="robots" content="max-image-preview:large">
 <meta property="og:image" content="/og/${a.slug}.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <script type="application/ld+json">${JSON.stringify(faqLd)}</script>
-<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: a.title, image: [`https://moneydoc.kr/og/${a.slug}.png`], datePublished: a.datePublished, dateModified: a.verified, author: { '@type': 'Organization', name: 'MoneyDoc 편집팀' } })}</script>
+<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: a.title, image: [`https://moneydoc.kr/og/${a.slug}.png`], datePublished: a.datePublished, dateModified: [a.datePublished, a.verified].sort().pop(), author: { '@type': 'Organization', name: 'MoneyDoc 편집팀' } })}</script>
 <style>${CSS}</style></head><body>
 <div class="top"><div class="in"><i>$</i>MoneyDoc</div></div>
 <main>

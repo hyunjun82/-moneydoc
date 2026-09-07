@@ -3,8 +3,8 @@
 export const meta = {
   title: "자발적 퇴사 실업급여 인정 사유와 증빙 서류",
   description: "자발적 퇴사라도 시행규칙 별표 2의 인정 사유에 해당하면 실업급여를 받아요. 임금체불, 직장 내 괴롭힘, 통근 곤란, 질병, 육아 등을 사유별 증빙 서류와 함께 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-voluntary-guide/",
   image: "https://moneydoc.kr/og/unemployment-voluntary-guide.png",
   imageAlt: "자발적 퇴사 실업급여 인정 사유 17가지와 증빙 서류",

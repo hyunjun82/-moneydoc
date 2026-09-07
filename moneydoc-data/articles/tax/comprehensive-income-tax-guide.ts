@@ -3,8 +3,8 @@
 export const meta = {
   title: "종합소득세 세율과 계산 방법, 신고 대상부터 5월 홈택스 신고까지",
   description: "종합소득금액 5,000만원이면 종합소득세는 지방소득세까지 6,539,500원이에요. 세율 구간표, 과세표준 계산 순서, 신고 대상 판정, 홈택스 신고 순서, 신고를 놓쳤을 때 가산세까지 한 번에 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/tax/comprehensive-income-tax-guide/",
   image: "https://moneydoc.kr/og/comprehensive-income-tax-guide.png",
   imageAlt: "종합소득세 세율과 계산 방법. 종합소득금액 5,000만원이면 세금 6,539,500원",

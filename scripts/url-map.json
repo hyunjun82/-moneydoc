@@ -108,6 +108,16 @@
     "government/unemployment-no-insurance-guide": "unemployment/no-insurance",
     "government/unemployment-short-hours-guide": "unemployment/short-hours",
     "government/unemployment-elderly-guide": "unemployment/elderly",
-    "government/unemployment-sickness-guide": "unemployment/sickness"
+    "government/unemployment-sickness-guide": "unemployment/sickness",
+    "government/unemployment-health-insurance-guide": "unemployment/health-insurance",
+    "government/unemployment-severance-guide": "unemployment/severance",
+    "government/unemployment-pension-credit-guide": "unemployment/pension-credit",
+    "government/unemployment-freelance-guide": "unemployment/freelance",
+    "government/unemployment-repeat-guide": "unemployment/repeat",
+    "government/unemployment-report-job-guide": "unemployment/report-job",
+    "government/unemployment-startup-guide": "unemployment/startup",
+    "government/unemployment-harassment-guide": "unemployment/harassment",
+    "government/unemployment-last-round-guide": "unemployment/last-round",
+    "government/unemployment-job-support-guide": "unemployment/job-support"
   }
 }

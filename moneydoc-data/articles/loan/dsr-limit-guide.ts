@@ -3,7 +3,7 @@
 export const meta = {
   title: "스트레스 DSR 계산과 대출 한도, 3단계 적용부터 주담대 한도까지",
   description: "연소득 5,000만원이면 30년 원리금균등 기준 대출 한도가 293,536,331원이에요. 스트레스 금리 1.5%가 붙어 55,565,806원이 줄어든 금액이에요. DSR 계산법, 단계별 가산금리, 소득과 기간별 한도표를 정리했어요.",
-  datePublished: "2026-09-02",
+  datePublished: "2026-09-03",
   dateModified: "2026-09-02",
   url: "https://moneydoc.kr/loan/dsr-limit-guide/",
   image: "https://moneydoc.kr/og/dsr-limit-guide.png",

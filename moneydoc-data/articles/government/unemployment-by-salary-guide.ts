@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 금액, 월급별 하루 얼마 받나요",
   description: "월급별로 실업급여 하루 얼마를 받는지 표로 정리했어요. 월 180만원이든 600만원이든 하루 차이는 2,052원뿐이에요. 상한과 하한에 걸리는 지점을 함께 봤어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-by-salary-guide/",
   image: "https://moneydoc.kr/og/unemployment-by-salary-guide.png",
   imageAlt: "월급별 실업급여 1일 수령액 표. 월 300만원이면 하루 66,048원",

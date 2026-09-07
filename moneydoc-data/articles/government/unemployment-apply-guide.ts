@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 신청 방법, 서류 확인부터 실업인정까지",
   description: "실업급여 신청은 5단계예요. 회사 서류 확인, 고용24 구직신청, 수급자격 신청자 교육, 고용센터 출석, 실업인정 순서로 진행해요. 각 단계에서 무엇을 하는지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-apply-guide/",
   image: "https://moneydoc.kr/og/unemployment-apply-guide.png",
   imageAlt: "실업급여 신청 방법 5단계. 고용24 구직신청부터 실업인정까지",
@@ -52,7 +52,7 @@ export const html = `<h1>실업급여 신청 방법, 서류 확인부터 실업�
 
 <h2 id="s2">1단계, 회사 서류는 무엇을 확인하나요<small>상실 신고와 이직확인서</small></h2>
 <p class="v2-lead"><span class="v2-ans">고용보험 상실 신고와 이직확인서가 처리됐는지 확인해요.</span> 둘 다 회사가 고용센터에 내는 서류예요. 상실 신고가 되어야 절차가 시작되고, 이직확인서에 적힌 이직 사유와 평균임금이 심사의 출발점이 돼요. 처리 여부는 고용보험 홈페이지에서 볼 수 있어요.</p>
-<p><span class="v2-ans">들고 갈 서류는 신분증과 본인 명의 계좌뿐이에요.</span> 나머지는 회사가 내거나 온라인으로 처리돼요. <a class="v2-go" href="/unemployment/documents/">신청 준비물 목록</a></p>
+<p><span class="v2-ans">들고 갈 서류는 신분증과 본인 명의 계좌뿐이에요.</span> 나머지는 회사가 내거나 온라인으로 처리돼요. 퇴사 사유에 따라 더 챙길 자료가 있는지는 준비물 목록에서 확인하세요. <a class="v2-go" href="/unemployment/documents/">신청 준비물 목록</a></p>
 <p><span class="v2-ans">본인이 발급을 요청할 수 있어요.</span> 법은 구직급여를 받으려는 사람이 이직확인서 발급을 요청할 수 있다고 정해요. 퇴사할 때 미리 요청해 두면 다음 단계가 빨라져요.</p>
 <div class="v2-note"><b>서류가 늦어도 신청은 하세요</b> 신고일을 기준으로 대기기간과 인정일이 정해져요. 서류를 기다리다 신고가 늦어지면 그만큼 못 받는 날이 생겨요.</div>
 

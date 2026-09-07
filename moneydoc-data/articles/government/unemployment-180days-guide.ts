@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 180일, 주 며칠 일해야 채워지나요",
   description: "실업급여 180일은 다닌 날이 아니라 보수가 나간 날을 세요. 유급 주휴일이 들어가서 주 5일 근무자는 30주, 달력으로 6.9개월이면 채워져요. 근무 형태별로 얼마나 걸리는지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-180days-guide/",
   image: "https://moneydoc.kr/og/unemployment-180days-guide.png",
   imageAlt: "실업급여 180일 계산법. 주 5일 근무자는 6.9개월",

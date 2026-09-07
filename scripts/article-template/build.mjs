@@ -23,6 +23,7 @@ import { render, ROOT } from './render.mjs';
 import { lint } from './lint.mjs';
 import { factCheck, collectEngineNums } from './factcheck.mjs';
 import { answerCheck, arithmeticCheck, renderAccidentCheck } from './answer-check.mjs';
+import { proseStyleCheck } from './style-check.mjs';
 import { faqAndH2Check } from './faq-h2-check.mjs';
 import { ARTICLES } from './articles/index.mjs';
 
@@ -95,6 +96,13 @@ for (const slug of slugs) {
   // "쓴 것" 뿐 아니라 "안 쓴 것" 도 본다. 근거에 답이 있는데 회피했는지, 일수와 총액이 맞는지.
   // 이 두 검사가 없어서 회피 답 4편과 계산 오류 1편이 라이브로 나갔다 (2026-09-04).
   fc.problems.push(...answerCheck({ html, evidence }), ...arithmeticCheck({ html, engineNums: eng.nums, enabled: brief.calc === 'government/unemployment-benefit' }), ...renderAccidentCheck({ html }), ...faqAndH2Check({ html }));
+  // 되풀이·문맥·버튼 검사. 검토자가 매번 잡던 판단을 글자 비교로 옮겼다 (2026-09-05).
+  // 도입일 이후 글은 막고, 그 전 글은 경고만 낸다 (33편을 한꺼번에 막지 않는다).
+  {
+    const ps = proseStyleCheck({ html });
+    if ((a.datePublished ?? '') >= '2026-09-05') fc.problems.push(...ps);
+    else for (const w of ps) console.warn(`   ~ ${w}`);
+  }
   if (fc.problems.length) {
     console.error(`✗ ${slug}: 사실 대조 FAIL (${fc.problems.length})`);
     for (const p of fc.problems) console.error(`   - ${p}`);

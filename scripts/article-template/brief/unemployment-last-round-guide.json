@@ -1,0 +1,13 @@
+{
+  "slug": "unemployment-last-round-guide",
+  "keyword": "실업급여 마지막 회차와 남은 일수 정산",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "마지막 회차",
+    "남은 일수",
+    "정산"
+  ],
+  "queries": [],
+  "sources": []
+}

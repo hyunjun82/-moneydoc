@@ -1,0 +1,55 @@
+{
+  "slug": "unemployment-health-insurance-guide",
+  "keyword": "실업급여 건강보험",
+  "calc": "government/unemployment-benefit",
+  "mustInclude": [
+    "건강보험료",
+    "임의계속가입",
+    "신청"
+  ],
+  "queries": [
+    "실업급여 건강보험",
+    "퇴사 후 건강보험료",
+    "임의계속가입",
+    "임의계속가입 신청기한",
+    "지역가입자 전환",
+    "피부양자 등록",
+    "실업급여 소득"
+  ],
+  "sources": [
+    {
+      "label": "국민건강보험법 (임의계속가입자 §110, 피부양자 §5, 보험료 §69)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/국민건강보험법",
+      "must": [
+        "제110조",
+        "제5조",
+        "제69조"
+      ]
+    },
+    {
+      "label": "국민건강보험법 시행령 (임의계속가입 신청 §77, 보수월액 §34)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/국민건강보험법시행령",
+      "must": [
+        "제77조"
+      ]
+    },
+    {
+      "label": "국민건강보험법 시행규칙 (임의계속가입 신청서 §62)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/국민건강보험법시행규칙",
+      "must": [
+        "임의계속"
+      ]
+    },
+    {
+      "label": "소득세법 (실업급여 비과세 §12)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법",
+      "must": [
+        "제12조"
+      ]
+    }
+  ]
+}

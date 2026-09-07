@@ -3,8 +3,8 @@
 export const meta = {
   title: "2026년 4대보험 요율과 계산, 월급에서 떼는 돈부터 회사 부담까지",
   description: "월 보수 300만원이면 근로자가 내는 4대보험은 291,520원이고 회사는 320,020원을 내요. 국민연금 4.75%, 건강보험 3.595%, 장기요양, 고용보험 요율과 월급별 공제액 표, 4월 건강보험 정산까지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/tax/four-major-insurance-guide/",
   image: "https://moneydoc.kr/og/four-major-insurance-guide.png",
   imageAlt: "2026년 4대보험 요율. 월 보수 300만원이면 근로자 291,520원, 회사 320,020원",

@@ -3,8 +3,8 @@
 export const meta = {
   title: "집 살 때 취득세 세율과 계산, 생애최초 감면부터 다주택 중과까지",
   description: "5억원짜리 집을 처음 사면 취득세는 지방교육세까지 5,500,000원이에요. 6억과 9억을 기준으로 갈리는 세율, 집값별 세금표, 생애최초 200만원 공제, 8%와 12% 중과 기준, 60일 신고 기한을 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/realestate/acquisition-tax-guide/",
   image: "https://moneydoc.kr/og/acquisition-tax-guide.png",
   imageAlt: "집 살 때 취득세 계산. 5억원짜리 집을 처음 사면 5,500,000원",

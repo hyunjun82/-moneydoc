@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 계산, 한 달에 얼마씩 몇 개월 받나요",
   description: "실업급여 총액은 하루 지급액에 소정급여일수를 곱한 금액이에요. 월 300만원에 가입 3년이면 180일 동안 모두 11,888,640원이에요. 조건별 총액을 표로 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-total-guide/",
   image: "https://moneydoc.kr/og/unemployment-total-guide.png",
   imageAlt: "실업급여 총 수령액 계산. 월 300만원 가입 3년이면 11,888,640원",

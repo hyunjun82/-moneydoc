@@ -3,8 +3,8 @@
 export const meta = {
   title: "자동차세 계산과 연납 할인, 배기량별 세액부터 1월 신청까지",
   description: "배기량 1,999cc 승용차의 자동차세는 지방교육세까지 1년에 519,740원이에요. 배기량별 세액, 차령에 따른 경감, 연납 할인, 6월과 12월 납부 방법을 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/insurance/auto-tax-guide/",
   image: "https://moneydoc.kr/og/auto-tax-guide.png",
   imageAlt: "자동차세 계산. 1,999cc 승용차는 1년에 519,740원",

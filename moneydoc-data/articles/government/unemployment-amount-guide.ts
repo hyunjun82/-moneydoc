@@ -3,8 +3,8 @@
 export const meta = {
   title: "2026년 실업급여 상한액과 하한액, 하루 얼마까지 받나요",
   description: "2026년 실업급여는 하루 최대 68,100원, 최소 66,048원이에요. 둘 차이가 2,052원뿐이라 월급이 달라도 받는 금액은 비슷해요. 월급 구간별로 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-amount-guide/",
   image: "https://moneydoc.kr/og/unemployment-amount-guide.png",
   imageAlt: "2026년 실업급여 상한액 68,100원과 하한액 66,048원",

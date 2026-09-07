@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 알바 신고 방법, 안 하면 부정수급인가요",
   description: "실업급여를 받으면서 알바를 해도 되지만 신고해야 해요. 하루 대가가 구직급여일액 이상이거나 주 15시간 이상이면 취업으로 봐요. 신고 방법과 안 했을 때 생기는 일을 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-part-time-job-guide/",
   image: "https://moneydoc.kr/og/unemployment-part-time-job-guide.png",
   imageAlt: "실업급여 알바 신고 기준과 취업으로 보는 경우",

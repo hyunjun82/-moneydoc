@@ -1,0 +1,107 @@
+{
+  "slug": "unemployment-startup-guide",
+  "keyword": "실업급여 사업자등록",
+  "calc": "government/unemployment-benefit",
+  "mustInclude": [
+    "창업",
+    "사업자등록",
+    "신고"
+  ],
+  "queries": [
+    "실업급여 사업자등록",
+    "실업급여 사업자등록 신고",
+    "실업급여 사업자등록 휴업",
+    "실업급여 사업자등록증 있으면",
+    "실업급여 창업",
+    "실업급여 창업 준비"
+  ],
+  "sources": [
+    {
+      "label": "고용보험법 (수급요건 §40 취업에 영리 사업 포함, 취업 신고 §47, 반환·추가징수 §62, 조기재취업수당 §64)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법",
+      "must": [
+        "제40조",
+        "제47조",
+        "제62조",
+        "제64조"
+      ]
+    },
+    {
+      "label": "고용보험법 시행령 (조기재취업수당 지급기준 §84 사업 영위 12개월, 금액 §85, 청구 시기 §86)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법시행령",
+      "must": [
+        "제84조",
+        "제85조",
+        "제86조"
+      ]
+    },
+    {
+      "label": "고용보험법 시행규칙 (재취업활동 인정기준 §87 자영업 준비활동, 취업 인정기준 §92 사업자등록, 수당 청구 서류 §109)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법시행규칙",
+      "must": [
+        "제87조",
+        "제92조",
+        "제109조"
+      ]
+    },
+    {
+      "label": "실업인정 및 재취업지원규정 (고용노동부 예규, 취업의 정의·자영업준비활동·인정 안 되는 경우)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/행정규칙/실업인정및재취업지원규정",
+      "must": [
+        "자영업준비활동",
+        "현실적인 수입 유무를 불문"
+      ],
+      "wait": 9000
+    },
+    {
+      "label": "실업의 인정 (법제처 생활법령, 자영업 준비활동 증빙 자료·취업 인정 기준)",
+      "kind": "gov",
+      "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=722&ccfNo=2&cciNo=2&cnpClsNo=2",
+      "must": [
+        "자영업활동계획서",
+        "휴업신고"
+      ]
+    },
+    {
+      "label": "고용24 실업급여 제도 안내 (사업 시작 시 2개월 이내 신고, 전날까지 지급)",
+      "kind": "gov",
+      "url": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000411",
+      "must": [
+        "사업을 시작한"
+      ],
+      "wait": 8000
+    },
+    {
+      "label": "고용노동부 인터넷상담: 사업자등록이 있는 상태의 수급자격 예외 4가지와 증빙 (2024-01)",
+      "kind": "gov",
+      "url": "https://www.moel.go.kr/minwon/fastcounsel/fastcounselView.do?inetDcssMngId=202401081015236661000",
+      "must": [
+        "휴업사실증명원",
+        "7일 이내"
+      ],
+      "wait": 8000
+    },
+    {
+      "label": "고용노동부 인터넷상담: 퇴사 후 바로 개인사업자 등록 시 수급자격 (개업 연월일 기준, 2025-03)",
+      "kind": "gov",
+      "url": "https://www.moel.go.kr/minwon/fastcounsel/fastcounselView.do?inetDcssMngId=202503171011508280077",
+      "must": [
+        "개업 연월일"
+      ],
+      "wait": 8000
+    },
+    {
+      "label": "고용노동부 인터넷상담: 매출 적은 개인사업자 휴폐업과 수급자격, 법인 대표이사 취임일 (2024-08)",
+      "kind": "gov",
+      "url": "https://www.moel.go.kr/minwon/fastcounsel/fastcounselView.do?inetDcssMngId=202408060510533220351",
+      "must": [
+        "대표이사"
+      ],
+      "wait": 8000
+    }
+  ]
+}

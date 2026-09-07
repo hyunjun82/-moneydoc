@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 1차 실업인정, 교육 이수와 첫 구직활동 신고",
   description: "실업급여 1차 실업인정일은 실업신고일부터 14일이 되는 날이에요. 대기기간 7일을 빼면 첫 회차는 7일치가 나와요. 교육 이수와 첫 활동 신고를 순서대로 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-round-1-guide/",
   image: "https://moneydoc.kr/og/unemployment-round-1-guide.png",
   imageAlt: "실업급여 1차 실업인정일은 신고일부터 14일. 첫 회차는 7일치",

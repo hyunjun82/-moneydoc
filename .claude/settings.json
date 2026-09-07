@@ -5,7 +5,8 @@
         "matcher": "Write|Edit|MultiEdit",
         "hooks": [
           { "type": "command", "command": "node scripts/check-truncation.mjs" },
-          { "type": "command", "command": "node scripts/hook-verify.mjs" }
+          { "type": "command", "command": "node scripts/hook-verify.mjs" },
+          { "type": "command", "command": "node scripts/hook-build-spec.mjs" }
         ]
       }
     ],

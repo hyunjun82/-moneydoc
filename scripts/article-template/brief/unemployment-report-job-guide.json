@@ -1,0 +1,55 @@
+{
+  "slug": "unemployment-report-job-guide",
+  "keyword": "실업급여 취업 신고",
+  "calc": "government/unemployment-benefit",
+  "mustInclude": [
+    "취업",
+    "신고",
+    "조기재취업수당"
+  ],
+  "queries": [
+    "실업급여 취업 신고",
+    "실업급여 취업신고",
+    "실업급여 받다가 취업",
+    "실업급여 취업 후",
+    "실업급여 조기재취업수당",
+    "실업급여 취업 신고 안하면"
+  ],
+  "sources": [
+    {
+      "label": "고용보험법 (실업인정 §44, 취업 신고 §47, 반환 §62, 조기재취업수당 §64)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법",
+      "must": [
+        "제47조",
+        "제64조"
+      ]
+    },
+    {
+      "label": "고용보험법 시행령 (조기재취업수당 요건 §84, 금액 §85)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법시행령",
+      "must": [
+        "제84조",
+        "제85조"
+      ]
+    },
+    {
+      "label": "고용보험법 시행규칙 (취업의 인정기준 §92)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법시행규칙",
+      "must": [
+        "제92조"
+      ]
+    },
+    {
+      "label": "고용24 실업급여 제도 안내 (취업 시 2개월 이내 신고, 취업 전날까지 지급)",
+      "kind": "gov",
+      "url": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000411",
+      "must": [
+        "2개월 이내"
+      ],
+      "wait": 8000
+    }
+  ]
+}

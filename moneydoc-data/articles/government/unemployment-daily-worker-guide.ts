@@ -3,8 +3,8 @@
 export const meta = {
   title: "일용직 실업급여 조건, 수급 중 일한 날 신고 기준",
   description: "일용직은 일반 근로자의 네 가지 조건에 두 가지가 더 붙어요. 신청 전 근로일이 총 일수의 3분의 1 미만이어야 하고, 건설일용은 14일 연속 근로내역이 없으면 인정돼요. 수급 중 일용근로 신고까지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-daily-worker-guide/",
   image: "https://moneydoc.kr/og/unemployment-daily-worker-guide.png",
   imageAlt: "일용직 실업급여 조건과 수급 중 일용근로 신고 기준",

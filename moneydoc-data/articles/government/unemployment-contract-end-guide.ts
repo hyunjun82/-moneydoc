@@ -3,8 +3,8 @@
 export const meta = {
   title: "계약만료 실업급여, 재계약 거절하면 못 받나요",
   description: "계약기간이 끝나 회사를 계속 다닐 수 없게 된 경우는 정당한 이직 사유예요. 다만 회사가 재계약을 제안했는데 거절하면 갈릴 수 있어요. 조건이 나빠진 재계약을 거절한 경우까지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-contract-end-guide/",
   image: "https://moneydoc.kr/og/unemployment-contract-end-guide.png",
   imageAlt: "계약만료 실업급여와 재계약 거절 시 수급 여부",

@@ -3,8 +3,8 @@
 export const meta = {
   title: "질병 퇴사 실업급여, 진단서로 인정받는 조건",
   description: "아파서 그만둬도 실업급여를 받을 수 있어요. 다만 지금 일할 수 없는 상태면 먼저 수급기간을 연장해 두고 나은 뒤에 받아야 해요. 진단서에 무엇이 적혀야 하는지까지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-sickness-guide/",
   image: "https://moneydoc.kr/og/unemployment-sickness-guide.png",
   imageAlt: "질병 퇴사 실업급여와 수급기간 연장 절차",

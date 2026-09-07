@@ -3,8 +3,8 @@
 export const meta = {
   title: "권고사직 실업급여 신청 방법과 회사가 받는 불이익",
   description: "권고사직은 회사 사정으로 퇴직을 권고받은 경우라 정당한 이직 사유예요. 신청 방법과 사직서에 쓸 내용, 회사가 받는 지원금 제한까지 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-layoff-guide/",
   image: "https://moneydoc.kr/og/unemployment-layoff-guide.png",
   imageAlt: "권고사직 실업급여 신청 방법과 회사가 받는 불이익",

@@ -41,6 +41,10 @@ const { keywords, questions } = JSON.parse(fs.readFileSync('scripts/keyword-data
 const CORPUS = (keywords.map((k) => k.word).join(' ') + ' ' +
   questions.map((q) => `${q.title} ${q.tags.join(' ')}`).join(' ')).replace(/\s+/g, '');
 
+const LINK_STATE = 'scripts/link-check.state.json';
+const linkState = fs.existsSync(LINK_STATE) ? JSON.parse(fs.readFileSync(LINK_STATE, 'utf8')) : {};
+const unchecked = new Set();
+
 const files = fs.readdirSync(PREVIEW).filter((f) => new RegExp(`^article-v2-${hub}-.*-guide\\.html$`).test(f));
 const read = (f) => fs.readFileSync(path.join(PREVIEW, f), 'utf8');
 const slugOf = (f) => f.replace(`article-v2-${hub}-`, '').replace('-guide.html', '');
@@ -137,6 +141,16 @@ for (const f of files) {
     if (missing.length) warn(tag, `계획한 링크가 본문에 없다: ${missing.join(' ')}`);
   }
 
+  // 4.5 바깥 링크: 죽은 것으로 확인된 주소가 본문에 있으면 막는다.
+  // 정부 사이트는 개편하면서 옛 주소를 "메뉴구조 개편안내" 로 바꾼다. 상태 코드는 200 이라 눈으로는 모른다.
+  // 실제로 두드리는 건 scripts/link-check.mjs 가 하고(네트워크), 게이트는 그 결과만 본다(오프라인).
+  for (const m of h.matchAll(/href="(https?:\/\/[^"]+)"/g)) {
+    const u = m[1].replace(/&amp;/g, '&');
+    const rec = linkState[u];
+    if (rec && rec.ok === false) fail(tag, `죽은 바깥 링크: ${rec.why} — ${u}`);
+    else if (!rec) unchecked.add(u);
+  }
+
   // 5. 계획한 시각 장치가 실제로 들어갔는지만 본다.
   //    글자수·표 개수·각주 개수는 세지 않는다. 답의 길이는 키워드마다 다르다.
   //    "신청 방법" 은 접속하고 로그인하면 끝나는 질문이고, 그걸 억지로 늘리면 글이 나빠진다.
@@ -206,6 +220,19 @@ for (const f of files) {
       if (!Array.isArray(r.hardWords)) fail(tag, '어려운 말 목록(hardWords)이 없다. 없으면 빈 배열');
       if (!Array.isArray(r.removed)) fail(tag, '지운 군더더기 목록(removed)이 없다. 없으면 빈 배열');
       if (!r.deeperThanHub || r.deeperThanHub.length < 20) fail(tag, '허브보다 무엇이 깊은지(deeperThanHub) 적지 않았다');
+      // 6단계 적대 검토. 글쓴이가 자기 글을 읽는 검토는 되풀이·어색함·틀 찍어내기를 못 잡았다 (2026-09-05 하루에 다섯 번 사람이 잡음).
+      // 그래서 글을 쓰지 않은 검토자가 REVIEW.md 의 세 관점(①검색한 사람 ②편집자 ③허브 대조)으로 읽은 결과를 적게 한다.
+      // 세 관점이 다 돌았다는 증거로 최소 3항목, 각 항목은 "[①…" 로 시작한다. 도입일 이후 검토부터 막는다.
+      const ADVERSARIAL_SINCE = '2026-09-05';
+      const adv = r.adversarial;
+      if ((r.date ?? '') >= ADVERSARIAL_SINCE) {
+        if (!Array.isArray(adv) || adv.length < 3) fail(tag, '적대 검토(adversarial)가 없거나 세 관점 미만이다. REVIEW.md 로 검토자를 돌려라');
+        else {
+          const seen = new Set(adv.map((x) => (String(x).match(/^\[([①②③])/) ?? [])[1]).filter(Boolean));
+          for (const k of ['①', '②', '③']) if (!seen.has(k)) fail(tag, `적대 검토에 관점 ${k} 이 없다`);
+          if (adv.some((x) => !/^\[[①②③]/.test(String(x)))) fail(tag, '적대 검토 항목은 "[①…" 형식이어야 한다');
+        }
+      } else if (!Array.isArray(adv)) warn(tag, '적대 검토 없음 (도입 전 글)');
     }
   }
 }
@@ -274,6 +301,8 @@ if (!quick) {
 
 // ── 결과 ─────────────────────────────────────────────────────────────────
 console.log(`게이트: ${hub} · 페이지 ${files.length}개 · 계획 ${spokes.length}편`);
+if (unchecked.size) warn('link-check', `한 번도 확인 안 한 바깥 링크 ${unchecked.size}개 — node scripts/link-check.mjs`);
+
 console.log('기계가 보는 것: 사실(숫자·인용) · 제목-소제목 일치 · 계획(계산기·링크·시각화) 대조 · 죽은 링크 · 빵부스러기');
 console.log('사람이 볼 것: 소제목 질문에 군더더기 없이 답했는지, 20대도 80대도 알아듣는지');
 if (warns.length) { console.log(`\n경고 ${warns.length}건`); warns.forEach((w) => console.log('  ' + w)); }

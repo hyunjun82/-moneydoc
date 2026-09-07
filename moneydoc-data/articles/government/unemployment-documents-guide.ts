@@ -3,8 +3,8 @@
 export const meta = {
   title: "실업급여 서류, 신청 준비물 목록과 발급받는 곳",
   description: "실업급여 신청에 본인이 챙길 건 신분증과 계좌예요. 나머지는 회사가 내는 서류고요. 퇴사 사유에 따라 더 필요한 자료까지 발급처와 함께 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-04",
+  dateModified: "2026-09-04",
   url: "https://moneydoc.kr/government/unemployment-documents-guide/",
   image: "https://moneydoc.kr/og/unemployment-documents-guide.png",
   imageAlt: "실업급여 신청 서류 목록과 발급처",

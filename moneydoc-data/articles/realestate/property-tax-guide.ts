@@ -3,8 +3,8 @@
 export const meta = {
   title: "재산세 계산과 납부, 공시가격부터 특례세율과 7월 9월 분납까지",
   description: "공시가격 5억원인 집의 재산세는 지방교육세까지 684,000원이에요. 1세대 1주택 특례세율을 받으면 312,000원으로 줄어요. 과세표준 계산, 세율 구간, 7월과 9월 납기, 조회와 카드 납부를 정리했어요.",
-  datePublished: "2026-09-02",
-  dateModified: "2026-09-02",
+  datePublished: "2026-09-03",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/realestate/property-tax-guide/",
   image: "https://moneydoc.kr/og/property-tax-guide.png",
   imageAlt: "재산세 계산. 공시가격 5억원인 집의 재산세는 684,000원",
