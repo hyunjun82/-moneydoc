@@ -100,6 +100,17 @@ if (contentTouched && !skipGate) {
   }
 }
 
+// 1b. 죽은 주소 (글이 바뀐 경우에만). out/ 이 있어야 잴 수 있다 — next build 를 안 돌렸으면 건너뛴다.
+// 2026-09-07: 같은 글이 두 주소에 있어 4개를 지웠는데 옛 주소에 넘김이 없었다. 스포크 43편도 마찬가지였다.
+if (contentTouched && fs.existsSync(path.join(cwd, 'out'))) {
+  try {
+    exec(process.execPath, ['scripts/check-404.mjs', 'origin/main'], 120000);
+  } catch (e) {
+    block('check-404 FAIL — 지우거나 옮긴 주소에 301 넘김이 없다. node scripts/gen-redirects.mjs 로 채워라',
+      tail((e.stdout || '') + (e.stderr || ''), 15));
+  }
+}
+
 // 2. 계산기 전수 (항상)
 try {
   // 'node' 는 훅 프로세스의 PATH 에 없을 수 있다. 지금 이 훅을 돌리는 node 를 그대로 쓴다
