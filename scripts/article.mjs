@@ -250,6 +250,8 @@ function publish() {
   // 잘못된 주소로 먼저 나간 페이지가 있으면 치운다
   const strayDir = path.join(ROOT, 'app', CAT, slug);
   if (fs.existsSync(strayDir)) { fs.rmSync(strayDir, { recursive: true, force: true }); log(`엉뚱한 주소 페이지 삭제 app/${CAT}/${slug}/`); }
+  // 옛 주소 301 넘김. 안 걸면 색인된 /government/... 이 죽는다 (실측: 48개 중 43개가 빠져 있었다)
+  spawnSync(process.execPath, [path.join(ROOT, 'scripts/gen-redirects.mjs')], { encoding: 'utf8' });
   const page = path.join(ROOT, 'app', route, 'page.tsx');
   return { ok: r.status === 0 && fs.existsSync(page), made: [page], out: (r.stdout ?? '') + (r.stderr ?? '') };
 }
