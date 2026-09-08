@@ -15,7 +15,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { spawnSync } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import { chromium } from 'playwright';
 
@@ -112,9 +112,30 @@ const example = spokes.map((s) => `${hub}-${s.slug}-guide`).filter((s) => s !== 
   .sort((a, b) => hasShape(b) - hasShape(a))[0];
 const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
 const INLINE_MAX = 20000;
-const evBlock = evidence.map((e) => (e.text.length <= INLINE_MAX
-  ? `### 근거 ${e.n} · ${e.label}\n출처 ${e.url ?? e.file}\n캡처 ${e.png}\n\n${e.text}\n`
-  : `### 근거 ${e.n} · ${e.label} (${e.text.length.toLocaleString()}자, 길어서 파일로)\n출처 ${e.url}\n텍스트 ${e.json}  <- 필요한 조문은 Grep 으로 찾아 Read 로 읽는다\n캡처 ${e.png}\n`)).join('\n');
+// 법령 원문(9만~18만자)을 통째로 주면 작성기가 Grep·Read 로 조문을 찾느라 턴을 쓴다(실측 25~76턴, 글 한 편 15분).
+// brief.sources[].must 에 필요한 조문 번호가 이미 적혀 있으니 여기서 미리 잘라 넣는다. 590,100자 → 52,093자(9%).
+// law.go.kr 텍스트는 앞에 목차(제목만)·뒤에 본문이라, 같은 조 번호 중 다음 조까지 가장 긴 구간이 본문이다.
+function sliceArticle(text, art) {
+  const re = new RegExp(`(^|\\n)\\s*${art.replace(/[()]/g, '\\$&')}(의\\d+)?\\s*\\(`, 'g');
+  let best = '', m;
+  while ((m = re.exec(text))) {
+    const start = m.index + m[1].length;
+    const next = text.slice(start + 10).search(/\n\s*제\d+조(의\d+)?\s*\(/);
+    const seg = next < 0 ? text.slice(start) : text.slice(start, start + 10 + next);
+    if (seg.length > best.length) best = seg;
+  }
+  return best;
+}
+const evBlock = evidence.map((e) => {
+  const src = ownerBrief.sources[e.n - 1] ?? {};
+  const isLaw = (e.kind ?? src.kind) === 'law';
+  // 캡처: 정부 안내 페이지는 표·주석이 텍스트에 안 잡혀 열어야 한다. 법령 페이지 캡처는 텍스트와 같은 내용이라 선택이다.
+  const png = isLaw ? `캡처(선택, 텍스트와 같음) ${e.png}` : `캡처(필수, 표·주석 확인) ${e.png}`;
+  if (e.text.length <= INLINE_MAX) return `### 근거 ${e.n} · ${e.label}\n출처 ${e.url ?? e.file}\n${png}\n\n${e.text}\n`;
+  const arts = (src.must ?? []).filter((x) => /^제\d+조/.test(x));
+  const slices = arts.map((a) => { const s = sliceArticle(e.text, a); return s ? `[${a}]\n${s.trim()}` : ''; }).filter(Boolean);
+  return `### 근거 ${e.n} · ${e.label} (전체 ${e.text.length.toLocaleString()}자 중 필요 조문만 발췌)\n출처 ${e.url}\n전문 ${e.json}  <- 발췌에 없는 조문이 꼭 필요할 때만 Grep 한다\n${png}\n\n${slices.join('\n\n') || '(brief 에 조문 번호가 없어 발췌 없음. 필요하면 Grep)'}\n`;
+}).join('\n');
 
 const HEAD = `너는 MoneyDoc 가이드 글 스펙(articles/<slug>.mjs)을 쓰는 작성기다. 대화하지 않는다. 출력은 아래 "출력 형식" 그대로만.
 
@@ -129,7 +150,7 @@ const HEAD = `너는 MoneyDoc 가이드 글 스펙(articles/<slug>.mjs)을 쓰�
 - 해요체. 문장 100자 이하. 대시·파이프 금지. 반말 종결(~한다·~된다) 금지. 합니다체 금지.
 - 시각 장치: 계획서 shape 는 반드시 넣는다. 그 위에 근거에 회차별·금액별·조건별 비교가 있으면 표(caption 필수)로 보여 준다. 허브 글이 표로 답한 수준을 스포크도 지킨다. 다만 내용 없는 억지 표는 만들지 않는다.
 - 히어로 card.big 과 즉답 quick.big 은 근거에 있는 확정 숫자만. "사람마다 달라요" 같은 말과 같이 두지 않는다. 확정 숫자가 없으면 big 은 예/아니요 또는 명사 한 단어.
-- 작업 순서: 먼저 캡처 PNG 를 전부 Read 로 연다(표·주석은 텍스트에 안 나온다). 긴 법령은 Grep 으로 계획서 mustCover 와 관련 조문을 찾아 Read 한다. 그 다음에 쓴다. 읽지 않고 쓰면 거부된다.
+- 작업 순서: "캡처(필수)" 로 표시된 정부 안내 PNG 는 Read 로 연다(표·주석은 텍스트에 안 나온다). 법령은 필요한 조문을 아래에 이미 잘라 넣었다. 발췌에 없는 조문이 꼭 필요할 때만 전문을 Grep 한다. 그 다음에 쓴다. 아무것도 읽지 않고 쓰면 거부된다.
 - 내부 링크는 아래 "쓸 수 있는 링크" 목록에 있는 것만 쓴다. 목록에 없는 /${hub}/... 주소는 아직 글이 없어 404 다. 절대 만들지 않는다. related 도 이 목록과 '/${hub}/' 안에서만 고른다.
 - 계산기는 calc.on 이 true 일 때만.
 - 근거에 답이 있는 질문에 "사람마다 달라요"·"안내받아요" 같은 회피 답을 쓰지 않는다. 근거의 답을 쓴다.
@@ -137,7 +158,26 @@ const HEAD = `너는 MoneyDoc 가이드 글 스펙(articles/<slug>.mjs)을 쓰�
 - 예시 스펙의 구조·헬퍼 사용법(won, man, docs, derive 등)을 그대로 따른다. 예시의 내용은 베끼지 않는다.
 `;
 
-const CONTEXT = `
+// 프롬프트 순서가 비용·속도를 정한다. 같은 허브의 글은 규칙·형식·허브 본문·근거(7만자)가 전부 같다.
+// 이 공통 부분(SHARED)을 맨 앞에 두면 글이 달라져도 캐시가 그대로 맞는다. 글마다 다른 부분(PER·HEAD)은 뒤에 둔다.
+// 전에는 HEAD(글별) 가 앞이라 글마다 7만자를 새로 냈다.
+const SHARED = `## 쓰기 규칙 (WRITING.md)
+${read('scripts/article-template/WRITING.md')}
+
+## 스펙 형식 (README)
+${read('scripts/article-template/README.md')}
+
+## 허브 글 본문 (moneydoc.kr/${hub}/ 라이브). 허브가 이미 답한 것은 짧게 링크로 넘긴다
+${hubText.slice(0, 30000)}
+
+## 이웃 글 소제목 (여기 있는 질문은 다시 쓰지 않는다)
+${neighbors.join('\n')}
+
+## 근거 (정부·법령 페이지 원문. "캡처(필수)" 는 Read 로 열어 표·주석을 본다)
+${evBlock}
+`;
+
+const PER = `
 ## 계획서 (이 글)
 ${JSON.stringify({ slug: sp.slug, title: sp.title, h2: sp.h2, mustCover: sp.mustCover, calc: sp.calc, shape: sp.shape, evidence: sp.evidence }, null, 1)}
 
@@ -146,23 +186,8 @@ ${liveLinks.map((l) => `- /${hub}/${l.to}/  ${l.why}`).join('\n') || '- (없음)
 - /${hub}/  주제 홈${sp.calc?.on ? `\n- ${plan.calculator?.route ?? `/${hub}/calculator/`}  계산기` : ''}
 ${neighbors.map((n) => `- /${hub}/${n.split(':')[0].replace(new RegExp(`^${hub}-`), '').replace(/-guide$/, '')}/`).join('\n')}
 
-## 쓰기 규칙 (WRITING.md)
-${read('scripts/article-template/WRITING.md')}
-
-## 스펙 형식 (README)
-${read('scripts/article-template/README.md')}
-
 ## 예시 스펙 (형식 참고: scripts/article-template/articles/${example}.mjs)
 ${read(`scripts/article-template/articles/${example}.mjs`)}
-
-## 허브 글 본문 (moneydoc.kr/${hub}/ 라이브). 허브가 이미 답한 것은 짧게 링크로 넘긴다
-${hubText.slice(0, 30000)}
-
-## 이웃 글 소제목 (여기 있는 질문은 다시 쓰지 않는다)
-${neighbors.join('\n')}
-
-## 근거 (정부·법령 페이지 원문. 캡처 PNG 는 Read 로 열어 표·주석을 본다)
-${evBlock}
 `;
 
 function claudeBin() {
@@ -176,23 +201,61 @@ function claudeBin() {
 }
 const CLI = claudeBin();
 let cost = 0;
+/**
+ * 작성기 호출. stream-json 으로 받아 턴마다 무엇을 열었는지 시간과 함께 로그에 남긴다.
+ *   전에는 15분 동안 아무것도 안 보였다("뭘 하는지 알 수 없다"). 이제 tail -f 로 지켜볼 수 있고,
+ *   어느 턴이 오래 걸리는지 실측할 수 있다.
+ * --disallowedTools: allowedTools 만으로는 Write 가 막히지 않았다(소넷이 파일을 직접 쓴 실측 2026-09-08).
+ *   파일을 만드는 건 이 스크립트만 한다. 작성기는 읽고 답만 낸다.
+ */
 function claude(prompt, label, retry = false) {
-  log(`claude -p ${label} (입력 ${prompt.length.toLocaleString()}자)`);
-  const args = ['-p', '--output-format', 'json', '--allowedTools', 'Read,Grep,Glob', '--max-turns', '80', ...(MODEL ? ['--model', MODEL] : [])];
-  const r = spawnSync(CLI.bin, args, { input: prompt, encoding: 'utf8', maxBuffer: 256 * 1024 * 1024, shell: CLI.shell, timeout: 30 * 60 * 1000 });
-  if (r.error) throw r.error;
-  let j;
-  try { j = JSON.parse(r.stdout); } catch { throw new Error(`claude 출력 파싱 실패: ${(r.stdout || r.stderr).slice(0, 500)}`); }
-  cost += j.total_cost_usd ?? 0;
-  if (j.is_error) throw new Error(`claude 오류: ${String(j.result).slice(0, 500)}`);
-  log(`  ${j.num_turns}턴 · $${(j.total_cost_usd ?? 0).toFixed(2)}`);
-  // 1턴 = 캡처도 법령도 안 열고 쓴 것. 첫 작성은 반드시 읽고 써야 한다. 한 번은 다시 시킨다
-  if (label === '작성' && (j.num_turns ?? 0) < 3) {
-    if (retry) throw new Error(`작성기가 두 번 다 근거를 읽지 않고 썼다 (${j.num_turns}턴)`);
-    log('  근거를 읽지 않고 씀(턴 수 부족) → 거부, 다시');
-    return claude(`${prompt}\n\n(이전 시도는 캡처와 법령을 열지 않아 거부됐다. 반드시 PNG 를 Read 하고 법령을 Grep 한 뒤에 쓴다.)`, label, true);
-  }
-  return String(j.result ?? '');
+  return new Promise((resolve, reject) => {
+    const t1 = Date.now();
+    log(`claude -p ${label} (입력 ${prompt.length.toLocaleString()}자)`);
+    const args = ['-p', '--output-format', 'stream-json', '--verbose',
+      '--allowedTools', 'Read,Grep,Glob',
+      '--disallowedTools', 'Write,Edit,MultiEdit,NotebookEdit,Bash,PowerShell,WebFetch,WebSearch,Agent,Task',
+      '--max-turns', '80', ...(MODEL ? ['--model', MODEL] : [])];
+    const child = spawn(CLI.bin, args, { shell: CLI.shell, stdio: ['pipe', 'pipe', 'pipe'] });
+    const timer = setTimeout(() => { child.kill(); reject(new Error('claude -p 30분 초과')); }, 30 * 60 * 1000);
+    let buf = '', errBuf = '', result = null, tools = 0;
+    const el = () => `${((Date.now() - t1) / 1000).toFixed(0).padStart(4)}s`;
+    const onLine = (line) => {
+      if (!line.trim()) return;
+      let ev; try { ev = JSON.parse(line); } catch { return; }
+      if (ev.type === 'assistant') {
+        for (const c of ev.message?.content ?? []) {
+          if (c.type !== 'tool_use') continue;
+          tools++;
+          const a = c.input ?? {};
+          const what = a.file_path ? path.basename(String(a.file_path)) : a.pattern ? `"${String(a.pattern).slice(0, 30)}"` : '';
+          console.log(`      ${el()}  ${String(c.name).padEnd(5)} ${what}`);
+        }
+      } else if (ev.type === 'result') result = ev;
+    };
+    child.stdout.setEncoding('utf8');
+    child.stdout.on('data', (d) => { buf += d; let i; while ((i = buf.indexOf('\n')) >= 0) { onLine(buf.slice(0, i)); buf = buf.slice(i + 1); } });
+    child.stderr.setEncoding('utf8');
+    child.stderr.on('data', (d) => { errBuf += d; });
+    child.on('error', (e) => { clearTimeout(timer); reject(e); });
+    child.on('close', () => {
+      clearTimeout(timer);
+      if (buf.trim()) onLine(buf);
+      const j = result;
+      if (!j) return reject(new Error(`claude 출력에 result 가 없다: ${(errBuf || buf).slice(0, 500)}`));
+      cost += j.total_cost_usd ?? 0;
+      if (j.is_error) return reject(new Error(`claude 오류: ${String(j.result).slice(0, 500)}`));
+      log(`  ${j.num_turns}턴 · 도구 ${tools}회 · ${((Date.now() - t1) / 1000).toFixed(0)}s · $${(j.total_cost_usd ?? 0).toFixed(2)}`);
+      // 도구 0회 = 캡처를 하나도 안 열고 쓴 것. 첫 작성은 반드시 읽고 써야 한다. 한 번은 다시 시킨다
+      if (label === '작성' && tools === 0) {
+        if (retry) return reject(new Error('작성기가 두 번 다 근거를 읽지 않고 썼다 (도구 0회)'));
+        log('  근거를 읽지 않고 씀(도구 0회) → 거부, 다시');
+        return resolve(claude(`${prompt}\n\n(이전 시도는 캡처를 열지 않아 거부됐다. "캡처(필수)" PNG 를 Read 한 뒤에 쓴다.)`, label, true));
+      }
+      resolve(String(j.result ?? ''));
+    });
+    child.stdin.end(prompt);
+  });
 }
 function saveSpec(out) {
   let s = out.replace(/\r/g, '').trim();
@@ -256,13 +319,24 @@ function publish() {
   return { ok: r.status === 0 && fs.existsSync(page), made: [page], out: (r.stdout ?? '') + (r.stderr ?? '') };
 }
 
+// --dry: 프롬프트 크기만 재고 끝낸다 (LLM 호출 없음). 근거 발췌·순서 바꾼 효과를 돈 안 쓰고 확인한다
+if (argv.includes('--dry')) {
+  const sizes = { 공통SHARED: SHARED.length, 글별PER: PER.length, 지시HEAD: HEAD.length };
+  const total = Object.values(sizes).reduce((a, b) => a + b, 0);
+  console.log(`\n[dry] 프롬프트 ${total.toLocaleString()}자  ${Object.entries(sizes).map(([k, v]) => `${k} ${v.toLocaleString()}`).join(' · ')}`);
+  console.log(`[dry] 근거 블록 ${evBlock.length.toLocaleString()}자 (전문 ${evidence.reduce((a, e) => a + e.text.length, 0).toLocaleString()}자)`);
+  process.exit(0);
+}
+
 // ── 6. 작성 → 대조 → 고침 ─────────────────────────────────────────────
+const tWrite = Date.now();
 let fails = [];
 for (let round = 1; round <= ROUNDS; round++) {
+  // 공통(SHARED) → 글별(PER) → 지시(HEAD) 순. 공통이 앞이라 같은 허브의 다음 글에서 캐시가 맞는다.
   const prompt = round === 1
-    ? `${HEAD}${CONTEXT}\n\n이제 '${slug}' 스펙을 출력 형식대로 낸다.`
-    : `${HEAD}\n## 지금 스펙 (scripts/article-template/articles/${slug}.mjs)\n${fs.readFileSync(specPath, 'utf8')}\n\n## build.mjs 가 막은 것 (${fails.length}건, 전부 고친다. 근거에 없는 숫자는 지운다)\n${fails.map((f) => `- ${f}`).join('\n')}\n${CONTEXT}\n\n고친 스펙 전체를 출력 형식대로 낸다. 막힌 것 외에는 바꾸지 않는다.`;
-  saveSpec(claude(prompt, round === 1 ? '작성' : `수정 ${round - 1}`));
+    ? `${SHARED}${PER}\n${HEAD}\n이제 '${slug}' 스펙을 출력 형식대로 낸다.`
+    : `${SHARED}${PER}\n${HEAD}\n## 지금 스펙 (scripts/article-template/articles/${slug}.mjs)\n${fs.readFileSync(specPath, 'utf8')}\n\n## build.mjs 가 막은 것 (${fails.length}건, 전부 고친다. 근거에 없는 숫자는 지운다)\n${fails.map((f) => `- ${f}`).join('\n')}\n\n고친 스펙 전체를 출력 형식대로 낸다. 막힌 것 외에는 바꾸지 않는다.`;
+  saveSpec(await claude(prompt, round === 1 ? '작성' : `수정 ${round - 1}`));
   const syn = await syntaxCheck();
   const b = syn ? { ok: false, fails: [syn] } : build();
   fails = b.fails;
@@ -270,7 +344,7 @@ for (let round = 1; round <= ROUNDS; round++) {
   if (b.ok && !fails.length) {
     const p = publish();
     if (!p.ok) { console.error(`발행(convert-v2) 실패:\n${p.out.slice(-2000)}`); process.exit(1); }
-    log(`OK 대조 통과 · 죽은 링크 0 · 발행 완료 (${round}회) · 총 $${cost.toFixed(2)}`);
+    log(`OK 대조 통과 · 죽은 링크 0 · 발행 완료 (${round}회) · 작성~발행 ${((Date.now() - tWrite) / 1000).toFixed(0)}s · 총 $${cost.toFixed(2)}`);
     console.log(`\n미리보기  public/_preview/article-v2-${slug}.html\n페이지    ${p.made.map((x) => path.relative(ROOT, x)).join(' ')}\n썸네일    public/og/${slug}.png\n스펙      scripts/article-template/articles/${slug}.mjs`);
     process.exit(0);
   }

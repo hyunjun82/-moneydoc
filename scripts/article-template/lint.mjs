@@ -116,7 +116,7 @@ export function lint(a) {
       }
     }
   }
-  if (h2s < 5) add('sections', `H2 ${h2s}개 (5개 이상)`);
+  if (h2s < 4) add('sections', `H2 ${h2s}개 (4개 이상)`); // 2026-09-07: 실측 검색어 4갈래로 딱 떨어지는 주제(대학생·특고 등)는 4개가 자연스럽다. 억지로 5번째를 붙이면 내용 없는 소제목이 생긴다
   // 시각화는 글 내용에 맞게 고른다. 같은 종류를 한 글에서 2번 넘게 쓰면 템플릿 복제 신호.
   const blockKinds = a.sections.flatMap((s) => s.blocks.map((b) => b.type));
   for (const kind of ['timeline', 'steps', 'tree', 'flow']) {
