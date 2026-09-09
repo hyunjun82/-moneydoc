@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-contract-end-guide";
 
 export const html = `<h1>계약만료 실업급여, 재계약 거절하면 못 받나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 시행규칙 별표2 원문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 시행규칙 별표2 원문 대조 · 2026-09-04</span></div>
 <img class="v2-hero" src="/og/unemployment-contract-end-guide.png" width="1200" height="630" alt="계약만료 실업급여와 재계약 거절 시 수급 여부">
 <p class="v2-lead v2-intro">계약직으로 일하다 기간이 끝나면 실업급여를 받을 수 있어요. 시행규칙 목록에 계약기간의 만료로 회사를 계속 다닐 수 없게 된 경우가 정당한 이직 사유로 그대로 들어 있거든요. 문제는 회사가 재계약을 하자고 했는데 본인이 거절한 경우예요. 이때는 스스로 그만둔 것으로 볼 여지가 생겨요. 어떤 경우에 갈리는지, 조건이 나빠진 재계약은 어떻게 보는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -106,7 +106,7 @@ export const html = `<h1>계약만료 실업급여, 재계약 거절하면 못 �
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제40조(구직급여의 수급 요건), 제58조(이직 사유에 따른 수급자격의 제한), 고용보험법 시행규칙 제101조제2항 및 별표 2(수급자격이 제한되지 아니하는 정당한 이직 사유).
-<b>정부 도구</b>법제처 생활법령의 구직급여 수급자격 안내에 실린 정당한 이직 사유 목록과 대조했어요 (2026-09-02 확인).
+<b>정부 도구</b>법제처 생활법령의 구직급여 수급자격 안내에 실린 정당한 이직 사유 목록과 대조했어요 (2026-09-04 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/voluntary/"><b>다음 질문</b>자발적 퇴사 실업급여 인정 사유와 증빙 서류 총정리</a><a href="/unemployment/180days/"><b>다음 질문</b>실업급여 180일 계산법, 주 며칠 일해야 채워지나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -177,7 +177,7 @@ export const landing = {
     "line2": "재계약을 거절하면 어떻게 되나요",
     "sub1": "계약기간 만료로 계속 다닐 수 없게 된 경우는 정당한 사유예요",
     "sub2": "회사가 같은 조건으로 재계약을 제안했는데 거절하면 갈릴 수 있어요",
-    "foot": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-02 검증",
+    "foot": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-04 검증",
     "card": {
       "label": "계약만료",
       "big": "정당한",
@@ -187,7 +187,7 @@ export const landing = {
     },
     "alt": "계약만료 실업급여와 재계약 거절 시 수급 여부"
   },
-  "badge": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-02",
+  "badge": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-04",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

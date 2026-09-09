@@ -1,0 +1,12 @@
+{
+  "slug": "unemployment-unfair-dismissal-guide",
+  "keyword": "부당해고 실업급여와 권고사직, 해고예고수당부터 노동청 신고까지",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "부당해고",
+    "구제신청"
+  ],
+  "queries": [],
+  "sources": []
+}

@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-sickness-guide";
 
 export const html = `<h1>질병 퇴사 실업급여, 진단서로 인정받는 조건</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 수급 요건과 시행규칙 별표 2 원문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 수급 요건과 시행규칙 별표 2 원문 대조 · 2026-09-04</span></div>
 <img class="v2-hero" src="/og/unemployment-sickness-guide.png" width="1200" height="630" alt="질병 퇴사 실업급여와 수급기간 연장 절차">
 <p class="v2-lead v2-intro">아파서 회사를 그만두면 실업급여가 되는지 헷갈려요. 사유로는 인정돼요. 그런데 실업급여는 일할 의사와 능력이 있는 사람에게 주는 돈이라, 지금 당장 일할 수 없으면 그대로는 막혀요. 그래서 순서가 중요해요. 먼저 수급기간을 연장해 두고 몸이 나은 뒤에 신청하는 거예요. 이 순서와 진단서 요건을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -105,7 +105,7 @@ export const html = `<h1>질병 퇴사 실업급여, 진단서로 인정받는 �
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제2조(정의), 제40조(구직급여의 수급 요건), 제48조(수급기간 및 수급일수), 고용보험법 시행규칙 제101조제2항 및 별표 2(정당한 이직 사유).
-<b>정부 도구</b>법제처 생활법령의 구직급여 수급자격 안내에 실린 정당한 이직 사유 목록과 대조했어요 (2026-09-02 확인).
+<b>정부 도구</b>법제처 생활법령의 구직급여 수급자격 안내에 실린 정당한 이직 사유 목록과 대조했어요 (2026-09-04 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/voluntary/"><b>다음 질문</b>자발적 퇴사 실업급여 인정 사유와 증빙 서류</a><a href="/unemployment/deadline/"><b>다음 질문</b>실업급여 신청기간, 퇴사 후 언제까지 받나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -176,7 +176,7 @@ export const landing = {
     "line2": "먼저 미뤄 두세요",
     "sub1": "아파서 그만둔 건 정당한 이직 사유예요",
     "sub2": "다만 지금 일할 수 없으면 수급기간을 연장해 둬요",
-    "foot": "고용보험법 수급 요건과 시행규칙 별표 2 원문 대조 · 2026-09-02 검증",
+    "foot": "고용보험법 수급 요건과 시행규칙 별표 2 원문 대조 · 2026-09-04 검증",
     "card": {
       "label": "연장 한도",
       "big": "4",
@@ -186,7 +186,7 @@ export const landing = {
     },
     "alt": "질병 퇴사 실업급여와 수급기간 연장 절차"
   },
-  "badge": "고용보험법 수급 요건과 시행규칙 별표 2 원문 대조 · 2026-09-02",
+  "badge": "고용보험법 수급 요건과 시행규칙 별표 2 원문 대조 · 2026-09-04",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

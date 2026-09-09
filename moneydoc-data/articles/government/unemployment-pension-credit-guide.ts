@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-pension-credit-guide";
 
 export const html = `<h1>실업급여 국민연금, 실업크레딧 신청하면 얼마 내나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">국민연금법 실업크레딧 규정 원문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">국민연금법 실업크레딧 규정 원문 대조 · 2026-09-05</span></div>
 <img class="v2-hero" src="/og/unemployment-pension-credit-guide.png" width="1200" height="630" alt="실업급여 국민연금은 실업크레딧으로 최대 12개월">
 <p class="v2-lead v2-intro">실업급여를 받는 동안 국민연금 보험료를 내야 하는지 헷갈려요. 퇴사하면 지역가입자로 넘어가서 고지서가 올 수 있고, 실직 중이라고 알리면 납부예외로 안 낼 수 있어요. 그런데 안 낸 기간은 가입기간에서 빠져요. 이 빈칸을 메우는 제도가 실업크레딧이에요. 보험료 일부만 본인이 내고 구직급여 받은 기간을 최대 12개월까지 가입기간에 넣어 줘요. 대신 신청해야 하고 기한이 짧아요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -118,7 +118,7 @@ export const html = `<h1>실업급여 국민연금, 실업크레딧 신청하면
 <div class="v2-src">
 <b>법령</b>국민연금법 제17조(국민연금 가입기간의 계산), 제19조의2(실업에 대한 가입기간 추가 산입), 제61조(노령연금 수급권자), 제88조(연금보험료의 부과·징수 등), 제91조(연금보험료 납부의 예외).
 <b>법령</b>국민연금법 시행령 제25조의2(재산 등 요건), 제25조의3(신청 방법 등), 제25조의4(기본연금액), 제25조의5(연금보험료의 지원범위 등), 제25조의6(업무의 위탁). 고용보험법 제42조(실업의 신고), 제44조(실업의 인정), 제48조(수급기간 및 수급일수).
-<b>정부 안내</b>인정소득의 상한선과 하한선, 국가 지원 비율은 보건복지부장관 고시로 정해져서 법령 원문에 금액이 없어요. 그래서 원 단위 보험료는 적지 않았어요. 신청 접수는 국민연금공단과 고용센터에서 해요 (2026-09-02 기준).
+<b>정부 안내</b>인정소득의 상한선과 하한선, 국가 지원 비율은 보건복지부장관 고시로 정해져서 법령 원문에 금액이 없어요. 그래서 원 단위 보험료는 적지 않았어요. 신청 접수는 국민연금공단과 고용센터에서 해요 (2026-09-05 기준).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/health-insurance/"><b>같은 갈래</b>실업급여 건강보험료 감면, 임의계속가입과 피부양자 기준</a><a href="/unemployment/deadline/"><b>다음 질문</b>실업급여 신청기간, 퇴사 후 언제까지 받나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -189,7 +189,7 @@ export const landing = {
     "line2": "실업크레딧 12개월",
     "sub1": "신청해야 구직급여 기간이 가입기간에 쌓여요",
     "sub2": "기한은 끝난 달의 다음 달 15일이에요",
-    "foot": "국민연금법 실업크레딧 규정 원문 대조 · 2026-09-02 검증",
+    "foot": "국민연금법 실업크레딧 규정 원문 대조 · 2026-09-05 검증",
     "card": {
       "label": "실업크레딧으로 채우는 기간",
       "big": "12",
@@ -199,7 +199,7 @@ export const landing = {
     },
     "alt": "실업급여 국민연금은 실업크레딧으로 최대 12개월"
   },
-  "badge": "국민연금법 실업크레딧 규정 원문 대조 · 2026-09-02",
+  "badge": "국민연금법 실업크레딧 규정 원문 대조 · 2026-09-05",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

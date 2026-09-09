@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-merge-periods-guide";
 
 export const html = `<h1>실업급여 합산기간, 전 직장 고용보험도 더해지나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 피보험기간 규정 원문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 피보험기간 규정 원문 대조 · 2026-09-04</span></div>
 <img class="v2-hero" src="/og/unemployment-merge-periods-guide.png" width="1200" height="630" alt="실업급여 합산기간. 전 직장 상실일부터 3년 이내면 합산">
 <p class="v2-lead v2-intro">회사를 여러 번 옮겼으면 전 직장 고용보험 기간도 합쳐지는지 궁금해져요. 합쳐져요. 다만 조건이 있고, 무엇을 위한 합산인지에 따라 세는 방법이 달라요. 며칠 받는지를 정하는 기간과 받을 자격이 되는지를 보는 기간이 서로 다른 시계로 돌아가거든요. 두 가지를 갈라서 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -104,7 +104,7 @@ export const html = `<h1>실업급여 합산기간, 전 직장 고용보험도 �
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제40조(구직급여의 수급 요건과 기준기간), 제41조(피보험 단위기간), 제50조(소정급여일수 및 피보험기간).
-<b>정부 도구</b>고용보험 홈페이지의 피보험자격 이력에서 회사별 취득일과 상실일을 확인했어요 (2026-09-02 확인).
+<b>정부 도구</b>고용보험 홈페이지의 피보험자격 이력에서 회사별 취득일과 상실일을 확인했어요 (2026-09-04 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/180days/"><b>다음 질문</b>실업급여 180일, 주 며칠 일해야 채워지나요</a><a href="/unemployment/days/"><b>다음 질문</b>실업급여 일수, 나이와 가입기간별로 며칠 받나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -175,7 +175,7 @@ export const landing = {
     "line2": "전 직장도 더해지나요",
     "sub1": "그만둔 날부터 3년 안에 다시 취업했다면 합산돼요",
     "sub2": "다만 180일 요건은 다른 시계로 세요",
-    "foot": "고용보험법 피보험기간 규정 원문 대조 · 2026-09-02 검증",
+    "foot": "고용보험법 피보험기간 규정 원문 대조 · 2026-09-04 검증",
     "card": {
       "label": "합산이 되는 공백",
       "big": "3",
@@ -185,7 +185,7 @@ export const landing = {
     },
     "alt": "실업급여 합산기간. 전 직장 상실일부터 3년 이내면 합산"
   },
-  "badge": "고용보험법 피보험기간 규정 원문 대조 · 2026-09-02",
+  "badge": "고용보험법 피보험기간 규정 원문 대조 · 2026-09-04",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

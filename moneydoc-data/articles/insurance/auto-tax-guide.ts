@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "auto-tax-guide";
 
 export const html = `<h1>자동차세 계산과 연납 할인, 배기량별 세액부터 1월 신청까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">위택스 자동차세 계산과 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">위택스 자동차세 계산과 대조 · 2026-09-03</span></div>
 <img class="v2-hero" src="/og/auto-tax-guide.png" width="1200" height="630" alt="자동차세 계산. 1,999cc 승용차는 1년에 519,740원">
 <p class="v2-lead v2-intro">승용차의 자동차세는 배기량에 시시당 세액을 곱해서 정해요. 여기에 자동차세의 30%인 지방교육세가 함께 붙어요. 배기량 1,999cc 차라면 자동차세 399,800원에 지방교육세 119,940원을 더해 1년에 519,740원이에요. 차가 오래되면 세금이 줄고, 1월에 한 번에 내면 할인도 받아요. 배기량별 세액, 차령 경감, 연납 할인, 납부 방법을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -159,7 +159,7 @@ export const html = `<h1>자동차세 계산과 연납 할인, 배기량별 세�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>지방세법 제127조(자동차세 과세표준과 세율, 승용자동차 배기량 기준과 차령 3년 이상 경감 계산식, 조례로 표준세율의 100분의 50까지 가산), 제128조(납기와 징수방법, 연세액 일시납부 시 100분의 10 범위 공제, 연세액 10만원 이하 일괄 부과, 이전등록 시 일할 계산), 제151조(지방교육세). 지방세법 시행령(차령 산정과 세부 기준).
-<b>정부 도구</b>위택스 자동차세 계산 결과와 이 글의 금액이 같아요 (2026-09-02 대조).
+<b>정부 도구</b>위택스 자동차세 계산 결과와 이 글의 금액이 같아요 (2026-09-03 대조).
 </div>
 <div class="v2-rel"><a href="/auto-tax/"><b>계산기</b>자동차세 계산기</a><a href="/property-tax/"><b>부동산 가이드</b>재산세 계산과 납부</a><a href="/acquisition-tax/"><b>부동산 가이드</b>집 살 때 취득세 세율과 계산</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -238,7 +238,7 @@ export const landing = {
     "line2": "내 차는 얼마",
     "sub1": "1,999cc 승용차 → 1년 519,740원",
     "sub2": "자동차세 399,800원 + 지방교육세 119,940원",
-    "foot": "위택스 자동차세 계산과 대조 · 2026-09-02 검증",
+    "foot": "위택스 자동차세 계산과 대조 · 2026-09-03 검증",
     "card": {
       "label": "연간 자동차세",
       "big": "519,740",
@@ -252,7 +252,7 @@ export const landing = {
     "href": "/auto-tax/calculator/",
     "label": "자동차세 계산기 바로가기"
   },
-  "badge": "위택스 자동차세 계산과 대조 · 2026-09-02",
+  "badge": "위택스 자동차세 계산과 대조 · 2026-09-03",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

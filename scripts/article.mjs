@@ -26,7 +26,7 @@ const arg = (k, d) => (argv.find((a) => a.startsWith(`--${k}=`)) ?? '').slice(k.
 const target = argv.find((a) => !a.startsWith('--'));
 if (!target) { console.error('usage: node scripts/article.mjs <spoke|slug> [--hub=] [--rounds=3] [--model=]'); process.exit(1); }
 const ROUNDS = Number(arg('rounds', 3));
-const MODEL = arg('model', '');
+let MODEL = arg('model', '');   // 형식 위반 시 오푸스로 대체하려고 let
 const t0 = Date.now();
 const log = (m) => console.log(`[${((Date.now() - t0) / 1000).toFixed(0).padStart(4)}s] ${m}`);
 const stripTags = (h) => h.replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/g, ' ').replace(/\s+/g, ' ').trim();
@@ -113,7 +113,7 @@ const example = spokes.map((s) => `${hub}-${s.slug}-guide`).filter((s) => s !== 
 const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
 const INLINE_MAX = 20000;
 // 법령 원문(9만~18만자)을 통째로 주면 작성기가 Grep·Read 로 조문을 찾느라 턴을 쓴다(실측 25~76턴, 글 한 편 15분).
-// brief.sources[].must 에 필요한 조문 번호가 이미 적혀 있으니 여기서 미리 잘라 넣는다. 590,100자 → 52,093자(9%).
+// brief.sources[].must 에 필요한 조문 번호가 이미 적혀 있으니 여기서 미리 잘라 넣는다.
 // law.go.kr 텍스트는 앞에 목차(제목만)·뒤에 본문이라, 같은 조 번호 중 다음 조까지 가장 긴 구간이 본문이다.
 function sliceArticle(text, art) {
   const re = new RegExp(`(^|\\n)\\s*${art.replace(/[()]/g, '\\$&')}(의\\d+)?\\s*\\(`, 'g');
@@ -126,12 +126,23 @@ function sliceArticle(text, art) {
   }
   return best;
 }
+// 허브 근거를 통째로 빌려 쓰는 스포크(reuseEvidence)는 14건 중 이 글과 무관한 안내가 섞여 있다.
+// 법령만 자르고 짧은 안내(≤2만자)는 다 넣었더니 pregnancy(전용 5건)는 55,000자인데 center(공용 14건)는
+// 112,811자로 그대로였다(실측 2026-09-08). 무관한 짧은 안내도 이 글의 핵심어가 없으면 뺀다.
+// 근거가 적을 때(전용 brief)는 안 뺀다 — 애초에 그 글을 위해 고른 근거라 다 관련 있다.
+// h2 에서 낱말을 더 뽑으면 "받을"·"하면" 같은 흔한 동사 조각이 섞여 아무 근거나 다 걸린다(실측: interview 에서 무관한
+// 안내까지 "받을" 하나로 살아남았다). mustCover 는 오늘 사람이 제목·소제목에 맞춰 고른 것이라 그것만 쓴다.
+const keyTerms = sp.mustCover ?? [];
+const trimIrrelevant = evidence.length >= 8 && keyTerms.length > 0;
 const evBlock = evidence.map((e) => {
   const src = ownerBrief.sources[e.n - 1] ?? {};
   const isLaw = (e.kind ?? src.kind) === 'law';
   // 캡처: 정부 안내 페이지는 표·주석이 텍스트에 안 잡혀 열어야 한다. 법령 페이지 캡처는 텍스트와 같은 내용이라 선택이다.
   const png = isLaw ? `캡처(선택, 텍스트와 같음) ${e.png}` : `캡처(필수, 표·주석 확인) ${e.png}`;
-  if (e.text.length <= INLINE_MAX) return `### 근거 ${e.n} · ${e.label}\n출처 ${e.url ?? e.file}\n${png}\n\n${e.text}\n`;
+  if (e.text.length <= INLINE_MAX) {
+    if (trimIrrelevant && !keyTerms.some((t) => e.text.includes(t))) return `### 근거 ${e.n} · ${e.label} (이 글의 핵심어가 안 보여 생략. 정말 필요하면 Read ${e.json})\n`;
+    return `### 근거 ${e.n} · ${e.label}\n출처 ${e.url ?? e.file}\n${png}\n\n${e.text}\n`;
+  }
   const arts = (src.must ?? []).filter((x) => /^제\d+조/.test(x));
   const slices = arts.map((a) => { const s = sliceArticle(e.text, a); return s ? `[${a}]\n${s.trim()}` : ''; }).filter(Boolean);
   return `### 근거 ${e.n} · ${e.label} (전체 ${e.text.length.toLocaleString()}자 중 필요 조문만 발췌)\n출처 ${e.url}\n전문 ${e.json}  <- 발췌에 없는 조문이 꼭 필요할 때만 Grep 한다\n${png}\n\n${slices.join('\n\n') || '(brief 에 조문 번호가 없어 발췌 없음. 필요하면 Grep)'}\n`;
@@ -331,12 +342,27 @@ if (argv.includes('--dry')) {
 // ── 6. 작성 → 대조 → 고침 ─────────────────────────────────────────────
 const tWrite = Date.now();
 let fails = [];
+let fellBack = false;
 for (let round = 1; round <= ROUNDS; round++) {
   // 공통(SHARED) → 글별(PER) → 지시(HEAD) 순. 공통이 앞이라 같은 허브의 다음 글에서 캐시가 맞는다.
   const prompt = round === 1
     ? `${SHARED}${PER}\n${HEAD}\n이제 '${slug}' 스펙을 출력 형식대로 낸다.`
     : `${SHARED}${PER}\n${HEAD}\n## 지금 스펙 (scripts/article-template/articles/${slug}.mjs)\n${fs.readFileSync(specPath, 'utf8')}\n\n## build.mjs 가 막은 것 (${fails.length}건, 전부 고친다. 근거에 없는 숫자는 지운다)\n${fails.map((f) => `- ${f}`).join('\n')}\n\n고친 스펙 전체를 출력 형식대로 낸다. 막힌 것 외에는 바꾸지 않는다.`;
-  saveSpec(await claude(prompt, round === 1 ? '작성' : `수정 ${round - 1}`));
+  // 소넷은 5회 중 2회 형식을 어겼다(코드 대신 설명문). 그 회차만 오푸스로 다시 하면 사람이 안 봐도 된다.
+  // 사실 대조는 모델과 무관하게 build.mjs 가 하므로, 여기서 바꾸는 건 "누가 쓰나" 뿐이다.
+  try {
+    saveSpec(await claude(prompt, round === 1 ? '작성' : `수정 ${round - 1}`));
+  } catch (e) {
+    const formatErr = /index: \{|export default function article|result 가 없다/.test(e.message);
+    if (formatErr && MODEL && !fellBack) {
+      fellBack = true;
+      log(`형식 위반(${e.message.split('\n')[0].slice(0, 50)}) → 이 회차만 기본 모델(오푸스)로 다시`);
+      MODEL = '';
+      round--;
+      continue;
+    }
+    throw e;
+  }
   const syn = await syntaxCheck();
   const b = syn ? { ok: false, fails: [syn] } : build();
   fails = b.fails;
@@ -351,5 +377,12 @@ for (let round = 1; round <= ROUNDS; round++) {
   log(`FAIL ${fails.length}건`);
   fails.slice(0, 40).forEach((f) => console.log(`   ${f}`));
 }
+// saveSpec 이 매 회차 index.mjs 에 이 slug 줄을 넣어 둔다. 끝내 통과 못 하면 그 줄만 지운다.
+// 안 지우면 convert-v2 가 이 slug 의 (없는) 미리보기 HTML 을 열려다 죽고, 그 뒤 배치의 모든 글이
+// 내용은 맞는데 발행 단계에서 매번 이 글 때문에 크래시해 회차만 날린다 (실측 2026-09-08, 4편 연쇄 피해).
+const ip = path.join(AT, 'articles/index.mjs');
+const idxSrc = fs.readFileSync(ip, 'utf8');
+const line = idxSrc.split('\n').find((l) => l.includes(`slug: '${slug}'`));
+if (line) { fs.writeFileSync(ip, idxSrc.replace(`${line}\n`, ''), 'utf8'); log(`index.mjs 등록 되돌림 (${slug} — 뒤 글들의 발행이 이것 때문에 막히지 않게)`); }
 console.error(`\n${ROUNDS}회 안에 통과 못 함. 마지막 FAIL 목록 위에 있음. 스펙은 남겨 둠: ${specPath}`);
 process.exit(1);

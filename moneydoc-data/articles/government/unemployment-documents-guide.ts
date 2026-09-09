@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-documents-guide";
 
 export const html = `<h1>실업급여 서류, 신청 준비물 목록과 발급받는 곳</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 신고·제출 규정과 고용24 안내 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 신고·제출 규정과 고용24 안내 대조 · 2026-09-04</span></div>
 <img class="v2-hero" src="/og/unemployment-documents-guide.png" width="1200" height="630" alt="실업급여 신청 서류 목록과 발급처">
 <p class="v2-lead v2-intro">실업급여를 신청하러 갈 때 서류를 잔뜩 준비해야 하는 줄 아는 분이 많아요. 실제로는 본인이 들고 갈 건 신분증과 계좌뿐이에요. 이직확인서와 고용보험 상실 신고는 회사가 처리하고, 구직신청과 교육은 온라인으로 해요. 대신 퇴사 사유에 따라 따로 준비할 자료가 있어요. 무엇을 어디서 구하는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -119,7 +119,7 @@ export const html = `<h1>실업급여 서류, 신청 준비물 목록과 발급�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제42조(실업의 신고, 구직 신청과 수급자격 인정신청 포함, 이직확인서 발급 요청), 제43조(수급자격의 인정과 이직확인서 제출 요청), 고용보험법 시행규칙 별표 2(정당한 이직 사유).
-<b>정부 도구</b>고용24의 실업급여 신청 화면과 이직확인서 작성 안내에서 항목을 대조했어요 (2026-09-02 확인).
+<b>정부 도구</b>고용24의 실업급여 신청 화면과 이직확인서 작성 안내에서 항목을 대조했어요 (2026-09-04 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/confirmation/"><b>다음 질문</b>실업급여 이직확인서 발급 요청과 정정 방법</a><a href="/unemployment/apply/"><b>다음 질문</b>실업급여 신청 방법 5단계, 고용24 구직신청부터 실업인정까지</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -190,7 +190,7 @@ export const landing = {
     "line2": "무엇을 챙기나요",
     "sub1": "본인이 챙길 건 신분증과 본인 명의 계좌예요",
     "sub2": "이직확인서와 상실 신고는 회사가 처리해요",
-    "foot": "고용보험법 신고·제출 규정과 고용24 안내 대조 · 2026-09-02 검증",
+    "foot": "고용보험법 신고·제출 규정과 고용24 안내 대조 · 2026-09-04 검증",
     "card": {
       "label": "본인이 챙길 것",
       "big": "2",
@@ -200,7 +200,7 @@ export const landing = {
     },
     "alt": "실업급여 신청 서류 목록과 발급처"
   },
-  "badge": "고용보험법 신고·제출 규정과 고용24 안내 대조 · 2026-09-02",
+  "badge": "고용보험법 신고·제출 규정과 고용24 안내 대조 · 2026-09-04",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

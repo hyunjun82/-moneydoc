@@ -1,0 +1,12 @@
+{
+  "slug": "unemployment-give-up-guide",
+  "keyword": "실업급여 포기와 미신청, 재수급 조건과 재신청 방법",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "포기",
+    "재수급"
+  ],
+  "queries": [],
+  "sources": []
+}

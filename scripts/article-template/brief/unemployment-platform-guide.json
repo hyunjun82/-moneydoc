@@ -1,0 +1,14 @@
+{
+  "slug": "unemployment-platform-guide",
+  "keyword": "실업급여 쿠팡알바",
+  "calc": "government/unemployment-benefit",
+  "mustInclude": ["플랫폼", "취업신고"],
+  "reuseEvidence": "unemployment-report-job-guide",
+  "queries": ["실업급여 쿠팡알바", "실업급여 배달", "실업급여 플랫폼 소득"],
+  "sources": [
+    { "label": "고용보험법 (노무제공플랫폼 특례 §77의6~10)", "kind": "law", "url": "https://www.law.go.kr/법령/고용보험법", "must": ["제77조의6", "제77조의7"] },
+    { "label": "고용보험법 시행령 (초단시간근로자 적용제외 §3, 배달원 노무제공자 범위)", "kind": "law", "url": "https://www.law.go.kr/법령/고용보험법시행령", "must": ["15시간"] },
+    { "label": "고용보험법 시행규칙 (취업의 인정기준 §92)", "kind": "law", "url": "https://www.law.go.kr/법령/고용보험법시행규칙", "must": ["제92조"] },
+    { "label": "고용24 실업급여 제도 안내 (취업 시 2개월 이내 신고, 취업 전날까지 지급)", "kind": "gov", "url": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000411", "must": ["국민취업지원제도"], "wait": 9000 }
+  ]
+}

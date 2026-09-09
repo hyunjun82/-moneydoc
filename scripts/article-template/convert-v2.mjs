@@ -256,6 +256,9 @@ let registry = `// 자동 생성: scripts/article-template/convert-v2.mjs — �
 export const SCRIPTS = {
 `;
 for (const a of ARTICLES) {
+  // index.mjs 에는 있는데 미리보기 HTML 이 없는 글(실패한 채 등록만 남은 경우)은 건너뛴다.
+  // 예전엔 여기서 죽어서, 이 글 하나 때문에 그 뒤에 등록된 멀쩡한 글까지 전부 발행이 안 됐다(실측 2026-09-08).
+  if (!fs.existsSync(path.join(SRC, a.file))) { console.error(`⚠ ${a.slug}: 미리보기 HTML 없음 — 건너뜀 (index.mjs 등록은 있는데 build 가 통과 못 한 상태)`); continue; }
   const c = convert(a);
   for (const block of c.css.split('@@')) { const t = block.trim(); if (t && !seenCss.has(t)) { seenCss.add(t); css += t + '\n'; } }
   registry += `  ${JSON.stringify(a.slug)}: function () {\n${c.js.replace(/^\(function\(\)\{/, '').replace(/\}\)\(\);?\s*$/, '')}\n  },\n`;

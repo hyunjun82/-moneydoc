@@ -1,0 +1,12 @@
+{
+  "slug": "unemployment-fraud-report-guide",
+  "keyword": "실업급여 부정수급 자진신고와 조사 절차, 처벌부터 환수까지",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "부정수급",
+    "조사"
+  ],
+  "queries": [],
+  "sources": []
+}

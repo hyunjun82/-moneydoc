@@ -1,0 +1,12 @@
+{
+  "slug": "unemployment-education-guide",
+  "keyword": "실업급여 1차 집체교육과 온라인교육, 2차 동영상부터 취업특강까지",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "교육",
+    "취업특강"
+  ],
+  "queries": [],
+  "sources": []
+}

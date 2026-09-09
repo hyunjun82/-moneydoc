@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-job-search-guide";
 
 export const html = `<h1>실업급여 구직활동 인정 기준과 증빙 남기는 법</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-04</span></div>
 <img class="v2-hero" src="/og/unemployment-job-search-guide.png" width="1200" height="630" alt="실업급여 구직활동 인정 기준과 인정되지 않는 활동">
 <p class="v2-lead v2-intro">실업인정일에 활동을 신고하면 담당직원이 근로 의사와 능력을 가지고 적극적으로 재취업활동을 했는지 확인해요. 형식만 갖춘 활동은 인정되지 않고, 필요하면 지원한 회사에 사실관계를 확인하기도 해요. 무엇이 인정되고 무엇이 걸리는지, 증빙은 어떻게 남기는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -114,7 +114,7 @@ export const html = `<h1>실업급여 구직활동 인정 기준과 증빙 남�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제44조(실업의 인정), 실업인정 및 재취업지원규정 제10조(재취업활동 여부의 확인), 제15조(구직급여의 지급정지 등).
-<b>정부 도구</b>고용24의 실업인정 신청 화면에서 활동 유형과 증빙 항목을 확인했어요 (2026-09-02 확인).
+<b>정부 도구</b>고용24의 실업인정 신청 화면에서 활동 유형과 증빙 항목을 확인했어요 (2026-09-04 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/round-4/"><b>다음 질문</b>실업급여 4차 실업인정, 회차별 인정일 간격과 심층상담</a><a href="/unemployment/apply/"><b>다음 질문</b>실업급여 신청 방법 5단계, 고용24 구직신청부터 실업인정까지</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -185,7 +185,7 @@ export const landing = {
     "line2": "무엇이 인정되나요",
     "sub1": "지원했다고 다 인정되는 게 아니에요",
     "sub2": "같은 회사 반복 지원과 탐문만 하는 경우는 인정되지 않아요",
-    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-02 검증",
+    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-04 검증",
     "card": {
       "label": "인정되지 않는 활동",
       "big": "7",
@@ -195,7 +195,7 @@ export const landing = {
     },
     "alt": "실업급여 구직활동 인정 기준과 인정되지 않는 활동"
   },
-  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-02",
+  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-04",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

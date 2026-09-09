@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-voluntary-guide";
 
 export const html = `<h1>자발적 퇴사 실업급여 인정 사유와 증빙 서류</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">고용보험법 시행규칙 별표2 원문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">고용보험법 시행규칙 별표2 원문 대조 · 2026-09-04</span></div>
 <img class="v2-hero" src="/og/unemployment-voluntary-guide.png" width="1200" height="630" alt="자발적 퇴사 실업급여 인정 사유 17가지와 증빙 서류">
 <p class="v2-lead v2-intro">자진퇴사하면 실업급여를 못 받는다고 알고 계신 분이 많아요. 그런데 법은 그렇게 적지 않았어요. 정해진 제한 사유에 해당하지 않으면 된다고 했고, 정당한 사유는 시행규칙에 목록으로 나와 있어요. 임금이 밀렸거나, 괴롭힘을 당했거나, 회사가 멀어졌거나, 아파서 그만둔 경우가 모두 들어가요. 인정 사유가 무엇인지, 사유마다 어떤 증빙 서류가 필요한지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -131,7 +131,7 @@ export const html = `<h1>자발적 퇴사 실업급여 인정 사유와 증빙 �
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제40조(구직급여의 수급 요건), 제58조(이직 사유에 따른 수급자격의 제한), 고용보험법 시행규칙 제101조제2항 및 별표 2(수급자격이 제한되지 아니하는 정당한 이직 사유).
-<b>정부 도구</b>법제처 생활법령의 구직급여 수급자격 안내에 실린 정당한 이직 사유 목록과 대조했어요 (2026-09-02 확인).
+<b>정부 도구</b>법제처 생활법령의 구직급여 수급자격 안내에 실린 정당한 이직 사유 목록과 대조했어요 (2026-09-04 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/eligibility/"><b>다음 질문</b>실업급여 수급자격 4가지 조건, 180일과 이직 사유 정리</a><a href="/unemployment/apply/"><b>다음 질문</b>실업급여 신청 방법 5단계, 고용24 구직신청부터 실업인정까지</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -202,7 +202,7 @@ export const landing = {
     "line2": "인정되는 사유가 있어요",
     "sub1": "스스로 그만둬도 정당한 사유면 수급자격이 인정돼요",
     "sub2": "시행규칙 별표 2의 사유를 세부까지 펼치면 17가지예요",
-    "foot": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-02 검증",
+    "foot": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-04 검증",
     "card": {
       "label": "인정 사유",
       "big": "17",
@@ -212,7 +212,7 @@ export const landing = {
     },
     "alt": "자발적 퇴사 실업급여 인정 사유 17가지와 증빙 서류"
   },
-  "badge": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-02",
+  "badge": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-04",
   "basis": "2026년 9월 기준",
   "readMinutes": 8,
   "quick": [

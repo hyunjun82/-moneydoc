@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-part-time-job-guide";
 
 export const html = `<h1>실업급여 알바 신고 방법, 안 하면 부정수급인가요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행규칙 취업 인정기준 원문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행규칙 취업 인정기준 원문 대조 · 2026-09-04</span></div>
 <img class="v2-hero" src="/og/unemployment-part-time-job-guide.png" width="1200" height="630" alt="실업급여 알바 신고 기준과 취업으로 보는 경우">
 <p class="v2-lead v2-intro">실업급여를 받는 동안 아르바이트를 하면 안 되는 줄 아는 분이 많아요. 그렇지 않아요. 일을 할 수는 있고, 대신 실업인정을 받으려는 기간에 일한 사실이 있으면 신고해야 해요. 문제는 어디까지가 신고 대상이냐인데, 시행규칙에 취업으로 보는 기준이 유형별로 정해져 있어요. 기준과 신고 방법, 안 했을 때 생기는 일을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -105,7 +105,7 @@ export const html = `<h1>실업급여 알바 신고 방법, 안 하면 부정수
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제47조(실업인정대상기간 중의 취업 등의 신고), 제61조(부정행위에 따른 급여의 지급 제한), 제62조(반환명령 등), 고용보험법 시행규칙 제92조(취업의 인정기준), 실업인정 및 재취업지원규정 제11조(취업 여부의 확인).
-<b>정부 도구</b>고용24의 실업인정 신청 화면에서 취업과 소득 신고 항목을 확인했어요 (2026-09-02 확인).
+<b>정부 도구</b>고용24의 실업인정 신청 화면에서 취업과 소득 신고 항목을 확인했어요 (2026-09-04 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/job-search/"><b>다음 질문</b>실업급여 구직활동 인정 기준과 증빙 만드는 법</a><a href="/unemployment/exit-code/"><b>다음 질문</b>실업급여 이직코드 종류와 뜻, 23번 32번은 무슨 사유인가요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -200,7 +200,7 @@ export const landing = {
     "line2": "어디까지 신고해야 하나요",
     "sub1": "일한 사실은 실업인정일에 신고해야 해요",
     "sub2": "하루 대가가 66,048원 이상이면 취업으로 봐요",
-    "foot": "고용보험법 시행규칙 취업 인정기준 원문 대조 · 2026-09-02 검증",
+    "foot": "고용보험법 시행규칙 취업 인정기준 원문 대조 · 2026-09-04 검증",
     "card": {
       "label": "취업으로 보는 기준",
       "big": "8",
@@ -210,7 +210,7 @@ export const landing = {
     },
     "alt": "실업급여 알바 신고 기준과 취업으로 보는 경우"
   },
-  "badge": "고용보험법 시행규칙 취업 인정기준 원문 대조 · 2026-09-02",
+  "badge": "고용보험법 시행규칙 취업 인정기준 원문 대조 · 2026-09-04",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

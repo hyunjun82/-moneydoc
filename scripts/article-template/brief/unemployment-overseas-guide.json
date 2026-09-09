@@ -1,0 +1,12 @@
+{
+  "slug": "unemployment-overseas-guide",
+  "keyword": "실업급여 해외여행과 실업인정일, 날짜변경 안 하면 부정수급인가요?",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "해외",
+    "부정수급"
+  ],
+  "queries": [],
+  "sources": []
+}

@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-layoff-guide";
 
 export const html = `<h1>권고사직 실업급여 신청 방법과 회사가 받는 불이익</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법과 시행령 지원금 제한 원문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법과 시행령 지원금 제한 원문 대조 · 2026-09-04</span></div>
 <img class="v2-hero" src="/og/unemployment-layoff-guide.png" width="1200" height="630" alt="권고사직 실업급여 신청 방법과 회사가 받는 불이익">
 <p class="v2-lead v2-intro">회사가 그만두라고 해서 나온 경우를 권고사직이라고 해요. 형식은 사직서를 내는 것이라 자발적 퇴사처럼 보이지만, 실제로는 회사 사정으로 나온 것이라 정당한 이직 사유로 인정돼요. 다만 사직서에 개인 사정이라고만 적어 두면 나중에 증명이 어려워져요. 어떻게 신청하는지, 사직서에 무엇을 남겨야 하는지, 회사는 어떤 불이익을 받는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -109,7 +109,7 @@ export const html = `<h1>권고사직 실업급여 신청 방법과 회사가 �
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제58조(이직 사유에 따른 수급자격의 제한), 고용보험법 시행규칙 별표 2(정당한 이직 사유), 고용보험법 시행령 제19조(고용유지지원금), 제26조(고용촉진장려금).
-<b>정부 도구</b>법제처 생활법령의 구직급여 수급자격 안내에 실린 정당한 이직 사유 목록과 대조했어요 (2026-09-02 확인).
+<b>정부 도구</b>법제처 생활법령의 구직급여 수급자격 안내에 실린 정당한 이직 사유 목록과 대조했어요 (2026-09-04 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/voluntary/"><b>다음 질문</b>자발적 퇴사 실업급여 인정 사유와 증빙 서류 총정리</a><a href="/unemployment/apply/"><b>다음 질문</b>실업급여 신청 방법 5단계, 고용24 구직신청부터 실업인정까지</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -196,7 +196,7 @@ export const landing = {
     "line2": "신청 방법과 회사 불이익",
     "sub1": "회사 사정으로 퇴직을 권고받은 경우는 정당한 이직 사유예요",
     "sub2": "회사는 고용촉진장려금 같은 지원금이 제한될 수 있어요",
-    "foot": "고용보험법과 시행령 지원금 제한 원문 대조 · 2026-09-02 검증",
+    "foot": "고용보험법과 시행령 지원금 제한 원문 대조 · 2026-09-04 검증",
     "card": {
       "label": "권고사직",
       "big": "정당한",
@@ -206,7 +206,7 @@ export const landing = {
     },
     "alt": "권고사직 실업급여 신청 방법과 회사가 받는 불이익"
   },
-  "badge": "고용보험법과 시행령 지원금 제한 원문 대조 · 2026-09-02",
+  "badge": "고용보험법과 시행령 지원금 제한 원문 대조 · 2026-09-04",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

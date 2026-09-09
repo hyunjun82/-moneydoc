@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "acquisition-tax-guide";
 
 export const html = `<h1>집 살 때 취득세 세율과 계산, 생애최초 감면부터 다주택 중과까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">위택스 지방세 미리계산과 1원 단위 일치 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">위택스 지방세 미리계산과 1원 단위 일치 · 2026-09-03</span></div>
 <img class="v2-hero" src="/og/acquisition-tax-guide.png" width="1200" height="630" alt="집 살 때 취득세 계산. 5억원짜리 집을 처음 사면 5,500,000원">
 <p class="v2-lead v2-intro">집을 사면 잔금을 치른 뒤 60일 안에 취득세를 내야 해요. 세율은 집값 6억원과 9억원에서 갈리고, 이미 집이 있으면 지역에 따라 8%나 12%로 뛰어요. 5억원짜리 집을 무주택 상태에서 처음 사면 취득세 5,000,000원에 지방교육세 500,000원을 더해 5,500,000원이에요. 여기에 전용면적이 85㎡를 넘으면 농어촌특별세가 붙어요. 세율 구조, 집값별 금액, 생애최초 감면, 중과 기준을 차례대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -186,7 +186,7 @@ export const html = `<h1>집 살 때 취득세 세율과 계산, 생애최초 �
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>지방세법 제11조(부동산 취득의 세율), 제13조의2(주택 취득 중과), 제20조(신고 및 납부, 60일), 제151조(지방교육세). 지방세법 시행령(주택 수 산정과 일시적 2주택). 지방세특례제한법 제36조의3(생애최초 주택 구입 감면), 제36조의5(출산·양육 주택 감면). 농어촌특별세법 제4조(비과세), 제5조(과세표준과 세율).
-<b>정부 도구</b>위택스 지방세 미리계산과 이 글의 금액이 1원 단위까지 같아요 (2026-09-02 대조).
+<b>정부 도구</b>위택스 지방세 미리계산과 이 글의 금액이 1원 단위까지 같아요 (2026-09-03 대조).
 </div>
 <div class="v2-rel"><a href="/acquisition-tax/"><b>계산기</b>취득세 계산기</a><a href="/property-tax/"><b>부동산 계산기</b>재산세 계산기</a><a href="/transfer-tax/"><b>부동산 계산기</b>양도소득세 계산기</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -265,7 +265,7 @@ export const landing = {
     "line2": "얼마 내나요",
     "sub1": "5억 · 전용 84㎡ · 첫 집 → 5,500,000원",
     "sub2": "취득세 5,000,000원 + 지방교육세 500,000원",
-    "foot": "위택스 지방세 미리계산과 1원 단위 일치 · 2026-09-02 검증",
+    "foot": "위택스 지방세 미리계산과 1원 단위 일치 · 2026-09-03 검증",
     "card": {
       "label": "취득세 합계",
       "big": "5,500,000",
@@ -279,7 +279,7 @@ export const landing = {
     "href": "/acquisition-tax/calculator/",
     "label": "취득세 계산기 바로가기"
   },
-  "badge": "위택스 지방세 미리계산과 1원 단위 일치 · 2026-09-02",
+  "badge": "위택스 지방세 미리계산과 1원 단위 일치 · 2026-09-03",
   "basis": "2026년 9월 기준",
   "readMinutes": 8,
   "quick": [

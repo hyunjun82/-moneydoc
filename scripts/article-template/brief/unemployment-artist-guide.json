@@ -1,0 +1,13 @@
+{
+  "slug": "unemployment-artist-guide",
+  "keyword": "예술인 고용보험 실업급여와 신청 방법, 소득 활동과 계산기",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "예술인",
+    "신청 절차",
+    "노무제공자"
+  ],
+  "queries": [],
+  "sources": []
+}

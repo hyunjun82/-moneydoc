@@ -1,0 +1,13 @@
+{
+  "slug": "unemployment-change-date-guide",
+  "keyword": "실업급여 첫인정일과 방문인정일, 실업인정 신청과 불참했을 때",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "첫인정일",
+    "방문인정일",
+    "실업인정"
+  ],
+  "queries": [],
+  "sources": []
+}

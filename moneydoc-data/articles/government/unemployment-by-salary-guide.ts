@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-by-salary-guide";
 
 export const html = `<h1>실업급여 금액, 월급별 하루 얼마 받나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 구직급여일액 원문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 구직급여일액 원문 대조 · 2026-09-04</span></div>
 <img class="v2-hero" src="/og/unemployment-by-salary-guide.png" width="1200" height="630" alt="월급별 실업급여 1일 수령액 표. 월 300만원이면 하루 66,048원">
 <p class="v2-lead v2-intro">실업급여가 하루 얼마인지는 평균임금으로 정해져요. 원칙은 평균임금의 60퍼센트인데, 위아래로 막아 둔 금액이 있어서 실제로는 좁은 범위에 몰려요. 월급별로 하루 얼마를 받는지 표로 만들었어요. 어느 구간에서 하한액에 걸리고 어디부터 상한액에 걸리는지 한눈에 보여요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -107,7 +107,7 @@ export const html = `<h1>실업급여 금액, 월급별 하루 얼마 받나요<
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제45조(급여의 기초가 되는 임금일액), 제46조(구직급여일액), 고용보험법 시행령 제68조(기초일액의 상한액).
-<b>정부 도구</b>고용24 실업급여 모의계산 결과와 월급 구간별 금액을 대조했어요 (2026-09-02 확인).
+<b>정부 도구</b>고용24 실업급여 모의계산 결과와 월급 구간별 금액을 대조했어요 (2026-09-04 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/calculator/"><b>계산기</b>실업급여 계산기</a><a href="/unemployment/amount/"><b>다음 질문</b>2026년 실업급여 상한액 하한액, 하루 얼마까지 받나요</a><a href="/unemployment/days/"><b>다음 질문</b>실업급여 소정급여일수 표, 나이와 가입기간별 며칠 받나</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -178,7 +178,7 @@ export const landing = {
     "line2": "내 월급이면 얼마인가요",
     "sub1": "월 180만원과 600만원의 하루 차이가 2,052원이에요",
     "sub2": "월급이 두 배 넘게 차이 나도 받는 돈은 비슷해요",
-    "foot": "고용보험법 구직급여일액 원문 대조 · 2026-09-02 검증",
+    "foot": "고용보험법 구직급여일액 원문 대조 · 2026-09-04 검증",
     "card": {
       "label": "월 300만원이면",
       "big": "66,048",
@@ -192,7 +192,7 @@ export const landing = {
     "href": "/unemployment/calculator/",
     "label": "표에 없는 월급 계산해 보기"
   },
-  "badge": "고용보험법 구직급여일액 원문 대조 · 2026-09-02",
+  "badge": "고용보험법 구직급여일액 원문 대조 · 2026-09-04",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

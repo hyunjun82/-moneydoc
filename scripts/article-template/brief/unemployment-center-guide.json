@@ -1,0 +1,13 @@
+{
+  "slug": "unemployment-center-guide",
+  "keyword": "실업급여 문의 전화번호와 고용센터 방문, 신청장소와 고용24",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "고용센터",
+    "문의",
+    "방문"
+  ],
+  "queries": [],
+  "sources": []
+}

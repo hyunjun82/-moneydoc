@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "freelancer-tax-guide";
 
 export const html = `<h1>프리랜서 3.3% 원천징수와 환급, 경비율부터 5월 신고까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">소득세법 원천징수세율과 누진세율표 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">소득세법 원천징수세율과 누진세율표 대조 · 2026-09-03</span></div>
 <img class="v2-hero" src="/og/freelancer-tax-guide.png" width="1200" height="630" alt="프리랜서 3.3% 원천징수. 300만원을 받으면 99,000원을 떼고 2,901,000원이 들어와요">
 <p class="v2-lead v2-intro">프리랜서로 일하고 돈을 받으면 3.3%를 떼고 들어와요. 300만원이면 99,000원을 떼고 2,901,000원이 통장에 찍혀요. 이 3.3%는 확정된 세금이 아니라 미리 걷어 둔 돈이에요. 다음 해 5월에 종합소득세 신고를 하면 실제 세금과 비교해서 남으면 돌려받고 모자라면 더 내요. 연 수입 3,600만원에 경비를 60%로 잡으면 약 413,600원을 돌려받아요. 3.3%의 구조, 경비율, 환급액, 신고 방법 순서로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -170,7 +170,7 @@ export const html = `<h1>프리랜서 3.3% 원천징수와 환급, 경비율부�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>소득세법 제127조(원천징수의무, 원천징수대상 사업소득), 제129조(원천징수세율, 사업소득 100분의 3), 제70조(5월 1일부터 5월 31일 확정신고), 제80조(추계결정). 소득세법 시행령 제143조(추계결정과 단순경비율 적용대상자), 제145조(기준경비율). 국세청 경비율 고시(업종별 단순경비율과 기준경비율, 인적용역 기본율과 초과율). 국세기본법 제47조의2(무신고가산세), 제48조(가산세 감면). 지방세법(개인지방소득세 특별징수).
-<b>정부 도구</b>홈택스 종합소득세 신고 화면의 세율표와 이 글의 계산이 같은 값이에요 (2026-09-02 대조).
+<b>정부 도구</b>홈택스 종합소득세 신고 화면의 세율표와 이 글의 계산이 같은 값이에요 (2026-09-03 대조).
 </div>
 <div class="v2-rel"><a href="/freelancer/"><b>계산기</b>프리랜서 3.3% 계산기</a><a href="/income-tax/"><b>세금 계산기</b>종합소득세 계산기</a><a href="/income-tax/"><b>세금 가이드</b>종합소득세 세율과 계산 방법</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -249,7 +249,7 @@ export const landing = {
     "line2": "얼마나 돌려받나",
     "sub1": "300만원 받으면 99,000원 떼고 2,901,000원",
     "sub2": "연 수입 3,600만원이면 5월 신고로 약 413,600원 환급",
-    "foot": "원천징수세율과 종합소득세 누진세율표 대조 · 2026-09-02 검증",
+    "foot": "원천징수세율과 종합소득세 누진세율표 대조 · 2026-09-03 검증",
     "card": {
       "label": "떼는 세금",
       "big": "99,000",
@@ -263,7 +263,7 @@ export const landing = {
     "href": "/freelancer/calculator/",
     "label": "프리랜서 3.3% 계산기 바로가기"
   },
-  "badge": "소득세법 원천징수세율과 누진세율표 대조 · 2026-09-02",
+  "badge": "소득세법 원천징수세율과 누진세율표 대조 · 2026-09-03",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

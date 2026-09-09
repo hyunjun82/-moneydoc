@@ -1,0 +1,13 @@
+{
+  "slug": "unemployment-industrial-accident-guide",
+  "keyword": "산재 휴업급여와 실업급여 중복, 지급 기간과 산재 종결 후 신청 방법",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "산재",
+    "휴업급여",
+    "중복"
+  ],
+  "queries": [],
+  "sources": []
+}

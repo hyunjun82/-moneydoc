@@ -1,0 +1,27 @@
+{
+  "slug": "unemployment-tax-guide",
+  "keyword": "실업급여 세금",
+  "calc": "government/unemployment-benefit",
+  "mustInclude": ["세금", "비과세"],
+  "queries": [
+    "실업급여 세금",
+    "실업급여 세금 떼나요",
+    "실업급여 비과세",
+    "실업급여 종합소득세",
+    "실업급여 연말정산"
+  ],
+  "sources": [
+    {
+      "label": "소득세법 (제12조 비과세소득 — 고용보험법에 따라 받는 실업급여)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법",
+      "must": ["제12조", "실업급여"]
+    },
+    {
+      "label": "소득세법 시행령 (종합소득 과세표준 확정신고)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법시행령",
+      "must": ["종합소득"]
+    }
+  ]
+}

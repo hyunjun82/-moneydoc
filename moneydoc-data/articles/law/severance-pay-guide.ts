@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "severance-pay-guide";
 
 export const html = `<h1>퇴직금 계산 방법과 지급기준, 평균임금부터 14일 지급기한까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용노동부 퇴직금 계산기와 1원 단위 일치 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용노동부 퇴직금 계산기와 1원 단위 일치 · 2026-09-03</span></div>
 <img class="v2-hero" src="/og/severance-pay-guide.png" width="1200" height="630" alt="퇴직금 계산 방법. 월급 300만원으로 5년 일하면 퇴직금 14,673,913원">
 <p class="v2-lead v2-intro">퇴직금은 "월급 곱하기 근속연수"가 아니에요. 퇴사 직전 3개월 평균임금으로 계산하고, 그 안에 상여금과 연차수당까지 들어가요. 월급 300만원으로 5년 일했다면 14,673,913원이고, 같은 조건에서 상여금 600만원과 연차수당이 있으면 17,608,697원으로 늘어요. 계산 순서, 근속별 금액표, 지급 기한과 못 받았을 때 할 일을 순서대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -158,7 +158,7 @@ export const html = `<h1>퇴직금 계산 방법과 지급기준, 평균임금�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>근로자퇴직급여 보장법 제4조(퇴직급여제도의 설정, 1년 미만·주 15시간 미만 제외), 제8조(계속근로기간 1년에 대하여 30일분 이상의 평균임금), 제9조(퇴사일부터 14일 이내 지급). 같은 법 시행령 제3조(중간정산 사유). 근로기준법 제2조(평균임금 정의, 평균임금이 통상임금보다 적으면 통상임금). 소득세법(퇴직소득 계산).
-<b>정부 도구</b>고용노동부 퇴직금 계산기와 이 글의 금액이 1원 단위까지 같아요 (2026-09-02 대조).
+<b>정부 도구</b>고용노동부 퇴직금 계산기와 이 글의 금액이 1원 단위까지 같아요 (2026-09-03 대조).
 </div>
 <div class="v2-rel"><a href="/severance/"><b>계산기</b>퇴직금 계산기</a><a href="/retirement-tax/"><b>세금 계산기</b>퇴직소득세 계산기</a><a href="/annual-leave/"><b>법률 가이드</b>연차수당 계산법</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -229,7 +229,7 @@ export const landing = {
     "line2": "평균임금부터 14일까지",
     "sub1": "월급 300만원 · 5년 근무 → 14,673,913원",
     "sub2": "하루 평균임금 97,826원 × 30일 × (재직일수 ÷ 365)",
-    "foot": "고용노동부 퇴직금 계산기와 1원 단위 일치 · 2026-09-02 검증",
+    "foot": "고용노동부 퇴직금 계산기와 1원 단위 일치 · 2026-09-03 검증",
     "card": {
       "label": "퇴직금",
       "big": "14,673,913",
@@ -243,7 +243,7 @@ export const landing = {
     "href": "/severance/calculator/",
     "label": "퇴직금 계산기 바로가기"
   },
-  "badge": "고용노동부 퇴직금 계산기와 1원 단위 일치 · 2026-09-02",
+  "badge": "고용노동부 퇴직금 계산기와 1원 단위 일치 · 2026-09-03",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

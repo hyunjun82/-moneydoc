@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "annual-leave-allowance-guide";
 
 export const html = `<h1>연차수당 계산과 발생 기준, 입사 1년부터 미사용 수당 지급까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">근로기준법 연차 규정과 통상임금 산정 기준 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">근로기준법 연차 규정과 통상임금 산정 기준 대조 · 2026-09-03</span></div>
 <img class="v2-hero" src="/og/annual-leave-allowance-guide.png" width="1200" height="630" alt="연차수당 계산. 월 통상임금 300만원이면 하루 114,832원, 5일이면 574,160원">
 <p class="v2-lead v2-intro">연차는 1년간 80퍼센트 이상 출근하면 15일이 생겨요. 다 쓰지 못하고 남으면 돈으로 받는데, 이게 연차수당이에요. 월 통상임금이 300만원이면 시간당 14,354원, 하루 114,832원이라 5일이 남으면 574,160원을 받아요. 며칠이 생기는지, 1년을 못 채운 신입은 어떻게 되는지, 수당은 언제 어떻게 받는지 순서대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -164,7 +164,7 @@ export const html = `<h1>연차수당 계산과 발생 기준, 입사 1년부터
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>근로기준법 제60조(연차 유급휴가, 1년 80퍼센트 출근 시 15일, 1년 미만 월 개근 1일, 3년 이상 가산과 25일 한도, 1년 미사용 시 소멸), 제61조(연차 유급휴가의 사용 촉진), 제49조(임금채권 3년 소멸시효), 제18조제3항(주 15시간 미만 적용 제외). 근로기준법 시행령 제6조(통상임금 시간급 산정).
-<b>정부 도구</b>고용노동부 연차수당 산정 기준과 이 글의 계산이 같은 방식이에요 (2026-09-02 대조).
+<b>정부 도구</b>고용노동부 연차수당 산정 기준과 이 글의 계산이 같은 방식이에요 (2026-09-03 대조).
 </div>
 <div class="v2-rel"><a href="/annual-leave/"><b>계산기</b>연차수당 계산기</a><a href="/severance/"><b>법률 계산기</b>퇴직금 계산기</a><a href="/severance/"><b>법률 가이드</b>퇴직금 계산 방법과 지급기준</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -243,7 +243,7 @@ export const landing = {
     "line2": "내 하루 얼마",
     "sub1": "월 통상임금 300만원 → 하루 114,832원",
     "sub2": "5일을 못 쓰면 574,160원을 받아요",
-    "foot": "근로기준법 연차 규정과 통상임금 산정 기준 대조 · 2026-09-02 검증",
+    "foot": "근로기준법 연차 규정과 통상임금 산정 기준 대조 · 2026-09-03 검증",
     "card": {
       "label": "연차수당",
       "big": "574,160",
@@ -257,7 +257,7 @@ export const landing = {
     "href": "/annual-leave/calculator/",
     "label": "연차수당 계산기 바로가기"
   },
-  "badge": "근로기준법 연차 규정과 통상임금 산정 기준 대조 · 2026-09-02",
+  "badge": "근로기준법 연차 규정과 통상임금 산정 기준 대조 · 2026-09-03",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

@@ -29,7 +29,7 @@ export default function article({ VERIFIED }) {
       quick: [
         { chip: '두 달 넘게 밀렸어요', selected: true, big: '인정 사유', unit: '판단', sub: '자진퇴사여도 기간 요건을 채웠다면 인정돼요' },
         { chip: '한 번만 밀렸어요', selected: false, big: '기간 부족', unit: '판단', sub: '이직일 전 1년 이내에 2개월 이상이어야 해요' },
-        { chip: '일부만 밀렸어요', selected: false, big: '사정을 봐요', unit: '판단', sub: '체불 규모와 기간을 함께 보고 판단해요' },
+        { chip: '일부만 밀렸어요', selected: false, big: '경우별', unit: '판단', sub: '체불 규모와 기간을 함께 보고 판단해요' },
       ],
       boxes: [
         { title: '임금체불은 목록에 있어요', text: '시행규칙 별표가 정한 정당한 이직 사유 중 하나예요' },

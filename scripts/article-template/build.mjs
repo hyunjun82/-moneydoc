@@ -30,7 +30,12 @@ import { ARTICLES } from './articles/index.mjs';
 const require = createRequire(import.meta.url);
 const { calculators } = require(path.join(ROOT, 'lib/calc/engine.js'));
 const loadSpec = (p) => require(path.join(ROOT, 'moneydoc-data/calculators', `${p}.json`));
-const VERIFIED = '2026-09-02';
+// "원문 대조 · 날짜" 배지의 날짜. 상수로 박아 두면 언제 써도 같은 날을 찍는다 (2026-09-02 고정으로 나간 실측, 발행일 사고와 같은 종류).
+// 근거 수집일로 뒀더니 "오늘 썼는데 왜 옛날 날짜냐"고 매번 헷갈렸다(2026-09-08). 독자가 보는 건 결국 "오늘 대조했다"는 사실이니
+// 빌드(=대조가 실행되는 순간)한 날을 그대로 쓴다. datePublished 와 항상 같다.
+function verifiedDateFor() {
+  return new Date().toISOString().slice(0, 10);
+}
 
 const args = process.argv.slice(2);
 const flags = new Set(args.filter((a) => a.startsWith('--')));
@@ -48,6 +53,7 @@ for (const slug of slugs) {
   const eng = collectEngineNums(calculators, usedSpecs);
   // derive(v): 엔진 상수의 산술 파생값(상한×30일 등)을 엔진 값으로 등록한다. 손으로 친 숫자는 여기 못 넣는다(인자가 식이어야 함)
   const derive = (v) => { eng.nums.add(String(v)); eng.nums.add(String(Math.round(v))); return v; };
+  const VERIFIED = verifiedDateFor();
   const a = mod.default({ calculators: eng.calculators, loadSpec: loadSpecTracked, VERIFIED, derive });
   for (const sp of usedSpecs) collectEngineNums({}, [sp]).nums.forEach((n) => eng.nums.add(n));
   if (a.slug !== slug) throw new Error(`${slug}: 스펙 slug 불일치 (${a.slug})`);

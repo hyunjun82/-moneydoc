@@ -118,6 +118,25 @@
     "government/unemployment-startup-guide": "unemployment/startup",
     "government/unemployment-harassment-guide": "unemployment/harassment",
     "government/unemployment-last-round-guide": "unemployment/last-round",
-    "government/unemployment-job-support-guide": "unemployment/job-support"
+    "government/unemployment-job-support-guide": "unemployment/job-support",
+    "government/unemployment-student-guide": "unemployment/student",
+    "government/unemployment-special-worker-guide": "unemployment/special-worker",
+    "government/unemployment-artist-guide": "unemployment/artist",
+    "government/unemployment-unfair-dismissal-guide": "unemployment/unfair-dismissal",
+    "government/unemployment-pregnancy-guide": "unemployment/pregnancy",
+    "government/unemployment-tax-guide": "unemployment/tax",
+    "government/unemployment-center-guide": "unemployment/center",
+    "government/unemployment-interview-guide": "unemployment/interview",
+    "government/unemployment-change-date-guide": "unemployment/change-date",
+    "government/unemployment-industrial-accident-guide": "unemployment/industrial-accident",
+    "government/unemployment-changes-2026-guide": "unemployment/changes-2026",
+    "government/unemployment-education-guide": "unemployment/education",
+    "government/unemployment-give-up-guide": "unemployment/give-up",
+    "government/unemployment-study-guide": "unemployment/study",
+    "government/unemployment-employer-guide": "unemployment/employer",
+    "government/unemployment-overseas-guide": "unemployment/overseas",
+    "government/unemployment-fraud-report-guide": "unemployment/fraud-report",
+    "government/unemployment-platform-guide": "unemployment/platform",
+    "government/unemployment-eitc-guide": "unemployment/eitc"
   }
 }

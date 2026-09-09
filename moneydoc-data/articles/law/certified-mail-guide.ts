@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "certified-mail-guide";
 
 export const html = `<h1>내용증명 작성 방법과 양식, 임대차부터 채권 회수까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">우편법 시행규칙과 민법 조문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">우편법 시행규칙과 민법 조문 대조 · 2026-09-03</span></div>
 <img class="v2-hero" src="/og/certified-mail-guide.png" width="1200" height="630" alt="내용증명 작성 방법. 원본 한 통과 등본 두 통을 우체국에 제출해요">
 <p class="v2-lead v2-intro">내용증명은 특별한 힘을 가진 문서가 아니에요. 언제 누가 누구에게 어떤 내용을 보냈는지 우체국이 증명해 주는 우편 서비스예요. 그래도 실무에서는 중요한 역할을 해요. 상대에게 심리적 압박을 주고, 나중에 소송으로 갔을 때 청구한 사실을 증명하는 자료가 되며, 이행을 청구한 시점을 남겨 지체 책임을 따질 수 있어요. 무엇을 적는지, 어떻게 보내는지, 어떤 효력이 있는지 순서대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -144,7 +144,7 @@ export const html = `<h1>내용증명 작성 방법과 양식, 임대차부터 �
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>우편법 시행규칙 제46조(내용증명 취급 대상 문서), 제47조(동문내용증명), 제48조(원본과 등본 2통 제출), 제52조(원본과 등본 대조와 계인), 제54조(발송 후 재증명 청구, 3년), 제55조(등본 열람청구, 3년). 민법 제168조(소멸시효의 중단사유), 제174조(최고와 시효중단, 6월), 제387조(이행기와 이행지체). 주택임대차보호법 제6조(계약의 갱신), 제6조의2(묵시적 갱신의 경우 계약의 해지, 3개월).
-<b>정부 도구</b>인터넷우체국의 내용증명 접수 절차를 기준으로 정리했어요 (2026-09-02 확인).
+<b>정부 도구</b>인터넷우체국의 내용증명 접수 절차를 기준으로 정리했어요 (2026-09-03 확인).
 </div>
 <div class="v2-rel"><a href="/severance/claim/"><b>법률 가이드</b>퇴직금 못 받았을 때 지급명령과 소장</a><a href="/unpaid-wages/"><b>법률 가이드</b>임금체불 진정 방법과 지연이자</a><a href="/unpaid-wages/"><b>계산기</b>임금체불 지연이자 계산기</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -223,7 +223,7 @@ export const landing = {
     "line2": "어떻게 보내나요",
     "sub1": "원본 한 통과 등본 두 통을 우체국에 내면 돼요",
     "sub2": "보낸 날짜와 내용을 우체국이 3년 동안 보관해요",
-    "foot": "우편법 시행규칙과 민법 조문 대조 · 2026-09-02 검증",
+    "foot": "우편법 시행규칙과 민법 조문 대조 · 2026-09-03 검증",
     "card": {
       "label": "준비할 서류",
       "big": "3",
@@ -237,7 +237,7 @@ export const landing = {
     "href": "/law/",
     "label": "법률 계산기 모아보기"
   },
-  "badge": "우편법 시행규칙과 민법 조문 대조 · 2026-09-02",
+  "badge": "우편법 시행규칙과 민법 조문 대조 · 2026-09-03",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

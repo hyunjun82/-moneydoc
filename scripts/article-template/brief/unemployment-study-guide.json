@@ -1,0 +1,12 @@
+{
+  "slug": "unemployment-study-guide",
+  "keyword": "실업급여 내일배움카드 30시간, 구직활동 인정과 수강 증명서",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "내일배움카드",
+    "구직활동"
+  ],
+  "queries": [],
+  "sources": []
+}

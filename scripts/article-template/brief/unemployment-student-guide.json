@@ -1,0 +1,12 @@
+{
+  "slug": "unemployment-student-guide",
+  "keyword": "대학생도 실업급여 되나요, 알바 기준과 단기알바 주말알바",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "대학생",
+    "아르바이트"
+  ],
+  "queries": [],
+  "sources": []
+}

@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-severance-guide";
 
 export const html = `<h1>실업급여 퇴직금 같이 받을 수 있나요, 신고부터 지급기한까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">퇴직금 지급기한과 실업급여 신고 규정 원문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">퇴직금 지급기한과 실업급여 신고 규정 원문 대조 · 2026-09-05</span></div>
 <img class="v2-hero" src="/og/unemployment-severance-guide.png" width="1200" height="630" alt="실업급여와 퇴직금. 주는 곳이 달라 같이 받고 퇴직금은 퇴사한 날부터 14일 이내 지급">
 <p class="v2-lead v2-intro">퇴사하면 돈이 두 군데서 나와요. 회사가 주는 퇴직금과 고용보험이 주는 실업급여예요. 둘은 주는 곳도 조건도 달라서 하나를 받는다고 다른 하나가 깎이지 않아요. 이 글은 두 돈이 왜 겹치지 않는지, 퇴직금을 실업인정 때 신고해야 하는지, 퇴직금은 언제까지 들어와야 하는지를 하나씩 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -115,7 +115,7 @@ export const html = `<h1>실업급여 퇴직금 같이 받을 수 있나요, 신
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>근로자퇴직급여 보장법 제4조(퇴직급여제도의 설정), 제8조(퇴직금제도의 설정 등), 제9조(퇴직금의 지급 등), 제10조(퇴직금의 시효). 고용보험법 제40조(구직급여의 수급 요건), 제45조(급여의 기초가 되는 임금일액), 제46조(구직급여일액), 제47조(실업인정대상기간 중의 취업 등의 신고), 제49조(대기기간), 제58조(이직 사유에 따른 수급자격의 제한). 근로기준법 제2조(정의), 제36조(금품 청산), 제37조(미지급 임금에 대한 지연이자). 소득세법 제12조(비과세소득), 제22조(퇴직소득).
-<b>정부 도구</b>실업급여 금액은 고용24 모의계산과 대조한 실업급여 계산기 값이에요 (2026-09-02 기준). 퇴직금 금액은 MoneyDoc 퇴직금 계산기 값이에요.
+<b>정부 도구</b>실업급여 금액은 고용24 모의계산과 대조한 실업급여 계산기 값이에요 (2026-09-05 기준). 퇴직금 금액은 MoneyDoc 퇴직금 계산기 값이에요.
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/voluntary/"><b>다음 질문</b>자발적 퇴사도 실업급여 인정 사유가 되나요</a><a href="/unemployment/unpaid-wage-quit/"><b>다음 질문</b>임금체불로 퇴사하면 실업급여가 되나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -186,7 +186,7 @@ export const landing = {
     "line2": "같이 받나요",
     "sub1": "주는 곳이 달라서 둘 다 받아요",
     "sub2": "퇴직금은 퇴사한 날부터 14일 안이에요",
-    "foot": "퇴직금 지급기한과 실업급여 신고 규정 원문 대조 · 2026-09-02 검증",
+    "foot": "퇴직금 지급기한과 실업급여 신고 규정 원문 대조 · 2026-09-05 검증",
     "card": {
       "label": "퇴직금 지급기한",
       "big": "14",
@@ -196,7 +196,7 @@ export const landing = {
     },
     "alt": "실업급여와 퇴직금. 주는 곳이 달라 같이 받고 퇴직금은 퇴사한 날부터 14일 이내 지급"
   },
-  "badge": "퇴직금 지급기한과 실업급여 신고 규정 원문 대조 · 2026-09-02",
+  "badge": "퇴직금 지급기한과 실업급여 신고 규정 원문 대조 · 2026-09-05",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

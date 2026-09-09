@@ -1,0 +1,12 @@
+{
+  "slug": "unemployment-employer-guide",
+  "keyword": "실업급여 회사 불이익과 부담금, 안 해주는 이유와 요청 방법",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "불이익",
+    "부담금"
+  ],
+  "queries": [],
+  "sources": []
+}

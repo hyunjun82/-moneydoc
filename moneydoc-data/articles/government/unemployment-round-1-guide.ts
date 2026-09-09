@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-round-1-guide";
 
 export const html = `<h1>실업급여 1차 실업인정, 교육 이수와 첫 구직활동 신고</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-04</span></div>
 <img class="v2-hero" src="/og/unemployment-round-1-guide.png" width="1200" height="630" alt="실업급여 1차 실업인정일은 신고일부터 14일. 첫 회차는 7일치">
 <p class="v2-lead v2-intro">실업급여 1차 실업인정일은 실업신고일부터 14일이 되는 날이에요. 그날은 고용센터에 직접 가요. 1차와 4차는 인터넷 신청이 안 되거든요. 그 전에 구직신청과 수급자격 신청자 교육을 마쳐야 하고, 첫 회차에는 대기기간 7일을 뺀 7일치가 들어와요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -106,7 +106,7 @@ export const html = `<h1>실업급여 1차 실업인정, 교육 이수와 첫 �
 <div class="v2-src">
 <b>법령</b>고용보험법 제42조(실업의 신고), 제44조(실업의 인정), 제49조(대기기간), 실업인정 및 재취업지원규정 제6조(재취업지원·실업급여제도 안내), 제7조(재취업활동에 관한 지원), 제9조(출석 여부의 확인), 제12조(실업인정일의 지정).
 <b>정부 안내</b>고용24 실업인정 인터넷 신청 매뉴얼(1차·4차 출석), 고용노동부 인터넷상담 답변(2023년 8월). 회차별 활동 횟수는 2022년 7월 시행 정책브리핑.
-<b>정부 도구</b>고용24의 실업급여 신청과 실업인정 화면에서 순서를 확인했어요 (2026-09-02 확인).
+<b>정부 도구</b>고용24의 실업급여 신청과 실업인정 화면에서 순서를 확인했어요 (2026-09-04 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/job-search/"><b>다음 질문</b>실업급여 구직활동 인정 기준과 증빙 남기는 법</a><a href="/unemployment/round-4/"><b>다음 질문</b>실업급여 4차 실업인정, 회차별 인정일 간격과 심층상담</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -185,7 +185,7 @@ export const landing = {
     "line2": "언제 무엇을 하나요",
     "sub1": "1차 실업인정일은 실업신고일부터 14일이 되는 날이에요",
     "sub2": "대기기간 7일을 빼면 첫 회차는 7일치가 나와요",
-    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-02 검증",
+    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-04 검증",
     "card": {
       "label": "1차 실업인정일",
       "big": "14",
@@ -195,7 +195,7 @@ export const landing = {
     },
     "alt": "실업급여 1차 실업인정일은 신고일부터 14일. 첫 회차는 7일치"
   },
-  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-02",
+  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-04",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

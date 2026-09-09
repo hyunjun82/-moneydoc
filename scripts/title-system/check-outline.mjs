@@ -29,8 +29,10 @@ for (const s of spokes) {
     else if (!body.includes(norm(w))) (s.issue ? warns : fails).push(`${tag} 제목의 "${w}" 가 소제목에 없다`);
   }
 
-  if (s.h2.length < 5) fails.push(`${tag} 소제목이 ${s.h2.length}개다 (5개 이상)`);
-  const notQ = s.h2.filter((h) => !/(요|나|가|까)$/.test(h));
+  // 2026-09-08: 실측 검색어 4갈래로 딱 떨어지는 주제는 4개가 자연스럽다(lint.mjs 와 맞춤). 억지 5번째는 내용 없는 소제목을 낳는다.
+  if (s.h2.length < 4) fails.push(`${tag} 소제목이 ${s.h2.length}개다 (4개 이상)`);
+  // 소제목 끝에 물음표를 다는 편(사람이 직접 뽑은 소제목)도 있다. "?" 는 있어도 없어도 질문형 판정에 넣는다.
+  const notQ = s.h2.filter((h) => !/(요|나|가|까)\??$/.test(h));
   if (notQ.length) fails.push(`${tag} 질문형이 아닌 소제목: ${notQ.join(' / ')}`);
 
   // 제목이 검색어 원문 형태인가. 머리 키워드가 없으면 경고

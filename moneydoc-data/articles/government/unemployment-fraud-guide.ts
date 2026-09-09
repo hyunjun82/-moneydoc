@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-fraud-guide";
 
 export const html = `<h1>실업급여 부정수급 처벌, 반환 금액과 추가징수 기준</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 지급 제한과 반환명령 원문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 지급 제한과 반환명령 원문 대조 · 2026-09-04</span></div>
 <img class="v2-hero" src="/og/unemployment-fraud-guide.png" width="1200" height="630" alt="실업급여 부정수급 처벌과 반환, 추가징수 기준">
 <p class="v2-lead v2-intro">실업급여 부정수급은 큰돈을 속인 경우만 해당하는 게 아니에요. 하루 일한 것을 신고하지 않거나, 하지 않은 구직활동을 했다고 적은 것도 거짓 신고예요. 걸리면 그 회차 급여가 안 나오는 데서 끝나지 않고 받은 돈을 돌려주고 더 내야 해요. 무엇이 부정수급인지, 얼마를 물어내는지, 제재가 어떻게 쌓이는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -108,7 +108,7 @@ export const html = `<h1>실업급여 부정수급 처벌, 반환 금액과 추�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제47조(실업인정대상기간 중의 취업 등의 신고), 제61조(부정행위에 따른 급여의 지급 제한), 제62조(반환명령 등), 실업인정 및 재취업지원규정 제10조(재취업활동 여부의 확인), 제11조(취업 여부의 확인).
-<b>정부 도구</b>고용24의 실업급여 제도 안내에서 부정수급 항목을 확인했어요 (2026-09-02 확인).
+<b>정부 도구</b>고용24의 실업급여 제도 안내에서 부정수급 항목을 확인했어요 (2026-09-04 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/part-time-job/"><b>다음 질문</b>실업급여 알바 신고 방법, 안 하면 부정수급인가요</a><a href="/unemployment/job-search/"><b>다음 질문</b>실업급여 구직활동 인정 기준과 증빙 만드는 법</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -195,7 +195,7 @@ export const landing = {
     "line2": "걸리면 얼마를 물어내나요",
     "sub1": "받은 돈을 돌려주고 그 금액의 2배 이하를 더 내요",
     "sub2": "회사와 짜고 했으면 5배 이하까지 갈 수 있어요",
-    "foot": "고용보험법 지급 제한과 반환명령 원문 대조 · 2026-09-02 검증",
+    "foot": "고용보험법 지급 제한과 반환명령 원문 대조 · 2026-09-04 검증",
     "card": {
       "label": "추가징수 한도",
       "big": "2배",
@@ -205,7 +205,7 @@ export const landing = {
     },
     "alt": "실업급여 부정수급 처벌과 반환, 추가징수 기준"
   },
-  "badge": "고용보험법 지급 제한과 반환명령 원문 대조 · 2026-09-02",
+  "badge": "고용보험법 지급 제한과 반환명령 원문 대조 · 2026-09-04",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

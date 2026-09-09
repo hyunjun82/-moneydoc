@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-repeat-guide";
 
 export const html = `<h1>실업급여 반복수급 기준, 감액 시행 여부와 실업인정 차이</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">반복수급자 재취업활동 기준 원문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">반복수급자 재취업활동 기준 원문 대조 · 2026-09-06</span></div>
 <img class="v2-hero" src="/og/unemployment-repeat-guide.png" width="1200" height="630" alt="실업급여 반복수급 감액 시행 여부와 반복수급자 실업인정 기준">
 <p class="v2-lead v2-intro">실업급여를 다시 신청하는 사람이 가장 먼저 찾는 말이 반복수급 감액이에요. 결론부터 말하면 금액을 깎는 규정은 아직 없어요. 대신 실업인정 때 해야 하는 재취업활동이 늘고, 횟수로 인정되는 활동의 종류가 좁아져요. 무엇이 그대로이고 무엇이 달라지는지, 내가 어느 기준을 적용받는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -114,7 +114,7 @@ export const html = `<h1>실업급여 반복수급 기준, 감액 시행 여부�
 <div class="v2-src">
 <b>법령</b>고용보험법 제40조(구직급여의 수급 요건), 제41조(피보험 단위기간), 제44조(실업의 인정), 제46조(구직급여일액), 제61조(부정행위에 따른 급여의 지급 제한). 고용보험법 시행규칙 제87조(재취업활동의 인정기준).
 <b>행정규칙·정부 안내</b>고용노동부 예규 「실업인정 및 재취업지원규정」 제249호 제10조·제12조(2026.9.1 시행, 실업인정일 지정과 재취업활동 확인). 고용노동부 「실업급여 지급 요건 강화, 무엇이 달라지나」 정책브리핑(2022.6.29, 수급자별 재취업활동 인정 방식). 고용노동부 인터넷상담 회차별 재취업활동 횟수 답변.
-<b>정부 도구</b>고용24 실업급여 제도 안내의 반복수급자 재취업활동 기준과 대조했어요 (2026-09-02 확인).
+<b>정부 도구</b>고용24 실업급여 제도 안내의 반복수급자 재취업활동 기준과 대조했어요 (2026-09-06 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/job-search/"><b>다음 질문</b>실업급여 구직활동 인정 기준과 증빙 만드는 법</a><a href="/unemployment/merge-periods/"><b>다음 질문</b>전 직장 고용보험 기간도 합산되나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -185,7 +185,7 @@ export const landing = {
     "line2": "감액 시행되나요",
     "sub1": "금액을 깎는 규정은 아직 없어요",
     "sub2": "달라지는 건 재취업활동 횟수와 종류예요",
-    "foot": "반복수급자 재취업활동 기준 원문 대조 · 2026-09-02 검증",
+    "foot": "반복수급자 재취업활동 기준 원문 대조 · 2026-09-06 검증",
     "card": {
       "label": "반복수급자 재취업활동",
       "big": "4주 2회",
@@ -195,7 +195,7 @@ export const landing = {
     },
     "alt": "실업급여 반복수급 감액 시행 여부와 반복수급자 실업인정 기준"
   },
-  "badge": "반복수급자 재취업활동 기준 원문 대조 · 2026-09-02",
+  "badge": "반복수급자 재취업활동 기준 원문 대조 · 2026-09-06",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

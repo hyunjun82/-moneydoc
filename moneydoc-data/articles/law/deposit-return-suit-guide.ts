@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "deposit-return-suit-guide";
 
 export const html = `<h1>보증금 반환 소송 절차와 양식, 내용증명부터 소장 접수까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">주택임대차보호법과 민사소송법 조문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">주택임대차보호법과 민사소송법 조문 대조 · 2026-09-03</span></div>
 <img class="v2-hero" src="/og/deposit-return-suit-guide.png" width="1200" height="630" alt="보증금 반환 소송 절차. 내용증명과 임차권등기명령을 거쳐 지급명령과 소송으로 이어져요">
 <p class="v2-lead v2-intro">계약이 끝났는데 보증금을 돌려주지 않는 경우가 있어요. 이때 가장 먼저 챙길 것은 소송이 아니라 내 권리를 지키는 일이에요. 집을 비우고 전입신고를 옮기면 대항력과 우선변제권이 사라지기 때문에, 이사하기 전에 임차권등기명령을 받아 두어야 해요. 그다음 내용증명으로 반환을 요구하고, 반응이 없으면 지급명령이나 소송으로 넘어가요. 순서와 서류, 비용을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -150,7 +150,7 @@ export const html = `<h1>보증금 반환 소송 절차와 양식, 내용증명�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>주택임대차보호법 제3조(대항력, 인도와 주민등록의 다음 날부터 효력), 제3조의2(보증금의 회수와 우선변제권, 확정판결에 따른 경매 신청 특칙), 제3조의3(임차권등기명령의 신청과 효력), 제6조(계약의 갱신). 민사소송법 제462조(지급명령의 요건), 제470조(이의신청의 효력, 2주), 제474조(확정판결과 같은 효력). 소액사건심판법 제2조(적용 범위), 제5조의3(이행권고결정). 소송촉진 등에 관한 특례법 제3조(법정이율).
-<b>정부 도구</b>대한민국 법원 전자소송의 신청 절차를 기준으로 정리했어요 (2026-09-02 확인).
+<b>정부 도구</b>대한민국 법원 전자소송의 신청 절차를 기준으로 정리했어요 (2026-09-03 확인).
 </div>
 <div class="v2-rel"><a href="/certified-mail/"><b>법률 가이드</b>내용증명 작성 방법과 양식</a><a href="/severance/claim/"><b>법률 가이드</b>퇴직금 못 받았을 때 지급명령과 소장</a><a href="/jeonse-conversion/"><b>부동산 계산기</b>전월세 전환율 계산기</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -229,7 +229,7 @@ export const landing = {
     "line2": "어떻게 받아내나요",
     "sub1": "이사 전에 임차권등기명령부터 해 두세요",
     "sub2": "내용증명 다음은 지급명령, 그다음이 소송이에요",
-    "foot": "주택임대차보호법과 민사소송법 조문 대조 · 2026-09-02 검증",
+    "foot": "주택임대차보호법과 민사소송법 조문 대조 · 2026-09-03 검증",
     "card": {
       "label": "이사 전 필수",
       "big": "임차권등기",
@@ -243,7 +243,7 @@ export const landing = {
     "href": "/realestate/",
     "label": "부동산 계산기 모아보기"
   },
-  "badge": "주택임대차보호법과 민사소송법 조문 대조 · 2026-09-02",
+  "badge": "주택임대차보호법과 민사소송법 조문 대조 · 2026-09-03",
   "basis": "2026년 9월 기준",
   "readMinutes": 8,
   "quick": [

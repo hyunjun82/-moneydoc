@@ -1,0 +1,12 @@
+{
+  "slug": "unemployment-special-worker-guide",
+  "keyword": "특고 노무제공자 실업급여, 보험설계사와 배달라이더 대리운전은 되나요?",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "특고",
+    "보험설계사"
+  ],
+  "queries": [],
+  "sources": []
+}

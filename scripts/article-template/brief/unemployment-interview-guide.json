@@ -1,0 +1,12 @@
+{
+  "slug": "unemployment-interview-guide",
+  "keyword": "실업급여 면접확인서 받는 법과 면접수당, 면접 불참과 거절했을 때",
+  "calc": "government/unemployment-benefit",
+  "reuseEvidence": "unemployment-benefit-guide",
+  "mustInclude": [
+    "면접확인서",
+    "면접"
+  ],
+  "queries": [],
+  "sources": []
+}

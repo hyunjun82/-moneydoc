@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-early-reemployment-guide";
 
 export const html = `<h1>실업급여 조기재취업수당 조건과 신청 방법</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행령 지급기준 원문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행령 지급기준 원문 대조 · 2026-09-04</span></div>
 <img class="v2-hero" src="/og/unemployment-early-reemployment-guide.png" width="1200" height="630" alt="조기재취업수당 조건과 금액 계산">
 <p class="v2-lead v2-intro">실업급여를 받다가 일찍 취업하면 남은 급여가 아깝게 느껴져요. 그럴 때 받는 게 조기재취업수당이에요. 다만 남은 일수를 다 주는 게 아니라 절반을 줘요. 그리고 취업했다고 자동으로 나오지 않고 요건이 여럿이에요. 신고일부터 14일이 지나야 하고, 소정급여일수를 절반 이상 남겨야 하고, 12개월 이상 계속 고용되어야 해요. 조건과 신청 시기를 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -113,7 +113,7 @@ export const html = `<h1>실업급여 조기재취업수당 조건과 신청 방
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제64조(조기재취업 수당), 고용보험법 시행령 제84조(조기재취업 수당의 지급기준), 제85조(조기재취업 수당의 금액), 제86조(조기재취업 수당의 청구 등).
-<b>정부 도구</b>고용보험 홈페이지에서 남은 소정급여일수와 구직급여일액을 확인해 금액을 대조했어요 (2026-09-02 확인).
+<b>정부 도구</b>고용보험 홈페이지에서 남은 소정급여일수와 구직급여일액을 확인해 금액을 대조했어요 (2026-09-04 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/calculator/"><b>계산기</b>실업급여 계산기</a><a href="/unemployment/days/"><b>다음 질문</b>실업급여 소정급여일수 표, 나이와 가입기간별 며칠 받나</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -184,7 +184,7 @@ export const landing = {
     "line2": "남은 급여의 절반을 받아요",
     "sub1": "소정급여일수를 2분의 1 이상 남기고 재취업해야 해요",
     "sub2": "금액은 구직급여일액에 미지급일수의 2분의 1을 곱한 금액이에요",
-    "foot": "고용보험법 시행령 지급기준 원문 대조 · 2026-09-02 검증",
+    "foot": "고용보험법 시행령 지급기준 원문 대조 · 2026-09-04 검증",
     "card": {
       "label": "받는 금액",
       "big": "절반",
@@ -198,7 +198,7 @@ export const landing = {
     "href": "/unemployment/calculator/",
     "label": "남은 일수와 일액 계산해 보기"
   },
-  "badge": "고용보험법 시행령 지급기준 원문 대조 · 2026-09-02",
+  "badge": "고용보험법 시행령 지급기준 원문 대조 · 2026-09-04",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

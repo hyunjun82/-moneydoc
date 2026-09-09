@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "personal-rehabilitation-guide";
 
 export const html = `<h1>개인회생 신청 조건과 절차, 준비 서류부터 변제 계획까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">채무자 회생 및 파산에 관한 법률 조문 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">채무자 회생 및 파산에 관한 법률 조문 대조 · 2026-09-03</span></div>
 <img class="v2-hero" src="/og/personal-rehabilitation-guide.png" width="1200" height="630" alt="개인회생 신청 조건과 절차. 원칙적으로 3년 동안 변제하고 나머지를 면책받아요">
 <p class="v2-lead v2-intro">개인회생은 빚을 없애 주는 제도가 아니라, 갚을 수 있는 만큼 정해진 기간 동안 갚고 남은 빚의 책임을 면제받는 절차예요. 소득에서 세금과 건강보험료, 생계비를 뺀 금액을 가용소득이라 하고, 그 금액으로 변제 계획을 짜요. 원칙적으로 3년 동안 갚고, 계획대로 마치면 법원이 면책 결정을 내려요. 누가 신청할 수 있는지, 변제금은 어떻게 정해지는지, 절차와 서류는 무엇인지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -159,7 +159,7 @@ export const html = `<h1>개인회생 신청 조건과 절차, 준비 서류부�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>채무자 회생 및 파산에 관한 법률 제579조(개인채무자와 급여소득자·영업소득자, 가용소득의 정의, 담보 채권 15억원과 무담보 채권 10억원 한도), 제593조(중지명령), 제600조(개시 결정에 따른 절차 중지와 금지), 제611조(변제계획의 내용, 인가일부터 1월 내 변제 개시, 변제기간 3년과 예외 5년), 제624조(면책결정), 제625조(면책의 효력과 면책되지 않는 청구권).
-<b>정부 도구</b>대한민국 법원 전자소송의 개인회생 신청 안내를 기준으로 정리했어요 (2026-09-02 확인).
+<b>정부 도구</b>대한민국 법원 전자소송의 개인회생 신청 안내를 기준으로 정리했어요 (2026-09-03 확인).
 </div>
 <div class="v2-rel"><a href="/certified-mail/"><b>법률 가이드</b>내용증명 작성 방법과 양식</a><a href="/deposit-return/"><b>법률 가이드</b>보증금 반환 소송 절차와 양식</a><a href="/unpaid-wages/"><b>법률 가이드</b>임금체불 진정 방법과 지연이자</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -238,7 +238,7 @@ export const landing = {
     "line2": "나도 되나요",
     "sub1": "소득이 있고 채무가 한도 안이면 신청할 수 있어요",
     "sub2": "원칙은 3년, 사정이 있으면 최대 5년까지 갚아요",
-    "foot": "채무자 회생 및 파산에 관한 법률 조문 대조 · 2026-09-02 검증",
+    "foot": "채무자 회생 및 파산에 관한 법률 조문 대조 · 2026-09-03 검증",
     "card": {
       "label": "변제 기간",
       "big": "3",
@@ -252,7 +252,7 @@ export const landing = {
     "href": "/law/",
     "label": "법률 계산기 모아보기"
   },
-  "badge": "채무자 회생 및 파산에 관한 법률 조문 대조 · 2026-09-02",
+  "badge": "채무자 회생 및 파산에 관한 법률 조문 대조 · 2026-09-03",
   "basis": "2026년 9월 기준",
   "readMinutes": 8,
   "quick": [
