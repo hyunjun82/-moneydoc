@@ -7,16 +7,20 @@ import { guidesFor, GUIDES, type GuideLink } from "@/data/articles/index";
  */
 export function GuideList({
   cat,
+  prefix,
   title,
   sub,
   limit,
 }: {
   cat?: string;
+  /** 주소가 이 값으로 시작하는 글만 (허브에서 자기 스포크만 뽑을 때) */
+  prefix?: string;
   title?: string;
   sub?: string;
   limit?: number;
 }) {
-  const all: GuideLink[] = cat ? guidesFor(cat) : GUIDES;
+  const base: GuideLink[] = cat ? guidesFor(cat) : GUIDES;
+  const all = prefix ? base.filter((g) => g.href.startsWith(prefix) && g.href !== prefix) : base;
   const items = limit ? all.slice(0, limit) : all;
   if (!items.length) return null;
 

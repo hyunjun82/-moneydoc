@@ -240,6 +240,8 @@
 /tax/part-time-insurance/                               /four-insurance/part-time/  301
 # --- 스포크 옛 주소 끝 ---
 
+/tax/overseas-stock-tax/                                /stock-tax/  301
+
 # 카테고리 이름 변경
 /government/           /gov/  301
 /government/*          /gov/:splat  301

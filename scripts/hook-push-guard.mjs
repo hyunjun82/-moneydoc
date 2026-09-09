@@ -109,6 +109,14 @@ if (contentTouched && fs.existsSync(path.join(cwd, 'out'))) {
     block('check-404 FAIL — 지우거나 옮긴 주소에 301 넘김이 없다. node scripts/gen-redirects.mjs 로 채워라',
       tail((e.stdout || '') + (e.stderr || ''), 15));
   }
+  // 1c. 고아 문서. 2026-09-09 애드센스가 "가치가 별로 없는 콘텐츠" 로 거절했다.
+  // 글 63편을 써 놓고 허브·카테고리 어디서도 링크하지 않아 사이트에 없는 것처럼 보였다.
+  try {
+    exec(process.execPath, ['scripts/check-orphan.mjs'], 120000);
+  } catch (e) {
+    block('check-orphan FAIL — 아무도 링크하지 않는 페이지가 있다. 허브·카테고리 목록에 넣어라',
+      tail((e.stdout || '') + (e.stderr || ''), 15));
+  }
 }
 
 // 2. 계산기 전수 (항상)

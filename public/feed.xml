@@ -5,147 +5,637 @@
     <link>https://moneydoc.kr/</link>
     <description>한국 금융·세금·법률 계산 기준을 법령 원문으로 확인해 정리한 가이드</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 01 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://moneydoc.kr/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>1세대 1주택 양도세 비과세 요건, 12억 넘으면 얼마 내나</title>
-      <link>https://moneydoc.kr/realestate/transfer-tax-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/realestate/transfer-tax-guide/</guid>
-      <description>1세대 1주택 양도세 비과세 요건과 12억 초과분 계산. 보유 2년이면 비과세이고 조정대상지역만 거주 2년이 추가됩니다. 양도가별 세액표와 일시적 2주택 처분기한까지 법령 원문으로 정리했습니다.</description>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <title>1주택 양도세 비과세 요건과 계산, 2년 보유부터 12억 초과분까지</title>
+      <link>https://moneydoc.kr/transfer-tax/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/transfer-tax/</guid>
+      <description>2년 이상 보유한 1주택을 12억원 이하로 팔면 양도세가 없어요. 15억원에 팔면 초과분에만 세금이 붙어 2,821,500원이에요. 비과세 요건, 12억 초과분 계산, 장기보유특별공제, 신고 기한을 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>2026 기초연금 349,700원, 소득 얼마까지 받을 수 있나</title>
-      <link>https://moneydoc.kr/government/basic-pension-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/government/basic-pension-guide/</guid>
-      <description>2026년 기초연금은 단독가구 월 최대 349,700원, 부부가구 559,520원입니다. 선정기준액은 단독 247만원·부부 395만 2천원. 소득인정액 계산과 부부 20% 감액까지 정리했습니다.</description>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <title>2026년 4대보험 요율과 계산, 월급에서 떼는 돈부터 회사 부담까지</title>
+      <link>https://moneydoc.kr/four-insurance/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/four-insurance/</guid>
+      <description>월 보수 300만원이면 근로자가 내는 4대보험은 291,520원이고 회사는 320,020원을 내요. 국민연금 4.75%, 건강보험 3.595%, 장기요양, 고용보험 요율과 월급별 공제액 표, 4월 건강보험 정산까지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>2026 연봉 실수령액 표, 4대보험 올라 월급 얼마나 줄었나</title>
-      <link>https://moneydoc.kr/tax/salary-net-pay-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/tax/salary-net-pay-guide/</guid>
-      <description>2026년 연봉 실수령액 표. 국민연금 9.5%·건강보험 7.19% 인상으로 연봉 5천만원 기준 4대보험이 월 13,070원 늘었습니다. 연봉 3000만원부터 1억5천까지 월급 실수령액을 정리했습니다.</description>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <title>2026년 실업급여 개편, 하한액과 반복수급 횟수제한은?</title>
+      <link>https://moneydoc.kr/unemployment/changes-2026/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/changes-2026/</guid>
+      <description>2026년 실업급여는 하한액과 상한액만 올랐어요. 반복수급 감액이나 총 횟수를 제한하는 조항은 법령 어디에도 없어요. 실제로 달라진 것과 소문을 구분해 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>4대보험 요율 2026, 회사가 나보다 더 낸다는 사실</title>
-      <link>https://moneydoc.kr/tax/four-major-insurance-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/tax/four-major-insurance-guide/</guid>
-      <description>2026년 4대보험 요율은 국민연금 4.75%, 건강보험 3.595%, 장기요양 건보료의 13.14%, 고용보험 0.9%입니다. 월급 300만원이면 근로자 291,510원, 회사 320,020원. 회사 부담이 더 큰 이유를 정리했습니다.</description>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <title>2026년 실업급여 상한액과 하한액, 하루 얼마까지 받나요</title>
+      <link>https://moneydoc.kr/unemployment/amount/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/amount/</guid>
+      <description>2026년 실업급여는 하루 최대 68,100원, 최소 66,048원이에요. 둘 차이가 2,052원뿐이라 월급이 달라도 받는 금액은 비슷해요. 월급 구간별로 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>국민연금 조기수령 손익분기 76.7세, 당겨받으면 손해일까</title>
-      <link>https://moneydoc.kr/pension/national-pension-early-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/pension/national-pension-early-guide/</guid>
-      <description>국민연금 조기수령은 1년당 6%씩 최대 30% 깎입니다. 60세 개시 시 손익분기점은 76.7세. 출생연도별 지급개시연령과 조기수령 조건, 소득 발생 시 지급정지까지 국민연금공단 자료로 정리했습니다.</description>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <title>2026년 실업급여 얼마나 받나요, 조건부터 금액과 신청 방법까지</title>
+      <link>https://moneydoc.kr/unemployment/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/</guid>
+      <description>2026년 기준 월급 300만원에 5년 일했다면 실업급여는 하루 66,048원씩 210일, 모두 13,870,080원이에요. 받는 조건 세 가지 판정, 월급별 금액표, 가입기간별 일수, 신청 4단계를 고용24 모의계산과 맞춰 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>기초생활수급자 조건, 1인 가구 소득 82만원이 기준인 이유</title>
-      <link>https://moneydoc.kr/government/basic-livelihood-eligibility-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/government/basic-livelihood-eligibility-guide/</guid>
-      <description>2026년 기초생활수급 기준은 1인 가구 생계 820,556원, 의료 1,025,695원, 주거 1,230,834원, 교육 1,282,119원입니다. 기준 중위소득의 32%·40%·48%·50%이고, 생계급여는 기준에서 소득인정액을 뺀 만큼 받습니다.</description>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <title>2026년 연봉 실수령액 표, 연봉 3000부터 1억까지 월급 얼마 받나요</title>
+      <link>https://moneydoc.kr/salary/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/salary/</guid>
+      <description>연봉 5,000만원이면 2026년 월 실수령액은 3,522,740원이에요. 국세청 간이세액표 원본으로 계산해 홈택스 조회값과 원 단위까지 같은 실수령액 표(2,400만원부터 2억까지), 4대보험 요율, 실수령액 늘리는 법, 명세서와 다른 이유를 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>스트레스 DSR 3단계 계산, 대출 한도 15.5% 줄어든 이유</title>
-      <link>https://moneydoc.kr/loan/dsr-limit-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/loan/dsr-limit-guide/</guid>
-      <description>스트레스 DSR 3단계 적용으로 대출 한도가 15.5% 줄었습니다. 1·2·3단계 스트레스 금리 0.38%·0.75%·1.5%와 연봉별 한도 감소액, DSR에서 제외되는 대출까지 금융위 자료로 정리했습니다.</description>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <title>2026년 육아휴직 급여 조건과 금액, 신청 방법부터 6+6 특례까지</title>
+      <link>https://moneydoc.kr/parental-leave/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/parental-leave/</guid>
+      <description>통상임금 300만원이면 육아휴직 12개월 동안 23,100,000원을 받아요. 첫 3개월은 월 2,500,000원, 4개월째부터는 2,000,000원이에요. 지급 조건, 월별 상한, 신청 방법, 부모가 함께 쓰는 특례를 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>연차수당 계산법, 안 쓴 연차 하루가 11만원인 이유</title>
-      <link>https://moneydoc.kr/law/annual-leave-allowance-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/law/annual-leave-allowance-guide/</guid>
-      <description>연차수당은 1일 통상임금 × 미사용 일수입니다. 월 통상임금 300만원이면 하루 114,832원. 근속연수별 연차 일수와 2026년 6월 신설된 시간단위 분할 사용까지 근로기준법 원문으로 정리했습니다.</description>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <title>개인회생 신청 조건과 절차, 준비 서류부터 변제 계획까지</title>
+      <link>https://moneydoc.kr/rehabilitation/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/rehabilitation/</guid>
+      <description>개인회생은 소득이 있는 사람이 3년 동안 갚고 나머지를 면책받는 제도예요. 신청 자격과 채무 한도, 변제금이 정해지는 방식, 절차와 기간, 준비할 서류를 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>육아휴직 급여, 1년 받으면 2,310만원인 이유</title>
-      <link>https://moneydoc.kr/government/parental-leave-pay-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/government/parental-leave-pay-guide/</guid>
-      <description>육아휴직 급여는 1~3개월 통상임금 100%(상한 250만), 4~6개월 100%(상한 200만), 7개월부터 80%(상한 160만)입니다. 12개월이면 2,310만원. 사후지급금은 시행령 개정으로 폐지돼 매달 전액 받습니다.</description>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <title>계약만료 실업급여, 재계약 거절하면 못 받나요</title>
+      <link>https://moneydoc.kr/unemployment/contract-end/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/contract-end/</guid>
+      <description>계약기간이 끝나 회사를 계속 다닐 수 없게 된 경우는 정당한 이직 사유예요. 다만 회사가 재계약을 제안했는데 거절하면 갈릴 수 있어요. 조건이 나빠진 재계약을 거절한 경우까지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>자동차세 계산, 1월에 내면 2만 3천원 아끼는 이유</title>
-      <link>https://moneydoc.kr/insurance/auto-tax-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/insurance/auto-tax-guide/</guid>
-      <description>자동차세는 배기량 × cc당 세율에 지방교육세 30%가 붙습니다. 1,999cc면 연 519,740원. 1월 연납하면 11개월분의 5%를 공제받고, 차령 3년차부터 매년 5%씩 최대 50% 경감됩니다.</description>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <title>고용보험 미가입 실업급여 받는 법, 소급 가입과 확인청구</title>
+      <link>https://moneydoc.kr/unemployment/no-insurance/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/no-insurance/</guid>
+      <description>회사가 고용보험을 신고하지 않았어도 실업급여를 포기할 필요는 없어요. 가입 신고는 사업주 의무라서, 근로자가 확인청구를 하면 소급해서 자격을 인정받을 수 있어요. 절차와 한도를 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>재산세 계산, 같은 공시가 5억인데 세금이 두 배 차이 나는 이유</title>
-      <link>https://moneydoc.kr/realestate/property-tax-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/realestate/property-tax-guide/</guid>
-      <description>주택 재산세는 공시가에 공정시장가액비율을 곱한 과세표준에 세율을 매깁니다. 공시가 5억이면 일반 684,000원, 1세대 1주택은 312,000원. 1주택은 비율도 세율도 낮습니다. 과세기준일은 6월 1일입니다.</description>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <title>국민취업지원제도 신청 방법, 실업급여 끝나고 언제부터 되나요</title>
+      <link>https://moneydoc.kr/unemployment/job-support/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/job-support/</guid>
+      <description>국민취업지원제도는 실업급여를 받는 중에는 신청할 수 없어요. 2유형은 수급이 끝나면 바로, 1유형은 마지막으로 구직급여를 받은 날의 다음 날부터 6개월이 지나야 신청돼요. 신청 순서와 유형별 조건, 월 60만원씩 6개월인 구직촉진수당을 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>적금 이자 계산, 만기에 실제로 받는 돈은 얼마인가</title>
-      <link>https://moneydoc.kr/savings/installment-savings-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/savings/installment-savings-guide/</guid>
-      <description>적금 이자는 원금 전체가 아니라 매달 넣은 돈이 남은 개월수만큼만 붙습니다. 월 50만원 24개월 연 4%면 이자 513,015원, 세금 79,004원을 떼고 12,434,011원. 이자소득세 15.4%와 비과세 상품까지 정리했습니다.</description>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <title>권고사직 실업급여 신청 방법과 회사가 받는 불이익</title>
+      <link>https://moneydoc.kr/unemployment/layoff/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/layoff/</guid>
+      <description>권고사직은 회사 사정으로 퇴직을 권고받은 경우라 정당한 이직 사유예요. 신청 방법과 사직서에 쓸 내용, 회사가 받는 지원금 제한까지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>종합소득세 계산, 세율 구간을 넘으면 세금이 얼마나 뛸까</title>
-      <link>https://moneydoc.kr/tax/comprehensive-income-tax-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/tax/comprehensive-income-tax-guide/</guid>
-      <description>종합소득세는 과세표준 1,400만·5,000만·8,800만원을 경계로 세율이 오릅니다. 하지만 누진공제 때문에 구간을 1원 넘어도 세금은 튀지 않습니다. 소득 5,000만원이면 총 653만원, 신고는 5월 1일~31일입니다.</description>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <title>내용증명 작성 방법과 양식, 임대차부터 채권 회수까지</title>
+      <link>https://moneydoc.kr/certified-mail/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/certified-mail/</guid>
+      <description>내용증명은 언제 어떤 내용을 보냈는지 우체국이 증명해 주는 우편이에요. 무엇을 적어야 하는지, 세 통을 어떻게 준비하는지, 어떤 힘이 있는지, 보증금 반환과 임금 청구에 어떻게 쓰는지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>취득세 계산, 6억과 7억 집의 세금이 두 배 차이 나는 이유</title>
-      <link>https://moneydoc.kr/realestate/acquisition-tax-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/realestate/acquisition-tax-guide/</guid>
-      <description>주택 취득세는 6억 이하 1%, 6~9억 누진, 9억 초과 3%입니다. 6억은 660만원인데 7억은 1,285만원. 85㎡ 초과 농어촌특별세와 다주택 중과세율까지 지방세법 기준으로 정리했습니다.</description>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <title>대학생도 실업급여 되나요, 알바 기준과 단기알바 주말알바</title>
+      <link>https://moneydoc.kr/unemployment/student/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/student/</guid>
+      <description>대학생이라서 실업급여를 못 받는 규정은 고용보험법에 없어요. 관건은 아르바이트가 고용보험에 가입돼 있는지예요. 1주 15시간 미만이면 원칙적으로 빠지지만 1개월 미만 일용근로자거나 3개월 넘게 계속하면 가입돼요. 단기알바와 주말알바 기준을 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>퇴직금 계산 방법과 평균임금 산정기준, 퇴사일 따라 달라집니다</title>
-      <link>https://moneydoc.kr/law/severance-pay-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/law/severance-pay-guide/</guid>
-      <description>퇴직금 계산법과 평균임금 산정기준. 3개월 총일수가 89일이냐 92일이냐에 따라 1일 평균임금이 3,298원 달라집니다. 통상임금이 더 큰 경우까지 법령 원문으로 정리했습니다.</description>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <title>보증금 반환 소송 절차와 양식, 내용증명부터 소장 접수까지</title>
+      <link>https://moneydoc.kr/deposit-return/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/deposit-return/</guid>
+      <description>계약이 끝났는데 보증금을 못 받았다면 내용증명, 임차권등기명령, 지급명령, 소송 순서로 움직여요. 이사 전에 무엇을 해야 하는지, 어디에 어떤 서류를 내는지, 비용과 기간은 어떤지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>부당해고 실업급여와 권고사직, 해고예고수당부터 노동청 신고까지</title>
+      <link>https://moneydoc.kr/unemployment/unfair-dismissal/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/unfair-dismissal/</guid>
+      <description>부당해고를 당했을 때 실업급여를 받을 수 있는지, 권고사직과는 무엇이 다른지, 해고예고수당과 노동청 신고는 어떻게 되는지를 정부 규정 원문으로 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>산재 휴업급여와 실업급여 중복, 지급 기간과 산재 종결 후 신청 방법</title>
+      <link>https://moneydoc.kr/unemployment/industrial-accident/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/industrial-accident/</guid>
+      <description>산재로 다쳐 요양하며 휴업급여를 받는 동안 실업급여(구직급여·상병급여)는 함께 나오지 않아요. 다만 그 요양 기간만큼 수급기간이 자동으로 늘어나 있어서, 산재가 끝난 뒤 지체 없이 신고하면 남은 구직급여를 다시 받을 수 있어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 180일, 주 며칠 일해야 채워지나요</title>
+      <link>https://moneydoc.kr/unemployment/180days/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/180days/</guid>
+      <description>실업급여 180일은 다닌 날이 아니라 보수가 나간 날을 세요. 유급 주휴일이 들어가서 주 5일 근무자는 30주, 달력으로 6.9개월이면 채워져요. 근무 형태별로 얼마나 걸리는지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 1차 실업인정, 교육 이수와 첫 구직활동 신고</title>
+      <link>https://moneydoc.kr/unemployment/round-1/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/round-1/</guid>
+      <description>실업급여 1차 실업인정일은 실업신고일부터 14일이 되는 날이에요. 대기기간 7일을 빼면 첫 회차는 7일치가 나와요. 교육 이수와 첫 활동 신고를 순서대로 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 1차 집체교육과 온라인교육, 2차 동영상부터 취업특강까지</title>
+      <link>https://moneydoc.kr/unemployment/education/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/education/</guid>
+      <description>실업급여 교육은 헷갈려요. 등록 전 사전교육은 온라인으로 볼 수 있고, 1차 집체교육은 출석해야 해요. 2차 온라인 신청 방법과 온라인 취업특강 인정 기준까지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 4차 실업인정, 출석 회차와 인정일 간격</title>
+      <link>https://moneydoc.kr/unemployment/round-4/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/round-4/</guid>
+      <description>실업급여 4차 실업인정일은 인터넷 신청이 안 되고 고용센터에 직접 가는 날이에요. 날짜는 3차 인정일 다음 날부터 7일에서 28일 사이에서 담당자가 정하고, 취업을 못 했으면 심층상담을 받아요. 재취업활동은 4차까지 4주에 1회, 5차부터 2회예요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 건강보험료 감면, 임의계속가입과 피부양자 기준</title>
+      <link>https://moneydoc.kr/unemployment/health-insurance/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/health-insurance/</guid>
+      <description>퇴사하면 건강보험 자격이 지역가입자로 바뀌면서 회사가 내주던 절반이 사라져요. 실업을 이유로 깎아 주는 감면은 없고, 임의계속가입으로 직장 기준을 최대 36개월 이어 가거나 가족의 피부양자로 들어가 내지 않는 길이 있어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 계산, 한 달에 얼마씩 몇 개월 받나요</title>
+      <link>https://moneydoc.kr/unemployment/total/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/total/</guid>
+      <description>실업급여 총액은 하루 지급액에 소정급여일수를 곱한 금액이에요. 월 300만원에 가입 3년이면 180일 동안 모두 11,888,640원이에요. 조건별 총액을 표로 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 구직외활동 인정 범위, 취업특강과 직업심리검사</title>
+      <link>https://moneydoc.kr/unemployment/other-activity/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/other-activity/</guid>
+      <description>입사지원 말고도 인정되는 활동이 있어요. 정해진 훈련과정 수강, 고용센터 직업지도 프로그램 참여, 직업소개 지시에 응한 경우가 들어가요. 인정 범위와 안 되는 경우를 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 구직활동 인정 기준과 증빙 남기는 법</title>
+      <link>https://moneydoc.kr/unemployment/job-search/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/job-search/</guid>
+      <description>실업급여 구직활동은 지원하고 끝이 아니라 인정을 받아야 해요. 같은 회사 반복 지원이나 탐문만 하는 경우는 인정되지 않아요. 인정되는 활동과 안 되는 활동, 증빙 만드는 법을 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 국민연금, 실업크레딧 신청하면 얼마 내나요</title>
+      <link>https://moneydoc.kr/unemployment/pension-credit/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/pension-credit/</guid>
+      <description>실업급여를 받는 동안 국민연금은 납부예외로 안 낼 수 있지만 그 기간은 가입기간에서 비어요. 실업크레딧을 신청하면 연금보험료의 4분의 1부터만 내고 최대 12개월을 채워요. 기한은 구직급여가 끝난 달의 다음 달 15일이에요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 금액, 월급별 하루 얼마 받나요</title>
+      <link>https://moneydoc.kr/unemployment/by-salary/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/by-salary/</guid>
+      <description>월급별로 실업급여 하루 얼마를 받는지 표로 정리했어요. 월 180만원이든 600만원이든 하루 차이는 2,052원뿐이에요. 상한과 하한에 걸리는 지점을 함께 봤어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 나이 상한, 65세 기준과 계속 근로 예외</title>
+      <link>https://moneydoc.kr/unemployment/elderly/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/elderly/</guid>
+      <description>65세가 넘었다고 안 되는 게 아니에요. 법이 보는 건 나이가 아니라 그 회사에 언제 고용됐는지예요. 65세 전부터 자격을 유지한 채 계속 일했다면 70세에 그만둬도 받고, 65세가 넘어 새로 들어갔다면 실업급여가 적용되지 않아요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 내일배움카드 30시간, 구직활동 인정과 수강 증명서</title>
+      <link>https://moneydoc.kr/unemployment/study/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/study/</guid>
+      <description>실업급여를 받으면서 국민내일배움카드로 훈련을 들을 때 궁금한 점을 정리했어요. 월 30시간 기준, 구직외활동 인정 여부, 수강증명서 제출 방법을 근거 원문으로 확인했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 대기기간, 7일 동안 왜 안 나오나요</title>
+      <link>https://moneydoc.kr/unemployment/waiting/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/waiting/</guid>
+      <description>실업 신고일부터 7일은 대기기간이라 급여가 나오지 않아요. 그래서 첫 회차는 7일치예요. 대기기간이 없는 경우와 이 기간에 일했을 때까지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 마지막 회차와 남은 일수 정산</title>
+      <link>https://moneydoc.kr/unemployment/last-round/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/last-round/</guid>
+      <description>마지막 회차는 회차 번호로 정해지지 않아요. 받을 수 있는 날수를 다 쓰는 회차가 마지막이에요. 4차 이후 인정일은 7~28일 사이에서 잡혀서 마지막은 짧게 끝나기도 해요. 정산 방법과 끝난 뒤 기한을 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 면접확인서 받는 법과 면접수당, 면접 불참과 거절했을 때</title>
+      <link>https://moneydoc.kr/unemployment/interview/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/interview/</guid>
+      <description>지인 소개로 구인공고 없는 사업장에서 면접을 봤다면 그 회사가 써 주는 면접확인서가 있어야 재취업활동으로 인정받아요. 면접수당이 따로 있는지, 면접에 불참하거나 거절하면 실업급여 수급에 어떤 불이익이 있는지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 문의 전화번호와 고용센터 방문, 신청장소까지</title>
+      <link>https://moneydoc.kr/unemployment/center/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/center/</guid>
+      <description>실업급여 문의는 제도 문의 1350과 전산 문의 1577-7114로 번호가 나뉘어요. 처음 수급자격 신청과 1차, 4차 실업인정일에는 거주지 관할 고용센터에 나가야 하고, 나머지는 고용24에서 온라인으로 할 수 있어요. 번호와 방문 시점, 신청장소를 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 반복수급 기준, 감액 시행 여부와 실업인정 차이</title>
+      <link>https://moneydoc.kr/unemployment/repeat/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/repeat/</guid>
+      <description>실업급여 반복수급 감액은 지금 시행되지 않아요. 고용보험법에 금액을 깎는 규정이 없고, 달라지는 건 실업인정 기준이에요. 반복수급자는 4차 실업인정일부터 4주에 두 번, 2차부터는 구직활동만 인정돼요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 부정수급 자진신고와 조사 절차, 처벌부터 환수까지</title>
+      <link>https://moneydoc.kr/unemployment/fraud-report/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/fraud-report/</guid>
+      <description>실업급여 부정수급이 적발되기 전에 스스로 신고하면 추가징수를 면제받을 수 있고 반환 범위도 실제 일한 날로 좁아져요. 조사가 어떻게 진행되는지, 처벌과 반환·추가징수 기준까지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 부정수급 처벌, 반환 금액과 추가징수 기준</title>
+      <link>https://moneydoc.kr/unemployment/fraud/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/fraud/</guid>
+      <description>실업급여 부정수급이 적발되면 받은 돈을 돌려주고 그 금액의 2배 이하를 더 냅니다. 회사와 짜고 했으면 5배 이하까지 가요. 제재가 어떻게 쌓이는지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 사업자등록, 창업 준비 신고와 휴업 예외</title>
+      <link>https://moneydoc.kr/unemployment/startup/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/startup/</guid>
+      <description>실업급여를 받다가 사업자등록을 하면 등록증의 개업일부터 취업이라 급여가 끊겨요. 매출이 없어도 같아요. 창업 준비 단계는 자영업활동계획서를 내고 실업인정 때 준비활동으로 신고하면 재취업활동으로 인정돼요. 이미 등록증이 있으면 신청일부터 7일 안에 휴업이나 폐업 서류를 내면 받을 수 있어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 서류, 신청 준비물 목록과 발급받는 곳</title>
+      <link>https://moneydoc.kr/unemployment/documents/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/documents/</guid>
+      <description>실업급여 신청에 본인이 챙길 건 신분증과 계좌예요. 나머지는 회사가 내는 서류고요. 퇴사 사유에 따라 더 필요한 자료까지 발급처와 함께 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 세금 떼나요, 비과세 기준과 종합소득세 연말정산</title>
+      <link>https://moneydoc.kr/unemployment/tax/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/tax/</guid>
+      <description>실업급여는 소득세법이 정한 비과세소득이라 세금을 떼지 않아요. 종합소득세 신고 대상에서도 빠지고 연말정산에도 들어가지 않는 이유를, 함께 비과세인 다른 고용보험 급여와 같이 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 수급자격, 4가지 조건과 이직 사유 기준</title>
+      <link>https://moneydoc.kr/unemployment/eligibility/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/eligibility/</guid>
+      <description>실업급여 수급자격은 고용보험법이 정한 4가지 조건을 모두 채워야 해요. 180일 이상 가입, 취업하지 못한 상태, 이직 사유가 제한 사유가 아닐 것, 재취업 노력이에요. 일용근로자는 2가지가 더 붙어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 신청 방법, 서류 확인부터 실업인정까지</title>
+      <link>https://moneydoc.kr/unemployment/apply/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/apply/</guid>
+      <description>실업급여 신청은 5단계예요. 회사 서류 확인, 고용24 구직신청, 수급자격 신청자 교육, 고용센터 출석, 실업인정 순서로 진행해요. 각 단계에서 무엇을 하는지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 신청기간, 퇴사 후 언제까지 받나요</title>
+      <link>https://moneydoc.kr/unemployment/deadline/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/deadline/</guid>
+      <description>실업급여는 이직일 다음 날부터 12개월 안에 받아야 해요. 소정급여일수가 남아 있어도 이 기간이 지나면 끝나요. 늦게 신청했을 때 얼마를 못 받는지 계산했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 알바 신고 방법, 안 하면 부정수급인가요</title>
+      <link>https://moneydoc.kr/unemployment/part-time-job/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/part-time-job/</guid>
+      <description>실업급여를 받으면서 알바를 해도 되지만 신고해야 해요. 하루 대가가 구직급여일액 이상이거나 주 15시간 이상이면 취업으로 봐요. 신고 방법과 안 했을 때 생기는 일을 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 연장 조건, 개별연장급여와 훈련연장급여 차이</title>
+      <link>https://moneydoc.kr/unemployment/extension/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/extension/</guid>
+      <description>소정급여일수를 다 써도 연장급여를 받을 수 있는 경우가 있어요. 훈련연장급여는 일액의 100퍼센트, 개별연장급여와 특별연장급여는 70퍼센트예요. 조건과 차이를 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 이직확인서 발급 요청과 정정 방법</title>
+      <link>https://moneydoc.kr/unemployment/confirmation/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/confirmation/</guid>
+      <description>이직확인서에는 이직 사유와 피보험단위기간, 평균임금, 1일 소정근로시간이 적혀요. 하나만 틀려도 수급자격이나 금액이 달라져요. 발급 요청과 정정 방법을 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 일수, 나이와 가입기간별로 며칠 받나요</title>
+      <link>https://moneydoc.kr/unemployment/days/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/days/</guid>
+      <description>실업급여를 며칠 받는지는 나이와 고용보험 가입기간 두 가지로 정해져요. 가장 짧으면 120일, 가장 길면 270일이에요. 구간별 표와 50세 기준으로 갈리는 지점을 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 조기재취업수당 조건과 신청 방법</title>
+      <link>https://moneydoc.kr/unemployment/early-reemployment/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/early-reemployment/</guid>
+      <description>조기재취업수당은 소정급여일수를 2분의 1 이상 남기고 재취업했을 때 받아요. 금액은 구직급여일액에 미지급일수의 2분의 1을 곱한 금액이에요. 조건과 신청 시기를 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 주 15시간 미만, 초단시간 근로자도 되나요</title>
+      <link>https://moneydoc.kr/unemployment/short-hours/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/short-hours/</guid>
+      <description>주 15시간 미만이면 고용보험에서 원칙적으로 빠져요. 다만 그 사업에서 3개월 이상 계속 일했다면 적용 대상이에요. 기준기간이 24개월로 늘어나는 특례까지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 지급일, 입금 날짜와 안 들어올 때 확인 순서</title>
+      <link>https://moneydoc.kr/unemployment/payday/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/payday/</guid>
+      <description>실업급여는 통상 실업인정을 받은 다음 날에 계좌로 들어와요. 매달 같은 날이 아니라 내 실업인정일을 따라가요. 회차별 입금 날짜를 어디서 보는지와 안 들어올 때 확인 순서를 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 첫인정일과 방문인정일, 실업인정 신청과 불참했을 때</title>
+      <link>https://moneydoc.kr/unemployment/change-date/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/change-date/</guid>
+      <description>실업급여 첫 실업인정일은 실업신고일부터 14일 뒤예요. 방문해야 하는 회차와 온라인으로 낼 수 있는 회차, 신청 방법과 인정일에 못 나갔을 때 어떻게 되는지까지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 취업신고 기간, 서류부터 입금과 재실업까지</title>
+      <link>https://moneydoc.kr/unemployment/report-job/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/report-job/</guid>
+      <description>실업급여를 받다가 취업하면 취업한 날부터 2개월 안에, 그 사이 실업인정일이 오면 그날 신고해요. 근로계약서나 재직증명서를 붙이면 취업 전날까지 계산한 돈이 실업인정 다음 날 들어와요. 원래 퇴사일부터 12개월 안에 다시 실업하면 남은 일수를 이어 받아요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 코드 종류, 23번과 32번은 무슨 뜻인가요</title>
+      <link>https://moneydoc.kr/unemployment/exit-code/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/exit-code/</guid>
+      <description>이직코드는 회사가 이직확인서에 적는 상실사유 구분코드예요. 23번은 경영상 인원감축, 32번은 계약기간 만료예요. 코드 9가지와 수급 여부를 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 쿠팡알바와 쿠팡이츠 배민커넥트, 취업신고와 주 15시간은?</title>
+      <link>https://moneydoc.kr/unemployment/platform/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/platform/</guid>
+      <description>쿠팡알바처럼 시급을 받는 단기 근로와 쿠팡이츠·배민커넥트 같은 배달 플랫폼 노무는 취업 인정 기준이 달라요. 주 15시간·월 60시간 시간 기준과 노무제공계약 기준, 취업신고 기한 2개월을 함께 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 통근곤란, 왕복 몇 시간이면 인정되나요</title>
+      <link>https://moneydoc.kr/unemployment/commute/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/commute/</guid>
+      <description>통근 곤란은 정당한 이직 사유예요. 통상의 교통수단으로 사업장 왕복에 3시간 이상 걸리게 됐을 때를 말해요. 어떤 사정이 인정되고 무엇으로 증명하는지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 퇴직금 같이 받을 수 있나요, 신고부터 지급기한까지</title>
+      <link>https://moneydoc.kr/unemployment/severance/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/severance/</guid>
+      <description>퇴직금은 회사가, 실업급여는 고용보험이 줘요. 주는 곳이 달라 같이 받고 서로 깎지 않아요. 실업인정 때 신고할 것은 취업이라 퇴직금은 신고 대상이 아니에요. 퇴직금은 퇴사한 날부터 14일 안에 받아요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 평균임금 산정 방법, 어떤 수당이 들어가나요</title>
+      <link>https://moneydoc.kr/unemployment/average-wage/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/average-wage/</guid>
+      <description>실업급여의 기준은 월급이 아니라 평균임금이에요. 이직일 이전 3개월간 임금 총액을 그 기간 총 일수로 나눠요. 어떤 수당이 들어가고 어떤 기간이 빠지는지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 포기와 미신청, 재수급 조건과 재신청 방법</title>
+      <link>https://moneydoc.kr/unemployment/give-up/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/give-up/</guid>
+      <description>실업급여를 받다가 스스로 그만 받거나 신청 기한을 놓치면 어떻게 되는지 고용보험법 조문으로 확인했어요. 다시 이직했을 때 재수급 조건과 새로 신청하는 방법까지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 프리랜서 소득 신고, 3.3% 일감과 취업 판정 기준</title>
+      <link>https://moneydoc.kr/unemployment/freelance/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/freelance/</guid>
+      <description>프리랜서 일감을 받아도 실업급여는 이어져요. 실업인정 때 일한 날과 받은 돈을 적으면 돼요. 하루 66,048원을 받던 사람이 하루 일감으로 70,000원을 받으면 그날은 취업이에요. 월보수액 80만원 이상 계약이나 사업자등록도 취업이에요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 합산기간, 전 직장 고용보험도 더해지나요</title>
+      <link>https://moneydoc.kr/unemployment/merge-periods/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/merge-periods/</guid>
+      <description>전 직장을 그만둔 날부터 3년 안에 다시 취업했다면 그 기간이 합산돼요. 다만 며칠 받는지를 정하는 시계와 180일 요건을 세는 시계가 달라요. 두 시계를 갈라서 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 해외여행과 실업인정일, 날짜변경 안 하면 부정수급인가요?</title>
+      <link>https://moneydoc.kr/unemployment/overseas/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/overseas/</guid>
+      <description>실업급여를 받는 중 해외에 나가도 되는지, 실업인정일과 겹치면 어떻게 해야 하는지 정리했어요. 재취업활동 목적이면 출국 전에 특례를 신청하고, 개인적인 여행이면 그 기간이 인정되지 않는다는 점, 숨기면 부정수급이 될 수 있다는 점까지 확인했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여 회사 불이익과 부담금, 안 해주는 이유와 요청 방법</title>
+      <link>https://moneydoc.kr/unemployment/employer/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/employer/</guid>
+      <description>실업급여 이직확인서를 사실대로 써 주면 회사는 불이익이 없어요. 정당한 사유 없이 안 써주거나 근로자와 짜고 거짓으로 처리하면 300만원 이하 과태료나 5년 이하 징역까지 갈 수 있어요. 회사가 추가로 물어야 하는 부담금은 없어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>실업급여와 근로장려금 중복, 소득 산정부터 신청 조건과 금액까지</title>
+      <link>https://moneydoc.kr/unemployment/eitc/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/eitc/</guid>
+      <description>실업급여를 받은 해에 근로소득이나 사업소득이 있으면 근로장려금도 함께 신청할 수 있어요. 구직급여는 비과세소득이라 소득 계산에서 빠지고, 신청 조건 다섯 가지와 재산에 따라 줄어드는 지급액을 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>아르바이트 4대보험 가입 기준과 보험료, 주 15시간부터 퇴사 후까지</title>
+      <link>https://moneydoc.kr/four-insurance/part-time/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/four-insurance/part-time/</guid>
+      <description>한 달 60시간, 주 15시간이 아르바이트 4대보험 가입을 가르는 기준이에요. 주 20시간 일하면 월 보수 1,073,280원에 보험료 104,280원을 내요. 가입 기준과 시간별 보험료, 사업주 의무, 퇴사 후 건강보험까지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>연차수당 계산과 발생 기준, 입사 1년부터 미사용 수당 지급까지</title>
+      <link>https://moneydoc.kr/annual-leave/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/annual-leave/</guid>
+      <description>월 통상임금 300만원이면 연차 하루가 114,832원이라 5일을 못 쓰면 574,160원을 받아요. 연차가 며칠 생기는지, 1년 미만은 어떻게 되는지, 미사용 수당은 언제 받는지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>예술인 고용보험 실업급여와 신청 방법, 소득 활동과 계산기</title>
+      <link>https://moneydoc.kr/unemployment/artist/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/artist/</guid>
+      <description>예술인은 문화예술용역 계약을 기준으로 하는 별도 고용보험 트랙이에요. 이직일 이전 24개월 동안 피보험 단위기간을 9개월 이상 채우면 신청할 수 있고, 구직급여일액은 기초일액의 60%, 상한은 근로자와 같은 하루 68,100원예요. 노무제공자(특고)와 무엇이 다른지, 수급 중 소득 활동은 어떻게 신고하는지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>일용직 실업급여 조건, 수급 중 일한 날 신고 기준</title>
+      <link>https://moneydoc.kr/unemployment/daily-worker/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/daily-worker/</guid>
+      <description>일용직은 일반 근로자의 네 가지 조건에 두 가지가 더 붙어요. 신청 전 근로일이 총 일수의 3분의 1 미만이어야 하고, 건설일용은 14일 연속 근로내역이 없으면 인정돼요. 수급 중 일용근로 신고까지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>임금체불 실업급여, 자진퇴사로 적혔으면 어떻게 하나요</title>
+      <link>https://moneydoc.kr/unemployment/unpaid-wage-quit/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/unpaid-wage-quit/</guid>
+      <description>임금체불로 그만두면 자진퇴사여도 실업급여를 받아요. 다만 그 사유가 이직일 전 1년 이내에 2개월 이상 발생했어야 해요. 신청 순서와 자진퇴사로 적혔을 때 대응을 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>임금체불 진정 방법과 지연이자, 신고 절차부터 대지급금까지</title>
+      <link>https://moneydoc.kr/unpaid-wages/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unpaid-wages/</guid>
+      <description>퇴사하고 14일이 지나도 임금을 못 받으면 연 20%의 지연이자가 붙어요. 500만원을 90일 못 받으면 이자가 246,575원이에요. 진정 접수 방법, 조사 절차, 회사가 도산했을 때 받는 대지급금까지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>임신으로 인한 퇴사 실업급여 조건, 육아 퇴사와 수급 중 임신</title>
+      <link>https://moneydoc.kr/unemployment/pregnancy/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/pregnancy/</guid>
+      <description>임신·출산·육아로 퇴사해도 회사가 휴가나 휴직을 허용하지 않았다면 정당한 이직 사유로 실업급여를 받을 수 있어요. 수급 중 임신했을 때 수급기간을 최대 4년까지 늘리는 방법까지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>자동차세 계산과 연납 할인, 배기량별 세액부터 1월 신청까지</title>
+      <link>https://moneydoc.kr/auto-tax/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/auto-tax/</guid>
+      <description>배기량 1,999cc 승용차의 자동차세는 지방교육세까지 1년에 519,740원이에요. 배기량별 세액, 차령에 따른 경감, 연납 할인, 6월과 12월 납부 방법을 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>자발적 퇴사 실업급여 인정 사유와 증빙 서류</title>
+      <link>https://moneydoc.kr/unemployment/voluntary/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/voluntary/</guid>
+      <description>자발적 퇴사라도 시행규칙 별표 2의 인정 사유에 해당하면 실업급여를 받아요. 임금체불, 직장 내 괴롭힘, 통근 곤란, 질병, 육아 등을 사유별 증빙 서류와 함께 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>재산세 계산과 납부, 공시가격부터 특례세율과 7월 9월 분납까지</title>
+      <link>https://moneydoc.kr/property-tax/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/property-tax/</guid>
+      <description>공시가격 5억원인 집의 재산세는 지방교육세까지 684,000원이에요. 1세대 1주택 특례세율을 받으면 312,000원으로 줄어요. 과세표준 계산, 세율 구간, 7월과 9월 납기, 조회와 카드 납부를 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>적금 이자 계산과 세금, 단리 복리부터 만기 실수령액까지</title>
+      <link>https://moneydoc.kr/installment/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/installment/</guid>
+      <description>월 50만원을 24개월 동안 연 4% 적금에 넣으면 이자가 513,015원, 세금을 뗀 만기 실수령액은 12,434,011원이에요. 단리와 복리 차이, 이자소득세, 비과세 조건을 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>종합부동산세 대상과 계산, 공시가 합산부터 1주택 공제까지</title>
+      <link>https://moneydoc.kr/comprehensive-tax/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/comprehensive-tax/</guid>
+      <description>가진 집의 공시가격을 합쳐 9억원, 1세대 1주택은 12억원을 넘으면 종합부동산세 대상이에요. 공시가 15억원인 한 채면 691,201원이에요. 합산 기준, 세율, 재산세액공제, 고령자와 장기보유 공제를 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>종합소득세 세율과 계산 방법, 신고 대상부터 5월 홈택스 신고까지</title>
+      <link>https://moneydoc.kr/income-tax/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/income-tax/</guid>
+      <description>종합소득금액 5,000만원이면 종합소득세는 지방소득세까지 6,539,500원이에요. 세율 구간표, 과세표준 계산 순서, 신고 대상 판정, 홈택스 신고 순서, 신고를 놓쳤을 때 가산세까지 한 번에 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>직장내 괴롭힘 실업급여, 신고와 증빙 어떻게 하나요</title>
+      <link>https://moneydoc.kr/unemployment/harassment/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/harassment/</guid>
+      <description>직장 내 괴롭힘으로 그만둬도 실업급여를 받을 수 있어요. 신고는 법이 할 수 있다고만 적은 일이라 수급 요건이 아니에요. 다만 증빙 서류를 정해 둔 정부 안내가 없어서, 신고와 조사, 진정에서 남는 기록을 모아 고용센터에 내요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>질병 퇴사 실업급여, 진단서로 인정받는 조건</title>
+      <link>https://moneydoc.kr/unemployment/sickness/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/sickness/</guid>
+      <description>아파서 그만둬도 실업급여를 받을 수 있어요. 다만 지금 일할 수 없는 상태면 먼저 수급기간을 연장해 두고 나은 뒤에 받아야 해요. 진단서에 무엇이 적혀야 하는지까지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>집 살 때 취득세 세율과 계산, 생애최초 감면부터 다주택 중과까지</title>
+      <link>https://moneydoc.kr/acquisition-tax/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/acquisition-tax/</guid>
+      <description>5억원짜리 집을 처음 사면 취득세는 지방교육세까지 5,500,000원이에요. 6억과 9억을 기준으로 갈리는 세율, 집값별 세금표, 생애최초 200만원 공제, 8%와 12% 중과 기준, 60일 신고 기한을 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>퇴직금 계산 방법과 지급기준, 평균임금부터 14일 지급기한까지</title>
+      <link>https://moneydoc.kr/severance/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/severance/</guid>
+      <description>월급 300만원으로 5년 일하고 그만두면 퇴직금은 14,673,913원이에요. 퇴직금은 평균임금 기준이라 상여금과 연차수당까지 들어가요. 계산 순서, 근속별·월급별 금액표, 14일 지급기한, 못 받았을 때 신고 방법을 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>퇴직금 못 받았을 때 지급명령과 소장, 양식부터 제출까지</title>
+      <link>https://moneydoc.kr/severance/claim/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/severance/claim/</guid>
+      <description>퇴직금 14,673,913원을 못 받았다면 지급명령 인지대는 전자소송 기준 6,300원이에요. 지급명령 신청서와 소장 양식을 어디서 받는지, 인지대와 송달료는 얼마인지, 어느 법원에 내는지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>특고 노무제공자 실업급여, 보험설계사와 배달라이더 대리운전은 되나요?</title>
+      <link>https://moneydoc.kr/unemployment/special-worker/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/unemployment/special-worker/</guid>
+      <description>특고 노무제공자도 시행령이 정한 17개 직종에 들어가고 소득 기준을 채우면 실업급여를 받을 수 있어요. 보험설계사, 택배기사, 배달라이더인 늘찬배달원, 대리운전기사는 목록에 있지만 탁송기사는 없어요. 직종별로 어떤 조건을 채워야 하는지 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>프리랜서 3.3% 원천징수와 환급, 경비율부터 5월 신고까지</title>
+      <link>https://moneydoc.kr/freelancer/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/freelancer/</guid>
+      <description>프리랜서가 300만원을 받으면 3.3%인 99,000원을 떼고 2,901,000원이 들어와요. 3.3%가 어떻게 나뉘는지, 단순경비율로 소득금액이 얼마가 되는지, 5월에 신고하면 얼마를 돌려받는지 표로 정리했어요.</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>2026년 기초생활수급 조건과 급여, 소득인정액부터 신청 서류까지</title>
+      <link>https://moneydoc.kr/basic-livelihood/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/basic-livelihood/</guid>
+      <description>1인 가구 소득인정액이 820,556원 이하면 생계급여를 받아요. 기준 중위소득, 급여 4종의 선정기준, 소득인정액 계산, 신청 서류를 한 번에 정리했어요.</description>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>2026년 기초연금 수급 조건과 금액, 선정기준액부터 신청까지</title>
+      <link>https://moneydoc.kr/basic-pension/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/basic-pension/</guid>
+      <description>65세 이상이고 소득인정액이 단독가구 2,470,000원 이하면 기초연금을 받아요. 단독가구는 월 349,700원, 부부가구는 559,520원이에요. 선정기준액, 소득인정액, 국민연금 연계 감액, 신청 방법을 정리했어요.</description>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>국민연금 조기수령 감액과 손익분기, 조건부터 연기연금 비교까지</title>
+      <link>https://moneydoc.kr/pension-early/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/pension-early/</guid>
+      <description>정상수령 월 100만원인 사람이 60세부터 받으면 700,000원으로 30% 깎여요. 감액률표, 손익분기 나이, 신청 조건, 연기연금과의 비교를 한 번에 정리했어요.</description>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>스트레스 DSR 계산과 대출 한도, 3단계 적용부터 주담대 한도까지</title>
+      <link>https://moneydoc.kr/dsr/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/dsr/</guid>
+      <description>연소득 5,000만원이면 30년 원리금균등 기준 대출 한도가 293,536,331원이에요. 스트레스 금리 1.5%가 붙어 55,565,806원이 줄어든 금액이에요. DSR 계산법, 단계별 가산금리, 소득과 기간별 한도표를 정리했어요.</description>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>근로장려금 지급액 조회: 홈택스·손택스·ARS 확인 방법</title>
-      <link>https://moneydoc.kr/government/earned-income-tax-credit-check/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/government/earned-income-tax-credit-check/</guid>
+      <link>https://moneydoc.kr/gov/earned-income-tax-credit-check/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/gov/earned-income-tax-credit-check/</guid>
       <description>근로장려금 심사결과·지급액 조회 방법. 홈택스·손택스 장려금 메뉴에서 심사진행상황 확인, ARS 1544-9944. 2026년 정기분은 8월 27일 지급, 기한 후 신청은 12월 1일까지 95% 지급.</description>
       <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>근로장려금 지급일 2026, 8월 27일 지급·내 지급액 조회 방법</title>
-      <link>https://moneydoc.kr/government/earned-income-tax-credit-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/government/earned-income-tax-credit-guide/</guid>
+      <link>https://moneydoc.kr/gov/earned-income-tax-credit-guide/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/gov/earned-income-tax-credit-guide/</guid>
       <description>2026년 근로장려금 정기분은 8월 27일 지급(법정기한 9월 말보다 조기). 심사결과·지급액은 홈택스·손택스에서 조회. 단독 최대 165만·홑벌이 285만·맞벌이 330만 원. 5월 신청을 놓쳤다면 12월 1일까지 기한 후 신청 시 95% 지급.</description>
       <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>청년미래적금 계좌개설(7/27~8/7)·심사결과·가입조건·수령액까지</title>
-      <link>https://moneydoc.kr/government/youth-future-savings-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/government/youth-future-savings-guide/</guid>
+      <link>https://moneydoc.kr/gov/youth-future-savings-guide/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/gov/youth-future-savings-guide/</guid>
       <description>청년미래적금 계좌개설 기간 7월 27일~8월 7일. 심사결과 확인 방법(7월 24일 개별 안내), 취급은행 앱 계좌개설, 가입조건과 정부기여금 6% vs 12%, 만기 수령액, 12월 2차 모집까지 정리했어요.</description>
       <pubDate>Sat, 18 Jul 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>군인도 청년미래적금 가입되나요? 군장병급여만 있어도 OK</title>
-      <link>https://moneydoc.kr/government/youth-future-savings-soldier/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/government/youth-future-savings-soldier/</guid>
+      <link>https://moneydoc.kr/gov/youth-future-savings-soldier/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/gov/youth-future-savings-soldier/</guid>
       <description>군인도 청년미래적금 가입 가능. 직전연도 소득 없는 병사도 군장병급여만 있으면 OK. 훈련소 내 비대면 가입, 장병내일준비적금 중복가입, 군인 만기 수령액(일반형 6%), 군필 나이 만 40세까지.</description>
       <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>실업급여 조건·금액·신청방법 총정리 (2026년 기준)</title>
-      <link>https://moneydoc.kr/government/unemployment-benefit-guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/government/unemployment-benefit-guide/</guid>
-      <description>실업급여 조건(고용보험 180일·비자발 퇴직), 받는 금액(2026년 상한 68,100원·하한 66,048원), 소정급여일수, 신청방법과 신청기간까지 누구나 이해하기 쉽게 정리했습니다.</description>
-      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>

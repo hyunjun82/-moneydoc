@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { GuideList } from "@/components/GuideList";
 import { ArticleV2Runtime } from "@/components/ArticleV2Runtime";
 import type { ArticleV2Meta } from "@/components/ArticleV2";
 import "@/components/article-v2.css";
@@ -87,6 +88,16 @@ export function HubPage({ meta, html, faqLd, scriptKey, url, catLabel, crumb, ca
           <div dangerouslySetInnerHTML={{ __html: after }} />
         </main>
       </div>
+      {/* 이 주제의 스포크 글 목록. 없으면 스포크가 고아 문서가 된다 —
+          링크가 하나도 없어 사람도 못 찾고 크롤러도 "아무도 안 거는 페이지" 로 본다
+          (실측 2026-09-09: 허브→스포크 링크 0개, 실업급여 글 63편이 전부 고아). */}
+      {isHub ? (
+        <GuideList
+          prefix={new URL(url).pathname}
+          title={`${crumb} 관련 글`}
+          sub={`${crumb}에서 자주 묻는 질문을 하나씩 따로 정리했습니다`}
+        />
+      ) : null}
       <ArticleV2Runtime scriptKey={scriptKey} />
       <Footer />
     </>
