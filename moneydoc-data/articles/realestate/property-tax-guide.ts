@@ -4,7 +4,7 @@ export const meta = {
   title: "재산세 계산과 납부, 공시가격부터 특례세율과 7월 9월 분납까지",
   description: "공시가격 5억원인 집의 재산세는 지방교육세까지 684,000원이에요. 1세대 1주택 특례세율을 받으면 312,000원으로 줄어요. 과세표준 계산, 세율 구간, 7월과 9월 납기, 조회와 카드 납부를 정리했어요.",
   datePublished: "2026-09-03",
-  dateModified: "2026-09-03",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/realestate/property-tax-guide/",
   image: "https://moneydoc.kr/og/property-tax-guide.png",
   imageAlt: "재산세 계산. 공시가격 5억원인 집의 재산세는 684,000원",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "property-tax-guide";
 
 export const html = `<h1>재산세 계산과 납부, 공시가격부터 특례세율과 7월 9월 분납까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">지방세법 세율표와 공정시장가액비율 대조 · 2026-09-03</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">지방세법 세율표와 공정시장가액비율 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/property-tax-guide.png" width="1200" height="630" alt="재산세 계산. 공시가격 5억원인 집의 재산세는 684,000원">
 <p class="v2-lead v2-intro">재산세는 6월 1일에 집을 갖고 있는 사람에게 붙는 세금이에요. 시세가 아니라 공시가격을 기준으로 하고, 거기에 공정시장가액비율을 곱해 과세표준을 만들어요. 공시가격 5억원인 집이라면 과세표준은 300,000,000원이고, 재산세 570,000원에 지방교육세 114,000원을 더해 684,000원이에요. 1세대 1주택이고 공시가격이 9억원 이하면 세율이 더 낮아져 312,000원이 돼요. 과세표준, 세율, 납기, 조회 방법을 차례로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -169,7 +169,7 @@ export const html = `<h1>재산세 계산과 납부, 공시가격부터 특례�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>지방세법 제110조(과세표준), 제111조(세율), 제111조의2(1세대 1주택 세율 특례), 제114조(과세기준일 6월 1일), 제115조(납기), 제118조(분할납부 250만원), 제118조의2(납부유예), 제151조(지방교육세). 지방세법 시행령 제109조(공정시장가액비율). 부동산 가격공시에 관한 법률(공동주택가격 공시).
-<b>정부 도구</b>위택스 지방세 조회 화면의 세율 구조와 이 글의 계산이 같은 값이에요 (2026-09-03 대조).
+<b>정부 도구</b>위택스 지방세 조회 화면의 세율 구조와 이 글의 계산이 같은 값이에요 (2026-09-09 대조).
 </div>
 <div class="v2-rel"><a href="/property-tax/"><b>계산기</b>재산세 계산기</a><a href="/comprehensive-tax/"><b>부동산 계산기</b>종합부동산세 계산기</a><a href="/acquisition-tax/"><b>부동산 가이드</b>집 살 때 취득세 세율과 계산</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -248,7 +248,7 @@ export const landing = {
     "line2": "올해 얼마 나오나",
     "sub1": "공시가격 5억 → 684,000원",
     "sub2": "1세대 1주택 특례를 받으면 312,000원",
-    "foot": "지방세법 세율표와 공정시장가액비율 대조 · 2026-09-03 검증",
+    "foot": "지방세법 세율표와 공정시장가액비율 대조 · 2026-09-09 검증",
     "card": {
       "label": "재산세 합계",
       "big": "684,000",
@@ -262,7 +262,7 @@ export const landing = {
     "href": "/property-tax/calculator/",
     "label": "재산세 계산기 바로가기"
   },
-  "badge": "지방세법 세율표와 공정시장가액비율 대조 · 2026-09-03",
+  "badge": "지방세법 세율표와 공정시장가액비율 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 부정수급 자진신고와 조사 절차, 처벌부터 환수까지",
   description: "실업급여 부정수급이 적발되기 전에 스스로 신고하면 추가징수를 면제받을 수 있고 반환 범위도 실제 일한 날로 좁아져요. 조사가 어떻게 진행되는지, 처벌과 반환·추가징수 기준까지 정리했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-fraud-report-guide/",
   image: "https://moneydoc.kr/og/unemployment-fraud-report-guide.png",
   imageAlt: "실업급여 부정수급 자진신고 시 추가징수 면제와 반환 범위 축소",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-fraud-report-guide";
 
 export const html = `<h1>실업급여 부정수급 자진신고와 조사 절차, 처벌부터 환수까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행규칙 자진신고·조사 조항 원문 대조 · 2026-09-08</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행규칙 자진신고·조사 조항 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-fraud-report-guide.png" width="1200" height="630" alt="실업급여 부정수급 자진신고 시 추가징수 면제와 반환 범위 축소">
 <p class="v2-lead v2-intro">실업급여를 부정하게 받은 걸 알았다면 숨기기보다 먼저 신고하는 게 나아요. 고용센터가 조사를 시작하기 전에 스스로 알리면 추가징수를 면제받을 수 있고, 돌려줘야 할 금액도 실제 일한 날만큼으로 줄어들어요. 반대로 적발되면 그 기간 전체를 돌려주고 최대 5배까지 더 물어낼 수 있어요. 자진신고 방법과 조사 절차, 처벌과 환수 범위를 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -95,7 +95,7 @@ export const html = `<h1>실업급여 부정수급 자진신고와 조사 절차
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제47조(실업인정대상기간 중의 취업 등의 신고), 제61조(부정행위에 따른 급여의 지급 제한), 제62조(반환명령 등). 시행령 제80조(지급 제한이 완화되는 부정행위), 제81조(구직급여의 반환 등). 시행규칙 제104조(부정행위에 따른 구직급여 반환명령의 기준), 제105조(부정행위에 따른 추가징수 등), 제106조(지급 제한 등의 통지).
-<b>행정규칙·정부 안내</b>고용노동부 예규 「실업인정 및 재취업지원규정」 제23조(안내 및 통보의무). 고용24 실업급여 제도 안내의 부정수급·형사처벌 안내 (2026-09-08 확인).
+<b>행정규칙·정부 안내</b>고용노동부 예규 「실업인정 및 재취업지원규정」 제23조(안내 및 통보의무). 고용24 실업급여 제도 안내의 부정수급·형사처벌 안내 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/fraud/"><b>다음 질문</b>실업급여 부정수급 처벌, 반환 금액과 추가징수 기준</a><a href="/unemployment/part-time-job/"><b>다음 질문</b>실업급여 알바 신고 방법, 안 하면 부정수급인가요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -166,7 +166,7 @@ export const landing = {
     "line2": "조사 전에 알리면",
     "sub1": "추가징수를 면제받을 수 있어요",
     "sub2": "반환 범위도 실제 일한 날로 좁아져요",
-    "foot": "고용보험법 시행규칙 자진신고·조사 조항 원문 대조 · 2026-09-08 검증",
+    "foot": "고용보험법 시행규칙 자진신고·조사 조항 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "조사 전 자진신고",
       "big": "면제",
@@ -176,7 +176,7 @@ export const landing = {
     },
     "alt": "실업급여 부정수급 자진신고 시 추가징수 면제와 반환 범위 축소"
   },
-  "badge": "고용보험법 시행규칙 자진신고·조사 조항 원문 대조 · 2026-09-08",
+  "badge": "고용보험법 시행규칙 자진신고·조사 조항 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

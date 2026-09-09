@@ -4,7 +4,7 @@ export const meta = {
   title: "2026년 실업급여 상한액과 하한액, 하루 얼마까지 받나요",
   description: "2026년 실업급여는 하루 최대 68,100원, 최소 66,048원이에요. 둘 차이가 2,052원뿐이라 월급이 달라도 받는 금액은 비슷해요. 월급 구간별로 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-amount-guide/",
   image: "https://moneydoc.kr/og/unemployment-amount-guide.png",
   imageAlt: "2026년 실업급여 상한액 68,100원과 하한액 66,048원",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-amount-guide";
 
 export const html = `<h1>2026년 실업급여 상한액과 하한액, 하루 얼마까지 받나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 구직급여일액 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 구직급여일액 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-amount-guide.png" width="1200" height="630" alt="2026년 실업급여 상한액 68,100원과 하한액 66,048원">
 <p class="v2-lead v2-intro">실업급여는 원래 평균임금의 60퍼센트예요. 그런데 위아래로 막아 둔 금액이 있어서, 실제로 받는 하루 금액은 대부분 두 값 중 하나예요. 2026년 상한액은 68,100원, 하한액은 66,048원이고 차이는 2,052원밖에 나지 않아요. 월급이 얼마여야 어디에 걸리는지, 월로 치면 얼마인지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -101,7 +101,7 @@ export const html = `<h1>2026년 실업급여 상한액과 하한액, 하루 얼
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제45조(급여의 기초가 되는 임금일액, 최저기초일액과 상한), 제46조(구직급여일액과 최저구직급여일액), 고용보험법 시행령 제68조(기초일액의 상한액).
-<b>정부 도구</b>최저임금위원회의 2026년 최저임금과 고용24 실업급여 모의계산 결과를 대조했어요 (2026-09-04 확인).
+<b>정부 도구</b>최저임금위원회의 2026년 최저임금과 고용24 실업급여 모의계산 결과를 대조했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/calculator/"><b>계산기</b>실업급여 계산기</a><a href="/unemployment/days/"><b>다음 질문</b>실업급여 소정급여일수 표, 나이와 가입기간별 며칠 받나</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -172,7 +172,7 @@ export const landing = {
     "line2": "하루 얼마까지 받나요",
     "sub1": "하루 최대 68,100원, 최소 66,048원이에요",
     "sub2": "둘 차이가 2,052원뿐이라 월급이 달라도 금액이 비슷해요",
-    "foot": "고용보험법 구직급여일액 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 구직급여일액 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "2026년 하루 상한액",
       "big": "68,100",
@@ -186,7 +186,7 @@ export const landing = {
     "href": "/unemployment/calculator/",
     "label": "내 하루 지급액 계산해 보기"
   },
-  "badge": "고용보험법 구직급여일액 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 구직급여일액 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

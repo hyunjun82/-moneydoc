@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 나이 상한, 65세 기준과 계속 근로 예외",
   description: "65세가 넘었다고 안 되는 게 아니에요. 법이 보는 건 나이가 아니라 그 회사에 언제 고용됐는지예요. 65세 전부터 자격을 유지한 채 계속 일했다면 70세에 그만둬도 받고, 65세가 넘어 새로 들어갔다면 실업급여가 적용되지 않아요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-elderly-guide/",
   image: "https://moneydoc.kr/og/unemployment-elderly-guide.png",
   imageAlt: "65세 이상 실업급여. 65세 이후 신규 고용은 적용 제외, 계속 근로는 대상",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-elderly-guide";
 
 export const html = `<h1>실업급여 나이 상한, 65세 기준과 계속 근로 예외</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 적용 제외 규정 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 적용 제외 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-elderly-guide.png" width="1200" height="630" alt="65세 이상 실업급여. 65세 이후 신규 고용은 적용 제외, 계속 근로는 대상">
 <p class="v2-lead v2-intro">실업급여를 나이 몇살까지 받느냐고 많이 물어요. 65세가 넘으면 끝난다고 알고 계신 분이 많은데 절반만 맞아요. 법이 보는 건 지금 나이가 아니라 그 회사에 언제 들어갔느냐예요. 65세 전부터 고용보험 자격을 유지한 채 계속 일했다면 70세에 그만둬도 받고, 65세가 넘어 새로 들어갔다면 66세여도 안 돼요. 나이가 바꾸는 지점이 두 군데 더 있어서 함께 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -109,7 +109,7 @@ export const html = `<h1>실업급여 나이 상한, 65세 기준과 계속 근�
 <div class="v2-src">
 <b>법령</b>고용보험법 제10조(적용 제외), 제29조(피보험자등에 대한 직업능력개발 지원), 제37조(실업급여의 종류), 제40조(구직급여의 수급 요건), 제58조(이직 사유에 따른 수급자격의 제한). 시행령 제84조·제86조(조기재취업 수당의 지급기준과 청구). 시행규칙 제101조·별표2(정당한 이직 사유), 제109조(조기재취업 수당 청구서).
 <b>행정규칙·정부 안내</b>고용노동부 「실업급여 지급 요건 강화, 무엇이 달라지나」 정책브리핑(만 60세 이상 재취업활동 기준). 고용24 실업급여 제도 안내(수급자격 인정신청서 인터넷 제출 대상), 이직확인서 상실사유 구분코드, 실업크레딧 지원 안내. 고용24 실업인정 인터넷 신청 매뉴얼(고령자 재취업활동 인정 범위).
-<b>정부 도구</b>고용보험 홈페이지의 피보험자격 이력에서 회사별 취득일과 상실일을 확인했어요 (2026-09-04 확인).
+<b>정부 도구</b>고용보험 홈페이지의 피보험자격 이력에서 회사별 취득일과 상실일을 확인했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/days/"><b>다음 질문</b>실업급여 일수, 나이와 가입기간별로 며칠 받나요</a><a href="/unemployment/merge-periods/"><b>다음 질문</b>실업급여 합산기간, 전 직장 고용보험도 더해지나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -180,7 +180,7 @@ export const landing = {
     "line2": "나이보다 입사일",
     "sub1": "65세 이후에 새로 고용됐다면 적용되지 않아요",
     "sub2": "65세 전부터 계속 일했다면 받을 수 있어요",
-    "foot": "고용보험법 적용 제외 규정 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 적용 제외 규정 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "갈림길이 되는 나이",
       "big": "65",
@@ -190,7 +190,7 @@ export const landing = {
     },
     "alt": "65세 이상 실업급여. 65세 이후 신규 고용은 적용 제외, 계속 근로는 대상"
   },
-  "badge": "고용보험법 적용 제외 규정 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 적용 제외 규정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

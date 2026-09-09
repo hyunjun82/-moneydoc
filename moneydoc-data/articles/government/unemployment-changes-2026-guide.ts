@@ -4,7 +4,7 @@ export const meta = {
   title: "2026년 실업급여 개편, 하한액과 반복수급 횟수제한은?",
   description: "2026년 실업급여는 하한액과 상한액만 올랐어요. 반복수급 감액이나 총 횟수를 제한하는 조항은 법령 어디에도 없어요. 실제로 달라진 것과 소문을 구분해 정리했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-changes-2026-guide/",
   image: "https://moneydoc.kr/og/unemployment-changes-2026-guide.png",
   imageAlt: "2026년 실업급여 개편, 하한액과 상한액 변경 여부",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-changes-2026-guide";
 
 export const html = `<h1>2026년 실업급여 개편, 하한액과 반복수급 횟수제한은?</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">2026년 개편 여부 원문 대조 · 2026-09-08</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">2026년 개편 여부 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-changes-2026-guide.png" width="1200" height="630" alt="2026년 실업급여 개편, 하한액과 상한액 변경 여부">
 <p class="v2-lead v2-intro">실업급여가 2026년에 개편됐다는 말을 들으면 하한액이 얼마로 바뀌었는지, 반복수급을 감액한다는 소문이 사실인지, 몇 번까지만 받을 수 있게 되는지가 궁금해져요. 결론부터 말하면 실제로 확인되는 변화는 하한액과 상한액뿐이에요. 무엇이 바뀌었고 무엇이 소문에 그치는지 정부 원문으로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -89,7 +89,7 @@ export const html = `<h1>2026년 실업급여 개편, 하한액과 반복수급 
 <div class="v2-src">
 <b>법령</b>고용보험법 제40조(수급요건), 제45조(임금일액과 최저기초일액), 제46조(구직급여일액과 최저구직급여일액). 고용보험법 시행령 제68조(기초일액 상한, 2025.12.23 개정).
 <b>행정규칙·정부 안내</b>고용노동부 「실업급여 지급 요건 강화, 무엇이 달라지나」 정책브리핑(2022.6.29, 2022.7.1 시행, 반복수급자 재취업활동 기준).
-<b>정부 도구</b>고용24 실업급여 제도 안내와 법령 원문을 대조했어요 (2026-09-08 확인).
+<b>정부 도구</b>고용24 실업급여 제도 안내와 법령 원문을 대조했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/amount/"><b>다음 질문</b>2026년 실업급여 상한액과 하한액, 하루 얼마까지 받나요</a><a href="/unemployment/repeat/"><b>다음 질문</b>실업급여 반복수급 기준, 감액 시행 여부와 실업인정 차이</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -160,7 +160,7 @@ export const landing = {
     "line2": "무엇이 바뀌었나요",
     "sub1": "하한액과 상한액이 같이 올랐어요",
     "sub2": "감액과 횟수제한은 없어요",
-    "foot": "2026년 개편 여부 원문 대조 · 2026-09-08 검증",
+    "foot": "2026년 개편 여부 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "2026년 하한액",
       "big": "66,048",
@@ -170,7 +170,7 @@ export const landing = {
     },
     "alt": "2026년 실업급여 개편, 하한액과 상한액 변경 여부"
   },
-  "badge": "2026년 개편 여부 원문 대조 · 2026-09-08",
+  "badge": "2026년 개편 여부 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 5,
   "quick": [

@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 신청기간, 퇴사 후 언제까지 받나요",
   description: "실업급여는 이직일 다음 날부터 12개월 안에 받아야 해요. 소정급여일수가 남아 있어도 이 기간이 지나면 끝나요. 늦게 신청했을 때 얼마를 못 받는지 계산했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-deadline-guide/",
   image: "https://moneydoc.kr/og/unemployment-deadline-guide.png",
   imageAlt: "실업급여 신청기간 12개월과 늦게 신청했을 때 손해",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-deadline-guide";
 
 export const html = `<h1>실업급여 신청기간, 퇴사 후 언제까지 받나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 수급기간 규정 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 수급기간 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-deadline-guide.png" width="1200" height="630" alt="실업급여 신청기간 12개월과 늦게 신청했을 때 손해">
 <p class="v2-lead v2-intro">실업급여에는 두 개의 시계가 있어요. 하나는 며칠을 받느냐인 소정급여일수, 다른 하나는 언제까지 받을 수 있느냐인 수급기간이에요. 수급기간은 이직일 다음 날부터 12개월이고, 이 기간이 지나면 일수가 남아 있어도 지급이 끝나요. 소정급여일수가 긴 사람일수록 늦게 신청하면 손해가 커져요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -105,7 +105,7 @@ export const html = `<h1>실업급여 신청기간, 퇴사 후 언제까지 받�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제42조(실업의 신고), 제48조(수급기간 및 수급일수), 제50조(소정급여일수).
-<b>정부 도구</b>고용보험 홈페이지의 수급자격 정보에서 이직일과 남은 일수를 확인했어요 (2026-09-04 확인).
+<b>정부 도구</b>고용보험 홈페이지의 수급자격 정보에서 이직일과 남은 일수를 확인했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/apply/"><b>다음 질문</b>실업급여 신청 방법 5단계, 고용24 구직신청부터 실업인정까지</a><a href="/unemployment/days/"><b>다음 질문</b>실업급여 소정급여일수 표, 나이와 가입기간별 며칠 받나</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -176,7 +176,7 @@ export const landing = {
     "line2": "늦으면 얼마나 손해인가요",
     "sub1": "이직일 다음 날부터 12개월 안에 받아야 해요",
     "sub2": "가입 12년이면 소정급여일수가 240일이라 늦으면 다 못 써요",
-    "foot": "고용보험법 수급기간 규정 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 수급기간 규정 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "수급기간",
       "big": "12",
@@ -186,7 +186,7 @@ export const landing = {
     },
     "alt": "실업급여 신청기간 12개월과 늦게 신청했을 때 손해"
   },
-  "badge": "고용보험법 수급기간 규정 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 수급기간 규정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

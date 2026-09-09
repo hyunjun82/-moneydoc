@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 연장 조건, 개별연장급여와 훈련연장급여 차이",
   description: "소정급여일수를 다 써도 연장급여를 받을 수 있는 경우가 있어요. 훈련연장급여는 일액의 100퍼센트, 개별연장급여와 특별연장급여는 70퍼센트예요. 조건과 차이를 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-extension-guide/",
   image: "https://moneydoc.kr/og/unemployment-extension-guide.png",
   imageAlt: "실업급여 연장급여 세 종류와 조건",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-extension-guide";
 
 export const html = `<h1>실업급여 연장 조건, 개별연장급여와 훈련연장급여 차이</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 연장급여 규정 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 연장급여 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-extension-guide.png" width="1200" height="630" alt="실업급여 연장급여 세 종류와 조건">
 <p class="v2-lead v2-intro">소정급여일수를 다 쓰면 실업급여가 끝나요. 그런데 법에는 그 일수를 넘겨서 더 지급할 수 있는 길이 세 가지 있어요. 훈련연장급여, 개별연장급여, 특별연장급여예요. 다만 신청한다고 다 되는 게 아니라 고용센터가 판단하거나 정부가 정한 사유가 있어야 해요. 각각 누가 받고 얼마를 받는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -98,7 +98,7 @@ export const html = `<h1>실업급여 연장 조건, 개별연장급여와 훈�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제51조(훈련연장급여), 제52조(개별연장급여), 제53조(특별연장급여), 제54조(연장급여의 수급기간 및 구직급여일액), 제55조(연장급여의 상호 조정 등), 제60조(훈련 거부 등에 따른 급여의 지급 제한).
-<b>정부 도구</b>고용24 실업급여 안내에서 연장급여 종류와 지급 순서를 확인했어요 (2026-09-04 확인).
+<b>정부 도구</b>고용24 실업급여 안내에서 연장급여 종류와 지급 순서를 확인했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/days/"><b>다음 질문</b>실업급여 소정급여일수 표, 나이와 가입기간별 며칠 받나</a><a href="/unemployment/deadline/"><b>다음 질문</b>실업급여 신청기간 12개월, 늦게 신청하면 얼마나 손해인가</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -169,7 +169,7 @@ export const landing = {
     "line2": "다 쓰면 끝인가요",
     "sub1": "소정급여일수를 초과해 연장 지급되는 경우가 세 가지 있어요",
     "sub2": "훈련연장급여는 100퍼센트, 나머지 둘은 70퍼센트예요",
-    "foot": "고용보험법 연장급여 규정 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 연장급여 규정 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "연장급여",
       "big": "3",
@@ -179,7 +179,7 @@ export const landing = {
     },
     "alt": "실업급여 연장급여 세 종류와 조건"
   },
-  "badge": "고용보험법 연장급여 규정 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 연장급여 규정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

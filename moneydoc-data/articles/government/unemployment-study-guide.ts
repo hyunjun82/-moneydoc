@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 내일배움카드 30시간, 구직활동 인정과 수강 증명서",
   description: "실업급여를 받으면서 국민내일배움카드로 훈련을 들을 때 궁금한 점을 정리했어요. 월 30시간 기준, 구직외활동 인정 여부, 수강증명서 제출 방법을 근거 원문으로 확인했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-study-guide/",
   image: "https://moneydoc.kr/og/unemployment-study-guide.png",
   imageAlt: "실업급여 받으며 국민내일배움카드 훈련을 들을 때 30시간 기준과 구직외활동 인정, 수강증명서 제출 절차",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-study-guide";
 
 export const html = `<h1>실업급여 내일배움카드 30시간, 구직활동 인정과 수강 증명서</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정·인터넷 실업인정 매뉴얼 원문 확인 · 2026-09-08</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정·인터넷 실업인정 매뉴얼 원문 확인 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-study-guide.png" width="1200" height="630" alt="실업급여 받으며 국민내일배움카드 훈련을 들을 때 30시간 기준과 구직외활동 인정, 수강증명서 제출 절차">
 <p class="v2-lead v2-intro">실업급여를 받는 동안에도 국민내일배움카드로 훈련을 들을 수 있어요. 다만 신청이 되는지보다 그 훈련이 실업인정 때 어떻게 잡히는지가 더 중요해요. 한 과정을 얼마나 들어야 구직활동 없이도 인정받는지, 구직활동과는 어떻게 다르게 분류되는지, 수강증명서는 어디서 받아 어떻게 내는지를 근거 원문으로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -154,7 +154,7 @@ export const landing = {
     "line2": "30시간 채우기",
     "sub1": "한 과정 월 30시간이면 재취업활동 인정",
     "sub2": "못 채우면 구직활동 하나를 더해야 해요",
-    "foot": "실업인정 및 재취업지원규정 원문 확인 · 2026-09-08 검증",
+    "foot": "실업인정 및 재취업지원규정 원문 확인 · 2026-09-09 검증",
     "card": {
       "label": "훈련 인정 기준",
       "big": "30",
@@ -164,7 +164,7 @@ export const landing = {
     },
     "alt": "실업급여 받으며 국민내일배움카드 훈련을 들을 때 30시간 기준과 구직외활동 인정, 수강증명서 제출 절차"
   },
-  "badge": "실업인정 및 재취업지원규정·인터넷 실업인정 매뉴얼 원문 확인 · 2026-09-08",
+  "badge": "실업인정 및 재취업지원규정·인터넷 실업인정 매뉴얼 원문 확인 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

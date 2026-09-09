@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여와 근로장려금 중복, 소득 산정부터 신청 조건과 금액까지",
   description: "실업급여를 받은 해에 근로소득이나 사업소득이 있으면 근로장려금도 함께 신청할 수 있어요. 구직급여는 비과세소득이라 소득 계산에서 빠지고, 신청 조건 다섯 가지와 재산에 따라 줄어드는 지급액을 정리했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-eitc-guide/",
   image: "https://moneydoc.kr/og/unemployment-eitc-guide.png",
   imageAlt: "실업급여와 근로장려금 중복 신청 가능 여부 안내",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-eitc-guide";
 
 export const html = `<h1>실업급여와 근로장려금 중복, 소득 산정부터 신청 조건과 금액까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">조세특례제한법 신청자격·산정 원문 대조 · 2026-09-08</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">조세특례제한법 신청자격·산정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-eitc-guide.png" width="1200" height="630" alt="실업급여와 근로장려금 중복 신청 가능 여부 안내">
 <p class="v2-lead v2-intro">실업급여를 받는 동안 근로장려금도 받을 수 있는지 궁금한 분이 많아요. 두 제도는 별개라서 하나가 다른 하나를 막지 않지만, 근로장려금은 그 해에 일한 소득이 있어야 신청할 수 있어요. 실업급여가 소득으로 잡히는지, 신청 조건은 무엇인지, 금액은 어떻게 정해지는지 순서대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -175,7 +175,7 @@ export const landing = {
     "line2": "같이 받아도 되나요",
     "sub1": "구직급여 받는 중에도 신청할 수 있어요",
     "sub2": "다만 재산이 많으면 못 받을 수도 있어요",
-    "foot": "조세특례제한법 원문 대조 · 2026-09-08 검증",
+    "foot": "조세특례제한법 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "실업급여 받는 중이라도",
       "big": "가능",
@@ -185,7 +185,7 @@ export const landing = {
     },
     "alt": "실업급여와 근로장려금 중복 신청 가능 여부 안내"
   },
-  "badge": "조세특례제한법 신청자격·산정 원문 대조 · 2026-09-08",
+  "badge": "조세특례제한법 신청자격·산정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

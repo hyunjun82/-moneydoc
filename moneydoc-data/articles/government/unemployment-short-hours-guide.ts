@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 주 15시간 미만, 초단시간 근로자도 되나요",
   description: "주 15시간 미만이면 고용보험에서 원칙적으로 빠져요. 다만 그 사업에서 3개월 이상 계속 일했다면 적용 대상이에요. 기준기간이 24개월로 늘어나는 특례까지 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-short-hours-guide/",
   image: "https://moneydoc.kr/og/unemployment-short-hours-guide.png",
   imageAlt: "주 15시간 미만 초단시간 근로자의 고용보험 적용 기준",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-short-hours-guide";
 
 export const html = `<h1>실업급여 주 15시간 미만, 초단시간 근로자도 되나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 적용 제외 규정 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 적용 제외 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-short-hours-guide.png" width="1200" height="630" alt="주 15시간 미만 초단시간 근로자의 고용보험 적용 기준">
 <p class="v2-lead v2-intro">주 15시간 미만으로 일하면 고용보험이 안 된다고 알고 계신 분이 많아요. 원칙은 맞지만 예외가 있어요. 같은 곳에서 3개월 이상 계속 일했다면 적용 대상이 돼요. 그리고 짧게 일하는 사람을 위해 180일을 세는 구간을 24개월로 늘려 주는 특례가 따로 있어요. 두 가지를 갈라서 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -105,7 +105,7 @@ export const html = `<h1>실업급여 주 15시간 미만, 초단시간 근로�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제10조(적용 제외), 제40조(구직급여의 수급 요건과 기준기간), 제45조(급여의 기초가 되는 임금일액), 제46조(구직급여일액), 고용보험법 시행령 제3조(적용 제외 근로자).
-<b>정부 도구</b>고용보험 홈페이지의 피보험자격 이력에서 신고 여부와 기간을 확인했어요 (2026-09-04 확인).
+<b>정부 도구</b>고용보험 홈페이지의 피보험자격 이력에서 신고 여부와 기간을 확인했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/180days/"><b>다음 질문</b>실업급여 180일, 주 며칠 일해야 채워지나요</a><a href="/unemployment/part-time-job/"><b>다음 질문</b>실업급여 알바 신고 방법, 안 하면 부정수급인가요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -176,7 +176,7 @@ export const landing = {
     "line2": "초단시간도 되나요",
     "sub1": "원칙은 적용 제외지만 3개월 이상 계속 일했으면 적용돼요",
     "sub2": "기준기간이 24개월로 늘어나는 특례도 있어요",
-    "foot": "고용보험법 적용 제외 규정 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 적용 제외 규정 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "3개월 이상 일했다면",
       "big": "적용",
@@ -186,7 +186,7 @@ export const landing = {
     },
     "alt": "주 15시간 미만 초단시간 근로자의 고용보험 적용 기준"
   },
-  "badge": "고용보험법 적용 제외 규정 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 적용 제외 규정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

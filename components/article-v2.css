@@ -203,7 +203,8 @@
 .md-v2 a.v2-go[target="_blank"]:after{content:" ↗"}
 .md-v2 p a.v2-go{margin-top:6px}
 .md-v2 .v2-steps .v2-go{display:inline-block;white-space:nowrap;margin-top:10px;font-size:12.5px;font-weight:700;color:var(--brand);border:1.5px solid var(--brand);border-radius:999px;padding:5px 11px;text-decoration:none}
-.md-v2 .v2-steps .v2-go:after{content:" ↗"}
+.md-v2 .v2-steps .v2-go:after{content:" →"}
+.md-v2 .v2-steps .v2-go[target="_blank"]:after{content:" ↗"}
 .md-v2 .v2-term{border-bottom:1px dotted var(--mut);cursor:help}
 .md-v2 .v2-tbl.v2-text th,.md-v2 .v2-tbl.v2-text td{text-align:left;white-space:normal;vertical-align:top}
 .md-v2 .v2-tbl.v2-text tbody th{min-width:110px}
@@ -237,3 +238,4 @@
 .md-v2 .v2-tbl .v2-go:after{content:" →"}
 .md-v2 .v2-note .v2-go{display:inline-block;white-space:nowrap;margin-left:6px;font-size:12px;font-weight:700;color:var(--brand);border:1.5px solid var(--brand);border-radius:999px;padding:3px 9px;text-decoration:none;vertical-align:middle}
 .md-v2 .v2-note .v2-go:after{content:" →"}
+.md-v2 .v2-steps .v2-go:after{content:" ↗"}

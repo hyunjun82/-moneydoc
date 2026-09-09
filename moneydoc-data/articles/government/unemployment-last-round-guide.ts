@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 마지막 회차와 남은 일수 정산",
   description: "마지막 회차는 회차 번호로 정해지지 않아요. 받을 수 있는 날수를 다 쓰는 회차가 마지막이에요. 4차 이후 인정일은 7~28일 사이에서 잡혀서 마지막은 짧게 끝나기도 해요. 정산 방법과 끝난 뒤 기한을 정리했어요.",
   datePublished: "2026-09-07",
-  dateModified: "2026-09-07",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-last-round-guide/",
   image: "https://moneydoc.kr/og/unemployment-last-round-guide.png",
   imageAlt: "실업급여 마지막 회차. 인정받은 날수만큼 정산해서 지급",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-last-round-guide";
 
 export const html = `<h1>실업급여 마지막 회차와 남은 일수 정산</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-last-round-guide.png" width="1200" height="630" alt="실업급여 마지막 회차. 인정받은 날수만큼 정산해서 지급">
 <p class="v2-lead v2-intro">마지막 회차가 다가오면 남은 일수가 어떻게 정리되는지 궁금해져요. 회차 번호로 정해지지 않고, 받을 수 있는 날수를 다 쓰는 회차가 마지막이에요. 그 회차는 기간이 짧게 잡히기도 해서 금액이 적어 보여요. 마지막이라고 활동 신고를 건너뛰면 그 기간은 인정되지 않고, 수급이 끝난 뒤에는 기한이 걸린 신청이 몇 가지 남아요. 순서대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -114,7 +114,7 @@ export const html = `<h1>실업급여 마지막 회차와 남은 일수 정산</
 <div class="v2-src">
 <b>법령</b>고용보험법 제44조(실업의 인정), 제47조(실업인정대상기간 중의 취업 등의 신고), 제48조(수급기간 및 수급일수), 제52조(개별연장급여), 제55조(연장급여의 상호 조정 등), 제56조(지급일 및 지급 방법), 제64조(조기재취업 수당). 시행령 제84조(조기재취업 수당의 지급기준). 시행규칙 제87조(재취업활동의 인정기준), 제92조(취업의 인정기준).
 <b>행정규칙·정부 안내</b>고용노동부 예규 실업인정 및 재취업지원규정 제249호 제9조·제10조·제11조·제12조·제16조·제17조(2026.9.1 시행). 고용24 실업급여 제도 안내와 실업크레딧 안내. 법제처 생활법령정보 실업의 인정(2026.8.15 기준). 고용노동부 인터넷상담 답변(회차별 재취업활동 횟수와 출석 회차).
-<b>정부 도구</b>고용24 실업인정 인터넷 신청 화면에서 소정급여일수의 남은 일수와 총 실업인정일수, 하루 금액 항목을 확인했어요 (2026-09-04 확인).
+<b>정부 도구</b>고용24 실업인정 인터넷 신청 화면에서 소정급여일수의 남은 일수와 총 실업인정일수, 하루 금액 항목을 확인했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/extension/"><b>다음 질문</b>소정급여일수가 끝나면 연장할 수 있나요</a><a href="/unemployment/report-job/"><b>다음 질문</b>실업급여 받다가 취업하면 언제까지 취업신고 하나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -185,7 +185,7 @@ export const landing = {
     "line2": "남은 일수 정산",
     "sub1": "인정받은 날수만큼 마지막 회차에 들어와요",
     "sub2": "인정일은 7~28일 사이에서 잡아요",
-    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-04 검증",
+    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "마지막에 14일이 남으면",
       "big": "924,672",
@@ -195,7 +195,7 @@ export const landing = {
     },
     "alt": "실업급여 마지막 회차. 인정받은 날수만큼 정산해서 지급"
   },
-  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-04",
+  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

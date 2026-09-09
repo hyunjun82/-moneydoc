@@ -4,7 +4,7 @@ export const meta = {
   title: "2026년 육아휴직 급여 조건과 금액, 신청 방법부터 6+6 특례까지",
   description: "통상임금 300만원이면 육아휴직 12개월 동안 23,100,000원을 받아요. 첫 3개월은 월 2,500,000원, 4개월째부터는 2,000,000원이에요. 지급 조건, 월별 상한, 신청 방법, 부모가 함께 쓰는 특례를 정리했어요.",
   datePublished: "2026-09-03",
-  dateModified: "2026-09-03",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/parental-leave-pay-guide/",
   image: "https://moneydoc.kr/og/parental-leave-pay-guide.png",
   imageAlt: "육아휴직 급여. 통상임금 300만원이면 12개월 동안 23,100,000원",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "parental-leave-pay-guide";
 
 export const html = `<h1>2026년 육아휴직 급여 조건과 금액, 신청 방법부터 6+6 특례까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행령 지급액 기준과 1원 단위 일치 · 2026-09-03</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행령 지급액 기준과 1원 단위 일치 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/parental-leave-pay-guide.png" width="1200" height="630" alt="육아휴직 급여. 통상임금 300만원이면 12개월 동안 23,100,000원">
 <p class="v2-lead v2-intro">육아휴직 급여는 통상임금을 기준으로 주되 기간에 따라 상한이 달라져요. 통상임금이 300만원이라면 첫 3개월은 월 2,500,000원, 4개월째부터 6개월째까지는 2,000,000원, 7개월째부터는 1,600,000원이에요. 12개월을 다 쓰면 23,100,000원이에요. 누가 쓸 수 있는지, 월별로 얼마인지, 부모가 함께 쓰면 얼마나 늘어나는지, 어디에 신청하는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -118,7 +118,7 @@ export const html = `<h1>2026년 육아휴직 급여 조건과 금액, 신청 �
   <div><i>1단계</i><b>회사에 육아휴직 신청</b><span>휴직 시작 예정일 30일 전까지 회사에 신청해요</span><em>30일 전</em></div>
   <div><i>2단계</i><b>회사가 확인서 제출</b><span>사업주가 육아휴직 확인서를 고용센터에 내요</span><em>회사 몫</em></div>
   <div><i>3단계</i><b>급여 신청</b><span>휴직 시작 1개월 뒤부터 고용보험 홈페이지에서 신청해요</span><em>매월</em><a class="v2-go" href="https://www.ei.go.kr" target="_blank" rel="noopener">고용보험 바로가기</a></div>
-  <div><i>4단계</i><b>지급</b><span>심사를 거쳐 계좌로 입금돼요. 금액을 미리 확인해 두면 좋아요</span><em>보통 2주 안</em><a class="v2-go" href="/parental-leave/">육아휴직 급여 계산기</a></div>
+  <div><i>4단계</i><b>지급</b><span>심사를 거쳐 계좌로 입금돼요. 금액을 미리 확인해 두면 좋아요</span><em>보통 2주 안</em><a class="v2-go" href="/parental-leave/calculator/">육아휴직 급여 계산기</a></div>
 </div>
 <div class="v2-tbl v2-text"><table><caption>신청할 때 챙길 것</caption><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><th scope="row">신청 기한</th><td data-l="내용">휴직 시작 1개월 뒤부터 끝난 날 이후 12개월 이내</td></tr>
@@ -165,9 +165,9 @@ export const html = `<h1>2026년 육아휴직 급여 조건과 금액, 신청 �
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>남녀고용평등과 일·가정 양립 지원에 관한 법률 제19조(육아휴직 대상과 1년, 부모 각각 3개월 이상 사용 시 6개월 추가, 해고 금지, 복귀 의무), 제19조의2(육아기 근로시간 단축). 고용보험법 제70조(육아휴직 급여 요건 180일, 신청 기한). 고용보험법 시행령 제95조(구간별 지급액과 상한·하한), 제95조의3(출생 후 18개월 이내 부모 모두 사용 시 특례 상한).
-<b>정부 도구</b>고용보험 육아휴직 급여 모의계산과 이 글의 금액이 같은 기준이에요 (2026-09-03 대조).
+<b>정부 도구</b>고용보험 육아휴직 급여 모의계산과 이 글의 금액이 같은 기준이에요 (2026-09-09 대조).
 </div>
-<div class="v2-rel"><a href="/parental-leave/"><b>계산기</b>육아휴직 급여 계산기</a><a href="/maternity/"><b>정부지원금 계산기</b>출산휴가 급여 계산기</a><a href="/unemployment/"><b>정부지원금 가이드</b>2026년 실업급여 얼마나 받나요</a></div>
+<div class="v2-rel"><a href="/parental-leave/calculator/"><b>계산기</b>육아휴직 급여 계산기</a><a href="/maternity/"><b>정부지원금 계산기</b>출산휴가 급여 계산기</a><a href="/unemployment/"><b>정부지원금 가이드</b>2026년 실업급여 얼마나 받나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>
@@ -244,7 +244,7 @@ export const landing = {
     "line2": "얼마 받나요",
     "sub1": "통상임금 300만원 · 12개월 → 23,100,000원",
     "sub2": "첫 3개월 월 2,500,000원, 7개월째부터 1,600,000원",
-    "foot": "고용보험법 시행령 지급액 기준과 1원 단위 일치 · 2026-09-03 검증",
+    "foot": "고용보험법 시행령 지급액 기준과 1원 단위 일치 · 2026-09-09 검증",
     "card": {
       "label": "12개월 합계",
       "big": "23,100,000",
@@ -258,7 +258,7 @@ export const landing = {
     "href": "/parental-leave/calculator/",
     "label": "육아휴직 급여 계산기 바로가기"
   },
-  "badge": "고용보험법 시행령 지급액 기준과 1원 단위 일치 · 2026-09-03",
+  "badge": "고용보험법 시행령 지급액 기준과 1원 단위 일치 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [
@@ -392,7 +392,7 @@ export const landing = {
     {
       "kind": "계산기",
       "label": "육아휴직 급여 계산기",
-      "href": "/parental-leave/"
+      "href": "/parental-leave/calculator/"
     },
     {
       "kind": "정부지원금 계산기",

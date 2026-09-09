@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 지급일, 입금 날짜와 안 들어올 때 확인 순서",
   description: "실업급여는 통상 실업인정을 받은 다음 날에 계좌로 들어와요. 매달 같은 날이 아니라 내 실업인정일을 따라가요. 회차별 입금 날짜를 어디서 보는지와 안 들어올 때 확인 순서를 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-payday-guide/",
   image: "https://moneydoc.kr/og/unemployment-payday-guide.png",
   imageAlt: "실업급여 지급일과 회차별 입금 날짜",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-payday-guide";
 
 export const html = `<h1>실업급여 지급일, 입금 날짜와 안 들어올 때 확인 순서</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 지급일 규정 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 지급일 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-payday-guide.png" width="1200" height="630" alt="실업급여 지급일과 회차별 입금 날짜">
 <p class="v2-lead v2-intro">실업급여는 통상 실업인정을 받은 다음 날에 등록한 계좌로 들어와요. 매달 25일처럼 고정된 날이 아니라 내 실업인정일을 따라가요. 인정일이 4주 간격이면 입금도 4주 간격이에요. 첫 회차만 대기기간 7일이 빠져 7일치가 들어와요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -106,7 +106,7 @@ export const html = `<h1>실업급여 지급일, 입금 날짜와 안 들어올 
 <div class="v2-src">
 <b>법령</b>고용보험법 제44조(실업의 인정), 제49조(대기기간), 제56조(지급일 및 지급 방법), 실업인정 및 재취업지원규정 제9조(출석 여부의 확인), 제12조(실업인정일의 지정).
 <b>정부 안내</b>고용24 실업급여 안내(2026년 8월 25일 수정)의 지급 절차 설명이에요.
-<b>정부 도구</b>고용보험 홈페이지의 지급 내역 화면에서 회차별 일수와 금액을 확인했어요 (2026-09-04 확인).
+<b>정부 도구</b>고용보험 홈페이지의 지급 내역 화면에서 회차별 일수와 금액을 확인했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/round-1/"><b>다음 질문</b>실업급여 1차 실업인정, 교육 이수와 첫 구직활동 신고</a><a href="/unemployment/round-4/"><b>다음 질문</b>실업급여 4차 실업인정, 회차별 인정일 간격과 심층상담</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -177,7 +177,7 @@ export const landing = {
     "line2": "언제 들어오나요",
     "sub1": "통상 실업인정을 받은 다음 날에 계좌로 들어와요",
     "sub2": "매달 같은 날이 아니라 내 실업인정일을 따라가요",
-    "foot": "고용보험법 지급일 규정 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 지급일 규정 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "보통 언제 들어오나",
       "big": "다음 날",
@@ -187,7 +187,7 @@ export const landing = {
     },
     "alt": "실업급여 지급일과 회차별 입금 날짜"
   },
-  "badge": "고용보험법 지급일 규정 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 지급일 규정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

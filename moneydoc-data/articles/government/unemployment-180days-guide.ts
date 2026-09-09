@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 180일, 주 며칠 일해야 채워지나요",
   description: "실업급여 180일은 다닌 날이 아니라 보수가 나간 날을 세요. 유급 주휴일이 들어가서 주 5일 근무자는 30주, 달력으로 6.9개월이면 채워져요. 근무 형태별로 얼마나 걸리는지 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-180days-guide/",
   image: "https://moneydoc.kr/og/unemployment-180days-guide.png",
   imageAlt: "실업급여 180일 계산법. 주 5일 근무자는 6.9개월",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-180days-guide";
 
 export const html = `<h1>실업급여 180일, 주 며칠 일해야 채워지나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 피보험 단위기간 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 피보험 단위기간 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-180days-guide.png" width="1200" height="630" alt="실업급여 180일 계산법. 주 5일 근무자는 6.9개월">
 <p class="v2-lead v2-intro">실업급여를 받으려면 고용보험에 180일 이상 들어 있어야 해요. 그런데 이 180일은 회사를 다닌 날을 세는 게 아니에요. 보수가 나가는 기초가 된 날만 세기 때문에, 같은 6개월을 다녀도 근무 형태에 따라 채워지기도 하고 모자라기도 해요. 무엇을 세는지, 근무 형태별로 얼마나 걸리는지, 내 일수는 어디서 보는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -118,7 +118,7 @@ export const html = `<h1>실업급여 180일, 주 며칠 일해야 채워지나�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제40조(구직급여의 수급 요건과 기준기간), 제41조(피보험 단위기간).
-<b>정부 도구</b>고용24 이직확인서 작성 안내의 피보험단위기간 설명과 대조했어요. 주 40시간 5일 근무는 주 6일로 계산한다고 나와 있어요 (2026-09-04 확인).
+<b>정부 도구</b>고용24 이직확인서 작성 안내의 피보험단위기간 설명과 대조했어요. 주 40시간 5일 근무는 주 6일로 계산한다고 나와 있어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/eligibility/"><b>다음 질문</b>실업급여 수급자격 4가지 조건, 180일과 이직 사유 정리</a><a href="/unemployment/apply/"><b>다음 질문</b>실업급여 신청 방법 5단계, 고용24 구직신청부터 실업인정까지</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -205,7 +205,7 @@ export const landing = {
     "line2": "주 며칠 일해야 채워지나요",
     "sub1": "주 5일 근무자는 30주, 달력으로 6.9개월이면 채워져요",
     "sub2": "다닌 날이 아니라 보수가 나간 날을 세는 게 핵심이에요",
-    "foot": "고용보험법 피보험 단위기간 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 피보험 단위기간 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "주 5일 근무자",
       "big": "6.9",
@@ -215,7 +215,7 @@ export const landing = {
     },
     "alt": "실업급여 180일 계산법. 주 5일 근무자는 6.9개월"
   },
-  "badge": "고용보험법 피보험 단위기간 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 피보험 단위기간 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

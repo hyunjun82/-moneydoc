@@ -4,7 +4,7 @@ export const meta = {
   title: "임신으로 인한 퇴사 실업급여 조건, 육아 퇴사와 수급 중 임신",
   description: "임신·출산·육아로 퇴사해도 회사가 휴가나 휴직을 허용하지 않았다면 정당한 이직 사유로 실업급여를 받을 수 있어요. 수급 중 임신했을 때 수급기간을 최대 4년까지 늘리는 방법까지 정리했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-pregnancy-guide/",
   image: "https://moneydoc.kr/og/unemployment-pregnancy-guide.png",
   imageAlt: "임신 육아 실업급여. 수급기간 연장 4년 한도",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-pregnancy-guide";
 
 export const html = `<h1>임신으로 인한 퇴사 실업급여 조건, 육아 퇴사와 수급 중 임신</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">고용보험법 수급기간 연장 규정 원문 대조 · 2026-09-06</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">고용보험법 수급기간 연장 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-pregnancy-guide.png" width="1200" height="630" alt="임신 육아 실업급여. 수급기간 연장 4년 한도">
 <p class="v2-lead v2-intro">퇴사 이유가 임신이나 육아면 실업급여를 받을 수 있는지부터 헷갈려요. 스스로 낸 사표처럼 보이지만, 회사가 휴가나 휴직을 허용하지 않아 그만둔 경우면 정당한 이직 사유로 인정돼요. 이미 실업급여를 받는 도중에 임신했다면 수급기간을 늘리는 방법도 따로 있어요. 네 가지 질문으로 나눠 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -85,7 +85,7 @@ export const html = `<h1>임신으로 인한 퇴사 실업급여 조건, 육아 
 <div class="v2-src">
 <b>법령</b>고용보험법 제40조(수급자격), 제48조(수급기간 및 연장), 제58조(이직 사유 제한). 시행령 제70조(수급기간 연기 사유). 시행규칙 제101조 및 별표2(정당한 이직 사유).
 <b>행정규칙·정부 안내</b>법제처 생활법령정보 실업급여(기준기간·정당한 이직 사유, 2026.8.15 기준).
-<b>정부 도구</b>고용24 실업급여 제도 안내에서 수급기간연기신고서 절차 확인 (2026-09-06 확인).
+<b>정부 도구</b>고용24 실업급여 제도 안내에서 수급기간연기신고서 절차 확인 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/eligibility/"><b>다음 질문</b>실업급여 수급자격 4가지 조건</a><a href="/unemployment/sickness/"><b>다음 질문</b>질병으로 퇴사하면 실업급여 되나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -148,7 +148,7 @@ export const landing = {
     "line2": "퇴사와 수급기간",
     "sub1": "휴가·휴직을 안 줘 그만두면 인정돼요",
     "sub2": "수급 중이면 수급기간이 늘어나요",
-    "foot": "고용보험법 수급기간 연장 규정 원문 대조 · 2026-09-06 검증",
+    "foot": "고용보험법 수급기간 연장 규정 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "수급기간 연장 한도",
       "big": "4",
@@ -158,7 +158,7 @@ export const landing = {
     },
     "alt": "임신 육아 실업급여. 수급기간 연장 4년 한도"
   },
-  "badge": "고용보험법 수급기간 연장 규정 원문 대조 · 2026-09-06",
+  "badge": "고용보험법 수급기간 연장 규정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 5,
   "quick": [

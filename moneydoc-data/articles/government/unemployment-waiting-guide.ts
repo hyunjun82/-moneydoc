@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 대기기간, 7일 동안 왜 안 나오나요",
   description: "실업 신고일부터 7일은 대기기간이라 급여가 나오지 않아요. 그래서 첫 회차는 7일치예요. 대기기간이 없는 경우와 이 기간에 일했을 때까지 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-waiting-guide/",
   image: "https://moneydoc.kr/og/unemployment-waiting-guide.png",
   imageAlt: "실업급여 대기기간 7일과 첫 회차 7일치",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-waiting-guide";
 
 export const html = `<h1>실업급여 대기기간, 7일 동안 왜 안 나오나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 대기기간 규정 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 대기기간 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-waiting-guide.png" width="1200" height="630" alt="실업급여 대기기간 7일과 첫 회차 7일치">
 <p class="v2-lead v2-intro">실업급여를 신청하고 나면 바로 돈이 들어올 줄 알았다가 당황하는 경우가 많아요. 법이 실업 신고일부터 7일간을 대기기간으로 정해 두고 그 기간에는 지급하지 않기 때문이에요. 이 7일은 없어지는 날이고, 그래서 첫 회차 금액이 유독 적어요. 대기기간이 무엇인지, 없는 경우는 어떤 경우인지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -106,7 +106,7 @@ export const html = `<h1>실업급여 대기기간, 7일 동안 왜 안 나오�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제42조(실업의 신고), 제47조(실업인정대상기간 중의 취업 등의 신고), 제49조(대기기간), 제50조(소정급여일수), 제61조(부정행위에 따른 급여의 지급 제한).
-<b>정부 도구</b>고용24의 실업급여 안내에서 대기기간과 첫 지급 시점을 확인했어요 (2026-09-04 확인).
+<b>정부 도구</b>고용24의 실업급여 안내에서 대기기간과 첫 지급 시점을 확인했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/payday/"><b>다음 질문</b>실업급여 지급일 언제 들어오나요, 회차별 입금 날짜</a><a href="/unemployment/round-1/"><b>다음 질문</b>실업급여 1차 실업인정, 교육 이수와 첫 구직활동 신고</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -177,7 +177,7 @@ export const landing = {
     "line2": "첫 급여는 언제 들어오나요",
     "sub1": "실업 신고일부터 7일간은 급여가 나오지 않아요",
     "sub2": "그래서 첫 회차는 14일치가 아니라 7일치예요",
-    "foot": "고용보험법 대기기간 규정 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 대기기간 규정 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "대기기간",
       "big": "7",
@@ -187,7 +187,7 @@ export const landing = {
     },
     "alt": "실업급여 대기기간 7일과 첫 회차 7일치"
   },
-  "badge": "고용보험법 대기기간 규정 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 대기기간 규정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

@@ -4,7 +4,7 @@ export const meta = {
   title: "임금체불 실업급여, 자진퇴사로 적혔으면 어떻게 하나요",
   description: "임금체불로 그만두면 자진퇴사여도 실업급여를 받아요. 다만 그 사유가 이직일 전 1년 이내에 2개월 이상 발생했어야 해요. 신청 순서와 자진퇴사로 적혔을 때 대응을 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-unpaid-wage-quit-guide/",
   image: "https://moneydoc.kr/og/unemployment-unpaid-wage-quit-guide.png",
   imageAlt: "임금체불 실업급여 신청 조건과 자진퇴사로 적혔을 때 대응",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-unpaid-wage-quit-guide";
 
 export const html = `<h1>임금체불 실업급여, 자진퇴사로 적혔으면 어떻게 하나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행규칙 별표2 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행규칙 별표2 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-unpaid-wage-quit-guide.png" width="1200" height="630" alt="임금체불 실업급여 신청 조건과 자진퇴사로 적혔을 때 대응">
 <p class="v2-lead v2-intro">월급 밀려서 퇴사하는 경우가 적지 않아요. 이때 스스로 사직서를 냈더라도 실업급여를 받을 수 있어요. 시행규칙이 임금체불을 정당한 이직 사유로 정해 두었거든요. 다만 조건이 하나 더 붙어요. 그 사유가 이직일 전 1년 이내에 2개월 이상 발생했어야 해요. 조건과 증명 방법, 회사가 자진퇴사로 신고했을 때 어떻게 하는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -109,7 +109,7 @@ export const html = `<h1>임금체불 실업급여, 자진퇴사로 적혔으면
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제40조(구직급여의 수급 요건), 제42조(실업의 신고), 제58조(이직 사유에 따른 수급자격의 제한), 고용보험법 시행규칙 제101조제2항 및 별표 2(정당한 이직 사유).
-<b>정부 도구</b>법제처 생활법령의 정당한 이직 사유 목록과 대조했어요 (2026-09-04 확인).
+<b>정부 도구</b>법제처 생활법령의 정당한 이직 사유 목록과 대조했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/voluntary/"><b>다음 질문</b>자발적 퇴사 실업급여 인정 사유와 증빙 서류 총정리</a><a href="/unemployment/confirmation/"><b>다음 질문</b>실업급여 이직확인서 발급 요청과 정정 방법</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -196,7 +196,7 @@ export const landing = {
     "line2": "자진퇴사여도 받아요",
     "sub1": "임금체불은 정당한 이직 사유 목록에 들어 있어요",
     "sub2": "다만 이직일 전 1년 이내에 2개월 이상 발생해야 해요",
-    "foot": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "기간 요건",
       "big": "2개월",
@@ -206,7 +206,7 @@ export const landing = {
     },
     "alt": "임금체불 실업급여 신청 조건과 자진퇴사로 적혔을 때 대응"
   },
-  "badge": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

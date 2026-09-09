@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 일수, 나이와 가입기간별로 며칠 받나요",
   description: "실업급여를 며칠 받는지는 나이와 고용보험 가입기간 두 가지로 정해져요. 가장 짧으면 120일, 가장 길면 270일이에요. 구간별 표와 50세 기준으로 갈리는 지점을 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-days-guide/",
   image: "https://moneydoc.kr/og/unemployment-days-guide.png",
   imageAlt: "실업급여 소정급여일수 표. 가장 짧으면 120일, 가장 길면 270일",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-days-guide";
 
 export const html = `<h1>실업급여 일수, 나이와 가입기간별로 며칠 받나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 소정급여일수 별표1 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 소정급여일수 별표1 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-days-guide.png" width="1200" height="630" alt="실업급여 소정급여일수 표. 가장 짧으면 120일, 가장 길면 270일">
 <p class="v2-lead v2-intro">실업급여를 얼마 받느냐만큼 며칠 받느냐도 중요해요. 하루 지급액이 같아도 일수가 다르면 총액이 크게 벌어지거든요. 이 일수를 소정급여일수라고 하는데, 월급이나 퇴사 사유와는 상관없이 나이와 고용보험 가입기간 두 가지로만 정해져요. 구간별로 며칠인지, 50세를 기준으로 얼마나 달라지는지, 내 일수는 어디서 확인하는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -105,7 +105,7 @@ export const html = `<h1>실업급여 일수, 나이와 가입기간별로 며�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제50조(소정급여일수 및 피보험기간, 별표 1), 제48조(수급기간), 제49조(대기기간).
-<b>정부 도구</b>고용보험 홈페이지에서 가입기간을 확인하고 소정급여일수를 대조했어요 (2026-09-04 확인).
+<b>정부 도구</b>고용보험 홈페이지에서 가입기간을 확인하고 소정급여일수를 대조했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/calculator/"><b>계산기</b>실업급여 계산기</a><a href="/unemployment/eligibility/"><b>다음 질문</b>실업급여 수급자격 4가지 조건, 180일과 이직 사유 정리</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -176,7 +176,7 @@ export const landing = {
     "line2": "며칠 받나요",
     "sub1": "가장 짧으면 120일, 가장 길면 270일이에요",
     "sub2": "나이와 고용보험 가입기간 두 가지로만 정해져요",
-    "foot": "고용보험법 소정급여일수 별표1 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 소정급여일수 별표1 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "가장 긴 경우",
       "big": "270",
@@ -190,7 +190,7 @@ export const landing = {
     "href": "/unemployment/calculator/",
     "label": "내 소정급여일수 계산해 보기"
   },
-  "badge": "고용보험법 소정급여일수 별표1 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 소정급여일수 별표1 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

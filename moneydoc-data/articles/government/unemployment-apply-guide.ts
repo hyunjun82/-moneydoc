@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 신청 방법, 서류 확인부터 실업인정까지",
   description: "실업급여 신청은 5단계예요. 회사 서류 확인, 고용24 구직신청, 수급자격 신청자 교육, 고용센터 출석, 실업인정 순서로 진행해요. 각 단계에서 무엇을 하는지 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-apply-guide/",
   image: "https://moneydoc.kr/og/unemployment-apply-guide.png",
   imageAlt: "실업급여 신청 방법 5단계. 고용24 구직신청부터 실업인정까지",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-apply-guide";
 
 export const html = `<h1>실업급여 신청 방법, 서류 확인부터 실업인정까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 신고·인정 절차 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 신고·인정 절차 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-apply-guide.png" width="1200" height="630" alt="실업급여 신청 방법 5단계. 고용24 구직신청부터 실업인정까지">
 <p class="v2-lead v2-intro">실업급여는 퇴사했다고 저절로 나오지 않아요. 직접 고용센터에 실업을 신고하고 수급자격을 인정받아야 시작돼요. 법에서 말하는 실업 신고에는 구직 신청과 수급자격 인정 신청이 함께 들어가기 때문에, 고용24에서 구직등록을 먼저 하고 고용센터에 나가는 순서가 돼요. 각 단계에서 무엇을 하는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -110,7 +110,7 @@ export const html = `<h1>실업급여 신청 방법, 서류 확인부터 실업�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제42조(실업의 신고, 구직 신청과 수급자격 인정신청 포함, 이직확인서 발급 요청), 제43조(수급자격의 인정), 제44조(실업의 인정과 실업인정일), 실업인정 및 재취업지원규정 제6조(제도 안내), 제12조(실업인정일의 지정).
-<b>정부 도구</b>고용24 실업급여 신청 화면의 절차와 이 글의 순서가 같아요 (2026-09-04 확인).
+<b>정부 도구</b>고용24 실업급여 신청 화면의 절차와 이 글의 순서가 같아요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/documents/"><b>다음 질문</b>실업급여 신청 서류 목록과 발급처, 준비물 챙기는 법</a><a href="/unemployment/confirmation/"><b>다음 질문</b>실업급여 이직확인서 발급 요청과 정정 방법</a><a href="/unemployment/round-1/"><b>다음 질문</b>실업급여 1차 실업인정, 교육 이수와 첫 구직활동 신고</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -181,7 +181,7 @@ export const landing = {
     "line2": "5단계로 정리했어요",
     "sub1": "고용24 구직신청에서 시작해 실업인정으로 이어져요",
     "sub2": "순서를 건너뛰면 출석해도 신청이 되지 않아요",
-    "foot": "고용보험법 신고·인정 절차 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 신고·인정 절차 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "신청 단계",
       "big": "5",
@@ -191,7 +191,7 @@ export const landing = {
     },
     "alt": "실업급여 신청 방법 5단계. 고용24 구직신청부터 실업인정까지"
   },
-  "badge": "고용보험법 신고·인정 절차 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 신고·인정 절차 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

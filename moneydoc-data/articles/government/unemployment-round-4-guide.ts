@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 4차 실업인정, 출석 회차와 인정일 간격",
   description: "실업급여 4차 실업인정일은 인터넷 신청이 안 되고 고용센터에 직접 가는 날이에요. 날짜는 3차 인정일 다음 날부터 7일에서 28일 사이에서 담당자가 정하고, 취업을 못 했으면 심층상담을 받아요. 재취업활동은 4차까지 4주에 1회, 5차부터 2회예요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-round-4-guide/",
   image: "https://moneydoc.kr/og/unemployment-round-4-guide.png",
   imageAlt: "실업급여 4차 실업인정일은 고용센터 출석. 인터넷 신청 불가",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-round-4-guide";
 
 export const html = `<h1>실업급여 4차 실업인정, 출석 회차와 인정일 간격</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">실업인정 및 재취업지원규정 · 고용24 안내 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">실업인정 및 재취업지원규정 · 고용24 안내 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-round-4-guide.png" width="1200" height="630" alt="실업급여 4차 실업인정일은 고용센터 출석. 인터넷 신청 불가">
 <p class="v2-lead v2-intro">실업급여 4차 실업인정일은 고용센터에 직접 가는 날이에요. 1차와 4차는 인터넷 신청이 안 돼요. 날짜는 3차 인정일 다음 날부터 7일에서 28일 사이에서 담당자가 정해요. 그날까지 재취업활동 1회를 하고, 아직 취업을 못 했으면 상담을 받아요. 5차부터는 활동이 4주에 2회로 늘어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -107,7 +107,7 @@ export const html = `<h1>실업급여 4차 실업인정, 출석 회차와 인정
 <div class="v2-src">
 <b>법령</b>고용보험법 제44조(실업의 인정), 실업인정 및 재취업지원규정 제7조(재취업활동에 관한 지원), 제9조(출석 여부의 확인), 제10조(재취업활동 여부의 확인), 제12조(실업인정일의 지정 및 재취업활동의 안내 등), 제13조(심층상담 실시). 2026년 9월 1일 시행.
 <b>정부 안내</b>고용24 실업인정 인터넷 신청 매뉴얼(1차·4차 출석, 4주 1회·2회), 고용노동부 인터넷상담 답변(2023년 8월), 고용24 실업급여 안내(2026년 8월 25일 수정). 유형별 횟수는 2022년 7월 시행 정책브리핑.
-<b>정부 도구</b>고용24의 실업인정 신청 화면과 회차 안내를 대조했어요 (2026-09-04 확인).
+<b>정부 도구</b>고용24의 실업인정 신청 화면과 회차 안내를 대조했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/job-search/"><b>다음 질문</b>실업급여 구직활동 인정 기준과 증빙 남기는 법</a><a href="/unemployment/other-activity/"><b>다음 질문</b>실업급여 구직외활동 인정 범위, 취업특강과 직업심리검사</a><a href="/unemployment/round-1/"><b>앞 회차</b>실업급여 1차 실업인정, 교육 이수와 첫 구직활동 신고</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -178,7 +178,7 @@ export const landing = {
     "line2": "직접 가야 하는 회차예요",
     "sub1": "1차와 4차는 인터넷 신청이 안 돼요. 고용센터에 가요",
     "sub2": "날짜는 3차 인정일 다음 날부터 7일에서 28일 사이예요",
-    "foot": "실업인정 및 재취업지원규정 · 고용24 안내 대조 · 2026-09-04 검증",
+    "foot": "실업인정 및 재취업지원규정 · 고용24 안내 대조 · 2026-09-09 검증",
     "card": {
       "label": "4차 실업인정일",
       "big": "출석",
@@ -188,7 +188,7 @@ export const landing = {
     },
     "alt": "실업급여 4차 실업인정일은 고용센터 출석. 인터넷 신청 불가"
   },
-  "badge": "실업인정 및 재취업지원규정 · 고용24 안내 대조 · 2026-09-04",
+  "badge": "실업인정 및 재취업지원규정 · 고용24 안내 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 5,
   "quick": [

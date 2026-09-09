@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 문의 전화번호와 고용센터 방문, 신청장소까지",
   description: "실업급여 문의는 제도 문의 1350과 전산 문의 1577-7114로 번호가 나뉘어요. 처음 수급자격 신청과 1차, 4차 실업인정일에는 거주지 관할 고용센터에 나가야 하고, 나머지는 고용24에서 온라인으로 할 수 있어요. 번호와 방문 시점, 신청장소를 정리했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-center-guide/",
   image: "https://moneydoc.kr/og/unemployment-center-guide.png",
   imageAlt: "실업급여 문의 전화번호 1350과 1577-7114, 고용센터 방문 시점과 신청장소 안내",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-center-guide";
 
 export const html = `<h1>실업급여 문의 전화번호와 고용센터 방문, 신청장소까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용24 제도 안내와 고용노동부 문의처 원문 대조 · 2026-09-08</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용24 제도 안내와 고용노동부 문의처 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-center-guide.png" width="1200" height="630" alt="실업급여 문의 전화번호 1350과 1577-7114, 고용센터 방문 시점과 신청장소 안내">
 <p class="v2-lead v2-intro">실업급여를 신청하려면 언젠가 고용센터에 전화하거나 직접 찾아가야 해요. 그런데 문의 전화번호가 목적마다 다르고, 방문도 매번 필요한 게 아니에요. 제도가 궁금하면 1350, 고용24 사이트 오류는 1577-7114로 걸면 돼요. 신청과 1차, 4차 실업인정일에만 거주지 관할 고용센터에 나가요. 나머지 회차는 고용24로 온라인에서 할 수 있어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -97,7 +97,7 @@ export const html = `<h1>실업급여 문의 전화번호와 고용센터 방문
 <div class="v2-src">
 <b>법령</b>고용보험법 제43조(수급자격 인정신청), 제44조(실업의 인정과 실업인정일 출석), 실업인정 및 재취업지원규정 제9조(출석 여부의 확인).
 <b>정부 안내</b>고용24 실업급여 제도 안내, 고용24 실업인정 인터넷 신청 매뉴얼(1·4차 출석), 고용노동부 인터넷상담 답변(2023년 8월).
-<b>정부 도구</b>고용24와 고용노동부 홈페이지에서 문의 번호와 방문·온라인 구분을 확인했어요 (2026-09-08 확인).
+<b>정부 도구</b>고용24와 고용노동부 홈페이지에서 문의 번호와 방문·온라인 구분을 확인했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/apply/"><b>다음 질문</b>실업급여 신청 방법, 서류 확인부터 실업인정까지</a><a href="/unemployment/documents/"><b>다음 질문</b>실업급여 서류, 신청 준비물 목록과 발급받는 곳</a><a href="/unemployment/round-4/"><b>다음 질문</b>실업급여 4차 실업인정, 출석 회차와 인정일 간격</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -168,7 +168,7 @@ export const landing = {
     "line2": "번호부터 확인해요",
     "sub1": "문의 번호와 방문 시점이 회차마다 달라요",
     "sub2": "고용24와 고용센터가 하는 일을 나눴어요",
-    "foot": "고용24와 고용노동부 문의처 원문 대조 · 2026-09-08 검증",
+    "foot": "고용24와 고용노동부 문의처 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "문의 전화",
       "big": "1350",
@@ -178,7 +178,7 @@ export const landing = {
     },
     "alt": "실업급여 문의 전화번호 1350과 1577-7114, 고용센터 방문 시점과 신청장소 안내"
   },
-  "badge": "고용24 제도 안내와 고용노동부 문의처 원문 대조 · 2026-09-08",
+  "badge": "고용24 제도 안내와 고용노동부 문의처 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

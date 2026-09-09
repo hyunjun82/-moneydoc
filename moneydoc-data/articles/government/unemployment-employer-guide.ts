@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 회사 불이익과 부담금, 안 해주는 이유와 요청 방법",
   description: "실업급여 이직확인서를 사실대로 써 주면 회사는 불이익이 없어요. 정당한 사유 없이 안 써주거나 근로자와 짜고 거짓으로 처리하면 300만원 이하 과태료나 5년 이하 징역까지 갈 수 있어요. 회사가 추가로 물어야 하는 부담금은 없어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-employer-guide/",
   image: "https://moneydoc.kr/og/unemployment-employer-guide.png",
   imageAlt: "실업급여 회사 불이익 여부. 사실대로 쓰면 불이익 없음, 거짓이면 형사처벌",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-employer-guide";
 
 export const html = `<h1>실업급여 회사 불이익과 부담금, 안 해주는 이유와 요청 방법</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 벌칙·과태료 조항 원문 대조 · 2026-09-08</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 벌칙·과태료 조항 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-employer-guide.png" width="1200" height="630" alt="실업급여 회사 불이익 여부. 사실대로 쓰면 불이익 없음, 거짓이면 형사처벌">
 <p class="v2-lead v2-intro">직원이 실업급여를 신청하면 회사에 불이익이 생기는 건 아닌지, 이직확인서를 발급하는 데 부담금을 더 내야 하는 건 아닌지 걱정하는 사업주가 많아요. 법이 정한 불이익은 이직확인서를 사실대로 안 써주거나 거짓으로 쓸 때만 생겨요. 이 글은 회사가 실제로 지는 책임과 부담금의 구조, 회사가 발급을 미루는 이유와 요청하는 방법을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -164,7 +164,7 @@ export const landing = {
     "line2": "정직하면 불이익 없어요",
     "sub1": "안 써주면 과태료 대상이에요",
     "sub2": "거짓으로 짜면 형사처벌까지 가요",
-    "foot": "고용보험법 벌칙·과태료 조항 원문 대조 · 2026-09-08 검증",
+    "foot": "고용보험법 벌칙·과태료 조항 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "이직확인서를 사실대로 쓰면",
       "big": "없음",
@@ -174,7 +174,7 @@ export const landing = {
     },
     "alt": "실업급여 회사 불이익 여부. 사실대로 쓰면 불이익 없음, 거짓이면 형사처벌"
   },
-  "badge": "고용보험법 벌칙·과태료 조항 원문 대조 · 2026-09-08",
+  "badge": "고용보험법 벌칙·과태료 조항 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

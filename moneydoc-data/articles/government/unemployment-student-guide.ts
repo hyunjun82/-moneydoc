@@ -4,7 +4,7 @@ export const meta = {
   title: "대학생도 실업급여 되나요, 알바 기준과 단기알바 주말알바",
   description: "대학생이라서 실업급여를 못 받는 규정은 고용보험법에 없어요. 관건은 아르바이트가 고용보험에 가입돼 있는지예요. 1주 15시간 미만이면 원칙적으로 빠지지만 1개월 미만 일용근로자거나 3개월 넘게 계속하면 가입돼요. 단기알바와 주말알바 기준을 정리했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-student-guide/",
   image: "https://moneydoc.kr/og/unemployment-student-guide.png",
   imageAlt: "대학생 아르바이트 실업급여 판정. 15시간 미만이면 원칙 제외, 1개월 미만 일용근로자와 3개월 이상 계속근로는 예외",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-student-guide";
 
 export const html = `<h1>대학생도 실업급여 되나요, 알바 기준과 단기알바 주말알바</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 적용 제외 규정 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 적용 제외 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-student-guide.png" width="1200" height="630" alt="대학생 아르바이트 실업급여 판정. 15시간 미만이면 원칙 제외, 1개월 미만 일용근로자와 3개월 이상 계속근로는 예외">
 <p class="v2-lead v2-intro">대학생이 실업급여를 검색하는 이유는 대부분 아르바이트 때문이에요. 고용보험법에는 대학생이라서 실업급여 대상에서 빠진다는 규정이 없어요. 다만 아르바이트가 짧거나 시간이 적으면 애초에 고용보험에 가입되지 않을 수 있어요. 이 글은 대학생의 아르바이트가 언제 고용보험 대상이 되는지, 단기알바와 주말알바는 무엇이 다른지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -94,7 +94,7 @@ export const html = `<h1>대학생도 실업급여 되나요, 알바 기준과 �
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제2조(정의), 제10조(적용 제외), 제40조(구직급여의 수급 요건과 기준기간). 고용보험법 시행령 제3조(적용 제외 근로자).
-<b>정부 도구</b>고용보험 홈페이지에서 본인의 피보험 단위기간을 확인할 수 있어요 (2026-09-04 확인).
+<b>정부 도구</b>고용보험 홈페이지에서 본인의 피보험 단위기간을 확인할 수 있어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/eligibility/"><b>다음 질문</b>실업급여 수급자격 4가지 조건</a><a href="/unemployment/short-hours/"><b>다음 질문</b>주 15시간 미만도 고용보험에 가입되나요</a><a href="/unemployment/180days/"><b>다음 질문</b>실업급여 180일 계산법, 방학 알바로 채우는 방법</a><a href="/unemployment/daily-worker/"><b>다음 질문</b>일용직도 실업급여를 받나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -165,7 +165,7 @@ export const landing = {
     "line2": "알바도 되나요",
     "sub1": "대학생이라서 못 받는다는 규정은 없어요",
     "sub2": "관건은 알바가 고용보험에 가입됐는지예요",
-    "foot": "고용보험법 적용 제외 규정 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 적용 제외 규정 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "대학생 아르바이트",
       "big": "예",
@@ -175,7 +175,7 @@ export const landing = {
     },
     "alt": "대학생 아르바이트 실업급여 판정. 15시간 미만이면 원칙 제외, 1개월 미만 일용근로자와 3개월 이상 계속근로는 예외"
   },
-  "badge": "고용보험법 적용 제외 규정 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 적용 제외 규정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

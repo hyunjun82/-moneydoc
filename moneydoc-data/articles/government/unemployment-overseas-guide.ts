@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 해외여행과 실업인정일, 날짜변경 안 하면 부정수급인가요?",
   description: "실업급여를 받는 중 해외에 나가도 되는지, 실업인정일과 겹치면 어떻게 해야 하는지 정리했어요. 재취업활동 목적이면 출국 전에 특례를 신청하고, 개인적인 여행이면 그 기간이 인정되지 않는다는 점, 숨기면 부정수급이 될 수 있다는 점까지 확인했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-overseas-guide/",
   image: "https://moneydoc.kr/og/unemployment-overseas-guide.png",
   imageAlt: "실업급여 해외여행, 재취업활동 목적은 특례 신청 가능하고 개인 여행은 그 기간 불인정",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-overseas-guide";
 
 export const html = `<h1>실업급여 해외여행과 실업인정일, 날짜변경 안 하면 부정수급인가요?</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">고용보험법 시행령·시행규칙 원문 대조 · 2026-09-08</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">고용보험법 시행령·시행규칙 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-overseas-guide.png" width="1200" height="630" alt="실업급여 해외여행, 재취업활동 목적은 특례 신청 가능하고 개인 여행은 그 기간 불인정">
 <p class="v2-lead v2-intro">퇴사 후 실업급여를 받는 중에도 해외에 나갈 일이 생길 수 있어요. 그런데 실업인정일은 정해진 날짜마다 챙겨야 해서, 해외에 있는 동안 어떻게 되는지 헷갈리는 분이 많아요. 재취업활동을 하려는 목적인지 개인적인 여행인지에 따라 절차가 다르고, 알리지 않으면 부정수급으로 이어질 수 있어요. 이 글에서 순서대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -89,7 +89,7 @@ export const html = `<h1>실업급여 해외여행과 실업인정일, 날짜변
 <div class="v2-src">
 <b>법령</b>고용보험법 제44조(실업의 인정). 고용보험법 시행령 제65조(실업인정의 특례자, 해외 재취업활동 목적 특례). 고용보험법 시행규칙 제89조(실업인정의 특례 절차, 2025.7.1 개정 해외 체류 관련 조항 신설).
 <b>행정규칙·정부 안내</b>고용노동부 예규 「실업인정 및 재취업지원규정」 제249호 제9조(해외 체류 중 신고 기준)·제16조(실업인정일의 변경사유, 신혼여행 포함)(2026.9.1 시행).
-<b>정부 도구</b>고용24 실업급여 제도 안내(대리 신청과 소득 미신고의 부정수급 처리, 형사처벌 기준)를 확인했어요 (2026-09-08 확인).
+<b>정부 도구</b>고용24 실업급여 제도 안내(대리 신청과 소득 미신고의 부정수급 처리, 형사처벌 기준)를 확인했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/change-date/"><b>다음 질문</b>실업인정일 변경 신청하는 법</a><a href="/unemployment/fraud/"><b>다음 질문</b>부정수급 신고를 빠뜨리면</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -160,7 +160,7 @@ export const landing = {
     "line2": "신고를 미리 하세요",
     "sub1": "출국 전 실업인정특례를 신청하세요",
     "sub2": "개인 여행이면 그 기간이 인정되지 않아요",
-    "foot": "고용보험법 시행령·시행규칙 원문 대조 · 2026-09-08 검증",
+    "foot": "고용보험법 시행령·시행규칙 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "해외 특례 신청",
       "big": "출국 전날",
@@ -170,7 +170,7 @@ export const landing = {
     },
     "alt": "실업급여 해외여행, 재취업활동 목적은 특례 신청 가능하고 개인 여행은 그 기간 불인정"
   },
-  "badge": "고용보험법 시행령·시행규칙 원문 대조 · 2026-09-08",
+  "badge": "고용보험법 시행령·시행규칙 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 5,
   "quick": [

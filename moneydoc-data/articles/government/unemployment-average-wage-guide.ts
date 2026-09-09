@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 평균임금 산정 방법, 어떤 수당이 들어가나요",
   description: "실업급여의 기준은 월급이 아니라 평균임금이에요. 이직일 이전 3개월간 임금 총액을 그 기간 총 일수로 나눠요. 어떤 수당이 들어가고 어떤 기간이 빠지는지 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-average-wage-guide/",
   image: "https://moneydoc.kr/og/unemployment-average-wage-guide.png",
   imageAlt: "실업급여 평균임금 산정 방법과 포함되는 수당",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-average-wage-guide";
 
 export const html = `<h1>실업급여 평균임금 산정 방법, 어떤 수당이 들어가나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 기초일액 규정 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 기초일액 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-average-wage-guide.png" width="1200" height="630" alt="실업급여 평균임금 산정 방법과 포함되는 수당">
 <p class="v2-lead v2-intro">실업급여 금액은 평균임금에서 출발해요. 이걸 법에서는 기초일액이라고 불러요. 월급을 30으로 나눈 값이라고 생각하기 쉬운데, 실제로는 이직일 이전 3개월간 지급된 임금 총액을 그 기간의 총 일수로 나눈 값이에요. 달마다 일수가 다르고 상여금이나 수당이 끼면 결과가 달라져요. 무엇이 들어가고 무엇이 빠지는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -98,7 +98,7 @@ export const html = `<h1>실업급여 평균임금 산정 방법, 어떤 수당�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제45조(급여의 기초가 되는 임금일액), 제46조(구직급여일액), 고용보험법 시행령 제68조(기초일액의 상한액).
-<b>정부 도구</b>고용24의 이직확인서 작성 안내에서 평균임금 산정 방법과 제외 기간을 대조했어요 (2026-09-04 확인).
+<b>정부 도구</b>고용24의 이직확인서 작성 안내에서 평균임금 산정 방법과 제외 기간을 대조했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/by-salary/"><b>다음 질문</b>월급별 실업급여 1일 수령액 표, 내 월급이면 얼마인가요</a><a href="/unemployment/confirmation/"><b>다음 질문</b>실업급여 이직확인서 발급 요청과 정정 방법</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -169,7 +169,7 @@ export const landing = {
     "line2": "어떻게 산정하나요",
     "sub1": "이직일 이전 3개월간 임금 총액을 그 기간 총 일수로 나눠요",
     "sub2": "월급을 30으로 나눈 값과 비슷하지만 같지는 않아요",
-    "foot": "고용보험법 기초일액 규정 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 기초일액 규정 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "계산식",
       "big": "3개월",
@@ -179,7 +179,7 @@ export const landing = {
     },
     "alt": "실업급여 평균임금 산정 방법과 포함되는 수당"
   },
-  "badge": "고용보험법 기초일액 규정 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 기초일액 규정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

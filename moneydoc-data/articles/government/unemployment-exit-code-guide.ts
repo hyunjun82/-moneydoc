@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 코드 종류, 23번과 32번은 무슨 뜻인가요",
   description: "이직코드는 회사가 이직확인서에 적는 상실사유 구분코드예요. 23번은 경영상 인원감축, 32번은 계약기간 만료예요. 코드 9가지와 수급 여부를 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-exit-code-guide/",
   image: "https://moneydoc.kr/og/unemployment-exit-code-guide.png",
   imageAlt: "실업급여 이직코드 9가지와 수급 여부",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-exit-code-guide";
 
 export const html = `<h1>실업급여 코드 종류, 23번과 32번은 무슨 뜻인가요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용24 상실사유 구분코드 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용24 상실사유 구분코드 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-exit-code-guide.png" width="1200" height="630" alt="실업급여 이직코드 9가지와 수급 여부">
 <p class="v2-lead v2-intro">실업급여를 신청하면 회사가 이직확인서를 내요. 거기에 왜 그만뒀는지를 숫자로 적는데 이걸 상실사유 구분코드, 흔히 이직코드라고 불러요. 고용센터는 이 코드에서 판단을 시작하기 때문에, 실제 사정과 다른 코드가 찍히면 받을 수 있는데도 막힐 수 있어요. 코드가 몇 가지인지, 많이 묻는 23번과 32번이 무슨 뜻인지, 틀렸을 때 어떻게 고치는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -111,7 +111,7 @@ export const html = `<h1>실업급여 코드 종류, 23번과 32번은 무슨 �
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제40조(구직급여의 수급 요건), 제42조(실업의 신고와 이직확인서 발급 요청), 제43조(수급자격의 인정과 이직확인서 제출), 제58조(이직 사유에 따른 수급자격의 제한).
-<b>정부 도구</b>고용24의 이직확인서 작성 안내에 실린 상실사유 구분코드 목록을 그대로 대조했어요 (2026-09-04 확인).
+<b>정부 도구</b>고용24의 이직확인서 작성 안내에 실린 상실사유 구분코드 목록을 그대로 대조했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/layoff/"><b>다음 질문</b>권고사직 실업급여 신청 방법과 회사가 받는 불이익</a><a href="/unemployment/contract-end/"><b>다음 질문</b>계약만료 실업급여 되나요, 재계약 거절했을 때 수급 여부</a><a href="/unemployment/voluntary/"><b>다음 질문</b>자발적 퇴사 실업급여 인정 사유와 증빙 서류 총정리</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -182,7 +182,7 @@ export const landing = {
     "line2": "23번 32번은 무슨 뜻인가요",
     "sub1": "회사가 이직확인서에 적는 상실사유 구분코드예요",
     "sub2": "이 코드에서 수급자격 판단이 시작돼요",
-    "foot": "고용24 상실사유 구분코드 원문 대조 · 2026-09-04 검증",
+    "foot": "고용24 상실사유 구분코드 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "상실사유 구분코드",
       "big": "9",
@@ -192,7 +192,7 @@ export const landing = {
     },
     "alt": "실업급여 이직코드 9가지와 수급 여부"
   },
-  "badge": "고용24 상실사유 구분코드 원문 대조 · 2026-09-04",
+  "badge": "고용24 상실사유 구분코드 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

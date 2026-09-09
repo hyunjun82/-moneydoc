@@ -4,7 +4,7 @@ export const meta = {
   title: "아르바이트 4대보험 가입 기준과 보험료, 주 15시간부터 퇴사 후까지",
   description: "한 달 60시간, 주 15시간이 아르바이트 4대보험 가입을 가르는 기준이에요. 주 20시간 일하면 월 보수 1,073,280원에 보험료 104,280원을 내요. 가입 기준과 시간별 보험료, 사업주 의무, 퇴사 후 건강보험까지 정리했어요.",
   datePublished: "2026-09-03",
-  dateModified: "2026-09-03",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/tax/part-time-insurance-guide/",
   image: "https://moneydoc.kr/og/part-time-insurance-guide.png",
   imageAlt: "아르바이트 4대보험 가입 기준. 주 20시간이면 월 보수 1,073,280원에 보험료 104,280원",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "part-time-insurance-guide";
 
 export const html = `<h1>아르바이트 4대보험 가입 기준과 보험료, 주 15시간부터 퇴사 후까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">법령 가입 기준 원문 확인 · 2026-09-03</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">법령 가입 기준 원문 확인 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/part-time-insurance-guide.png" width="1200" height="630" alt="아르바이트 4대보험 가입 기준. 주 20시간이면 월 보수 1,073,280원에 보험료 104,280원">
 <p class="v2-lead v2-intro">아르바이트라고 4대보험에서 빠지는 건 아니에요. 한 달 소정근로시간 60시간, 주 15시간이 가입을 가르는 기준이고, 이 시간을 넘으면 정규직과 같은 요율로 가입해요. 2026년 최저임금으로 주 20시간 일하면 월 보수가 1,073,280원이고 보험료는 104,280원이에요. 보험별 가입 기준과 시간대별 보험료, 사장님이 해야 할 일, 그만둔 뒤 건강보험을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -141,7 +141,7 @@ export const html = `<h1>아르바이트 4대보험 가입 기준과 보험료, 
 <div class="v2-src">
 <b>법령</b>국민연금법 시행령 제2조(1개월 소정근로시간 60시간 미만 단시간근로자 제외, 3개월 이상 계속 근로 시 예외). 국민건강보험법 시행령 제9조(60시간 미만 단시간근로자 직장가입 제외), 국민건강보험법 제110조(임의계속가입). 고용보험법 시행령 제3조(1개월 60시간 또는 1주 15시간 미만 적용 제외, 3개월 이상 계속 근로와 일용근로자는 적용). 근로기준법 제18조(4주 평균 주 15시간 미만은 주휴일·연차 미적용). 산업재해보상보험법 제6조(근로자를 사용하는 모든 사업 적용).
 <b>행정규칙·정부 안내</b>최저임금위원회 2026년 최저임금 결정현황(시급 10,320원). 4대사회보험 정보연계센터 자격 신고와 가입내역 조회.
-<b>정부 도구</b>보험료는 4대보험료 계산기 엔진으로 계산했고 4대사회보험 모의계산과 대조했어요 (2026-09-03).
+<b>정부 도구</b>보험료는 4대보험료 계산기 엔진으로 계산했고 4대사회보험 모의계산과 대조했어요 (2026-09-09).
 </div>
 <div class="v2-rel"><a href="/four-insurance/"><b>계산기</b>4대보험료 계산기</a><a href="/four-insurance/"><b>세금 가이드</b>2026 4대보험 요율과 계산</a><a href="/severance/"><b>법률 가이드</b>퇴직금 계산 방법과 지급기준</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -212,7 +212,7 @@ export const landing = {
     "line2": "가입 기준과 보험료",
     "sub1": "한 달 60시간 또는 주 15시간이 기준이에요",
     "sub2": "주 20시간이면 월 보수 1,073,280원, 보험료 104,280원",
-    "foot": "국민연금·건강보험·고용보험 시행령 원문 확인 · 2026-09-03",
+    "foot": "국민연금·건강보험·고용보험 시행령 원문 확인 · 2026-09-09",
     "card": {
       "label": "주 20시간 보험료",
       "big": "104,280",
@@ -226,7 +226,7 @@ export const landing = {
     "href": "/four-insurance/calculator/",
     "label": "4대보험료 계산기 바로가기"
   },
-  "badge": "법령 가입 기준 원문 확인 · 2026-09-03",
+  "badge": "법령 가입 기준 원문 확인 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

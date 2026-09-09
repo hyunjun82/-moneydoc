@@ -4,7 +4,7 @@ export const meta = {
   title: "특고 노무제공자 실업급여, 보험설계사와 배달라이더 대리운전은 되나요?",
   description: "특고 노무제공자도 시행령이 정한 17개 직종에 들어가고 소득 기준을 채우면 실업급여를 받을 수 있어요. 보험설계사, 택배기사, 배달라이더인 늘찬배달원, 대리운전기사는 목록에 있지만 탁송기사는 없어요. 직종별로 어떤 조건을 채워야 하는지 정리했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-special-worker-guide/",
   image: "https://moneydoc.kr/og/unemployment-special-worker-guide.png",
   imageAlt: "특고 노무제공자 실업급여 안내. 노무제공자로 인정되는 직종 17개",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-special-worker-guide";
 
 export const html = `<h1>특고 노무제공자 실업급여, 보험설계사와 배달라이더 대리운전은 되나요?</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 노무제공자 특례 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 노무제공자 특례 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-special-worker-guide.png" width="1200" height="630" alt="특고 노무제공자 실업급여 안내. 노무제공자로 인정되는 직종 17개">
 <p class="v2-lead v2-intro">노무제공자란 근로계약을 맺은 근로자는 아니지만, 다른 사람의 사업을 위해 일하고 그 대가를 받는 사람이에요. 법에서는 이런 사람을 노무제공자라고 부르고, 흔히 특고(특수형태근로종사자)라고도 해요. 보험설계사나 배달라이더처럼 실제로는 근로자와 비슷하게 일하는데, 근로계약서가 없다는 이유로 실업급여를 못 받는다고 오해하는 경우가 많아요. 어떤 직종이 노무제공자로 인정되고, 실업급여를 받으려면 무엇을 채워야 하는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -174,7 +174,7 @@ export const landing = {
     "line2": "17개 직종이면 가능해요",
     "sub1": "보험설계사·택배기사·배달라이더·대리운전기사가 해당돼요",
     "sub2": "탁송기사는 이 목록에 없어요",
-    "foot": "고용보험법 노무제공자 특례 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 노무제공자 특례 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "노무제공자 인정 직종",
       "big": "17",
@@ -184,7 +184,7 @@ export const landing = {
     },
     "alt": "특고 노무제공자 실업급여 안내. 노무제공자로 인정되는 직종 17개"
   },
-  "badge": "고용보험법 노무제공자 특례 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 노무제공자 특례 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

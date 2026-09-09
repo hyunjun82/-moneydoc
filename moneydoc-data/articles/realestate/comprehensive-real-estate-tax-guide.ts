@@ -4,7 +4,7 @@ export const meta = {
   title: "종합부동산세 대상과 계산, 공시가 합산부터 1주택 공제까지",
   description: "가진 집의 공시가격을 합쳐 9억원, 1세대 1주택은 12억원을 넘으면 종합부동산세 대상이에요. 공시가 15억원인 한 채면 691,201원이에요. 합산 기준, 세율, 재산세액공제, 고령자와 장기보유 공제를 정리했어요.",
   datePublished: "2026-09-03",
-  dateModified: "2026-09-03",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/realestate/comprehensive-real-estate-tax-guide/",
   image: "https://moneydoc.kr/og/comprehensive-real-estate-tax-guide.png",
   imageAlt: "종합부동산세 계산. 공시가격 15억원인 1주택은 691,201원",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "comprehensive-real-estate-tax-guide";
 
 export const html = `<h1>종합부동산세 대상과 계산, 공시가 합산부터 1주택 공제까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">종합부동산세법 공제액과 세율표 대조 · 2026-09-03</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">종합부동산세법 공제액과 세율표 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/comprehensive-real-estate-tax-guide.png" width="1200" height="630" alt="종합부동산세 계산. 공시가격 15억원인 1주택은 691,201원">
 <p class="v2-lead v2-intro">종합부동산세는 재산세를 낸 뒤 한 번 더 붙는 국세로, 줄여서 종부세라고 불러요. 6월 1일 기준으로 내가 가진 주택의 공시가격을 모두 더하고, 거기서 기본공제를 뺀 금액에만 붙어요. 1세대 1주택은 12억원, 그 밖에는 9억원을 빼 줘요. 공시가격 12억원인 한 채라면 세금이 0원이고, 15억원이면 691,201원이에요. 대상 판단, 계산 순서, 재산세액공제, 고령자와 장기보유 공제를 차례로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -169,7 +169,7 @@ export const html = `<h1>종합부동산세 대상과 계산, 공시가 합산�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>종합부동산세법 제7조(납세의무자), 제8조(과세표준과 기본공제 12억원·9억원, 합산배제), 제9조(세율, 재산세액공제, 고령자·장기보유 세액공제와 80% 한도), 제10조(세부담의 상한 150%), 제16조(12월 1일부터 15일까지 부과·징수). 종합부동산세법 시행령 제2조의4(공정시장가액비율 60%). 농어촌특별세법(종합부동산세액에 대한 농어촌특별세).
-<b>정부 도구</b>홈택스 종합부동산세 화면의 공제액과 세율 구조가 이 글의 계산과 같아요 (2026-09-03 대조).
+<b>정부 도구</b>홈택스 종합부동산세 화면의 공제액과 세율 구조가 이 글의 계산과 같아요 (2026-09-09 대조).
 </div>
 <div class="v2-rel"><a href="/comprehensive-tax/"><b>계산기</b>종합부동산세 계산기</a><a href="/property-tax/"><b>부동산 계산기</b>재산세 계산기</a><a href="/property-tax/"><b>부동산 가이드</b>재산세 계산과 납부</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -248,7 +248,7 @@ export const landing = {
     "line2": "나도 내나요",
     "sub1": "1세대 1주택은 공시가 12억원까지 세금이 없어요",
     "sub2": "공시가 15억원 한 채면 농어촌특별세까지 691,201원",
-    "foot": "종합부동산세법 공제액과 세율표 대조 · 2026-09-03 검증",
+    "foot": "종합부동산세법 공제액과 세율표 대조 · 2026-09-09 검증",
     "card": {
       "label": "종합부동산세",
       "big": "691,201",
@@ -262,7 +262,7 @@ export const landing = {
     "href": "/comprehensive-tax/calculator/",
     "label": "종합부동산세 계산기 바로가기"
   },
-  "badge": "종합부동산세법 공제액과 세율표 대조 · 2026-09-03",
+  "badge": "종합부동산세법 공제액과 세율표 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 8,
   "quick": [

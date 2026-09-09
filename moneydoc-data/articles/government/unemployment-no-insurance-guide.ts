@@ -4,7 +4,7 @@ export const meta = {
   title: "고용보험 미가입 실업급여 받는 법, 소급 가입과 확인청구",
   description: "회사가 고용보험을 신고하지 않았어도 실업급여를 포기할 필요는 없어요. 가입 신고는 사업주 의무라서, 근로자가 확인청구를 하면 소급해서 자격을 인정받을 수 있어요. 절차와 한도를 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-no-insurance-guide/",
   image: "https://moneydoc.kr/og/unemployment-no-insurance-guide.png",
   imageAlt: "고용보험 미가입 시 확인청구로 소급 가입. 한도 3년",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-no-insurance-guide";
 
 export const html = `<h1>고용보험 미가입 실업급여 받는 법, 소급 가입과 확인청구</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 피보험자격 규정 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 피보험자격 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-no-insurance-guide.png" width="1200" height="630" alt="고용보험 미가입 시 확인청구로 소급 가입. 한도 3년">
 <p class="v2-lead v2-intro">일은 했는데 회사가 고용보험을 신고하지 않은 경우가 있어요. 이때 실업급여를 포기하는 분이 많은데 그럴 필요가 없어요. 고용보험은 요건을 갖추면 당연히 적용되고, 신고는 회사가 해야 할 일이거든요. 회사가 안 했다면 근로자가 직접 확인을 청구할 수 있어요. 어떻게 하는지, 몇 년까지 되는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -101,7 +101,7 @@ export const html = `<h1>고용보험 미가입 실업급여 받는 법, 소급 
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제8조(적용 범위), 제10조(적용 제외), 제15조(피보험자격에 관한 신고), 제17조(피보험자격의 확인), 제50조(소정급여일수 및 피보험기간), 고용보험법 시행령 제3조(적용 제외 근로자).
-<b>정부 도구</b>고용보험 홈페이지의 피보험자격 이력에서 신고 여부를 확인했어요 (2026-09-04 확인).
+<b>정부 도구</b>고용보험 홈페이지의 피보험자격 이력에서 신고 여부를 확인했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/eligibility/"><b>다음 질문</b>실업급여 수급자격, 4가지 조건과 이직 사유 기준</a><a href="/unemployment/merge-periods/"><b>다음 질문</b>실업급여 합산기간, 전 직장 고용보험도 더해지나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -172,7 +172,7 @@ export const landing = {
     "line2": "그래도 받을 수 있어요",
     "sub1": "신고는 사업주 의무라서 근로자가 확인청구를 할 수 있어요",
     "sub2": "신고가 없던 기간은 3년까지 소급돼요",
-    "foot": "고용보험법 피보험자격 규정 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 피보험자격 규정 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "소급 한도",
       "big": "3",
@@ -182,7 +182,7 @@ export const landing = {
     },
     "alt": "고용보험 미가입 시 확인청구로 소급 가입. 한도 3년"
   },
-  "badge": "고용보험법 피보험자격 규정 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 피보험자격 규정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

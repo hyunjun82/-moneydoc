@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 프리랜서 소득 신고, 3.3% 일감과 취업 판정 기준",
   description: "프리랜서 일감을 받아도 실업급여는 이어져요. 실업인정 때 일한 날과 받은 돈을 적으면 돼요. 하루 66,048원을 받던 사람이 하루 일감으로 70,000원을 받으면 그날은 취업이에요. 월보수액 80만원 이상 계약이나 사업자등록도 취업이에요.",
   datePublished: "2026-09-05",
-  dateModified: "2026-09-05",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-freelance-guide/",
   image: "https://moneydoc.kr/og/unemployment-freelance-guide.png",
   imageAlt: "실업급여 중 프리랜서 소득 신고. 하루 66,048원 이상이면 그날은 취업",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-freelance-guide";
 
 export const html = `<h1>실업급여 프리랜서 소득 신고, 3.3% 일감과 취업 판정 기준</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">취업 인정기준과 과세자료 조문 원문 대조 · 하루 금액은 계산기 엔진 · 2026-09-05</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">취업 인정기준과 과세자료 조문 원문 대조 · 하루 금액은 계산기 엔진 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-freelance-guide.png" width="1200" height="630" alt="실업급여 중 프리랜서 소득 신고. 하루 66,048원 이상이면 그날은 취업">
 <p class="v2-lead v2-intro">실업급여를 받는 중에 프리랜서 일감을 받아도 돼요. 대신 실업인정을 받을 때 일한 날과 받은 돈을 신청서에 적어야 해요. 얼마부터 취업으로 보느냐가 궁금하실 텐데 기준이 하나가 아니에요. 그날 받을 구직급여 하루 금액 이상을 받았거나, 3개월 이상 이어졌거나, 월보수액 80만원 이상 계약을 새로 맺었으면 취업이에요. 3.3%를 떼고 받은 일감은 그 기록이 국세청에 쌓여서 나중에 맞춰 볼 수 있어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -111,8 +111,8 @@ export const html = `<h1>실업급여 프리랜서 소득 신고, 3.3% 일감과
 <b>법령</b>고용보험법 제47조(실업인정대상기간 중의 취업 등의 신고), 제61조(부정행위에 따른 급여의 지급 제한), 제62조(반환명령 등), 제110조(자료 제공의 요청).
 <b>법령</b>고용보험법 시행규칙 제92조(취업의 인정기준).
 <b>법령</b>소득세법 제127조(원천징수의무), 제129조(원천징수세율), 제164조의3(간이지급명세서의 제출), 제173조(용역제공자에 관한 과세자료의 제출).
-<b>정부 도구</b>고용24 실업인정 신청 화면의 취업·소득 기재 항목을 확인했어요 (2026-09-05 확인).
-<b>계산 검증</b>하루 66,048원은 월급 300만원 기준 이 사이트 실업급여 계산기 엔진 값이에요 (2026-09-05).
+<b>정부 도구</b>고용24 실업인정 신청 화면의 취업·소득 기재 항목을 확인했어요 (2026-09-09 확인).
+<b>계산 검증</b>하루 66,048원은 월급 300만원 기준 이 사이트 실업급여 계산기 엔진 값이에요 (2026-09-09).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/part-time-job/"><b>같은 갈래</b>실업급여 알바 신고 방법, 안 하면 부정수급인가요</a><a href="/unemployment/startup/"><b>다음 질문</b>실업급여 받다가 사업자등록 하면 못 받나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -191,7 +191,7 @@ export const landing = {
     "line2": "얼마부터 취업인가요",
     "sub1": "그날 구직급여 하루 금액 이상을 받으면 취업이에요",
     "sub2": "3.3%를 뗀 기록은 국세청에 남아 있어요",
-    "foot": "취업 인정기준과 과세자료 조문 원문 대조 · 2026-09-05 검증",
+    "foot": "취업 인정기준과 과세자료 조문 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "취업이 되는 하루 일감",
       "big": "66,048",
@@ -201,7 +201,7 @@ export const landing = {
     },
     "alt": "실업급여 중 프리랜서 소득 신고. 하루 66,048원 이상이면 그날은 취업"
   },
-  "badge": "취업 인정기준과 과세자료 조문 원문 대조 · 하루 금액은 계산기 엔진 · 2026-09-05",
+  "badge": "취업 인정기준과 과세자료 조문 원문 대조 · 하루 금액은 계산기 엔진 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

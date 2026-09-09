@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 포기와 미신청, 재수급 조건과 재신청 방법",
   description: "실업급여를 받다가 스스로 그만 받거나 신청 기한을 놓치면 어떻게 되는지 고용보험법 조문으로 확인했어요. 다시 이직했을 때 재수급 조건과 새로 신청하는 방법까지 정리했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-give-up-guide/",
   image: "https://moneydoc.kr/og/unemployment-give-up-guide.png",
   imageAlt: "실업급여 포기와 미신청, 재수급 조건과 재신청 방법",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-give-up-guide";
 
 export const html = `<h1>실업급여 포기와 미신청, 재수급 조건과 재신청 방법</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법과 실업인정 예규 원문 대조 · 2026-09-08</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법과 실업인정 예규 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-give-up-guide.png" width="1200" height="630" alt="실업급여 포기와 미신청, 재수급 조건과 재신청 방법">
 <p class="v2-lead v2-intro">실업급여를 받다가 그만 받고 싶거나, 신청 기한을 놓쳐 버렸거나, 다시 실직해서 또 받고 싶은 상황은 저마다 결과가 달라요. 그만두는 데는 따로 신청서가 없고, 신청을 안 하면 12개월 뒤 권리가 없어지고, 다시 받으려면 새 이직에서 조건을 처음부터 채워야 해요. 이 세 가지를 고용보험법과 실업인정 예규 원문 기준으로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -92,7 +92,7 @@ export const html = `<h1>실업급여 포기와 미신청, 재수급 조건과 �
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제42조(실업의 신고), 제48조(수급기간 및 수급일수), 제50조(소정급여일수 및 피보험기간), 제62조(반환명령 등).
-<b>행정규칙·정부 안내</b>고용노동부 예규 「실업인정 및 재취업지원규정」 제249호 제9조(출석 여부의 확인, 2026.9.1 시행). 법제처 생활법령정보 실업의 인정(2026-09-08 기준).
+<b>행정규칙·정부 안내</b>고용노동부 예규 「실업인정 및 재취업지원규정」 제249호 제9조(출석 여부의 확인, 2026.9.1 시행). 법제처 생활법령정보 실업의 인정(2026-09-09 기준).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/deadline/"><b>다음 질문</b>실업급여 신청기간은 언제까지인가요</a><a href="/unemployment/apply/"><b>다음 질문</b>실업급여 신청 방법은 몇 단계인가요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -163,7 +163,7 @@ export const landing = {
     "line2": "조건과 재신청 방법",
     "sub1": "그만 받아도 벌칙은 없지만 남은 날은 사라져요",
     "sub2": "재수급은 새 이직에서 조건을 다시 채워야 해요",
-    "foot": "고용보험법 제48조·제50조와 실업인정 예규 원문 대조 · 2026-09-08 검증",
+    "foot": "고용보험법 제48조·제50조와 실업인정 예규 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "실업급여 포기",
       "big": "12개월",
@@ -173,7 +173,7 @@ export const landing = {
     },
     "alt": "실업급여 포기와 미신청, 재수급 조건과 재신청 방법"
   },
-  "badge": "고용보험법과 실업인정 예규 원문 대조 · 2026-09-08",
+  "badge": "고용보험법과 실업인정 예규 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

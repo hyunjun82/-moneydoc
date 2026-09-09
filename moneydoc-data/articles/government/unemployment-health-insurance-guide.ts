@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 건강보험료 감면, 임의계속가입과 피부양자 기준",
   description: "퇴사하면 건강보험 자격이 지역가입자로 바뀌면서 회사가 내주던 절반이 사라져요. 실업을 이유로 깎아 주는 감면은 없고, 임의계속가입으로 직장 기준을 최대 36개월 이어 가거나 가족의 피부양자로 들어가 내지 않는 길이 있어요.",
   datePublished: "2026-09-07",
-  dateModified: "2026-09-07",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-health-insurance-guide/",
   image: "https://moneydoc.kr/og/unemployment-health-insurance-guide.png",
   imageAlt: "실업급여 건강보험료. 임의계속가입은 최대 36개월",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-health-insurance-guide";
 
 export const html = `<h1>실업급여 건강보험료 감면, 임의계속가입과 피부양자 기준</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">국민건강보험법 원문 대조 · 요율 7.19% 엔진 일치 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">국민건강보험법 원문 대조 · 요율 7.19% 엔진 일치 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-health-insurance-guide.png" width="1200" height="630" alt="실업급여 건강보험료. 임의계속가입은 최대 36개월">
 <p class="v2-lead v2-intro">실업급여를 받는 동안에도 건강보험료는 매달 나가요. 퇴사하면 그 다음 날 지역가입자가 되고, 회사가 내주던 절반이 사라져요. 그런데 실업을 이유로 깎아 주는 감면은 법에 없어요. 대신 직장 기준을 이어 가는 임의계속가입과, 아예 내지 않는 피부양자라는 길이 있어요. 무엇이 오르고 어느 쪽을 고를 수 있는지, 기한은 언제까지인지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -131,7 +131,7 @@ export const html = `<h1>실업급여 건강보험료 감면, 임의계속가입
 <b>법령</b>국민건강보험법 제5조(적용 대상 등), 제9조(자격의 변동 시기 등), 제11조(자격취득 등의 확인), 제69조(보험료), 제75조(보험료의 경감 등), 제76조(보험료의 부담), 제78조(보험료의 납부기한), 제110조(실업자에 대한 특례). 같은 법 시행령 제41조(소득월액), 제44조(보험료율 및 재산보험료부과점수당 금액), 제77조(임의계속가입자 적용기간). 같은 법 시행규칙 제2조(피부양자 자격의 인정기준 등), 제62조(임의계속가입을 위한 직장가입자 자격 유지 기간), 제63조(임의계속가입ㆍ탈퇴 및 자격 변동 시기 등).
 <b>법령</b>소득세법 제12조(비과세소득) 제3호마목.
 <b>정부 도구</b>국민건강보험공단 홈페이지의 보험료 모의계산 화면에서 내 지역보험료를 미리 볼 수 있어요. 피부양자 취득 가능 여부 조회 화면도 따로 있어요.
-<b>계산 검증</b>요율 7.19%는 시행령의 1만분의 719와 같고, 보수월액 300만원 예시 금액은 4대보험 계산기 엔진 값이에요 (2026-09-04).
+<b>계산 검증</b>요율 7.19%는 시행령의 1만분의 719와 같고, 보수월액 300만원 예시 금액은 4대보험 계산기 엔진 값이에요 (2026-09-09).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/pension-credit/"><b>다음 질문</b>실업크레딧, 국민연금은 어떻게 되나요</a><a href="/unemployment/apply/"><b>다음 질문</b>실업급여 신청 방법 5단계</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -210,7 +210,7 @@ export const landing = {
     "line2": "감면 되나요",
     "sub1": "임의계속가입은 최대 36개월까지 이어 갈 수 있어요",
     "sub2": "실업만 이유로 깎아 주는 조항은 법에 없어요",
-    "foot": "국민건강보험법 원문 대조 · 2026-09-04 검증",
+    "foot": "국민건강보험법 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "임의계속가입",
       "big": "36",
@@ -220,7 +220,7 @@ export const landing = {
     },
     "alt": "실업급여 건강보험료. 임의계속가입은 최대 36개월"
   },
-  "badge": "국민건강보험법 원문 대조 · 요율 7.19% 엔진 일치 · 2026-09-04",
+  "badge": "국민건강보험법 원문 대조 · 요율 7.19% 엔진 일치 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

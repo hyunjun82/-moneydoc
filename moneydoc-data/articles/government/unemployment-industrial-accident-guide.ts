@@ -4,7 +4,7 @@ export const meta = {
   title: "산재 휴업급여와 실업급여 중복, 지급 기간과 산재 종결 후 신청 방법",
   description: "산재로 다쳐 요양하며 휴업급여를 받는 동안 실업급여(구직급여·상병급여)는 함께 나오지 않아요. 다만 그 요양 기간만큼 수급기간이 자동으로 늘어나 있어서, 산재가 끝난 뒤 지체 없이 신고하면 남은 구직급여를 다시 받을 수 있어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-industrial-accident-guide/",
   image: "https://moneydoc.kr/og/unemployment-industrial-accident-guide.png",
   imageAlt: "산재 휴업급여와 실업급여 중복 여부와 산재 종결 후 신청 방법",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-industrial-accident-guide";
 
 export const html = `<h1>산재 휴업급여와 실업급여 중복, 지급 기간과 산재 종결 후 신청 방법</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 제48조·제63조, 시행규칙 제87조 원문 대조 · 2026-09-08</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 제48조·제63조, 시행규칙 제87조 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-industrial-accident-guide.png" width="1200" height="630" alt="산재 휴업급여와 실업급여 중복 여부와 산재 종결 후 신청 방법">
 <p class="v2-lead v2-intro">회사에서 일하다 다쳐 산재로 인정받으면 휴업급여를 받아요. 이미 실업급여를 받고 있었거나 받을 예정이라면 두 급여가 겹치는 기간이 헷갈려요. 휴업급여를 받는 동안은 실업급여가 함께 나오지 않지만, 그 기간만큼 수급기간이 밀려 있어서 산재가 끝난 뒤에도 남은 구직급여를 받을 수 있어요. 중복 여부와 종결 후 신청 방법을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -91,7 +91,7 @@ export const html = `<h1>산재 휴업급여와 실업급여 중복, 지급 기�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제48조(수급기간 및 수급일수), 제63조(질병 등의 특례). 고용보험법 시행령 제71조(수급기간의 연기 신청). 고용보험법 시행규칙 제87조(재취업활동의 인정기준). 산업재해보상보험법 제40조(요양급여)·제52조부터 제56조까지(휴업급여).
-<b>정부 도구</b>고용24가 배포하는 실업인정 인터넷 신청 매뉴얼의 산재 휴업급여 수급자 안내와 대조했어요 (2026-09-08 확인).
+<b>정부 도구</b>고용24가 배포하는 실업인정 인터넷 신청 매뉴얼의 산재 휴업급여 수급자 안내와 대조했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/sickness/"><b>관련 질문</b>질병이나 부상으로 퇴사하면 실업급여가 되나요</a><a href="/unemployment/deadline/"><b>관련 질문</b>실업급여 신청기간은 언제까지인가요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -154,7 +154,7 @@ export const landing = {
     "line2": "동시수급 불가",
     "sub1": "휴업급여 받는 동안 실업급여는 멈춰요",
     "sub2": "요양이 끝나면 신고하고 다시 받아요",
-    "foot": "고용보험법 제48조·제63조, 시행규칙 제87조 원문 대조 · 2026-09-08 검증",
+    "foot": "고용보험법 제48조·제63조, 시행규칙 제87조 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "산재 휴업급여",
       "big": "불가",
@@ -164,7 +164,7 @@ export const landing = {
     },
     "alt": "산재 휴업급여와 실업급여 중복 여부와 산재 종결 후 신청 방법"
   },
-  "badge": "고용보험법 제48조·제63조, 시행규칙 제87조 원문 대조 · 2026-09-08",
+  "badge": "고용보험법 제48조·제63조, 시행규칙 제87조 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

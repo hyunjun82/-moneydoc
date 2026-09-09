@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 1차 집체교육과 온라인교육, 2차 동영상부터 취업특강까지",
   description: "실업급여 교육은 헷갈려요. 등록 전 사전교육은 온라인으로 볼 수 있고, 1차 집체교육은 출석해야 해요. 2차 온라인 신청 방법과 온라인 취업특강 인정 기준까지 정리했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-education-guide/",
   image: "https://moneydoc.kr/og/unemployment-education-guide.png",
   imageAlt: "실업급여 1차 집체교육은 출석 필수, 사전교육과 온라인 취업특강은 온라인으로 가능",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-education-guide";
 
 export const html = `<h1>실업급여 1차 집체교육과 온라인교육, 2차 동영상부터 취업특강까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-08</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-education-guide.png" width="1200" height="630" alt="실업급여 1차 집체교육은 출석 필수, 사전교육과 온라인 취업특강은 온라인으로 가능">
 <p class="v2-lead v2-intro">실업급여를 준비하다 보면 교육이라는 말을 여러 번 만나요. 등록 전에 보는 사전교육, 1차 실업인정일의 집체교육, 2차부터 활동으로 인정되는 온라인 취업특강까지 이름은 비슷한데 시점과 온라인 가능 여부가 서로 달라요. 무엇이 다른지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -92,7 +92,7 @@ export const html = `<h1>실업급여 1차 집체교육과 온라인교육, 2차
 <div class="v2-src">
 <b>법령</b>실업인정 및 재취업지원규정 제6조(재취업지원·실업급여제도에 대한 안내), 제7조(재취업활동에 관한 지원), 제9조(출석 여부의 확인), 제12조(실업인정일의 지정).
 <b>행정규칙·정부 안내</b>고용노동부 「실업급여 지급 요건 강화, 무엇이 달라지나」 정책브리핑(2022.6.29). 고용노동부 인터넷상담 답변(2023.8). 고용24 실업급여 제도 안내(사전 교육 절차). 고용24 실업인정 인터넷 신청 매뉴얼.
-<b>정부 도구</b>고용24 실업급여 제도 안내와 실업인정 인터넷 신청 매뉴얼의 절차를 확인했어요 (2026-09-08 확인).
+<b>정부 도구</b>고용24 실업급여 제도 안내와 실업인정 인터넷 신청 매뉴얼의 절차를 확인했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/round-1/"><b>다음 질문</b>실업급여 1차 실업인정, 교육 이수와 첫 구직활동 신고</a><a href="/unemployment/other-activity/"><b>다음 질문</b>실업급여 구직외활동 인정 범위, 취업특강과 직업심리검사</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -163,7 +163,7 @@ export const landing = {
     "line2": "출석과 온라인 구분",
     "sub1": "1차 집체교육은 출석해야 해요",
     "sub2": "사전교육과 취업특강은 온라인이에요",
-    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-08 검증",
+    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "1차 실업인정일",
       "big": "집체교육",
@@ -173,7 +173,7 @@ export const landing = {
     },
     "alt": "실업급여 1차 집체교육은 출석 필수, 사전교육과 온라인 취업특강은 온라인으로 가능"
   },
-  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-08",
+  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

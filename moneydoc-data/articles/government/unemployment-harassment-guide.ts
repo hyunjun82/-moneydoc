@@ -4,7 +4,7 @@ export const meta = {
   title: "직장내 괴롭힘 실업급여, 신고와 증빙 어떻게 하나요",
   description: "직장 내 괴롭힘으로 그만둬도 실업급여를 받을 수 있어요. 신고는 법이 할 수 있다고만 적은 일이라 수급 요건이 아니에요. 다만 증빙 서류를 정해 둔 정부 안내가 없어서, 신고와 조사, 진정에서 남는 기록을 모아 고용센터에 내요.",
   datePublished: "2026-09-06",
-  dateModified: "2026-09-06",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-harassment-guide/",
   image: "https://moneydoc.kr/og/unemployment-harassment-guide.png",
   imageAlt: "직장 내 괴롭힘은 정당한 이직 사유. 회사 신고는 의무가 아니다",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-harassment-guide";
 
 export const html = `<h1>직장내 괴롭힘 실업급여, 신고와 증빙 어떻게 하나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">근로기준법·고용보험법 시행규칙·고용24·노동포털 원문 대조 · 2026-09-06</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">근로기준법·고용보험법 시행규칙·고용24·노동포털 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-harassment-guide.png" width="1200" height="630" alt="직장 내 괴롭힘은 정당한 이직 사유. 회사 신고는 의무가 아니다">
 <p class="v2-lead v2-intro">직장 내 괴롭힘 때문에 그만두면 실업급여가 헷갈려요. 사직서를 냈으니 그냥 자진퇴사로 끝난 것 같아서예요. 그런데 고용센터가 보는 것은 사직서 문구가 아니라 실제 퇴사 사유예요. 남는 걱정은 두 가지예요. 증빙으로 무엇을 내는지, 퇴사코드가 11번으로 찍혔으면 어떻게 하는지. 둘 다 법과 정부 안내에 답이 있어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -107,7 +107,7 @@ export const html = `<h1>직장내 괴롭힘 실업급여, 신고와 증빙 어�
 <b>법령</b>고용보험법 제58조(이직 사유에 따른 수급자격의 제한), 고용보험법 시행규칙 제101조제2항 및 별표 2(정당한 이직 사유).
 <b>정부 안내</b>법제처 생활법령 「구직급여 수급자격의 제한」, 고용24 이직확인서 제도 안내(이직사유 기재·상실사유 구분코드·과태료).
 <b>정부 도구</b>고용노동부 노동포털의 노동분야 상담·신고센터와 근로기준 분야 민원신청 화면이 열리는 것을 봤어요 (2026-09-06 확인).
-<b>계산 검증</b>하루 66,048원과 210일, 13,870,080원은 월급 300만원·5년 기준 이 사이트 실업급여 계산기 엔진 값이에요 (2026-09-06).
+<b>계산 검증</b>하루 66,048원과 210일, 13,870,080원은 월급 300만원·5년 기준 이 사이트 실업급여 계산기 엔진 값이에요 (2026-09-09).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/voluntary/"><b>다음 질문</b>자발적 퇴사 실업급여 인정 사유와 증빙 서류</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -178,7 +178,7 @@ export const landing = {
     "line2": "신고는 요건 아니에요",
     "sub1": "사직서를 냈어도 정당한 이직 사유 목록에 들어 있어요",
     "sub2": "증빙 서류 목록은 정부 안내에 없어요",
-    "foot": "근로기준법·고용보험법 시행규칙·고용24·노동포털 원문 대조 · 2026-09-06 검증",
+    "foot": "근로기준법·고용보험법 시행규칙·고용24·노동포털 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "괴롭힘 요건",
       "big": "3",
@@ -188,7 +188,7 @@ export const landing = {
     },
     "alt": "직장 내 괴롭힘은 정당한 이직 사유. 회사 신고는 의무가 아니다"
   },
-  "badge": "근로기준법·고용보험법 시행규칙·고용24·노동포털 원문 대조 · 2026-09-06",
+  "badge": "근로기준법·고용보험법 시행규칙·고용24·노동포털 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

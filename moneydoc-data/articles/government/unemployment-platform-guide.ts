@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 쿠팡알바와 쿠팡이츠 배민커넥트, 취업신고와 주 15시간은?",
   description: "쿠팡알바처럼 시급을 받는 단기 근로와 쿠팡이츠·배민커넥트 같은 배달 플랫폼 노무는 취업 인정 기준이 달라요. 주 15시간·월 60시간 시간 기준과 노무제공계약 기준, 취업신고 기한 2개월을 함께 정리했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-platform-guide/",
   image: "https://moneydoc.kr/og/unemployment-platform-guide.png",
   imageAlt: "실업급여 쿠팡알바와 쿠팡이츠 배민커넥트 취업신고와 주 15시간 기준",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-platform-guide";
 
 export const html = `<h1>실업급여 쿠팡알바와 쿠팡이츠 배민커넥트, 취업신고와 주 15시간은?</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 시행규칙 취업 인정기준과 고용24 신고 절차 원문 대조 · 2026-09-08</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 시행규칙 취업 인정기준과 고용24 신고 절차 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-platform-guide.png" width="1200" height="630" alt="실업급여 쿠팡알바와 쿠팡이츠 배민커넥트 취업신고와 주 15시간 기준">
 <p class="v2-lead v2-intro">쿠팡알바처럼 물류센터에서 시급을 받는 단기 근로와 쿠팡이츠·배민커넥트처럼 배달 건별로 정산받는 노무제공은 취업 판정 기준이 서로 달라요. 쿠팡알바는 근로시간으로, 쿠팡이츠·배민커넥트는 노무제공계약으로 따져요. 기준별로 나눠서 취업신고 시점까지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -89,7 +89,7 @@ export const html = `<h1>실업급여 쿠팡알바와 쿠팡이츠 배민커넥�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제42조(실업의 신고), 제47조(실업인정대상기간 중 취업 등의 신고). 시행령 제3조(적용 제외 근로자, 초단시간근로자 기준). 시행규칙 제92조(취업의 인정기준).
-<b>행정규칙·정부 안내</b>고용24 실업급여 제도 안내에서 취업사실 신고(2개월 이내, 취업 전날까지 지급)와 근로사실 신고 의무를 원문으로 확인했어요 (2026-09-08 확인).
+<b>행정규칙·정부 안내</b>고용24 실업급여 제도 안내에서 취업사실 신고(2개월 이내, 취업 전날까지 지급)와 근로사실 신고 의무를 원문으로 확인했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/part-time-job/"><b>다음 질문</b>실업급여 받으면서 알바 해도 되나요</a><a href="/unemployment/freelance/"><b>다음 질문</b>프리랜서 3.3% 소득 실업급여 신고 기준</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -160,7 +160,7 @@ export const landing = {
     "line2": "취업신고 기준",
     "sub1": "쿠팡알바는 근로시간 기준으로 판단해요",
     "sub2": "쿠팡이츠·배민커넥트는 노무제공계약 기준이에요",
-    "foot": "고용보험법 시행규칙 취업 인정기준 원문 대조 · 2026-09-08 검증",
+    "foot": "고용보험법 시행규칙 취업 인정기준 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "쿠팡알바",
       "big": "15시간",
@@ -170,7 +170,7 @@ export const landing = {
     },
     "alt": "실업급여 쿠팡알바와 쿠팡이츠 배민커넥트 취업신고와 주 15시간 기준"
   },
-  "badge": "고용보험법 시행규칙 취업 인정기준과 고용24 신고 절차 원문 대조 · 2026-09-08",
+  "badge": "고용보험법 시행규칙 취업 인정기준과 고용24 신고 절차 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

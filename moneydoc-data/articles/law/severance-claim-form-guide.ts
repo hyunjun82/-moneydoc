@@ -4,7 +4,7 @@ export const meta = {
   title: "퇴직금 못 받았을 때 지급명령과 소장, 양식부터 제출까지",
   description: "퇴직금 14,673,913원을 못 받았다면 지급명령 인지대는 전자소송 기준 6,300원이에요. 지급명령 신청서와 소장 양식을 어디서 받는지, 인지대와 송달료는 얼마인지, 어느 법원에 내는지 정리했어요.",
   datePublished: "2026-09-03",
-  dateModified: "2026-09-03",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/law/severance-claim-form-guide/",
   image: "https://moneydoc.kr/og/severance-claim-form-guide.png",
   imageAlt: "퇴직금 지급명령 인지대. 청구금액 14,673,913원이면 6,300원",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "severance-claim-form-guide";
 
 export const html = `<h1>퇴직금 못 받았을 때 지급명령과 소장, 양식부터 제출까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">민사소송법과 인지법 산식 대조 · 2026-09-03</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">민사소송법과 인지법 산식 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/severance-claim-form-guide.png" width="1200" height="630" alt="퇴직금 지급명령 인지대. 청구금액 14,673,913원이면 6,300원">
 <p class="v2-lead v2-intro">노동청 진정으로도 퇴직금을 받지 못했다면 법원으로 갈 차례예요. 가장 싸고 빠른 방법은 지급명령이에요. 서류만 내면 되고 법정에 나가지 않아요. 월급 300만원으로 5년 일한 사람의 퇴직금 14,673,913원을 청구한다면 전자소송 인지대는 6,300원이에요. 같은 금액을 소장으로 내면 63,900원이라 57,600원 차이가 나요. 신청서 쓰는 법, 양식 받는 곳, 비용, 관할 법원을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -171,7 +171,7 @@ export const html = `<h1>퇴직금 못 받았을 때 지급명령과 소장, 양
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>민사소송법 제462조(지급명령의 요건), 제463조(관할법원, 전속관할), 제469조(송달과 이의신청), 제470조(이의신청의 효력, 2주 불변기간), 제472조(소송으로의 이행), 제474조(확정판결과 같은 효력). 민사소송 등 인지법 제2조(소장 인지액), 제7조제2항(지급명령 신청서는 10분의 1), 제16조(전자소송은 10분의 9). 소액사건심판법(소액사건 범위와 이행권고결정). 근로기준법 제36조(금품 청산 14일), 제49조(임금채권 3년 시효).
-<b>정부 도구</b>대법원 전자소송의 인지액 산정 기준과 이 글의 계산이 같은 산식이에요 (2026-09-03 대조).
+<b>정부 도구</b>대법원 전자소송의 인지액 산정 기준과 이 글의 계산이 같은 산식이에요 (2026-09-09 대조).
 </div>
 <div class="v2-rel"><a href="/severance/"><b>계산기</b>퇴직금 계산기</a><a href="/unpaid-wages/"><b>법률 계산기</b>임금체불 지연이자 계산기</a><a href="/unpaid-wages/"><b>법률 가이드</b>임금체불 진정 방법과 지연이자</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -250,7 +250,7 @@ export const landing = {
     "line2": "어떻게 내나요",
     "sub1": "청구금액 14,673,913원이면 인지대 6,300원",
     "sub2": "법정에 나가지 않고 서류만으로 진행할 수 있어요",
-    "foot": "민사소송법과 인지법 산식 대조 · 2026-09-03 검증",
+    "foot": "민사소송법과 인지법 산식 대조 · 2026-09-09 검증",
     "card": {
       "label": "지급명령 인지대",
       "big": "6,300",
@@ -264,7 +264,7 @@ export const landing = {
     "href": "/severance/calculator/",
     "label": "퇴직금 계산기 바로가기"
   },
-  "badge": "민사소송법과 인지법 산식 대조 · 2026-09-03",
+  "badge": "민사소송법과 인지법 산식 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 8,
   "quick": [

@@ -4,7 +4,7 @@ export const meta = {
   title: "일용직 실업급여 조건, 수급 중 일한 날 신고 기준",
   description: "일용직은 일반 근로자의 네 가지 조건에 두 가지가 더 붙어요. 신청 전 근로일이 총 일수의 3분의 1 미만이어야 하고, 건설일용은 14일 연속 근로내역이 없으면 인정돼요. 수급 중 일용근로 신고까지 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-daily-worker-guide/",
   image: "https://moneydoc.kr/og/unemployment-daily-worker-guide.png",
   imageAlt: "일용직 실업급여 조건과 수급 중 일용근로 신고 기준",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-daily-worker-guide";
 
 export const html = `<h1>일용직 실업급여 조건, 수급 중 일한 날 신고 기준</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 일용근로자 요건 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 일용근로자 요건 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-daily-worker-guide.png" width="1200" height="630" alt="일용직 실업급여 조건과 수급 중 일용근로 신고 기준">
 <p class="v2-lead v2-intro">일용직도 실업급여를 받을 수 있어요. 다만 일반 근로자와 조건이 달라요. 법이 정한 네 가지 요건 뒤에 두 가지가 더 붙는데, 이 두 가지는 마지막 이직 당시 일용근로자였던 사람에게만 해당해요. 계속 일이 있는 상태로는 받기 어렵게 만들어 둔 장치예요. 조건이 무엇인지, 수급 중에 일용으로 일하면 어떻게 신고하는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -108,7 +108,7 @@ export const html = `<h1>일용직 실업급여 조건, 수급 중 일한 날 �
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제2조(정의, 일용근로자), 제40조(구직급여의 수급 요건), 제43조(수급자격의 인정), 제49조(대기기간), 고용보험법 시행규칙 제92조(취업의 인정기준).
-<b>정부 도구</b>법제처 생활법령의 구직급여 수급자격 안내와 고용보험 홈페이지의 근로내용 확인신고 화면을 대조했어요 (2026-09-04 확인).
+<b>정부 도구</b>법제처 생활법령의 구직급여 수급자격 안내와 고용보험 홈페이지의 근로내용 확인신고 화면을 대조했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/part-time-job/"><b>다음 질문</b>실업급여 알바 신고 방법, 안 하면 부정수급인가요</a><a href="/unemployment/180days/"><b>다음 질문</b>실업급여 180일 계산법, 주 며칠 일해야 채워지나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -179,7 +179,7 @@ export const landing = {
     "line2": "조건이 두 가지 더 붙어요",
     "sub1": "신청 전 근로일이 총 일수의 3분의 1 미만이어야 해요",
     "sub2": "건설일용은 14일 연속 근로내역이 없으면 인정돼요",
-    "foot": "고용보험법 일용근로자 요건 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 일용근로자 요건 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "일용직 추가 요건",
       "big": "2",
@@ -189,7 +189,7 @@ export const landing = {
     },
     "alt": "일용직 실업급여 조건과 수급 중 일용근로 신고 기준"
   },
-  "badge": "고용보험법 일용근로자 요건 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 일용근로자 요건 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

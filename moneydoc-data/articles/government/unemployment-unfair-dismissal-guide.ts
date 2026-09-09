@@ -4,7 +4,7 @@ export const meta = {
   title: "부당해고 실업급여와 권고사직, 해고예고수당부터 노동청 신고까지",
   description: "부당해고를 당했을 때 실업급여를 받을 수 있는지, 권고사직과는 무엇이 다른지, 해고예고수당과 노동청 신고는 어떻게 되는지를 정부 규정 원문으로 정리했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-unfair-dismissal-guide/",
   image: "https://moneydoc.kr/og/unemployment-unfair-dismissal-guide.png",
   imageAlt: "부당해고 실업급여. 기준기간 최대 3년까지 가산",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-unfair-dismissal-guide";
 
 export const html = `<h1>부당해고 실업급여와 권고사직, 해고예고수당부터 노동청 신고까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-unfair-dismissal-guide.png" width="1200" height="630" alt="부당해고 실업급여. 기준기간 최대 3년까지 가산">
 <p class="v2-lead v2-intro">해고를 당했는데 회사가 부당하다고 생각되면 실업급여부터 걱정이 될 수 있어요. 해고는 원칙적으로 실업급여 대상이지만, 회사가 중대한 귀책사유를 이유로 들었다면 이야기가 달라져요. 그 해고가 부당하다면 노동위원회나 법원에서 다툴 수 있고, 다투는 동안에도 실업인정은 계속돼요. 권고사직과는 어떻게 다른지, 해고예고수당은 같이 받는지, 노동청에는 뭘 신고할 수 있는지까지 정부 규정 원문으로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -85,7 +85,7 @@ export const html = `<h1>부당해고 실업급여와 권고사직, 해고예고
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제40조(기준기간), 제58조(수급자격의 제한). 고용보험법 시행령 제60조(기준기간 연장사유).
-<b>행정규칙·정부 안내</b>고용노동부 예규 「실업인정 및 재취업지원규정」 제249호 제22조(해고의 효력을 다투는 자에 대한 실업인정, 2026.9.1 시행). 법제처 생활법령정보 실업급여(2026.8.15 기준). 고용24 실업급여 제도 안내(심사청구·재심사청구, 상실사유 구분코드, 고객상담센터 1350) (2026-09-04 확인).
+<b>행정규칙·정부 안내</b>고용노동부 예규 「실업인정 및 재취업지원규정」 제249호 제22조(해고의 효력을 다투는 자에 대한 실업인정, 2026.9.1 시행). 법제처 생활법령정보 실업급여(2026.8.15 기준). 고용24 실업급여 제도 안내(심사청구·재심사청구, 상실사유 구분코드, 고객상담센터 1350) (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/layoff/"><b>다음 질문</b>권고사직이면 실업급여가 바로 되나요</a><a href="/unemployment/exit-code/"><b>다음 질문</b>이직코드 종류에는 무엇이 있나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -148,7 +148,7 @@ export const landing = {
     "line2": "노동위원회에 다퉈요",
     "sub1": "해고는 원칙적으로 실업급여 대상이에요",
     "sub2": "다투는 중에도 실업인정은 계속돼요",
-    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-04 검증",
+    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "부당해고로 못 받은 기간",
       "big": "3",
@@ -158,7 +158,7 @@ export const landing = {
     },
     "alt": "부당해고 실업급여. 기준기간 최대 3년까지 가산"
   },
-  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-04",
+  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

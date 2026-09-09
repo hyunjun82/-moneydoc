@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 첫인정일과 방문인정일, 실업인정 신청과 불참했을 때",
   description: "실업급여 첫 실업인정일은 실업신고일부터 14일 뒤예요. 방문해야 하는 회차와 온라인으로 낼 수 있는 회차, 신청 방법과 인정일에 못 나갔을 때 어떻게 되는지까지 정리했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-change-date-guide/",
   image: "https://moneydoc.kr/og/unemployment-change-date-guide.png",
   imageAlt: "실업급여 첫인정일 14일, 방문은 1차·4차 나머지는 온라인",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-change-date-guide";
 
 export const html = `<h1>실업급여 첫인정일과 방문인정일, 실업인정 신청과 불참했을 때</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-08</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-change-date-guide.png" width="1200" height="630" alt="실업급여 첫인정일 14일, 방문은 1차·4차 나머지는 온라인">
 <p class="v2-lead v2-intro">퇴사 후 실업급여를 신청하면 정해진 날짜마다 실업인정을 받아야 해요. 처음 가는 날이 언제인지, 어느 회차는 꼭 방문해야 하는지, 못 나가면 어떻게 되는지 궁금한 분이 많아요. 이 글에서 첫인정일부터 방문 회차, 신청 방법, 불참했을 때 대처법까지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -99,7 +99,7 @@ export const html = `<h1>실업급여 첫인정일과 방문인정일, 실업인
 <div class="v2-src">
 <b>법령</b>고용보험법 제44조(실업의 인정), 제47조(취업 등의 신고).
 <b>행정규칙·정부 안내</b>고용노동부 예규 「실업인정 및 재취업지원규정」 제249호 제9조(출석 여부 확인)·제12조(실업인정일의 지정)·제16조(실업인정일 변경사유)·제17조(증명서에 의한 실업인정)(2026.9.1 시행). 고용노동부 「실업급여 지급 요건 강화, 무엇이 달라지나」 정책브리핑(2022.6.29, 회차별 출석·온라인 구분).
-<b>정부 도구</b>고용24 실업급여 제도 안내(대리 신청 금지)와 고용보험 홈페이지 실업인정 인터넷 신청 매뉴얼(온라인 신청 대상, 17:00 마감, 전산장애 시 방문)을 확인했어요 (2026-09-08 확인).
+<b>정부 도구</b>고용24 실업급여 제도 안내(대리 신청 금지)와 고용보험 홈페이지 실업인정 인터넷 신청 매뉴얼(온라인 신청 대상, 17:00 마감, 전산장애 시 방문)을 확인했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/round-1/"><b>다음 질문</b>1차 실업인정일에 하는 일</a><a href="/unemployment/round-4/"><b>다음 질문</b>4차 실업인정일 무엇이 다른가요</a><a href="/unemployment/payday/"><b>다음 질문</b>실업급여 지급일 확인하기</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -170,7 +170,7 @@ export const landing = {
     "line2": "언제 몇 번 가나요",
     "sub1": "1차·4차는 방문, 나머지는 온라인이에요",
     "sub2": "불참하면 그 기간 전체가 안 나와요",
-    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-08 검증",
+    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "첫인정일",
       "big": "14",
@@ -180,7 +180,7 @@ export const landing = {
     },
     "alt": "실업급여 첫인정일 14일, 방문은 1차·4차 나머지는 온라인"
   },
-  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-08",
+  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 5,
   "quick": [

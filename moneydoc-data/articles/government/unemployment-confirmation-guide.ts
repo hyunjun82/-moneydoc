@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 이직확인서 발급 요청과 정정 방법",
   description: "이직확인서에는 이직 사유와 피보험단위기간, 평균임금, 1일 소정근로시간이 적혀요. 하나만 틀려도 수급자격이나 금액이 달라져요. 발급 요청과 정정 방법을 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-confirmation-guide/",
   image: "https://moneydoc.kr/og/unemployment-confirmation-guide.png",
   imageAlt: "실업급여 이직확인서 발급 요청과 정정 방법",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-confirmation-guide";
 
 export const html = `<h1>실업급여 이직확인서 발급 요청과 정정 방법</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 이직확인서 규정과 고용24 안내 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 이직확인서 규정과 고용24 안내 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-confirmation-guide.png" width="1200" height="630" alt="실업급여 이직확인서 발급 요청과 정정 방법">
 <p class="v2-lead v2-intro">실업급여 심사는 회사가 낸 이직확인서에서 시작해요. 여기에 적히는 게 네 가지인데, 이직 사유는 수급자격을 가르고 피보험단위기간은 조건 충족을, 평균임금과 1일 소정근로시간은 금액을 정해요. 그래서 하나만 잘못 적혀도 결과가 크게 달라져요. 발급을 어떻게 요청하는지, 틀렸을 때 어떻게 고치는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -106,7 +106,7 @@ export const html = `<h1>실업급여 이직확인서 발급 요청과 정정 �
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제42조(실업의 신고와 이직확인서 발급 요청), 제43조(수급자격의 인정과 이직확인서 제출 요청), 제45조(급여의 기초가 되는 임금일액), 제118조(과태료).
-<b>정부 도구</b>고용24의 이직확인서 작성 안내에서 기재 항목과 산정 방법을 대조했어요 (2026-09-04 확인).
+<b>정부 도구</b>고용24의 이직확인서 작성 안내에서 기재 항목과 산정 방법을 대조했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/exit-code/"><b>다음 질문</b>실업급여 이직코드 종류와 뜻, 23번 32번은 무슨 사유인가요</a><a href="/unemployment/180days/"><b>다음 질문</b>실업급여 180일 계산법, 주 며칠 일해야 채워지나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -185,7 +185,7 @@ export const landing = {
     "line2": "발급 요청과 정정",
     "sub1": "이직 사유와 단위기간, 평균임금이 여기에 적혀요",
     "sub2": "하나만 틀려도 수급자격이나 금액이 달라져요",
-    "foot": "고용보험법 이직확인서 규정과 고용24 안내 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 이직확인서 규정과 고용24 안내 대조 · 2026-09-09 검증",
     "card": {
       "label": "적히는 항목",
       "big": "4",
@@ -195,7 +195,7 @@ export const landing = {
     },
     "alt": "실업급여 이직확인서 발급 요청과 정정 방법"
   },
-  "badge": "고용보험법 이직확인서 규정과 고용24 안내 대조 · 2026-09-04",
+  "badge": "고용보험법 이직확인서 규정과 고용24 안내 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

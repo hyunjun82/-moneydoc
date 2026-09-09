@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 수급자격, 4가지 조건과 이직 사유 기준",
   description: "실업급여 수급자격은 고용보험법이 정한 4가지 조건을 모두 채워야 해요. 180일 이상 가입, 취업하지 못한 상태, 이직 사유가 제한 사유가 아닐 것, 재취업 노력이에요. 일용근로자는 2가지가 더 붙어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-eligibility-guide/",
   image: "https://moneydoc.kr/og/unemployment-eligibility-guide.png",
   imageAlt: "실업급여 수급자격 4가지 조건. 180일, 미취업 상태, 이직 사유, 재취업 노력",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-eligibility-guide";
 
 export const html = `<h1>실업급여 수급자격, 4가지 조건과 이직 사유 기준</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 수급 요건 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 수급 요건 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-eligibility-guide.png" width="1200" height="630" alt="실업급여 수급자격 4가지 조건. 180일, 미취업 상태, 이직 사유, 재취업 노력">
 <p class="v2-lead v2-intro">실업급여를 받으려면 회사를 그만둔 것만으로는 안 돼요. 고용보험법 제40조가 정한 조건을 모두 채워야 해요. 일반 근로자에게 붙는 조건은 네 가지고, 마지막에 일용근로자로 일했다면 두 가지가 더 붙어요. 인터넷에는 다섯 가지라고 적힌 곳이 많은데, 그건 일용근로자에게만 해당하는 항목을 섞어 센 거예요. 네 가지가 각각 무엇인지, 어디서 자주 막히는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -131,7 +131,7 @@ export const html = `<h1>실업급여 수급자격, 4가지 조건과 이직 사
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제40조(구직급여의 수급 요건과 기준기간), 제41조(피보험 단위기간), 제43조(수급자격의 인정), 제58조(이직 사유에 따른 수급자격의 제한), 제60조(훈련 거부 등에 따른 급여의 지급 제한).
-<b>정부 도구</b>고용보험 홈페이지에서 본인의 피보험 단위기간을 확인할 수 있어요 (2026-09-04 확인).
+<b>정부 도구</b>고용보험 홈페이지에서 본인의 피보험 단위기간을 확인할 수 있어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/180days/"><b>다음 질문</b>실업급여 180일 계산법, 주 며칠 일해야 채워지나요</a><a href="/unemployment/voluntary/"><b>다음 질문</b>자발적 퇴사 실업급여 인정 사유와 증빙 서류 총정리</a><a href="/unemployment/days/"><b>다음 질문</b>실업급여 소정급여일수 표, 나이와 가입기간별 며칠 받나</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -202,7 +202,7 @@ export const landing = {
     "line2": "나는 되나요",
     "sub1": "고용보험법이 정한 4가지를 모두 채워야 해요",
     "sub2": "하나라도 빠지면 다른 조건이 아무리 좋아도 안 돼요",
-    "foot": "고용보험법 수급 요건 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 수급 요건 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "채워야 하는 조건",
       "big": "4",
@@ -216,7 +216,7 @@ export const landing = {
     "href": "/unemployment/calculator/",
     "label": "조건이 되면 얼마인지 계산해 보기"
   },
-  "badge": "고용보험법 수급 요건 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 수급 요건 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

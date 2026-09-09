@@ -4,7 +4,7 @@ export const meta = {
   title: "1주택 양도세 비과세 요건과 계산, 2년 보유부터 12억 초과분까지",
   description: "2년 이상 보유한 1주택을 12억원 이하로 팔면 양도세가 없어요. 15억원에 팔면 초과분에만 세금이 붙어 2,821,500원이에요. 비과세 요건, 12억 초과분 계산, 장기보유특별공제, 신고 기한을 정리했어요.",
   datePublished: "2026-09-03",
-  dateModified: "2026-09-03",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/realestate/transfer-tax-guide/",
   image: "https://moneydoc.kr/og/transfer-tax-guide.png",
   imageAlt: "1주택 양도세 비과세 요건. 2년 이상 보유한 집을 12억원 이하로 팔면 세금이 없어요",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "transfer-tax-guide";
 
 export const html = `<h1>1주택 양도세 비과세 요건과 계산, 2년 보유부터 12억 초과분까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">소득세법 비과세 요건과 세율표 대조 · 2026-09-03</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">소득세법 비과세 요건과 세율표 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/transfer-tax-guide.png" width="1200" height="630" alt="1주택 양도세 비과세 요건. 2년 이상 보유한 집을 12억원 이하로 팔면 세금이 없어요">
 <p class="v2-lead v2-intro">집 한 채를 2년 이상 갖고 있다가 12억원 이하로 팔면 양도세를 내지 않아요. 5억원에 사서 10억원에 팔아 500,000,000원을 벌어도 세금이 0원이에요. 12억원을 넘겨 팔면 그 넘는 부분에만 세금이 붙어요. 8억원에 사서 15억원에 팔았고 10년 살았다면 2,821,500원이에요. 비과세 요건, 12억 초과분 계산, 장기보유특별공제, 신고 기한을 차례대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -149,7 +149,7 @@ export const html = `<h1>1주택 양도세 비과세 요건과 계산, 2년 보�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>소득세법 제89조(비과세 양도소득, 12억원 초과 고가주택 제외), 제95조(장기보유 특별공제), 제103조(양도소득 기본공제 연 250만원), 제104조(양도소득세의 세율), 제105조(예정신고, 양도일이 속하는 달의 말일부터 2개월). 소득세법 시행령 제154조(1세대1주택의 범위, 보유 2년과 조정대상지역 거주 2년), 제155조(일시적 2주택 3년), 제159조의3(1주택 장기보유특별공제), 제160조(고가주택 양도차익 안분).
-<b>정부 도구</b>홈택스 양도소득세 신고 화면의 세율표와 이 글의 계산이 같은 값이에요 (2026-09-03 대조).
+<b>정부 도구</b>홈택스 양도소득세 신고 화면의 세율표와 이 글의 계산이 같은 값이에요 (2026-09-09 대조).
 </div>
 <div class="v2-rel"><a href="/transfer-tax/"><b>계산기</b>양도소득세 계산기</a><a href="/acquisition-tax/"><b>부동산 계산기</b>취득세 계산기</a><a href="/acquisition-tax/"><b>부동산 가이드</b>집 살 때 취득세 세율과 계산</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -228,7 +228,7 @@ export const landing = {
     "line2": "내 세금 얼마",
     "sub1": "2년 이상 보유 + 12억원 이하 → 세금 0원",
     "sub2": "15억에 팔면 초과분만 과세해 2,821,500원",
-    "foot": "소득세법 비과세 요건과 세율표 대조 · 2026-09-03 검증",
+    "foot": "소득세법 비과세 요건과 세율표 대조 · 2026-09-09 검증",
     "card": {
       "label": "양도세",
       "big": "0",
@@ -242,7 +242,7 @@ export const landing = {
     "href": "/transfer-tax/calculator/",
     "label": "양도소득세 계산기 바로가기"
   },
-  "badge": "소득세법 비과세 요건과 세율표 대조 · 2026-09-03",
+  "badge": "소득세법 비과세 요건과 세율표 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 8,
   "quick": [

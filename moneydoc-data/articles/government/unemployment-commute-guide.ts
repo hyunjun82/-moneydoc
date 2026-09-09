@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 통근곤란, 왕복 몇 시간이면 인정되나요",
   description: "통근 곤란은 정당한 이직 사유예요. 통상의 교통수단으로 사업장 왕복에 3시간 이상 걸리게 됐을 때를 말해요. 어떤 사정이 인정되고 무엇으로 증명하는지 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-commute-guide/",
   image: "https://moneydoc.kr/og/unemployment-commute-guide.png",
   imageAlt: "통근 곤란 퇴사 실업급여 조건과 왕복 3시간 기준",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-commute-guide";
 
 export const html = `<h1>실업급여 통근곤란, 왕복 몇 시간이면 인정되나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 시행규칙 별표2 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 시행규칙 별표2 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-commute-guide.png" width="1200" height="630" alt="통근 곤란 퇴사 실업급여 조건과 왕복 3시간 기준">
 <p class="v2-lead v2-intro">회사가 멀어져서 그만두는 경우가 있어요. 이때도 실업급여를 받을 수 있어요. 시행규칙이 통근 곤란을 정당한 이직 사유로 정해 두었거든요. 다만 기준이 분명해요. 통상의 교통수단으로 사업장 왕복에 드는 시간이 3시간 이상이어야 하고, 그렇게 된 사정이 정해진 경우여야 해요. 무엇이 인정되는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -102,7 +102,7 @@ export const html = `<h1>실업급여 통근곤란, 왕복 몇 시간이면 인�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제40조(구직급여의 수급 요건), 제58조(이직 사유에 따른 수급자격의 제한), 고용보험법 시행규칙 제101조제2항 및 별표 2(정당한 이직 사유).
-<b>정부 도구</b>법제처 생활법령의 정당한 이직 사유 목록에서 통근 곤란 기준을 대조했어요 (2026-09-04 확인).
+<b>정부 도구</b>법제처 생활법령의 정당한 이직 사유 목록에서 통근 곤란 기준을 대조했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/voluntary/"><b>다음 질문</b>자발적 퇴사 실업급여 인정 사유와 증빙 서류 총정리</a><a href="/unemployment/confirmation/"><b>다음 질문</b>실업급여 이직확인서 발급 요청과 정정 방법</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -189,7 +189,7 @@ export const landing = {
     "line2": "왕복 몇 시간이면 되나요",
     "sub1": "통상의 교통수단으로 왕복에 3시간 이상 걸리면 통근 곤란이에요",
     "sub2": "사업장 이전이나 전근, 가족과 동거를 위한 이사가 사유가 돼요",
-    "foot": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-04 검증",
+    "foot": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "통근 곤란 기준",
       "big": "3",
@@ -199,7 +199,7 @@ export const landing = {
     },
     "alt": "통근 곤란 퇴사 실업급여 조건과 왕복 3시간 기준"
   },
-  "badge": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-04",
+  "badge": "고용보험법 시행규칙 별표2 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

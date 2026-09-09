@@ -4,7 +4,7 @@ export const meta = {
   title: "적금 이자 계산과 세금, 단리 복리부터 만기 실수령액까지",
   description: "월 50만원을 24개월 동안 연 4% 적금에 넣으면 이자가 513,015원, 세금을 뗀 만기 실수령액은 12,434,011원이에요. 단리와 복리 차이, 이자소득세, 비과세 조건을 정리했어요.",
   datePublished: "2026-09-03",
-  dateModified: "2026-09-03",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/savings/installment-savings-guide/",
   image: "https://moneydoc.kr/og/installment-savings-guide.png",
   imageAlt: "적금 이자 계산. 월 50만원을 24개월 넣으면 만기에 12,434,011원",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "installment-savings-guide";
 
 export const html = `<h1>적금 이자 계산과 세금, 단리 복리부터 만기 실수령액까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">이자소득세 15.4% 원천징수 기준 반영 · 2026-09-03</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">이자소득세 15.4% 원천징수 기준 반영 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/installment-savings-guide.png" width="1200" height="630" alt="적금 이자 계산. 월 50만원을 24개월 넣으면 만기에 12,434,011원">
 <p class="v2-lead v2-intro">적금은 매달 넣는 돈이라서 마지막 달에 넣은 돈에는 한 달치 이자만 붙어요. 그래서 연 4%짜리 적금이어도 원금 대비 실제 수익률은 그보다 낮아요. 월 50만원씩 24개월을 연 4%로 넣으면 원금 12,000,000원에 이자 513,015원이 붙고, 세금 79,004원을 뗀 12,434,011원을 받아요. 이자가 어떻게 붙는지, 단리와 복리는 얼마나 차이 나는지, 세금은 얼마인지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -156,7 +156,7 @@ export const html = `<h1>적금 이자 계산과 세금, 단리 복리부터 만
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>소득세법 제16조(이자소득), 제129조(원천징수세율, 그 밖의 이자소득 100분의 14). 지방세법(이자소득에 대한 개인지방소득세 특별징수). 조세특례제한법(비과세종합저축과 개인종합자산관리계좌 과세특례).
-<b>정부 도구</b>금융감독원 금융상품통합비교공시의 적금 이자 계산 방식과 같은 구조예요 (2026-09-03 대조).
+<b>정부 도구</b>금융감독원 금융상품통합비교공시의 적금 이자 계산 방식과 같은 구조예요 (2026-09-09 대조).
 </div>
 <div class="v2-rel"><a href="/installment/"><b>계산기</b>적금 이자 계산기</a><a href="/deposit/"><b>저축 계산기</b>예금 이자 계산기</a><a href="/free-savings/"><b>저축 계산기</b>자유적금 계산기</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -235,7 +235,7 @@ export const landing = {
     "line2": "만기에 얼마 받나",
     "sub1": "월 50만원 · 24개월 · 연 4% → 12,434,011원",
     "sub2": "이자 513,015원에서 세금 79,004원을 떼요",
-    "foot": "이자소득세 15.4% 원천징수 기준 반영 · 2026-09-03 검증",
+    "foot": "이자소득세 15.4% 원천징수 기준 반영 · 2026-09-09 검증",
     "card": {
       "label": "만기 실수령액",
       "big": "12,434,011",
@@ -249,7 +249,7 @@ export const landing = {
     "href": "/installment/calculator/",
     "label": "적금 이자 계산기 바로가기"
   },
-  "badge": "이자소득세 15.4% 원천징수 기준 반영 · 2026-09-03",
+  "badge": "이자소득세 15.4% 원천징수 기준 반영 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

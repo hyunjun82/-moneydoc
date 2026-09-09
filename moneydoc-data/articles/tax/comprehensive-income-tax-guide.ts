@@ -4,7 +4,7 @@ export const meta = {
   title: "종합소득세 세율과 계산 방법, 신고 대상부터 5월 홈택스 신고까지",
   description: "종합소득금액 5,000만원이면 종합소득세는 지방소득세까지 6,539,500원이에요. 세율 구간표, 과세표준 계산 순서, 신고 대상 판정, 홈택스 신고 순서, 신고를 놓쳤을 때 가산세까지 한 번에 정리했어요.",
   datePublished: "2026-09-03",
-  dateModified: "2026-09-03",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/tax/comprehensive-income-tax-guide/",
   image: "https://moneydoc.kr/og/comprehensive-income-tax-guide.png",
   imageAlt: "종합소득세 세율과 계산 방법. 종합소득금액 5,000만원이면 세금 6,539,500원",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "comprehensive-income-tax-guide";
 
 export const html = `<h1>종합소득세 세율과 계산 방법, 신고 대상부터 5월 홈택스 신고까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">소득세법 누진세율표와 1원 단위 일치 · 2026-09-03</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">소득세법 누진세율표와 1원 단위 일치 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/comprehensive-income-tax-guide.png" width="1200" height="630" alt="종합소득세 세율과 계산 방법. 종합소득금액 5,000만원이면 세금 6,539,500원">
 <p class="v2-lead v2-intro">종합소득세는 한 해 동안 번 이자, 배당, 사업, 근로, 연금, 기타 소득을 모두 합쳐 한 번에 매기는 세금이에요. 세율은 소득이 클수록 높아지는 계단 구조라서, 소득 전체에 높은 세율이 붙는 게 아니라 구간마다 다른 세율이 붙어요. 종합소득금액 5,000만원에 부양가족이 본인 한 명이면 과세표준은 48,500,000원이고, 세금은 지방소득세까지 합쳐 6,539,500원이에요. 세율표, 계산 순서, 신고 대상, 5월 홈택스 신고 순서를 차례대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -180,7 +180,7 @@ export const html = `<h1>종합소득세 세율과 계산 방법, 신고 대상�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>소득세법 제14조(과세표준의 계산), 제50조(기본공제 1명당 연 150만원), 제55조(세율), 제59조의2(자녀세액공제), 제70조(5월 1일부터 5월 31일 확정신고), 제70조의2(성실신고확인서 제출 시 6월 30일), 제73조(확정신고의 예외). 국세기본법 제47조의2(무신고가산세), 제47조의4(납부지연가산세), 제48조(가산세 감면). 지방세법 제91조(개인지방소득세 과세표준), 제92조(세율).
-<b>정부 도구</b>홈택스 종합소득세 신고 화면의 세율표와 이 글의 계산이 같은 값이에요 (2026-09-03 대조).
+<b>정부 도구</b>홈택스 종합소득세 신고 화면의 세율표와 이 글의 계산이 같은 값이에요 (2026-09-09 대조).
 </div>
 <div class="v2-rel"><a href="/income-tax/"><b>계산기</b>종합소득세 계산기</a><a href="/freelancer/"><b>세금 계산기</b>프리랜서 3.3% 계산기</a><a href="/salary/"><b>세금 가이드</b>연봉 실수령액 계산법</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -259,7 +259,7 @@ export const landing = {
     "line2": "내 세금 얼마",
     "sub1": "종합소득금액 5,000만원 → 6,539,500원",
     "sub2": "과세표준 48,500,000원에 세율을 곱하고 누진공제를 빼요",
-    "foot": "소득세법 누진세율표 그대로 계산 · 2026-09-03 검증",
+    "foot": "소득세법 누진세율표 그대로 계산 · 2026-09-09 검증",
     "card": {
       "label": "종합소득세",
       "big": "6,539,500",
@@ -273,7 +273,7 @@ export const landing = {
     "href": "/income-tax/calculator/",
     "label": "종합소득세 계산기 바로가기"
   },
-  "badge": "소득세법 누진세율표와 1원 단위 일치 · 2026-09-03",
+  "badge": "소득세법 누진세율표와 1원 단위 일치 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 8,
   "quick": [

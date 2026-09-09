@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 구직외활동 인정 범위, 취업특강과 직업심리검사",
   description: "입사지원 말고도 인정되는 활동이 있어요. 정해진 훈련과정 수강, 고용센터 직업지도 프로그램 참여, 직업소개 지시에 응한 경우가 들어가요. 인정 범위와 안 되는 경우를 정리했어요.",
   datePublished: "2026-09-04",
-  dateModified: "2026-09-04",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-other-activity-guide/",
   image: "https://moneydoc.kr/og/unemployment-other-activity-guide.png",
   imageAlt: "실업급여 구직외활동 인정 범위와 인정되지 않는 경우",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-other-activity-guide";
 
 export const html = `<h1>실업급여 구직외활동 인정 범위, 취업특강과 직업심리검사</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-04</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-other-activity-guide.png" width="1200" height="630" alt="실업급여 구직외활동 인정 범위와 인정되지 않는 경우">
 <p class="v2-lead v2-intro">실업인정일에 신고할 활동이 꼭 입사지원이어야 하는 건 아니에요. 규정이 재취업활동으로 볼 수 있는 유형을 따로 정해 두었고, 훈련 수강이나 고용센터 프로그램 참여가 여기에 들어가요. 다만 아무 학원이나 되는 게 아니라 정해진 과정이어야 하고, 출결 관리가 되어야 해요. 어디까지 인정되는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -109,7 +109,7 @@ export const html = `<h1>실업급여 구직외활동 인정 범위, 취업특�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>고용보험법 제44조(실업의 인정), 실업인정 및 재취업지원규정 제10조(재취업활동 여부의 확인), 제12조(실업인정일의 지정), 제14조(직업능력개발훈련 등의 지시), 제15조(구직급여의 지급정지 등).
-<b>정부 도구</b>고용24 실업인정 신청 화면의 활동 유형 항목을 확인했어요 (2026-09-04 확인).
+<b>정부 도구</b>고용24 실업인정 신청 화면의 활동 유형 항목을 확인했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/job-search/"><b>다음 질문</b>실업급여 구직활동 인정 기준과 증빙 만드는 법</a><a href="/unemployment/round-4/"><b>다음 질문</b>실업급여 4차 실업인정, 회차별 인정일 간격과 심층상담</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -180,7 +180,7 @@ export const landing = {
     "line2": "어디까지 인정되나요",
     "sub1": "입사지원 말고도 인정되는 활동이 정해져 있어요",
     "sub2": "아무 학원이나 수강한다고 인정되는 건 아니에요",
-    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-04 검증",
+    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "인정되는 유형",
       "big": "8",
@@ -190,7 +190,7 @@ export const landing = {
     },
     "alt": "실업급여 구직외활동 인정 범위와 인정되지 않는 경우"
   },
-  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-04",
+  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

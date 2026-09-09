@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 세금 떼나요, 비과세 기준과 종합소득세 연말정산",
   description: "실업급여는 소득세법이 정한 비과세소득이라 세금을 떼지 않아요. 종합소득세 신고 대상에서도 빠지고 연말정산에도 들어가지 않는 이유를, 함께 비과세인 다른 고용보험 급여와 같이 정리했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
+  dateModified: "2026-09-09",
   url: "https://moneydoc.kr/government/unemployment-tax-guide/",
   image: "https://moneydoc.kr/og/unemployment-tax-guide.png",
   imageAlt: "실업급여 세금 여부. 비과세소득이라 소득세와 종합소득세 신고 대상에서 빠짐",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-tax-guide";
 
 export const html = `<h1>실업급여 세금 떼나요, 비과세 기준과 종합소득세 연말정산</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">소득세법 비과세소득 원문 대조 · 2026-09-08</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">소득세법 비과세소득 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-tax-guide.png" width="1200" height="630" alt="실업급여 세금 여부. 비과세소득이라 소득세와 종합소득세 신고 대상에서 빠짐">
 <p class="v2-lead v2-intro">실업급여 세금이 걱정될 수 있어요. 결론부터 말하면 실업급여는 소득세를 과세하지 않는 비과세소득이에요. 그런데 실업급여 비과세라는 말만으로는 종합소득세 신고까지 안 해도 되는지 헷갈리기 쉬워요. 실업급여 종합소득세 신고 여부와 실업급여 연말정산 포함 여부를 함께 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -93,7 +93,7 @@ export const html = `<h1>실업급여 세금 떼나요, 비과세 기준과 종�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>소득세법 제12조(비과세소득), 제14조(과세표준의 계산), 제20조(근로소득), 제70조(종합소득과세표준 확정신고), 제73조(과세표준확정신고의 예외).
-<b>정부 도구</b>국가법령정보센터 소득세법 원문과 대조했어요 (2026-09-08 확인).
+<b>정부 도구</b>국가법령정보센터 소득세법 원문과 대조했어요 (2026-09-09 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/total/"><b>다음 질문</b>실업급여 총 수령액은 어떻게 계산하나요</a><a href="/unemployment/freelance/"><b>다음 질문</b>프리랜서 소득이 있어도 실업급여를 받나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -156,7 +156,7 @@ export const landing = {
     "line2": "떼나요",
     "sub1": "비과세소득이라 소득세를 안 떼요",
     "sub2": "종합소득세 신고에도 넣지 않아요",
-    "foot": "소득세법 비과세소득 원문 대조 · 2026-09-08 검증",
+    "foot": "소득세법 비과세소득 원문 대조 · 2026-09-09 검증",
     "card": {
       "label": "실업급여에 붙는 세금",
       "big": "비과세",
@@ -166,7 +166,7 @@ export const landing = {
     },
     "alt": "실업급여 세금 여부. 비과세소득이라 소득세와 종합소득세 신고 대상에서 빠짐"
   },
-  "badge": "소득세법 비과세소득 원문 대조 · 2026-09-08",
+  "badge": "소득세법 비과세소득 원문 대조 · 2026-09-09",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [
