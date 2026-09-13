@@ -1,0 +1,18 @@
+{
+  "slug": "basic-pension-national-pension-guide",
+  "keyword": "기초연금 국민연금 감액 기준",
+  "calc": "government/basic-pension",
+  "reuseEvidence": "basic-pension-guide",
+  "mustInclude": [
+    "국민연금 감액 기준"
+  ],
+  "queries": [
+    "기초연금 국민연금 감액",
+    "기초연금 감액 기준",
+    "기초연금 국민연금 연계 감액",
+    "국민연금 기초연금 감액표",
+    "기초연금 국민연금 동시",
+    "기초연금 국민연금 중복 수령"
+  ],
+  "sources": []
+}

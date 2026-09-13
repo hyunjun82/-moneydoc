@@ -99,7 +99,7 @@ export function proseStyleCheck({ html }) {
     for (const a of scope.matchAll(/<a\s+([^>]*)>([\s\S]*?)<\/a>/g)) {
       const attrs = a[1];
       if (/href="#/.test(attrs)) continue;                          // 목차·앵커
-      if (/class="[^"]*\b(go|doc|btn|calc)\b/.test(attrs)) continue;
+      if (/class="[^"]*\b(go|doc|btn|calc|cta)\b/.test(attrs)) continue;   // cta = render.mjs 의 계산기 버튼 (09-05 이후 글에 처음 달려 오탐으로 드러남, 2026-09-13)
       out.push(`버튼 클래스 없는 링크: [${strip(a[2]).slice(0, 30)}] ${(attrs.match(/href="([^"]+)"/) ?? ['', ''])[1]}`);
     }
   }

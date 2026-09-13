@@ -4,12 +4,12 @@ import { TILES } from "./CategoryTiles";
 /* 홈 인기글: 검색 유입 상위 가이드 6편. 목록은 articles/index.ts (자동 생성) 에서 가져온다 */
 
 const TOP: string[] = [
-  "/unemployment/",
+  "/unemployment/guide/",
   "/salary/",
-  "/severance/",
+  "/severance/guide/",
   "/four-insurance/",
-  "/transfer-tax/",
-  "/basic-pension/",
+  "/transfer-tax/guide/",
+  "/basic-pension/guide/",
 ];
 
 export function PopularGuides() {

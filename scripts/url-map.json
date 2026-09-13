@@ -73,6 +73,15 @@
   "_계산기없는허브": {
     "tax/part-time-insurance-guide": "four-insurance/part-time",
     "law/severance-claim-form-guide": "severance/claim",
+    "law/severance-pay-guide": "severance/guide",
+    "law/severance-one-year-guide": "severance/one-year",
+    "law/severance-tax-guide": "severance/tax",
+    "realestate/transfer-tax-guide": "transfer-tax/guide",
+    "realestate/transfer-tax-expense-guide": "transfer-tax/expense",
+    "realestate/transfer-tax-long-term-deduction-guide": "transfer-tax/long-term-deduction",
+    "government/basic-pension-guide": "basic-pension/guide",
+    "government/basic-pension-national-pension-guide": "basic-pension/national-pension",
+    "government/basic-pension-couple-guide": "basic-pension/couple",
     "law/certified-mail-guide": "certified-mail",
     "law/deposit-return-suit-guide": "deposit-return",
     "law/personal-rehabilitation-guide": "rehabilitation",
@@ -137,6 +146,7 @@
     "government/unemployment-overseas-guide": "unemployment/overseas",
     "government/unemployment-fraud-report-guide": "unemployment/fraud-report",
     "government/unemployment-platform-guide": "unemployment/platform",
-    "government/unemployment-eitc-guide": "unemployment/eitc"
+    "government/unemployment-eitc-guide": "unemployment/eitc",
+    "government/unemployment-benefit-guide": "unemployment/guide"
   }
 }

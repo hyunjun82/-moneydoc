@@ -12,6 +12,9 @@
  *   4 허브 파악  moneydoc.kr/<hub>/ 본문 + 이웃 글 소제목 전부                (Playwright)
  *   5 작성       claude -p 가 근거·캡처·허브·예시 스펙을 읽고 articles/<slug>.mjs 를 낸다
  *   6 대조·발행  build.mjs  → 숫자·조문이 근거 JSON·엔진 값에 없으면 FAIL → FAIL 목록을 claude -p 에 넣어 고침 (rounds 회)
+ *
+ * 여기서 끝이 아니다. 적대 검토(REVIEW.md)와 write-review.mjs 는 이 스크립트가 하지 않는다. 안 하면 gate.mjs 가 FAIL 이라 커밋이 막힌다.
+ * 실측 2026-09-13: 이 배치로 낸 21편이 검토 기록 없이 .claude/skip-gate 로 커밋·푸시돼, 이후 모든 글 커밋이 막혔다.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -372,6 +375,7 @@ for (let round = 1; round <= ROUNDS; round++) {
     if (!p.ok) { console.error(`발행(convert-v2) 실패:\n${p.out.slice(-2000)}`); process.exit(1); }
     log(`OK 대조 통과 · 죽은 링크 0 · 발행 완료 (${round}회) · 작성~발행 ${((Date.now() - tWrite) / 1000).toFixed(0)}s · 총 $${cost.toFixed(2)}`);
     console.log(`\n미리보기  public/_preview/article-v2-${slug}.html\n페이지    ${p.made.map((x) => path.relative(ROOT, x)).join(' ')}\n썸네일    public/og/${slug}.png\n스펙      scripts/article-template/articles/${slug}.mjs`);
+    console.log(`\n[아직 커밋 못 함] 적대 검토(REVIEW.md, 글 안 쓴 검토자) → node scripts/write-review.mjs ${hub} ${spoke} ... → node scripts/gate.mjs ${hub}\n  skip-gate 로 넘기면 검토 기록 빈 글이 쌓여 뒤 커밋이 전부 막힌다 (2026-09-13 21편)`);
     process.exit(0);
   }
   log(`FAIL ${fails.length}건`);

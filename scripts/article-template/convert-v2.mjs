@@ -153,10 +153,20 @@ const URLMAP = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/url-map.json'
 const HUBMAP = Object.fromEntries(Object.entries(URLMAP).filter(([k]) => !k.startsWith('_')));
 const NOCALC = URLMAP['_계산기없는허브'] ?? {};
 const NL = String.fromCharCode(10);
+// 허브 원페이지 데이터(titles.*-v2.json · hub.*.json)의 route → keyword. gen-hub-index.mjs 와 같은 파일을 읽는다
+const PLAN_DIR = path.join(ROOT, 'scripts/title-system');
+const HUB_LABEL = Object.fromEntries(fs.readdirSync(PLAN_DIR)
+  .filter((f) => /^(titles\..+-v2|hub\..+)\.json$/.test(f))
+  .map((f) => JSON.parse(fs.readFileSync(path.join(PLAN_DIR, f), 'utf8')))
+  .filter((p) => p.hub?.route && p.keyword)
+  .map((p) => [p.hub.route.replace(/\//g, ''), p.keyword]));
 
 /** 글 슬러그 → 허브 라우트. 계산기가 있으면 그 컴포넌트 파일명도 같이 돌려준다 */
 function hubRoute(a) {
   const base = a.slug.replace(/-guide$/, '');
+  // 글 슬러그로 등록된 주소가 먼저다. 총정리 글이 허브 자리에서 /guide/ 로 내려갔는데 계산기 매핑을 먼저 보면
+  // 이 글이 app/{허브}/page.tsx 를 글 템플릿으로 덮어써 허브 원페이지가 사라진다 (2026-09-13 발견)
+  if (NOCALC[a.cat + '/' + a.slug]) return { route: NOCALC[a.cat + '/' + a.slug], client: null };
   const hub = HUBMAP[a.cat + '/' + base];
   if (hub) {
     const dir = path.join(ROOT, 'app', hub);
@@ -176,7 +186,8 @@ function crumbOf(a, route) {
   if (seg.length === 1) return { hubHref: null, hubLabel: null, crumb: a.crumb };
   const hubSlug = seg[0];
   const hubArticle = LIST.find((x) => hubRoute(x).route === hubSlug);
-  const hubLabel = hubArticle ? hubArticle.crumb : hubSlug;
+  // 허브 자리에 글이 없으면(허브 원페이지) 허브 데이터의 keyword 가 이름이다. 없으면 영문 슬러그가 빵부스러기에 찍힌다
+  const hubLabel = HUB_LABEL[hubSlug] ?? (hubArticle ? hubArticle.crumb : hubSlug);
   // 스포크 이름 앞의 허브 이름을 뗀다. "실업급여 › 실업급여 수급자격" 처럼 겹치지 않게
   const crumb = a.crumb.startsWith(hubLabel + ' ') ? a.crumb.slice(hubLabel.length + 1) : a.crumb;
   return { hubHref: '/' + hubSlug + '/', hubLabel, crumb };

@@ -1,0 +1,20 @@
+{
+  "slug": "transfer-tax-long-term-deduction-guide",
+  "keyword": "양도세 장기보유특별공제율",
+  "calc": "realestate/transfer-tax",
+  "reuseEvidence": "transfer-tax-guide",
+  "mustInclude": [
+    "장기보유특별공제율",
+    "2주택",
+    "한도"
+  ],
+  "queries": [
+    "양도세 장기보유특별공제율",
+    "양도세 장기보유특별공제 2주택",
+    "양도세 장기보유특별공제 조건",
+    "양도세 장기보유특별공제 한도",
+    "1세대 1주택 양도세 장기보유",
+    "양도세 2년 거주"
+  ],
+  "sources": []
+}

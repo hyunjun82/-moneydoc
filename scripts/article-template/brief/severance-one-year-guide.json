@@ -1,0 +1,23 @@
+{
+  "slug": "severance-one-year-guide",
+  "keyword": "퇴직금 1년 미만",
+  "calc": "law/severance-pay",
+  "reuseEvidence": "severance-pay-guide",
+  "mustInclude": [
+    "1년 미만",
+    "1년 기준 날짜",
+    "1년 6개월"
+  ],
+  "queries": [
+    "퇴직금 1년 미만",
+    "퇴직금 11개월",
+    "퇴직금 11개월 15일",
+    "퇴직금 1년 기준 날짜",
+    "퇴직금 1년 기준 근무일수",
+    "1년 6개월 퇴직금 계산",
+    "1년 퇴직금 금액",
+    "알바 퇴직금 기준",
+    "퇴직금 주 15시간"
+  ],
+  "sources": []
+}

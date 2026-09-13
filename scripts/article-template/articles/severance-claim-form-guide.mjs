@@ -33,7 +33,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     v, order: derive(stampOrderOnline(v)), suit: derive(stampSuitOnline(v)), paper: derive(stampSuit(v)),
   }));
   const COURT = 'https://ecfs.scourt.go.kr';
-  const FORM = 'https://help.scourt.go.kr/nm/min_1/min_1_7/index.html';
+  const FORM = 'https://www.scourt.go.kr/nm/minwon/doc/DocListAction.work';   // 대법원 전자민원센터 양식모음. help.scourt.go.kr 도메인이 조회되지 않아 교체 (2026-09-13)
   const LABOR = 'https://labor.moel.go.kr/anmtDclrCntr/main.do';
 
   return {

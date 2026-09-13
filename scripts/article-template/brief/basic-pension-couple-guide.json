@@ -1,0 +1,19 @@
+{
+  "slug": "basic-pension-couple-guide",
+  "keyword": "기초연금 부부감액",
+  "calc": "government/basic-pension",
+  "reuseEvidence": "basic-pension-guide",
+  "mustInclude": [
+    "부부감액",
+    "부부 수령액"
+  ],
+  "queries": [
+    "기초연금 부부감액",
+    "기초연금 부부 수령액",
+    "기초연금 부부 각자",
+    "기초연금 금액 부부",
+    "기초연금 부부 소득인정액",
+    "부부 기초연금 감액"
+  ],
+  "sources": []
+}

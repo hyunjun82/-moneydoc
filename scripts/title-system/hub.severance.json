@@ -1,0 +1,50 @@
+{
+  "_설명": "퇴직금 허브 원페이지(/severance/) 데이터. 글 게이트 계획서는 titles.severance-v2.json(v2 절차 스포크만)이고, 이 파일은 허브 화면에 싣는 목록이다. 총정리 글(guide)과 지급명령 글(claim)은 v2 계획 이전 글이라 여기에만 있다. v2 스포크를 추가하면 여기 groups 에도 한 줄 넣는다.",
+  "keyword": "퇴직금",
+  "hub": {
+    "route": "/severance/",
+    "landing": {
+      "title": "퇴직금 계산과 지급기준, 못 받았을 때 신고까지",
+      "h1": "퇴직금, 무엇이 궁금하세요?",
+      "description": "퇴직금 계산 방법, 1년 기준 날짜, 퇴직금 세금, 못 받았을 때 지급명령까지 한 페이지에 모았어요. 검색하거나 묶음에서 바로 찾아요.",
+      "guideRoute": "/severance/guide/",
+      "guideFile": "severance-pay-guide",
+      "popularSource": "구글 연관검색어(2026-09-01, titles.severance-pay.json researchSources.google_related) 순서 그대로 6개 + 네이버 자동완성(2026-09-13, keyword-data/terms.severance.json) 2개. '퇴직금 계산기 네이버' 는 포털 이름이라 뺐다",
+      "popular": [
+        { "term": "1년 퇴직금 계산", "slug": "one-year" },
+        { "term": "퇴직금 간단 계산", "href": "/severance/calculator/" },
+        { "term": "2년 퇴직금 계산", "slug": "guide" },
+        { "term": "3년 퇴직금 계산", "slug": "guide" },
+        { "term": "5년 퇴직금 계산", "slug": "guide" },
+        { "term": "퇴직금 계산 세전 세후", "slug": "tax" },
+        { "term": "퇴직금 1년 미만", "slug": "one-year" },
+        { "term": "퇴직금 세금 몇프로", "slug": "tax" }
+      ]
+    }
+  },
+  "calculator": { "route": "/severance/calculator/" },
+  "groups": [
+    {
+      "group": "A 계산·지급기준",
+      "hubIntro": "퇴직금은 1년을 채워야 생기고, 평균임금 기준이라 상여금과 연차수당까지 들어가요. 월급 300만원으로 5년 일하면 14,673,913원이에요. 계산 순서와 1년 기준 날짜, 14일 지급기한을 봐요.",
+      "spokes": [
+        { "slug": "guide", "file": "severance-pay-guide", "route": "/severance/guide/" },
+        { "slug": "one-year" }
+      ]
+    },
+    {
+      "group": "B 세금",
+      "hubIntro": "퇴직금 세금은 근속연수공제와 환산급여공제를 거쳐 계산해서 퇴직금 전체에 세율을 바로 곱하지 않아요. 몇프로인지, 세전 세후 차이와 원천징수를 봐요.",
+      "spokes": [
+        { "slug": "tax" }
+      ]
+    },
+    {
+      "group": "C 못 받았을 때",
+      "hubIntro": "퇴직금을 못 받았다면 지급명령이나 소송으로 받을 수 있어요. 지급명령 인지대는 전자소송 기준 6,300원이에요. 양식과 내는 법원을 봐요.",
+      "spokes": [
+        { "slug": "claim", "file": "severance-claim-form-guide", "route": "/severance/claim/" }
+      ]
+    }
+  ]
+}

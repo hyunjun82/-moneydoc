@@ -8777,6 +8777,3206 @@
       "spoke": "changes-2026",
       "src": "네이버 자동완성 실측",
       "collected": "2026-09-05"
+    },
+    {
+      "word": "1년 6개월",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1년 6개월 근무 퇴직금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1년 6개월 며칠",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1년 6개월 연차",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1년 6개월 육휴",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1년 6개월 일수",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1년 6개월 퇴직금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1년 6개월 퇴직금 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1년 미만 병가",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1년 미만 사업자 대출",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1년 미만 연차 소멸",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1년 미만 월차",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1년 미만 이직",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1년 미만 퇴사",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1년 미만 퇴직금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1년 미만 퇴직금 지급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "렌트카 면허 1년 미만",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "육아휴직 1년 6개월",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "입사 1년 미만 연차",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "퇴직금 1년 6개월",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "퇴직금 1년 6개월 2년 차이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "퇴직금 1년 6개월 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "퇴직금 1년 기준 날짜",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "퇴직금 1년 미만",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "퇴직금 1년 미만 근무",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "퇴직금 1년 미만 지급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "퇴직금 1년 미만 지급기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "퇴직금 1년미만 받는법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "퇴직금 1년미만 지급 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "one-year",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "4대보험 세금 몇프로",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "로또 2등 세금 몇프로",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "로또 당첨금 세금 몇프로",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "로또복권 세금 몇프로",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "세금 몇프로",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "세전 세후 차이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "직장인 세금 몇프로",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "퇴직금 세금 몇프로",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "퇴직금 세금 몇프로 공제하나요",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "퇴직금 세금 몇프로 떼나요",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "퇴직금 세전 세후 차이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "부동산중개수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "상가 중개수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "신생아 취득세 감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "아파트 중개수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "아파트 취득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 중개수수료 증빙",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 취득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 취득세 공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 취득세 차이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 필요경비 인정 항목",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "원룸 중개수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "월세 중개수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "자동차 취득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "전세 중개수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "중개수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "중개수수료 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "중개수수료 협의",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "중개수수료율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "취득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "취득세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "취득세 무이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "취득세 카드납부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "취득세 할부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "취득세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "필요경비 인정 항목",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "expense",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1가구 2주택",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1가구 2주택 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1가구 2주택 세금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "2주택",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "2주택 대출",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "2주택 보유세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "2주택 양도세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "2주택 취득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "2주택자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "공동명의 2주택",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "금 한돈",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "금 한돈 g",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "금한돈시세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 2주택 비과세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 2주택계산방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 장기보유특별공제율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 한도 10억",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 한도 설정",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "장기보유특별공제율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "장기보유특별공제율 1주택",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "장기보유특별공제율 2주택",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "장기보유특별공제율 개정",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "장기보유특별공제율 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "장기보유특별공제율 다주택자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "장기보유특별공제율 변경",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "장기보유특별공제율 표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "한독",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "한돈",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "한돈가",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "한동근",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "한동대",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "한동훈",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "한동희",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "long-term-deduction",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "국민연금 감액 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national-pension",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "국민연금 감액 기준 소득",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national-pension",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "국민연금 감액 기준 소득금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national-pension",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "국민연금 감액기준 근로소득",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national-pension",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "국민연금 감액기준 금융소득",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national-pension",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "국민연금 감액기준 부부합산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national-pension",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "국민연금 감액기준 사업소득",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national-pension",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "국민연금 감액기준 월소득",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national-pension",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "국민연금 감액기준 임대소득",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national-pension",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "국민연금 감액기준표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national-pension",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 부부 수령액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "couple",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 부부감액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "couple",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 부부감액 완화",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "couple",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 부부감액 폐지 시기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "couple",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 부부감액 폐지 언제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "couple",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 부부감액기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "couple",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금부부감액 축소",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "couple",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "부부감액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "couple",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "부부감액제도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "couple",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1가구 1주택 양도세 비과세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1가구 1주택 양도세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1세대 1주택 양도세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1세대 1주택 양도세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1세대 1주택 양도세 면제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1세대 1주택 양도세 비과세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1세대 1주택 양도세 비과세 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1세대 1주택 양도세 비과세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1세대 1주택 양도세 비과세 요건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1세대 1주택 양도세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1세대 1주택 양도세 장기보유",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1세대1주택 양도세 계산방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1주택 양도세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1주택 양도세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1주택 양도세 비과세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "1주택 양도세 비과세 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "국세청 양도세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "네이버 양도세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "부동산 양도세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "부동산 양도세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "부동산 양도세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "부동산 양도세 신고 서류",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "부동산 양도세 신고기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "부동산 양도세 신고방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "분양권 양도세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "분양권 양도세 2년",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "분양권 양도세 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "분양권 양도세 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "분양권 양도세 셀프신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "분양권 양도세 시점",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "분양권 양도세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "분양권 양도세 신고 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "분양권 양도세 중과",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "분양권 양도세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "비사업용토지 양도세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "사업용토지 양도세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "상속받은 토지 양도세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "상속주택 양도세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "상속주택 양도세 5년",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "상속주택 양도세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "상속주택 양도세 비과세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "상속주택 양도세 비과세 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "상속주택 양도세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "상속주택 양도세 신고방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "상속주택 양도세 중과 배제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "상속주택 양도세 특례",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "상속주택 양도세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "아파트 양도세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "아파트 양도세 비과세 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "아파트 양도세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "아파트 양도세 신고기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 12억",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 12억 공동명의",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 12억 공시지가",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 12억 공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 12억 기본공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 12억 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 12억 비과세 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 12억 이하",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 12억 초과",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 12억 초과분",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 2년",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 2년 거주",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 2년 거주 요건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 2년 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 2년 미만",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 2년 보유",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 2년이상",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 가산세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 가산세 감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 가산세 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 가산세 면제방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 개편",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 계산법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 기본세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 부부공동명의",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 비과세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 비과세 12억",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 비과세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 비과세 신고 안해도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 비과세 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 비과세 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 세율 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 세율 구간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 세율 누진공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 세율 표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 신고 기간 경과",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 신고기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 신고기간 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 신고기한",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 신고방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 예정신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 예정신고 가산세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 예정신고 기한",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 예정신고 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 예정신고 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 예정신고 확정신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 예정신고 확정신고 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 일시적 2주택",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 장기보유특별공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 장기보유특별공제 2주택",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 장기보유특별공제 개정",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 장기보유특별공제 개정안",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 장기보유특별공제 국회청원",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 장기보유특별공제 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 장기보유특별공제 축소",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 장기보유특별공제 폐지",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 장기보유특별공제 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 필요경비",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 필요경비 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 필요경비 공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 필요경비 부가세포함",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 필요경비 서류",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 필요경비 중개수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 필요경비 증빙",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 필요경비 취득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세 필요경비 항목",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세신고 기간 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도소득세 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도소득세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도소득세 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도소득세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도소득세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "양도소득세 신고방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "주식 양도소득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "토지 양도세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "토지 양도세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "토지 양도세 계산기 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "토지 양도세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "토지 양도세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "토지 양도세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "토지 양도세율 표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "해외주식 양도소득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "홈택스 양도세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "2026년 기초연금 금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "2026년 기초연금 수급자격",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "2027 기초연금 금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "26년 기초연금 금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "27년 기초연금 금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "27년도 기초연금 금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "65세 기초연금 금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "65세이상 기초연금 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "국민연금 기초연금 감액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "국민연금 기초연금 감액표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "국민연금과 기초연금 감액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초수급자 기초연금 감액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 2026년 금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 2026년 인상",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 감액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 감액 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 감액 기준표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 감액 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 감액표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 계산 공식",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 계산 국민연금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 계산 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 계산 하는법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 계산기 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 계산법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 계산시 국민연금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 국민연금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 국민연금 감액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 국민연금 감액 폐지",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 국민연금 동시",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 국민연금 소득",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 국민연금 연계 감액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 국민연금 중복",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 국민연금 중복 수령",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 국민연금 차이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 국민연금공단",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 근로소득",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 근로소득인정액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 금액 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 금액 부부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 나이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 노령연금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 모의계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 부부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 부부 각자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 부부 소득인정액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 부부 수급자격",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 부부가구",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 부부가구 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 부부합산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 선정기준액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 선정기준액 2025년",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 선정기준액 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 선정기준액 산정방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 선정기준액 재산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 소득인정액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 소득인정액 2026",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 소득인정액 개편",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 소득인정액 국민연금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 소득인정액 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 소득인정액 모의계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 소득인정액 부부합산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 소득인정액 산정 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 소득인정액 재산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 소득인정액 초과",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 수급자격",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 수급자격 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 수급자격 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 수급자격 소득",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 수급자격 예금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 수급자격 자동차",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 수급자격 재산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 수급자격 재산금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 수급자격나이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 신청 방법 온라인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 신청 후 결과",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 신청 후 결과 통보",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 신청기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 신청나이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 신청방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 신청방법 동사무소",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 신청방법 복지로",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 신청방법 서류",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 신청방법과 구비서류",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 신청서류",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 신청시기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 자동차",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 자동차 2대",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 자동차 3대",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 자동차 가격",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 자동차 감가상각",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 자동차 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 자동차 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 자동차 기준 장애인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 자동차 리스",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 자동차 장애인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 재산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 재산 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 재산금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 재산기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 재산기준 1억",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 재산기준 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 재산기준 부동산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 재산세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 재산소득",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 재산정",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 조건 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 조건 예금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 조건 자동차",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 조건 재산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 지급일",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 지급일 생일",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 지급일 시간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 지급일 언제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 지급일자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 탈락 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 탈락 이유",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 탈락 재산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 탈락 재산기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 탈락 재신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 탈락 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 탈락 통보",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 탈락 통장잔액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 탈락 확인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금 탈락 후 재신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금2026",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금2026년",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금개편안",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "기초연금근로소득기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "노인 기초연금 금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "노인 기초연금 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "복지로 기초연금 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "복지로 기초연금 신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
+    },
+    {
+      "word": "부부 기초연금 감액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "_seed-survey",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-13"
     }
   ],
   "questions": [

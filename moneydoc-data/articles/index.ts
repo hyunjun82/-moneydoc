@@ -3,93 +3,9 @@ export type GuideLink = { cat: string; catLabel: string; href: string; title: st
 
 export const GUIDES: GuideLink[] = [
   {
-    "cat": "realestate",
-    "catLabel": "부동산",
-    "href": "/transfer-tax/",
-    "title": "1주택 양도세 비과세 요건과 계산, 2년 보유부터 12억 초과분까지",
-    "blurb": "2년 보유·거주요건과 12억 고가주택 기준"
-  },
-  {
-    "cat": "loan",
-    "catLabel": "대출",
-    "href": "/dsr/",
-    "title": "스트레스 DSR 계산과 대출 한도, 3단계 적용부터 주담대 한도까지",
-    "blurb": "스트레스 금리 1~3단계 · 한도 얼마나 줄까"
-  },
-  {
-    "cat": "pension",
-    "catLabel": "연금",
-    "href": "/pension-early/",
-    "title": "국민연금 조기수령 감액과 손익분기, 조건부터 연기연금 비교까지",
-    "blurb": "1년 앞당길수록 6% 감액 · 손익분기 나이"
-  },
-  {
-    "cat": "savings",
-    "catLabel": "저축",
-    "href": "/installment/",
-    "title": "적금 이자 계산과 세금, 단리 복리부터 만기 실수령액까지",
-    "blurb": "단리·복리 차이와 이자소득세 15.4%"
-  },
-  {
     "cat": "government",
     "catLabel": "정부지원금",
-    "href": "/basic-pension/",
-    "title": "2026년 기초연금 수급 조건과 금액, 선정기준액부터 신청까지",
-    "blurb": "소득인정액 기준과 감액 구조"
-  },
-  {
-    "cat": "law",
-    "catLabel": "법률",
-    "href": "/annual-leave/",
-    "title": "연차수당 계산과 발생 기준, 입사 1년부터 미사용 수당 지급까지",
-    "blurb": "연차 일수·통상임금·소멸시효 3년"
-  },
-  {
-    "cat": "realestate",
-    "catLabel": "부동산",
-    "href": "/acquisition-tax/",
-    "title": "집 살 때 취득세 세율과 계산, 생애최초 감면부터 다주택 중과까지",
-    "blurb": "6억·9억 경계와 다주택 중과 8%·12%"
-  },
-  {
-    "cat": "insurance",
-    "catLabel": "보험·자동차",
-    "href": "/auto-tax/",
-    "title": "자동차세 계산과 연납 할인, 배기량별 세액부터 1월 신청까지",
-    "blurb": "배기량별 세율 · 1월 연납 5% 공제"
-  },
-  {
-    "cat": "government",
-    "catLabel": "정부지원금",
-    "href": "/parental-leave/",
-    "title": "2026년 육아휴직 급여 조건과 금액, 신청 방법부터 6+6 특례까지",
-    "blurb": "250만→200만→160만 · 사후지급금 폐지"
-  },
-  {
-    "cat": "tax",
-    "catLabel": "세금",
-    "href": "/income-tax/",
-    "title": "종합소득세 세율과 계산 방법, 신고 대상부터 5월 홈택스 신고까지",
-    "blurb": "세율 8구간과 누진공제 · 5월 신고"
-  },
-  {
-    "cat": "government",
-    "catLabel": "정부지원금",
-    "href": "/basic-livelihood/",
-    "title": "2026년 기초생활수급 조건과 급여, 소득인정액부터 신청 서류까지",
-    "blurb": "생계 32%·의료 40%·주거 48%·교육 50%"
-  },
-  {
-    "cat": "realestate",
-    "catLabel": "부동산",
-    "href": "/property-tax/",
-    "title": "재산세 계산과 납부, 공시가격부터 특례세율과 7월 9월 분납까지",
-    "blurb": "공정시장가액비율 43~45% vs 60%"
-  },
-  {
-    "cat": "government",
-    "catLabel": "정부지원금",
-    "href": "/unemployment/",
+    "href": "/unemployment/guide/",
     "title": "2026년 실업급여 얼마나 받나요, 조건부터 금액과 신청 방법까지",
     "blurb": "하루 66,048원 · 210일 · 신청 4단계와 회차별 구직활동"
   },
@@ -103,7 +19,7 @@ export const GUIDES: GuideLink[] = [
   {
     "cat": "law",
     "catLabel": "법률",
-    "href": "/severance/",
+    "href": "/severance/guide/",
     "title": "퇴직금 계산 방법과 지급기준, 평균임금부터 14일 지급기한까지",
     "blurb": "평균임금 계산 순서 · 근속·월급별 표 · 14일 지급기한과 중간정산"
   },
@@ -145,9 +61,23 @@ export const GUIDES: GuideLink[] = [
   {
     "cat": "realestate",
     "catLabel": "부동산",
-    "href": "/transfer-tax/",
+    "href": "/transfer-tax/guide/",
     "title": "1주택 양도세 비과세 요건과 계산, 2년 보유부터 12억 초과분까지",
     "blurb": "2년 보유 비과세 · 12억 초과분 계산 · 장기보유특별공제 80% · 2개월 예정신고"
+  },
+  {
+    "cat": "realestate",
+    "catLabel": "부동산",
+    "href": "/transfer-tax/expense/",
+    "title": "양도세 필요경비 인정 항목, 취득세와 중개수수료도 되나요",
+    "blurb": "취득세·중개수수료·자본적 지출 · 필요경비로 줄어드는 세금 · 증빙 남기는 법"
+  },
+  {
+    "cat": "realestate",
+    "catLabel": "부동산",
+    "href": "/transfer-tax/long-term-deduction/",
+    "title": "양도세 장기보유특별공제율 표, 2주택도 받나요",
+    "blurb": "1주택 보유·거주별 공제율 · 일반 공제율 · 조정대상지역 2주택 배제 · 한도"
   },
   {
     "cat": "realestate",
@@ -180,6 +110,20 @@ export const GUIDES: GuideLink[] = [
   {
     "cat": "law",
     "catLabel": "법률",
+    "href": "/severance/one-year/",
+    "title": "퇴직금 1년 미만 받나요, 1년 기준 날짜와 1년 6개월 계산",
+    "blurb": "364일은 0원 · 퇴직일은 마지막 근무 다음 날 · 1년 6개월 금액 · 알바도 같은 기준"
+  },
+  {
+    "cat": "law",
+    "catLabel": "법률",
+    "href": "/severance/tax/",
+    "title": "퇴직금 세금 몇프로, 세전 세후 차이는 얼마나 되나요",
+    "blurb": "세금 몇 퍼센트인지 · 계산 순서 5단계 · 월급·근속별 세전 세후 표"
+  },
+  {
+    "cat": "law",
+    "catLabel": "법률",
     "href": "/severance/claim/",
     "title": "퇴직금 못 받았을 때 지급명령과 소장, 양식부터 제출까지",
     "blurb": "지급명령 신청서 · 소장 양식 · 인지대 계산표 · 관할 법원 · 2주 이의"
@@ -187,9 +131,23 @@ export const GUIDES: GuideLink[] = [
   {
     "cat": "government",
     "catLabel": "정부지원금",
-    "href": "/basic-pension/",
+    "href": "/basic-pension/guide/",
     "title": "2026년 기초연금 수급 조건과 금액, 선정기준액부터 신청까지",
     "blurb": "65세·선정기준액 · 소득인정액 계산 · 국민연금 연계 · 신청 4단계"
+  },
+  {
+    "cat": "government",
+    "catLabel": "정부지원금",
+    "href": "/basic-pension/national-pension/",
+    "title": "기초연금 국민연금 감액 기준, 국민연금 받으면 얼마나 깎이나요",
+    "blurb": "150% 이하면 전액 · 200%까지 250% 규칙 · 부가연금액이 남아요"
+  },
+  {
+    "cat": "government",
+    "catLabel": "정부지원금",
+    "href": "/basic-pension/couple/",
+    "title": "기초연금 부부감액, 부부 수령액은 각자 얼마인가요",
+    "blurb": "각자 20% · 한 명만 받으면 감액 없음 · 선정기준액 근처 소득역전 감액"
   },
   {
     "cat": "government",

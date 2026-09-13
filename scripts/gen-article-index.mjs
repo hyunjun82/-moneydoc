@@ -13,7 +13,8 @@ const NOCALC = URLMAP['_계산기없는허브'] ?? {};
 /** 가이드 슬러그 → 허브 주소 */
 const hubHref = (cat, slug) => {
   const base = slug.replace(/-guide$/, '');
-  const hub = HUBMAP[cat + '/' + base] ?? NOCALC[cat + '/' + slug];
+  // 글 슬러그 그대로 등록된 게 먼저다 (총정리 글이 허브 자리에서 /guide/ 로 내려간 경우)
+  const hub = NOCALC[cat + '/' + slug] ?? HUBMAP[cat + '/' + base];
   if (hub) return '/' + hub + '/';
   return '/' + (cat === 'government' ? 'gov' : cat) + '/' + slug + '/';
 };
@@ -26,8 +27,10 @@ const EXISTING = [
   { cat: 'government', catLabel: '정부지원금', href: '/gov/youth-future-savings-soldier/',    title: '군인도 청년미래적금 가입되나요?',          blurb: '군장병급여만 있어도 가입 가능' },
 ];
 
+// v2 로 다시 쓴 글은 v1 목록에서 뺀다. 안 빼면 같은 허브가 카테고리 목록에 두 번 뜬다 (2026-09-13 실측 12편).
+const V2_KEYS = new Set(V2.map((a) => a.cat + '/' + a.slug));
 const rows = [
-  ...ARTICLES.map((a) => {
+  ...ARTICLES.filter((a) => !V2_KEYS.has(a.cat + '/' + a.slug)).map((a) => {
     const data = fs.readFileSync(
       path.join(ROOT, 'moneydoc-data/articles', a.cat, `${a.slug}.ts`), 'utf8'
     );
