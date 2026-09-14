@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여 마지막 회차와 남은 일수 정산",
   description: "마지막 회차는 회차 번호로 정해지지 않아요. 받을 수 있는 날수를 다 쓰는 회차가 마지막이에요. 4차 이후 인정일은 7~28일 사이에서 잡혀서 마지막은 짧게 끝나기도 해요. 정산 방법과 끝난 뒤 기한을 정리했어요.",
   datePublished: "2026-09-07",
-  dateModified: "2026-09-09",
+  dateModified: "2026-09-14",
   url: "https://moneydoc.kr/government/unemployment-last-round-guide/",
   image: "https://moneydoc.kr/og/unemployment-last-round-guide.png",
   imageAlt: "실업급여 마지막 회차. 인정받은 날수만큼 정산해서 지급",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-last-round-guide";
 
 export const html = `<h1>실업급여 마지막 회차와 남은 일수 정산</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-14</span></div>
 <img class="v2-hero" src="/og/unemployment-last-round-guide.png" width="1200" height="630" alt="실업급여 마지막 회차. 인정받은 날수만큼 정산해서 지급">
 <p class="v2-lead v2-intro">마지막 회차가 다가오면 남은 일수가 어떻게 정리되는지 궁금해져요. 회차 번호로 정해지지 않고, 받을 수 있는 날수를 다 쓰는 회차가 마지막이에요. 그 회차는 기간이 짧게 잡히기도 해서 금액이 적어 보여요. 마지막이라고 활동 신고를 건너뛰면 그 기간은 인정되지 않고, 수급이 끝난 뒤에는 기한이 걸린 신청이 몇 가지 남아요. 순서대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -49,7 +49,7 @@ export const html = `<h1>실업급여 마지막 회차와 남은 일수 정산</
   <div><i>마지막 회차</i><b>날수를 다 채워요</b><span>받을 수 있는 날수가 채워지는 회차가 마지막이에요</span><em>마지막</em></div>
   <div><i>그 뒤</i><b>수급이 끝나요</b><span>다음 인정일은 잡히지 않고 지급도 멈춰요</span></div>
 </div>
-<p class="v2-lead"><span class="v2-ans">마지막 회차는 회차 번호로 정해지지 않아요.</span> 받을 수 있는 날수인 소정급여일수를 다 채우는 회차가 마지막이에요. 5차가 마지막인 사람도 있고 9차가 마지막인 사람도 있어요.</p>
+<p class="v2-lead"><span class="v2-ans">마지막 회차는 회차 번호로 정해지지 않아요.</span> 받을 수 있는 날수인 소정급여일수를 다 채우는 회차가 마지막이에요. 그래서 몇 번째 회차가 마지막인지는 받는 날수와 담당자가 정한 인정일 간격에 따라 사람마다 달라요.</p>
 <p><span class="v2-ans">4차 이후 인정일은 7~28일 사이에서 잡아요.</span> 앞 회차는 4주 간격이 보통인데 마지막은 남은 날수에 맞춰 짧게 잡히기도 해요. 그래서 마지막 인정일이 생각보다 빨리 오는 경우가 있어요. <a class="v2-go" href="/unemployment/round-4/">4차 실업인정일</a></p>
 <p><span class="v2-ans">수급기간이 먼저 끝나면 그날이 마지막이에요.</span> 원래 퇴사일 다음 날부터 12개월 안에서만 받을 수 있어요. 늦게 신청했다면 날수가 남아도 거기서 멈춰요. <a class="v2-go" href="/unemployment/deadline/">12개월 신청기간</a></p>
 <div class="v2-note"><b>다음 인정일은 수급자격증에 적혀요</b> 담당자가 인정일마다 다음 날짜와 그 기간에 할 활동을 적어 줘요. 마지막이 언제인지는 그 기록으로 확인해요.</div>
@@ -84,13 +84,13 @@ export const html = `<h1>실업급여 마지막 회차와 남은 일수 정산</
 
 <h2 id="s5">수급이 끝나면 무엇을 할 수 있나요<small>기한이 걸린 신청이 남아요</small></h2>
 <div class="v2-tbl v2-text"><table><caption>수급이 끝날 무렵 챙길 것과 기한</caption><thead><tr><th>무엇을</th><th>언제까지</th></tr></thead><tbody>
-<tr class="v2-hi"><th scope="row">연장급여 상담</th><td data-l="언제까지">수급기간이 끝나기 최소 2개월 전부터</td></tr>
+<tr class="v2-hi"><th scope="row">개별연장급여 상담</th><td data-l="언제까지">수급기간이 끝나기 최소 2개월 전부터</td></tr>
 <tr><th scope="row">실업크레딧 신청</th><td data-l="언제까지">마지막 날이 속하는 달의 다음달 15일까지</td></tr>
 <tr><th scope="row">국민취업지원제도 1유형</th><td data-l="언제까지">수급이 끝난 뒤 6개월이 지나면</td></tr>
 <tr><th scope="row">신중년 경력형 일자리</th><td data-l="언제까지">수급이 끝난 뒤 90일이 지나면</td></tr>
 </tbody></table></div>
-<p class="v2-lead"><span class="v2-ans">기한을 놓치면 되돌리기 어려운 신청이 있어요.</span> 연장급여는 수급기간이 끝나기 전에 상담을 시작해야 하고, 실업크레딧은 기한 안에서만 신청을 받아요.</p>
-<p><span class="v2-ans">연장급여는 받던 급여가 끝난 뒤에 지급해요.</span> 취업이 특히 곤란하고 생활이 어려운 사람에게 날수를 넘겨 지급해요. 본인과 배우자 재산 합계가 1억 4천만원 이하 같은 요건이 있어요. <a class="v2-go" href="/unemployment/extension/">연장급여 조건</a></p>
+<p class="v2-lead"><span class="v2-ans">기한을 놓치면 되돌리기 어려운 신청이 있어요.</span> 개별연장급여는 수급기간이 끝나기 전에 상담을 시작해야 하고, 실업크레딧은 기한 안에서만 신청을 받아요.</p>
+<p><span class="v2-ans">개별연장급여는 받던 급여가 끝난 뒤에 지급해요.</span> 취업이 특히 곤란하고 생활이 어려운 사람에게 날수를 넘겨 지급해요. 본인과 배우자 재산 합계가 1억 4천만원 이하 같은 요건이 있어요. <a class="v2-go" href="/unemployment/extension/">연장급여 조건</a></p>
 <p><span class="v2-ans">실업크레딧은 이미 취업했어도 신청할 수 있어요.</span> 기한 안이라면 지나간 수급 기간에 대해서도 지원받아요. 국민연금 보험료의 25%를 내면 나머지 75%를 지원해 줘요. <a class="v2-go" href="/unemployment/pension-credit/">실업크레딧 신청</a></p>
 <div class="v2-note"><b>실업크레딧은 1개월 단위로 쌓여요</b> 실제로 지급된 날이 누적 30일이 될 때마다 1개월분 보험료를 계산해요. 마지막 회차에 인정받은 날도 여기에 들어가요.</div>
 
@@ -114,7 +114,7 @@ export const html = `<h1>실업급여 마지막 회차와 남은 일수 정산</
 <div class="v2-src">
 <b>법령</b>고용보험법 제44조(실업의 인정), 제47조(실업인정대상기간 중의 취업 등의 신고), 제48조(수급기간 및 수급일수), 제52조(개별연장급여), 제55조(연장급여의 상호 조정 등), 제56조(지급일 및 지급 방법), 제64조(조기재취업 수당). 시행령 제84조(조기재취업 수당의 지급기준). 시행규칙 제87조(재취업활동의 인정기준), 제92조(취업의 인정기준).
 <b>행정규칙·정부 안내</b>고용노동부 예규 실업인정 및 재취업지원규정 제249호 제9조·제10조·제11조·제12조·제16조·제17조(2026.9.1 시행). 고용24 실업급여 제도 안내와 실업크레딧 안내. 법제처 생활법령정보 실업의 인정(2026.8.15 기준). 고용노동부 인터넷상담 답변(회차별 재취업활동 횟수와 출석 회차).
-<b>정부 도구</b>고용24 실업인정 인터넷 신청 화면에서 소정급여일수의 남은 일수와 총 실업인정일수, 하루 금액 항목을 확인했어요 (2026-09-09 확인).
+<b>정부 도구</b>고용24 실업인정 인터넷 신청 화면에서 소정급여일수의 남은 일수와 총 실업인정일수, 하루 금액 항목을 확인했어요 (2026-09-14 확인).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/extension/"><b>다음 질문</b>소정급여일수가 끝나면 연장할 수 있나요</a><a href="/unemployment/report-job/"><b>다음 질문</b>실업급여 받다가 취업하면 언제까지 취업신고 하나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -185,7 +185,7 @@ export const landing = {
     "line2": "남은 일수 정산",
     "sub1": "인정받은 날수만큼 마지막 회차에 들어와요",
     "sub2": "인정일은 7~28일 사이에서 잡아요",
-    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-09 검증",
+    "foot": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-14 검증",
     "card": {
       "label": "마지막에 14일이 남으면",
       "big": "924,672",
@@ -195,7 +195,7 @@ export const landing = {
     },
     "alt": "실업급여 마지막 회차. 인정받은 날수만큼 정산해서 지급"
   },
-  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-09",
+  "badge": "실업인정 및 재취업지원규정 원문 대조 · 2026-09-14",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

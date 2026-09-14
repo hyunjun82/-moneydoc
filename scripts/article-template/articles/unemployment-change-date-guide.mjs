@@ -39,7 +39,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive }) {
     },
     sections: [
       { id: 's1', h2: '첫인정일은 언제인가요?', sub: '고용센터에 처음 나가는 날이에요', blocks: [
-        { type: 'p', lead: true, ans: '첫 실업인정일은 실업신고일부터 14일이 되는 날이에요.', text: '이날 이후에는 4주 단위로 다음 인정일이 정해져요.' },
+        { type: 'p', lead: true, ans: '첫 실업인정일은 실업신고일부터 14일이 되는 날이에요.', text: '2차와 3차는 직전 인정일 다음 날부터 28일이 되는 날이고, 4차부터는 7~28일 범위에서 담당자가 정해요.' },
         { type: 'p', ans: '1차 실업인정일에는 고용센터에 직접 나가야 해요.', text: '그날은 출석해서 집체교육을 듣는 날이라 온라인으로 대신할 수 없어요.' },
         { type: 'note', title: '실업신고일이 헷갈리면', text: '실업신고일은 수급자격 인정을 신청한 날을 말해요.', link: { href: '/unemployment/round-1/', label: '1차 인정일 자세히' } },
       ] },

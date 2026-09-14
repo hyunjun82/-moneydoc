@@ -4,7 +4,7 @@ export const meta = {
   title: "국민취업지원제도 신청 방법, 실업급여 끝나고 언제부터 되나요",
   description: "국민취업지원제도는 실업급여를 받는 중에는 신청할 수 없어요. 2유형은 수급이 끝나면 바로, 1유형은 마지막으로 구직급여를 받은 날의 다음 날부터 6개월이 지나야 신청돼요. 신청 순서와 유형별 조건, 월 60만원씩 6개월인 구직촉진수당을 정리했어요.",
   datePublished: "2026-09-07",
-  dateModified: "2026-09-09",
+  dateModified: "2026-09-14",
   url: "https://moneydoc.kr/government/unemployment-job-support-guide/",
   image: "https://moneydoc.kr/og/unemployment-job-support-guide.png",
   imageAlt: "실업급여가 끝난 뒤 국민취업지원제도 1유형 신청은 6개월 뒤",
@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-job-support-guide";
 
 export const html = `<h1>국민취업지원제도 신청 방법, 실업급여 끝나고 언제부터 되나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">구직자취업촉진법 원문과 고용24 안내 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">구직자취업촉진법 원문과 고용24 안내 대조 · 2026-09-14</span></div>
 <img class="v2-hero" src="/og/unemployment-job-support-guide.png" width="1200" height="630" alt="실업급여가 끝난 뒤 국민취업지원제도 1유형 신청은 6개월 뒤">
 <p class="v2-lead v2-intro">실업급여가 끝나갈 때쯤 국민취업지원제도를 알아보는 분이 많아요. 그런데 실업급여를 받는 동안에는 신청이 막혀 있고, 1유형은 수급이 끝나고도 6개월을 더 기다려야 해요. 두 제도가 무엇이 다른지, 신청은 어떤 순서로 하는지, 언제부터 열리고 얼마를 몇 달 받는지 차례대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -35,8 +35,8 @@ export const html = `<h1>국민취업지원제도 신청 방법, 실업급여 �
     <div class="v2-row"><dt>2유형 신청 시기</dt><dd>구직급여 수급이 끝나는 날</dd></div>
     <div class="v2-row"><dt>수급 중 신청</dt><dd>구직급여를 받는 기간에는 1유형도 2유형도 막혀요</dd></div>
     <div class="v2-row"><dt>1유형 소득·재산</dt><dd>가구 중위소득 60% 이하, 재산 4억원 이하</dd></div>
-    <div class="v2-row"><dt>1유형 취업경험</dt><dd>최근 2년 안에 100일 또는 800시간 이상</dd></div>
-    <div class="v2-row"><dt>2유형 중장년</dt><dd>35세에서 69세, 가구 중위소득 100% 이하</dd></div>
+    <div class="v2-row"><dt>1유형 취업경험</dt><dd>요건심사형은 최근 2년 안에 100일 또는 800시간 이상, 선발형은 그 미만</dd></div>
+    <div class="v2-row"><dt>2유형 중장년</dt><dd>35세에서 69세(고용24 안내), 가구 중위소득 100% 이하</dd></div>
     <div class="v2-row"><dt>구직촉진수당</dt><dd>월 60만원씩 6개월, 부양가족이 있으면 월 100만원까지</dd></div>
     <div class="v2-row"><dt>결정 통지</dt><dd>신청서를 낸 날부터 1개월 안에 서면으로 와요</dd></div>
   </dl>
@@ -86,17 +86,17 @@ export const html = `<h1>국민취업지원제도 신청 방법, 실업급여 �
   <div><i>바로</i><b>2유형 신청</b><span>기다리는 기간 없이 신청서를 낼 수 있어요</span><em>2유형</em></div>
   <div class="v2-go"><i>6개월</i><b>1유형 신청</b><span>구직촉진수당을 받으려면 이때까지 기다려요</span><em>1유형</em></div>
 </div>
-<p><span class="v2-ans">기다리는 동안에도 방법이 있어요.</span> 2유형으로 먼저 참여해 취업활동계획을 세우고 훈련이나 일자리 알선을 받는 길이에요. 소정급여일수가 아직 남았다면 연장급여를 먼저 알아보는 편이 나아요. <a class="v2-go" href="/unemployment/extension/">연장급여 조건</a></p>
+<p><span class="v2-ans">기다리는 동안에도 방법이 있어요.</span> 2유형으로 먼저 참여해 취업활동계획을 세우고 훈련이나 일자리 알선을 받는 길이에요. 실업급여가 끝나기 전이라면 개별연장급여 상담은 수급기간이 끝나기 최소 2개월 전부터 하도록 안내돼요. <a class="v2-go" href="/unemployment/extension/">연장급여 조건</a></p>
 <div class="v2-note"><b>수급 중에 취업하면 이야기가 달라져요</b> 남은 날수가 절반 이상일 때 재취업했다면 조기재취업 수당을 먼저 챙기는 편이 커요. <a class="v2-go" href="/unemployment/early-reemployment/">조기재취업수당 조건</a></div>
 <p class="v2-fn">1유형 제한은 구직자 취업촉진 및 생활안정지원에 관한 법률 제7조제3항제3호, 수급기간과 조기재취업 수당은 고용보험법 제48조와 제64조예요.</p>
 
 <h2 id="s5">1유형과 2유형은 얼마를 몇 달 받나요<small>1유형은 월 60만원씩 6개월이에요</small></h2>
 <p class="v2-lead"><span class="v2-ans">1유형은 구직촉진수당을 월 60만원씩 6개월 동안 받아요.</span> 다 받으면 360만원이고, 부양가족이 있으면 월 100만원까지 올라가요. 부양가족은 18세 이하와 70세 이상, 중증장애인을 말해요.</p>
 <div class="v2-tbl"><table><caption>1유형과 2유형의 참여 조건과 받는 돈 비교</caption><thead><tr><th>보는 것</th><th>1유형</th><th>2유형</th></tr></thead><tbody>
-<tr><th scope="row">나이</th><td>15세에서 69세</td><td>청년은 15세에서 34세, 중장년은 35세에서 69세</td></tr>
+<tr><th scope="row">나이</th><td>15세에서 69세 (고용24 안내, 법률은 64세 이하)</td><td>청년은 15세에서 34세, 중장년은 35세에서 69세</td></tr>
 <tr class="v2-hi"><th scope="row">가구 소득</th><td>중위소득 60% 이하 (청년 특례는 120% 이하)</td><td>중장년만 중위소득 100% 이하</td></tr>
 <tr><th scope="row">재산</th><td>가구 합산 4억원 이하 (청년은 5억원 이하)</td><td>보지 않아요</td></tr>
-<tr><th scope="row">취업경험</th><td>최근 2년 안에 100일 또는 800시간 이상</td><td>보지 않아요</td></tr>
+<tr><th scope="row">취업경험</th><td>요건심사형은 최근 2년 안에 100일 또는 800시간 이상, 선발형은 그 미만</td><td>보지 않아요</td></tr>
 <tr><th scope="row">받는 돈</th><td>구직촉진수당</td><td>취업활동비용</td></tr>
 </tbody></table></div>
 <p class="v2-fn">소득과 재산, 취업경험 기준은 구직자 취업촉진 및 생활안정지원에 관한 법률 시행령 제3조와 고용24 안내에 있어요.</p>
@@ -125,7 +125,7 @@ export const html = `<h1>국민취업지원제도 신청 방법, 실업급여 �
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>구직자 취업촉진 및 생활안정지원에 관한 법률 제6조(취업지원서비스의 수급 요건), 제7조(구직촉진수당의 수급 요건), 제8조(취업지원 신청), 제10조(수급자격자의 결정·통지), 제11조(취업지원의 유예), 제12조(취업활동계획), 제15조(취업지원서비스기간), 제16조(취업활동비용의 지원), 제17조(취업성공수당의 지급), 제20조(지급기간 및 지급절차). 같은 법 시행령 제3조(구직촉진수당의 수급자격), 제12조(부정행위에 따른 취업지원 신청의 제한기간), 제13조(취업지원 재참여). 같은 법 시행규칙 제16조(구직촉진수당등의 지급방법), 제19조(반환명령에 따른 추가징수), 제20조(취업지원 종료일 등). 고용보험법 제40조(수급 요건), 제48조(수급기간), 제64조(조기재취업 수당).
-<b>행정규칙·정부 안내</b>고용24 국민취업지원제도 취업지원신청 안내의 유형별 수급자격 표와 참여할 수 없는 대상, 신청 절차와 제출 서류를 원문과 맞춰 봤어요. 고용24 실업급여 제도 안내의 중복 지원 불가 항목도 함께 봤어요 (2026-09-09 기준).
+<b>행정규칙·정부 안내</b>고용24 국민취업지원제도 취업지원신청 안내의 유형별 수급자격 표와 참여할 수 없는 대상, 신청 절차와 제출 서류를 원문과 맞춰 봤어요. 고용24 실업급여 제도 안내의 중복 지원 불가 항목도 함께 봤어요 (2026-09-14 기준).
 </div>
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/last-round/"><b>앞 질문</b>실업급여 마지막 회차와 남은 일수 정산</a><a href="/unemployment/extension/"><b>다음 질문</b>소정급여일수가 끝나면 연장할 수 있나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -204,7 +204,7 @@ export const landing = {
     "line2": "언제부터 되나요",
     "sub1": "2유형은 수급이 끝나면 바로 신청돼요",
     "sub2": "1유형은 6개월을 더 기다려야 해요",
-    "foot": "구직자취업촉진법 원문과 고용24 안내 대조 · 2026-09-09 검증",
+    "foot": "구직자취업촉진법 원문과 고용24 안내 대조 · 2026-09-14 검증",
     "card": {
       "label": "1유형 신청 시기",
       "big": "6개월",
@@ -214,7 +214,7 @@ export const landing = {
     },
     "alt": "실업급여가 끝난 뒤 국민취업지원제도 1유형 신청은 6개월 뒤"
   },
-  "badge": "구직자취업촉진법 원문과 고용24 안내 대조 · 2026-09-09",
+  "badge": "구직자취업촉진법 원문과 고용24 안내 대조 · 2026-09-14",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [
@@ -271,11 +271,11 @@ export const landing = {
       ],
       [
         "1유형 취업경험",
-        "최근 2년 안에 100일 또는 800시간 이상"
+        "요건심사형은 최근 2년 안에 100일 또는 800시간 이상, 선발형은 그 미만"
       ],
       [
         "2유형 중장년",
-        "35세에서 69세, 가구 중위소득 100% 이하"
+        "35세에서 69세(고용24 안내), 가구 중위소득 100% 이하"
       ],
       [
         "구직촉진수당",

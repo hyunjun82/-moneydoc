@@ -4,7 +4,7 @@ export const meta = {
   title: "실업급여와 근로장려금 중복, 소득 산정부터 신청 조건과 금액까지",
   description: "실업급여를 받은 해에 근로소득이나 사업소득이 있으면 근로장려금도 함께 신청할 수 있어요. 구직급여는 비과세소득이라 소득 계산에서 빠지고, 신청 조건 다섯 가지와 재산에 따라 줄어드는 지급액을 정리했어요.",
   datePublished: "2026-09-08",
-  dateModified: "2026-09-09",
+  dateModified: "2026-09-14",
   url: "https://moneydoc.kr/government/unemployment-eitc-guide/",
   image: "https://moneydoc.kr/og/unemployment-eitc-guide.png",
   imageAlt: "실업급여와 근로장려금 중복 신청 가능 여부 안내",
@@ -13,12 +13,12 @@ export const meta = {
 export const scriptKey = "unemployment-eitc-guide";
 
 export const html = `<h1>실업급여와 근로장려금 중복, 소득 산정부터 신청 조건과 금액까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">조세특례제한법 신청자격·산정 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">조세특례제한법 신청자격·산정 원문 대조 · 2026-09-14</span></div>
 <img class="v2-hero" src="/og/unemployment-eitc-guide.png" width="1200" height="630" alt="실업급여와 근로장려금 중복 신청 가능 여부 안내">
 <p class="v2-lead v2-intro">실업급여를 받는 동안 근로장려금도 받을 수 있는지 궁금한 분이 많아요. 두 제도는 별개라서 하나가 다른 하나를 막지 않지만, 근로장려금은 그 해에 일한 소득이 있어야 신청할 수 있어요. 실업급여가 소득으로 잡히는지, 신청 조건은 무엇인지, 금액은 어떻게 정해지는지 순서대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
   <div class="v2-lbl">궁금한 것부터 확인해 보세요</div>
-  <div class="v2-chips" id="qchips" data-q='[{&quot;big&quot;:&quot;가능&quot;,&quot;unit&quot;:&quot;동시 신청&quot;,&quot;sub&quot;:&quot;같은 해에 근로소득이나 사업소득이 있으면 돼요&quot;},{&quot;big&quot;:&quot;아니요&quot;,&quot;unit&quot;:&quot;총소득 계산&quot;,&quot;sub&quot;:&quot;구직급여는 비과세소득이라 빠져요&quot;},{&quot;big&quot;:&quot;신청 불가&quot;,&quot;unit&quot;:&quot;재산 요건&quot;,&quot;sub&quot;:&quot;가구원 재산 합계액이 이 금액 넘으면 자격이 없어요&quot;}]'><button type="button" data-i="0" aria-pressed="true">실업급여+근로장려금</button><button type="button" data-i="1" aria-pressed="false">실업급여는 소득에 잡히나요</button><button type="button" data-i="2" aria-pressed="false">재산 2억4천만원 넘으면</button></div>
+  <div class="v2-chips" id="qchips" data-q='[{&quot;big&quot;:&quot;가능&quot;,&quot;unit&quot;:&quot;동시 신청&quot;,&quot;sub&quot;:&quot;같은 해에 근로소득이나 사업소득이 있으면 돼요&quot;},{&quot;big&quot;:&quot;아니요&quot;,&quot;unit&quot;:&quot;총소득 계산&quot;,&quot;sub&quot;:&quot;구직급여는 비과세소득이라 빠져요&quot;},{&quot;big&quot;:&quot;신청 불가&quot;,&quot;unit&quot;:&quot;재산 요건&quot;,&quot;sub&quot;:&quot;가구원 재산 합계액이 이 금액 이상이면 자격이 없어요&quot;}]'><button type="button" data-i="0" aria-pressed="true">실업급여+근로장려금</button><button type="button" data-i="1" aria-pressed="false">실업급여는 소득에 잡히나요</button><button type="button" data-i="2" aria-pressed="false">재산 2억4천만원 이상이면</button></div>
   <div class="v2-big" id="qnet">가능<small>동시 신청</small></div>
   <div class="v2-sub" id="qsub">같은 해에 근로소득이나 사업소득이 있으면 돼요</div>
   <div class="v2-split">
@@ -77,7 +77,7 @@ export const html = `<h1>실업급여와 근로장려금 중복, 소득 산정�
 
 <h2 id="s4">근로장려금 금액은 얼마인가요?<small>가구 유형별 산정표로 정해지고, 재산에 따라 줄어들어요</small></h2>
 <p class="v2-lead"><span class="v2-ans">가구 유형과 총급여액 구간별로 정해진 산정표에 따라 계산해요.</span> 구체적인 금액은 법에 정해진 산정표를 따르는데, 가구 유형과 소득 구간마다 달라요.</p>
-<p><span class="v2-ans">재산이 많으면 산정한 금액에서 줄어들어요.</span> 가구원 재산 합계액이 일정 금액을 넘으면 절반만 받거나 아예 못 받아요.</p>
+<p><span class="v2-ans">재산이 많으면 산정한 금액에서 줄어들어요.</span> 가구원 재산 합계액이 일정 금액 이상이면 절반만 받거나 아예 못 받아요.</p>
 <div class="v2-tbl"><table><caption>재산에 따라 근로장려금이 어떻게 달라지나요</caption><thead><tr><th>가구원 재산 합계액</th><th>지급 금액</th></tr></thead><tbody>
 <tr><th scope="row">1억7천만원 미만</th><td class="v2-net">산정한 금액 그대로 받아요</td></tr>
 <tr><th scope="row">1억7천만원 이상 2억4천만원 미만</th><td class="v2-net">산정한 금액의 절반만 받아요</td></tr>
@@ -88,7 +88,7 @@ export const html = `<h1>실업급여와 근로장려금 중복, 소득 산정�
 <h2 id="faq">자주 묻는 질문</h2>
 <div class="v2-faqs">
 <details class="v2-faq" open><summary><i>Q</i><span>실업급여만 받고 일을 하나도 안 했다면 근로장려금을 받을 수 있나요?</span></summary><div><i>A</i><p>못 받아요. 그 해에 사업소득이나 근로소득, 종교인소득이 없으면 신청 자격 자체가 생기지 않아요.</p></div></details>
-<details class="v2-faq"><summary><i>Q</i><span>근로장려금은 언제 신청하나요?</span></summary><div><i>A</i><p>종합소득세 확정신고 기간에 신청해요. 사업소득이 있으면 상반기 소득분을 미리 신청할 수도 있어요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>근로장려금은 언제 신청하나요?</span></summary><div><i>A</i><p>종합소득세 확정신고 기간인 5월에 신청해요. 반기 동안 근로소득만 있었다면 상반기 소득분을 9월 1일부터 9월 15일까지 미리 신청할 수도 있어요. 사업소득이 있으면 반기 신청은 안 돼요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>재산 2억4천만원에는 무엇이 들어가나요?</span></summary><div><i>A</i><p>가구원이 가진 토지, 건물, 자동차, 예금 등을 정해진 방법으로 더한 금액이에요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>외국인도 근로장려금을 신청할 수 있나요?</span></summary><div><i>A</i><p>원칙은 안 돼요. 다만 대한민국 국적인 배우자가 있거나, 국적을 가진 부양자녀가 있으면 신청할 수 있어요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>다른 가족의 부양자녀로 잡혀 있으면 어떻게 되나요?</span></summary><div><i>A</i><p>그 해에는 근로장려금을 신청할 수 없어요. 다른 사람의 부양자녀인 사람은 신청 대상이 아니에요.</p></div></details>
@@ -98,7 +98,7 @@ export const html = `<h1>실업급여와 근로장려금 중복, 소득 산정�
 <li>실업급여와 근로장려금은 별개 제도지만, 근로장려금 문은 그 해 근로소득이 있어야 열려요.</li>
 <li>구직급여(실업급여)는 비과세소득이라 근로장려금 소득 계산에서 빠져요.</li>
 <li>신청하려면 소득·총소득·재산·국적·부양자녀 다섯 요건을 모두 갖춰야 해요.</li>
-<li>재산이 1억7천만원을 넘으면 절반만, 2억4천만원을 넘으면 아예 못 받아요.</li>
+<li>재산이 1억7천만원 이상이면 절반만, 2억4천만원 이상이면 아예 못 받아요.</li>
 </ul></section>
 
 <h2 id="src">출처</h2>
@@ -130,7 +130,7 @@ export const faqLd = {
       "name": "근로장려금은 언제 신청하나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "종합소득세 확정신고 기간에 신청해요. 사업소득이 있으면 상반기 소득분을 미리 신청할 수도 있어요."
+        "text": "종합소득세 확정신고 기간인 5월에 신청해요. 반기 동안 근로소득만 있었다면 상반기 소득분을 9월 1일부터 9월 15일까지 미리 신청할 수도 있어요. 사업소득이 있으면 반기 신청은 안 돼요."
       }
     },
     {
@@ -175,7 +175,7 @@ export const landing = {
     "line2": "같이 받아도 되나요",
     "sub1": "구직급여 받는 중에도 신청할 수 있어요",
     "sub2": "다만 재산이 많으면 못 받을 수도 있어요",
-    "foot": "조세특례제한법 원문 대조 · 2026-09-09 검증",
+    "foot": "조세특례제한법 원문 대조 · 2026-09-14 검증",
     "card": {
       "label": "실업급여 받는 중이라도",
       "big": "가능",
@@ -185,7 +185,7 @@ export const landing = {
     },
     "alt": "실업급여와 근로장려금 중복 신청 가능 여부 안내"
   },
-  "badge": "조세특례제한법 신청자격·산정 원문 대조 · 2026-09-09",
+  "badge": "조세특례제한법 신청자격·산정 원문 대조 · 2026-09-14",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [
@@ -204,10 +204,10 @@ export const landing = {
       "selected": false
     },
     {
-      "chip": "재산 2억4천만원 넘으면",
+      "chip": "재산 2억4천만원 이상이면",
       "big": "신청 불가",
       "unit": "재산 요건",
-      "sub": "가구원 재산 합계액이 이 금액 넘으면 자격이 없어요",
+      "sub": "가구원 재산 합계액이 이 금액 이상이면 자격이 없어요",
       "selected": false
     }
   ],
@@ -287,7 +287,7 @@ export const landing = {
     },
     {
       "q": "근로장려금은 언제 신청하나요?",
-      "a": "종합소득세 확정신고 기간에 신청해요. 사업소득이 있으면 상반기 소득분을 미리 신청할 수도 있어요."
+      "a": "종합소득세 확정신고 기간인 5월에 신청해요. 반기 동안 근로소득만 있었다면 상반기 소득분을 9월 1일부터 9월 15일까지 미리 신청할 수도 있어요. 사업소득이 있으면 반기 신청은 안 돼요."
     },
     {
       "q": "재산 2억4천만원에는 무엇이 들어가나요?",
