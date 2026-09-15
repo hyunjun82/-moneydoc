@@ -119,6 +119,15 @@ if (contentTouched && fs.existsSync(path.join(cwd, 'out'))) {
   }
 }
 
+// 1d. 옛 주소 넘김 중복 (항상). 같은 옛 주소가 두 줄이면 Cloudflare 가 뒤 줄을 무시한다.
+// 2026-09-15: 손으로 적은 줄과 gen-redirects 가 채운 줄에 같은 주소 5개가 겹쳐 배포 로그에 경고가 찍혔다.
+try {
+  exec(process.execPath, ['scripts/gen-redirects.mjs', '--dup'], 30000);
+} catch (e) {
+  block('_redirects 중복 — 같은 옛 주소가 두 번 있다. 손으로 적은 줄에서 하나만 남겨라',
+    tail((e.stdout || '') + (e.stderr || ''), 10));
+}
+
 // 2. 계산기 전수 (항상)
 try {
   // 'node' 는 훅 프로세스의 PATH 에 없을 수 있다. 지금 이 훅을 돌리는 node 를 그대로 쓴다
@@ -128,4 +137,4 @@ try {
   block('verify-3way 실행 실패', tail((e.stdout || '') + (e.stderr || '') + (e.message || ''), 8));
 }
 
-process.stdout.write(`[allowed] ${!contentTouched ? '글 변경 없음, 글 게이트 생략' : skipGate ? '글 게이트 건너뜀(.claude/skip-gate)' : `gate PASS (${hubs.join(', ')})`} · verify-3way PASS\n`);
+process.stdout.write(`[allowed] ${!contentTouched ? '글 변경 없음, 글 게이트 생략' : skipGate ? '글 게이트 건너뜀(.claude/skip-gate)' : `gate PASS (${hubs.join(', ')})`} · _redirects 중복 0 · verify-3way PASS\n`);

@@ -1,4 +1,4 @@
-// 훅 셀프테스트: 우회 8경로는 BLOCKED, 정상 5경로는 allowed 여야 한다.  node scripts/selftest/hook.mjs → 13/13
+// 훅 셀프테스트: 우회 8경로와 _redirects 중복 1경로는 BLOCKED, 정상 5경로는 allowed 여야 한다.  node scripts/selftest/hook.mjs → 14/14
 // hook-push-guard.mjs 를 고쳤으면 반드시 돌린다.
 // 명령줄에 git 단어가 들어가면 실제 훅이 이 테스트를 막으므로 파일로 둔다.
 //
@@ -51,4 +51,17 @@ t('allowed', '스테이지 없음 commit', `${G} commit -m x`);
 t('allowed', '히어독 안에 -a 글귀', `${G} commit -q -F - <<'MSG'\ncommit -a 를 막는다\nMSG`);
 t('allowed', '.gitignore add', `${G} add .gitignore && ${G} commit -m x`);
 t('allowed', 'push (origin 과 차이 없음)', `${G} push origin main`);
+console.log('--- 옛 주소 넘김 중복 (2026-09-15) ---');
+{
+  // _redirects 는 글 경로가 아니라 글 게이트를 안 탄다. 중복 검사만으로 막혀야 한다
+  const R = 'public/_redirects';
+  const rOrig = fs.readFileSync(R, 'utf8');
+  const first = rOrig.split(String.fromCharCode(10)).find((l) => l.startsWith('/'));
+  try {
+    fs.writeFileSync(R, rOrig + first + String.fromCharCode(10));
+    t('BLOCKED', '_redirects 에 같은 옛 주소 두 줄', `${G} add public/_redirects && ${G} commit -m x`);
+  } finally {
+    fs.writeFileSync(R, rOrig);
+  }
+}
 console.log(`\n${ok}/${n}`);

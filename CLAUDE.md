@@ -65,7 +65,7 @@ FAIL 우선. 🔴 산식·데이터 → engine.js / 🟡 정책 갱신 → JSON 
 ## 7. 장치가 진짜 잡는지 (숫자로 댄다)
 
 ```bash
-node scripts/selftest/mutate.mjs  # 결함 58종 58/58   (gate 8/8 · hook 13/13 · build-checks 4/4)
+node scripts/selftest/mutate.mjs  # 결함 58종 58/58   (gate 8/8 · hook 14/14 · build-checks 4/4)
 ```
 
 검사기를 고쳤으면 여기부터. "작동한다"는 말 대신 숫자를 댄다.
