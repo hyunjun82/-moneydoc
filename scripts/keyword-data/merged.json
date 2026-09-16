@@ -11977,6 +11977,958 @@
       "spoke": "_seed-survey",
       "src": "네이버 자동완성 실측",
       "collected": "2026-09-13"
+    },
+    {
+      "word": "농지 취득세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "rate",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "부동산 취득세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "rate",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "상가 취득세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "rate",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "상속 취득세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "rate",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "아파트 취득세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "rate",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "자동차 취득세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "rate",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "주택 취득세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "rate",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "증여 취득세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "rate",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 2주택",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "rate",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 2주택 중과",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "rate",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "토지 취득세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "rate",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "5억 아파트 취득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "6억 아파트 취득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "분양권",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "분양권 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "분양권 매매",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "분양권 전매",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "분양권계약해지",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "분양권취소",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "분양권해지",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "실전분양권투자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "아파트 분양권 매매",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "아파트 취득세 감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "아파트 취득세 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "아파트 취득세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "아파트 취득세 납부기한",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "아파트 취득세 카드납부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "아파트 취득세 할부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 분양권",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 분양권 계약일",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 분양권 주택수",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "apartment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "다자녀 취득세 감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "디딤돌 생애최초",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "생애첫주택 취득세 감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "생애최초",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "생애최초 ltv",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "생애최초 대출",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "생애최초 디딤돌대출",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "생애최초 보금자리론",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "생애최초 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "생애최초 주담대",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "생애최초 취득세 감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "생애최초 특별공급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "아파트 취득세 생애최초",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "자동차 취득세 감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "전기차 취득세 감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "출산 취득세 감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 생애최초",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 생애최초 감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 생애최초 감면 서류",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 생애최초 감면 신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 생애최초 감면 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 생애최초 법무사",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 생애최초 신생아",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 생애최초 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 생애최초 추징",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "하이브리드 취득세 감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "exemption",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "2027 출산지원금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "생애최초 신생아 취득세 감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "신생아 취득세 감면 경정청구",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "신생아 취득세 감면 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "신생아 취득세 감면 서류",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "신생아 취득세 감면 소급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "신생아 취득세 감면 신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "신생아 취득세 감면 실거주",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "신생아 취득세 감면 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "신생아 취득세 감면 추징",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "출산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "출산 1000만원",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "출산 축하 메세지",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "출산 혜택",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "출산 후 선물",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "출산선물",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "출산일 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 출산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 출산 환급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 출산감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 출산감면 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 출산감면 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "한국 출산율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "newborn",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "부동산 취득세 납부기한",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "payment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "자동차 취득세 카드납부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "payment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 납부기한",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "payment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 납부기한 등기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "payment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 납부기한 연장 신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "payment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 카드납부 무이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "payment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 카드납부 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "payment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 카드납부 법무사",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "payment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 카드납부 분할",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "payment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 카드납부 수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "payment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 카드납부 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "payment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 카드납부 혜택",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "payment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "9월 취득세 무이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "bmw 무이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "국민카드 취득세 무이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "무이 잠실새내",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "무이 잠실점",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "무이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "무이자할부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "무이자할부카드",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "부동산 취득세 할부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "부분무이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "삼성카드 취득세 무이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "애플 무이자할부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "우리카드 취득세 무이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "자동차 무이자할부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "자동차 취득세 할부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "재산세 무이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 무이자 국민카드",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 무이자 삼성카드",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 무이자 카드",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 무이자 할부 카드",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 무이자할부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 할부 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 할부 무이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 할부 삼성카드",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 할부 수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 할부 이자율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
+    },
+    {
+      "word": "취득세 할부 카드",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "installment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-15"
     }
   ],
   "questions": [

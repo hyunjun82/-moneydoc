@@ -54,7 +54,7 @@ export const GUIDES: GuideLink[] = [
   {
     "cat": "realestate",
     "catLabel": "부동산",
-    "href": "/acquisition-tax/",
+    "href": "/acquisition-tax/guide/",
     "title": "집 살 때 취득세 세율과 계산, 생애최초 감면부터 다주택 중과까지",
     "blurb": "6억·9억 세율 · 집값별 세금표 · 생애최초 200만원 · 8%·12% 중과"
   },
@@ -68,8 +68,22 @@ export const GUIDES: GuideLink[] = [
   {
     "cat": "realestate",
     "catLabel": "부동산",
+    "href": "/acquisition-tax/payment/",
+    "title": "취득세 카드납부 되나요, 납부기한은 언제까지인가요",
+    "blurb": "60일 기한 · 등기 접수일 · 신용카드 승인일 · 무신고 20% 가산세"
+  },
+  {
+    "cat": "realestate",
+    "catLabel": "부동산",
+    "href": "/acquisition-tax/exemption/",
+    "title": "취득세 생애최초 감면 조건과 신청 서류, 추징은 언제 되나요",
+    "blurb": "무주택 12억 이하 200만원 공제 · 소형 300만원 · 출산 500만원 · 3년 추징"
+  },
+  {
+    "cat": "realestate",
+    "catLabel": "부동산",
     "href": "/transfer-tax/expense/",
-    "title": "양도세 필요경비 인정 항목, 취득세와 중개수수료도 되나요",
+    "title": "양도세 필요경비 인정 항목, 취득세와 중개수수료도 포함되나요",
     "blurb": "취득세·중개수수료·자본적 지출 · 필요경비로 줄어드는 세금 · 증빙 남기는 법"
   },
   {
@@ -517,7 +531,7 @@ export const GUIDES: GuideLink[] = [
     "cat": "government",
     "catLabel": "정부지원금",
     "href": "/unemployment/student/",
-    "title": "대학생도 실업급여 되나요, 알바 기준과 단기알바 주말알바",
+    "title": "대학생도 실업급여 되나요, 단기알바와 주말알바 기준",
     "blurb": "대학생 신분과 무관 · 알바 시간·기간 기준이 관건 · 단기·주말알바 판정"
   },
   {
@@ -531,14 +545,14 @@ export const GUIDES: GuideLink[] = [
     "cat": "government",
     "catLabel": "정부지원금",
     "href": "/unemployment/artist/",
-    "title": "예술인 고용보험 실업급여와 신청 방법, 소득 활동과 계산기",
+    "title": "예술인 고용보험 실업급여 얼마나 받나요, 신청 방법과 소득 활동",
     "blurb": "문화예술용역 계약 기준 · 24개월 중 9개월 채우면 신청 · 소득 있으면 신고"
   },
   {
     "cat": "government",
     "catLabel": "정부지원금",
     "href": "/unemployment/unfair-dismissal/",
-    "title": "부당해고 실업급여와 권고사직, 해고예고수당부터 노동청 신고까지",
+    "title": "부당해고 실업급여 되나요, 권고사직과 해고예고수당도 받나요",
     "blurb": "해고와 권고사직 차이·노동위원회 구제신청·해고예고수당·심사청구 90일"
   },
   {
@@ -580,7 +594,7 @@ export const GUIDES: GuideLink[] = [
     "cat": "government",
     "catLabel": "정부지원금",
     "href": "/unemployment/industrial-accident/",
-    "title": "산재 휴업급여와 실업급여 중복, 지급 기간과 산재 종결 후 신청 방법",
+    "title": "산재 휴업급여와 실업급여 중복되나요, 종결 후 신청 방법",
     "blurb": "휴업급여 받는 동안 실업급여 중단 · 요양 종결 후 신고하면 재개돼요"
   },
   {
@@ -636,7 +650,7 @@ export const GUIDES: GuideLink[] = [
     "cat": "government",
     "catLabel": "정부지원금",
     "href": "/unemployment/platform/",
-    "title": "실업급여 쿠팡알바와 쿠팡이츠 배민커넥트, 취업신고와 주 15시간은?",
+    "title": "실업급여 쿠팡알바와 쿠팡이츠 배민커넥트, 신고 방법과 주 15시간은?",
     "blurb": "쿠팡알바는 근로시간·쿠팡이츠는 노무제공계약 기준으로 취업을 따져요"
   },
   {

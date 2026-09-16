@@ -19,6 +19,7 @@ const HUBS = [
   { topic: 'severance', cat: 'law', plan: 'hub.severance.json' },
   { topic: 'transfer-tax', cat: 'realestate', plan: 'hub.transfer-tax.json' },
   { topic: 'basic-pension', cat: 'government', plan: 'hub.basic-pension.json' },
+  { topic: 'acquisition-tax', cat: 'realestate', plan: 'hub.acquisition-tax.json' },
 ];
 
 const metaOf = (cat, file) => {

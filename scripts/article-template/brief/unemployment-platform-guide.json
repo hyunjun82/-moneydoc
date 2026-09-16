@@ -2,7 +2,7 @@
   "slug": "unemployment-platform-guide",
   "keyword": "실업급여 쿠팡알바",
   "calc": "government/unemployment-benefit",
-  "mustInclude": ["플랫폼", "취업신고"],
+  "mustInclude": ["플랫폼", "신고 방법"],
   "reuseEvidence": "unemployment-report-job-guide",
   "queries": ["실업급여 쿠팡알바", "실업급여 배달", "실업급여 플랫폼 소득"],
   "sources": [

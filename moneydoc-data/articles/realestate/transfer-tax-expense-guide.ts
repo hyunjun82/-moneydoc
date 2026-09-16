@@ -1,10 +1,10 @@
 // 자동 생성: scripts/article-template/convert-v2.mjs — 직접 수정하지 말 것
 // 원본: public/_preview/article-v2-transfer-tax-expense-guide.html
 export const meta = {
-  title: "양도세 필요경비 인정 항목, 취득세와 중개수수료도 되나요",
+  title: "양도세 필요경비 인정 항목, 취득세와 중개수수료도 포함되나요",
   description: "양도세 필요경비는 취득가액, 자본적 지출액, 양도비 세 갈래만 인정돼요. 취득세는 취득가액에, 팔 때 낸 중개수수료는 양도비에 들어가요. 2년 이상 보유한 1주택을 12억원 이하로 팔면 세금이 0원이고, 5억원에 판 2주택이면 1,000만원이 세금을 3,762,000원 줄여요.",
   datePublished: "2026-09-13",
-  dateModified: "2026-09-13",
+  dateModified: "2026-09-15",
   url: "https://moneydoc.kr/realestate/transfer-tax-expense-guide/",
   image: "https://moneydoc.kr/og/transfer-tax-expense-guide.png",
   imageAlt: "양도세 필요경비 인정 항목. 5억원에 판 2주택은 필요경비 1,000만원으로 세금이 3,762,000원 줄어요",
@@ -12,8 +12,8 @@ export const meta = {
 
 export const scriptKey = "transfer-tax-expense-guide";
 
-export const html = `<h1>양도세 필요경비 인정 항목, 취득세와 중개수수료도 되나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">양도소득세 계산기 산식 기준 · 2026-09-13</span></div>
+export const html = `<h1>양도세 필요경비 인정 항목, 취득세와 중개수수료도 포함되나요</h1>
+<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">양도소득세 계산기 산식 기준 · 2026-09-15</span></div>
 <img class="v2-hero" src="/og/transfer-tax-expense-guide.png" width="1200" height="630" alt="양도세 필요경비 인정 항목. 5억원에 판 2주택은 필요경비 1,000만원으로 세금이 3,762,000원 줄어요">
 <p class="v2-lead v2-intro">양도세 필요경비는 판 금액에서 빼 주는 비용이에요. 법이 인정하는 건 산 값과 그때 든 부대비용, 집의 가치를 올리거나 쓰기 편하게 한 비용, 팔 때 든 비용 세 갈래예요. 취득세는 산 값에, 팔 때 낸 중개수수료는 팔 때 든 비용에 들어가요. 다만 2년 이상 보유한 1주택을 12억원 이하로 팔면 세금이 0원이라 따질 일이 없어요. 인정 항목, 줄어드는 세금, 남겨야 할 증빙을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -109,7 +109,7 @@ export const html = `<h1>양도세 필요경비 인정 항목, 취득세와 중�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>소득세법 제89조(1세대 1주택 비과세, 12억원 초과 고가주택 제외), 제97조(양도소득의 필요경비 계산). 같은 법 시행령 제154조(1세대 1주택 보유기간), 제163조(양도자산의 필요경비: 취득가액, 자본적 지출액 등, 양도비 등, 증명서류), 제89조(자산의 취득가액), 제67조(자본적 지출의 뜻).
-<b>정부 도구</b>세금은 홈택스 양도소득세 계산과 0원 일치를 확인한 양도소득세 계산기 값이에요 (2026-09-13 기준).
+<b>정부 도구</b>세금은 홈택스 양도소득세 계산과 0원 일치를 확인한 양도소득세 계산기 값이에요 (2026-09-15 기준).
 </div>
 <div class="v2-rel"><a href="/transfer-tax/"><b>주제 홈</b>양도세 무엇이 궁금하세요</a><a href="/transfer-tax/calculator/"><b>계산기</b>양도소득세 계산기</a><a href="/transfer-tax/long-term-deduction/"><b>다음 질문</b>양도세 장기보유특별공제율</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -172,7 +172,7 @@ export const landing = {
     "line2": "취득세도 돼요",
     "sub1": "증명서류나 계좌이체 기록이 있어야 해요",
     "sub2": "넣으면 세금이 얼마나 줄어드는지",
-    "foot": "양도소득세 계산기 산식 기준 · 2026-09-13 검증",
+    "foot": "양도소득세 계산기 산식 기준 · 2026-09-15 검증",
     "card": {
       "label": "필요경비 1,000만원",
       "big": "3,762,000",
@@ -186,7 +186,7 @@ export const landing = {
     "href": "/transfer-tax/calculator/",
     "label": "양도소득세 계산기 바로가기"
   },
-  "badge": "양도소득세 계산기 산식 기준 · 2026-09-13",
+  "badge": "양도소득세 계산기 산식 기준 · 2026-09-15",
   "basis": "2026년 9월 기준",
   "readMinutes": 6,
   "quick": [

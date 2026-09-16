@@ -1,0 +1,61 @@
+{
+  "slug": "acquisition-tax-payment-guide",
+  "keyword": "취득세 카드납부",
+  "calc": "realestate/acquisition-tax",
+  "mustInclude": [
+    "카드납부",
+    "납부기한",
+    "할부"
+  ],
+  "queries": [
+    "취득세 카드납부",
+    "취득세 카드납부 방법",
+    "취득세 카드납부 무이자",
+    "취득세 카드납부 수수료",
+    "취득세 납부기한",
+    "취득세 할부"
+  ],
+  "sources": [
+    {
+      "label": "지방세법 (제20조 신고 및 납부, 제21조 부족세액 추징과 가산세)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세법",
+      "must": [
+        "제20조",
+        "제21조"
+      ]
+    },
+    {
+      "label": "지방세기본법 (제53조 무신고가산세, 제54조 과소신고가산세, 제55조 납부지연가산세)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세기본법",
+      "must": [
+        "가산세"
+      ]
+    },
+    {
+      "label": "지방세법 시행령 (신고납부 절차)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세법시행령",
+      "must": [
+        "신고"
+      ]
+    },
+    {
+      "label": "지방세징수법 (제23조 신용카드 등에 의한 지방세 납부)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세징수법",
+      "must": [
+        "신용카드"
+      ]
+    },
+    {
+      "label": "지방세징수법 시행령 (제23조 위임, 카드로 낼 수 있는 징수금과 대행기관)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세징수법시행령",
+      "must": [
+        "신용카드"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "acquisition-tax-exemption-guide",
+  "keyword": "취득세 생애최초 감면 조건",
+  "calc": "realestate/acquisition-tax",
+  "mustInclude": ["생애최초", "감면", "추징"],
+  "queries": [
+    "취득세 생애최초 감면 조건",
+    "취득세 생애최초 감면 서류",
+    "취득세 생애최초 감면 신청",
+    "취득세 생애최초 감면 추징",
+    "신생아 취득세 감면",
+    "생애첫주택 취득세 감면"
+  ],
+  "sources": [
+    { "label": "지방세특례제한법 (제36조의3 생애최초 주택 구입 감면, 제36조의5 출산·양육 주택 감면, 제183조 감면 신청)", "kind": "law", "url": "https://www.law.go.kr/법령/지방세특례제한법", "must": ["제36조의3", "제36조의5"] },
+    { "label": "지방세특례제한법 시행령 (감면 신청 절차와 실거주 확인)", "kind": "law", "url": "https://www.law.go.kr/법령/지방세특례제한법시행령", "must": ["생애최초"] },
+    { "label": "지방세특례제한법 시행규칙 (감면 신청서 서식과 첨부 서류)", "kind": "law", "url": "https://www.law.go.kr/법령/지방세특례제한법시행규칙", "must": ["감면"] },
+    { "label": "지방세법 (제11조 주택 취득세율, 제20조 60일 신고납부)", "kind": "law", "url": "https://www.law.go.kr/법령/지방세법", "must": ["제20조"] }
+  ]
+}

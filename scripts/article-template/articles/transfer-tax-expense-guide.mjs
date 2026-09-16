@@ -35,7 +35,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
 
   return {
     slug: 'transfer-tax-expense-guide', cat: 'realestate', catLabel: '부동산', crumb: '양도세 필요경비',
-    title: '양도세 필요경비 인정 항목, 취득세와 중개수수료도 되나요',
+    title: '양도세 필요경비 인정 항목, 취득세와 중개수수료도 포함되나요',
     description: `양도세 필요경비는 취득가액, 자본적 지출액, 양도비 세 갈래만 인정돼요. 취득세는 취득가액에, 팔 때 낸 중개수수료는 양도비에 들어가요. 2년 이상 보유한 1주택을 12억원 이하로 팔면 세금이 0원이고, 5억원에 판 2주택이면 1,000만원이 세금을 ${won(sM1)}원 줄여요.`,
     datePublished: '2026-09-13', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `양도소득세 계산기 산식 기준 · ${VERIFIED}`,

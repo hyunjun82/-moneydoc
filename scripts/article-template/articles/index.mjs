@@ -16,6 +16,8 @@ export const ARTICLES = [
   { slug: 'freelancer-tax-guide', cat: 'tax', catLabel: '세금', crumb: '프리랜서 3.3%', blurb: '3.3% 구조 · 단순경비율 · 수입별 환급액 표 · 5월 신고 흐름' },
   { slug: 'acquisition-tax-guide', cat: 'realestate', catLabel: '부동산', crumb: '취득세', blurb: '6억·9억 세율 · 집값별 세금표 · 생애최초 200만원 · 8%·12% 중과' },
   { slug: 'transfer-tax-guide', cat: 'realestate', catLabel: '부동산', crumb: '양도세 1주택 비과세', blurb: '2년 보유 비과세 · 12억 초과분 계산 · 장기보유특별공제 80% · 2개월 예정신고' },
+  { slug: 'acquisition-tax-payment-guide', cat: 'realestate', catLabel: '부동산', crumb: '카드납부와 납부기한', blurb: '60일 기한 · 등기 접수일 · 신용카드 승인일 · 무신고 20% 가산세' },
+  { slug: 'acquisition-tax-exemption-guide', cat: 'realestate', catLabel: '부동산', crumb: '생애최초 감면', blurb: '무주택 12억 이하 200만원 공제 · 소형 300만원 · 출산 500만원 · 3년 추징' },
   { slug: 'transfer-tax-expense-guide', cat: 'realestate', catLabel: '부동산', crumb: '양도세 필요경비', blurb: '취득세·중개수수료·자본적 지출 · 필요경비로 줄어드는 세금 · 증빙 남기는 법' },
   { slug: 'transfer-tax-long-term-deduction-guide', cat: 'realestate', catLabel: '부동산', crumb: '양도세 장기보유특별공제', blurb: '1주택 보유·거주별 공제율 · 일반 공제율 · 조정대상지역 2주택 배제 · 한도' },
   { slug: 'property-tax-guide', cat: 'realestate', catLabel: '부동산', crumb: '재산세', blurb: '공시가격 → 과세표준 · 공시가별 세금표 · 1주택 특례세율 · 7월 9월 납기' },
