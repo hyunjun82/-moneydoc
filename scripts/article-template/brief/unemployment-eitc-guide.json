@@ -2,10 +2,57 @@
   "slug": "unemployment-eitc-guide",
   "keyword": "실업급여 근로장려금 중복",
   "calc": "government/unemployment-benefit",
-  "mustInclude": ["근로장려금"],
-  "queries": ["실업급여 근로장려금", "실업급여 근로장려금 중복", "근로장려금 신청 조건", "근로장려금 소득 기준"],
+  "mustInclude": [
+    "근로장려금"
+  ],
+  "queries": [
+    "실업급여 근로장려금",
+    "실업급여 근로장려금 중복",
+    "근로장려금 신청 조건",
+    "근로장려금 소득 기준"
+  ],
   "sources": [
-    { "label": "조세특례제한법 (근로장려금 신청자격 §100의3, 산정 §100의5)", "kind": "law", "url": "https://www.law.go.kr/법령/조세특례제한법", "must": ["제100조의3", "근로장려금"] },
-    { "label": "조세특례제한법 시행령 (총소득 기준금액, 재산 요건)", "kind": "law", "url": "https://www.law.go.kr/법령/조세특례제한법시행령", "must": ["근로장려금"] }
+    {
+      "label": "조세특례제한법 (근로장려금 신청자격 §100의3, 산정 §100의5)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/조세특례제한법",
+      "must": [
+        "제100조의3",
+        "근로장려금"
+      ]
+    },
+    {
+      "label": "조세특례제한법 시행령 (총소득 기준금액, 재산 요건)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/조세특례제한법시행령",
+      "must": [
+        "근로장려금"
+      ]
+    },
+    {
+      "label": "소득세법 (실업급여 비과세 §12, 종합소득 확정신고 기간 §70)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법",
+      "must": [
+        "실업급여",
+        "확정신고"
+      ]
+    },
+    {
+      "label": "국세청 근로장려금 제도 소개 (총소득 기준금액, 최대지급액)",
+      "kind": "gov",
+      "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=2450&cntntsId=7781",
+      "must": [
+        "근로장려금"
+      ]
+    },
+    {
+      "label": "국세청 근로·자녀장려금 신청자격",
+      "kind": "gov",
+      "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=2452&cntntsId=7783",
+      "must": [
+        "근로장려금"
+      ]
+    }
   ]
 }
