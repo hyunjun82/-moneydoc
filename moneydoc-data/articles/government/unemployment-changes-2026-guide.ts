@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-changes-2026-guide";
 
 export const html = `<h1>2026년 실업급여 개편, 하한액과 반복수급 횟수제한은?</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">2026년 실업급여 개정 내용과 시행일을 고용보험법령 원문과 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">2026년 실업급여 개정 내용과 시행일을 고용보험법령 원문과 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-changes-2026-guide.png" width="1200" height="630" alt="2026년 실업급여 개편, 하한액과 상한액, 법 개정 시행 시기">
 <p class="v2-lead v2-intro">실업급여가 2026년에 개편됐다는 말을 들으면 무엇이 언제부터 달라지는지 궁금해져요. 2026년에 퇴사해 받는 돈은 최저임금이 올라 하한액이 올랐어요. 2026년 3월 고용보험법 개정은 고용보험 가입 기준을 근로시간에서 보수로, 기초일액 계산을 평균임금에서 1년 보수로 바꿔요. 반복수급 감액과 횟수제한 소문도 법 원문으로 가려 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

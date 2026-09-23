@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-other-activity-guide";
 
 export const html = `<h1>실업급여 구직외활동 인정 범위, 취업특강과 직업심리검사</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-other-activity-guide.png" width="1200" height="630" alt="실업급여 구직외활동 인정 범위와 인정되지 않는 경우">
 <p class="v2-lead v2-intro">실업인정일에 신고할 활동이 꼭 입사지원이어야 하는 건 아니에요. 규정이 재취업활동으로 볼 수 있는 유형을 따로 정해 두었고, 훈련 수강이나 고용센터 프로그램 참여가 여기에 들어가요. 다만 아무 학원이나 되는 게 아니라 정해진 과정이어야 하고, 출결 관리가 되어야 해요. 어디까지 인정되는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-sickness-guide";
 
 export const html = `<h1>질병 퇴사 실업급여, 진단서로 인정받는 조건</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 수급 요건과 시행규칙 별표 2 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 수급 요건과 시행규칙 별표 2 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-sickness-guide.png" width="1200" height="630" alt="질병 퇴사 실업급여와 수급기간 연장 절차">
 <p class="v2-lead v2-intro">아파서 회사를 그만두면 실업급여가 되는지 헷갈려요. 사유로는 인정돼요. 그런데 실업급여는 일할 의사와 능력이 있는 사람에게 주는 돈이라, 지금 당장 일할 수 없으면 그대로는 막혀요. 그래서 순서가 중요해요. 먼저 수급기간을 연장해 두고 몸이 나은 뒤에 신청하는 거예요. 이 순서와 진단서 요건을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

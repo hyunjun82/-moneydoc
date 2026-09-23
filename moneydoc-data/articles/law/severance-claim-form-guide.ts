@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "severance-claim-form-guide";
 
 export const html = `<h1>퇴직금 못 받았을 때 지급명령과 소장, 양식부터 제출까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">민사소송법과 인지법 산식 대조 · 2026-09-13</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">민사소송법과 인지법 산식 대조 · 2026-09-13</span></div>
 <img class="v2-hero" src="/og/severance-claim-form-guide.png" width="1200" height="630" alt="퇴직금 지급명령 인지대. 청구금액 14,673,913원이면 6,300원">
 <p class="v2-lead v2-intro">노동청 진정으로도 퇴직금을 받지 못했다면 법원으로 갈 차례예요. 가장 싸고 빠른 방법은 지급명령이에요. 서류만 내면 되고 법정에 나가지 않아요. 월급 300만원으로 5년 일한 사람의 퇴직금 14,673,913원을 청구한다면 전자소송 인지대는 6,300원이에요. 같은 금액을 소장으로 내면 63,900원이라 57,600원 차이가 나요. 신청서 쓰는 법, 양식 받는 곳, 비용, 관할 법원을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

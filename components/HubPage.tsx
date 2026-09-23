@@ -50,7 +50,7 @@ export function HubPage({ meta, html, faqLd, scriptKey, url, catLabel, crumb, ca
     dateModified: meta.dateModified,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     image: [meta.image],
-    author: { "@type": "Organization", name: "MoneyDoc 편집팀" },
+    author: { "@type": "Person", name: "한결", url: "https://moneydoc.kr/about/" },
     publisher: { "@type": "Organization", name: "MoneyDoc", url: "https://moneydoc.kr/" },
   };
 

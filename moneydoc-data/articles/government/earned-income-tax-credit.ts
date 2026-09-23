@@ -200,7 +200,7 @@ export const bodyHtml = `
     </section>
 
     <div class="foot">
-      <div class="org">MoneyDoc 편집팀</div>
+      <div class="org">글 한결</div>
       <div style="margin-top:6px">자료 출처: 국세청(nts.go.kr) · 정책브리핑(korea.kr) — 심사·지급 기준은 변동될 수 있으니 최종 확인은 국세청 공식 채널에서 하세요.</div>
     </div>
 

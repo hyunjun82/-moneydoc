@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "severance-tax-guide";
 
 export const html = `<h1>퇴직금 세금 몇프로, 세전 세후 차이는 얼마나 되나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">퇴직소득세 계산기 산식 기준 · 2026-09-13</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">퇴직소득세 계산기 산식 기준 · 2026-09-13</span></div>
 <img class="v2-hero" src="/og/severance-tax-guide.png" width="1200" height="630" alt="퇴직금 세금 몇프로. 월급 300만원으로 5년 일하면 퇴직금의 1.14%가 세금이에요">
 <p class="v2-lead v2-intro">퇴직금 세금은 퇴직금 전체에 세율을 바로 곱하지 않아요. 근속연수공제와 환산급여공제를 먼저 거쳐서, 월급 300만원으로 5년 일했다면 세금은 퇴직금의 1.14%예요. 월급이 같으면 근속 5년까지는 이 비율이 같고, 5년을 넘기면 내려가요. 몇프로인지, 어떤 순서로 계산하는지, 세전 세후가 얼마나 차이 나는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 /* =========================================================================
    ArticleBody — 독립 텍스트 가이드 페이지 본문 템플릿
    - 단일 컬러(--brand), 메인 UI 토큰 그대로
-   - 제목 H1 + 작성자(MoneyDoc 편집팀) + 게시일/수정일 + Article·FAQ JSON-LD
+   - 제목 H1 + 작성자(한결) + 게시일/수정일 + Article·FAQ JSON-LD
    - 관련 계산기로 교차링크(내부링크 → 노출 유리)
    - 콘텐츠는 moneydoc-data/articles/{cat}/{slug}.ts 에서 주입.
    ========================================================================= */
@@ -146,7 +146,7 @@ function renderBlock(b: ArticleBlock, i: number): ReactNode {
 
 export function ArticleBody({ article, url }: { article?: Article; url?: string }) {
   if (!article) return null;
-  const author = article.author ?? "MoneyDoc 편집팀";
+  const author = article.author ?? "한결";
 
   const articleLd = {
     "@context": "https://schema.org",
@@ -157,7 +157,7 @@ export function ArticleBody({ article, url }: { article?: Article; url?: string 
     ...(url ? { mainEntityOfPage: { "@type": "WebPage", "@id": url } } : {}),
     ...(article.datePublished ? { datePublished: article.datePublished } : {}),
     ...(article.dateModified ? { dateModified: article.dateModified } : {}),
-    author: { "@type": "Organization", name: author },
+    author: { "@type": "Person", name: author, url: "https://moneydoc.kr/about/" },
     publisher: {
       "@type": "Organization",
       name: "MoneyDoc",

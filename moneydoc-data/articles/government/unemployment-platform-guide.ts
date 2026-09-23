@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-platform-guide";
 
 export const html = `<h1>실업급여 쿠팡알바와 쿠팡이츠 배민커넥트, 신고 방법과 주 15시간은?</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행규칙 취업 인정기준과 고용24 신고 안내 원문 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행규칙 취업 인정기준과 고용24 신고 안내 원문 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-platform-guide.png" width="1200" height="630" alt="실업급여 쿠팡알바와 쿠팡이츠 배민커넥트 신고 방법과 주 15시간 기준">
 <p class="v2-lead v2-intro">실업급여를 받는 중에 쿠팡알바나 배달을 해도 되는지 궁금한 분이 많아요. 일할 수는 있지만 취업으로 보는 날은 구직급여가 나오지 않고, 일한 사실은 꼭 신고해야 해요. 근로자로 일할 때와 노무제공자로 일할 때 기준이 달라서 나눠서 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

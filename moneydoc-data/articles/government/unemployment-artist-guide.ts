@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-artist-guide";
 
 export const html = `<h1>예술인 고용보험 실업급여 얼마나 받나요, 신청 방법과 소득 활동</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 예술인 특례 원문 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 예술인 특례 원문 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-artist-guide.png" width="1200" height="630" alt="예술인 고용보험 실업급여 안내. 상한을 받고 피보험 단위기간 5년·50세 미만이면 14,301,000원">
 <p class="v2-lead v2-intro">예술인도 고용보험에 가입되고 실업급여를 받을 수 있어요. 다만 근로계약이 아니라 문화예술용역 계약을 기준으로 하는 별도 장이 적용돼서, 채워야 하는 기간과 신청 요건이 근로자와 달라요. 보험설계사나 대리운전기사 같은 노무제공자와도 계약의 종류부터 갈려요. 예술인이 무엇을 채워야 신청할 수 있는지, 수급 중 소득 활동은 어떻게 신고하는지, 실업급여는 얼마인지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

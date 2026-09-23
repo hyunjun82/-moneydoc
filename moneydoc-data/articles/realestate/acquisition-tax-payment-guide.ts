@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "acquisition-tax-payment-guide";
 
 export const html = `<h1>취득세 카드납부 되나요, 납부기한은 언제까지인가요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">지방세법 신고납부와 지방세징수법 납부방법 원문 대조 · 2026-09-16</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">지방세법 신고납부와 지방세징수법 납부방법 원문 대조 · 2026-09-16</span></div>
 <img class="v2-hero" src="/og/acquisition-tax-payment-guide.png" width="1200" height="630" alt="취득세 카드납부 가능과 납부기한 60일, 등기 접수일 기준">
 <p class="v2-lead v2-intro">취득세는 고지서를 기다렸다가 내는 세금이 아니에요. 집을 산 사람이 스스로 신고하고 내는 세금이라 기한을 넘기면 가산세가 붙어요. 카드로 낼 수 있는지, 무이자 할부가 되는지, 기한을 놓치면 얼마를 더 물고 줄일 방법은 있는지 원문 기준으로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

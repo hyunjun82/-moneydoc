@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: { type: "article", title: meta.title, description: meta.description, url: PAGE_URL },
 };
 
-const articleLd = { "@context": "https://schema.org", "@type": "Article", headline: meta.title, description: meta.description, inLanguage: "ko", datePublished: meta.datePublished, dateModified: meta.dateModified, mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL }, author: { "@type": "Organization", name: "MoneyDoc 편집팀" }, publisher: { "@type": "Organization", name: "MoneyDoc", url: "https://moneydoc.kr/" } };
+const articleLd = { "@context": "https://schema.org", "@type": "Article", headline: meta.title, description: meta.description, inLanguage: "ko", datePublished: meta.datePublished, dateModified: meta.dateModified, mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL }, author: { "@type": "Person", name: "한결", url: "https://moneydoc.kr/about/" }, publisher: { "@type": "Organization", name: "MoneyDoc", url: "https://moneydoc.kr/" } };
 
 const breadcrumbLd = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "홈", item: "https://moneydoc.kr/" }, { "@type": "ListItem", position: 2, name: "정부지원금", item: "https://moneydoc.kr/gov/" }, { "@type": "ListItem", position: 3, name: "근로장려금 지급일·조회", item: PAGE_URL } ] };
 

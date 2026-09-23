@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-harassment-guide";
 
 export const html = `<h1>직장내 괴롭힘 실업급여, 신고와 증빙 어떻게 하나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">근로기준법·고용보험법 시행규칙·고용24·노동포털 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">근로기준법·고용보험법 시행규칙·고용24·노동포털 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-harassment-guide.png" width="1200" height="630" alt="직장 내 괴롭힘은 정당한 이직 사유. 회사 신고는 의무가 아니다">
 <p class="v2-lead v2-intro">직장 내 괴롭힘 때문에 그만두면 실업급여가 헷갈려요. 사직서를 냈으니 그냥 자진퇴사로 끝난 것 같아서예요. 그런데 고용센터가 보는 것은 사직서 문구가 아니라 실제 퇴사 사유예요. 남는 걱정은 두 가지예요. 증빙으로 무엇을 내는지, 퇴사코드가 11번으로 찍혔으면 어떻게 하는지. 둘 다 법과 정부 안내에 답이 있어요.</p>
 <section class="v2-answer" aria-label="즉답">

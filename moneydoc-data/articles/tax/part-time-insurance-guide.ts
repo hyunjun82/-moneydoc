@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "part-time-insurance-guide";
 
 export const html = `<h1>아르바이트 4대보험 가입 기준과 보험료, 주 15시간부터 퇴사 후까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">법령 가입 기준 원문 확인 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">법령 가입 기준 원문 확인 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/part-time-insurance-guide.png" width="1200" height="630" alt="아르바이트 4대보험 가입 기준. 주 20시간이면 월 보수 1,073,280원에 보험료 104,280원">
 <p class="v2-lead v2-intro">아르바이트라고 4대보험에서 빠지는 건 아니에요. 한 달 소정근로시간 60시간, 주 15시간이 가입을 가르는 기준이고, 이 시간을 넘으면 정규직과 같은 요율로 가입해요. 2026년 최저임금으로 주 20시간 일하면 월 보수가 1,073,280원이고 보험료는 104,280원이에요. 보험별 가입 기준과 시간대별 보험료, 사장님이 해야 할 일, 그만둔 뒤 건강보험을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

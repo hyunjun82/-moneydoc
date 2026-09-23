@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-documents-guide";
 
 export const html = `<h1>실업급여 서류, 신청 준비물 목록과 발급받는 곳</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 신고·제출 규정과 고용24 안내 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 신고·제출 규정과 고용24 안내 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-documents-guide.png" width="1200" height="630" alt="실업급여 신청 서류 목록과 발급처">
 <p class="v2-lead v2-intro">실업급여를 신청하러 갈 때 서류를 잔뜩 준비해야 하는 줄 아는 분이 많아요. 실제로는 본인이 들고 갈 건 신분증과 계좌뿐이에요. 이직확인서와 고용보험 상실 신고는 회사가 처리하고, 구직신청과 교육은 온라인으로 해요. 대신 퇴사 사유에 따라 따로 준비할 자료가 있어요. 무엇을 어디서 구하는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

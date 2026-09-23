@@ -24,12 +24,12 @@ export default function Page() {
           className="guide-list"
           style={{ padding: "32px 36px", color: "var(--text-2)", lineHeight: 1.75 }}
         >
-          <h2 style={{ ...H2, marginTop: 0 }}>누가 만드나</h2>
+          <h2 id="author" style={{ ...H2, marginTop: 0 }}>누가 만드나</h2>
           <p>
-            MoneyDoc은 <strong>MoneyDoc 편집팀</strong>이 운영하는 계산기·가이드 사이트입니다.
+            MoneyDoc은 <strong>한결</strong>(필명)이 개인으로 운영하는 계산기·가이드 사이트입니다.
+            사이트의 계산기와 글은 모두 한결이 만들고 검토하며, 글 상단에 작성자와 기준 시점을 적습니다.
             세무·법률 자문을 제공하는 곳이 아니며, 공개된 법령과 정부 고시를 근거로
             계산 과정을 투명하게 보여주는 것을 목표로 합니다.
-            글의 작성자는 각 페이지 상단에 표기하고, 기준 시점을 함께 적습니다.
           </p>
 
           <h2 style={H2}>어떻게 만드나</h2>

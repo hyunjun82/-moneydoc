@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "acquisition-tax-exemption-guide";
 
 export const html = `<h1>취득세 생애최초 감면 조건과 신청 서류, 추징은 언제 되나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">지방세특례제한법 감면 조항 원문 대조 · 2026-09-16</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">지방세특례제한법 감면 조항 원문 대조 · 2026-09-16</span></div>
 <img class="v2-hero" src="/og/acquisition-tax-exemption-guide.png" width="1200" height="630" alt="생애최초 취득세 감면, 4억원 집의 취득세가 200만원 공제로 줄어드는 금액">
 <p class="v2-lead v2-intro">집을 처음 사는 사람은 취득세에서 200만원까지 빼 줘요. 다만 무주택이어야 하고, 본인이 살 목적이어야 하고, 집값 한도가 있어요. 소형 주택과 인구감소지역 주택은 빼 주는 금액이 더 크고, 아이를 낳은 집은 별도 감면이 있어요. 신청 시기와 서류, 3년 안에 팔면 도로 물어야 하는 기준까지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

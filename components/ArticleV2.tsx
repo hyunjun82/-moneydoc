@@ -42,7 +42,7 @@ export function ArticleV2({ meta, html, faqLd, scriptKey, url, cat, catLabel, cr
     datePublished: meta.datePublished,
     dateModified: meta.dateModified,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    author: { "@type": "Organization", name: "MoneyDoc 편집팀", url: "https://moneydoc.kr/" },
+    author: { "@type": "Person", name: "한결", url: "https://moneydoc.kr/about/" },
     publisher: { "@type": "Organization", name: "MoneyDoc", url: "https://moneydoc.kr/" },
   };
   const breadcrumbLd = {

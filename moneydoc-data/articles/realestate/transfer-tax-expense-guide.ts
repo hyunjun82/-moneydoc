@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "transfer-tax-expense-guide";
 
 export const html = `<h1>양도세 필요경비 인정 항목, 취득세와 중개수수료도 포함되나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">양도소득세 계산기 산식 기준 · 2026-09-15</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">양도소득세 계산기 산식 기준 · 2026-09-15</span></div>
 <img class="v2-hero" src="/og/transfer-tax-expense-guide.png" width="1200" height="630" alt="양도세 필요경비 인정 항목. 5억원에 판 2주택은 필요경비 1,000만원으로 세금이 3,762,000원 줄어요">
 <p class="v2-lead v2-intro">양도세 필요경비는 판 금액에서 빼 주는 비용이에요. 법이 인정하는 건 산 값과 그때 든 부대비용, 집의 가치를 올리거나 쓰기 편하게 한 비용, 팔 때 든 비용 세 갈래예요. 취득세는 산 값에, 팔 때 낸 중개수수료는 팔 때 든 비용에 들어가요. 다만 2년 이상 보유한 1주택을 12억원 이하로 팔면 세금이 0원이라 따질 일이 없어요. 인정 항목, 줄어드는 세금, 남겨야 할 증빙을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

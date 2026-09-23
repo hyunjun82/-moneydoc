@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-industrial-accident-guide";
 
 export const html = `<h1>산재 휴업급여와 실업급여 중복되나요, 종결 후 신청 방법</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">산재 요양 중 실업급여와 수급기간 연기를 고용보험법령 원문과 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">산재 요양 중 실업급여와 수급기간 연기를 고용보험법령 원문과 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-industrial-accident-guide.png" width="1200" height="630" alt="산재 휴업급여와 실업급여 중복 여부와 산재 종결 후 신청 방법">
 <p class="v2-lead v2-intro">일하다 다쳐 산재로 인정받으면 휴업급여를 받아요. 요양 중에 회사를 그만뒀다면 실업급여와 언제 겹치는지 헷갈려요. 두 급여를 같은 날 겹쳐 받을 수는 없어요. 대신 취업할 수 없던 기간만큼 수급기간이 늘어요. 수급기간은 퇴사 다음 날부터 12개월 안에 실업급여를 받아야 하는 기한이에요.</p>
 <section class="v2-answer" aria-label="즉답">

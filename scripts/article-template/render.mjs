@@ -148,13 +148,13 @@ export function render(a) {
 <meta name="robots" content="max-image-preview:large">
 <meta property="og:image" content="/og/${a.slug}.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <script type="application/ld+json">${JSON.stringify(faqLd)}</script>
-<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: a.title, image: [`https://moneydoc.kr/og/${a.slug}.png`], datePublished: a.datePublished, dateModified: [a.datePublished, a.verified].sort().pop(), author: { '@type': 'Organization', name: 'MoneyDoc 편집팀' } })}</script>
+<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: a.title, image: [`https://moneydoc.kr/og/${a.slug}.png`], datePublished: a.datePublished, dateModified: [a.datePublished, a.verified].sort().pop(), author: { '@type': 'Person', name: '한결', url: 'https://moneydoc.kr/about/' } })}</script>
 <style>${CSS}</style></head><body>
 <div class="top"><div class="in"><i>$</i>MoneyDoc</div></div>
 <main>
 <div class="crumb"><a href="/">홈</a> › <a href="/${a.cat}/">${a.catLabel}</a> › ${a.crumb}</div>
 <h1>${a.title}</h1>
-<div class="meta"><span>MoneyDoc 편집팀</span><span>·</span><span>${a.basis}</span><span>·</span><span>${a.readMinutes}분</span><span class="badge">${a.badge}</span></div>
+<div class="meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>${a.basis}</span><span>·</span><span>${a.readMinutes}분</span><span class="badge">${a.badge}</span></div>
 <img class="hero" src="/_preview/og-${a.slug}.png" width="1200" height="630" alt="${esc(heroAlt)}">
 <p class="lead intro">${a.intro}</p>
 <section class="answer" aria-label="즉답">

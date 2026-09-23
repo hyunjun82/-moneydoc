@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-no-insurance-guide";
 
 export const html = `<h1>고용보험 미가입 실업급여 받는 법, 소급 가입과 확인청구</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 피보험자격 규정 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 피보험자격 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-no-insurance-guide.png" width="1200" height="630" alt="고용보험 미가입 시 확인청구로 소급 가입. 한도 3년">
 <p class="v2-lead v2-intro">일은 했는데 회사가 고용보험을 신고하지 않은 경우가 있어요. 이때 실업급여를 포기하는 분이 많은데 그럴 필요가 없어요. 고용보험은 요건을 갖추면 당연히 적용되고, 신고는 회사가 해야 할 일이거든요. 회사가 안 했다면 근로자가 직접 확인을 청구할 수 있어요. 어떻게 하는지, 몇 년까지 되는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

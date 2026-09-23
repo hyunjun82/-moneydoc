@@ -293,7 +293,7 @@ export const bodyHtml = `
     </section>
 
     <div class="foot">
-      <div class="org">MoneyDoc 편집팀</div>
+      <div class="org">글 한결</div>
       <div style="margin-top:6px">자료 출처: 금융위원회 · 국방부 · 정책브리핑(korea.kr) · 서민금융진흥원 — 정책은 변동될 수 있으니 신청 전 공식 채널에서 확인하세요.</div>
     </div>
 

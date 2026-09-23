@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "comprehensive-real-estate-tax-guide";
 
 export const html = `<h1>종합부동산세 대상과 계산, 공시가 합산부터 1주택 공제까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">종합부동산세법 공제액과 세율표 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">종합부동산세법 공제액과 세율표 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/comprehensive-real-estate-tax-guide.png" width="1200" height="630" alt="종합부동산세 계산. 공시가격 15억원인 1주택은 691,201원">
 <p class="v2-lead v2-intro">종합부동산세는 재산세를 낸 뒤 한 번 더 붙는 국세로, 줄여서 종부세라고 불러요. 6월 1일 기준으로 내가 가진 주택의 공시가격을 모두 더하고, 거기서 기본공제를 뺀 금액에만 붙어요. 1세대 1주택은 12억원, 그 밖에는 9억원을 빼 줘요. 공시가격 12억원인 한 채라면 세금이 0원이고, 15억원이면 691,201원이에요. 대상 판단, 계산 순서, 재산세액공제, 고령자와 장기보유 공제를 차례로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

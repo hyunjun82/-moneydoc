@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-severance-guide";
 
 export const html = `<h1>실업급여 퇴직금 같이 받을 수 있나요, 신고부터 지급기한까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">퇴직금 지급기한과 실업급여 신고 규정 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">퇴직금 지급기한과 실업급여 신고 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-severance-guide.png" width="1200" height="630" alt="실업급여와 퇴직금. 주는 곳이 달라 같이 받고 퇴직금은 퇴사한 날부터 14일 이내 지급">
 <p class="v2-lead v2-intro">퇴사하면 돈이 두 군데서 나와요. 회사가 주는 퇴직금과 고용보험이 주는 실업급여예요. 둘은 주는 곳도 조건도 달라서 하나를 받는다고 다른 하나가 깎이지 않아요. 이 글은 두 돈이 왜 겹치지 않는지, 퇴직금을 실업인정 때 신고해야 하는지, 퇴직금은 언제까지 들어와야 하는지를 하나씩 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

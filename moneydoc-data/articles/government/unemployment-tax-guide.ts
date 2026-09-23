@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-tax-guide";
 
 export const html = `<h1>실업급여 세금 떼나요, 비과세 기준과 종합소득세 연말정산</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">소득세법 비과세소득 원문 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">소득세법 비과세소득 원문 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-tax-guide.png" width="1200" height="630" alt="실업급여 세금 여부. 비과세소득이라 소득세를 매기지 않고 종합소득 합산에서 빠짐">
 <p class="v2-lead v2-intro">실업급여 세금이 걱정될 수 있어요. 결론부터 말하면 실업급여는 소득세를 매기지 않는 비과세소득이에요. 그런데 실업급여 비과세라는 말만으로는 종합소득세 신고까지 안 해도 되는지 헷갈리기 쉬워요. 실업급여 종합소득세 신고 여부와 실업급여 연말정산 포함 여부를 함께 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

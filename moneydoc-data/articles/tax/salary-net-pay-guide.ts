@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "salary-net-pay-guide";
 
 export const html = `<h1>2026년 연봉 실수령액 표, 연봉 3000부터 1억까지 월급 얼마 받나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">홈택스 간이세액표 원 단위 일치 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">홈택스 간이세액표 원 단위 일치 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/salary-net-pay-guide.png" width="1200" height="630" alt="2026년 연봉 실수령액 표. 연봉 5,000만원이면 월 3,522,740원, 1억이면 월 6,471,100원">
 <p class="v2-lead v2-intro">연봉 계약서의 숫자와 통장에 찍히는 숫자는 달라요. 연봉 5,000만원이면 2026년 기준 월 3,522,740원이 들어오고, 세전 4,166,666원에서 4대보험 404,870원과 소득세·지방소득세 239,050원이 빠져요. 이 글은 연봉 2,400만원부터 2억까지 실수령액 표, 4대보험 요율, 실수령액을 늘리는 두 가지 방법, 급여명세서와 숫자가 다른 이유를 순서대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

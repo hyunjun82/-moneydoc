@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-study-guide";
 
 export const html = `<h1>실업급여 내일배움카드 30시간, 구직활동 인정과 수강 증명서</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행규칙·실업인정 규정·인터넷 실업인정 매뉴얼 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행규칙·실업인정 규정·인터넷 실업인정 매뉴얼 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-study-guide.png" width="1200" height="630" alt="실업급여 받으며 국민내일배움카드 훈련을 들을 때 30시간 기준과 구직외활동 인정, 수강증명서 제출 절차">
 <p class="v2-lead v2-intro">실업급여를 받는 동안에도 국민내일배움카드로 훈련을 들을 수 있어요. 중요한 건 그 훈련이 실업인정 때 어떻게 잡히느냐예요. 한 달에 몇 시간을 들어야 하는지, 모자라면 무엇으로 채우는지, 5차부터 무엇이 달라지는지, 수강증명서는 어떻게 내는지 차례로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

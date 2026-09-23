@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-by-salary-guide";
 
 export const html = `<h1>실업급여 금액, 월급별 하루 얼마 받나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 구직급여일액 원문 대조 · 2026-09-15</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 구직급여일액 원문 대조 · 2026-09-15</span></div>
 <img class="v2-hero" src="/og/unemployment-by-salary-guide.png" width="1200" height="630" alt="월급별 실업급여 1일 수령액 표. 월 300만원이면 하루 66,048원">
 <p class="v2-lead v2-intro">실업급여가 하루 얼마인지는 평균임금으로 정해져요. 원칙은 평균임금의 60퍼센트인데, 위아래로 막아 둔 금액이 있어서 실제로는 좁은 범위에 몰려요. 월급별로 하루 얼마를 받는지 표로 만들었어요. 어느 구간에서 하한액에 걸리고 어디부터 상한액에 걸리는지 한눈에 보여요.</p>
 <section class="v2-answer" aria-label="즉답">

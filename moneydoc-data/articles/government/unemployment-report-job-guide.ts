@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-report-job-guide";
 
 export const html = `<h1>실업급여 취업신고 기간, 서류부터 입금과 재실업까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법·시행령·시행규칙·고용24 원문 대조 · 금액은 계산기 엔진 · 2026-09-15</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법·시행령·시행규칙·고용24 원문 대조 · 금액은 계산기 엔진 · 2026-09-15</span></div>
 <img class="v2-hero" src="/og/unemployment-report-job-guide.png" width="1200" height="630" alt="실업급여 취업신고 기한은 취업한 날부터 2개월. 취업 전날까지 지급">
 <p class="v2-lead v2-intro">실업급여를 받는 중에 취업이 되면 고용센터에 알려야 해요. 이걸 취업신고라고 해요. 퇴사 직후 처음 하는 실업 신고와는 다른 절차예요. 신고하면 취업 전날까지 계산한 돈이 마지막으로 들어오고 취업한 날부터는 나오지 않아요. 새 회사를 다시 그만두면 남은 일수를 이어 받을 수 있어요. 그걸 재실업이라고 불러요.</p>
 <section class="v2-answer" aria-label="즉답">

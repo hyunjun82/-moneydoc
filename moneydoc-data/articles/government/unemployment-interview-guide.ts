@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-interview-guide";
 
 export const html = `<h1>실업급여 면접확인서 받는 법과 면접수당, 면접 불참과 거절했을 때</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법령과 실업인정 및 재취업지원규정 원문 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법령과 실업인정 및 재취업지원규정 원문 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-interview-guide.png" width="1200" height="630" alt="실업급여 면접확인서 받는 법과 면접수당, 면접 불참과 거절했을 때">
 <p class="v2-lead v2-intro">면접까지 갔는데 증빙이 마땅치 않아 막막할 때가 있어요. 구인공고 없는 사업장의 명함만 내면 재취업활동으로 인정되지 않아요. 이럴 때 내는 면접확인서부터, 면접에 나가면 돈을 더 받는지, 못 가거나 거절하면 어떻게 되는지까지 순서대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

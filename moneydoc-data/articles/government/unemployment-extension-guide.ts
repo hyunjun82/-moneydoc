@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-extension-guide";
 
 export const html = `<h1>실업급여 연장 조건, 개별연장급여와 훈련연장급여 차이</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 연장급여 규정 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 연장급여 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-extension-guide.png" width="1200" height="630" alt="실업급여 연장급여 세 종류와 조건">
 <p class="v2-lead v2-intro">소정급여일수를 다 쓰면 실업급여가 끝나요. 그런데 법에는 그 일수를 넘겨서 더 지급할 수 있는 길이 세 가지 있어요. 훈련연장급여, 개별연장급여, 특별연장급여예요. 다만 신청한다고 다 되는 게 아니라 고용센터가 판단하거나 정부가 정한 사유가 있어야 해요. 각각 누가 받고 얼마를 받는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-round-1-guide";
 
 export const html = `<h1>실업급여 1차 실업인정, 교육 이수와 첫 구직활동 신고</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-round-1-guide.png" width="1200" height="630" alt="실업급여 1차 실업인정일은 신고일부터 14일. 첫 회차는 7일치">
 <p class="v2-lead v2-intro">실업급여 1차 실업인정일은 실업신고일부터 14일이 되는 날이에요. 그날은 고용센터에 직접 가요. 1차와 4차는 인터넷 신청이 안 되거든요. 그 전에 구직신청과 수급자격 신청자 교육을 마쳐야 하고, 첫 회차에는 대기기간 7일을 뺀 7일치가 들어와요.</p>
 <section class="v2-answer" aria-label="즉답">

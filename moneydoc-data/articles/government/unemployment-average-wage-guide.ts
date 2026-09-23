@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-average-wage-guide";
 
 export const html = `<h1>실업급여 평균임금 산정 방법, 어떤 수당이 들어가나요</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 기초일액 규정 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 기초일액 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-average-wage-guide.png" width="1200" height="630" alt="실업급여 평균임금 산정 방법과 포함되는 수당">
 <p class="v2-lead v2-intro">실업급여 금액은 평균임금에서 출발해요. 이걸 법에서는 기초일액이라고 불러요. 월급을 30으로 나눈 값이라고 생각하기 쉬운데, 실제로는 이직일 이전 3개월간 지급된 임금 총액을 그 기간의 총 일수로 나눈 값이에요. 달마다 일수가 다르고 상여금이나 수당이 끼면 결과가 달라져요. 무엇이 들어가고 무엇이 빠지는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

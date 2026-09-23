@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "dsr-limit-guide";
 
 export const html = `<h1>스트레스 DSR 계산과 대출 한도, 3단계 적용부터 주담대 한도까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">은행업감독규정 DSR 규제와 스트레스 금리 반영 · 2026-09-02</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">은행업감독규정 DSR 규제와 스트레스 금리 반영 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/dsr-limit-guide.png" width="1200" height="630" alt="스트레스 DSR 대출 한도. 연소득 5,000만원이면 293,536,331원">
 <p class="v2-lead v2-intro">대출 한도는 집값보다 내 소득이 먼저 정해요. 한 해 갚는 원리금이 연소득의 일정 비율을 넘지 못하게 막는 규제가 총부채원리금상환비율이고, 줄여서 디에스알이라고 불러요. 여기에 금리가 오를 상황을 미리 반영하는 스트레스 금리까지 더해요. 연소득 5,000만원이 30년 만기로 빌린다면 한도는 293,536,331원이에요. 계산 순서, 단계별 가산금리, 소득과 기간에 따른 한도, 한도를 늘리는 방법을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

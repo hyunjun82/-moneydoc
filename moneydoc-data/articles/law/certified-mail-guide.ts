@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "certified-mail-guide";
 
 export const html = `<h1>내용증명 작성 방법과 양식, 임대차부터 채권 회수까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">우편법 시행규칙과 민법 조문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">우편법 시행규칙과 민법 조문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/certified-mail-guide.png" width="1200" height="630" alt="내용증명 작성 방법. 원본 한 통과 등본 두 통을 우체국에 제출해요">
 <p class="v2-lead v2-intro">내용증명은 특별한 힘을 가진 문서가 아니에요. 언제 누가 누구에게 어떤 내용을 보냈는지 우체국이 증명해 주는 우편 서비스예요. 그래도 실무에서는 중요한 역할을 해요. 상대에게 심리적 압박을 주고, 나중에 소송으로 갔을 때 청구한 사실을 증명하는 자료가 되며, 이행을 청구한 시점을 남겨 지체 책임을 따질 수 있어요. 무엇을 적는지, 어떻게 보내는지, 어떤 효력이 있는지 순서대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

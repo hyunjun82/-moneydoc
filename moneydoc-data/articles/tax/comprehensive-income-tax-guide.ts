@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "comprehensive-income-tax-guide";
 
 export const html = `<h1>종합소득세 세율과 계산 방법, 신고 대상부터 5월 홈택스 신고까지</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">소득세법 누진세율표와 1원 단위 일치 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">소득세법 누진세율표와 1원 단위 일치 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/comprehensive-income-tax-guide.png" width="1200" height="630" alt="종합소득세 세율과 계산 방법. 종합소득금액 5,000만원이면 세금 6,539,500원">
 <p class="v2-lead v2-intro">종합소득세는 한 해 동안 번 이자, 배당, 사업, 근로, 연금, 기타 소득을 모두 합쳐 한 번에 매기는 세금이에요. 세율은 소득이 클수록 높아지는 계단 구조라서, 소득 전체에 높은 세율이 붙는 게 아니라 구간마다 다른 세율이 붙어요. 종합소득금액 5,000만원에 부양가족이 본인 한 명이면 과세표준은 48,500,000원이고, 세금은 지방소득세까지 합쳐 6,539,500원이에요. 세율표, 계산 순서, 신고 대상, 5월 홈택스 신고 순서를 차례대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "severance-one-year-guide";
 
 export const html = `<h1>퇴직금 1년 미만 받나요, 1년 기준 날짜와 1년 6개월 계산</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">고용노동부 퇴직금 계산기 산식 기준 · 2026-09-13</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">고용노동부 퇴직금 계산기 산식 기준 · 2026-09-13</span></div>
 <img class="v2-hero" src="/og/severance-one-year-guide.png" width="1200" height="630" alt="퇴직금 1년 미만. 2025년 1월 1일 입사자가 12월 30일까지 일하면 1년이 안 돼 퇴직금 0원">
 <p class="v2-lead v2-intro">퇴직금은 계속 일한 기간이 1년이 안 되면 받을 수 없어요. 하루만 모자라도 마찬가지라서, 1년을 어느 날짜까지로 세는지가 중요해요. 퇴직일은 마지막으로 일한 날의 다음 날이라 2025년 1월 1일에 입사했다면 12월 31일까지 일해야 1년을 채워요. 날짜 세는 법, 윤년이 낀 기간, 1년 6개월 금액과 세금, 알바가 주 15시간을 따지는 법을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

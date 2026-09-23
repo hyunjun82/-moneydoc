@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-elderly-guide";
 
 export const html = `<h1>실업급여 나이 상한, 65세 기준과 계속 근로 예외</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">65세 적용 제외와 계속 고용 예외를 고용보험법령 원문과 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">65세 적용 제외와 계속 고용 예외를 고용보험법령 원문과 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-elderly-guide.png" width="1200" height="630" alt="65세 이상 실업급여. 65세 이후 신규 고용은 적용 제외, 계속 근로는 대상">
 <p class="v2-lead v2-intro">실업급여를 나이 몇살까지 받느냐고 많이 물어요. 65세가 넘으면 끝난다고 알고 계신 분이 많은데 절반만 맞아요. 법이 보는 건 지금 나이가 아니라 고용보험 자격이 65세 전부터 이어졌느냐예요. 65세가 넘어 새로 고용됐다면 66세여도 실업급여가 적용되지 않아요. 50세, 60세, 65세마다 달라지는 날수와 신청 방식도 함께 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

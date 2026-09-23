@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-repeat-guide";
 
 export const html = `<h1>실업급여 반복수급 기준, 감액 시행 여부와 실업인정 차이</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">반복수급자 재취업활동 기준 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">반복수급자 재취업활동 기준 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-repeat-guide.png" width="1200" height="630" alt="실업급여 반복수급 감액 시행 여부와 반복수급자 실업인정 기준">
 <p class="v2-lead v2-intro">실업급여를 다시 신청하는 사람이 가장 먼저 찾는 말이 반복수급 감액이에요. 결론부터 말하면 금액을 깎는 규정은 아직 없어요. 대신 실업인정 때 해야 하는 재취업활동이 늘고, 횟수로 인정되는 활동의 종류가 좁아져요. 무엇이 그대로이고 무엇이 달라지는지, 내가 어느 기준을 적용받는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-give-up-guide";
 
 export const html = `<h1>실업급여 포기와 미신청, 재수급 조건과 재신청 방법</h1>
-<div class="v2-meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">수급기간·재수급 요건을 고용보험법 원문과 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">수급기간·재수급 요건을 고용보험법 원문과 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-give-up-guide.png" width="1200" height="630" alt="실업급여 포기와 미신청, 재수급 조건과 재신청 방법">
 <p class="v2-lead v2-intro">실업급여를 받다가 그만 받고 싶거나, 신청을 미뤘거나, 다시 실직해서 또 받고 싶은 상황은 결과가 저마다 달라요. 실업인정을 받지 않은 기간은 급여가 나오지 않고, 이직일 다음 날부터 12개월이 지나면 남은 날도 받을 수 없어요. 다시 받으려면 새 이직일을 기준으로 요건을 다시 따져요.</p>
 <section class="v2-answer" aria-label="즉답">

@@ -110,7 +110,7 @@ const html = `<!doctype html>
 <main>
 <div class="crumb"><a href="/">홈</a> › <a href="/tax/">세금</a> › 연봉 실수령액</div>
 <h1>2026 연봉 실수령액 표, 4대보험 올라 월급 얼마나 줄었나</h1>
-<div class="meta"><span>MoneyDoc 편집팀</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="badge">홈택스 간이세액표 원 단위 일치 · ${VERIFIED} 검증</span></div>
+<div class="meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="badge">홈택스 간이세액표 원 단위 일치 · ${VERIFIED} 검증</span></div>
 
 <img class="hero" src="/_preview/og-salary-net-pay-guide.png" width="1200" height="630" alt="2026 연봉 실수령액 표. 연봉 5,000만원이면 월 ${won(R50.netMonthly)}원, 2025년보다 월 ${won(diff25)}원 덜 받습니다">
 <section class="answer" aria-label="즉답">
