@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-startup-guide";
 
 export const html = `<h1>실업급여 사업자등록, 창업 준비 신고와 휴업 예외</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">사업자등록과 창업 준비의 실업인정 기준을 고용보험법령·상담 원문과 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">사업자등록과 창업 준비의 실업인정 기준을 고용보험법령·상담 원문과 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-startup-guide.png" width="1200" height="630" alt="실업급여 받다가 사업자등록을 하면 개업일부터 취업. 창업 준비 단계는 계획서대로 적으면 재취업활동">
 <p class="v2-lead v2-intro">실업급여를 받는 중에 가게를 열거나 사업자등록을 하려는 분이 많아요. 등록증에 적힌 개업일부터는 취업으로 봐서 급여가 안 나와요. 창업 준비활동은 재취업활동에 들어가서, 담당자가 확인하면 실업인정을 받을 수 있어요. 언제부터 끊기는지, 준비 단계는 어떻게 적는지, 이미 등록증이 있으면 받을 수 있는지 순서대로 답해요.</p>
 <section class="v2-answer" aria-label="즉답">

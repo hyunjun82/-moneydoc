@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "deposit-return-suit-guide";
 
 export const html = `<h1>보증금 반환 소송 절차와 양식, 내용증명부터 소장 접수까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">주택임대차보호법과 민사소송법 조문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">주택임대차보호법과 민사소송법 조문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/deposit-return-suit-guide.png" width="1200" height="630" alt="보증금 반환 소송 절차. 내용증명과 임차권등기명령을 거쳐 지급명령과 소송으로 이어져요">
 <p class="v2-lead v2-intro">계약이 끝났는데 보증금을 돌려주지 않는 경우가 있어요. 이때 가장 먼저 챙길 것은 소송이 아니라 내 권리를 지키는 일이에요. 집을 비우고 전입신고를 옮기면 대항력과 우선변제권이 사라지기 때문에, 이사하기 전에 임차권등기명령을 받아 두어야 해요. 그다음 내용증명으로 반환을 요구하고, 반응이 없으면 지급명령이나 소송으로 넘어가요. 순서와 서류, 비용을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

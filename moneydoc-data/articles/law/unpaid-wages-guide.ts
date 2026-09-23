@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unpaid-wages-guide";
 
 export const html = `<h1>임금체불 진정 방법과 지연이자, 신고 절차부터 대지급금까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">근로기준법 지연이자 이율과 대지급금 요건 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">근로기준법 지연이자 이율과 대지급금 요건 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unpaid-wages-guide.png" width="1200" height="630" alt="임금체불 지연이자. 500만원을 90일 못 받으면 이자 246,575원">
 <p class="v2-lead v2-intro">퇴사하면 회사는 14일 안에 남은 임금과 퇴직금을 모두 줘야 해요. 넘기면 그다음 날부터 연 20%의 지연이자가 붙어요. 500만원을 90일 동안 못 받았다면 이자만 246,575원이라 합계 5,246,575원을 청구할 수 있어요. 신고는 고용노동부 노동포털에서 무료로 할 수 있고, 회사가 돈이 없으면 국가가 대신 주는 대지급금 제도가 있어요. 신고 절차, 진정 후 흐름, 지연이자, 대지급금 순서로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

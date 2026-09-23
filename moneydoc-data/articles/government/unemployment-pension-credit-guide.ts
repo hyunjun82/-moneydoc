@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-pension-credit-guide";
 
 export const html = `<h1>실업급여 국민연금, 실업크레딧 신청하면 얼마 내나요</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">국민연금법 실업크레딧 규정 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">국민연금법 실업크레딧 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-pension-credit-guide.png" width="1200" height="630" alt="실업급여 국민연금은 실업크레딧으로 최대 12개월">
 <p class="v2-lead v2-intro">실업급여를 받는 동안 국민연금 보험료를 내야 하는지 헷갈려요. 퇴사하면 지역가입자로 넘어가서 고지서가 올 수 있고, 실직 중이라고 알리면 납부예외로 안 낼 수 있어요. 그런데 안 낸 기간은 가입기간에서 빠져요. 이 빈칸을 메우는 제도가 실업크레딧이에요. 보험료 일부만 본인이 내고 구직급여 받은 기간을 최대 12개월까지 가입기간에 넣어 줘요. 대신 신청해야 하고 기한이 짧아요.</p>
 <section class="v2-answer" aria-label="즉답">

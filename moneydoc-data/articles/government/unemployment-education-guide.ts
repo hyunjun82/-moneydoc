@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-education-guide";
 
 export const html = `<h1>실업급여 1차 집체교육과 온라인교육, 2차 동영상부터 취업특강까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용노동부 안내와 실업인정 규정 원문 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용노동부 안내와 실업인정 규정 원문 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-education-guide.png" width="1200" height="630" alt="실업급여 1차 집체교육은 출석 필수, 사전교육과 온라인 취업특강은 온라인으로 가능">
 <p class="v2-lead v2-intro">실업급여를 준비하다 보면 교육이라는 말을 여러 번 만나요. 신청 전에 보는 사전교육, 1차 실업인정일의 집체교육, 재취업활동으로 치는 취업특강은 시점도 온라인 가능 여부도 서로 달라요. 실업인정은 1~4주마다 아직 취업하지 못했고 구직 노력을 하고 있는지 고용센터에 인정받는 일이에요.</p>
 <section class="v2-answer" aria-label="즉답">

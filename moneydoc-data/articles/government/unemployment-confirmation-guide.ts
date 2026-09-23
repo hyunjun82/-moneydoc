@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-confirmation-guide";
 
 export const html = `<h1>실업급여 이직확인서 발급 요청과 정정 방법</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 이직확인서 규정과 고용24 안내 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 이직확인서 규정과 고용24 안내 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-confirmation-guide.png" width="1200" height="630" alt="실업급여 이직확인서 발급 요청과 정정 방법">
 <p class="v2-lead v2-intro">실업급여 심사는 회사가 낸 이직확인서에서 시작해요. 여기에 적히는 게 네 가지인데, 이직 사유는 수급자격을 가르고 피보험단위기간은 조건 충족을, 평균임금과 1일 소정근로시간은 금액을 정해요. 그래서 하나만 잘못 적혀도 결과가 크게 달라져요. 발급을 어떻게 요청하는지, 틀렸을 때 어떻게 고치는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

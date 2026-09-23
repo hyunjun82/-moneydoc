@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-layoff-guide";
 
 export const html = `<h1>권고사직 실업급여 신청 방법과 회사가 받는 불이익</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법과 시행령 지원금 제한 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법과 시행령 지원금 제한 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-layoff-guide.png" width="1200" height="630" alt="권고사직 실업급여 신청 방법과 회사가 받는 불이익">
 <p class="v2-lead v2-intro">회사가 그만두라고 해서 나온 경우를 권고사직이라고 해요. 형식은 사직서를 내는 것이라 자발적 퇴사처럼 보이지만, 실제로는 회사 사정으로 나온 것이라 정당한 이직 사유로 인정돼요. 다만 사직서에 개인 사정이라고만 적어 두면 나중에 증명이 어려워져요. 어떻게 신청하는지, 사직서에 무엇을 남겨야 하는지, 회사는 어떤 불이익을 받는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

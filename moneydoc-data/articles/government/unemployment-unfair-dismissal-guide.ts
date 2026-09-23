@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-unfair-dismissal-guide";
 
 export const html = `<h1>부당해고 실업급여 되나요, 권고사직과 해고예고수당도 받나요</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법·근로기준법·실업인정 규정 원문 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법·근로기준법·실업인정 규정 원문 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-unfair-dismissal-guide.png" width="1200" height="630" alt="부당해고 실업급여. 실업급여 결정에 이의가 있으면 처분을 안 날부터 90일 안에 심사청구">
 <p class="v2-lead v2-intro">해고를 당했는데 부당하다고 생각되면 실업급여부터 걱정이 될 수 있어요. 회사 사정으로 해고됐다면 이직 사유로는 제한되지 않지만, 고용센터가 중대한 귀책사유로 인정하면 원칙적으로 제한돼요. 해고가 부당하면 노동위원회나 법원에서 다툴 수 있고, 다투는 동안의 실업인정에는 따로 정한 방식이 있어요. 권고사직과의 차이, 해고예고수당, 결정에 이의가 있을 때 절차까지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

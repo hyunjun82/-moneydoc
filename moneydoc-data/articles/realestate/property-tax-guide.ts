@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "property-tax-guide";
 
 export const html = `<h1>재산세 계산과 납부, 공시가격부터 특례세율과 7월 9월 분납까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">지방세법 세율표와 공정시장가액비율 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">지방세법 세율표와 공정시장가액비율 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/property-tax-guide.png" width="1200" height="630" alt="재산세 계산. 공시가격 5억원인 집의 재산세는 684,000원">
 <p class="v2-lead v2-intro">재산세는 6월 1일에 집을 갖고 있는 사람에게 붙는 세금이에요. 시세가 아니라 공시가격을 기준으로 하고, 거기에 공정시장가액비율을 곱해 과세표준을 만들어요. 공시가격 5억원인 집이라면 과세표준은 300,000,000원이고, 재산세 570,000원에 지방교육세 114,000원을 더해 684,000원이에요. 1세대 1주택이고 공시가격이 9억원 이하면 세율이 더 낮아져 312,000원이 돼요. 과세표준, 세율, 납기, 조회 방법을 차례로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

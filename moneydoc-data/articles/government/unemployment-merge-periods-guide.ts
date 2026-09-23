@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-merge-periods-guide";
 
 export const html = `<h1>실업급여 합산기간, 전 직장 고용보험도 더해지나요</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 피보험기간 규정 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 피보험기간 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-merge-periods-guide.png" width="1200" height="630" alt="실업급여 합산기간. 전 직장 상실일부터 3년 이내면 합산">
 <p class="v2-lead v2-intro">회사를 여러 번 옮겼으면 전 직장 고용보험 기간도 합쳐지는지 궁금해져요. 합쳐져요. 다만 조건이 있고, 무엇을 위한 합산인지에 따라 세는 방법이 달라요. 며칠 받는지를 정하는 기간과 받을 자격이 되는지를 보는 기간이 서로 다른 시계로 돌아가거든요. 두 가지를 갈라서 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

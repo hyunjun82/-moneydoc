@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-overseas-guide";
 
 export const html = `<h1>실업급여 해외여행과 실업인정일, 날짜변경 안 하면 부정수급인가요?</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 시행규칙과 실업인정 규정 해외 체류 조항 원문 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 시행규칙과 실업인정 규정 해외 체류 조항 원문 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-overseas-guide.png" width="1200" height="630" alt="실업급여 해외여행, 재취업활동 목적은 출국 전 특례, 개인 여행 중 인터넷 신고는 그 기간 불인정">
 <p class="v2-lead v2-intro">실업급여를 받는 중에 해외에 나갈 일이 생길 수 있어요. 실업인정일은 정해진 날마다 챙겨야 해서 해외에 있는 동안 어떻게 되는지 헷갈려요. 해외 재취업활동 목적인지 개인 여행인지에 따라 처리가 달라요. 날짜변경을 안 하면 어떻게 되는지까지 순서대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

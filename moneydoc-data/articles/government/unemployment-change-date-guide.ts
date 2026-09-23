@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-change-date-guide";
 
 export const html = `<h1>실업급여 첫인정일과 방문인정일, 실업인정 신청과 불참했을 때</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 시행령과 실업인정 및 재취업지원규정 원문 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 시행령과 실업인정 및 재취업지원규정 원문 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-change-date-guide.png" width="1200" height="630" alt="실업급여 첫인정일은 실업신고일부터 14일이 되는 날">
 <p class="v2-lead v2-intro">퇴사 후 실업급여를 신청하면 정해진 날짜마다 실업인정을 받아야 해요. 첫 인정일이 언제인지, 어느 회차에 고용센터에 가야 하는지, 못 나가면 어떻게 되는지 궁금한 분이 많아요. 이 글에서 인정일 날짜 기준부터 출석 회차, 신청 방법, 불참했을 때 쓸 수 있는 두 가지 길까지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

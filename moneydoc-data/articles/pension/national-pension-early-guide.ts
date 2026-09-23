@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "national-pension-early-guide";
 
 export const html = `<h1>국민연금 조기수령 감액과 손익분기, 조건부터 연기연금 비교까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">국민연금법 조기노령연금 지급률과 일치 · 2026-09-02</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">국민연금법 조기노령연금 지급률과 일치 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/national-pension-early-guide.png" width="1200" height="630" alt="국민연금 조기수령 감액. 정상 100만원이면 60세에 700,000원">
 <p class="v2-lead v2-intro">국민연금은 정해진 나이보다 최대 5년 먼저 받을 수 있어요. 대신 1년 일찍 받을 때마다 6%씩 깎이고, 그 감액은 평생 이어져요. 정상수령액이 월 100만원인 사람이 5년 일찍 받으면 700,000원이라 매달 300,000원이 줄어요. 대신 5년 동안 먼저 받는 돈이 42,000,000원이라 오래 살수록 불리해지는 구조예요. 감액률, 조건, 손익분기 나이, 연기연금 비교를 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

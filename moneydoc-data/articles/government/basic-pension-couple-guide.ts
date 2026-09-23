@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "basic-pension-couple-guide";
 
 export const html = `<h1>기초연금 부부감액, 부부 수령액은 각자 얼마인가요</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">기초연금법 감액 조문 원문 대조 · 2026-09-13</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">기초연금법 감액 조문 원문 대조 · 2026-09-13</span></div>
 <img class="v2-hero" src="/og/basic-pension-couple-guide.png" width="1200" height="630" alt="기초연금 부부감액. 둘 다 받으면 각자 20% 깎여 한 사람 279,760원">
 <p class="v2-lead v2-intro">부부가 둘 다 기초연금을 받으면 각자의 기초연금에서 20%씩 깎여, 감액이 없을 때 둘이 합쳐 559,520원을 받아요. 한 명만 받으면 이 20% 감액은 없지만 다른 감액은 따로 붙을 수 있어요. 소득인정액이 선정기준액에 가까우면 남은 금액만 받고, 부부는 그 금액을 두 사람 기초연금 비율대로 나눠요.</p>
 <section class="v2-answer" aria-label="즉답">

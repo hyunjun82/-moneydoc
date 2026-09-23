@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-short-hours-guide";
 
 export const html = `<h1>실업급여 주 15시간 미만, 초단시간 근로자도 되나요</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 적용 제외 규정 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 적용 제외 규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-short-hours-guide.png" width="1200" height="630" alt="주 15시간 미만 초단시간 근로자의 고용보험 적용 기준">
 <p class="v2-lead v2-intro">주 15시간 미만으로 일하면 고용보험이 안 된다고 알고 계신 분이 많아요. 원칙은 맞지만 예외가 있어요. 같은 곳에서 3개월 이상 계속 일했다면 적용 대상이 돼요. 그리고 짧게 일하는 사람을 위해 180일을 세는 구간을 24개월로 늘려 주는 특례가 따로 있어요. 두 가지를 갈라서 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

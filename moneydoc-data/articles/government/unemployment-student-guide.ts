@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-student-guide";
 
 export const html = `<h1>대학생도 실업급여 되나요, 단기알바와 주말알바 기준</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 적용 제외 규정 원문 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 적용 제외 규정 원문 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-student-guide.png" width="1200" height="630" alt="대학생 아르바이트 실업급여 판정. 15시간 미만이면 원칙 제외, 1개월 미만 일용근로자와 3개월 이상 계속근로는 예외">
 <p class="v2-lead v2-intro">고용보험법에는 대학생이라서 실업급여 대상에서 빠진다는 규정이 없어요. 다만 아르바이트가 짧거나 시간이 적으면 애초에 고용보험에 가입되지 않을 수 있어요. 이 글은 대학생의 아르바이트가 언제 고용보험 대상이 되는지, 단기알바와 주말알바는 무엇이 다른지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "basic-pension-national-pension-guide";
 
 export const html = `<h1>기초연금 국민연금 감액 기준, 국민연금 받으면 얼마나 깎이나요</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">기초연금법 감액 조문 원문 대조 · 2026-09-13</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">기초연금법 감액 조문 원문 대조 · 2026-09-13</span></div>
 <img class="v2-hero" src="/og/basic-pension-national-pension-guide.png" width="1200" height="630" alt="기초연금 국민연금 감액 기준. 국민연금이 524,550원 이하면 기초연금 전액">
 <p class="v2-lead v2-intro">국민연금을 받으면 기초연금이 깎일 수 있지만, 국민연금 급여액이 기준연금액의 150%인 524,550원 이하면 깎이지 않아요. 넘으면 기준연금액에서 국민연금 중 소득재분배 부분의 3분의 2를 빼고, 기준연금액의 절반인 부가연금액을 다시 더해요. 그래서 소득재분배 부분이 262,275원 이하면 150%를 넘어도 전액이에요. 감액 기준, 최저 금액, 150%와 200% 사이 계산, 조기·분할연금 기준을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

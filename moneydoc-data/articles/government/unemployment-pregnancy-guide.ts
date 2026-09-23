@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-pregnancy-guide";
 
 export const html = `<h1>임신으로 인한 퇴사 실업급여 조건, 육아 퇴사와 수급 중 임신</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">고용보험법 수급기간 연장 규정 원문 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>5분</span><span class="v2-badge">고용보험법 수급기간 연장 규정 원문 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-pregnancy-guide.png" width="1200" height="630" alt="임신 육아 실업급여. 수급기간을 늘려도 전체 4년 한도">
 <p class="v2-lead v2-intro">퇴사 이유가 임신이나 육아면 실업급여를 받을 수 있는지부터 헷갈려요. 스스로 낸 사표처럼 보이지만, 업무를 계속하기 어려운데 회사가 휴가나 휴직을 허용하지 않아 그만둔 경우면 정당한 이직 사유로 인정돼요. 하지만 임신·육아 사정이 이어지는 동안은 실업인정을 받지 못해요. 그럴 때 쓰는 수급기간 연기 방법까지 질문별로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

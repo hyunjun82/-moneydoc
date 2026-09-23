@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "four-major-insurance-guide";
 
 export const html = `<h1>2026년 4대보험 요율과 계산, 월급에서 떼는 돈부터 회사 부담까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">4대사회보험 모의계산 일치 · 법령 요율 확인 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">4대사회보험 모의계산 일치 · 법령 요율 확인 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/four-major-insurance-guide.png" width="1200" height="630" alt="2026년 4대보험 요율. 월 보수 300만원이면 근로자 291,520원, 회사 320,020원">
 <p class="v2-lead v2-intro">급여명세서에서 세금보다 크게 빠지는 게 4대보험이에요. 월 보수 300만원이면 근로자가 291,520원을 내고, 회사는 산재보험까지 더해 320,020원을 내요. 요율은 법으로 정해져 있어 회사가 달라도 같아요. 항목별 요율과 월급별 공제액 표, 회사가 내는 몫, 4월과 7월에 금액이 바뀌는 이유를 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

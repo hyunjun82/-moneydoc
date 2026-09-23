@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "transfer-tax-long-term-deduction-guide";
 
 export const html = `<h1>양도세 장기보유특별공제율 표, 2주택도 받나요</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">양도소득세 계산기 산식 기준 · 2026-09-13</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">양도소득세 계산기 산식 기준 · 2026-09-13</span></div>
 <img class="v2-hero" src="/og/transfer-tax-long-term-deduction-guide.png" width="1200" height="630" alt="양도세 장기보유특별공제율. 1주택은 최대 80%, 일반 공제는 최대 30%">
 <p class="v2-lead v2-intro">장기보유특별공제는 오래 가진 집을 팔 때 양도차익에서 일정 비율을 빼 주는 공제예요. 1주택이면서 보유 3년 이상, 거주 2년 이상이면 보유와 거주 공제율을 더해 최대 80%까지 받아요. 거주가 2년이 안 되거나 2주택이면 일반 공제율로 최대 30%이고, 조정대상지역 2주택 중과 대상이면 받지 못해요. 연수별 공제율 표, 2주택 조건, 한도, 줄어드는 세금을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

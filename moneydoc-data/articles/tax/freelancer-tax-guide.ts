@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "freelancer-tax-guide";
 
 export const html = `<h1>프리랜서 3.3% 원천징수와 환급, 경비율부터 5월 신고까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">소득세법 원천징수세율과 누진세율표 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">소득세법 원천징수세율과 누진세율표 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/freelancer-tax-guide.png" width="1200" height="630" alt="프리랜서 3.3% 원천징수. 300만원을 받으면 99,000원을 떼고 2,901,000원이 들어와요">
 <p class="v2-lead v2-intro">프리랜서로 일하고 돈을 받으면 3.3%를 떼고 들어와요. 300만원이면 99,000원을 떼고 2,901,000원이 통장에 찍혀요. 이 3.3%는 확정된 세금이 아니라 미리 걷어 둔 돈이에요. 다음 해 5월에 종합소득세 신고를 하면 실제 세금과 비교해서 남으면 돌려받고 모자라면 더 내요. 연 수입 3,600만원에 경비를 60%로 잡으면 약 413,600원을 돌려받아요. 3.3%의 구조, 경비율, 환급액, 신고 방법 순서로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

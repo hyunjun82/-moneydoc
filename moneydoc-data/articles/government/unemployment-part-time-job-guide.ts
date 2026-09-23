@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-part-time-job-guide";
 
 export const html = `<h1>실업급여 알바 신고 방법, 안 하면 부정수급인가요</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행규칙 취업 인정기준 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행규칙 취업 인정기준 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-part-time-job-guide.png" width="1200" height="630" alt="실업급여 알바 신고 기준과 취업으로 보는 경우">
 <p class="v2-lead v2-intro">실업급여를 받는 동안 아르바이트를 하면 안 되는 줄 아는 분이 많아요. 그렇지 않아요. 일을 할 수는 있고, 대신 실업인정을 받으려는 기간에 일한 사실이 있으면 신고해야 해요. 문제는 어디까지가 신고 대상이냐인데, 시행규칙에 취업으로 보는 기준이 유형별로 정해져 있어요. 기준과 신고 방법, 안 했을 때 생기는 일을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

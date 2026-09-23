@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-job-search-guide";
 
 export const html = `<h1>실업급여 구직활동 인정 기준과 증빙 남기는 법</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">실업인정 및 재취업지원규정 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-job-search-guide.png" width="1200" height="630" alt="실업급여 구직활동 인정 기준과 인정되지 않는 활동">
 <p class="v2-lead v2-intro">실업인정일에 활동을 신고하면 담당직원이 근로 의사와 능력을 가지고 적극적으로 재취업활동을 했는지 확인해요. 형식만 갖춘 활동은 인정되지 않고, 필요하면 지원한 회사에 사실관계를 확인하기도 해요. 무엇이 인정되고 무엇이 걸리는지, 증빙은 어떻게 남기는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-health-insurance-guide";
 
 export const html = `<h1>실업급여 건강보험료 감면, 임의계속가입과 피부양자 기준</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">국민건강보험법 원문 대조 · 요율 7.19% 엔진 일치 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">국민건강보험법 원문 대조 · 요율 7.19% 엔진 일치 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-health-insurance-guide.png" width="1200" height="630" alt="실업급여 건강보험료. 임의계속가입은 최대 36개월">
 <p class="v2-lead v2-intro">실업급여를 받는 동안에도 건강보험료는 매달 나가요. 퇴사하면 그 다음 날 지역가입자가 되고, 회사가 내주던 절반이 사라져요. 그런데 실업을 이유로 깎아 주는 감면은 법에 없어요. 대신 직장 기준을 이어 가는 임의계속가입과, 아예 내지 않는 피부양자라는 길이 있어요. 무엇이 오르고 어느 쪽을 고를 수 있는지, 기한은 언제까지인지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

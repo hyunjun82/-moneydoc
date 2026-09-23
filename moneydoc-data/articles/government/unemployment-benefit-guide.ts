@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-benefit-guide";
 
 export const html = `<h1>2026년 실업급여 얼마나 받나요, 조건부터 금액과 신청 방법까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">고용24 모의계산 일치 · 시행령 §68 확인 · 2026-09-13</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">고용24 모의계산 일치 · 시행령 §68 확인 · 2026-09-13</span></div>
 <img class="v2-hero" src="/og/unemployment-benefit-guide.png" width="1200" height="630" alt="2026년 실업급여 얼마나 받나요. 월 급여 300만원 5년 근무면 하루 66,048원, 210일, 총 13,870,080원">
 <p class="v2-lead v2-intro">퇴사를 앞두고 제일 먼저 궁금한 건 "나는 받을 수 있는지, 받으면 얼마를 몇 개월 받는지"예요. 2026년 기준으로 월급 300만원에 5년 일했다면 하루 66,048원씩 210일, 모두 13,870,080원을 받아요. 이 글은 받는 조건을 세 가지 질문으로 판정하고, 월급별 금액과 가입기간별 일수를 표로 보여주고, 신청 4단계를 순서대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

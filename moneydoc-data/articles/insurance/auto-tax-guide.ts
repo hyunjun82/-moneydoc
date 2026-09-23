@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "auto-tax-guide";
 
 export const html = `<h1>자동차세 계산과 연납 할인, 배기량별 세액부터 1월 신청까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">위택스 자동차세 계산과 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">위택스 자동차세 계산과 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/auto-tax-guide.png" width="1200" height="630" alt="자동차세 계산. 1,999cc 승용차는 1년에 519,740원">
 <p class="v2-lead v2-intro">승용차의 자동차세는 배기량에 시시당 세액을 곱해서 정해요. 여기에 자동차세의 30%인 지방교육세가 함께 붙어요. 배기량 1,999cc 차라면 자동차세 399,800원에 지방교육세 119,940원을 더해 1년에 519,740원이에요. 차가 오래되면 세금이 줄고, 1월에 한 번에 내면 할인도 받아요. 배기량별 세액, 차령 경감, 연납 할인, 납부 방법을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-fraud-guide";
 
 export const html = `<h1>실업급여 부정수급 처벌, 반환 금액과 추가징수 기준</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 지급 제한과 반환명령 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 지급 제한과 반환명령 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-fraud-guide.png" width="1200" height="630" alt="실업급여 부정수급 처벌과 반환, 추가징수 기준">
 <p class="v2-lead v2-intro">실업급여 부정수급은 큰돈을 속인 경우만 해당하는 게 아니에요. 하루 일한 것을 신고하지 않거나, 하지 않은 구직활동을 했다고 적은 것도 거짓 신고예요. 걸리면 그 회차 급여가 안 나오는 데서 끝나지 않고 받은 돈을 돌려주고 더 내야 해요. 무엇이 부정수급인지, 얼마를 물어내는지, 제재가 어떻게 쌓이는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

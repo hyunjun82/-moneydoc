@@ -213,15 +213,15 @@ const CASES = [
 
   { n: 52, name: '같은 금액을 네 번 넘게 되풀이',
     file: S('report-job'), slug: 'unemployment-report-job-guide',
-    from: "text: '회사와 짜고 그랬다면 5배까지고 회사도 함께 책임져요.", to: "text: `${won(HID_PAY)}원이에요. ${won(HID_PAY)}원을 돌려주고 ${won(HID_PAY)}원의 두 배를 더 내요. 회사와 짜고 그랬다면 5배까지고 회사도 함께 책임져요." },
+    from: "회사와 짜고 그랬다면 5배까지고 회사도 함께 책임져요.`", to: "${won(HID_PAY)}원이에요. ${won(HID_PAY)}원을 돌려주고 ${won(HID_PAY)}원의 두 배를 더 내요. 다시 말해 ${won(HID_PAY)}원이 기준이에요. 회사와 짜고 그랬다면 5배까지고 회사도 함께 책임져요.`" },
 
   { n: 53, name: 'FAQ 답을 본문 리드 문장 복사로',
     file: S('report-job'), slug: 'unemployment-report-job-guide',
-    from: "'안 돼요. 그날 실업인정 신청서에 취업 사실을 적어야 해요. 2개월은 마지막 기한이에요.'", to: "'취업하거나 사업을 시작한 날부터 2개월 이내예요. 다만 그 사이에 실업인정일이 잡혀 있으면 그날 실업인정 신청서에 취업한 사실을 적어야 해요.'" },
+    from: "'안 돼요. 실업인정일이 먼저 오면 그날이 신고하는 날이에요. 신청서에 취업한 사실을 적어서 내세요.'", to: "'취업하거나 사업을 시작한 날부터 2개월 안이에요. 그 사이에 실업인정일이 잡혀 있으면 그날 내는 실업인정 신청서에 취업한 사실을 먼저 적어요.'" },
 
   { n: 54, name: '핵심콕콕 행을 소제목 small 복사로',
     file: S('report-job'), slug: 'unemployment-report-job-guide',
-    from: "['재실업', '원래 퇴사일 다음 날부터 12개월 안이면 남은 일수를 이어 받음'],", to: "['재실업', '원래 퇴사일부터 12개월 안이면 이어 받아요']," },
+    from: "['재실업', `원래 퇴사일 다음 날부터 12개월 안이면 남은 ${LEFT}일을 이어 받아요`],", to: "['재실업', '원래 퇴사일부터 12개월 안이면 이어 받아요']," },
 
   { n: 55, name: '링크 라벨을 앞 문장과 상관없는 것으로 (수급자격 4가지 조건)',
     file: S('report-job'), slug: 'unemployment-report-job-guide',
@@ -229,23 +229,23 @@ const CASES = [
 
   { n: 56, name: '바깥 링크를 첫 화면으로 걸고 신고 화면인 척 (고용24 취업신고)',
     file: S('report-job'), slug: 'unemployment-report-job-guide',
-    from: "본인 신고가 늦으면 취업 뒤에 실업인정을 받은 것으로 잡혀요.' },", to: "본인 신고가 늦으면 취업 뒤에 실업인정을 받은 것으로 잡혀요.', link: { href: 'https://www.work24.go.kr/cm/main.do', label: '고용24 취업신고' } }," },
+    from: "열어 둔 길이에요.', fn:", to: "열어 둔 길이에요.', link: { href: 'https://www.work24.go.kr/cm/main.do', label: '고용24 취업신고' }, fn:" },
   { n: 57, name: '칩 큰 글씨를 서술어로 (끊겨요 / 개업일부터)',
     file: S('report-job'), slug: 'unemployment-report-job-guide',
     from: "{ chip: '언제까지 신고', selected: true, big: '2', unit: '개월',", to: "{ chip: '언제까지 신고', selected: true, big: '끊겨요', unit: '개월'," },
   { n: 58, name: '검토 지적을 제목에 덧붙여 49자 명사 나열로',
     file: S('report-job'), slug: 'unemployment-report-job-guide',
-    from: "title: '실업급여 취업신고 언제까지 하나요, 서류와 입금 시점과 재실업'", to: "title: '실업급여 취업신고 언제까지 하나요, 서류와 입금 시점과 재실업과 조기재취업수당 청구 기한 예외'" },
+    from: "title: '실업급여 취업신고 기간, 서류부터 입금과 재실업까지'", to: "title: '실업급여 취업신고 기간, 서류부터 입금과 재실업과 조기재취업수당 청구 기한 예외까지'" },
 
   { n: 51, name: '적대 검토 기록을 지움 (글쓴이 혼자 읽고 넘김)', plan: true, slug: 'health-insurance', field: 'dropAdversarial' },
 
   { n: 49, name: '죽은 바깥 링크를 심음 (정부 사이트 개편으로 옛 주소가 안내 페이지가 됨)',
-    file: S('health-insurance'), slug: 'unemployment-health-insurance-guide', useGate: true,
-    from: "`${NHIS}/nhis/minwon/initCtrbCalcView.do`", to: "`${NHIS}/nhis/minwon/retrieveMinwonMain.do`" },
+    file: S('180days'), slug: 'unemployment-180days-guide', useGate: true,   // 기준 이동 2026-09-23: 건강보험 글에서 바깥 링크가 빠짐
+    from: "'https://www.ei.go.kr'", to: "'https://help.scourt.go.kr/nm/min_1/min_1_7/index.html'" },
 
   { n: 50, name: '근거에 없는 부과 항목을 지어냄 (자동차)',
     file: S('health-insurance'), slug: 'unemployment-health-insurance-guide',
-    from: "소득과 재산을 점수로 매기는데", to: "소득과 재산과 자동차를 점수로 매기는데" },
+    from: "지역보험료는 소득과 재산을 나눠서 매겨요.", to: "지역보험료는 소득과 재산과 자동차를 나눠서 매겨요." },
 
   { n: 48, name: '표 행의 셀 수가 헤더와 다름',
     file: S('days'), slug: 'unemployment-days-guide',

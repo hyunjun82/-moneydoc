@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "basic-pension-guide";
 
 export const html = `<h1>2026년 기초연금 수급 조건과 금액, 선정기준액부터 신청까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">기초연금법 요건과 2026년 고시 금액 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">기초연금법 요건과 2026년 고시 금액 대조 · 2026-09-02</span></div>
 <img class="v2-hero" src="/og/basic-pension-guide.png" width="1200" height="630" alt="기초연금 수급 조건과 금액. 단독가구는 월 349,700원">
 <p class="v2-lead v2-intro">기초연금은 65세 이상 어르신 가운데 소득과 재산이 적은 분에게 매달 지급하는 돈이에요. 소득인정액이 단독가구 2,470,000원, 부부가구 3,952,000원 이하면 받을 수 있어요. 2026년 기준으로 단독가구는 월 349,700원, 부부가구는 둘이 합쳐 559,520원이에요. 누가 받는지, 소득인정액은 어떻게 계산하는지, 국민연금을 받으면 얼마나 깎이는지, 어디서 신청하는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

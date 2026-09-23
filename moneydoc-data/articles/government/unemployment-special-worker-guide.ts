@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-special-worker-guide";
 
 export const html = `<h1>특고 노무제공자 실업급여, 보험설계사와 배달라이더 대리운전은 되나요?</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 노무제공자 특례 원문 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 노무제공자 특례 원문 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-special-worker-guide.png" width="1200" height="630" alt="특고 노무제공자 실업급여 안내. 노무제공자로 인정되는 직종 17개">
 <p class="v2-lead v2-intro">노무제공자란 근로계약을 맺은 근로자는 아니지만, 다른 사람의 사업을 위해 직접 일하고 그 대가를 받기로 계약한 사람이에요. 고용보험법은 이런 사람을 노무제공자라고 불러요. 특고 실업급여를 찾았다면 이 노무제공자 규정을 보면 돼요. 근로계약서가 없어도 정해진 직종이면 고용보험이 적용돼요. 어떤 직종이 노무제공자로 인정되고, 실업급여를 받으려면 무엇을 채워야 하는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

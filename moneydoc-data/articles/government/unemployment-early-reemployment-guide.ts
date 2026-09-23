@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-early-reemployment-guide";
 
 export const html = `<h1>실업급여 조기재취업수당 조건과 신청 방법</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행령 지급기준 원문 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행령 지급기준 원문 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-early-reemployment-guide.png" width="1200" height="630" alt="조기재취업수당 조건과 금액 계산">
 <p class="v2-lead v2-intro">실업급여를 받다가 일찍 취업하면 남은 급여가 아깝게 느껴져요. 그럴 때 받는 게 조기재취업수당이에요. 다만 남은 일수를 다 주는 게 아니라 절반을 줘요. 그리고 취업했다고 자동으로 나오지 않고 요건이 여럿이에요. 신고일부터 14일이 지나야 하고, 소정급여일수를 절반 이상 남겨야 하고, 12개월 이상 계속 고용되어야 해요. 조건과 신청 시기를 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

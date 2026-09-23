@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "acquisition-tax-guide";
 
 export const html = `<h1>집 살 때 취득세 세율과 계산, 생애최초 감면부터 다주택 중과까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">위택스 지방세 미리계산과 1원 단위 일치 · 2026-09-16</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">위택스 지방세 미리계산과 1원 단위 일치 · 2026-09-16</span></div>
 <img class="v2-hero" src="/og/acquisition-tax-guide.png" width="1200" height="630" alt="집 살 때 취득세 계산. 5억원짜리 집을 처음 사면 5,500,000원">
 <p class="v2-lead v2-intro">집을 사면 잔금을 치른 뒤 60일 안에 취득세를 내야 해요. 세율은 집값 6억원과 9억원에서 갈리고, 이미 집이 있으면 지역에 따라 8%나 12%로 뛰어요. 5억원짜리 집을 무주택 상태에서 처음 사면 취득세 5,000,000원에 지방교육세 500,000원을 더해 5,500,000원이에요. 여기에 전용면적이 85㎡를 넘으면 농어촌특별세가 붙어요. 세율 구조, 집값별 금액, 생애최초 감면, 중과 기준을 차례대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

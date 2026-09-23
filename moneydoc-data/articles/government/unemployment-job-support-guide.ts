@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-job-support-guide";
 
 export const html = `<h1>국민취업지원제도 신청 방법, 실업급여 끝나고 언제부터 되나요</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">국민취업지원제도 신청 시기와 조건을 구직자취업촉진법령·고용24 안내와 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">국민취업지원제도 신청 시기와 조건을 구직자취업촉진법령·고용24 안내와 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-job-support-guide.png" width="1200" height="630" alt="실업급여가 끝난 뒤 국민취업지원제도 1유형 신청은 6개월 뒤">
 <p class="v2-lead v2-intro">실업급여가 끝나갈 때쯤 국민취업지원제도를 알아보는 분이 많아요. 고용24는 실업급여를 받는 기간에는 참여할 수 없다고 안내해요. 끝난 뒤에도 1유형은 6개월 제한이 있고, 2유형은 구직급여 때문에 기다리는 기간이 없어요. 두 제도의 차이, 신청 순서, 유형별 조건과 받는 돈을 차례로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

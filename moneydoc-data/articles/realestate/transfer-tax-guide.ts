@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "transfer-tax-guide";
 
 export const html = `<h1>1주택 양도세 비과세 요건과 계산, 2년 보유부터 12억 초과분까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">소득세법 비과세 요건과 세율표 대조 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">소득세법 비과세 요건과 세율표 대조 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/transfer-tax-guide.png" width="1200" height="630" alt="1주택 양도세 비과세 요건. 2년 이상 보유한 집을 12억원 이하로 팔면 세금이 없어요">
 <p class="v2-lead v2-intro">집 한 채를 2년 이상 갖고 있다가 12억원 이하로 팔면 양도세를 내지 않아요. 5억원에 사서 10억원에 팔아 500,000,000원을 벌어도 세금이 0원이에요. 12억원을 넘겨 팔면 그 넘는 부분에만 세금이 붙어요. 8억원에 사서 15억원에 팔았고 10년 살았다면 2,821,500원이에요. 비과세 요건, 12억 초과분 계산, 장기보유특별공제, 신고 기한을 차례대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

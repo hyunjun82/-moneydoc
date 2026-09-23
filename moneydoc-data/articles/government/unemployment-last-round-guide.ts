@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-last-round-guide";
 
 export const html = `<h1>실업급여 마지막 회차와 남은 일수 정산</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">마지막 회차 정산과 기한을 고용보험법령·실업인정 규정과 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">마지막 회차 정산과 기한을 고용보험법령·실업인정 규정과 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-last-round-guide.png" width="1200" height="630" alt="실업급여 마지막 회차. 인정받은 날수만큼 정산해서 지급">
 <p class="v2-lead v2-intro">마지막 회차가 다가오면 남은 일수를 한 번에 받는지, 몇 차가 마지막인지 궁금해져요. 구직급여는 실업을 인정받은 날에만 나와서 남은 날수를 미리 한꺼번에 받지는 않아요. 받을 수 있는 날수를 다 쓰는 회차가 마지막이고, 그 회차에도 재취업활동을 신고해야 해요. 수급이 끝난 뒤에는 기한이 걸린 신청이 남아요.</p>
 <section class="v2-answer" aria-label="즉답">

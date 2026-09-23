@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-freelance-guide";
 
 export const html = `<h1>실업급여 프리랜서 소득 신고, 3.3% 일감과 취업 판정 기준</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">취업 인정기준과 과세자료 조문 원문 대조 · 하루 금액은 계산기 엔진 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">취업 인정기준과 과세자료 조문 원문 대조 · 하루 금액은 계산기 엔진 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/unemployment-freelance-guide.png" width="1200" height="630" alt="실업급여 중 프리랜서 소득 신고. 하루 66,048원 이상이면 그날은 취업">
 <p class="v2-lead v2-intro">실업급여를 받는 중에 프리랜서 일감을 받아도 돼요. 대신 실업인정을 받을 때 일한 날과 받은 돈을 신청서에 적어야 해요. 얼마부터 취업으로 보느냐가 궁금하실 텐데 기준이 하나가 아니에요. 그날 받을 구직급여 하루 금액 이상을 받았거나, 3개월 이상 이어졌거나, 월보수액 80만원 이상 계약을 새로 맺었으면 취업이에요. 3.3%를 떼고 받은 일감은 그 기록이 국세청에 쌓여서 나중에 맞춰 볼 수 있어요.</p>
 <section class="v2-answer" aria-label="즉답">

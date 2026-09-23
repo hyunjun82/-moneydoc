@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "parental-leave-pay-guide";
 
 export const html = `<h1>2026년 육아휴직 급여 조건과 금액, 신청 방법부터 6+6 특례까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행령 지급액 기준과 1원 단위 일치 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용보험법 시행령 지급액 기준과 1원 단위 일치 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/parental-leave-pay-guide.png" width="1200" height="630" alt="육아휴직 급여. 통상임금 300만원이면 12개월 동안 23,100,000원">
 <p class="v2-lead v2-intro">육아휴직 급여는 통상임금을 기준으로 주되 기간에 따라 상한이 달라져요. 통상임금이 300만원이라면 첫 3개월은 월 2,500,000원, 4개월째부터 6개월째까지는 2,000,000원, 7개월째부터는 1,600,000원이에요. 12개월을 다 쓰면 23,100,000원이에요. 누가 쓸 수 있는지, 월별로 얼마인지, 부모가 함께 쓰면 얼마나 늘어나는지, 어디에 신청하는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

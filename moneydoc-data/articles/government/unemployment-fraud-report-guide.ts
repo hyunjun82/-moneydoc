@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-fraud-report-guide";
 
 export const html = `<h1>실업급여 부정수급 자진신고와 조사 절차, 처벌부터 환수까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">자진신고·반환·추가징수 기준을 법령 원문과 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">자진신고·반환·추가징수 기준을 법령 원문과 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-fraud-report-guide.png" width="1200" height="630" alt="실업급여 부정수급 자진신고 시 추가징수 면제와 반환 범위 축소">
 <p class="v2-lead v2-intro">실업급여를 부정하게 받은 걸 알았다면 숨기기보다 먼저 신고하는 게 나아요. 고용센터가 조사하기 전에 스스로 알리면 추가징수를 면제받을 수 있어요. 일하고 신고하지 않은 경우라면 돌려줄 금액도 한 번은 일한 날만큼으로 줄어요. 자진신고의 효과, 조사 절차, 처벌과 환수 범위를 차례로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-eitc-guide";
 
 export const html = `<h1>실업급여와 근로장려금 중복, 소득 산정부터 신청 조건과 금액까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">근로장려금 신청자격과 실업급여 비과세를 조세특례제한법·소득세법 원문과 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">근로장려금 신청자격과 실업급여 비과세를 조세특례제한법·소득세법 원문과 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-eitc-guide.png" width="1200" height="630" alt="실업급여와 근로장려금 중복 신청 가능 여부 안내">
 <p class="v2-lead v2-intro">실업급여를 받은 해에 근로장려금도 받을 수 있는지 궁금한 분이 많아요. 근로장려금 신청자격에는 구직급여를 받은 사람을 빼는 조항이 없어요. 대신 그 해에 근로소득·사업소득·종교인소득이 있어야 하고, 소득·재산 같은 요건을 모두 채워야 해요. 실업급여는 비과세소득이라 소득 계산에 들어가지 않아요.</p>
 <section class="v2-answer" aria-label="즉답">

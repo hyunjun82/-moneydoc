@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-employer-guide";
 
 export const html = `<h1>실업급여 회사 불이익과 부담금, 안 해주는 이유와 요청 방법</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">회사 제재와 이직확인서 발급 의무를 고용보험법령 원문과 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">회사 제재와 이직확인서 발급 의무를 고용보험법령 원문과 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-employer-guide.png" width="1200" height="630" alt="실업급여 회사 불이익. 미발급·거짓 작성은 과태료, 근로자와 공모하면 형사처벌">
 <p class="v2-lead v2-intro">실업급여를 신청하려고 이직확인서를 달라고 했더니, 회사가 불이익을 걱정하며 미루는 경우가 있어요. 이직확인서는 퇴사 사유와 가입기간, 평균임금을 적어 회사가 발급하거나 고용센터에 내는 서류예요. 법이 회사에 매기는 제재는 안 써주거나 거짓으로 쓸 때, 상실신고를 어길 때, 근로자와 짜고 속일 때 붙어요. 회사가 걱정할 만한 지원금 제한과 요청 순서도 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

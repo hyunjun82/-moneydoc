@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-center-guide";
 
 export const html = `<h1>실업급여 문의 전화번호와 고용센터 방문, 신청장소까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용24 제도 안내와 고용노동부 문의처 원문 대조 · 2026-09-17</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용24 제도 안내와 고용노동부 문의처 원문 대조 · 2026-09-17</span></div>
 <img class="v2-hero" src="/og/unemployment-center-guide.png" width="1200" height="630" alt="실업급여 문의 전화번호 1350과 1577-7114, 고용센터 방문 시점과 신청장소 안내">
 <p class="v2-lead v2-intro">실업급여를 신청하려면 언젠가 고용센터에 전화하거나 직접 찾아가야 해요. 그런데 문의 번호는 목적마다 다르고, 방문도 매번 필요한 게 아니에요. 어느 번호로 걸지, 꼭 가야 하는 날이 언제인지, 내가 갈 센터를 어떻게 찾는지 순서대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

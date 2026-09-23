@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "installment-savings-guide";
 
 export const html = `<h1>적금 이자 계산과 세금, 단리 복리부터 만기 실수령액까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">이자소득세 15.4% 원천징수 기준 반영 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">이자소득세 15.4% 원천징수 기준 반영 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/installment-savings-guide.png" width="1200" height="630" alt="적금 이자 계산. 월 50만원을 24개월 넣으면 만기에 12,434,011원">
 <p class="v2-lead v2-intro">적금은 매달 넣는 돈이라서 마지막 달에 넣은 돈에는 한 달치 이자만 붙어요. 그래서 연 4%짜리 적금이어도 원금 대비 실제 수익률은 그보다 낮아요. 월 50만원씩 24개월을 연 4%로 넣으면 원금 12,000,000원에 이자 513,015원이 붙고, 세금 79,004원을 뗀 12,434,011원을 받아요. 이자가 어떻게 붙는지, 단리와 복리는 얼마나 차이 나는지, 세금은 얼마인지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

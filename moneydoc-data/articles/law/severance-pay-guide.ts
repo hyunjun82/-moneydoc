@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "severance-pay-guide";
 
 export const html = `<h1>퇴직금 계산 방법과 지급기준, 평균임금부터 14일 지급기한까지</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용노동부 퇴직금 계산기와 1원 단위 일치 · 2026-09-09</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">고용노동부 퇴직금 계산기와 1원 단위 일치 · 2026-09-09</span></div>
 <img class="v2-hero" src="/og/severance-pay-guide.png" width="1200" height="630" alt="퇴직금 계산 방법. 월급 300만원으로 5년 일하면 퇴직금 14,673,913원">
 <p class="v2-lead v2-intro">퇴직금은 "월급 곱하기 근속연수"가 아니에요. 퇴사 직전 3개월 평균임금으로 계산하고, 그 안에 상여금과 연차수당까지 들어가요. 월급 300만원으로 5년 일했다면 14,673,913원이고, 같은 조건에서 상여금 600만원과 연차수당이 있으면 17,608,697원으로 늘어요. 계산 순서, 근속별 금액표, 지급 기한과 못 받았을 때 할 일을 순서대로 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

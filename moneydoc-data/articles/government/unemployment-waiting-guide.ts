@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "unemployment-waiting-guide";
 
 export const html = `<h1>실업급여 대기기간, 7일 동안 왜 안 나오나요</h1>
-<div class="v2-meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 대기기간 규정 원문 대조 · 2026-09-15</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>6분</span><span class="v2-badge">고용보험법 대기기간 규정 원문 대조 · 2026-09-15</span></div>
 <img class="v2-hero" src="/og/unemployment-waiting-guide.png" width="1200" height="630" alt="실업급여 대기기간 7일과 첫 회차 7일치">
 <p class="v2-lead v2-intro">실업급여를 신청하고 나면 바로 돈이 들어올 줄 알았다가 당황하는 경우가 많아요. 법이 실업 신고일부터 7일간을 대기기간으로 정해 두고 그 기간에는 지급하지 않기 때문이에요. 이 7일은 없어지는 날이고, 그래서 첫 회차 금액이 유독 적어요. 대기기간이 무엇인지, 없는 경우는 어떤 경우인지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">

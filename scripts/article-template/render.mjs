@@ -154,7 +154,7 @@ export function render(a) {
 <main>
 <div class="crumb"><a href="/">홈</a> › <a href="/${a.cat}/">${a.catLabel}</a> › ${a.crumb}</div>
 <h1>${a.title}</h1>
-<div class="meta"><span>글 <a href="/about/">한결</a></span><span>·</span><span>${a.basis}</span><span>·</span><span>${a.readMinutes}분</span><span class="badge">${a.badge}</span></div>
+<div class="meta"><span>글 한결</span><span>·</span><span>${a.basis}</span><span>·</span><span>${a.readMinutes}분</span><span class="badge">${a.badge}</span></div>
 <img class="hero" src="/_preview/og-${a.slug}.png" width="1200" height="630" alt="${esc(heroAlt)}">
 <p class="lead intro">${a.intro}</p>
 <section class="answer" aria-label="즉답">
