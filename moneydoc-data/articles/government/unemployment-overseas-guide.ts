@@ -90,7 +90,7 @@ export const html = `<h1>실업급여 해외여행과 실업인정일, 날짜변
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/change-date/"><b>다음 질문</b>실업인정일 변경 신청하는 법</a><a href="/unemployment/fraud/"><b>다음 질문</b>부정수급 신고를 빠뜨리면</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
-    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>
+    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
     <button class="v2-btn" id="md-inter-go">바로 이동</button></div>
 </div>`;
 

@@ -163,7 +163,7 @@ export const html = `<h1>퇴직금 계산 방법과 지급기준, 평균임금�
 <div class="v2-rel"><a href="/severance/"><b>계산기</b>퇴직금 계산기</a><a href="/retirement-tax/"><b>세금 계산기</b>퇴직소득세 계산기</a><a href="/annual-leave/"><b>법률 가이드</b>연차수당 계산법</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
-    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>
+    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
     <button class="v2-btn" id="md-inter-go">바로 이동</button></div>
 </div>`;
 

@@ -102,7 +102,7 @@ export const html = `<h1>실업급여 부정수급 자진신고와 조사 절차
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/fraud/"><b>다음 질문</b>실업급여 부정수급 처벌, 반환 금액과 추가징수 기준</a><a href="/unemployment/part-time-job/"><b>다음 질문</b>실업급여 알바 신고 방법, 안 하면 부정수급인가요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
-    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>
+    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
     <button class="v2-btn" id="md-inter-go">바로 이동</button></div>
 </div>`;
 

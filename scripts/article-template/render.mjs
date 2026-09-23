@@ -193,7 +193,7 @@ ${a.sources.map(([k, v]) => `<b>${k}</b>${v}`).join('\n')}
 <div class="rel">${a.related.map((r) => `<a href="${r.href}"><b>${r.kind}</b>${r.label}</a>`).join('')}</div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="box"><div class="t">공식 페이지로 이동해요</div><div class="d" id="md-inter-d">새 창에서 열려요</div>
-    <div class="slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>
+    <div class="slot" id="md-ad-slot" data-ad="interstitial"></div>
     <button class="btn" id="md-inter-go">바로 이동</button></div>
 </div>
 </main>

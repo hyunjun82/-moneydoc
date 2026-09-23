@@ -91,7 +91,7 @@ export const html = `<h1>2026년 실업급여 개편, 하한액과 반복수급 
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/amount/"><b>다음 질문</b>2026년 실업급여 상한액과 하한액, 하루 얼마까지 받나요</a><a href="/unemployment/repeat/"><b>다음 질문</b>실업급여 반복수급 기준, 감액 시행 여부와 실업인정 차이</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
-    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>
+    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
     <button class="v2-btn" id="md-inter-go">바로 이동</button></div>
 </div>`;
 

@@ -5,7 +5,7 @@ export type Tile = { slug: string; name: string; count: number; tint: string; in
 const S = { fill: "none", stroke: "currentColor", strokeWidth: 1.9, strokeLinecap: "round", strokeLinejoin: "round" } as const;
 
 export const TILES: Tile[] = [
-  { slug: "savings", name: "저축", count: 5, tint: "#e3ecff", ink: "#2f66d6",
+  { slug: "savings", name: "저축", count: 4, tint: "#e3ecff", ink: "#2f66d6",
     icon: <svg width="30" height="30" viewBox="0 0 24 24" {...S}><rect x="2.5" y="6" width="19" height="13" rx="3" fill="#fff" /><path d="M2.5 10.5h19" /><path d="M6 15h4" /></svg> },
   { slug: "loan", name: "대출", count: 9, tint: "#dcf3ec", ink: "#178f7a",
     icon: <svg width="30" height="30" viewBox="0 0 24 24" {...S}><circle cx="12" cy="12" r="9" fill="#fff" /><path d="M12 6.5v11" /><path d="M15 9.2H10.6a2 2 0 0 0 0 4h2.8a2 2 0 0 1 0 4H9" /></svg> },

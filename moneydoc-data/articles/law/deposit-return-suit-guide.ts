@@ -155,7 +155,7 @@ export const html = `<h1>보증금 반환 소송 절차와 양식, 내용증명�
 <div class="v2-rel"><a href="/certified-mail/"><b>법률 가이드</b>내용증명 작성 방법과 양식</a><a href="/severance/claim/"><b>법률 가이드</b>퇴직금 못 받았을 때 지급명령과 소장</a><a href="/jeonse-conversion/"><b>부동산 계산기</b>전월세 전환율 계산기</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
-    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>
+    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
     <button class="v2-btn" id="md-inter-go">바로 이동</button></div>
 </div>`;
 

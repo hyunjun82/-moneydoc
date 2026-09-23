@@ -119,8 +119,8 @@
 /savings/free-savings-guide/   /free-savings/  301
 /savings/isa-tax-saving/         /isa/  301
 /savings/isa-tax-saving-guide/   /isa/  301
-/savings/tax-free-savings/         /tax-free-savings/  301
-/savings/tax-free-savings-guide/   /tax-free-savings/  301
+/savings/tax-free-savings/         /savings/  301
+/savings/tax-free-savings-guide/   /savings/  301
 /insurance/auto-tax/         /auto-tax/  301
 /insurance/auto-tax-guide/   /auto-tax/  301
 /insurance/medical-insurance-payout/         /medical-payout/  301

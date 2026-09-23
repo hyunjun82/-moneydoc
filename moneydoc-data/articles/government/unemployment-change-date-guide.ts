@@ -99,7 +99,7 @@ export const html = `<h1>실업급여 첫인정일과 방문인정일, 실업인
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/round-1/"><b>다음 질문</b>1차 실업인정일에 하는 일</a><a href="/unemployment/round-4/"><b>다음 질문</b>4차 실업인정일 무엇이 다른가요</a><a href="/unemployment/payday/"><b>다음 질문</b>실업급여 지급일 확인하기</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
-    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>
+    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
     <button class="v2-btn" id="md-inter-go">바로 이동</button></div>
 </div>`;
 

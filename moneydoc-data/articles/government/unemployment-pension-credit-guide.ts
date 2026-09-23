@@ -123,7 +123,7 @@ export const html = `<h1>실업급여 국민연금, 실업크레딧 신청하면
 <div class="v2-rel"><a href="/unemployment/"><b>주제 홈</b>2026년 실업급여 얼마나 받나요</a><a href="/unemployment/health-insurance/"><b>같은 갈래</b>실업급여 건강보험료 감면, 임의계속가입과 피부양자 기준</a><a href="/unemployment/deadline/"><b>다음 질문</b>실업급여 신청기간, 퇴사 후 언제까지 받나요</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
-    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial">광고 영역 (오퍼월·전면광고 SDK 슬롯)</div>
+    <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
     <button class="v2-btn" id="md-inter-go">바로 이동</button></div>
 </div>`;
 
