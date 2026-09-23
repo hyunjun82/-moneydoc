@@ -128,7 +128,7 @@ export function lint(a) {
   if (tables + visuals === 0) add('sections', '시각 장치가 하나도 없음 (표·트리·타임라인·절차·흐름도 중 하나)');
 
   // 꼬리
-  if ((a.faq?.length ?? 0) < 5) add('faq', `${a.faq?.length ?? 0}개 (5개 이상)`);
+  if (a.faqFixed ? (a.faq?.length ?? 0) !== a.faqFixed : (a.faq?.length ?? 0) < 5) add('faq', `${a.faq?.length ?? 0}개 (${a.faqFixed ? `정확히 ${a.faqFixed}개` : '5개 이상'})`);
   // 히어로 카드는 본문 요약이다. 카드에 적은 숫자가 글 어디에도 없으면 둘이 어긋난 것이다.
   // 검사가 없어서 대기기간 7일 글의 카드만 14 로 바꿔도 통과했다 (돌연변이 34번).
   {

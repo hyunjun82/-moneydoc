@@ -50,6 +50,15 @@ const hubEntry = ARTICLES.find((a) => a.slug.startsWith(`${hub}-`) && !spokeSlug
 const hubSlug = hubEntry?.slug ?? `${hub}-benefit-guide`;
 log(`계획 ${slug} · 제목 "${sp.title}" · 소제목 ${sp.h2?.length ?? 0} · 허브 ${hubSlug}`);
 
+// ── 1b. 새 글 품질 장치 (quality.mjs). 계획서 스포크에 faq 가 있을 때만 켠다. 없는 예전 스포크는 그대로다 ──
+const Q = sp.faq != null ? await import(pathToFileURL(path.join(AT, 'quality.mjs')).href) : null;
+const QREF = Q ? await Q.reference() : null;
+if (Q) {
+  const pre = Q.preflight(sp, plan.keyword);
+  if (pre.length) { console.error('작성 전 확인 FAIL (계획서를 고친다. 작성기는 부르지 않았다)'); pre.forEach((x) => console.error(`   - ${x}`)); process.exit(1); }
+  log(`작성 전 확인 통과 · FAQ ${Q.FAQ_N}개 고정 · 기준 글 ${Q.REF}`);
+}
+
 // ── 2. brief ────────────────────────────────────────────────────────────
 const briefPath = path.join(AT, 'brief', `${slug}.json`);
 if (!fs.existsSync(briefPath)) {
@@ -73,6 +82,7 @@ if (evCount() < ownerBrief.sources.length) {
 const evidence = fs.readdirSync(evDir).filter((f) => f.endsWith('.json')).sort((a, b) => parseInt(a) - parseInt(b))
   .map((f) => ({ ...JSON.parse(fs.readFileSync(path.join(evDir, f), 'utf8')), json: path.join(evDir, f), png: path.join(evDir, f.replace('.json', '.png')) }));
 log(`근거 ${evidence.length}건 · ${evidence.reduce((a, e) => a + e.text.length, 0).toLocaleString()}자`);
+if (Q && evidence.length < Q.evidenceFloor(QREF)) { console.error(`근거 ${evidence.length}건 < ${Q.evidenceFloor(QREF)}건 (기준 글 ${QREF.sources}건의 절반). brief 에 출처를 더한다`); process.exit(1); }
 
 // ── 4. 허브 파악 (Playwright, 라이브) ────────────────────────────────────
 let hubText = '';
@@ -167,7 +177,9 @@ const HEAD = `너는 MoneyDoc 가이드 글 스펙(articles/<slug>.mjs)을 쓰�
 - 작업 순서: "캡처(필수)" 로 표시된 정부 안내 PNG 는 Read 로 연다(표·주석은 텍스트에 안 나온다). 법령은 필요한 조문을 아래에 이미 잘라 넣었다. 발췌에 없는 조문이 꼭 필요할 때만 전문을 Grep 한다. 그 다음에 쓴다. 아무것도 읽지 않고 쓰면 거부된다.
 - 내부 링크는 아래 "쓸 수 있는 링크" 목록에 있는 것만 쓴다. 목록에 없는 /${hub}/... 주소는 아직 글이 없어 404 다. 절대 만들지 않는다. related 도 이 목록과 '/${hub}/' 안에서만 고른다.
 - 계산기는 calc.on 이 true 일 때만.
-- 근거에 답이 있는 질문에 "사람마다 달라요"·"안내받아요" 같은 회피 답을 쓰지 않는다. 근거의 답을 쓴다.
+${Q ? `- FAQ 는 정확히 ${Q.FAQ_N}개. 스펙 최상위에 faqFixed: ${Q.FAQ_N} 을 넣는다.${Array.isArray(sp.faq) ? ' 질문은 계획서 faq 그대로 쓴다.' : ''}
+- 깊이는 기준 글(articles/${Q.REF}.mjs) 수준. 표·위젯(widget)·흐름도(flow)·판정 트리나 타임라인이나 절차 카드, 원문 인용 claims 를 넣는다.
+` : ''}- 근거에 답이 있는 질문에 "사람마다 달라요"·"안내받아요" 같은 회피 답을 쓰지 않는다. 근거의 답을 쓴다.
 - 이웃 글이 이미 답한 소제목·문장을 되풀이하지 않는다.
 - 예시 스펙의 구조·헬퍼 사용법(won, man, docs, derive 등)을 그대로 따른다. 예시의 내용은 베끼지 않는다.
 `;
@@ -193,7 +205,7 @@ ${evBlock}
 
 const PER = `
 ## 계획서 (이 글)
-${JSON.stringify({ slug: sp.slug, title: sp.title, h2: sp.h2, mustCover: sp.mustCover, calc: sp.calc, shape: sp.shape, evidence: sp.evidence }, null, 1)}
+${JSON.stringify({ slug: sp.slug, title: sp.title, h2: sp.h2, mustCover: sp.mustCover, calc: sp.calc, shape: sp.shape, evidence: sp.evidence, faq: sp.faq }, null, 1)}
 
 ## 쓸 수 있는 링크 (여기 없는 /${hub}/ 주소는 404 다)
 ${liveLinks.map((l) => `- /${hub}/${l.to}/  ${l.why}`).join('\n') || '- (없음)'}
@@ -370,6 +382,7 @@ for (let round = 1; round <= ROUNDS; round++) {
   const b = syn ? { ok: false, fails: [syn] } : build();
   fails = b.fails;
   if (b.ok) fails = deadLinkCheck();          // 대조는 통과했어도 404 링크가 있으면 다시
+  if (b.ok && Q) fails = [...fails, ...(await Q.check(slug, sp))];   // 기준 글 대비 하한. 모자라면 고침 회차로
   if (b.ok && !fails.length) {
     const p = publish();
     if (!p.ok) { console.error(`발행(convert-v2) 실패:\n${p.out.slice(-2000)}`); process.exit(1); }

@@ -59,13 +59,13 @@ FAIL 우선. 🔴 산식·데이터 → engine.js / 🟡 정책 갱신 → JSON 
 ```
 
 **한 편씩 끝내고 다음으로.** 몰아 쓰고 나중에 검토하면 같은 글을 세 번 만진다.
-글을 고치면 계획서도 고친다. 문장 훑기 `scripts/prose-scan.mjs`.
+글을 고치면 계획서도 고친다. 문장 훑기 `scripts/prose-scan.mjs`. 새 글: 계획서 스포크에 `faq: 2` → `node scripts/article.mjs <slug>` (작성 전 확인·기준 글 하한 `quality.mjs --selftest` 16/16).
 막는 것: lint·factcheck·answer-check(빌드) → gate.mjs(커밋) → hook-push-guard(git).
 
 ## 7. 장치가 진짜 잡는지 (숫자로 댄다)
 
 ```bash
-node scripts/selftest/mutate.mjs  # 결함 58종 58/58   (gate 8/8 · hook 14/14 · build-checks 4/4)
+node scripts/selftest/mutate.mjs  # 58종 중 51종 시험 51/51, 7종 기준 문장 없음 (2026-09-23)   (gate 8/8 · hook 14/14 · build-checks 4/4)
 ```
 
 검사기를 고쳤으면 여기부터. "작동한다"는 말 대신 숫자를 댄다.
@@ -74,5 +74,5 @@ node scripts/selftest/mutate.mjs  # 결함 58종 58/58   (gate 8/8 · hook 14/14
 ## 8. 푸시
 
 `verify-3way --all` PASS · `check-constants` PASS · 글 만졌으면 `gate.mjs` PASS ·
-검사기 고쳤으면 `mutate.mjs` 58/58 · `tsc --noEmit` 0 · 잘림 확인 →
+검사기 고쳤으면 `mutate.mjs` 시험된 것 전부 잡음 · `tsc --noEmit` 0 · 잘림 확인 →
 push-changes.bat → Cloudflare 빌드 확인 → push 후 `verify-3way --all`(--no-gov 빼고) 재확인.
