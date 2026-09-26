@@ -133,7 +133,8 @@ export class HometaxInheritanceTaxAdapter extends BaseAdapter {
       if (!pop) throw new AdapterError(this.constructor.id, '상속공제적용한도액 팝업이 열리지 않음');
       try { await pop.evaluate(() => document.querySelector('#mf_trigger14').click()); } catch { /* 저장 즉시 닫힘 */ }
       await sleep(1500); await closeOthers();
-      const limit = num(await p.inputValue(S + 'edtInhDdcApplcLmtAmt'));
+      let limit = NaN;
+      for (let i = 0; i < 30 && !(limit > 0); i++) { limit = num(await p.inputValue(S + 'edtInhDdcApplcLmtAmt')); if (!(limit > 0)) await sleep(500); }
       if (!Number.isFinite(limit) || limit <= 0) throw new AdapterError(this.constructor.id, '상속공제적용한도액이 채워지지 않음');
 
       await p.evaluate(() => document.querySelector('#mf_txppWframe_trigger19').click());

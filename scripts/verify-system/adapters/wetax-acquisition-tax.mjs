@@ -105,6 +105,7 @@ export class WetaxAcquisitionTaxAdapter extends BaseAdapter {
       const res = await page.goto(PAGE_URL, { waitUntil: 'domcontentloaded' });
       if (!res || res.status() >= 500) throw new AdapterError(this.constructor.id, `HTTP ${res?.status()} (위택스 다운)`);
       await page.waitForSelector('#dclrAcqsVal', { state: 'visible' });
+      await page.waitForSelector(`#resDlngTypCd option[value="${dealType}"]`, { state: 'attached' });
 
       // 위택스는 키보드보안 레이어가 클릭을 가로채는 경우가 있어 좌표/실클릭이 아니라
       // 페이지 자체 jQuery 로 상태를 바꾸고 change 핸들러를 태운다 (2026-09 검증).
