@@ -115,7 +115,7 @@ for (const f of files) {
 
   // 3. 계산기 버튼은 계획과 일치해야 한다 (답이 숫자인 글에만)
   if (s) {
-    const hasCta = cnt(h, new RegExp(`href="/${hub}/calculator/"`, 'g')) > 0;
+    const hasCta = cnt(h, new RegExp(`href="${s.calc?.href ?? `/${hub}/calculator/`}"`, 'g')) > 0;   // 계산기가 주제 주소에 있는 글(/jeonse-loan/ 등)은 계획서 calc.href
     if (hasCta !== !!s.calc?.on) fail(tag, `계산기 버튼 계획=${s.calc?.on ? '있음' : '없음'} 실제=${hasCta ? '있음' : '없음'}`);
   }
 

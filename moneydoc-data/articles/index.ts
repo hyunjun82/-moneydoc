@@ -185,6 +185,13 @@ export const GUIDES: GuideLink[] = [
     "blurb": "DSR 40%·50% · 단계별 가산금리 · 소득·기간별 한도표 · 한도 늘리기"
   },
   {
+    "cat": "loan",
+    "catLabel": "대출",
+    "href": "/jeonse-loan/guide/",
+    "title": "전세대출 이자계산, 1억이나 2억이면 한 달 이자는 얼마인가요",
+    "blurb": "1억·2억 한 달 이자 · 은행별 공시 금리 · 보증금별 80% 한도 · 버팀목 금리표"
+  },
+  {
     "cat": "pension",
     "catLabel": "연금",
     "href": "/pension-early/guide/",

@@ -12929,6 +12929,710 @@
       "spoke": "installment",
       "src": "네이버 자동완성 실측",
       "collected": "2026-09-15"
+    },
+    {
+      "word": "ltv 계산 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "mortgage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "ltv 계산 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "mortgage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "ltv 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "mortgage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "ltv 계산기 dsr",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "mortgage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "ltv 계산기 공시지가",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "mortgage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "ltv 계산기 소득",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "mortgage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "ltv 계산기 신생아",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "mortgage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "ltv 계산하는법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "mortgage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "대출 ltv 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "mortgage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "주담대 한도 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "mortgage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "주담대 한도 계산기 dsr",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "mortgage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "주택담보대출한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "mortgage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "주택담보대출한도조회",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "mortgage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "개인신용대출금리",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "신용대출 이자 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "신용대출금리",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "신용대출한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "1억 전세대출 이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "1주택자 전세대출 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "2억 전세대출 이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "hf 전세대출 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "lh전세대출 이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "디딤돌전세자금대출조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "무주택자 전세대출 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "버팀목전세대출 이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "버팀목전세대출 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "버팀목전세자금대출조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "신혼부부 전세대출 이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "신혼부부 전세대출 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "신혼전세자금대출조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "아파트전세대출 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "일반 전세대출 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전세대출 이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전세대출 이자계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전세대출 이자계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전세대출 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전세자금대출조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전세자금대출조건표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년버팀목전세대출 이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년버팀목전세대출 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년전세대출 이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년전세대출 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "jeonse",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "대출 중도상환 수수료 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "대출 중도상환 수수료 면제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "대출 중도상환 수수료 면제 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "대출 중도상환수수료 면제 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "주담대 중도상환수수료 면제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "중도상환수수료 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "중도상환수수료 계산 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "중도상환수수료 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "중도상환수수료 계산기 계산 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "중도상환수수료 계산기 사용법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "중도상환수수료 면제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "중도상환수수료 면제 국민은행",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "중도상환수수료 면제 대출",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "중도상환수수료 면제 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "중도상환수수료 면제 상품",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "중도상환수수료 면제 신용대출",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "중도상환수수료 면제 은행",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "중도상환수수료 면제 주담대",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "중도상환수수료 면제기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "prepayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "농협 대환대출 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "refinance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "담보대출 갈아타기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "refinance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "대출 갈아타기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "refinance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "대환대출 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "refinance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "대환대출 조건 및 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "refinance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "디딤돌대출 갈아타기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "refinance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "신생아 특례대출 갈아타기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "refinance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "신생아대출 갈아타기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "refinance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "신용대출 갈아타기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "refinance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "신용대출 갈아타기 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "refinance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "신협 대환대출 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "refinance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전세대출 갈아타기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "refinance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전세대출 갈아타기 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "refinance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "주담대 대환대출 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "refinance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "주택담보대출 갈아타기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "refinance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "1억 대출 이자 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "repayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "2억 대출 이자 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "repayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "4억 대출 이자 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "repayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "5억 대출 이자 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "repayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "6억 대출 이자 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "repayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "대출 원리금균등 원금균등 차이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "repayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "대출 이자 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "repayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "대출 이자 계산법 공식",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "repayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "원리금균등 원금균등 차이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "repayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전세대출 이자 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "repayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "중도금 대출 이자 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "repayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "집 대출 이자 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "repayment",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
     }
   ],
   "questions": [

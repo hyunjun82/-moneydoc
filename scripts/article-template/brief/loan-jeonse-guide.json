@@ -1,0 +1,75 @@
+{
+  "slug": "loan-jeonse-guide",
+  "keyword": "전세대출 이자계산",
+  "calc": "loan/jeonse-loan",
+  "mustInclude": [
+    "전세대출 이자계산",
+    "전세대출 이자",
+    "전세대출 한도",
+    "버팀목전세대출 이자"
+  ],
+  "queries": [
+    "전세대출 이자계산",
+    "1억 전세대출 이자",
+    "2억 전세대출 이자",
+    "전세대출 한도",
+    "전세자금대출 조건",
+    "버팀목전세대출 이자",
+    "버팀목전세대출 한도",
+    "청년 버팀목 전세대출 한도",
+    "신혼부부 전세대출 한도",
+    "HF 전세대출 한도"
+  ],
+  "sources": [
+    {
+      "label": "주택도시기금 버팀목전세자금 (대상·금리·한도·기간)",
+      "kind": "gov",
+      "url": "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020101.jsp"
+    },
+    {
+      "label": "주택도시기금 청년전용 버팀목전세자금",
+      "kind": "gov",
+      "url": "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020301.jsp"
+    },
+    {
+      "label": "주택도시기금 신혼부부전용 전세자금",
+      "kind": "gov",
+      "url": "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020401.jsp"
+    },
+    {
+      "label": "주택도시기금 신생아 특례 버팀목대출",
+      "kind": "gov",
+      "url": "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05021401.jsp"
+    },
+    {
+      "label": "주택도시기금 가산 금리 안내",
+      "kind": "gov",
+      "url": "https://nhuf.molit.go.kr/FP/FP08/FP0813/FP081302.jsp"
+    },
+    {
+      "label": "한국주택금융공사 일반전세자금보증 (보증한도·보증비율)",
+      "kind": "gov",
+      "url": "https://www.hf.go.kr/ko/sub02/sub02_01_02.do"
+    },
+    {
+      "label": "한국주택금융공사 전세대출금리 안내",
+      "kind": "gov",
+      "url": "https://www.hf.go.kr/ko/sub02/sub02_01_07_01.do"
+    },
+    {
+      "label": "주택도시보증공사 전세금안심대출보증",
+      "kind": "gov",
+      "url": "https://www.khug.or.kr/hug/web/ig/dl/igdl000001.jsp"
+    },
+    {
+      "label": "주택도시기금법 (기금의 용도: 주택 임차 융자)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/주택도시기금법"
+    },
+    {
+      "label": "한국주택금융공사법 (주택임차자금 보증)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/한국주택금융공사법"
+    }
+  ]
+}
