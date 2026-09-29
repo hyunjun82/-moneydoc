@@ -257,6 +257,13 @@ export const GUIDES: GuideLink[] = [
   {
     "cat": "pension",
     "catLabel": "연금",
+    "href": "/noranumbrella/guide/",
+    "title": "노란우산공제 소득공제 한도, 600만원 넣으면 세금 얼마 줄어드나요",
+    "blurb": "사업소득별 한도 600·500·400·200만원 · 줄어드는 세금 · 공제금 지급 사유 · 해지하면 기타소득세"
+  },
+  {
+    "cat": "pension",
+    "catLabel": "연금",
     "href": "/pension-early/guide/",
     "title": "국민연금 조기수령 감액과 손익분기, 조건부터 연기연금 비교까지",
     "blurb": "1년 6% 감액표 · 손익분기 나이 · 신청 조건 · 연기연금 비교"
