@@ -1,0 +1,56 @@
+{
+  "slug": "insurance-autotax-annual-guide",
+  "keyword": "자동차세 연납",
+  "calc": "insurance/auto-tax",
+  "mustInclude": [
+    "자동차세 연납",
+    "자동차세 연납 할인"
+  ],
+  "queries": [
+    "자동차세 연납",
+    "자동차세 연납 할인",
+    "자동차세 연납 할인율",
+    "자동차세 연납 기간",
+    "자동차세 연납 방법",
+    "자동차세 연납 환급",
+    "자동차세 연납 후 차량 매각",
+    "자동차세 연납신청"
+  ],
+  "sources": [
+    {
+      "label": "지방세법 (제127조 세율, 제128조 납기·연납, 제151조 지방교육세)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세법"
+    },
+    {
+      "label": "지방세법 시행령 (제125조 차령 경감, 연납 공제 이자율)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세법시행령"
+    },
+    {
+      "label": "행정안전부 보도자료 자동차세 연납 2월 4일 마감, 5% 공제 (2026.1)",
+      "kind": "gov",
+      "url": "https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=123496"
+    },
+    {
+      "label": "행정안전부 보도자료 2025년 자동차세 연납 할인율 5% 유지",
+      "kind": "gov",
+      "url": "https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=115039"
+    },
+    {
+      "label": "대한민국 정책브리핑 자동차세 연납으로 할인 혜택 챙겨요",
+      "kind": "gov",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148924845"
+    },
+    {
+      "label": "대한민국 정책브리핑 스마트 위택스로 자동차세 납부",
+      "kind": "gov",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148958272"
+    },
+    {
+      "label": "서울특별시 세목별 안내 자동차세",
+      "kind": "gov",
+      "url": "https://news.seoul.go.kr/gov/archives/200100"
+    }
+  ]
+}

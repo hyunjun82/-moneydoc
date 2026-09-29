@@ -1,0 +1,71 @@
+{
+  "slug": "insurance-ev-tax-guide",
+  "keyword": "전기차 자동차세",
+  "calc": "insurance/auto-tax",
+  "mustInclude": [
+    "전기차 자동차세",
+    "경차 자동차세"
+  ],
+  "queries": [
+    "전기차 자동차세",
+    "경차 자동차세",
+    "경차 자동차세 얼마",
+    "경차 자동차세 1년에 몇번",
+    "경차 자동차세 감면",
+    "전기차 자동차세 감면",
+    "전기차 자동차세 연납",
+    "전기차 자동차세금 기준"
+  ],
+  "sources": [
+    {
+      "label": "지방세법 (제127조 세율, 제128조 납기·연납, 제151조 지방교육세)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세법"
+    },
+    {
+      "label": "지방세법 시행령 (제125조 차령 경감, 연납 공제 이자율)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세법시행령"
+    },
+    {
+      "label": "지방세특례제한법 (경형자동차 취득세 감면)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세특례제한법"
+    },
+    {
+      "label": "서울특별시 세목별 안내 자동차세",
+      "kind": "gov",
+      "url": "https://news.seoul.go.kr/gov/archives/200100"
+    },
+    {
+      "label": "서울특별시 세목별 안내 지방교육세",
+      "kind": "gov",
+      "url": "https://news.seoul.go.kr/gov/archives/200123"
+    },
+    {
+      "label": "대한민국 정책브리핑 오늘부터 전기자동차 시판, 취득·등록세 면제 (2010)",
+      "kind": "gov",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148692386"
+    },
+    {
+      "label": "대한민국 정책브리핑 경형 전기차 취·등록세 면제 (2010)",
+      "kind": "gov",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148692446"
+    },
+    {
+      "label": "행정안전부 보도자료 자동차세 연납 2월 4일 마감, 5% 공제 (2026.1)",
+      "kind": "gov",
+      "url": "https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=123496"
+    },
+    {
+      "label": "대한민국 정책브리핑 스마트 위택스로 자동차세 납부",
+      "kind": "gov",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148958272"
+    },
+    {
+      "label": "행정안전부 보도자료 2025년 자동차세 연납 할인율 5% 유지",
+      "kind": "gov",
+      "url": "https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=115039"
+    }
+  ]
+}

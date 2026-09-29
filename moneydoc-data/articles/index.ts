@@ -304,6 +304,20 @@ export const GUIDES: GuideLink[] = [
     "blurb": "5세대 보험료 약 30%↓ · 비중증 50% · 중증 입원 상한 500만원 · 4세대 할증 5단계 · 전환·강제전환"
   },
   {
+    "cat": "insurance",
+    "catLabel": "보험·자동차",
+    "href": "/auto-tax/annual/",
+    "title": "자동차세 연납 할인, 1월에 내면 1년에 얼마나 아끼나요",
+    "blurb": "공제율 5% · 1월 약 4.58% · 1·3·6·9월 신청 · 위택스 신청 방법 · 팔면 일할 환급"
+  },
+  {
+    "cat": "insurance",
+    "catLabel": "보험·자동차",
+    "href": "/auto-tax/ev/",
+    "title": "전기차 자동차세, 경차와 비교하면 1년에 얼마 내나요",
+    "blurb": "전기차 정액 10만원 · 경차 cc당 80원 · 6월 한 번 부과 · 차령 경감 차이 · 취득세 감면"
+  },
+  {
     "cat": "law",
     "catLabel": "법률",
     "href": "/certified-mail/",

@@ -2053,6 +2053,81 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   ['gc','gk','gn'].forEach(function(id){document.getElementById(id).addEventListener('input',grender)}); grender();
 
   },
+  "insurance-autotax-annual-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
+
+  function annTax(cc, age){
+    var rate = cc <= 1000 ? 80 : cc <= 1600 ? 140 : 200;
+    var base = Math.round(cc * rate), usage = age + 1, disc = 0;
+    if (usage >= 3 && usage < 12) disc = +((usage - 2) * 0.05).toFixed(2); else if (usage >= 12) disc = 0.5;
+    function cut10(n){ return Math.floor(n / 10) * 10; }
+    function sfloor(x){ return Math.floor(Math.round(x * 1e6) / 1e6); }
+    var ha = cut10(sfloor((base * (1 - disc)) / 2)), he = cut10(sfloor(ha * 0.3));
+    return (ha + he) * 2;
+  }
+  function annDed(total, days){ var b = days ? total * 0.05 * days / 365 : (total / 2) * 0.05; return Math.floor(b / 10) * 10; }
+
+  function nrender(){ var cc=+document.getElementById('nc').value||0, y=+document.getElementById('ny').value||0, d=+document.getElementById('nm').value; var t=annTax(cc,y), k=annDed(t,d);
+    document.getElementById('no1').textContent=won(t)+'원'; document.getElementById('no2').textContent=won(k)+'원'; document.getElementById('no3').textContent=won(t-k)+'원'; }
+  ['nc','ny','nm'].forEach(function(id){document.getElementById(id).addEventListener('input',nrender);document.getElementById(id).addEventListener('change',nrender)}); nrender();
+
+  },
+  "insurance-ev-tax-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
+
+  function carTax(kind, cc, age, com){
+    function cut10(n){ return Math.floor(n / 10) * 10; }
+    function sfloor(x){ return Math.floor(Math.round(x * 1e6) / 1e6); }
+    if (kind === 'ev') { var a = com ? 20000 : 100000; var e = com ? 0 : Math.round(a * 0.3); return { auto: a, edu: e, total: a + e }; }
+    var rate = cc <= 1000 ? (com ? 18 : 80) : cc <= 1600 ? (com ? 18 : 140) : (com ? (cc <= 2000 ? 19 : 24) : 200);
+    var base = Math.round(cc * rate), usage = age + 1, disc = 0;
+    if (!com && usage >= 3 && usage < 12) disc = +((usage - 2) * 0.05).toFixed(2); else if (!com && usage >= 12) disc = 0.5;
+    var ha = cut10(sfloor((base * (1 - disc)) / 2)), he = com ? 0 : cut10(sfloor(ha * 0.3));
+    return { auto: ha * 2, edu: he * 2, total: (ha + he) * 2 };
+  }
+
+  function erender(){ var k=document.getElementById('ek').value, cc=+document.getElementById('ec').value||0, y=+document.getElementById('ey').value||0, com=document.getElementById('eb').value==='1'; var r=carTax(k,cc,y,com);
+    document.getElementById('eo1').textContent=won(r.auto)+'원'; document.getElementById('eo2').textContent=won(r.edu)+'원'; document.getElementById('eo3').textContent=won(r.total)+'원';
+    document.getElementById('eo4').textContent=r.auto<=100000?'6월에 한 번':'6월·12월 두 번'; }
+  ['ek','ec','ey','eb'].forEach(function(id){document.getElementById(id).addEventListener('input',erender);document.getElementById(id).addEventListener('change',erender)}); erender();
+
+  },
   "certified-mail-guide": function () {
 
   var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
