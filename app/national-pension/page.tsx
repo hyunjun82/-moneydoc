@@ -6,7 +6,7 @@ import spec from "@/data/calculators/pension/national-pension.json";
 export const metadata: Metadata = {
   title: "국민연금 예상수령액 계산기 (2026년 기준)",
   description:
-    "국민연금공단 공식 산식, 비례상수 1.29, A값 3,193,511원 (2026). 국민연금에 가입한 총 월수와 평생 평균 보수월액을 입력하면 노령연금 예상 수령액이 산출됩니다. 가입 20년이 만점 기준이고, 그 이상은 매년 5% 가산됩니다.",
+    "가입월수와 평균소득을 넣으면 2026년 산식(비례상수 1.29, A값 3,193,511원)으로 국민연금 월 노령연금액을 어림해요. 20년 미만은 50%에 1년마다 5%, 20년을 넘으면 1년마다 5%를 더해요. 2025년 이전 가입분의 비례상수 차이는 반영하지 않아요.",
   alternates: { canonical: "/national-pension/" },
 };
 
@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <CalculatorShell
       spec={spec}
-      sourceBadge="국민연금공단 2026 · 검증 완료"
+      sourceBadge="국민연금법 제51조 · 5케이스 검증"
     >
       <Client />
     </CalculatorShell>

@@ -1,0 +1,60 @@
+{
+  "slug": "pension-national-guide",
+  "keyword": "국민연금 예상수령액",
+  "calc": "pension/national-pension",
+  "mustInclude": [
+    "국민연금 예상수령액",
+    "국민연금 수령나이",
+    "국민연금 예상수령액 조회"
+  ],
+  "queries": [
+    "국민연금 예상수령액",
+    "국민연금 수령나이",
+    "국민연금 예상수령액 조회",
+    "국민연금 예상수령액 계산기",
+    "국민연금 예상수령액 평균",
+    "국민연금 예상수령액표"
+  ],
+  "sources": [
+    {
+      "label": "국민연금법 (제51조 기본연금액, 제61조 노령연금 수급권자, 부칙 지급 연령)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/국민연금법"
+    },
+    {
+      "label": "국민연금법 시행령 (A값·기준소득월액 상하한)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/국민연금법시행령"
+    },
+    {
+      "label": "보건복지부 보도자료 국민연금, 새해 재정은 보다 튼튼하게 노후는 더욱 든든하게 (2026 시행)",
+      "kind": "gov",
+      "url": "https://www.mohw.go.kr/board.es?mid=a10503000000&bid=0027&list_no=1488390&act=view"
+    },
+    {
+      "label": "국민연금공단 2026년도 국민연금 재평가율 및 연금액 조정 안내",
+      "kind": "gov",
+      "url": "https://nps.or.kr/pnsgdnc/newgdnc/getOHAE0001M1.do?hmpgBbsCd=BS20240137&hmpgCd=01&menuId=MN24000897&pageIndex=1&pstId=ZZ202600000000000027&searchGbu=&searchText=&sortSe=FR"
+    },
+    {
+      "label": "국민연금공단 알기쉬운 국민연금 연금급여 안내",
+      "kind": "gov",
+      "url": "https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0048M0.do"
+    },
+    {
+      "label": "보건복지부 보도자료 연금개혁법안 국회 본회의 통과 (보험료율 13%, 소득대체율 43%)",
+      "kind": "gov",
+      "url": "https://www.mohw.go.kr/board.es?mid=a10503000000&bid=0027&list_no=1485039&act=view"
+    },
+    {
+      "label": "보건복지부 국민연금 급여 정책 안내",
+      "kind": "gov",
+      "url": "https://www.mohw.go.kr/menu.es?mid=a10714010200"
+    },
+    {
+      "label": "국민연금공단 중앙노후준비지원센터 예상연금 알아보기",
+      "kind": "gov",
+      "url": "https://csa.nps.or.kr/ohkd/ntpsidnty/anpnctng/UHKD7701M0.do"
+    }
+  ]
+}

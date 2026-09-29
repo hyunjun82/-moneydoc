@@ -173,6 +173,7 @@
     "savings/savings-isa-guide": "isa/guide",
     "savings/savings-youth-guide": "installment/youth",
     "savings/savings-taxfree-guide": "deposit/taxfree",
-    "pension/pension-irp-guide": "irp/guide"
+    "pension/pension-irp-guide": "irp/guide",
+    "pension/pension-national-guide": "national-pension/guide"
   }
 }
