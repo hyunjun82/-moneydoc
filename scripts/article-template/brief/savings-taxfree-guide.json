@@ -1,0 +1,58 @@
+{
+  "slug": "savings-taxfree-guide",
+  "keyword": "비과세종합저축 조건",
+  "calc": "savings/fixed-deposit",
+  "mustInclude": [
+    "비과세종합저축 조건",
+    "비과세종합저축 한도",
+    "비과세종합저축 65세",
+    "세금우대 적금"
+  ],
+  "queries": [
+    "비과세종합저축",
+    "비과세종합저축 조건",
+    "비과세종합저축 대상자",
+    "비과세종합저축 65세",
+    "비과세종합저축 한도",
+    "비과세종합저축 장애인",
+    "비과세종합저축 서류",
+    "세금우대 적금"
+  ],
+  "sources": [
+    {
+      "label": "조세특례제한법 (제88조의2 비과세종합저축, 제89조의3 조합등예탁금)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/조세특례제한법"
+    },
+    {
+      "label": "조세특례제한법 시행령 (비과세종합저축 가입 서류·한도 관리)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/조세특례제한법시행령"
+    },
+    {
+      "label": "소득세법 (이자소득 원천징수세율 14%)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법"
+    },
+    {
+      "label": "지방세법 (지방소득세 특별징수 10%)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세법"
+    },
+    {
+      "label": "금융감독원 금융상품한눈에 비과세종합저축 안내",
+      "kind": "gov",
+      "url": "https://finlife.fss.or.kr/finlife/main/contents.do?menuNo=700067"
+    },
+    {
+      "label": "기초연금법 (기초연금 수급자)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/기초연금법"
+    },
+    {
+      "label": "대한민국 정책브리핑 2026년 기초연금 선정기준액 (보건복지부)",
+      "kind": "gov",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156737807"
+    }
+  ]
+}

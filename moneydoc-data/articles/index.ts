@@ -234,6 +234,13 @@ export const GUIDES: GuideLink[] = [
     "blurb": "일반형 6% · 우대형 12% 기여금 · 월 50만원 3년 · 청년도약계좌 갈아타기 · 2차 신청기간"
   },
   {
+    "cat": "savings",
+    "catLabel": "저축",
+    "href": "/deposit/taxfree/",
+    "title": "비과세종합저축 조건, 65세는 기초연금을 받아야 가입되나요",
+    "blurb": "가입 대상 7가지 · 65세 기초연금 수급자 · 1명당 5천만원 · 아끼는 세금 15.4% · 세금우대 적금 차이"
+  },
+  {
     "cat": "pension",
     "catLabel": "연금",
     "href": "/pension-early/guide/",
