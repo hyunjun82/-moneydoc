@@ -1,0 +1,74 @@
+{
+  "slug": "savings-youth-guide",
+  "keyword": "청년미래적금 조건",
+  "calc": "savings/installment-savings",
+  "mustInclude": [
+    "청년미래적금 조건",
+    "청년미래적금 우대형",
+    "청년도약계좌",
+    "청년미래적금 갈아타기"
+  ],
+  "queries": [
+    "청년미래적금",
+    "청년미래적금 조건",
+    "청년미래적금 우대형",
+    "청년미래적금 이자",
+    "청년미래적금 만기",
+    "청년미래적금 갈아타기",
+    "청년미래적금 신청기간",
+    "청년도약계좌 중도해지",
+    "청년도약계좌 만기"
+  ],
+  "sources": [
+    {
+      "label": "조세특례제한법 (제91조의22 청년도약계좌·제91조의25 청년미래적금 비과세)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/조세특례제한법"
+    },
+    {
+      "label": "조세특례제한법 시행령 (청년미래적금 가입 대상·부득이한 해지 사유)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/조세특례제한법시행령"
+    },
+    {
+      "label": "서민금융진흥원 청년미래적금 상품 안내",
+      "kind": "gov",
+      "url": "https://www.kinfa.or.kr/financialProduct/youthFutureSavings.do"
+    },
+    {
+      "label": "금융위원회 보도자료 10월 7일부터 청년미래적금 2차 가입 신청",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/87726"
+    },
+    {
+      "label": "대한민국 정책브리핑 청년미래적금 10월 7일부터 2차 가입 신청",
+      "kind": "gov",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148971997"
+    },
+    {
+      "label": "금융위원회 보도자료 청년미래적금 출시",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/87158"
+    },
+    {
+      "label": "금융위원회 보도자료 청년미래적금 가입절차·심사일정·갈아타기 안내",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/87106"
+    },
+    {
+      "label": "서민금융진흥원 청년미래적금 누리집 (상품 구조·금리·해지 심사)",
+      "kind": "gov",
+      "url": "https://ylaccount.kinfa.or.kr/main"
+    },
+    {
+      "label": "대한민국 정책브리핑 청년미래적금 궁금증 총정리",
+      "kind": "gov",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148966732"
+    },
+    {
+      "label": "금융위원회 보도자료 청년미래적금 출시 준비 점검",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/86767"
+    }
+  ]
+}

@@ -170,6 +170,7 @@
     "loan/loan-refinance-guide": "refinance/guide",
     "loan/loan-repayment-guide": "repayment/guide",
     "savings/savings-deposit-guide": "deposit/guide",
-    "savings/savings-isa-guide": "isa/guide"
+    "savings/savings-isa-guide": "isa/guide",
+    "savings/savings-youth-guide": "installment/youth"
   }
 }

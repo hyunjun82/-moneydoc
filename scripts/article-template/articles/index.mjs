@@ -39,6 +39,7 @@ export const ARTICLES = [
   { slug: 'loan-repayment-guide', cat: 'loan', catLabel: '대출', crumb: '대출 이자 계산법', blurb: '이자 공식 · 1억·2억·5억 월 상환액 · 원리금균등 원금균등 차이 · 만기일시·거치식' },
   { slug: 'savings-deposit-guide', cat: 'savings', catLabel: '저축', crumb: '정기예금 이자 계산', blurb: '이자 공식 · 원금·금리별 세후 이자 · 15.4% 세금 · 비과세종합저축 · 예금보호 1억원' },
   { slug: 'savings-isa-guide', cat: 'savings', catLabel: '저축', crumb: 'ISA 비과세 한도', blurb: '200만원·400만원 한도 · 초과분 9.9% · 서민형 기준 · 3년 전 해지 · 연금계좌 이전' },
+  { slug: 'savings-youth-guide', cat: 'savings', catLabel: '저축', crumb: '청년미래적금 조건', blurb: '일반형 6% · 우대형 12% 기여금 · 월 50만원 3년 · 청년도약계좌 갈아타기 · 2차 신청기간' },
   { slug: 'national-pension-early-guide', cat: 'pension', catLabel: '연금', crumb: '국민연금 조기수령', blurb: '1년 6% 감액표 · 손익분기 나이 · 신청 조건 · 연기연금 비교' },
   { slug: 'installment-savings-guide', cat: 'savings', catLabel: '저축', crumb: '적금 이자', blurb: '기간·금리별 이자표 · 단리 복리 차이 · 15.4% 세금 · 비과세 조건' },
   { slug: 'auto-tax-guide', cat: 'insurance', catLabel: '보험·자동차', crumb: '자동차세', blurb: '배기량별 세액표 · 차령 5% 경감 · 연납 공제 · 6월 12월 납기' },

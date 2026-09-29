@@ -227,6 +227,13 @@ export const GUIDES: GuideLink[] = [
     "blurb": "200만원·400만원 한도 · 초과분 9.9% · 서민형 기준 · 3년 전 해지 · 연금계좌 이전"
   },
   {
+    "cat": "savings",
+    "catLabel": "저축",
+    "href": "/installment/youth/",
+    "title": "청년미래적금 조건, 우대형 12%면 만기에 얼마 받나요",
+    "blurb": "일반형 6% · 우대형 12% 기여금 · 월 50만원 3년 · 청년도약계좌 갈아타기 · 2차 신청기간"
+  },
+  {
     "cat": "pension",
     "catLabel": "연금",
     "href": "/pension-early/guide/",
