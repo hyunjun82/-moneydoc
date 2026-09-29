@@ -160,7 +160,7 @@ export const html = `<h1>퇴직금 계산 방법과 지급기준, 평균임금�
 <b>법령</b>근로자퇴직급여 보장법 제4조(퇴직급여제도의 설정, 1년 미만·주 15시간 미만 제외), 제8조(계속근로기간 1년에 대하여 30일분 이상의 평균임금), 제9조(퇴사일부터 14일 이내 지급). 같은 법 시행령 제3조(중간정산 사유). 근로기준법 제2조(평균임금 정의, 평균임금이 통상임금보다 적으면 통상임금). 소득세법(퇴직소득 계산).
 <b>정부 도구</b>고용노동부 퇴직금 계산기와 이 글의 금액이 1원 단위까지 같아요 (2026-09-09 대조).
 </div>
-<div class="v2-rel"><a href="/severance/"><b>계산기</b>퇴직금 계산기</a><a href="/retirement-tax/"><b>세금 계산기</b>퇴직소득세 계산기</a><a href="/annual-leave/"><b>법률 가이드</b>연차수당 계산법</a></div>
+<div class="v2-rel"><a href="/severance/"><b>계산기</b>퇴직금 계산기</a><a href="/retirement-tax/"><b>세금 계산기</b>퇴직소득세 계산기</a><a href="/annual-leave/guide/"><b>법률 가이드</b>연차수당 계산법</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
@@ -388,7 +388,7 @@ export const landing = {
     {
       "kind": "법률 가이드",
       "label": "연차수당 계산법",
-      "href": "/annual-leave/"
+      "href": "/annual-leave/guide/"
     }
   ]
 };

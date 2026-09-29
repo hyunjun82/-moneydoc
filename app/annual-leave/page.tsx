@@ -1,38 +1,22 @@
 import type { Metadata } from "next";
-import { HubPage } from "@/components/HubPage";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/law/annual-leave-allowance-guide";
-
-const PAGE_URL = "https://moneydoc.kr/annual-leave/";
+import { CalculatorShell } from "@/components/CalculatorShell";
+import { Client } from "./Client";
+import spec from "@/data/calculators/law/annual-leave-allowance.json";
 
 export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
+  title: "연차수당 계산기 (2026년 기준)",
+  description:
+    "월급 / 209시간 × 8시간 × 미사용 일수. 연차수당 계산. 통상임금 × 미사용 연차일수. 1년차 11일, 2년차 15일, 3년차+ 추가 1일씩 (최대 25일). 미사용분은 다음 해 6월까지 사용 또는 수당.",
   alternates: { canonical: "/annual-leave/" },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
-  openGraph: {
-    type: "article",
-    title: meta.title,
-    description: meta.description,
-    url: PAGE_URL,
-    publishedTime: meta.datePublished,
-    modifiedTime: meta.dateModified,
-    images: [{ url: meta.image, width: 1200, height: 630, alt: meta.imageAlt }],
-  },
-  twitter: { card: "summary_large_image", title: meta.title, description: meta.description, images: [meta.image] },
 };
 
 export default function Page() {
   return (
-    <HubPage
-      meta={meta}
-      html={html}
-      faqLd={faqLd}
-      scriptKey={scriptKey}
-      url={PAGE_URL}
-      catHref="/"
-      catLabel="홈"
-      navActive="law"
-      crumb="연차수당"
-    />
+    <CalculatorShell
+      spec={spec}
+      sourceBadge="고용노동부 2026 · 검증 완료"
+    >
+      <Client />
+    </CalculatorShell>
   );
 }

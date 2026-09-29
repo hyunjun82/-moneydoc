@@ -26,7 +26,7 @@ export const html = `<h1>국민연금 조기수령 감액과 손익분기, 조�
     <div class="v2-box"><b>오래 살수록 불리해요</b><span>60세부터 받으면 손익분기가 약 76.7세라 그보다 오래 살면 손해예요</span></div>
   </div>
 </section>
-<!--CALC_START--><a class="v2-cta" href="/pension-early/calculator/">국민연금 조기수령 계산기 바로가기</a><!--CALC_END-->
+<!--CALC_START--><a class="v2-cta" href="/pension-early/">국민연금 조기수령 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">국민연금 조기수령 감액, 얼마나 깎이나요</a></li><li><a href="#s2">조기노령연금 조건은 어떻게 되나요</a></li><li><a href="#s3">조기수령 손익분기점, 몇 살인가요</a></li><li><a href="#s4">연기연금과 비교하면 어느 쪽이 낫나요</a></li><li><a href="#s5">조기연금 소득 있으면 어떻게 되나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 조기수령</small><b>핵심콕콕</b></div>
@@ -157,7 +157,7 @@ export const html = `<h1>국민연금 조기수령 감액과 손익분기, 조�
 <li>가입 10년 이상이어야 하고 소득이 있는 업무에 종사하지 않아야 신청할 수 있어요.</li>
 <li>반대로 미루면 1개월에 0.6%씩 늘어 5년 연기하면 1,360,000원이 돼요.</li>
 </ul></section>
-<a class="v2-cta" href="/pension-early/calculator/">국민연금 조기수령 계산기 바로가기</a>
+<a class="v2-cta" href="/pension-early/">국민연금 조기수령 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>국민연금법 제61조(노령연금 수급권자와 조기노령연금 청구 요건), 제62조(지급의 연기에 따른 가산, 1개월당 1천분의 6), 제63조(노령연금액과 조기노령연금 지급률), 제63조의2(소득활동에 따른 노령연금액 감액), 부칙 제8조(출생 연도별 지급연령 경과 규정). 국민연금법 시행령(지급 개시와 청구 절차).
@@ -251,7 +251,7 @@ export const landing = {
     "alt": "국민연금 조기수령 감액. 정상 100만원이면 60세에 700,000원"
   },
   "calc": {
-    "href": "/pension-early/calculator/",
+    "href": "/pension-early/",
     "label": "국민연금 조기수령 계산기 바로가기"
   },
   "badge": "국민연금법 조기노령연금 지급률과 일치 · 2026-09-02",

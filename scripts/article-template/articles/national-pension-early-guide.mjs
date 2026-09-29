@@ -34,7 +34,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `정상수령 월 100만원인 사람이 60세부터 받으면 ${won(R.reducedPension)}원으로 ${pctOf(R.reductionRate)}% 깎여요. 감액률표, 손익분기 나이, 신청 조건, 연기연금과의 비교를 한 번에 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `국민연금법 조기노령연금 지급률과 일치 · ${VERIFIED}`,
-    calc: { href: '/pension-early/calculator/', label: '국민연금 조기수령 계산기 바로가기' },
+    calc: { href: '/pension-early/', label: '국민연금 조기수령 계산기 바로가기' },
     hero: {
       tag: '연금', line1: '국민연금 조기수령 감액', line2: '언제가 유리한가',
       sub1: `정상 100만원 → 60세 수령 시 ${won(R.reducedPension)}원`,

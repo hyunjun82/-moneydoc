@@ -1,38 +1,25 @@
 import type { Metadata } from "next";
-import { HubPage } from "@/components/HubPage";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/tax/salary-net-pay-guide";
+import { CalculatorShell } from "@/components/CalculatorShell";
+import { salaryNetPaySpec } from "@/lib/calc/salary-net-pay";
+import { SalaryNetPayClient } from "./SalaryNetPayClient";
 
-const PAGE_URL = "https://moneydoc.kr/salary/";
+const spec = salaryNetPaySpec;
 
 export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
+  title: "연봉 실수령액 계산기 (2026년 기준, 국세청 간이세액표)",
+  description:
+    "세전 연봉, 부양가족, 자녀 수만 입력하면 매월 통장에 들어오는 실수령액 자동 계산. 국세청 2026.3 간이세액표(홈택스 원본) + 4대보험 공단 고시 요율. 홈택스 조회값과 5개 케이스 0원 일치.",
   alternates: { canonical: "/salary/" },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
-  openGraph: {
-    type: "article",
-    title: meta.title,
-    description: meta.description,
-    url: PAGE_URL,
-    publishedTime: meta.datePublished,
-    modifiedTime: meta.dateModified,
-    images: [{ url: meta.image, width: 1200, height: 630, alt: meta.imageAlt }],
-  },
-  twitter: { card: "summary_large_image", title: meta.title, description: meta.description, images: [meta.image] },
 };
 
 export default function Page() {
   return (
-    <HubPage
-      meta={meta}
-      html={html}
-      faqLd={faqLd}
-      scriptKey={scriptKey}
-      url={PAGE_URL}
-      catHref="/"
-      catLabel="홈"
-      navActive="tax"
-      crumb="연봉 실수령액"
-    />
+    <CalculatorShell
+      spec={spec}
+      sourceBadge="국세청 2026.3 간이세액표 · 홈택스 5케이스 0원 일치"
+      description="4대보험과 소득세를 정확히 차감해, 통장에 실제로 찍히는 금액을 알려드려요. 부양가족과 자녀 수에 따른 세액공제까지 자동 반영됩니다."
+    >
+      <SalaryNetPayClient />
+    </CalculatorShell>
   );
 }

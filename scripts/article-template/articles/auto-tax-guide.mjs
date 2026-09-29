@@ -26,7 +26,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `배기량 1,999cc 승용차의 자동차세는 지방교육세까지 1년에 ${won(R.totalTax)}원이에요. 배기량별 세액, 차령에 따른 경감, 연납 할인, 6월과 12월 납부 방법을 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `위택스 자동차세 계산과 대조 · ${VERIFIED}`,
-    calc: { href: '/auto-tax/calculator/', label: '자동차세 계산기 바로가기' },
+    calc: { href: '/auto-tax/', label: '자동차세 계산기 바로가기' },
     hero: {
       tag: '보험·자동차', line1: '자동차세 계산과 연납 할인', line2: '내 차는 얼마',
       sub1: `1,999cc 승용차 → 1년 ${won(R.totalTax)}원`,
@@ -204,7 +204,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     ],
     related: [
       { kind: '계산기', label: '자동차세 계산기', href: '/auto-tax/' },
-      { kind: '부동산 가이드', label: '재산세 계산과 납부', href: '/property-tax/' },
+      { kind: '부동산 가이드', label: '재산세 계산과 납부', href: '/property-tax/guide/' },
       { kind: '부동산 가이드', label: '집 살 때 취득세 세율과 계산', href: '/acquisition-tax/' },
     ],
   };

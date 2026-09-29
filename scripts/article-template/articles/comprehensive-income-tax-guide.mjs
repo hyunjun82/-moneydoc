@@ -35,7 +35,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `종합소득금액 5,000만원이면 종합소득세는 지방소득세까지 ${won(R.totalTax)}원이에요. 세율 구간표, 과세표준 계산 순서, 신고 대상 판정, 홈택스 신고 순서, 신고를 놓쳤을 때 가산세까지 한 번에 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 8,
     badge: `소득세법 누진세율표와 1원 단위 일치 · ${VERIFIED}`,
-    calc: { href: '/income-tax/calculator/', label: '종합소득세 계산기 바로가기' },
+    calc: { href: '/income-tax/', label: '종합소득세 계산기 바로가기' },
     hero: {
       tag: '세금', line1: '종합소득세 세율과 계산', line2: '내 세금 얼마',
       sub1: `종합소득금액 5,000만원 → ${won(R.totalTax)}원`,
@@ -230,7 +230,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     related: [
       { kind: '계산기', label: '종합소득세 계산기', href: '/income-tax/' },
       { kind: '세금 계산기', label: '프리랜서 3.3% 계산기', href: '/freelancer/' },
-      { kind: '세금 가이드', label: '연봉 실수령액 계산법', href: '/salary/' },
+      { kind: '세금 가이드', label: '연봉 실수령액 계산법', href: '/salary/guide/' },
     ],
   };
 }

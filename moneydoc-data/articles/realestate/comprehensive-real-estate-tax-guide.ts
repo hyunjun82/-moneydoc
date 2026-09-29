@@ -26,7 +26,7 @@ export const html = `<h1>종합부동산세 대상과 계산, 공시가 합산�
     <div class="v2-box"><b>집이 여러 채면 공제가 9억원</b><span>1세대 1주택보다 300,000,000원 적게 빼 줘서 세금이 빨리 붙어요</span></div>
   </div>
 </section>
-<!--CALC_START--><a class="v2-cta" href="/comprehensive-tax/calculator/">종합부동산세 계산기 바로가기</a><!--CALC_END-->
+<!--CALC_START--><a class="v2-cta" href="/comprehensive-tax/">종합부동산세 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">종합부동산세 대상은 누구인가요</a></li><li><a href="#s2">종합부동산세 계산, 공시가 합산부터 어떻게 하나요</a></li><li><a href="#s3">1세대 1주택 12억 공제, 여러 채면 어떻게 되나요</a></li><li><a href="#s4">재산세액공제와 고령자 장기보유 공제는 얼마인가요</a></li><li><a href="#s5">종합부동산세 언제 어떻게 내나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 종합부동산세</small><b>핵심콕콕</b></div>
@@ -165,13 +165,13 @@ export const html = `<h1>종합부동산세 대상과 계산, 공시가 합산�
 <li>이미 낸 재산세는 빼 주고, 1주택은 고령자와 장기보유 공제를 최대 80%까지 더 받아요.</li>
 <li>12월 1일부터 15일까지 고지서로 내요. 농어촌특별세 20%가 함께 붙어요.</li>
 </ul></section>
-<a class="v2-cta" href="/comprehensive-tax/calculator/">종합부동산세 계산기 바로가기</a>
+<a class="v2-cta" href="/comprehensive-tax/">종합부동산세 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>종합부동산세법 제7조(납세의무자), 제8조(과세표준과 기본공제 12억원·9억원, 합산배제), 제9조(세율, 재산세액공제, 고령자·장기보유 세액공제와 80% 한도), 제10조(세부담의 상한 150%), 제16조(12월 1일부터 15일까지 부과·징수). 종합부동산세법 시행령 제2조의4(공정시장가액비율 60%). 농어촌특별세법(종합부동산세액에 대한 농어촌특별세).
 <b>정부 도구</b>홈택스 종합부동산세 화면의 공제액과 세율 구조가 이 글의 계산과 같아요 (2026-09-09 대조).
 </div>
-<div class="v2-rel"><a href="/comprehensive-tax/"><b>계산기</b>종합부동산세 계산기</a><a href="/property-tax/"><b>부동산 계산기</b>재산세 계산기</a><a href="/property-tax/"><b>부동산 가이드</b>재산세 계산과 납부</a></div>
+<div class="v2-rel"><a href="/comprehensive-tax/"><b>계산기</b>종합부동산세 계산기</a><a href="/property-tax/"><b>부동산 계산기</b>재산세 계산기</a><a href="/property-tax/guide/"><b>부동산 가이드</b>재산세 계산과 납부</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
@@ -259,7 +259,7 @@ export const landing = {
     "alt": "종합부동산세 계산. 공시가격 15억원인 1주택은 691,201원"
   },
   "calc": {
-    "href": "/comprehensive-tax/calculator/",
+    "href": "/comprehensive-tax/",
     "label": "종합부동산세 계산기 바로가기"
   },
   "badge": "종합부동산세법 공제액과 세율표 대조 · 2026-09-09",
@@ -406,7 +406,7 @@ export const landing = {
     {
       "kind": "부동산 가이드",
       "label": "재산세 계산과 납부",
-      "href": "/property-tax/"
+      "href": "/property-tax/guide/"
     }
   ]
 };

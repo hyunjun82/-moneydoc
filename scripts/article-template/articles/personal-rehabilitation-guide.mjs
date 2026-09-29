@@ -183,7 +183,7 @@ export default function article({ VERIFIED }) {
     related: [
       { kind: '법률 가이드', label: '내용증명 작성 방법과 양식', href: '/certified-mail/' },
       { kind: '법률 가이드', label: '보증금 반환 소송 절차와 양식', href: '/deposit-return/' },
-      { kind: '법률 가이드', label: '임금체불 진정 방법과 지연이자', href: '/unpaid-wages/' },
+      { kind: '법률 가이드', label: '임금체불 진정 방법과 지연이자', href: '/unpaid-wages/guide/' },
     ],
   };
 }

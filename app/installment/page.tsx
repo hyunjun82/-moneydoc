@@ -1,38 +1,23 @@
 import type { Metadata } from "next";
-import { HubPage } from "@/components/HubPage";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/savings/installment-savings-guide";
-
-const PAGE_URL = "https://moneydoc.kr/installment/";
+import { CalculatorShell } from "@/components/CalculatorShell";
+import { Client } from "./Client";
+import spec from "@/data/calculators/savings/installment-savings.json";
 
 export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
+  title: "적금 계산기 (2026년 기준)",
+  description:
+    "월 적금 만기 수령액. 단리·복리 선택, 이자에서 세금 15.4% 자동 차감 (만 65세 이상 등 비과세 자격자는 0%). 정해진 금액 매월 납입하는 정기적금 만기 계산. 월 납입액·이자율·기간 입력. 단리 기준 (첫 달 납입금만 만기까지 12개월 이자, 마지막 달은 1개월 이자).",
   alternates: { canonical: "/installment/" },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
-  openGraph: {
-    type: "article",
-    title: meta.title,
-    description: meta.description,
-    url: PAGE_URL,
-    publishedTime: meta.datePublished,
-    modifiedTime: meta.dateModified,
-    images: [{ url: meta.image, width: 1200, height: 630, alt: meta.imageAlt }],
-  },
-  twitter: { card: "summary_large_image", title: meta.title, description: meta.description, images: [meta.image] },
 };
 
 export default function Page() {
   return (
-    <HubPage
-      meta={meta}
-      html={html}
-      faqLd={faqLd}
-      scriptKey={scriptKey}
-      url={PAGE_URL}
-      catHref="/"
-      catLabel="홈"
-      navActive="savings"
-      crumb="적금 이자"
-    />
+    <CalculatorShell
+      spec={spec}
+      sourceBadge="한국은행 표준 산식 · 5케이스 검증"
+      description="월 X원 납입 시 만기 수령액 — 단리/복리 토글, 이자소득세 15.4% 차감 (비과세 자격 시 0%)"
+    >
+      <Client />
+    </CalculatorShell>
   );
 }

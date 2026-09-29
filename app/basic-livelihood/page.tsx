@@ -1,38 +1,22 @@
 import type { Metadata } from "next";
-import { HubPage } from "@/components/HubPage";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/government/basic-livelihood-eligibility-guide";
-
-const PAGE_URL = "https://moneydoc.kr/basic-livelihood/";
+import { CalculatorShell } from "@/components/CalculatorShell";
+import { Client } from "./Client";
+import spec from "@/data/calculators/government/basic-livelihood-eligibility.json";
 
 export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
+  title: "기초생활수급자 모의계산 (2026년 기준)",
+  description:
+    "생계 32% / 의료 40% / 주거 48% / 교육 50% (2026 기준중위소득 6.51% 인상 적용). 기초생활수급자 모의계산. 가구원수·소득·재산 입력 시 생계(중위 32%)·의료(40%)·주거(48%)·교육(50%) 4종 급여 자격 판정. 자격 충족 시 부족분 지급.",
   alternates: { canonical: "/basic-livelihood/" },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
-  openGraph: {
-    type: "article",
-    title: meta.title,
-    description: meta.description,
-    url: PAGE_URL,
-    publishedTime: meta.datePublished,
-    modifiedTime: meta.dateModified,
-    images: [{ url: meta.image, width: 1200, height: 630, alt: meta.imageAlt }],
-  },
-  twitter: { card: "summary_large_image", title: meta.title, description: meta.description, images: [meta.image] },
 };
 
 export default function Page() {
   return (
-    <HubPage
-      meta={meta}
-      html={html}
-      faqLd={faqLd}
-      scriptKey={scriptKey}
-      url={PAGE_URL}
-      catHref="/"
-      catLabel="홈"
-      navActive="gov"
-      crumb="기초생활수급"
-    />
+    <CalculatorShell
+      spec={spec}
+      sourceBadge="보건복지부 2026 · 검증 완료"
+    >
+      <Client />
+    </CalculatorShell>
   );
 }

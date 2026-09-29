@@ -26,7 +26,7 @@ export const html = `<h1>종합소득세 세율과 계산 방법, 신고 대상�
     <div class="v2-box"><b>실제 부담률은 약 13.1%</b><span>종합소득금액 5,000만원 기준이에요. 세율 구간이 15%여도 누진공제 덕분에 실제 부담은 더 낮아요</span></div>
   </div>
 </section>
-<!--CALC_START--><a class="v2-cta" href="/income-tax/calculator/">종합소득세 계산기 바로가기</a><!--CALC_END-->
+<!--CALC_START--><a class="v2-cta" href="/income-tax/">종합소득세 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (7개 질문)<span>열기</span></summary><ol><li><a href="#s1">종합소득세 세율 몇 퍼센트인가요</a></li><li><a href="#s2">종합소득세 계산, 과세표준은 어떻게 구하나요</a></li><li><a href="#s3">종합소득세 신고 대상은 누구인가요</a></li><li><a href="#s4">홈택스 신고 순서, 5월에 뭐부터 하나요</a></li><li><a href="#s5">종합소득세 신고 안 하면 어떻게 되나요</a></li><li><a href="#s6">종합소득세 환급받으려면 뭘 챙겨야 하나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 종합소득세</small><b>핵심콕콕</b></div>
@@ -176,13 +176,13 @@ export const html = `<h1>종합소득세 세율과 계산 방법, 신고 대상�
 <li>사업소득이나 프리랜서 소득이 있으면 금액과 상관없이 5월에 신고해야 해요.</li>
 <li>기한을 넘기면 가산세 20%가 붙어요. 한 달 안에 기한 후 신고하면 절반으로 줄어요.</li>
 </ul></section>
-<a class="v2-cta" href="/income-tax/calculator/">종합소득세 계산기 바로가기</a>
+<a class="v2-cta" href="/income-tax/">종합소득세 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>소득세법 제14조(과세표준의 계산), 제50조(기본공제 1명당 연 150만원), 제55조(세율), 제59조의2(자녀세액공제), 제70조(5월 1일부터 5월 31일 확정신고), 제70조의2(성실신고확인서 제출 시 6월 30일), 제73조(확정신고의 예외). 국세기본법 제47조의2(무신고가산세), 제47조의4(납부지연가산세), 제48조(가산세 감면). 지방세법 제91조(개인지방소득세 과세표준), 제92조(세율).
 <b>정부 도구</b>홈택스 종합소득세 신고 화면의 세율표와 이 글의 계산이 같은 값이에요 (2026-09-09 대조).
 </div>
-<div class="v2-rel"><a href="/income-tax/"><b>계산기</b>종합소득세 계산기</a><a href="/freelancer/"><b>세금 계산기</b>프리랜서 3.3% 계산기</a><a href="/salary/"><b>세금 가이드</b>연봉 실수령액 계산법</a></div>
+<div class="v2-rel"><a href="/income-tax/"><b>계산기</b>종합소득세 계산기</a><a href="/freelancer/"><b>세금 계산기</b>프리랜서 3.3% 계산기</a><a href="/salary/guide/"><b>세금 가이드</b>연봉 실수령액 계산법</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
@@ -270,7 +270,7 @@ export const landing = {
     "alt": "종합소득세 세율과 계산 방법. 종합소득금액 5,000만원이면 세금 6,539,500원"
   },
   "calc": {
-    "href": "/income-tax/calculator/",
+    "href": "/income-tax/",
     "label": "종합소득세 계산기 바로가기"
   },
   "badge": "소득세법 누진세율표와 1원 단위 일치 · 2026-09-09",
@@ -422,7 +422,7 @@ export const landing = {
     {
       "kind": "세금 가이드",
       "label": "연봉 실수령액 계산법",
-      "href": "/salary/"
+      "href": "/salary/guide/"
     }
   ]
 };

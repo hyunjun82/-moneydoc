@@ -26,7 +26,7 @@ export const html = `<h1>재산세 계산과 납부, 공시가격부터 특례�
     <div class="v2-box"><b>1세대 1주택이면 372,000원 적어요</b><span>공시가격 9억원 이하인 한 채라면 낮은 특례세율이 적용돼요</span></div>
   </div>
 </section>
-<!--CALC_START--><a class="v2-cta" href="/property-tax/calculator/">재산세 계산기 바로가기</a><!--CALC_END-->
+<!--CALC_START--><a class="v2-cta" href="/property-tax/">재산세 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">재산세 과세표준, 공시가격에서 어떻게 정해지나요</a></li><li><a href="#s2">재산세 계산, 공시가격별로 얼마인가요</a></li><li><a href="#s3">1세대 1주택 특례세율은 얼마나 줄여 주나요</a></li><li><a href="#s4">재산세 납부, 7월과 9월에 나눠 내나요</a></li><li><a href="#s5">재산세 조회와 카드 납부는 어떻게 하나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 재산세</small><b>핵심콕콕</b></div>
@@ -165,7 +165,7 @@ export const html = `<h1>재산세 계산과 납부, 공시가격부터 특례�
 <li>1세대 1주택으로 공시가격 9억원 이하면 특례세율이 붙어 312,000원으로 줄어요.</li>
 <li>6월 1일 소유자가 내고, 주택은 7월과 9월에 절반씩 나눠 내요.</li>
 </ul></section>
-<a class="v2-cta" href="/property-tax/calculator/">재산세 계산기 바로가기</a>
+<a class="v2-cta" href="/property-tax/">재산세 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>지방세법 제110조(과세표준), 제111조(세율), 제111조의2(1세대 1주택 세율 특례), 제114조(과세기준일 6월 1일), 제115조(납기), 제118조(분할납부 250만원), 제118조의2(납부유예), 제151조(지방교육세). 지방세법 시행령 제109조(공정시장가액비율). 부동산 가격공시에 관한 법률(공동주택가격 공시).
@@ -259,7 +259,7 @@ export const landing = {
     "alt": "재산세 계산. 공시가격 5억원인 집의 재산세는 684,000원"
   },
   "calc": {
-    "href": "/property-tax/calculator/",
+    "href": "/property-tax/",
     "label": "재산세 계산기 바로가기"
   },
   "badge": "지방세법 세율표와 공정시장가액비율 대조 · 2026-09-09",

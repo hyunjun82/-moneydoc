@@ -163,7 +163,7 @@ export default function article({ VERIFIED }) {
     ],
     related: [
       { kind: '법률 가이드', label: '퇴직금 못 받았을 때 지급명령과 소장', href: '/severance/claim/' },
-      { kind: '법률 가이드', label: '임금체불 진정 방법과 지연이자', href: '/unpaid-wages/' },
+      { kind: '법률 가이드', label: '임금체불 진정 방법과 지연이자', href: '/unpaid-wages/guide/' },
       { kind: '계산기', label: '임금체불 지연이자 계산기', href: '/unpaid-wages/' },
     ],
   };

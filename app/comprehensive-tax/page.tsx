@@ -1,38 +1,22 @@
 import type { Metadata } from "next";
-import { HubPage } from "@/components/HubPage";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/realestate/comprehensive-real-estate-tax-guide";
-
-const PAGE_URL = "https://moneydoc.kr/comprehensive-tax/";
+import { CalculatorShell } from "@/components/CalculatorShell";
+import { Client } from "./Client";
+import spec from "@/data/calculators/realestate/comprehensive-real-estate-tax.json";
 
 export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
+  title: "종합부동산세 계산기 (2026년 기준)",
+  description:
+    "공정시장가액 60% 적용 + 1주택자 12억 공제. 주택별 공시가격(최대 3채)과 1주택자라면 연령·보유연수를 입력하면 종합부동산세를 계산합니다. 1세대1주택 12억·그 외 9억 공제, 공정시장가액비율 60%, 재산세액 공제, 고령자·장기보유 세액공제(합계 80% 한도), 농어촌특별세.",
   alternates: { canonical: "/comprehensive-tax/" },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
-  openGraph: {
-    type: "article",
-    title: meta.title,
-    description: meta.description,
-    url: PAGE_URL,
-    publishedTime: meta.datePublished,
-    modifiedTime: meta.dateModified,
-    images: [{ url: meta.image, width: 1200, height: 630, alt: meta.imageAlt }],
-  },
-  twitter: { card: "summary_large_image", title: meta.title, description: meta.description, images: [meta.image] },
 };
 
 export default function Page() {
   return (
-    <HubPage
-      meta={meta}
-      html={html}
-      faqLd={faqLd}
-      scriptKey={scriptKey}
-      url={PAGE_URL}
-      catHref="/"
-      catLabel="홈"
-      navActive="realestate"
-      crumb="종합부동산세"
-    />
+    <CalculatorShell
+      spec={spec}
+      sourceBadge="국세청 2026 · 검증 완료"
+    >
+      <Client />
+    </CalculatorShell>
   );
 }

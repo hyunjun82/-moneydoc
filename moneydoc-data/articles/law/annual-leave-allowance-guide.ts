@@ -26,7 +26,7 @@ export const html = `<h1>연차수당 계산과 발생 기준, 입사 1년부터
     <div class="v2-box"><b>통상임금으로 계산해요</b><span>월 통상임금을 209시간으로 나눈 시급에 하루 8시간을 곱한 값이 하루치예요</span></div>
   </div>
 </section>
-<!--CALC_START--><a class="v2-cta" href="/annual-leave/calculator/">연차수당 계산기 바로가기</a><!--CALC_END-->
+<!--CALC_START--><a class="v2-cta" href="/annual-leave/">연차수당 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">연차 발생 기준, 며칠 생기나요</a></li><li><a href="#s2">1년 미만 신입은 연차가 어떻게 되나요</a></li><li><a href="#s3">연차수당 계산, 통상임금으로 하루 얼마인가요</a></li><li><a href="#s4">미사용 연차수당은 언제 받나요</a></li><li><a href="#s5">연차촉진을 하면 수당을 못 받나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 연차수당</small><b>핵심콕콕</b></div>
@@ -160,7 +160,7 @@ export const html = `<h1>연차수당 계산과 발생 기준, 입사 1년부터
 <li>1년 미만은 한 달 개근마다 1일씩 생겨 첫해에 최대 11일을 쓸 수 있어요.</li>
 <li>남은 연차는 소멸 후 첫 급여일에 수당으로 받고, 3년 안에 청구할 수 있어요.</li>
 </ul></section>
-<a class="v2-cta" href="/annual-leave/calculator/">연차수당 계산기 바로가기</a>
+<a class="v2-cta" href="/annual-leave/">연차수당 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>근로기준법 제60조(연차 유급휴가, 1년 80퍼센트 출근 시 15일, 1년 미만 월 개근 1일, 3년 이상 가산과 25일 한도, 1년 미사용 시 소멸), 제61조(연차 유급휴가의 사용 촉진), 제49조(임금채권 3년 소멸시효), 제18조제3항(주 15시간 미만 적용 제외). 근로기준법 시행령 제6조(통상임금 시간급 산정).
@@ -254,7 +254,7 @@ export const landing = {
     "alt": "연차수당 계산. 월 통상임금 300만원이면 하루 114,832원, 5일이면 574,160원"
   },
   "calc": {
-    "href": "/annual-leave/calculator/",
+    "href": "/annual-leave/",
     "label": "연차수당 계산기 바로가기"
   },
   "badge": "근로기준법 연차 규정과 통상임금 산정 기준 대조 · 2026-09-09",

@@ -6,9 +6,9 @@
 /government/basic-pension/         /basic-pension/  301
 /government/basic-pension-guide/   /basic-pension/  301
 /government/basic-livelihood-eligibility/         /basic-livelihood/  301
-/government/basic-livelihood-eligibility-guide/   /basic-livelihood/  301
+/government/basic-livelihood-eligibility-guide/   /basic-livelihood/guide/  301
 /government/parental-leave-pay/         /parental-leave/  301
-/government/parental-leave-pay-guide/   /parental-leave/  301
+/government/parental-leave-pay-guide/   /parental-leave/guide/  301
 /government/maternity-leave-pay/         /maternity/  301
 /government/maternity-leave-pay-guide/   /maternity/  301
 /government/earned-income-tax-credit/         /eitc/  301
@@ -26,9 +26,9 @@
 /law/severance-pay/         /severance/  301
 /law/severance-pay-guide/   /severance/  301
 /law/annual-leave-allowance/         /annual-leave/  301
-/law/annual-leave-allowance-guide/   /annual-leave/  301
+/law/annual-leave-allowance-guide/   /annual-leave/guide/  301
 /law/unpaid-wages/         /unpaid-wages/  301
-/law/unpaid-wages-guide/   /unpaid-wages/  301
+/law/unpaid-wages-guide/   /unpaid-wages/guide/  301
 /law/child-support/         /child-support/  301
 /law/child-support-guide/   /child-support/  301
 /law/divorce-alimony/         /alimony/  301
@@ -36,13 +36,13 @@
 /law/inheritance-share/         /inheritance-share/  301
 /law/inheritance-share-guide/   /inheritance-share/  301
 /tax/salary-net-pay/         /salary/  301
-/tax/salary-net-pay-guide/   /salary/  301
+/tax/salary-net-pay-guide/   /salary/guide/  301
 /tax/comprehensive-income-tax/         /income-tax/  301
-/tax/comprehensive-income-tax-guide/   /income-tax/  301
+/tax/comprehensive-income-tax-guide/   /income-tax/guide/  301
 /tax/four-major-insurance/         /four-insurance/  301
-/tax/four-major-insurance-guide/   /four-insurance/  301
+/tax/four-major-insurance-guide/   /four-insurance/guide/  301
 /tax/freelancer-tax/         /freelancer/  301
-/tax/freelancer-tax-guide/   /freelancer/  301
+/tax/freelancer-tax-guide/   /freelancer/guide/  301
 /tax/retirement-income-tax/         /retirement-tax/  301
 /tax/retirement-income-tax-guide/   /retirement-tax/  301
 /tax/business-income-tax-simple/         /business-income-tax/  301
@@ -70,9 +70,9 @@
 /realestate/transfer-tax/         /transfer-tax/  301
 /realestate/transfer-tax-guide/   /transfer-tax/  301
 /realestate/property-tax/         /property-tax/  301
-/realestate/property-tax-guide/   /property-tax/  301
+/realestate/property-tax-guide/   /property-tax/guide/  301
 /realestate/comprehensive-real-estate-tax/         /comprehensive-tax/  301
-/realestate/comprehensive-real-estate-tax-guide/   /comprehensive-tax/  301
+/realestate/comprehensive-real-estate-tax-guide/   /comprehensive-tax/guide/  301
 /realestate/holding-tax-total/         /holding-tax/  301
 /realestate/holding-tax-total-guide/   /holding-tax/  301
 /realestate/brokerage-fee/         /brokerage/  301
@@ -86,7 +86,7 @@
 /realestate/rental-yield/         /rental-yield/  301
 /realestate/rental-yield-guide/   /rental-yield/  301
 /loan/dsr-limit/         /dsr/  301
-/loan/dsr-limit-guide/   /dsr/  301
+/loan/dsr-limit-guide/   /dsr/guide/  301
 /loan/dti-limit/         /dti/  301
 /loan/dti-limit-guide/   /dti/  301
 /loan/ltv-limit/         /ltv/  301
@@ -106,13 +106,13 @@
 /pension/national-pension/         /national-pension/  301
 /pension/national-pension-guide/   /national-pension/  301
 /pension/national-pension-early/         /pension-early/  301
-/pension/national-pension-early-guide/   /pension-early/  301
+/pension/national-pension-early-guide/   /pension-early/guide/  301
 /pension/irp-tax-credit/         /irp/  301
 /pension/irp-tax-credit-guide/   /irp/  301
 /pension/noranumbrella-tax-saving/         /noranumbrella/  301
 /pension/noranumbrella-tax-saving-guide/   /noranumbrella/  301
 /savings/installment-savings/         /installment/  301
-/savings/installment-savings-guide/   /installment/  301
+/savings/installment-savings-guide/   /installment/guide/  301
 /savings/fixed-deposit/         /deposit/  301
 /savings/fixed-deposit-guide/   /deposit/  301
 /savings/free-savings/         /free-savings/  301
@@ -122,7 +122,7 @@
 /savings/tax-free-savings/         /savings/  301
 /savings/tax-free-savings-guide/   /savings/  301
 /insurance/auto-tax/         /auto-tax/  301
-/insurance/auto-tax-guide/   /auto-tax/  301
+/insurance/auto-tax-guide/   /auto-tax/guide/  301
 /insurance/medical-insurance-payout/         /medical-payout/  301
 /insurance/medical-insurance-payout-guide/   /medical-payout/  301
 /util/age-calculator/         /age/  301
@@ -135,6 +135,22 @@
 /util/cash-service-fee-guide/   /cash-service/  301
 /util/installment-fee/         /card-installment/  301
 /util/installment-fee-guide/   /card-installment/  301
+
+# 계산기를 주제 주소로 되돌림 (2026-09-29). 글은 /{주제}/guide/
+/annual-leave/calculator/   /annual-leave/  301
+/auto-tax/calculator/   /auto-tax/  301
+/basic-livelihood/calculator/   /basic-livelihood/  301
+/comprehensive-tax/calculator/   /comprehensive-tax/  301
+/dsr/calculator/   /dsr/  301
+/four-insurance/calculator/   /four-insurance/  301
+/freelancer/calculator/   /freelancer/  301
+/income-tax/calculator/   /income-tax/  301
+/installment/calculator/   /installment/  301
+/parental-leave/calculator/   /parental-leave/  301
+/pension-early/calculator/   /pension-early/  301
+/property-tax/calculator/   /property-tax/  301
+/salary/calculator/   /salary/  301
+/unpaid-wages/calculator/   /unpaid-wages/  301
 
 # --- 스포크 옛 주소 (gen-redirects.mjs 가 채운다. 손대지 말 것) ---
 /government/basic-pension-couple-guide/                 /basic-pension/couple/  301
@@ -277,6 +293,10 @@
 /law/severance-one-year/                                /severance/one-year/  301
 /law/severance-tax-guide/                               /severance/tax/  301
 /law/severance-tax/                                     /severance/tax/  301
+/realestate/acquisition-tax-exemption-guide/            /acquisition-tax/exemption/  301
+/realestate/acquisition-tax-exemption/                  /acquisition-tax/exemption/  301
+/realestate/acquisition-tax-payment-guide/              /acquisition-tax/payment/  301
+/realestate/acquisition-tax-payment/                    /acquisition-tax/payment/  301
 /realestate/transfer-tax-expense-guide/                 /transfer-tax/expense/  301
 /realestate/transfer-tax-expense/                       /transfer-tax/expense/  301
 /realestate/transfer-tax-long-term-deduction-guide/     /transfer-tax/long-term-deduction/  301

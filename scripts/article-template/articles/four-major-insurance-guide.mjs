@@ -34,7 +34,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `월 보수 300만원이면 근로자가 내는 4대보험은 ${won(R.employeeTotal)}원이고 회사는 ${won(R.employerTotal)}원을 내요. 국민연금 4.75%, 건강보험 3.595%, 장기요양, 고용보험 요율과 월급별 공제액 표, 4월 건강보험 정산까지 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `4대사회보험 모의계산 일치 · 법령 요율 확인 · ${VERIFIED}`,
-    calc: { href: '/four-insurance/calculator/', label: '4대보험료 계산기 바로가기' },
+    calc: { href: '/four-insurance/', label: '4대보험료 계산기 바로가기' },
     hero: {
       tag: '급여·세금', line1: '2026년 4대보험', line2: '얼마나 떼나',
       sub1: `월 보수 300만원 → 근로자 ${won(R.employeeTotal)}원 · 회사 ${won(R.employerTotal)}원`,
@@ -203,7 +203,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     ],
     related: [
       { kind: '계산기', label: '4대보험료 계산기', href: '/four-insurance/' },
-      { kind: '세금 가이드', label: '연봉 실수령액 표', href: '/salary/' },
+      { kind: '세금 가이드', label: '연봉 실수령액 표', href: '/salary/guide/' },
       { kind: '정부지원금 가이드', label: '실업급여 조건과 금액', href: '/unemployment/' },
     ],
   };

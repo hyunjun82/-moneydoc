@@ -26,7 +26,7 @@ export const html = `<h1>자동차세 계산과 연납 할인, 배기량별 세�
     <div class="v2-box"><b>오래 탈수록 줄어요</b><span>차령 3년차부터 5%씩 줄어 최대 50%까지 깎여요. 11년 된 차는 259,880원이 적어요</span></div>
   </div>
 </section>
-<!--CALC_START--><a class="v2-cta" href="/auto-tax/calculator/">자동차세 계산기 바로가기</a><!--CALC_END-->
+<!--CALC_START--><a class="v2-cta" href="/auto-tax/">자동차세 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">자동차세 계산, 배기량 세율이 어떻게 되나요</a></li><li><a href="#s2">차령 경감은 몇 년부터 얼마나 되나요</a></li><li><a href="#s3">연납 할인은 얼마나 받나요</a></li><li><a href="#s4">자동차세 납부, 언제 어떻게 내나요</a></li><li><a href="#s5">영업용과 전기차는 어떻게 되나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 자동차세</small><b>핵심콕콕</b></div>
@@ -155,13 +155,13 @@ export const html = `<h1>자동차세 계산과 연납 할인, 배기량별 세�
 <li>차령 3년차부터 5%씩 줄어 12년 이상은 50%예요. 11년 된 차는 259,880원이 적어요.</li>
 <li>6월과 12월에 절반씩 내고, 1월에 연납을 신청하면 공제를 받아요.</li>
 </ul></section>
-<a class="v2-cta" href="/auto-tax/calculator/">자동차세 계산기 바로가기</a>
+<a class="v2-cta" href="/auto-tax/">자동차세 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>지방세법 제127조(자동차세 과세표준과 세율, 승용자동차 배기량 기준과 차령 3년 이상 경감 계산식, 조례로 표준세율의 100분의 50까지 가산), 제128조(납기와 징수방법, 연세액 일시납부 시 100분의 10 범위 공제, 연세액 10만원 이하 일괄 부과, 이전등록 시 일할 계산), 제151조(지방교육세). 지방세법 시행령(차령 산정과 세부 기준).
 <b>정부 도구</b>위택스 자동차세 계산 결과와 이 글의 금액이 같아요 (2026-09-09 대조).
 </div>
-<div class="v2-rel"><a href="/auto-tax/"><b>계산기</b>자동차세 계산기</a><a href="/property-tax/"><b>부동산 가이드</b>재산세 계산과 납부</a><a href="/acquisition-tax/"><b>부동산 가이드</b>집 살 때 취득세 세율과 계산</a></div>
+<div class="v2-rel"><a href="/auto-tax/"><b>계산기</b>자동차세 계산기</a><a href="/property-tax/guide/"><b>부동산 가이드</b>재산세 계산과 납부</a><a href="/acquisition-tax/"><b>부동산 가이드</b>집 살 때 취득세 세율과 계산</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
@@ -249,7 +249,7 @@ export const landing = {
     "alt": "자동차세 계산. 1,999cc 승용차는 1년에 519,740원"
   },
   "calc": {
-    "href": "/auto-tax/calculator/",
+    "href": "/auto-tax/",
     "label": "자동차세 계산기 바로가기"
   },
   "badge": "위택스 자동차세 계산과 대조 · 2026-09-09",
@@ -391,7 +391,7 @@ export const landing = {
     {
       "kind": "부동산 가이드",
       "label": "재산세 계산과 납부",
-      "href": "/property-tax/"
+      "href": "/property-tax/guide/"
     },
     {
       "kind": "부동산 가이드",

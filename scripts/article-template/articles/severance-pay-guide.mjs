@@ -207,7 +207,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     related: [
       { kind: '계산기', label: '퇴직금 계산기', href: '/severance/' },
       { kind: '세금 계산기', label: '퇴직소득세 계산기', href: '/retirement-tax/' },
-      { kind: '법률 가이드', label: '연차수당 계산법', href: '/annual-leave/' },
+      { kind: '법률 가이드', label: '연차수당 계산법', href: '/annual-leave/guide/' },
     ],
   };
 }

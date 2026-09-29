@@ -181,13 +181,15 @@ function hubRoute(a) {
  *   스포크: 홈 › 실업급여 › 수급자격
  * 카테고리(정부지원금)를 앞에 두지 않는다. 허브가 주제이지 카테고리의 하위가 아니다.
  */
+// 허브 자리에 계산기가 있으면(/{hub}/ = 계산기, 글은 /{hub}/guide/) 계산기 이름 "DSR 계산기 (2026년 기준)" → "DSR 계산기"
+const calcLabel = (hub) => { try { return /title: "([^"(]+)/.exec(fs.readFileSync(path.join(ROOT, 'app', hub, 'page.tsx'), 'utf8'))?.[1].trim(); } catch { return undefined; } };
 function crumbOf(a, route) {
   const seg = route.split('/');
   if (seg.length === 1) return { hubHref: null, hubLabel: null, crumb: a.crumb };
   const hubSlug = seg[0];
   const hubArticle = LIST.find((x) => hubRoute(x).route === hubSlug);
   // 허브 자리에 글이 없으면(허브 원페이지) 허브 데이터의 keyword 가 이름이다. 없으면 영문 슬러그가 빵부스러기에 찍힌다
-  const hubLabel = HUB_LABEL[hubSlug] ?? (hubArticle ? hubArticle.crumb : hubSlug);
+  const hubLabel = HUB_LABEL[hubSlug] ?? (hubArticle ? hubArticle.crumb : calcLabel(hubSlug) ?? hubSlug);
   // 스포크 이름 앞의 허브 이름을 뗀다. "실업급여 › 실업급여 수급자격" 처럼 겹치지 않게
   const crumb = a.crumb.startsWith(hubLabel + ' ') ? a.crumb.slice(hubLabel.length + 1) : a.crumb;
   return { hubHref: '/' + hubSlug + '/', hubLabel, crumb };

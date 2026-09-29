@@ -12,7 +12,7 @@ export const GUIDES: GuideLink[] = [
   {
     "cat": "tax",
     "catLabel": "세금",
-    "href": "/salary/",
+    "href": "/salary/guide/",
     "title": "2026년 연봉 실수령액 표, 연봉 3000부터 1억까지 월급 얼마 받나요",
     "blurb": "연봉 2,400만~2억 실수령액 표 · 4대보험 요율 · 명세서와 다른 이유"
   },
@@ -26,7 +26,7 @@ export const GUIDES: GuideLink[] = [
   {
     "cat": "tax",
     "catLabel": "세금",
-    "href": "/four-insurance/",
+    "href": "/four-insurance/guide/",
     "title": "2026년 4대보험 요율과 계산, 월급에서 떼는 돈부터 회사 부담까지",
     "blurb": "요율 4가지 · 월급별 공제액 표 · 회사 부담 · 4월 정산"
   },
@@ -40,14 +40,14 @@ export const GUIDES: GuideLink[] = [
   {
     "cat": "tax",
     "catLabel": "세금",
-    "href": "/income-tax/",
+    "href": "/income-tax/guide/",
     "title": "종합소득세 세율과 계산 방법, 신고 대상부터 5월 홈택스 신고까지",
     "blurb": "세율 8구간·누진공제 · 소득별 세금표 · 신고 대상 판정 · 홈택스 5단계"
   },
   {
     "cat": "tax",
     "catLabel": "세금",
-    "href": "/freelancer/",
+    "href": "/freelancer/guide/",
     "title": "프리랜서 3.3% 원천징수와 환급, 경비율부터 5월 신고까지",
     "blurb": "3.3% 구조 · 단순경비율 · 수입별 환급액 표 · 5월 신고 흐름"
   },
@@ -96,28 +96,28 @@ export const GUIDES: GuideLink[] = [
   {
     "cat": "realestate",
     "catLabel": "부동산",
-    "href": "/property-tax/",
+    "href": "/property-tax/guide/",
     "title": "재산세 계산과 납부, 공시가격부터 특례세율과 7월 9월 분납까지",
     "blurb": "공시가격 → 과세표준 · 공시가별 세금표 · 1주택 특례세율 · 7월 9월 납기"
   },
   {
     "cat": "realestate",
     "catLabel": "부동산",
-    "href": "/comprehensive-tax/",
+    "href": "/comprehensive-tax/guide/",
     "title": "종합부동산세 대상과 계산, 공시가 합산부터 1주택 공제까지",
     "blurb": "공시가 합산 · 1주택 12억 공제 · 재산세액공제 · 고령자·장기보유 80%"
   },
   {
     "cat": "law",
     "catLabel": "법률",
-    "href": "/annual-leave/",
+    "href": "/annual-leave/guide/",
     "title": "연차수당 계산과 발생 기준, 입사 1년부터 미사용 수당 지급까지",
     "blurb": "연차 15일·25일 한도 · 1년 미만 11일 · 통상임금 하루치 · 촉진 절차"
   },
   {
     "cat": "law",
     "catLabel": "법률",
-    "href": "/unpaid-wages/",
+    "href": "/unpaid-wages/guide/",
     "title": "임금체불 진정 방법과 지연이자, 신고 절차부터 대지급금까지",
     "blurb": "14일 지급기한 · 연 20% 지연이자 표 · 진정 절차 · 대지급금 요건"
   },
@@ -166,42 +166,42 @@ export const GUIDES: GuideLink[] = [
   {
     "cat": "government",
     "catLabel": "정부지원금",
-    "href": "/parental-leave/",
+    "href": "/parental-leave/guide/",
     "title": "2026년 육아휴직 급여 조건과 금액, 신청 방법부터 6+6 특례까지",
     "blurb": "구간별 상한 250·200·160만 · 통상임금별 표 · 6+6 특례 · 신청 4단계"
   },
   {
     "cat": "government",
     "catLabel": "정부지원금",
-    "href": "/basic-livelihood/",
+    "href": "/basic-livelihood/guide/",
     "title": "2026년 기초생활수급 조건과 급여, 소득인정액부터 신청 서류까지",
     "blurb": "중위소득 4종 기준표 · 소득인정액 · 급여 내용 · 신청 서류"
   },
   {
     "cat": "loan",
     "catLabel": "대출",
-    "href": "/dsr/",
+    "href": "/dsr/guide/",
     "title": "스트레스 DSR 계산과 대출 한도, 3단계 적용부터 주담대 한도까지",
     "blurb": "DSR 40%·50% · 단계별 가산금리 · 소득·기간별 한도표 · 한도 늘리기"
   },
   {
     "cat": "pension",
     "catLabel": "연금",
-    "href": "/pension-early/",
+    "href": "/pension-early/guide/",
     "title": "국민연금 조기수령 감액과 손익분기, 조건부터 연기연금 비교까지",
     "blurb": "1년 6% 감액표 · 손익분기 나이 · 신청 조건 · 연기연금 비교"
   },
   {
     "cat": "savings",
     "catLabel": "저축",
-    "href": "/installment/",
+    "href": "/installment/guide/",
     "title": "적금 이자 계산과 세금, 단리 복리부터 만기 실수령액까지",
     "blurb": "기간·금리별 이자표 · 단리 복리 차이 · 15.4% 세금 · 비과세 조건"
   },
   {
     "cat": "insurance",
     "catLabel": "보험·자동차",
-    "href": "/auto-tax/",
+    "href": "/auto-tax/guide/",
     "title": "자동차세 계산과 연납 할인, 배기량별 세액부터 1월 신청까지",
     "blurb": "배기량별 세액표 · 차령 5% 경감 · 연납 공제 · 6월 12월 납기"
   },

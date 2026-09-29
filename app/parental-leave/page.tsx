@@ -1,38 +1,22 @@
 import type { Metadata } from "next";
-import { HubPage } from "@/components/HubPage";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/government/parental-leave-pay-guide";
-
-const PAGE_URL = "https://moneydoc.kr/parental-leave/";
+import { CalculatorShell } from "@/components/CalculatorShell";
+import { Client } from "./Client";
+import spec from "@/data/calculators/government/parental-leave-pay.json";
 
 export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
+  title: "육아휴직 급여 계산기 (2026년 기준)",
+  description:
+    "1~3개월 100%(250만) / 4~6개월 100%(200만) / 7~12+개월 80%(160만). 통상임금(월)과 휴직 개월수를 입력하면 육아휴직 급여 총액이 산출됩니다. 1~3개월 100%(상한 250만), 4~6개월 100%(상한 200만), 7~12+개월 80%(상한.",
   alternates: { canonical: "/parental-leave/" },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
-  openGraph: {
-    type: "article",
-    title: meta.title,
-    description: meta.description,
-    url: PAGE_URL,
-    publishedTime: meta.datePublished,
-    modifiedTime: meta.dateModified,
-    images: [{ url: meta.image, width: 1200, height: 630, alt: meta.imageAlt }],
-  },
-  twitter: { card: "summary_large_image", title: meta.title, description: meta.description, images: [meta.image] },
 };
 
 export default function Page() {
   return (
-    <HubPage
-      meta={meta}
-      html={html}
-      faqLd={faqLd}
-      scriptKey={scriptKey}
-      url={PAGE_URL}
-      catHref="/"
-      catLabel="홈"
-      navActive="gov"
-      crumb="육아휴직 급여"
-    />
+    <CalculatorShell
+      spec={spec}
+      sourceBadge="고용노동부 2026 · 검증 완료"
+    >
+      <Client />
+    </CalculatorShell>
   );
 }

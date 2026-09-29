@@ -21,7 +21,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `월 통상임금 300만원이면 연차 하루가 ${won(R.dailyWage)}원이라 5일을 못 쓰면 ${won(R.allowance)}원을 받아요. 연차가 며칠 생기는지, 1년 미만은 어떻게 되는지, 미사용 수당은 언제 받는지 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `근로기준법 연차 규정과 통상임금 산정 기준 대조 · ${VERIFIED}`,
-    calc: { href: '/annual-leave/calculator/', label: '연차수당 계산기 바로가기' },
+    calc: { href: '/annual-leave/', label: '연차수당 계산기 바로가기' },
     hero: {
       tag: '법률', line1: '연차수당 계산', line2: '내 하루 얼마',
       sub1: `월 통상임금 300만원 → 하루 ${won(R.dailyWage)}원`,

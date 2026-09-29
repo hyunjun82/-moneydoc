@@ -1,38 +1,22 @@
 import type { Metadata } from "next";
-import { HubPage } from "@/components/HubPage";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/tax/four-major-insurance-guide";
-
-const PAGE_URL = "https://moneydoc.kr/four-insurance/";
+import { CalculatorShell } from "@/components/CalculatorShell";
+import { Client } from "./Client";
+import spec from "@/data/calculators/tax/four-major-insurance.json";
 
 export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
+  title: "4대보험료 계산기 (근로자 + 회사 통합) (2026년 기준)",
+  description:
+    "월급 기준 본인 부담 + 회사 부담 + 산재보험 동시 산출. 월 보수(세전) 입력 시 4대보험(국민연금·건강·장기요양·고용) 본인 + 회사 부담액 즉시 계산. 산재보험율은 업종에 따라 다름(평균 0.7%). 비과세(식대 20만 등) 제외 후 적용.",
   alternates: { canonical: "/four-insurance/" },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
-  openGraph: {
-    type: "article",
-    title: meta.title,
-    description: meta.description,
-    url: PAGE_URL,
-    publishedTime: meta.datePublished,
-    modifiedTime: meta.dateModified,
-    images: [{ url: meta.image, width: 1200, height: 630, alt: meta.imageAlt }],
-  },
-  twitter: { card: "summary_large_image", title: meta.title, description: meta.description, images: [meta.image] },
 };
 
 export default function Page() {
   return (
-    <HubPage
-      meta={meta}
-      html={html}
-      faqLd={faqLd}
-      scriptKey={scriptKey}
-      url={PAGE_URL}
-      catHref="/"
-      catLabel="홈"
-      navActive="tax"
-      crumb="4대보험"
-    />
+    <CalculatorShell
+      spec={spec}
+      sourceBadge="4대 사회보험 정보연계센터 2026 · 검증 완료"
+    >
+      <Client />
+    </CalculatorShell>
   );
 }

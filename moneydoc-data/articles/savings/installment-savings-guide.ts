@@ -26,7 +26,7 @@ export const html = `<h1>적금 이자 계산과 세금, 단리 복리부터 만
     <div class="v2-box"><b>이자에는 15.4%가 붙어요</b><span>이자소득세 14%와 지방소득세 1.4%를 합친 세금이에요</span></div>
   </div>
 </section>
-<!--CALC_START--><a class="v2-cta" href="/installment/calculator/">적금 이자 계산기 바로가기</a><!--CALC_END-->
+<!--CALC_START--><a class="v2-cta" href="/installment/">적금 이자 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">적금 이자 계산, 어떻게 붙나요</a></li><li><a href="#s2">단리 복리 차이는 얼마나 되나요</a></li><li><a href="#s3">이자소득세는 얼마나 떼나요</a></li><li><a href="#s4">비과세 적금은 누가 가입할 수 있나요</a></li><li><a href="#s5">적금 중도해지하면 이자를 얼마나 받나요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 적금 이자</small><b>핵심콕콕</b></div>
@@ -152,7 +152,7 @@ export const html = `<h1>적금 이자 계산과 세금, 단리 복리부터 만
 <li>복리는 단리보다 13,015원 많고, 기간이 길수록 차이가 커져요.</li>
 <li>중도해지하면 약정 금리 대신 훨씬 낮은 이율이 적용되니 기간을 무리하게 잡지 마세요.</li>
 </ul></section>
-<a class="v2-cta" href="/installment/calculator/">적금 이자 계산기 바로가기</a>
+<a class="v2-cta" href="/installment/">적금 이자 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>소득세법 제16조(이자소득), 제129조(원천징수세율, 그 밖의 이자소득 100분의 14). 지방세법(이자소득에 대한 개인지방소득세 특별징수). 조세특례제한법(비과세종합저축과 개인종합자산관리계좌 과세특례).
@@ -246,7 +246,7 @@ export const landing = {
     "alt": "적금 이자 계산. 월 50만원을 24개월 넣으면 만기에 12,434,011원"
   },
   "calc": {
-    "href": "/installment/calculator/",
+    "href": "/installment/",
     "label": "적금 이자 계산기 바로가기"
   },
   "badge": "이자소득세 15.4% 원천징수 기준 반영 · 2026-09-09",

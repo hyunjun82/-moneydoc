@@ -150,6 +150,20 @@
     "government/unemployment-fraud-report-guide": "unemployment/fraud-report",
     "government/unemployment-platform-guide": "unemployment/platform",
     "government/unemployment-eitc-guide": "unemployment/eitc",
-    "government/unemployment-benefit-guide": "unemployment/guide"
+    "government/unemployment-benefit-guide": "unemployment/guide",
+    "law/annual-leave-allowance-guide": "annual-leave/guide",
+    "insurance/auto-tax-guide": "auto-tax/guide",
+    "government/basic-livelihood-eligibility-guide": "basic-livelihood/guide",
+    "realestate/comprehensive-real-estate-tax-guide": "comprehensive-tax/guide",
+    "loan/dsr-limit-guide": "dsr/guide",
+    "tax/four-major-insurance-guide": "four-insurance/guide",
+    "tax/freelancer-tax-guide": "freelancer/guide",
+    "tax/comprehensive-income-tax-guide": "income-tax/guide",
+    "savings/installment-savings-guide": "installment/guide",
+    "government/parental-leave-pay-guide": "parental-leave/guide",
+    "pension/national-pension-early-guide": "pension-early/guide",
+    "realestate/property-tax-guide": "property-tax/guide",
+    "tax/salary-net-pay-guide": "salary/guide",
+    "law/unpaid-wages-guide": "unpaid-wages/guide"
   }
 }

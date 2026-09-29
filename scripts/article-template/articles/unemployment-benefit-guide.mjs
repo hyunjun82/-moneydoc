@@ -225,7 +225,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     related: [
       { kind: '계산기', label: '실업급여 계산기', href: '/unemployment/' },
       { kind: '법률 가이드', label: '퇴직금 계산과 평균임금', href: '/severance/' },
-      { kind: '정부지원금 가이드', label: '육아휴직급여 2026', href: '/parental-leave/' },
+      { kind: '정부지원금 가이드', label: '육아휴직급여 2026', href: '/parental-leave/guide/' },
     ],
   };
 }

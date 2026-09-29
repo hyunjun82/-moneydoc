@@ -1,38 +1,22 @@
 import type { Metadata } from "next";
-import { HubPage } from "@/components/HubPage";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/insurance/auto-tax-guide";
-
-const PAGE_URL = "https://moneydoc.kr/auto-tax/";
+import { CalculatorShell } from "@/components/CalculatorShell";
+import { Client } from "./Client";
+import spec from "@/data/calculators/insurance/auto-tax.json";
 
 export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
+  title: "자동차세 계산기 (정기) (2026년 기준)",
+  description:
+    "지방세법 §127 + 연식별 경감 (3년 이상). 차량 배기량(cc)·연식·영업용 여부 입력 시 자동차세 + 지방교육세 자동 산출. 매년 6월·12월 절반씩 분납. 1월에 1년 일시납 시 10% 할인. 위택스에서 직접 납부 가능.",
   alternates: { canonical: "/auto-tax/" },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
-  openGraph: {
-    type: "article",
-    title: meta.title,
-    description: meta.description,
-    url: PAGE_URL,
-    publishedTime: meta.datePublished,
-    modifiedTime: meta.dateModified,
-    images: [{ url: meta.image, width: 1200, height: 630, alt: meta.imageAlt }],
-  },
-  twitter: { card: "summary_large_image", title: meta.title, description: meta.description, images: [meta.image] },
 };
 
 export default function Page() {
   return (
-    <HubPage
-      meta={meta}
-      html={html}
-      faqLd={faqLd}
-      scriptKey={scriptKey}
-      url={PAGE_URL}
-      catHref="/"
-      catLabel="홈"
-      navActive="insurance"
-      crumb="자동차세"
-    />
+    <CalculatorShell
+      spec={spec}
+      sourceBadge="행정안전부 2026 · 검증 완료"
+    >
+      <Client />
+    </CalculatorShell>
   );
 }

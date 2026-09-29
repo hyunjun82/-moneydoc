@@ -1,38 +1,22 @@
 import type { Metadata } from "next";
-import { HubPage } from "@/components/HubPage";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/law/unpaid-wages-guide";
-
-const PAGE_URL = "https://moneydoc.kr/unpaid-wages/";
+import { CalculatorShell } from "@/components/CalculatorShell";
+import { Client } from "./Client";
+import spec from "@/data/calculators/law/unpaid-wages.json";
 
 export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
+  title: "임금체불 계산기 (2026년 기준)",
+  description:
+    "미지급액 + 연 20% 지연이자. 임금체불 미지급금 + 지연이자 계산. 체불 임금 × 연 20% 지연이자 (퇴직 후 14일 이후부터). 고용노동부 진정 또는 민사소송 가능.",
   alternates: { canonical: "/unpaid-wages/" },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
-  openGraph: {
-    type: "article",
-    title: meta.title,
-    description: meta.description,
-    url: PAGE_URL,
-    publishedTime: meta.datePublished,
-    modifiedTime: meta.dateModified,
-    images: [{ url: meta.image, width: 1200, height: 630, alt: meta.imageAlt }],
-  },
-  twitter: { card: "summary_large_image", title: meta.title, description: meta.description, images: [meta.image] },
 };
 
 export default function Page() {
   return (
-    <HubPage
-      meta={meta}
-      html={html}
-      faqLd={faqLd}
-      scriptKey={scriptKey}
-      url={PAGE_URL}
-      catHref="/"
-      catLabel="홈"
-      navActive="law"
-      crumb="임금체불"
-    />
+    <CalculatorShell
+      spec={spec}
+      sourceBadge="고용노동부 2026 · 검증 완료"
+    >
+      <Client />
+    </CalculatorShell>
   );
 }

@@ -1,38 +1,22 @@
 import type { Metadata } from "next";
-import { HubPage } from "@/components/HubPage";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/realestate/property-tax-guide";
-
-const PAGE_URL = "https://moneydoc.kr/property-tax/";
+import { CalculatorShell } from "@/components/CalculatorShell";
+import { Client } from "./Client";
+import spec from "@/data/calculators/realestate/property-tax.json";
 
 export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
+  title: "재산세 계산기 (2026년 기준)",
+  description:
+    "지방세법 §111 주택 재산세 + 지방교육세 (1주택 9억 이하 특례 지원). 주택공시가격(매년 4월 발표) 입력 시 재산세 + 지방교육세 자동 계산. 1세대 1주택 + 시가표준 9억 이하면 특례옵션 켜기 (공정시장가액비율 43% + 특례세율 적용). 매년 6월 1일 기준.",
   alternates: { canonical: "/property-tax/" },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
-  openGraph: {
-    type: "article",
-    title: meta.title,
-    description: meta.description,
-    url: PAGE_URL,
-    publishedTime: meta.datePublished,
-    modifiedTime: meta.dateModified,
-    images: [{ url: meta.image, width: 1200, height: 630, alt: meta.imageAlt }],
-  },
-  twitter: { card: "summary_large_image", title: meta.title, description: meta.description, images: [meta.image] },
 };
 
 export default function Page() {
   return (
-    <HubPage
-      meta={meta}
-      html={html}
-      faqLd={faqLd}
-      scriptKey={scriptKey}
-      url={PAGE_URL}
-      catHref="/"
-      catLabel="홈"
-      navActive="realestate"
-      crumb="재산세"
-    />
+    <CalculatorShell
+      spec={spec}
+      sourceBadge="행정안전부 2026 · 검증 완료"
+    >
+      <Client />
+    </CalculatorShell>
   );
 }

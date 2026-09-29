@@ -183,7 +183,7 @@ export const html = `<h1>2026년 실업급여 얼마나 받나요, 조건부터 
 <b>행정규칙·정부 안내</b>고용노동부 예규 「실업인정 및 재취업지원규정」 제249호 제10조·제12조(2026.9.1 시행, 실업인정일 지정 기준과 재취업활동 인정 범위). 고용노동부 「실업급여 지급 요건 강화, 무엇이 달라지나」 정책브리핑(2022.6.29, 회차별 재취업활동 횟수, 2022.7.1 시행). 고용24 실업급여 제도 안내(신청 절차, 허위·형식적 구직활동 제재). 법제처 생활법령정보 실업급여(2026.8.15 기준, 정당한 이직 사유 목록).
 <b>정부 도구</b>고용24 실업급여 간편 모의계산과 하한·일수 케이스 5건 일치 (2026-09-13). 상한 케이스는 도구가 개정 전 값을 써서 법령 원문을 기준으로 했어요.
 </div>
-<div class="v2-rel"><a href="/unemployment/"><b>계산기</b>실업급여 계산기</a><a href="/severance/"><b>법률 가이드</b>퇴직금 계산과 평균임금</a><a href="/parental-leave/"><b>정부지원금 가이드</b>육아휴직급여 2026</a></div>
+<div class="v2-rel"><a href="/unemployment/"><b>계산기</b>실업급여 계산기</a><a href="/severance/"><b>법률 가이드</b>퇴직금 계산과 평균임금</a><a href="/parental-leave/guide/"><b>정부지원금 가이드</b>육아휴직급여 2026</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
@@ -404,7 +404,7 @@ export const landing = {
     {
       "kind": "정부지원금 가이드",
       "label": "육아휴직급여 2026",
-      "href": "/parental-leave/"
+      "href": "/parental-leave/guide/"
     }
   ]
 };

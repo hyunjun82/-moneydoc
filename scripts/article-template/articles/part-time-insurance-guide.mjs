@@ -29,7 +29,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `한 달 60시간, 주 15시간이 아르바이트 4대보험 가입을 가르는 기준이에요. 주 20시간 일하면 월 보수 ${won(R20.m)}원에 보험료 ${won(R20.r.employeeTotal)}원을 내요. 가입 기준과 시간별 보험료, 사업주 의무, 퇴사 후 건강보험까지 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 6,
     badge: `법령 가입 기준 원문 확인 · ${VERIFIED}`,
-    calc: { href: '/four-insurance/calculator/', label: '4대보험료 계산기 바로가기' },
+    calc: { href: '/four-insurance/', label: '4대보험료 계산기 바로가기' },
     hero: {
       tag: '급여·세금', line1: '아르바이트 4대보험', line2: '가입 기준과 보험료',
       sub1: `한 달 60시간 또는 주 15시간이 기준이에요`,
@@ -190,7 +190,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     ],
     related: [
       { kind: '계산기', label: '4대보험료 계산기', href: '/four-insurance/' },
-      { kind: '세금 가이드', label: '2026 4대보험 요율과 계산', href: '/four-insurance/' },
+      { kind: '세금 가이드', label: '2026 4대보험 요율과 계산', href: '/four-insurance/guide/' },
       { kind: '법률 가이드', label: '퇴직금 계산 방법과 지급기준', href: '/severance/' },
     ],
   };

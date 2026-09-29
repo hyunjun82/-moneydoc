@@ -41,7 +41,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `연봉 5,000만원이면 2026년 월 실수령액은 ${won(R50.netMonthly)}원이에요. 국세청 간이세액표 원본으로 계산해 홈택스 조회값과 원 단위까지 같은 실수령액 표(2,400만원부터 2억까지), 4대보험 요율, 실수령액 늘리는 법, 명세서와 다른 이유를 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 8,
     badge: `홈택스 간이세액표 원 단위 일치 · ${VERIFIED}`,
-    calc: { href: '/salary/calculator/', label: '연봉 실수령액 계산기 바로가기' },
+    calc: { href: '/salary/', label: '연봉 실수령액 계산기 바로가기' },
     hero: {
       tag: '급여·세금', line1: '2026년 연봉', line2: '실수령액 표',
       sub1: `연봉 5,000만원 → 월 ${won(R50.netMonthly)}원 (공제율 ${R50.deductRatePct}%)`,
@@ -225,8 +225,8 @@ function mdSalary(annual, dependents, kids, nontaxable){
     ],
     related: [
       { kind: '계산기', label: '연봉 실수령액 계산기', href: '/salary/' },
-      { kind: '세금 가이드', label: '2026 4대보험 요율, 회사 부담까지', href: '/four-insurance/' },
-      { kind: '세금 가이드', label: '종합소득세 계산, 세율 구간', href: '/income-tax/' },
+      { kind: '세금 가이드', label: '2026 4대보험 요율, 회사 부담까지', href: '/four-insurance/guide/' },
+      { kind: '세금 가이드', label: '종합소득세 계산, 세율 구간', href: '/income-tax/guide/' },
     ],
   };
 }

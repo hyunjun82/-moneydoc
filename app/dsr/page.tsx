@@ -1,38 +1,23 @@
 import type { Metadata } from "next";
-import { HubPage } from "@/components/HubPage";
-import { meta, faqLd, html, scriptKey } from "@/data/articles/loan/dsr-limit-guide";
-
-const PAGE_URL = "https://moneydoc.kr/dsr/";
+import { CalculatorShell } from "@/components/CalculatorShell";
+import { Client } from "./Client";
+import spec from "@/data/calculators/loan/dsr-limit.json";
 
 export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
+  title: "DSR 계산기 (2026년 기준)",
+  description:
+    "총부채원리금상환비율 기준 한도 + 스트레스 DSR 3단계 (2025.7 시행, 가산 1.5%). DSR(총부채원리금상환비율) 한도 계산. 연소득·기존 대출 월원리금·기간·금리·DSR 한도(40·50%) 입력. 월 원리금 = 모든 부채 합산. 일반 직장인 DSR 40%, 정책대출 50%.",
   alternates: { canonical: "/dsr/" },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
-  openGraph: {
-    type: "article",
-    title: meta.title,
-    description: meta.description,
-    url: PAGE_URL,
-    publishedTime: meta.datePublished,
-    modifiedTime: meta.dateModified,
-    images: [{ url: meta.image, width: 1200, height: 630, alt: meta.imageAlt }],
-  },
-  twitter: { card: "summary_large_image", title: meta.title, description: meta.description, images: [meta.image] },
 };
 
 export default function Page() {
   return (
-    <HubPage
-      meta={meta}
-      html={html}
-      faqLd={faqLd}
-      scriptKey={scriptKey}
-      url={PAGE_URL}
-      catHref="/"
-      catLabel="홈"
-      navActive="loan"
-      crumb="스트레스 DSR"
-    />
+    <CalculatorShell
+      spec={spec}
+      sourceBadge="은행업감독규정 §29의2 (DSR 산정) · 5케이스 검증"
+      description="총부채원리금상환비율 기준 한도 + 스트레스 DSR 3단계 (2025.7 시행, 가산 1.5%)"
+    >
+      <Client />
+    </CalculatorShell>
   );
 }

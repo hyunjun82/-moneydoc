@@ -225,7 +225,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     related: [
       { kind: '계산기', label: '퇴직금 계산기', href: '/severance/' },
       { kind: '법률 계산기', label: '임금체불 지연이자 계산기', href: '/unpaid-wages/' },
-      { kind: '법률 가이드', label: '임금체불 진정 방법과 지연이자', href: '/unpaid-wages/' },
+      { kind: '법률 가이드', label: '임금체불 진정 방법과 지연이자', href: '/unpaid-wages/guide/' },
     ],
   };
 }

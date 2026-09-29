@@ -32,7 +32,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `가진 집의 공시가격을 합쳐 9억원, 1세대 1주택은 12억원을 넘으면 종합부동산세 대상이에요. 공시가 15억원인 한 채면 ${won(R.payableTax)}원이에요. 합산 기준, 세율, 재산세액공제, 고령자와 장기보유 공제를 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 8,
     badge: `종합부동산세법 공제액과 세율표 대조 · ${VERIFIED}`,
-    calc: { href: '/comprehensive-tax/calculator/', label: '종합부동산세 계산기 바로가기' },
+    calc: { href: '/comprehensive-tax/', label: '종합부동산세 계산기 바로가기' },
     hero: {
       tag: '부동산', line1: '종합부동산세 대상과 계산', line2: '나도 내나요',
       sub1: '1세대 1주택은 공시가 12억원까지 세금이 없어요',
@@ -231,7 +231,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     related: [
       { kind: '계산기', label: '종합부동산세 계산기', href: '/comprehensive-tax/' },
       { kind: '부동산 계산기', label: '재산세 계산기', href: '/property-tax/' },
-      { kind: '부동산 가이드', label: '재산세 계산과 납부', href: '/property-tax/' },
+      { kind: '부동산 가이드', label: '재산세 계산과 납부', href: '/property-tax/guide/' },
     ],
   };
 }

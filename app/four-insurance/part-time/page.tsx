@@ -30,7 +30,7 @@ export default function Page() {
       scriptKey={scriptKey}
       url={PAGE_URL}
       catHref="/four-insurance/"
-      catLabel="4대보험"
+      catLabel="4대보험료 계산기"
       navActive="tax"
       crumb="아르바이트 4대보험"
     />

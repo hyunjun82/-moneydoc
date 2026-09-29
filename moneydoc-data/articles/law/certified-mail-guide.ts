@@ -146,7 +146,7 @@ export const html = `<h1>내용증명 작성 방법과 양식, 임대차부터 �
 <b>법령</b>우편법 시행규칙 제46조(내용증명 취급 대상 문서), 제47조(동문내용증명), 제48조(원본과 등본 2통 제출), 제52조(원본과 등본 대조와 계인), 제54조(발송 후 재증명 청구, 3년), 제55조(등본 열람청구, 3년). 민법 제168조(소멸시효의 중단사유), 제174조(최고와 시효중단, 6월), 제387조(이행기와 이행지체). 주택임대차보호법 제6조(계약의 갱신), 제6조의2(묵시적 갱신의 경우 계약의 해지, 3개월).
 <b>정부 도구</b>인터넷우체국의 내용증명 접수 절차를 기준으로 정리했어요 (2026-09-09 확인).
 </div>
-<div class="v2-rel"><a href="/severance/claim/"><b>법률 가이드</b>퇴직금 못 받았을 때 지급명령과 소장</a><a href="/unpaid-wages/"><b>법률 가이드</b>임금체불 진정 방법과 지연이자</a><a href="/unpaid-wages/"><b>계산기</b>임금체불 지연이자 계산기</a></div>
+<div class="v2-rel"><a href="/severance/claim/"><b>법률 가이드</b>퇴직금 못 받았을 때 지급명령과 소장</a><a href="/unpaid-wages/guide/"><b>법률 가이드</b>임금체불 진정 방법과 지연이자</a><a href="/unpaid-wages/"><b>계산기</b>임금체불 지연이자 계산기</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
@@ -376,7 +376,7 @@ export const landing = {
     {
       "kind": "법률 가이드",
       "label": "임금체불 진정 방법과 지연이자",
-      "href": "/unpaid-wages/"
+      "href": "/unpaid-wages/guide/"
     },
     {
       "kind": "계산기",

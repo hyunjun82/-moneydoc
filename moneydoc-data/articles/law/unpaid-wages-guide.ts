@@ -26,7 +26,7 @@ export const html = `<h1>임금체불 진정 방법과 지연이자, 신고 절�
     <div class="v2-box"><b>신고는 무료이고 온라인으로 돼요</b><span>고용노동부 노동포털에서 10분이면 진정을 접수할 수 있어요</span></div>
   </div>
 </section>
-<!--CALC_START--><a class="v2-cta" href="/unpaid-wages/calculator/">임금체불 지연이자 계산기 바로가기</a><!--CALC_END-->
+<!--CALC_START--><a class="v2-cta" href="/unpaid-wages/">임금체불 지연이자 계산기 바로가기</a><!--CALC_END-->
 <details class="v2-toc"><summary>목차 (6개 질문)<span>열기</span></summary><ol><li><a href="#s1">임금체불 신고 절차, 어디에 어떻게 하나요</a></li><li><a href="#s2">임금체불 진정을 내면 어떻게 진행되나요</a></li><li><a href="#s3">지연이자는 얼마나 붙나요</a></li><li><a href="#s4">회사가 돈이 없으면 대지급금을 받을 수 있나요</a></li><li><a href="#s5">진정으로 안 되면 다음은 뭔가요</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></details>
 <section class="v2-kk" aria-label="한눈에 보는 요약">
   <div class="v2-hd"><small>한눈에 보는 임금체불 대응</small><b>핵심콕콕</b></div>
@@ -170,13 +170,13 @@ export const html = `<h1>임금체불 진정 방법과 지연이자, 신고 절�
 <li>진정은 노동포털에서 무료로 접수하고, 감독관이 사업주와 근로자를 함께 조사해요.</li>
 <li>회사가 도산했거나 지급 능력이 없으면 국가가 대신 주는 대지급금을 청구할 수 있어요.</li>
 </ul></section>
-<a class="v2-cta" href="/unpaid-wages/calculator/">임금체불 지연이자 계산기 바로가기</a>
+<a class="v2-cta" href="/unpaid-wages/">임금체불 지연이자 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>근로기준법 제36조(금품 청산, 14일), 제37조(미지급 임금에 대한 지연이자), 제43조(임금 지급), 제43조의2(체불사업주 명단 공개), 제49조(임금채권 3년 시효), 제107조·제109조(벌칙과 반의사불벌). 근로기준법 시행령 제17조(지연이자 이율 연 100분의 20), 제18조(지연이자 적용 제외). 임금채권보장법 제7조(퇴직한 근로자 대지급금), 제7조의2(재직 근로자 대지급금), 제12조(체불 임금등·사업주 확인서).
 <b>정부 도구</b>고용노동부 노동포털의 지연이자 산정 기준과 이 글의 계산이 같은 방식이에요 (2026-09-09 대조).
 </div>
-<div class="v2-rel"><a href="/unpaid-wages/"><b>계산기</b>임금체불 지연이자 계산기</a><a href="/severance/"><b>법률 계산기</b>퇴직금 계산기</a><a href="/annual-leave/"><b>법률 가이드</b>연차수당 계산과 발생 기준</a></div>
+<div class="v2-rel"><a href="/unpaid-wages/"><b>계산기</b>임금체불 지연이자 계산기</a><a href="/severance/"><b>법률 계산기</b>퇴직금 계산기</a><a href="/annual-leave/guide/"><b>법률 가이드</b>연차수당 계산과 발생 기준</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
@@ -264,7 +264,7 @@ export const landing = {
     "alt": "임금체불 지연이자. 500만원을 90일 못 받으면 이자 246,575원"
   },
   "calc": {
-    "href": "/unpaid-wages/calculator/",
+    "href": "/unpaid-wages/",
     "label": "임금체불 지연이자 계산기 바로가기"
   },
   "badge": "근로기준법 지연이자 이율과 대지급금 요건 대조 · 2026-09-09",
@@ -411,7 +411,7 @@ export const landing = {
     {
       "kind": "법률 가이드",
       "label": "연차수당 계산과 발생 기준",
-      "href": "/annual-leave/"
+      "href": "/annual-leave/guide/"
     }
   ]
 };

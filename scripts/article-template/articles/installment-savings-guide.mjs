@@ -28,7 +28,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `월 50만원을 24개월 동안 연 4% 적금에 넣으면 이자가 ${won(R.interest)}원, 세금을 뗀 만기 실수령액은 ${won(R.maturity)}원이에요. 단리와 복리 차이, 이자소득세, 비과세 조건을 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 7,
     badge: `이자소득세 15.4% 원천징수 기준 반영 · ${VERIFIED}`,
-    calc: { href: '/installment/calculator/', label: '적금 이자 계산기 바로가기' },
+    calc: { href: '/installment/', label: '적금 이자 계산기 바로가기' },
     hero: {
       tag: '저축', line1: '적금 이자 계산과 세금', line2: '만기에 얼마 받나',
       sub1: `월 50만원 · 24개월 · 연 4% → ${won(R.maturity)}원`,

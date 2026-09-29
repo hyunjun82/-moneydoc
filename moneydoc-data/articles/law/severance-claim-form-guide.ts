@@ -173,7 +173,7 @@ export const html = `<h1>퇴직금 못 받았을 때 지급명령과 소장, 양
 <b>법령</b>민사소송법 제462조(지급명령의 요건), 제463조(관할법원, 전속관할), 제469조(송달과 이의신청), 제470조(이의신청의 효력, 2주 불변기간), 제472조(소송으로의 이행), 제474조(확정판결과 같은 효력). 민사소송 등 인지법 제2조(소장 인지액), 제7조제2항(지급명령 신청서는 10분의 1), 제16조(전자소송은 10분의 9). 소액사건심판법(소액사건 범위와 이행권고결정). 근로기준법 제36조(금품 청산 14일), 제49조(임금채권 3년 시효).
 <b>정부 도구</b>대법원 전자소송의 인지액 산정 기준과 이 글의 계산이 같은 산식이에요 (2026-09-13 대조).
 </div>
-<div class="v2-rel"><a href="/severance/"><b>계산기</b>퇴직금 계산기</a><a href="/unpaid-wages/"><b>법률 계산기</b>임금체불 지연이자 계산기</a><a href="/unpaid-wages/"><b>법률 가이드</b>임금체불 진정 방법과 지연이자</a></div>
+<div class="v2-rel"><a href="/severance/"><b>계산기</b>퇴직금 계산기</a><a href="/unpaid-wages/"><b>법률 계산기</b>임금체불 지연이자 계산기</a><a href="/unpaid-wages/guide/"><b>법률 가이드</b>임금체불 진정 방법과 지연이자</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
@@ -408,7 +408,7 @@ export const landing = {
     {
       "kind": "법률 가이드",
       "label": "임금체불 진정 방법과 지연이자",
-      "href": "/unpaid-wages/"
+      "href": "/unpaid-wages/guide/"
     }
   ]
 };

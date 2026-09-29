@@ -21,7 +21,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     description: `퇴사하고 14일이 지나도 임금을 못 받으면 연 20%의 지연이자가 붙어요. 500만원을 90일 못 받으면 이자가 ${won(R.interest)}원이에요. 진정 접수 방법, 조사 절차, 회사가 도산했을 때 받는 대지급금까지 정리했어요.`,
     datePublished: '2026-09-03', verified: VERIFIED, basis: '2026년 9월 기준', readMinutes: 8,
     badge: `근로기준법 지연이자 이율과 대지급금 요건 대조 · ${VERIFIED}`,
-    calc: { href: '/unpaid-wages/calculator/', label: '임금체불 지연이자 계산기 바로가기' },
+    calc: { href: '/unpaid-wages/', label: '임금체불 지연이자 계산기 바로가기' },
     hero: {
       tag: '법률', line1: '임금체불 진정과 지연이자', line2: '얼마 받나요',
       sub1: `500만원을 90일 못 받으면 이자 ${won(R.interest)}원`,
@@ -206,7 +206,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     related: [
       { kind: '계산기', label: '임금체불 지연이자 계산기', href: '/unpaid-wages/' },
       { kind: '법률 계산기', label: '퇴직금 계산기', href: '/severance/' },
-      { kind: '법률 가이드', label: '연차수당 계산과 발생 기준', href: '/annual-leave/' },
+      { kind: '법률 가이드', label: '연차수당 계산과 발생 기준', href: '/annual-leave/guide/' },
     ],
   };
 }
