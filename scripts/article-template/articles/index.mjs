@@ -34,6 +34,7 @@ export const ARTICLES = [
   { slug: 'basic-livelihood-eligibility-guide', cat: 'government', catLabel: '정부지원금', crumb: '기초생활수급', blurb: '중위소득 4종 기준표 · 소득인정액 · 급여 내용 · 신청 서류' },
   { slug: 'dsr-limit-guide', cat: 'loan', catLabel: '대출', crumb: '스트레스 DSR', blurb: 'DSR 40%·50% · 단계별 가산금리 · 소득·기간별 한도표 · 한도 늘리기' },
   { slug: 'loan-jeonse-guide', cat: 'loan', catLabel: '대출', crumb: '전세대출 이자계산', blurb: '1억·2억 한 달 이자 · 은행별 공시 금리 · 보증금별 80% 한도 · 버팀목 금리표' },
+  { slug: 'loan-prepayment-guide', cat: 'loan', catLabel: '대출', crumb: '중도상환수수료', blurb: '3년 지나면 부과 금지 · 계산식 · 2025년 개편 전후 수수료율 · 면제 대출' },
   { slug: 'national-pension-early-guide', cat: 'pension', catLabel: '연금', crumb: '국민연금 조기수령', blurb: '1년 6% 감액표 · 손익분기 나이 · 신청 조건 · 연기연금 비교' },
   { slug: 'installment-savings-guide', cat: 'savings', catLabel: '저축', crumb: '적금 이자', blurb: '기간·금리별 이자표 · 단리 복리 차이 · 15.4% 세금 · 비과세 조건' },
   { slug: 'auto-tax-guide', cat: 'insurance', catLabel: '보험·자동차', crumb: '자동차세', blurb: '배기량별 세액표 · 차령 5% 경감 · 연납 공제 · 6월 12월 납기' },

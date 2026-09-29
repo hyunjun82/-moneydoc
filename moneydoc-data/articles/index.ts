@@ -192,6 +192,13 @@ export const GUIDES: GuideLink[] = [
     "blurb": "1억·2억 한 달 이자 · 은행별 공시 금리 · 보증금별 80% 한도 · 버팀목 금리표"
   },
   {
+    "cat": "loan",
+    "catLabel": "대출",
+    "href": "/prepayment/guide/",
+    "title": "중도상환수수료 계산 방법, 3년 지나면 면제되나요",
+    "blurb": "3년 지나면 부과 금지 · 계산식 · 2025년 개편 전후 수수료율 · 면제 대출"
+  },
+  {
     "cat": "pension",
     "catLabel": "연금",
     "href": "/pension-early/guide/",

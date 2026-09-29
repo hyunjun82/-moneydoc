@@ -1,0 +1,67 @@
+{
+  "slug": "loan-prepayment-guide",
+  "keyword": "중도상환수수료 계산",
+  "calc": "loan/prepayment-fee",
+  "mustInclude": [
+    "중도상환수수료 계산 방법",
+    "중도상환수수료가 면제",
+    "중도상환수수료 면제 대출"
+  ],
+  "queries": [
+    "중도상환수수료 계산 방법",
+    "중도상환수수료 계산기",
+    "중도상환수수료 면제",
+    "중도상환수수료 면제 기간",
+    "중도상환수수료 면제 신용대출",
+    "주담대 중도상환수수료 면제",
+    "대출 중도상환 수수료 면제",
+    "중도상환수수료 면제 뜻"
+  ],
+  "sources": [
+    {
+      "label": "금융위원회 보도자료 2025.1.10 (1월 13일 신규 대출부터 중도상환수수료율 인하)",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/83833"
+    },
+    {
+      "label": "금융위원회 보도자료 2025.10.22 (상호금융권 중도상환수수료 인하)",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/85455"
+    },
+    {
+      "label": "금융위원회 보도자료 2024.7.10 (금융소비자보호 감독규정 개정안 의결)",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/82646"
+    },
+    {
+      "label": "금융소비자 보호에 관한 법률 (불공정영업행위: 중도상환수수료)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/금융소비자보호에관한법률"
+    },
+    {
+      "label": "금융소비자 보호에 관한 법률 시행령 (중도상환수수료 부과 예외)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/금융소비자보호에관한법률시행령"
+    },
+    {
+      "label": "금융소비자보호에 관한 감독규정 (중도상환수수료 산정)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/행정규칙/금융소비자보호에관한감독규정"
+    },
+    {
+      "label": "주택도시기금 내집마련디딤돌대출 (중도상환수수료)",
+      "kind": "gov",
+      "url": "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030101.jsp"
+    },
+    {
+      "label": "주택도시기금 버팀목전세자금 (중도상환수수료 없음)",
+      "kind": "gov",
+      "url": "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020101.jsp"
+    },
+    {
+      "label": "전국은행연합회 소비자포털 대출관련 중도상환수수료율 (계산방법)",
+      "kind": "gov",
+      "url": "https://portal.kfb.or.kr/compare/commission_loan_search.php"
+    }
+  ]
+}
