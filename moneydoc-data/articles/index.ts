@@ -199,6 +199,13 @@ export const GUIDES: GuideLink[] = [
     "blurb": "3년 지나면 부과 금지 · 계산식 · 2025년 개편 전후 수수료율 · 면제 대출"
   },
   {
+    "cat": "loan",
+    "catLabel": "대출",
+    "href": "/refinance/guide/",
+    "title": "대환대출 조건과 방법, 대출 갈아타기 하면 얼마나 아끼나요",
+    "blurb": "신용·주담대·전세 갈아타기 조건 · 대출별 한 달 절감액 · 이용 실적 · 신용점수"
+  },
+  {
     "cat": "pension",
     "catLabel": "연금",
     "href": "/pension-early/guide/",
