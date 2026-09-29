@@ -120,6 +120,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           { q: '② 넣을 원금이 1명당 5천만원 이하인가요?', hint: '세금우대종합저축(옛 세금 우대 상품)이 남아 있으면 그 계약금액만큼 한도가 줄어요', no: { title: '5천만원까지만 비과세예요', text: '5천만원을 넘는 부분은 일반 예금으로 넣어 15.4%를 떼요.' } },
           { q: '③ 2028년 12월 31일까지 가입하나요?', hint: '법에 정해진 가입 기한이에요', no: { title: '가입 기한이 지나요', text: '이 기한 뒤 가입분은 현재 법으로는 비과세가 아니에요.' } },
         ], ok: { title: '이자 세금이 0원이에요', text: '은행에서 비과세종합저축으로 가입해요. 대상임을 확인할 서류를 준비하세요.' } },
+        { type: 'note', title: '세금을 아예 안 내는 저축은', text: '비과세종합저축 가입 대상과 한도는 따로 정리했어요.', link: { href: '/deposit/taxfree/', label: '비과세종합저축 조건 보기' } },
       ] },
 
       { id: 's4', h2: '정기예금 금리 높은곳은 어디서 비교하나요', sub: '은행은 은행연합회 공시로 비교해요', blocks: [
@@ -129,6 +130,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
         { type: 'tips', items: [
           { title: '우체국예금은 국가가 책임져요', text: '우체국예금은 이자를 포함한 지급을 국가가 책임진다고 법에 정해져 있어요.' },
         ] },
+        { type: 'note', title: '이자 세금을 줄이는 계좌', text: 'ISA는 이자와 배당에 비과세 한도가 있어요. 한도와 계산은 따로 정리했어요.', link: { href: '/isa/guide/', label: 'ISA 비과세 한도 보기' } },
       ] },
 
       { id: 's5', h2: '예금자보호 한도는 얼마까지인가요', sub: '2025년 9월 1일부터 1억원이에요', blocks: [

@@ -84,6 +84,7 @@ export const html = `<h1>대출 이자 계산법 공식, 원리금균등 원금�
     <div><span>총 상환액</span><b id="lo3">—</b></div>
   </div>
 </section>
+<div class="v2-note"><b>전세대출이라면</b> 전세자금대출의 한 달 이자와 한도는 따로 정리했어요. <a class="v2-go" href="/jeonse-loan/guide/">전세자금대출 이자 보기</a></div>
 
 <h2 id="s3">원리금균등 원금균등 차이는 얼마나 되나요<small>매달 내는 돈의 모양과 총 이자가 달라요</small></h2>
 <p class="v2-lead"><span class="v2-ans">1억·30년·연 4%면 원금균등이 총 이자 11,702,985원 적어요.</span> 원금균등은 원금을 매달 같게 갚아 남은 원금이 빨리 줄기 때문이에요. 대신 146회차 전까지, 약 12년 동안은 원리금균등보다 매달 더 내요.</p>
@@ -136,6 +137,7 @@ export const html = `<h1>대출 이자 계산법 공식, 원리금균등 원금�
   <div><b>여유가 생기면 먼저 갚기</b>먼저 갚은 만큼 남은 원금이 줄어 다음 달부터 이자가 줄어요.</div>
 </div>
 <p><span class="v2-ans">먼저 갚기 전에는 중도상환수수료를 확인하세요.</span> 계약 성립 뒤 3년이 지나면 원칙적으로 중도상환수수료가 없어요. 3년 안이면 남은 기간에 비례해 수수료가 붙어요. <a class="v2-go" href="/prepayment/guide/">중도상환수수료 계산 방법</a></p>
+<div class="v2-note"><b>금리를 낮추려면</b> 더 낮은 금리로 옮기는 조건과 일찍 갚을 때 수수료를 함께 보세요. <a class="v2-go" href="/refinance/guide/">대환대출 조건과 방법 보기</a></div>
 
 <h2 id="faq">자주 묻는 질문</h2>
 <div class="v2-faqs">

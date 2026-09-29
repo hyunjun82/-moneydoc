@@ -123,6 +123,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
             return { n, bad };
           },
         },
+        { type: 'note', title: '전세대출이라면', text: '전세자금대출의 한 달 이자와 한도는 따로 정리했어요.', link: { href: '/jeonse-loan/guide/', label: '전세자금대출 이자 보기' } },
       ] },
 
       { id: 's3', h2: '원리금균등 원금균등 차이는 얼마나 되나요', sub: '매달 내는 돈의 모양과 총 이자가 달라요', blocks: [
@@ -170,6 +171,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           { title: '여유가 생기면 먼저 갚기', text: '먼저 갚은 만큼 남은 원금이 줄어 다음 달부터 이자가 줄어요.' },
         ] },
         { type: 'p', ans: '먼저 갚기 전에는 중도상환수수료를 확인하세요.', text: '계약 성립 뒤 3년이 지나면 원칙적으로 중도상환수수료가 없어요. 3년 안이면 남은 기간에 비례해 수수료가 붙어요.', link: { label: '중도상환수수료 계산 방법', href: '/prepayment/guide/' } },
+        { type: 'note', title: '금리를 낮추려면', text: '더 낮은 금리로 옮기는 조건과 일찍 갚을 때 수수료를 함께 보세요.', link: { href: '/refinance/guide/', label: '대환대출 조건과 방법 보기' } },
       ] },
     ],
     faq: [

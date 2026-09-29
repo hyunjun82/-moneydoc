@@ -66,6 +66,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
         { type: 'p', ans: '중개형 ISA는 증권사에서 돈을 빌려 투자하는 신용거래를 할 수 없어요.', text: '다른 계좌에 있던 주식이나 펀드를 ISA로 옮겨 넣는 것도 제한돼요.' },
         { type: 'p', ans: '계좌 안에서 생긴 이자와 배당을 다시 굴려도 납입한도는 줄지 않아요.', text: '계좌에 들어온 이자, 배당, 그 돈으로 재투자한 금액은 총납입한도와 연간 납입한도에 넣지 않아요. 납입한도와 계약기간, 운용방식은 금융회사 약관에 적혀 있으니 가입 전에 확인하세요.' },
         { type: 'p', ans: 'ISA 안에 넣은 예금은 예금자보호 한도가 일반 예금과 합쳐져요.', text: '같은 금융회사의 일반 예금과 ISA 안의 예금을 합쳐 1명당 1억원까지 보호돼요. 신탁형 ISA에 담는 정기예금 금리는 은행연합회 소비자포털에서 은행별로 비교할 수 있어요.' },
+        { type: 'note', title: 'ISA 안 예금의 보호 한도는', text: '예금자보호 한도와 세는 방법은 정기예금 글에 정리했어요.', link: { href: '/deposit/guide/', label: '정기예금 이자와 예금보호 보기' } },
       ] },
 
       { id: 's2', h2: 'ISA 비과세 한도 200만원과 400만원은 어떻게 다른가요', sub: '직전 연도 소득으로 서민형인지 정해져요', blocks: [
@@ -148,6 +149,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           { title: '연금계좌로 옮길지 정하기', text: '노후 자금이면 연금저축·IRP로 옮겨 추가 세액공제를 받아요', meta: '3년 뒤 또는 만기 60일 안' },
           { title: '해지하고 찾기', text: '해지하는 날 금융회사가 세금을 떼고 돌려줘요', meta: '해지일' },
         ] },
+        { type: 'note', title: '연금계좌로 옮긴 뒤에는', text: 'IRP와 연금저축의 세액공제 한도, 해지할 때 세금은 따로 정리했어요.', link: { href: '/irp/guide/', label: 'IRP 세액공제 한도 보기' } },
       ] },
     ],
     faq: [

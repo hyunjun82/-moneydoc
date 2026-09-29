@@ -105,6 +105,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
             return { n, bad };
           },
         },
+        { type: 'note', title: '이자 공식이 더 궁금하면', text: '원리금균등, 원금균등, 만기일시 상환마다 이자를 세는 방법을 따로 정리했어요.', link: { href: '/repayment/guide/', label: '대출 이자 계산법 보기' } },
       ] },
 
       { id: 's2', h2: '1억이나 2억이면 전세대출 이자는 한 달에 얼마인가요', sub: '은행 공시 금리로 대출금별 한 달 이자를 계산했어요', blocks: [
@@ -171,6 +172,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           { title: '버팀목 추가 우대금리 (함께 가능)', text: '주거안정 월세대출 성실납부자 연 0.2%p, 부동산 전자계약 연 0.1%p(2026.12.31 신규 접수분까지)예요. 신청 금액이 심사로 산정한 금액의 30% 이하면 연 0.2%p를 더 깎아 줘요.' },
           { title: '우대를 다 더해도 상한이 있어요', text: '우대금리는 합쳐서 연 0.5%p까지만 깎아 줘요. 기초생활수급권자·차상위계층·한부모가구는 1.0%p, 다자녀가구는 0.7%p까지예요.' },
         ] },
+        { type: 'note', title: '지금 대출을 옮기려면', text: '전세대출을 다른 금융회사로 갈아타는 조건과 순서를 따로 정리했어요.', link: { href: '/refinance/guide/', label: '대환대출 조건과 방법 보기' } },
       ] },
     ],
     faq: [

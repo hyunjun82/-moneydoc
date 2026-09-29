@@ -106,6 +106,7 @@ export const html = `<h1>정기예금 이자 계산 방법, 1천만원 넣으면
   <div class="v2-q"><div><b>③ 2028년 12월 31일까지 가입하나요?</b><small>법에 정해진 가입 기한이에요</small></div><div class="v2-sw"><button type="button" data-q="2" data-v="1" aria-pressed="true">예</button><button type="button" data-q="2" data-v="0" aria-pressed="false">아니오</button></div></div>
   <div class="v2-verdict v2-ok" data-verdict><b>이자 세금이 0원이에요</b>은행에서 비과세종합저축으로 가입해요. 대상임을 확인할 서류를 준비하세요.</div>
 </div>
+<div class="v2-note"><b>세금을 아예 안 내는 저축은</b> 비과세종합저축 가입 대상과 한도는 따로 정리했어요. <a class="v2-go" href="/deposit/taxfree/">비과세종합저축 조건 보기</a></div>
 
 <h2 id="s4">정기예금 금리 높은곳은 어디서 비교하나요<small>은행은 은행연합회 공시로 비교해요</small></h2>
 <p class="v2-lead"><span class="v2-ans">은행은 전국은행연합회 소비자포털의 예금금리 비교공시에서 정기예금 금리를 비교해요.</span> 은행 19곳의 예금금리, 적금금리, 청년미래적금금리, ISA 전용 예금 금리를 나눠 보여 줘요. 공시된 금리는 세금을 떼기 전 금리라 받는 이자는 여기서 15.4%를 빼야 해요.</p>
@@ -114,6 +115,7 @@ export const html = `<h1>정기예금 이자 계산 방법, 1천만원 넣으면
 <div class="v2-tips">
   <div><b>우체국예금은 국가가 책임져요</b>우체국예금은 이자를 포함한 지급을 국가가 책임진다고 법에 정해져 있어요.</div>
 </div>
+<div class="v2-note"><b>이자 세금을 줄이는 계좌</b> ISA는 이자와 배당에 비과세 한도가 있어요. 한도와 계산은 따로 정리했어요. <a class="v2-go" href="/isa/guide/">ISA 비과세 한도 보기</a></div>
 
 <h2 id="s5">예금자보호 한도는 얼마까지인가요<small>2025년 9월 1일부터 1억원이에요</small></h2>
 <p class="v2-lead"><span class="v2-ans">1명당 원금과 이자를 합쳐 1억원까지 보호돼요.</span> 2025년 9월 1일 24년 만에 5천만원에서 1억원으로 올랐어요. 금융위원회는 신협, 농협, 수협, 산림조합, 새마을금고 같은 상호금융권도 같은 날 1억원으로 올리기로 했다고 발표했어요. 국제기구 권고, 금융소비자 혼란과 급격한 자금이동 방지 등을 이유로 들었어요.</p>

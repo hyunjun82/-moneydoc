@@ -64,6 +64,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
         { type: 'p', ans: 'IRP는 퇴직금을 받은 사람, 퇴직연금 가입자, 자영업자 등이 만들 수 있어요.', text: '퇴직급여를 일시금으로 받은 사람이 만들 수 있어요. DB형·DC형 퇴직연금 가입자가 자기 돈으로 더 넣으려고 만들 수도 있어요. 자영업자처럼 노후소득 확보가 필요한 사람도 대상이에요. 금융감독원은 공무원, 군인, 교직원 같은 직역연금 가입자도 가입 대상으로 안내해요.' },
         { type: 'p', ans: 'DC형 퇴직연금에 내가 더 넣은 돈도 같은 900만원 한도에 들어가요.', text: '세액공제 대상 퇴직연금계좌는 IRP, DC형 퇴직연금, 중소기업 퇴직연금 등이에요. 다만 DC형에 회사가 넣어 주는 사용자부담금은 공제 대상이 아니에요.' },
         { type: 'p', ans: 'ISA 만기 자금을 옮기면 한도가 더 늘어요.', text: 'ISA 계약이 끝나고 60일 안에 잔액을 연금계좌에 넣으면 옮긴 금액의 10%, 최대 300만원을 900만원 위에 더 인정해요. 이 추가 한도는 ISA 만기 자금을 넣은 해에만 적용돼요.' },
+        { type: 'note', title: 'ISA 만기 자금이 있다면', text: 'ISA 비과세 한도와 연금계좌 이전 방법은 따로 정리했어요.', link: { href: '/isa/guide/', label: 'ISA 비과세 한도 보기' } },
       ] },
 
       { id: 's2', h2: 'IRP 세액공제율은 15%와 12% 중 무엇인가요', sub: '종합소득금액 4,500만원이 기준이에요', blocks: [
@@ -146,6 +147,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           { title: '연금수령한도 안에서 인출', text: '한도를 넘긴 금액은 연금외수령으로 세금이 커져요', meta: '해마다' },
           { title: '세금 떼고 받기', text: '금융회사가 원천징수한 뒤 연금을 보내요', meta: '받을 때' },
         ] },
+        { type: 'note', title: '국민연금 받는 시기도 함께', text: '국민연금을 일찍 받을 때 줄어드는 금액과 조건은 따로 정리했어요.', link: { href: '/pension-early/guide/', label: '국민연금 조기수령 보기' } },
       ] },
     ],
     faq: [

@@ -120,6 +120,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           rows: BIG5.map(([b, ...v]) => ({ cells: [`${b}은행`, ...v.map((x) => x.toFixed(2))] })),
           fn: '기타담보는 보증서·전세대출 같은 담보대출이에요. 개편 전에는 다섯 은행 모두 주담대 고정 1.40%, 변동 1.20%였어요.' },
         { type: 'note', title: '은행 신용대출은 거의 0에 가까워졌어요', text: `은행 신용대출 변동금리 평균으로 1억을 1년 만에 갚으면 약 ${won(credNew)}원이에요. 개편 전 수수료율이었다면 ${won(credOld)}원이었어요. 저축은행 신용대출은 아직 1%대예요.` },
+        { type: 'note', title: '갚기 전에 이자부터 보려면', text: '남은 대출의 이자가 상환 방식마다 얼마인지 따로 정리했어요.', link: { href: '/repayment/guide/', label: '대출 이자 계산법 보기' } },
       ] },
 
       { id: 's3', h2: '3년 지나면 중도상환수수료가 면제되나요', sub: '금소법이 적용되는 금융회사 대출이면 받을 수 없어요', blocks: [
@@ -160,6 +161,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           { title: '수수료 어림하기', text: '갚을 금액, 수수료율, 지난 개월 수를 위 계산 상자에 넣어요', meta: '1분' },
           { title: '갈아타기라면 아끼는 이자와 비교', text: '새 대출로 아끼는 이자가 수수료보다 커야 이득이에요', meta: '5분', link: { label: '대출 갈아타기 계산기', href: '/refinance/' } },
         ] },
+        { type: 'note', title: '갈아타기를 생각한다면', text: '수수료를 내고 옮겨도 이득인지, 대환대출 조건과 함께 따져 보세요.', link: { href: '/refinance/guide/', label: '대환대출 조건과 방법 보기' } },
       ] },
     ],
     faq: [
