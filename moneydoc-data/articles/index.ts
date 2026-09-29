@@ -264,6 +264,13 @@ export const GUIDES: GuideLink[] = [
   {
     "cat": "pension",
     "catLabel": "연금",
+    "href": "/irp/pension-savings/",
+    "title": "연금저축 한도, 1800만원 넣으면 세액공제는 얼마까지 받나요",
+    "blurb": "납입 1,800만원과 추가 납입 · 세액공제 600만원 · 16.5%·13.2% 환급액 · 연말정산·종소세 · 계좌 종류"
+  },
+  {
+    "cat": "pension",
+    "catLabel": "연금",
     "href": "/pension-early/guide/",
     "title": "국민연금 조기수령 감액과 손익분기, 조건부터 연기연금 비교까지",
     "blurb": "1년 6% 감액표 · 손익분기 나이 · 신청 조건 · 연기연금 비교"

@@ -15121,6 +15121,710 @@
       "spoke": "tax",
       "src": "네이버 자동완성 실측",
       "collected": "2026-09-29"
+    },
+    {
+      "word": "4세대 실손보험 자기부담금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "5세대 실손보험 자기부담금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "kb 실손보험 청구",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "농협 실손보험 청구",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "독감 실손보험 청구",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "삼성화재 실손보험 청구",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 자기부담금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 자기부담금 1만원",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 자기부담금 20%",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 자기부담금 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 자기부담금 미만",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 자기부담금 비교",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 자기부담금 비율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 자기부담금 상한제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 청구",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 청구기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 청구방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 청구서류",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "우체국 실손보험 청구",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "현대해상 실손보험 청구",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 4세대",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 4세대 5세대",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 4세대 5세대 비교",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 4세대 가입",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 4세대 갱신",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 4세대 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 4세대 유지 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 4세대 재가입",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 4세대 할증",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 4세대란뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 5세대",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 5세대 가입",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 5세대 강제전환",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 5세대 보장",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 5세대 보험료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 5세대 보험사 비교",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 5세대 비교",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 5세대 비급여",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 5세대 전환",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "실손보험 5세대란뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "silson-gen",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "보장성보험 세액공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "premium-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "보장성보험 세액공제 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "premium-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "보험료 세액공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "premium-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "보험료 세액공제 대상",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "premium-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "보험료 세액공제 자동차보험",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "premium-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차세 연납",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "autotax-annual",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차세 연납 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "autotax-annual",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차세 연납 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "autotax-annual",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차세 연납 카드",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "autotax-annual",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차세 연납 할인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "autotax-annual",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차세 연납 할인율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "autotax-annual",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차세 연납 해지",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "autotax-annual",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차세 연납 환급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "autotax-annual",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차세 연납 후 차량 매각",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "autotax-annual",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차세 연납금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "autotax-annual",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차세 연납신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "autotax-annual",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "경차 자동차 세금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "경차 자동차세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "경차 자동차세 1년",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "경차 자동차세 1년에 몇번",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "경차 자동차세 감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "경차 자동차세 얼마",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "경차 자동차세 연납",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "경차 자동차세 조회",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "경차 자동차세 환급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전기차 자동차세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전기차 자동차세 감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전기차 자동차세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전기차 자동차세 연납",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전기차 자동차세 인상",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전기차 자동차세 할인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전기차 자동차세 혜택",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전기차 자동차세금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전기차 자동차세금 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "전기차 자동차세금표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "ev-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "다이렉트자동차보험료계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "car-insurance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차보험 할증",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "car-insurance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차보험 할증 1점",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "car-insurance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차보험 할증 등급표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "car-insurance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차보험 할증 보는법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "car-insurance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차보험 할증 지원금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "car-insurance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차보험 할증 확인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "car-insurance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차보험 할증금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "car-insurance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차보험 할증기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "car-insurance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차보험 할증기준 자차",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "car-insurance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차보험 할증등급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "car-insurance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차보험료계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "car-insurance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자동차보험료계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "car-insurance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
     }
   ],
   "questions": [

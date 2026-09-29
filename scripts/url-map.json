@@ -175,6 +175,7 @@
     "savings/savings-taxfree-guide": "deposit/taxfree",
     "pension/pension-irp-guide": "irp/guide",
     "pension/pension-national-guide": "national-pension/guide",
-    "pension/pension-noran-guide": "noranumbrella/guide"
+    "pension/pension-noran-guide": "noranumbrella/guide",
+    "pension/pension-savings-guide": "irp/pension-savings"
   }
 }
