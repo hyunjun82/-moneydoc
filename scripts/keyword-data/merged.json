@@ -14377,6 +14377,750 @@
       "spoke": "interest-tax",
       "src": "네이버 자동완성 실측",
       "collected": "2026-09-29"
+    },
+    {
+      "word": "Irp 한도 감액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 세액공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 세액공제 300",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 세액공제 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 세액공제 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 세액공제 이월",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 세액공제 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 세액공제 해지",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 세액공제율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 한도 0원",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 한도 1800",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 한도 금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 한도 변경",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 한도 설정",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 한도 조회",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 한도 초과",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "irp 한도축소",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "개인연금 irp",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "개인형 irp 세액공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "개인형 퇴직연금 irp",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금 irp",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금 irp isa",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금 irp 세액공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금 irp 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금저축 irp 세액공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "퇴직연금 irp",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "퇴직연금 irp 수령",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "퇴직연금 irp 이전",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "퇴직연금 irp 인출",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "퇴직연금 irp 해지",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "irp",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금저축 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "savings",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금저축 한도 1800",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "savings",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금저축 한도 변경",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "savings",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금저축 한도 변경 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "savings",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금저축 한도 설정",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "savings",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금저축 한도 조회",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "savings",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금저축 한도 조회 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "savings",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금저축 한도액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "savings",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금저축 한도제한 계좌",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "savings",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금저축세액공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "savings",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금저축세액공제15%",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "savings",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금저축세액공제한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "savings",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연말정산 연금저축 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "savings",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "종합소득세연금저축세액공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "savings",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "62년생 국민연금 수령나이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "63년생 국민연금 수령나이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "64년생 국민연금 수령나이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "65년생 국민연금 수령나이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "67년생 국민연금 수령나이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "68년생 국민연금 수령나이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "69년생 국민연금 수령나이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "71년생 국민연금 수령나이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "75년생 국민연금 수령나이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "국민연금 예상수령액 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "국민연금 예상수령액 모의계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "국민연금 예상수령액 조회",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "국민연금 예상수령액 조회 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "국민연금 예상수령액 조회하기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "국민연금 예상수령액 평균",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "국민연금 예상수령액 확인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "국민연금 예상수령액 확인 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "국민연금 예상수령액표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "national",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 소득공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 소득공제 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 소득공제 구간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 소득공제 금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 소득공제 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 소득공제 세액공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 소득공제 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 소득공제 한도 상향",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 소득공제율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 해지",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 해지 노령",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 해지 사유",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 해지 서류",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 해지 입금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 해지 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 해지 환급금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 해지 환급금 조회",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 해지방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "노란우산공제 해지시 세금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "noran",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "국민연금 소득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "국민연금 소득세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금 소득세 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금소득 세금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금소득 세액공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금소득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금소득세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금소득세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "연금저축 수령 세금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "퇴직연금 소득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "퇴직연금 소득세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
     }
   ],
   "questions": [

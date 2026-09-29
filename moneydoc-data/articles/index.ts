@@ -243,6 +243,13 @@ export const GUIDES: GuideLink[] = [
   {
     "cat": "pension",
     "catLabel": "연금",
+    "href": "/irp/guide/",
+    "title": "IRP 세액공제 한도, 900만원 채우면 얼마 돌려받나요",
+    "blurb": "연금저축 합산 900만원 · 세액공제율 16.5%·13.2% · 중도해지 기타소득세 · 55세 연금수령 세율"
+  },
+  {
+    "cat": "pension",
+    "catLabel": "연금",
     "href": "/pension-early/guide/",
     "title": "국민연금 조기수령 감액과 손익분기, 조건부터 연기연금 비교까지",
     "blurb": "1년 6% 감액표 · 손익분기 나이 · 신청 조건 · 연기연금 비교"

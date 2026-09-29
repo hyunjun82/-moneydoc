@@ -65,7 +65,8 @@ const STOP = new Set(['정리','총정리','방법','기준','조건','계산','
 const strip = (w) => w.replace(/(은|는|이|가|을|를|의|에|도|만|과|와|로|랑)$/, '');
 const titleMiss = (part, pool) => part.replace(/[^가-힣0-9a-zA-Z% ]/g, ' ').split(/\s+/).map(strip)
   .filter((w) => w.length >= 2 && !STOP.has(w))
-  .filter((w) => !pool.includes(w.replace(/\s+/g, '')));
+  // 네이버 자동완성은 영문을 소문자로 돌려준다(irp, isa). 영문 대소문자만 같게 본다
+  .filter((w) => !pool.toLowerCase().includes(w.replace(/\s+/g, '').toLowerCase()));
 
 // 제목 검사는 기계가 확실히 아는 것만 한다.
 //  (1) 앞부분은 실측 검색어여야 한다.
