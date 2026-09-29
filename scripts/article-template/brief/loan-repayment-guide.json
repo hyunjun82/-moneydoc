@@ -1,0 +1,62 @@
+{
+  "slug": "loan-repayment-guide",
+  "keyword": "대출 이자 계산법 공식",
+  "calc": "loan/loan-amortization",
+  "mustInclude": [
+    "대출 이자 계산법 공식",
+    "원리금균등 원금균등 차이",
+    "1억 대출 이자 계산"
+  ],
+  "queries": [
+    "대출 이자 계산법 공식",
+    "대출 이자 계산기",
+    "1억 대출 이자 계산",
+    "2억 대출 이자 계산",
+    "5억 대출 이자 계산",
+    "대출 원리금균등 원금균등 차이",
+    "원리금균등 원금균등 차이",
+    "집 대출 이자 계산"
+  ],
+  "sources": [
+    {
+      "label": "한국주택금융공사 월별상환원리금 계산기 (상환방법·거치기간 용어 안내)",
+      "kind": "gov",
+      "url": "https://www.hf.go.kr/ko/sub01/sub01_06_03.do"
+    },
+    {
+      "label": "전국은행연합회 소비자포털 대출금리에 대한 이해",
+      "kind": "gov",
+      "url": "https://portal.kfb.or.kr/compare/loan.php"
+    },
+    {
+      "label": "전국은행연합회 소비자포털 가계대출금리 비교공시",
+      "kind": "gov",
+      "url": "https://portal.kfb.or.kr/compare/loan_household_new.php"
+    },
+    {
+      "label": "한국주택금융공사 보금자리론 금리안내",
+      "kind": "gov",
+      "url": "https://www.hf.go.kr/ko/sub01/sub01_02_03.do"
+    },
+    {
+      "label": "이자제한법 (최고이자율)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/이자제한법"
+    },
+    {
+      "label": "이자제한법 제2조제1항의 최고이자율에 관한 규정",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/이자제한법제2조제1항의최고이자율에관한규정"
+    },
+    {
+      "label": "금융소비자 보호에 관한 법률 (중도상환수수료·설명의무)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/금융소비자보호에관한법률"
+    },
+    {
+      "label": "한국주택금융공사 보금자리론 상품 안내",
+      "kind": "gov",
+      "url": "https://www.hf.go.kr/ko/sub01/sub01_01_01.do"
+    }
+  ]
+}

@@ -69,10 +69,11 @@ export function koreanStandardPMT(principal, annualRate, years, mode = 'amortiza
     let bal = principal, ti = 0, firstPayment = 0, lastPayment = 0;
     for (let i = 1; i <= n; i++) {
       const intr = Math.round(bal * r);
-      const pay = monthlyPrincipal + intr;
+      const pri = i === n ? bal : monthlyPrincipal;   // 마지막 회차 잔액 정산
+      const pay = pri + intr;
       if (i === 1) firstPayment = pay;
       if (i === n) lastPayment = pay;
-      bal -= monthlyPrincipal;
+      bal -= pri;
       ti += intr;
     }
     return { mode: '원금균등', firstPayment, lastPayment, totalInterest: ti, totalPayment: principal + ti, method: 'korean-standard' };

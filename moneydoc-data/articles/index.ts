@@ -206,6 +206,13 @@ export const GUIDES: GuideLink[] = [
     "blurb": "신용·주담대·전세 갈아타기 조건 · 대출별 한 달 절감액 · 이용 실적 · 신용점수"
   },
   {
+    "cat": "loan",
+    "catLabel": "대출",
+    "href": "/repayment/guide/",
+    "title": "대출 이자 계산법 공식, 원리금균등 원금균등 차이는 얼마나 되나요",
+    "blurb": "이자 공식 · 1억·2억·5억 월 상환액 · 원리금균등 원금균등 차이 · 만기일시·거치식"
+  },
+  {
     "cat": "pension",
     "catLabel": "연금",
     "href": "/pension-early/guide/",
