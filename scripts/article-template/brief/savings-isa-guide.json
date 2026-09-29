@@ -1,0 +1,59 @@
+{
+  "slug": "savings-isa-guide",
+  "keyword": "ISA 비과세 한도",
+  "calc": "savings/isa-tax-saving",
+  "mustInclude": [
+    "ISA 비과세 한도",
+    "ISA 계좌",
+    "ISA 만기 전에 해지",
+    "ISA 만기 연장"
+  ],
+  "queries": [
+    "ISA 계좌",
+    "ISA 비과세 한도",
+    "ISA 비과세 한도 200",
+    "ISA 비과세 한도 400",
+    "ISA 만기",
+    "ISA 만기 전 해지",
+    "ISA 만기 연장",
+    "ISA 계좌 해지",
+    "ISA 계좌 장점"
+  ],
+  "sources": [
+    {
+      "label": "조세특례제한법 (제91조의18 개인종합자산관리계좌 과세특례)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/조세특례제한법"
+    },
+    {
+      "label": "조세특례제한법 시행령 (ISA 납입한도·중도해지 부득이한 사유)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/조세특례제한법시행령"
+    },
+    {
+      "label": "소득세법 (연금계좌 납입·세액공제)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법"
+    },
+    {
+      "label": "예금자보호법 시행령 (ISA 예금 보호한도 합산)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/예금자보호법시행령"
+    },
+    {
+      "label": "전국은행연합회 소비자포털 ISA 전용 예금 금리 비교",
+      "kind": "gov",
+      "url": "https://portal.kfb.or.kr/compare/isa.php"
+    },
+    {
+      "label": "소득세법 시행령 (ISA 만기 자금 연금계좌 이전 방법·기한)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법시행령"
+    },
+    {
+      "label": "지방세법 (지방소득세 특별징수 10%)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세법"
+    }
+  ]
+}

@@ -220,6 +220,13 @@ export const GUIDES: GuideLink[] = [
     "blurb": "이자 공식 · 원금·금리별 세후 이자 · 15.4% 세금 · 비과세종합저축 · 예금보호 1억원"
   },
   {
+    "cat": "savings",
+    "catLabel": "저축",
+    "href": "/isa/guide/",
+    "title": "ISA 비과세 한도, 200만원 넘으면 세금은 얼마나 내나요",
+    "blurb": "200만원·400만원 한도 · 초과분 9.9% · 서민형 기준 · 3년 전 해지 · 연금계좌 이전"
+  },
+  {
     "cat": "pension",
     "catLabel": "연금",
     "href": "/pension-early/guide/",
