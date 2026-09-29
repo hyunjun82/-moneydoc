@@ -213,6 +213,13 @@ export const GUIDES: GuideLink[] = [
     "blurb": "이자 공식 · 1억·2억·5억 월 상환액 · 원리금균등 원금균등 차이 · 만기일시·거치식"
   },
   {
+    "cat": "savings",
+    "catLabel": "저축",
+    "href": "/deposit/guide/",
+    "title": "정기예금 이자 계산 방법, 1천만원 넣으면 세후 이자는 얼마인가요",
+    "blurb": "이자 공식 · 원금·금리별 세후 이자 · 15.4% 세금 · 비과세종합저축 · 예금보호 1억원"
+  },
+  {
     "cat": "pension",
     "catLabel": "연금",
     "href": "/pension-early/guide/",

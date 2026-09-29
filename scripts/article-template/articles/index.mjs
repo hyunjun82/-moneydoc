@@ -37,6 +37,7 @@ export const ARTICLES = [
   { slug: 'loan-prepayment-guide', cat: 'loan', catLabel: '대출', crumb: '중도상환수수료', blurb: '3년 지나면 부과 금지 · 계산식 · 2025년 개편 전후 수수료율 · 면제 대출' },
   { slug: 'loan-refinance-guide', cat: 'loan', catLabel: '대출', crumb: '대환대출 조건과 방법', blurb: '신용·주담대·전세 갈아타기 조건 · 대출별 한 달 절감액 · 이용 실적 · 신용점수' },
   { slug: 'loan-repayment-guide', cat: 'loan', catLabel: '대출', crumb: '대출 이자 계산법', blurb: '이자 공식 · 1억·2억·5억 월 상환액 · 원리금균등 원금균등 차이 · 만기일시·거치식' },
+  { slug: 'savings-deposit-guide', cat: 'savings', catLabel: '저축', crumb: '정기예금 이자 계산', blurb: '이자 공식 · 원금·금리별 세후 이자 · 15.4% 세금 · 비과세종합저축 · 예금보호 1억원' },
   { slug: 'national-pension-early-guide', cat: 'pension', catLabel: '연금', crumb: '국민연금 조기수령', blurb: '1년 6% 감액표 · 손익분기 나이 · 신청 조건 · 연기연금 비교' },
   { slug: 'installment-savings-guide', cat: 'savings', catLabel: '저축', crumb: '적금 이자', blurb: '기간·금리별 이자표 · 단리 복리 차이 · 15.4% 세금 · 비과세 조건' },
   { slug: 'auto-tax-guide', cat: 'insurance', catLabel: '보험·자동차', crumb: '자동차세', blurb: '배기량별 세액표 · 차령 5% 경감 · 연납 공제 · 6월 12월 납기' },

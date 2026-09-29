@@ -168,6 +168,7 @@
     "loan/loan-jeonse-guide": "jeonse-loan/guide",
     "loan/loan-prepayment-guide": "prepayment/guide",
     "loan/loan-refinance-guide": "refinance/guide",
-    "loan/loan-repayment-guide": "repayment/guide"
+    "loan/loan-repayment-guide": "repayment/guide",
+    "savings/savings-deposit-guide": "deposit/guide"
   }
 }

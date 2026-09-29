@@ -13633,6 +13633,750 @@
       "spoke": "repayment",
       "src": "네이버 자동완성 실측",
       "collected": "2026-09-29"
+    },
+    {
+      "word": "국민은행 정기예금 금리",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "농협 정기예금 금리",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "새마을금고 정기예금 금리",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "신한은행 정기예금 금리",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "신협 정기예금 금리",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "예금 이자 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "예금 이자 계산기 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "예금 이자 계산기 세후",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "예금이자계산기 월",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "예금이자계산기일수",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "우체국 정기예금 금리",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "은행 예금 이자 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "적금 정기예금 금리 비교",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "정기예금 금리",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "정기예금 금리 높은곳",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "정기예금 금리계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "정기예금 금리비교",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "정기예금 이자 계산 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "정기예금 이자 계산법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "정기예금 이자계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "정기예금이자계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "정기예금이자계산하는방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "deposit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "ISA 계좌",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "ISA 계좌 개설",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "ISA 계좌 개편",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "ISA 계좌 단점",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "ISA 계좌 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "ISA 계좌 장점",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "ISA 계좌 추천",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 계좌 출금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 계좌 해지",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 만기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 만기 연장 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 만기 연장 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 만기 전 해지",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 만기 후",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 만기시",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 만기연장",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 만기일",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 만기일 설정",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 만기일 확인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 비과세 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 비과세 한도 1년",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 비과세 한도 200",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 비과세 한도 400",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 비과세 한도 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 비과세 한도 보는법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 비과세 한도 확대",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "isa 비과세 한도 확인 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년 ISA 계좌",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "isa",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "자유적금 이자 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "free",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "비과세종합저축",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "taxfree",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "비과세종합저축 65세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "taxfree",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "비과세종합저축 대상자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "taxfree",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "비과세종합저축 비대면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "taxfree",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "비과세종합저축 서류",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "taxfree",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "비과세종합저축 장애인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "taxfree",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "비과세종합저축 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "taxfree",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "비과세종합저축 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "taxfree",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "비과세종합저축계좌",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "taxfree",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "세금우대 적금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "taxfree",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "세금우대 적금 상품 비교",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "taxfree",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "세금우대 적금 차이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "taxfree",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "장애인 비과세 종합저축",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "taxfree",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "적금 비과세종합저축 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "taxfree",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "2026 청년미래적금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "적금 청년미래적금으로 바꾸는법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년도약계좌",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년도약계좌 금리",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년도약계좌 만기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년도약계좌 신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년도약계좌 이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년도약계좌 정부기여금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년도약계좌 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년도약계좌 중도인출",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년도약계좌 중도해지",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년도약계좌 해지",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년미래적금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년미래적금 2차",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년미래적금 9월",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년미래적금 갈아타기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년미래적금 만기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년미래적금 신청기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년미래적금 우대형",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년미래적금 이자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "청년미래적금 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "youth",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "예금 이자 세금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "interest-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "예금 이자 세금 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "interest-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "예금이자 세금 피하는 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "interest-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "예금이자 세금신고방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "interest-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "예금이자세금우대 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "interest-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "이자소득세 15.4%",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "interest-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
+    },
+    {
+      "word": "정기예금 이자 세금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "interest-tax",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-09-29"
     }
   ],
   "questions": [

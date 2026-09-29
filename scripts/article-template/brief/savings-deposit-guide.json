@@ -1,0 +1,79 @@
+{
+  "slug": "savings-deposit-guide",
+  "keyword": "정기예금 이자 계산 방법",
+  "calc": "savings/fixed-deposit",
+  "mustInclude": [
+    "정기예금 이자 계산 방법",
+    "세후 이자",
+    "정기예금 금리 높은곳",
+    "예금자보호 한도"
+  ],
+  "queries": [
+    "정기예금 이자 계산 방법",
+    "정기예금 이자 계산",
+    "예금 이자 계산기 세후",
+    "정기예금 금리 높은곳",
+    "정기예금 금리 비교",
+    "이자소득세 15.4%",
+    "정기예금 이자 세금",
+    "우체국 정기예금 금리",
+    "새마을금고 정기예금 금리"
+  ],
+  "sources": [
+    {
+      "label": "금융위원회 보도자료 오늘부터 새로운 예금보호한도 1억원 시대가 열립니다 (2025.9.1)",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/85200"
+    },
+    {
+      "label": "금융위원회 보도자료 상호금융권 예금보호한도 상향 준비상황 점검",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/84707"
+    },
+    {
+      "label": "예금자보호법 시행령 (보험금 한도)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/예금자보호법시행령"
+    },
+    {
+      "label": "소득세법 (원천징수세율: 이자소득 14%)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법"
+    },
+    {
+      "label": "지방세법 (지방소득세 특별징수)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세법"
+    },
+    {
+      "label": "우체국예금·보험에 관한 법률 (국가의 지급 책임)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/우체국예금ㆍ보험에관한법률"
+    },
+    {
+      "label": "전국은행연합회 소비자포털 예금금리에 대한 이해",
+      "kind": "gov",
+      "url": "https://portal.kfb.or.kr/compare/receiving.php"
+    },
+    {
+      "label": "전국은행연합회 소비자포털 예금금리 비교공시",
+      "kind": "gov",
+      "url": "https://portal.kfb.or.kr/compare/receiving_deposit_3.php"
+    },
+    {
+      "label": "조세특례제한법 (비과세종합저축)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/조세특례제한법"
+    },
+    {
+      "label": "금융위원회 보도자료 예금보호한도 상향 시행(’25.9.1일) 준비상황을 점검하였습니다",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/85114"
+    },
+    {
+      "label": "예금자보호법 (보험금의 지급)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/예금자보호법"
+    }
+  ]
+}
