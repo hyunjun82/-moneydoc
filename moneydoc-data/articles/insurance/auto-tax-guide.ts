@@ -37,7 +37,7 @@ export const html = `<h1>자동차세 계산과 연납 할인, 배기량별 세�
     <div class="v2-row"><dt>차령 경감</dt><dd>3년차부터 매년 5%씩 줄어 12년 이상은 50%</dd></div>
     <div class="v2-row"><dt>납기</dt><dd>6월과 12월에 절반씩 내요</dd></div>
     <div class="v2-row"><dt>연납</dt><dd>연세액의 10% 범위에서 정한 금액을 공제해 줘요</dd></div>
-    <div class="v2-row"><dt>영업용</dt><dd>세율이 훨씬 낮아 같은 배기량이 49,360원이에요</dd></div>
+    <div class="v2-row"><dt>영업용</dt><dd>세율이 훨씬 낮아 같은 배기량이 37,980원이에요</dd></div>
     <div class="v2-row"><dt>어디서 내나요</dt><dd>위택스나 관할 지방자치단체에서 내요</dd></div>
   </dl>
 </section>
@@ -124,7 +124,7 @@ export const html = `<h1>자동차세 계산과 연납 할인, 배기량별 세�
 </div>
 
 <h2 id="s5">영업용과 전기차는 어떻게 되나요<small>용도와 동력에 따라 달라요</small></h2>
-<p class="v2-lead"><span class="v2-ans">영업용은 세율이 훨씬 낮아 같은 1,999cc가 49,360원이에요.</span> 택시나 렌터카처럼 영업용으로 등록한 차는 시시당 세액이 크게 낮아요. 전기차처럼 배기량이 없는 차는 배기량 기준이 아니라 정해진 정액으로 부과해요.</p>
+<p class="v2-lead"><span class="v2-ans">영업용은 세율이 훨씬 낮아 같은 1,999cc가 37,980원이에요.</span> 택시나 렌터카처럼 영업용으로 등록한 차는 시시당 세액이 크게 낮고, 지방교육세와 차령 경감이 없어요. 전기차처럼 배기량이 없는 차는 배기량 기준이 아니라 정해진 정액으로 부과해요.</p>
 <div class="v2-tbl v2-text"><table><caption>용도와 종류에 따른 차이</caption><thead><tr><th>구분</th><th>내용</th></tr></thead><tbody>
 <tr><th scope="row">비영업용 승용차</th><td data-l="내용">배기량에 시시당 세액을 곱해 계산해요</td></tr>
 <tr><th scope="row">영업용 승용차</th><td data-l="내용">시시당 세액이 훨씬 낮아요</td></tr>
@@ -146,7 +146,7 @@ export const html = `<h1>자동차세 계산과 연납 할인, 배기량별 세�
 <details class="v2-faq"><summary><i>Q</i><span>차령 경감은 언제부터 되나요?</span></summary><div><i>A</i><p>차령 3년차부터 매년 5%씩 줄어요. 12년을 넘으면 50%로 고정되고, 1,999cc 차는 259,880원까지 줄어요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>연납 할인은 얼마나 받나요?</span></summary><div><i>A</i><p>남은 기간에 해당하는 세액의 10% 범위에서 정해진 계산식으로 공제해요. 1월에 신청할 때 가장 많이 받아요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>자동차세는 언제 내나요?</span></summary><div><i>A</i><p>6월과 12월에 절반씩 내요. 1,999cc 차면 한 번에 약 259,870원이에요. 연세액이 10만원 이하면 상반기에 한 번에 부과할 수 있어요.</p></div></details>
-<details class="v2-faq"><summary><i>Q</i><span>영업용 자동차세는 얼마인가요?</span></summary><div><i>A</i><p>시시당 세액이 낮아 같은 1,999cc가 49,360원이에요. 택시나 렌터카가 여기에 해당해요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>영업용 자동차세는 얼마인가요?</span></summary><div><i>A</i><p>시시당 세액이 낮아 같은 1,999cc가 37,980원이에요. 택시나 렌터카가 여기에 해당해요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>전기차도 자동차세를 내나요?</span></summary><div><i>A</i><p>내요. 배기량이 없어 그 밖의 승용자동차로 보고 정해진 금액으로 부과해요.</p></div></details>
 </div>
 <section class="v2-sum" aria-label="정리"><div class="v2-hd"><small>이 글 한 줄 정리</small><b>정리</b></div><ul>
@@ -217,7 +217,7 @@ export const faqLd = {
       "name": "영업용 자동차세는 얼마인가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "시시당 세액이 낮아 같은 1,999cc가 49,360원이에요. 택시나 렌터카가 여기에 해당해요."
+        "text": "시시당 세액이 낮아 같은 1,999cc가 37,980원이에요. 택시나 렌터카가 여기에 해당해요."
       }
     },
     {
@@ -317,7 +317,7 @@ export const landing = {
       ],
       [
         "영업용",
-        "세율이 훨씬 낮아 같은 배기량이 49,360원이에요"
+        "세율이 훨씬 낮아 같은 배기량이 37,980원이에요"
       ],
       [
         "어디서 내나요",
@@ -375,7 +375,7 @@ export const landing = {
     },
     {
       "q": "영업용 자동차세는 얼마인가요?",
-      "a": "시시당 세액이 낮아 같은 1,999cc가 49,360원이에요. 택시나 렌터카가 여기에 해당해요."
+      "a": "시시당 세액이 낮아 같은 1,999cc가 37,980원이에요. 택시나 렌터카가 여기에 해당해요."
     },
     {
       "q": "전기차도 자동차세를 내나요?",

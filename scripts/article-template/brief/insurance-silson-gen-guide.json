@@ -1,0 +1,66 @@
+{
+  "slug": "insurance-silson-gen-guide",
+  "keyword": "실손보험 4세대 5세대 비교",
+  "calc": "insurance/medical-insurance-payout",
+  "mustInclude": [
+    "실손보험 4세대",
+    "실손보험 5세대"
+  ],
+  "queries": [
+    "실손보험 4세대 5세대 비교",
+    "실손보험 5세대 전환",
+    "실손보험 5세대 강제전환",
+    "실손보험 5세대 보험료",
+    "실손보험 5세대 비급여",
+    "실손보험 4세대 할증",
+    "실손보험 4세대 재가입",
+    "실손보험 4세대 갱신"
+  ],
+  "sources": [
+    {
+      "label": "보험업감독규정 (실손의료보험 표준약관·재가입)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/행정규칙/보험업감독규정"
+    },
+    {
+      "label": "금융위원회 보도자료 5세대 실손의료보험 출시 (2026.5)",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/86831"
+    },
+    {
+      "label": "금융위원회 보도자료 4세대 실손의료보험 출시 (2021)",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/76157"
+    },
+    {
+      "label": "대한민국 정책브리핑 4세대 실손보험 가입자 보험료 할인·할증 적용 (2024.6)",
+      "kind": "gov",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148930029"
+    },
+    {
+      "label": "금융위원회 보도자료 실손의료보험, 낮은 보험료로 (2025.4)",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/84272"
+    },
+    {
+      "label": "금융위원회 주요정책문답 실손의료보험",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/po020201/84273"
+    },
+    {
+      "label": "대한민국 정책브리핑 K-공감 5세대 실손보험 출시",
+      "kind": "gov",
+      "url": "https://gonggam.korea.kr/newsContentView.es?mid=a12503000000&section_id=NCCD_POLICY&content=NC002&code_cd=0101000000&news_id=7a344e10-0414-447c-9c1a-4155ef04e051"
+    },
+    {
+      "label": "금융위원회 5세대 실손보험 출시 카드뉴스 (2026.5)",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010107/86856"
+    },
+    {
+      "label": "대한민국 정책브리핑 K-공감 4세대 실손 비급여 보험료 차등",
+      "kind": "gov",
+      "url": "https://gonggam.korea.kr/newsContentView.es?mid=a10201000000&section_id=NCCD_POLICY&content=NC002&news_id=c862d5bf-481d-4c32-bbe9-33c72b8bec18"
+    }
+  ]
+}

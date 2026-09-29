@@ -1,0 +1,66 @@
+{
+  "slug": "insurance-silson-guide",
+  "keyword": "실손보험 자기부담금",
+  "calc": "insurance/medical-insurance-payout",
+  "mustInclude": [
+    "실손보험 자기부담금",
+    "실손보험 청구"
+  ],
+  "queries": [
+    "실손보험 자기부담금",
+    "실손보험 자기부담금 20%",
+    "실손보험 자기부담금 1만원",
+    "실손보험 자기부담금 상한제",
+    "실손보험 청구",
+    "실손보험 청구기간",
+    "실손보험 청구서류",
+    "4세대 실손보험 자기부담금"
+  ],
+  "sources": [
+    {
+      "label": "상법 (제662조 보험금청구권 소멸시효 3년)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/상법"
+    },
+    {
+      "label": "보험업법 (제102조의6 실손의료보험 청구 전산화)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/보험업법"
+    },
+    {
+      "label": "금융위원회 보도자료 5세대 실손의료보험 출시 (2026.5)",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/86831"
+    },
+    {
+      "label": "금융위원회 5세대 실손보험 출시 카드뉴스 (2026.5)",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010107/86856"
+    },
+    {
+      "label": "금융위원회 보도자료 실손의료보험, 낮은 보험료로 (4세대)",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/84272"
+    },
+    {
+      "label": "금융위원회 주요정책문답 실손의료보험",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/po020201/84273"
+    },
+    {
+      "label": "대한민국 정책브리핑 K-공감 5세대 실손보험 출시",
+      "kind": "gov",
+      "url": "https://gonggam.korea.kr/newsContentView.es?mid=a12503000000&section_id=NCCD_POLICY&content=NC002&code_cd=0101000000&news_id=7a344e10-0414-447c-9c1a-4155ef04e051"
+    },
+    {
+      "label": "금융위원회 보도자료 실손보험 청구 전산화 의원·약국 확대 시행 (2025.10)",
+      "kind": "gov",
+      "url": "https://www.fsc.go.kr/no010101/85456"
+    },
+    {
+      "label": "대한민국 정책브리핑 실손24, 더욱 편리해집니다",
+      "kind": "gov",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148953772"
+    }
+  ]
+}

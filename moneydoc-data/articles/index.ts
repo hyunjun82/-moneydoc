@@ -290,6 +290,20 @@ export const GUIDES: GuideLink[] = [
     "blurb": "배기량별 세액표 · 차령 5% 경감 · 연납 공제 · 6월 12월 납기"
   },
   {
+    "cat": "insurance",
+    "catLabel": "보험·자동차",
+    "href": "/medical-payout/guide/",
+    "title": "실손보험 자기부담금, 병원비 20만원이면 얼마 돌려받나요",
+    "blurb": "20%와 1만원 중 큰 금액 · 4세대·5세대 자기부담률 · 청구기간 3년 · 실손24 전산 청구"
+  },
+  {
+    "cat": "insurance",
+    "catLabel": "보험·자동차",
+    "href": "/medical-payout/generation/",
+    "title": "실손보험 4세대 5세대 비교, 갈아타면 보험료와 보장은 어떻게 달라지나요",
+    "blurb": "5세대 보험료 약 30%↓ · 비중증 50% · 중증 입원 상한 500만원 · 4세대 할증 5단계 · 전환·강제전환"
+  },
+  {
     "cat": "law",
     "catLabel": "법률",
     "href": "/certified-mail/",

@@ -88,13 +88,13 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     else rate = commercial ? (cc <= 2000 ? 19 : 24) : ${C.RATE_OVER_1600};
     var base = Math.round(cc * rate);
     var usage = age + 1, disc = 0;
-    if (usage >= 3 && usage < 12) disc = +((usage - 2) * 0.05).toFixed(2);
-    else if (usage >= 12) disc = 0.5;
+    if (!commercial && usage >= 3 && usage < 12) disc = +((usage - 2) * 0.05).toFixed(2);
+    else if (!commercial && usage >= 12) disc = 0.5;
     function cut10(n){ return Math.floor(n / 10) * 10; }
     function sfloor(x){ return Math.floor(Math.round(x * 1e6) / 1e6); }
     var halfAuto = cut10(sfloor((base * (1 - disc)) / 2));
     var auto = halfAuto * 2;
-    var halfEdu = cut10(sfloor(halfAuto * ${C.EDU_TAX_RATE}));
+    var halfEdu = commercial ? 0 : cut10(sfloor(halfAuto * ${C.EDU_TAX_RATE}));
     var edu = halfEdu * 2;
     return { auto: auto, edu: edu, total: auto + edu, half: halfAuto + halfEdu };
   }`,
@@ -160,7 +160,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
       ] },
 
       { id: 's5', h2: '영업용과 전기차는 어떻게 되나요', sub: '용도와 동력에 따라 달라요', blocks: [
-        { type: 'p', lead: true, ans: `영업용은 세율이 훨씬 낮아 같은 1,999cc가 ${won(COMM.totalTax)}원이에요.`, text: '택시나 렌터카처럼 영업용으로 등록한 차는 시시당 세액이 크게 낮아요. 전기차처럼 배기량이 없는 차는 배기량 기준이 아니라 정해진 정액으로 부과해요.' },
+        { type: 'p', lead: true, ans: `영업용은 세율이 훨씬 낮아 같은 1,999cc가 ${won(COMM.totalTax)}원이에요.`, text: '택시나 렌터카처럼 영업용으로 등록한 차는 시시당 세액이 크게 낮고, 지방교육세와 차령 경감이 없어요. 전기차처럼 배기량이 없는 차는 배기량 기준이 아니라 정해진 정액으로 부과해요.' },
         { type: 'table', text: true, caption: '용도와 종류에 따른 차이', headers: ['구분', '내용'], rows: [
           { cells: ['비영업용 승용차', '배기량에 시시당 세액을 곱해 계산해요'] },
           { cells: ['영업용 승용차', '시시당 세액이 훨씬 낮아요'] },
