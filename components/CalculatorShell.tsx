@@ -15,6 +15,7 @@ type CalcSpec = {
   guide?: any;
   related?: string[];
   lastVerified?: string;
+  year?: number | string;
 };
 
 export function CalculatorShell({
@@ -131,6 +132,21 @@ export function CalculatorShell({
       <header className="page-head v2">
         <h1 className="page-title">{spec.title}</h1>
         <p className="page-sub"><span className="dot" />{sourceBadge}</p>
+        <div className="article-byline" style={{ margin: "10px 0 0" }}>
+          <span className="byline-author">글 한결</span>
+          {spec.year && (
+            <>
+              <span className="dot" />
+              <span>{spec.year}년 기준</span>
+            </>
+          )}
+          {spec.lastVerified && (
+            <>
+              <span className="dot" />
+              <time dateTime={spec.lastVerified}>{spec.lastVerified} 산식 검증</time>
+            </>
+          )}
+        </div>
       </header>
 
       {children}

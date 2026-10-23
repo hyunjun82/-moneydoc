@@ -240,10 +240,10 @@ export function GuideAccordion({
   if (guide.calculationOrder?.length) {
     sections.push({
       num: next(),
-      title: "계산이 이렇게 진행됩니다",
+      title: "계산은 어떤 순서로 진행되나요?",
       content: (
         <>
-          <p>결과는 다음 순서로 산출됩니다.</p>
+          <p>결과는 다음 순서로 나와요.</p>
           <div className="formula">
             {guide.calculationOrder.map((line, i) => (
               <span key={i}>{line}<br /></span>
@@ -325,7 +325,7 @@ export function GuideAccordion({
         <div className="gfaq">
           <h2>자주 묻는 질문</h2>
           {faqs.map((qa, i) => (
-            <details key={i} open={i === 0}><summary>{qa.q}</summary><p>{qa.a}</p></details>
+            <details key={i} open><summary>{qa.q}</summary><p>{qa.a}</p></details>
           ))}
         </div>
       )}
