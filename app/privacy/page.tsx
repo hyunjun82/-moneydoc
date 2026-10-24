@@ -14,7 +14,7 @@ export default function Page() {
       <Header />
       <header className="page-head">
         <h1 className="page-title">개인정보처리방침</h1>
-        <p className="page-sub">마지막 업데이트: 2026년 5월 9일</p>
+        <p className="page-sub">마지막 업데이트: 2026년 10월 24일</p>
       </header>
       <section className="guide-section">
         <div className="guide-list" style={{ padding: "32px 36px" }}>
@@ -32,11 +32,11 @@ export default function Page() {
             <li>방문한 페이지, 사이트 내 이동 경로</li>
           </ul>
           <p style={{ color: "var(--text-2)", lineHeight: 1.75 }}>
-            이 정보는 Cloudflare Pages 호스팅 로그 및 Google Analytics(설치 시)를 통해 처리되며, 웹사이트 개선 목적으로만 사용됩니다.
+            이 정보는 Cloudflare Pages 호스팅 로그를 통해 처리되며, 웹사이트 개선 목적으로만 사용됩니다. 현재 Google Analytics 등 별도 분석 도구는 설치하지 않았습니다.
           </p>
           <h2 style={{ fontSize: 18, color: "var(--text)" }}>3. 광고 및 쿠키</h2>
           <p style={{ color: "var(--text-2)", lineHeight: 1.75 }}>
-            MoneyDoc은 향후 Google AdSense 등 제3자 광고 서비스를 도입할 예정이며, 이 경우 해당 서비스가 쿠키·광고 식별자를 통해 맞춤 광고를 제공할 수 있습니다.
+            MoneyDoc은 제3자 광고 서비스인 Google AdSense를 사용합니다. Google을 포함한 제3자 공급업체는 쿠키를 사용하여 사용자의 이 사이트 또는 다른 웹사이트 방문 기록을 바탕으로 광고를 게재합니다. Google의 광고 쿠키를 통해 Google과 파트너는 사용자의 방문 기록에 따른 광고를 제공할 수 있습니다.
             사용자는 브라우저 설정에서 쿠키 사용을 거부할 수 있으나, 일부 기능 이용에 제한이 있을 수 있습니다.
           </p>
           <h2 style={{ fontSize: 18, color: "var(--text)" }}>4. 정보주체의 권리</h2>
