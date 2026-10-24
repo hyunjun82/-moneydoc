@@ -18,7 +18,14 @@ export default function Page() {
       </header>
       <section className="guide-section">
         <div className="guide-list" style={{ padding: "32px 36px", color: "var(--text-2)", lineHeight: 1.75 }}>
-          <h2 style={{ fontSize: 18, color: "var(--text)", marginTop: 0 }}>이메일</h2>
+          <h2 style={{ fontSize: 18, color: "var(--text)", marginTop: 0 }}>어떤 제보를 기다리나요?</h2>
+          <p>
+            계산기 결과가 정부 사이트나 고지서와 다르게 나왔다는 제보가 가장 반가워요. 세율이나 공제액이
+            법 개정으로 바뀌었는데 아직 반영되지 않은 경우, 가이드 글의 설명이 틀렸거나 오래된 경우도 알려 주세요.
+            새로 만들면 좋을 계산기나 글 주제 제안도 환영해요. 보내 주신 내용은 운영자 한결이 직접 읽고
+            법령 원문과 대조한 뒤 고쳐요. 수정한 내용은 해당 계산기의 근거 항목에 남겨요.
+          </p>
+          <h2 style={{ fontSize: 18, color: "var(--text)" }}>이메일</h2>
           <p>
             <a href="mailto:contact@moneydoc.kr" style={{ color: "var(--brand)", fontWeight: 600 }}>contact@moneydoc.kr</a>
           </p>
