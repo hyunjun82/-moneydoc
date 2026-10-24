@@ -6,7 +6,7 @@ import spec from "@/data/calculators/util/cash-service-fee.json";
 export const metadata: Metadata = {
   title: "현금서비스 수수료 계산기 (2026년 기준)",
   description:
-    "이용금액 × 연이율 / 365 × 사용일수 (단리). 신용카드 단기카드대출(현금서비스) 수수료 계산. 이용액·이자율(연 19~22%)·이용기간 입력. 신용카드 현금서비스는 즉시 이자 발생, 일할 계산. 단기카드대출 한도와 무관한 별도 한도 (보통 300~1,000만).",
+    "현금서비스 이용금액, 연 수수료율, 사용일수로 이자와 갚을 돈을 계산해요. 연 수수료율을 365일로 나눠 쓴 날수만큼 곱하는 단리 방식이에요. 100만원을 연 20%로 30일 쓰면 이자는 16,438원이에요.",
   alternates: { canonical: "/cash-service/" },
 };
 

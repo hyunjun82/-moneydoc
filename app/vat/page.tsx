@@ -6,7 +6,7 @@ import spec from "@/data/calculators/tax/vat-general.json";
 export const metadata: Metadata = {
   title: "부가세 (일반과세자) 계산기 (2026년 기준)",
   description:
-    "매출 부가세 - 매입 부가세 = 납부세액. 분기별 매출 부가세(매출 ÷ 11) - 매입 부가세(공제 가능 항목 영수증 기준) = 납부세액. 음수면 환급. 1·4분기는 1월·7월 25일까지 신고.",
+    "한 신고 기간의 매출 부가세와 공제 대상 매입 부가세를 넣으면 일반과세자가 낼 부가세나 돌려받을 환급세액을 계산해요. 매출 부가세는 공급가액의 10%이고, 부가세 포함 금액이면 11로 나눠 구해요. 결과가 음수면 환급 대상이에요.",
   alternates: { canonical: "/vat/" },
 };
 

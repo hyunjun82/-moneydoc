@@ -5,7 +5,7 @@ import { GuideList } from "@/components/GuideList";
 
 export const metadata: Metadata = {
   title: "보험·자동차 계산기 2종",
-  description: "실손보험 자기부담금·자동차세 (배기량·연식)·지방교육세 — 1~4세대 표준약관 + 지방세법 §127 (금감원·행정안전부 공식 산식)",
+  description: "실손보험 자기부담금과 자동차세를 계산하는 보험·자동차 계산기 2종이에요. 의료비를 넣어 돌려받는 보험금과 자기부담금을 확인하고, 배기량과 차량 연식으로 자동차세와 지방교육세를 미리 알아봐요.",
   alternates: { canonical: "/insurance/" },
 };
 
@@ -22,7 +22,7 @@ export default function Page() {
 
       <header className="page-head">
         <h1 className="page-title">보험·자동차 계산기</h1>
-        <p className="page-sub">실손보험·자동차세 — 금감원·행정안전부 표준 산식</p>
+        <p className="page-sub">실손보험 청구 때 빼는 자기부담금과 1년 자동차세를 계산해요.</p>
       </header>
 
       <section className="guide-section">
@@ -51,15 +51,15 @@ export default function Page() {
         <a href="/medical-payout/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">실손보험 자기부담금 계산기</h3>
-            <p className="cat-desc">의료비 - 면책금 - 자기부담률 = 보험금 (1~4세대 모두)</p>
-            <span className="cat-count">금감원 표준약관</span>
+            <p className="cat-desc">실손보험 청구 때 빼는 자기부담금과 돌려받는 보험금 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/auto-tax/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">자동차세 계산기</h3>
-            <p className="cat-desc">배기량·연식·영업용 → 자동차세 + 지방교육세 자동 산출</p>
-            <span className="cat-count">행정안전부 표준 (지방세법 §127)</span>
+            <p className="cat-desc">배기량과 차량 연식으로 1년 자동차세와 지방교육세 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         </div>

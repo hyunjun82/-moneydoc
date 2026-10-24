@@ -6,7 +6,7 @@ import spec from "@/data/calculators/tax/other-income-tax.json";
 export const metadata: Metadata = {
   title: "기타소득세 계산기 (2026년 기준)",
   description:
-    "필요경비 60% 차감 후 22% 분리과세. 강의료·원고료·인세·상금·복권 등 기타소득 총수입을 입력하면 필요경비 60% 추정공제 → 분리과세 22%(소득세 20% + 지방세 2%) 자동 계산. 소득금액 5만 이하면 비과세 (소액부징수).",
+    "기타소득 총수입을 넣으면 필요경비 60%를 빼고 남은 기타소득금액에 소득세 20%와 지방소득세 2%를 매겨 원천징수 세액과 실수령액을 계산해요. 떼는 세금은 보통 총수입의 8.8%로 100만원이면 88,000원이고, 총수입 10만원이면 0원이에요.",
   alternates: { canonical: "/other-income/" },
 };
 

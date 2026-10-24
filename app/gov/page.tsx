@@ -5,7 +5,7 @@ import { GuideList } from "@/components/GuideList";
 
 export const metadata: Metadata = {
   title: "정부지원금 계산기 11종",
-  description: "기초연금·실업급여·육아휴직급여·산재보험·근로/자녀장려금·기초생활수급·청년월세지원·기준중위소득 — 2026년 기준 보건복지부·고용노동부 공식 산식 + 실업급여·근로장려금·청년미래적금 가이드",
+  description: "정부지원금 계산기 11종이에요. 기초생활수급, 차상위계층, 기초연금, 근로장려금, 실업급여, 출산휴가와 육아휴직 급여, 산재 휴업급여, 한부모가족 양육비, 국가장학금, 기준 중위소득을 계산해요. 자격과 받을 금액을 미리 가늠해 보세요.",
   alternates: { canonical: "/gov/" },
 };
 
@@ -22,7 +22,7 @@ export default function Page() {
 
       <header className="page-head">
         <h1 className="page-title">정부지원금 계산기</h1>
-        <p className="page-sub">기초연금·실업급여·육아휴직·근로/자녀장려금 — 보건복지부·고용보험법</p>
+        <p className="page-sub">기초생활수급, 기초연금, 실업급여, 육아휴직처럼 정부지원금 자격과 금액을 미리 가늠해요.</p>
       </header>
 
       <section className="guide-section">
@@ -51,78 +51,78 @@ export default function Page() {
         <a href="/basic-livelihood/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">기초생활수급자 모의계산</h3>
-            <p className="cat-desc">생계 32% / 의료 40% / 주거 48% / 교육 50% 4종 급여 자격</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">가구원 수와 소득인정액으로 생계, 의료, 주거, 교육급여 자격 판정</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/basic-pension/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">기초연금 수령액 계산기</h3>
-            <p className="cat-desc">65세 이상 소득인정액 기준 자격 + 최대수령</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">가구 유형과 소득인정액으로 기초연금 자격과 금액 어림</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/eitc/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">근로장려금 모의계산</h3>
-            <p className="cat-desc">단독·외벌이·맞벌이 가구별 한도와 추정</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">가구 유형과 연간 총소득으로 근로장려금 예상액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/injury-pay/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">산재 휴업급여 계산기</h3>
-            <p className="cat-desc">평균임금의 70% × 휴업 일수</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">월 평균임금과 휴업 일수로 산재 휴업급여 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/maternity/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">출산휴가 급여 계산기</h3>
-            <p className="cat-desc">90일 (다태 120일) + 회사·고용보험 분담</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">월 통상임금으로 출산전후휴가 동안 고용보험과 회사에서 받는 금액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/median-income/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">중위소득 계산기</h3>
-            <p className="cat-desc">가구원수별 중위소득 100/50/47/40/30% + 본인 소득 비율</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">가구원 수별 기준 중위소득과 내 소득이 차지하는 비율</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/scholarship/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">국가장학금 소득분위 계산기</h3>
-            <p className="cat-desc">소득분위별 학기당 장학금 지원</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">소득구간과 학기 등록금으로 국가장학금 학기당 지원액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/near-poor/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">차상위계층 자격 모의계산</h3>
-            <p className="cat-desc">중위소득 50% 이하 가구 판정</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">가구원 수와 소득인정액으로 차상위계층 해당 여부 판정</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/parental-leave/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">육아휴직 급여 계산기</h3>
-            <p className="cat-desc">고용보험법 §70 첫 6개월 100% / 7~12개월 80%</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">월 통상임금과 휴직 개월 수로 기간별 육아휴직급여 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/single-parent/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">한부모가족 자녀양육비 계산기</h3>
-            <p className="cat-desc">중위소득 60% 이하 + 18세 미만 자녀 1인당 월 21만원</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">중위소득 비율과 자녀 나이로 아동양육비 대상 여부와 지원액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/unemployment/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">실업급여 계산기</h3>
-            <p className="cat-desc">고용보험법 §46 구직급여 일액 + 소정급여일수</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">월 평균임금과 가입연수로 하루 실업급여와 받는 날수 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         </div>

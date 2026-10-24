@@ -6,7 +6,7 @@ import spec from "@/data/calculators/util/percent-calculator.json";
 export const metadata: Metadata = {
   title: "퍼센트 계산기 (2026년 기준)",
   description:
-    "% 계산 4가지 모드 (전체 중 일부 / 비율 / 증감률 / 증감 후). 퍼센트(%) 계산기. A의 B% 구하기, A는 B의 몇 %인지, A에서 B로 변화율(%) 등 3가지 모드. 할인율·세율·인상률·증감률 계산에 사용.",
+    "퍼센트 계산을 네 가지 모드로 해요. A의 X% 구하기, A가 B의 몇 %인지, A에서 B로 바뀐 증감률, A에 X%를 늘리거나 줄인 값을 바로 구해요. 할인율, 세율, 인상률, 수익률 계산에 쓰면 돼요.",
   alternates: { canonical: "/percent/" },
 };
 

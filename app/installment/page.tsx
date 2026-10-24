@@ -6,7 +6,7 @@ import spec from "@/data/calculators/savings/installment-savings.json";
 export const metadata: Metadata = {
   title: "적금 계산기 (2026년 기준)",
   description:
-    "월 적금 만기 수령액. 단리·복리 선택, 이자에서 세금 15.4% 자동 차감 (비과세종합저축 자격자, 청년미래적금은 0%). 정해진 금액 매월 납입하는 정기적금 만기 계산. 월 납입액·이자율·기간 입력. 단리 기준 (첫 달 납입금만 만기까지 12개월 이자, 마지막 달은 1개월 이자).",
+    "월 납입액, 납입월수, 연이율로 정기적금 만기 수령액을 계산해요. 단리와 월복리 중 고를 수 있고 이자에서 15.4%를 떼요. 월 50만원을 24개월, 연 4% 단리로 넣으면 세후 12,423,000원이에요.",
   alternates: { canonical: "/installment/" },
 };
 
@@ -15,7 +15,6 @@ export default function Page() {
     <CalculatorShell
       spec={spec}
       sourceBadge="적금 단리·월복리 산식 · 5케이스 검증"
-      description="월 X원 납입 시 만기 수령액 — 단리/복리 토글, 이자소득세 15.4% 차감 (비과세 자격 시 0%)"
     >
       <Client />
     </CalculatorShell>

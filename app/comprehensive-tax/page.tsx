@@ -6,7 +6,7 @@ import spec from "@/data/calculators/realestate/comprehensive-real-estate-tax.js
 export const metadata: Metadata = {
   title: "종합부동산세 계산기 (2026년 기준)",
   description:
-    "공정시장가액 60% 적용 + 1주택자 12억 공제. 주택별 공시가격(최대 3채)과 1주택자라면 연령·보유연수를 입력하면 종합부동산세를 계산합니다. 1세대1주택 12억·그 외 9억 공제, 공정시장가액비율 60%, 재산세액 공제, 고령자·장기보유 세액공제(합계 80% 한도), 농어촌특별세.",
+    "주택별 공시가격을 3채까지 넣으면 종합부동산세와 농어촌특별세를 계산해요. 1세대 1주택은 12억원, 그 외는 9억원을 공제하고 공정시장가액비율 60%를 곱해요. 1주택자 고령자·장기보유 세액공제는 합계 80%까지 반영해요.",
   alternates: { canonical: "/comprehensive-tax/" },
 };
 

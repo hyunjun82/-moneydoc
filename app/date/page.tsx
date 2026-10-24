@@ -6,7 +6,7 @@ import spec from "@/data/calculators/util/date-calculator.json";
 export const metadata: Metadata = {
   title: "날짜 계산기 (D-Day) (2026년 기준)",
   description:
-    "두 날짜 사이 일수·년월일 + 디데이. 두 날짜 사이 일수·개월수·년수 계산. 시작일과 종료일을 입력하면 영업일·평일·휴일 구분도 가능. 계약기간·근속일수·재직기간·여행일수 등 계산에 사용.",
+    "시작일과 종료일을 넣으면 두 날짜 사이 날수를 계산하고 디데이를 셀 수 있어요. 날수는 시작일을 빼고 종료일까지 센 값이에요. 2026년 1월 1일부터 5월 9일까지는 128일이고, 주말과 공휴일은 빼지 않아요.",
   alternates: { canonical: "/date/" },
 };
 

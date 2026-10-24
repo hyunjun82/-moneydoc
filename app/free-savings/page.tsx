@@ -6,7 +6,7 @@ import spec from "@/data/calculators/savings/free-savings.json";
 export const metadata: Metadata = {
   title: "자유적금 계산기 (2026년 기준)",
   description:
-    "월 자유 납입 적금 만기 수령액. 평균 월납입 기준 단리 계산, 이자에서 세금 15.4% 자동 차감 (비과세 자격자는 0%). 매월 다른 금액 납입 가능한 자유적금 만기 계산. 월 평균 납입금·이자율·기간 입력 시 만기액 산출. 회당 한도 자유 (월 1만원~1천만원), 단리 기준.",
+    "월 평균 납입금, 납입 월수, 연이율로 자유적금 만기 수령액을 계산해요. 평균 금액을 매월 똑같이 넣었다고 보고 단리 이자에서 15.4%를 떼요. 월 100만원을 24개월, 연 3.5%로 넣으면 세후 24,740,250원이에요.",
   alternates: { canonical: "/free-savings/" },
 };
 
@@ -15,7 +15,6 @@ export default function Page() {
     <CalculatorShell
       spec={spec}
       sourceBadge="한국은행 표준 산식 · 5케이스 검증"
-      description="월 자유 납입 적금 만기 수령액 — 평균 월납입 기준 단리, 이자세 15.4% (비과세 시 0%)"
     >
       <Client />
     </CalculatorShell>

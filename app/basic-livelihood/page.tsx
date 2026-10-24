@@ -6,7 +6,7 @@ import spec from "@/data/calculators/government/basic-livelihood-eligibility.jso
 export const metadata: Metadata = {
   title: "기초생활수급자 모의계산 (2026년 기준)",
   description:
-    "생계 32% / 의료 40% / 주거 48% / 교육 50% (2026 기준중위소득 6.51% 인상 적용). 기초생활수급자 모의계산. 가구원수·소득·재산 입력 시 생계(중위 32%)·의료(40%)·주거(48%)·교육(50%) 4종 급여 자격 판정. 자격 충족 시 부족분 지급.",
+    "가구원 수와 월 소득인정액으로 2026년 생계, 의료, 주거, 교육급여 자격을 판정해요. 선정기준은 기준 중위소득의 32%, 40%, 48%, 50%예요. 1인 가구 생계급여 기준은 월 820,556원이에요.",
   alternates: { canonical: "/basic-livelihood/" },
 };
 

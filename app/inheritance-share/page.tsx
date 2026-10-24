@@ -6,7 +6,7 @@ import spec from "@/data/calculators/law/inheritance-share.json";
 export const metadata: Metadata = {
   title: "상속분 계산기 (2026년 기준)",
   description:
-    "민법 §1009 배우자·자녀·부모 비율 분배. 법정상속분 계산. 배우자 1.5 + 자녀 각 1 (또는 부모 각 1). 자녀 2명+배우자 → 배우자 3/7, 자녀 각 2/7. 유언 우선, 유언 없으면 법정상속.",
+    "상속재산과 배우자, 자녀, 부모, 형제자매 수로 법정상속분을 계산해요. 배우자는 함께 상속하는 자녀나 부모 몫의 1.5배를 받아요. 10억원을 배우자와 자녀 2명이 나누면 배우자 428,571,429원, 자녀 각 285,714,286원이에요.",
   alternates: { canonical: "/inheritance-share/" },
 };
 

@@ -6,7 +6,7 @@ import spec from "@/data/calculators/tax/inheritance-tax.json";
 export const metadata: Metadata = {
   title: "상속세 계산기 (2026년 기준)",
   description:
-    "상속세 및 증여세법 §26 누진세율 + max(일괄 5억, 기초 2억 + 인적공제). 상속재산 총액(부동산+예금+주식 등 시가) + 배우자/자녀 수 입력. 일괄공제 5억 또는 인적공제(2억+자녀5천만/명) 중 큰 것 + 배우자공제(법정상속분 5억~30억) 자동 계산. 사망일부터 6개월.",
+    "상속재산과 배우자, 자녀 수 등으로 상속세를 계산해요. 일괄공제 5억원과 기초·인적공제 중 큰 쪽에 배우자공제 5억원에서 30억원을 더하고 10%에서 50% 누진세율을 적용해요. 신고세액공제 3%를 뺀 납부세액까지 보여 줘요.",
   alternates: { canonical: "/inheritance-tax/" },
 };
 

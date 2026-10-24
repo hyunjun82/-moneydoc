@@ -6,7 +6,7 @@ import spec from "@/data/calculators/government/industrial-accident-pay.json";
 export const metadata: Metadata = {
   title: "산재 휴업급여 계산기 (2026년 기준)",
   description:
-    "평균임금의 70% × 휴업일수 (최저 82,560원/일). 산재 휴업급여 계산. 사고로 일하지 못한 기간 동안 평균임금 × 70% 지급 (최저 82,560원/일, 2026 최저시급 10,320 × 8h). 근로복지공단 신청.",
+    "월 평균임금과 휴업 일수로 산재 휴업급여를 계산해요. 월 평균임금을 30으로 나눈 1일 평균임금의 70%를 주고, 2026년에는 하루 82,560원보다 적게 받지 않아요. 월 400만원에 90일이면 8,399,970원이에요.",
   alternates: { canonical: "/injury-pay/" },
 };
 

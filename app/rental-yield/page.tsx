@@ -6,7 +6,7 @@ import spec from "@/data/calculators/realestate/rental-yield.json";
 export const metadata: Metadata = {
   title: "임대수익률 계산기 (2026년 기준)",
   description:
-    "매매가·보증금·월세·연간 비용 기반 총수익률·순수익률. 월세 부동산의 임대수익률 계산. 매매가·보증금·월세·연간 비용 입력 시 총수익률(매매가 - 보증금 = 투자금 대비 연 임대수익) 및 순수익률(비용 차감 후) 자동 산출. 다른 부동산·금융 투자와 비교.",
+    "매매가와 보증금, 월세, 연간 비용을 넣으면 매매가에서 보증금을 뺀 투자금 기준으로 총수익률과 순수익률을 계산해요. 5억원 아파트를 보증금 1억원, 월세 100만원에 놓으면 총수익률 3%, 연간 비용 240만원이면 순수익률 2.4%예요.",
   alternates: { canonical: "/rental-yield/" },
 };
 

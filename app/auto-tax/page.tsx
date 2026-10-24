@@ -6,7 +6,7 @@ import spec from "@/data/calculators/insurance/auto-tax.json";
 export const metadata: Metadata = {
   title: "자동차세 계산기 (정기) (2026년 기준)",
   description:
-    "배기량(cc)·등록 후 햇수·영업용 여부로 자동차세와 지방교육세(비영업용 승용만 30%)를 계산해요. 차령 3년차부터 5%씩 최대 50% 경감, 6월·12월 절반씩 납부, 1월 연납 시 남은 기간 세액의 5% 공제. 지방세법 제127조 기준 8케이스 검증.",
+    "배기량, 등록 후 햇수, 영업용 여부로 1년 자동차세와 지방교육세를 계산해요. 차령 3년차부터 해마다 5%씩 최대 50%까지 줄어요. 1,999cc 비영업용 신차는 1년에 519,740원이에요.",
   alternates: { canonical: "/auto-tax/" },
 };
 

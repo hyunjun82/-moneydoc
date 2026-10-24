@@ -6,7 +6,7 @@ import spec from "@/data/calculators/tax/four-major-insurance.json";
 export const metadata: Metadata = {
   title: "4대보험료 계산기 (근로자 + 회사 통합) (2026년 기준)",
   description:
-    "월급 기준 본인 부담 + 회사 부담 + 산재보험 동시 산출. 월 보수(세전) 입력 시 4대보험(국민연금·건강·장기요양·고용) 본인 + 회사 부담액 즉시 계산. 산재보험율은 업종에 따라 다름(평균 0.7%). 비과세(식대 20만 등) 제외 후 적용.",
+    "월 보수를 넣으면 국민연금, 건강보험, 장기요양, 고용보험의 본인 부담액과 회사 부담액, 산재보험료를 계산해요. 비과세액은 빼고 계산해요. 월 보수 300만원이면 본인 부담 291,520원, 산재 0.7% 업종의 회사 부담은 320,020원이에요.",
   alternates: { canonical: "/four-insurance/" },
 };
 

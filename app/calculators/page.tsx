@@ -5,7 +5,7 @@ import { CALCULATORS_INDEX, CATEGORIES, type CategorySlug } from "@/lib/calculat
 
 export const metadata: Metadata = {
   title: "전체 계산기 목록 66종",
-  description: "한국 금융·세금·부동산·연금·법률·정부지원금·보험 계산기 66종 전체 목록 — 저축·대출·세금·부동산·보험·연금·법률·정부지원금·유틸리티 9개 카테고리 (정부 공식 산식 기반).",
+  description: "저축, 대출, 세금, 부동산, 보험, 연금, 법률, 정부지원금, 유틸리티 9개 분야의 계산기 66종을 한곳에 모았어요. 분야별 목록에서 필요한 계산기를 골라 바로 계산해 보세요.",
   alternates: { canonical: "/calculators/" },
 };
 
@@ -43,8 +43,8 @@ export default function Page() {
       </nav>
 
       <header className="page-head">
-        <h1 className="page-title">전체 계산기 — {totalCount}종</h1>
-        <p className="page-sub">정부 공식 산식으로 검증된 한국 금융·세금·법률 계산기. 카테고리별 정리.</p>
+        <h1 className="page-title">전체 계산기 {totalCount}종</h1>
+        <p className="page-sub">세금, 대출, 정부지원금, 부동산처럼 생활 속 돈 계산을 카테고리별로 모았어요.</p>
       </header>
 
       <section className="section">
@@ -68,7 +68,7 @@ export default function Page() {
                     <div className="cat-body">
                       <h3 className="cat-name">{c.title}</h3>
                       <p className="cat-desc">{c.subtitle}</p>
-                      <span className="cat-count">정부 공식 산식 검증</span>
+                      <span className="cat-count">2026년 기준</span>
                     </div>
                   </a>
                 ))}

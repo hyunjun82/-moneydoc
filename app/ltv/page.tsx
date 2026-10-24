@@ -6,7 +6,7 @@ import spec from "@/data/calculators/loan/ltv-limit.json";
 export const metadata: Metadata = {
   title: "LTV 계산기 (2026년 기준)",
   description:
-    "주택담보비율 + 방공제 + 임차보증금 + 수도권 절대한도 (15억↓ 6억 / 15~25억 4억 / 25억↑ 2억) 통합. LTV(주택담보대출비율) 한도 계산. 매매가·지역(투기지역·조정대상·일반)·주택 종류 입력. 수도권·규제지역은 주택 시가별 절대한도(시가 15억 이하 6억 /.",
+    "주택가격과 주택보유 상태, 지역을 고르면 LTV를 곱한 한도에서 방 공제와 임차보증금을 빼 주택담보대출 한도를 계산해요. 수도권과 규제지역은 시가 15억원 이하 6억원, 25억원 이하 4억원, 25억원 초과 2억원의 절대한도도 함께 적용해요.",
   alternates: { canonical: "/ltv/" },
 };
 
@@ -15,7 +15,6 @@ export default function Page() {
     <CalculatorShell
       spec={spec}
       sourceBadge="국토부·금감원 LTV 한도 · 8케이스 검증"
-      description="주택담보비율 + 방공제 + 임차보증금 + 절대한도 (수도권 규제 6억, 25억 초과 8억) 통합"
     >
       <Client />
     </CalculatorShell>

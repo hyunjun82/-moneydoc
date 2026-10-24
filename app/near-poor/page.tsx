@@ -6,7 +6,7 @@ import spec from "@/data/calculators/government/near-poor-eligibility.json";
 export const metadata: Metadata = {
   title: "차상위계층 자격 모의계산 (2026)",
   description:
-    "중위소득 50% 이하 가구 판정, 2026 인상값 반영. 차상위계층 자격 모의계산. 기준중위소득 50% 이하 가구 판정. 가구원수·소득 입력 시 자격 즉시 확인. 차상위 자활근로·교육비·통신요금 감면 등 혜택.",
+    "가구원 수와 월 소득인정액을 넣으면 2026년 기준 중위소득 50%와 비교해 차상위계층 해당 여부와 내 소득 비율을 알려줘요. 기준은 1인 가구 월 1,282,119원, 4인 가구 월 3,247,369원이에요.",
   alternates: { canonical: "/near-poor/" },
 };
 

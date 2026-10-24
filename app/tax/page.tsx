@@ -5,7 +5,7 @@ import { GuideList } from "@/components/GuideList";
 
 export const metadata: Metadata = {
   title: "세금 계산기 15종",
-  description: "연봉 실수령·종합소득세·증여세·상속세·퇴직소득세·주식양도세·부가세·자녀세액공제·일용직 원천징수 — 국세청 2026 간이세액표 + 소득세법 §55 누진세율",
+  description: "연봉 실수령액, 4대보험료, 종합소득세, 사업소득세, 프리랜서 3.3%, 일용직 원천징수, 기타소득세, 퇴직소득세, 자녀세액공제를 계산해요. 증여세, 상속세, 주식과 가상화폐 양도세, 일반과 간이과세자 부가세까지 세금 계산기 15종이에요.",
   alternates: { canonical: "/tax/" },
 };
 
@@ -22,7 +22,7 @@ export default function Page() {
 
       <header className="page-head">
         <h1 className="page-title">세금 계산기</h1>
-        <p className="page-sub">연봉 실수령·종합소득세·연말정산 — 국세청 2026 간이세액표 + 누진세율</p>
+        <p className="page-sub">연봉 실수령액, 종합소득세, 원천징수, 양도세, 상속세, 증여세, 부가세를 계산해요.</p>
       </header>
 
       <section className="guide-section">
@@ -51,106 +51,106 @@ export default function Page() {
         <a href="/business-income-tax/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">사업소득세 (단순경비율) 계산기</h3>
-            <p className="cat-desc">추계신고 단순경비율 기반 사업소득세</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">연 매출과 업종별 단순경비율로 사업소득세와 지방소득세 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/child-credit/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">자녀세액공제 계산기</h3>
-            <p className="cat-desc">소득세법 §59의2 기본 자녀공제 + 출산·입양 추가공제</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">공제대상 자녀 수와 출산, 입양 자녀로 자녀세액공제 합계 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/income-tax/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">종합소득세 계산기</h3>
-            <p className="cat-desc">사업소득·임대소득·기타소득 합산 종합소득세</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">종합소득금액으로 소득세와 지방소득세 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/crypto-tax/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">가상화폐 양도세 계산기</h3>
-            <p className="cat-desc">연 250만 공제 + 22% 분리과세</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">2027년 양도분부터 과세되는 가상자산 소득세 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/daily-wage/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">일용직 원천징수 계산기</h3>
-            <p className="cat-desc">일급 15만 비과세 + 초과분 6% × 45% 공제 후</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">일급과 일한 날수로 일용직 원천징수액과 실수령액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/four-insurance/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">4대보험료 계산기 (근로자)</h3>
-            <p className="cat-desc">국민연금 + 건강보험 + 장기요양 + 고용보험 본인부담</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">월 보수로 4대보험 본인 부담액과 회사 부담액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/freelancer/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">프리랜서 3.3% 원천징수 계산기</h3>
-            <p className="cat-desc">사업소득 원천징수 3% + 지방세 0.3%</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">프리랜서 보수에서 떼는 3.3% 원천징수와 실수령액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/gift-tax/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">증여세 계산기</h3>
-            <p className="cat-desc">상증법 §53 수증자별 증여재산공제 + 누진세율</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">증여받은 금액과 관계로 증여세와 납부세액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/inheritance-tax/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">상속세 계산기</h3>
-            <p className="cat-desc">상속세 및 증여세법 §26 누진세율 + 일괄/배우자공제</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">상속재산과 가족 구성으로 상속공제와 상속세 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/other-income/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">기타소득세 계산기</h3>
-            <p className="cat-desc">필요경비 60% 차감 후 22% 분리과세</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">총수입에서 필요경비를 뺀 기타소득 원천징수 세액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/retirement-tax/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">퇴직소득세 계산기</h3>
-            <p className="cat-desc">근속연수공제 + 환산급여공제 적용 누진세</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">퇴직금과 근속연수로 퇴직소득세와 지방소득세 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/salary/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">연봉 실수령액 계산기</h3>
-            <p className="cat-desc">국세청 2026 — 연간 정산 기준 (회사 명세서와 ±5~10% 차이, 연말정산 후 일치)</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">연봉과 부양가족 수로 간이세액표 기준 월 실수령액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/stock-tax/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">주식 양도소득세 계산기 (국내·해외 통합)</h3>
-            <p className="cat-desc">국내 비대주주·대주주 / 해외주식 22% (대주주 3억 초과 27.5%)</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">해외주식과 국내 비상장, 대주주 주식의 양도소득세 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/vat/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">부가세 (일반과세자) 계산기</h3>
-            <p className="cat-desc">매출 부가세 - 매입 부가세 = 납부세액</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">매출 부가세에서 매입 부가세를 뺀 일반과세자 납부세액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/vat-simple/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">부가세 (간이과세자) 계산기</h3>
-            <p className="cat-desc">매출액 × 업종별 부가가치율 × 10%</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">연 매출액과 업종별 부가가치율로 간이과세자 부가세 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         </div>

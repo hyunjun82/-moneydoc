@@ -6,7 +6,7 @@ import spec from "@/data/calculators/tax/gift-tax.json";
 export const metadata: Metadata = {
   title: "증여세 계산기 (2026년 기준)",
   description:
-    "상증법 §53 수증자별 증여재산공제 + 누진세율. 받은 증여 재산(현금·주식·부동산·차량 등)과 증여자와의 관계를 입력하면 관계별 공제 → 과세표준 → 누진세율 자동 계산. 증여받은 날부터 3개월 이내 신고해야 가산세 X.",
+    "증여재산과 받는 사람과의 관계로 증여세를 계산해요. 공제는 배우자 6억원, 성인 직계존비속 5,000만원, 미성년 2,000만원이고 10%에서 50% 누진세율을 적용해요. 신고세액공제 3%를 뺀 납부세액까지 보여 줘요.",
   alternates: { canonical: "/gift-tax/" },
 };
 

@@ -6,7 +6,7 @@ import spec from "@/data/calculators/law/annual-leave-allowance.json";
 export const metadata: Metadata = {
   title: "연차수당 계산기 (2026년 기준)",
   description:
-    "월급 / 209시간 × 8시간 × 미사용 일수. 연차수당 계산. 통상임금 × 미사용 연차일수. 1년차 11일, 2년차 15일, 3년차+ 추가 1일씩 (최대 25일). 미사용분은 다음 해 6월까지 사용 또는 수당.",
+    "월 통상임금과 쓰지 못한 연차 일수로 연차수당을 계산해요. 월 통상임금을 209시간으로 나눈 시급에 8시간과 남은 일수를 곱해요. 월 300만원에 15일이 남았다면 연차수당은 1,722,480원이에요.",
   alternates: { canonical: "/annual-leave/" },
 };
 

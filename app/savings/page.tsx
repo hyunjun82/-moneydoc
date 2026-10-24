@@ -5,7 +5,7 @@ import { GuideList } from "@/components/GuideList";
 
 export const metadata: Metadata = {
   title: "저축 계산기 4종",
-  description: "적금·정기예금·자유적금·ISA·복리이자 계산기 — 단리/복리 일할 이자, 세후 수령액, 세전 환산 (금감원 finlife 검증, 1원 단위 정확)",
+  description: "적금, 정기예금, 자유적금, ISA 계산기 4종이에요. 납입액과 기간, 금리를 넣으면 세전 이자와 이자소득세, 세후 만기 금액이 나오고 ISA로 아끼는 세금도 확인할 수 있어요.",
   alternates: { canonical: "/savings/" },
 };
 
@@ -22,7 +22,7 @@ export default function Page() {
 
       <header className="page-head">
         <h1 className="page-title">저축 계산기</h1>
-        <p className="page-sub">매월 적금부터 ISA까지, 사용자가 진짜 검색하는 저축 계산기</p>
+        <p className="page-sub">적금, 정기예금, 자유적금 만기 수령액과 ISA 절세 효과를 계산해요.</p>
       </header>
 
       <section className="guide-section">
@@ -51,29 +51,29 @@ export default function Page() {
         <a href="/installment/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">적금 계산기</h3>
-            <p className="cat-desc">월 X원 납입 시 만기 수령액 — 단리·복리 토글, 이자소득세 차감</p>
-            <span className="cat-count">금감원 finlife 검증</span>
+            <p className="cat-desc">매월 같은 금액을 넣는 적금의 세후 만기 수령액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/deposit/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">정기예금 계산기</h3>
-            <p className="cat-desc">목돈 일시 예치 시 만기 수령액 — 단리, 이자소득세 차감</p>
-            <span className="cat-count">금감원 finlife 검증</span>
+            <p className="cat-desc">목돈을 한 번에 맡길 때 받는 세후 만기 금액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/free-savings/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">자유적금 계산기</h3>
-            <p className="cat-desc">자유 입금 적금 만기 수령액 — 일별 단리, 이자소득세 차감</p>
-            <span className="cat-count">금감원 finlife 검증</span>
+            <p className="cat-desc">월 평균 납입금으로 자유적금 세후 만기 수령액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/isa/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">ISA 계산기</h3>
-            <p className="cat-desc">200만 비과세 + 초과분 9.9% 분리과세 절세효과</p>
-            <span className="cat-count">조세특례제한법 §91의18</span>
+            <p className="cat-desc">ISA 해지 때 일반 계좌보다 아끼는 세금 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         </div>

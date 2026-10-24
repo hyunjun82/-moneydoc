@@ -15,7 +15,6 @@ export default function Page() {
     <CalculatorShell
       spec={spec}
       sourceBadge="조특법 §91의18 · 5케이스 검증"
-      description="ISA 해지 때 쌓인 이익에서 일반 계좌(15.4%) 대비 아끼는 세금. 일반형 200만원, 서민형 400만원 비과세"
     >
       <Client />
     </CalculatorShell>

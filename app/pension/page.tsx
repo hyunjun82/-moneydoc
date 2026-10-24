@@ -5,7 +5,7 @@ import { GuideList } from "@/components/GuideList";
 
 export const metadata: Metadata = {
   title: "연금 계산기 4종",
-  description: "국민연금 예상수령액·국민연금 조기수령 감액·IRP·연금저축 세액공제·노란우산공제 절세 — 국민연금공단 + 소득세법 §59-3 + 조세특례제한법 §86의3 표준 산식",
+  description: "국민연금 예상수령액, 국민연금 조기수령 감액, IRP·연금저축 세액공제, 노란우산공제 절세를 계산하는 연금 계산기 4종이에요. 받을 연금과 줄어드는 세금을 미리 확인해 노후 준비에 활용해요.",
   alternates: { canonical: "/pension/" },
 };
 
@@ -22,7 +22,7 @@ export default function Page() {
 
       <header className="page-head">
         <h1 className="page-title">연금 계산기</h1>
-        <p className="page-sub">국민연금·퇴직연금·IRP·연금저축 — 국민연금공단·소득세법 §59-3</p>
+        <p className="page-sub">국민연금 수령액과 IRP, 연금저축, 노란우산공제 절세 효과를 어림해요.</p>
       </header>
 
       <section className="guide-section">
@@ -35,7 +35,7 @@ export default function Page() {
             수급 개시 연령보다 먼저 받고 싶은 분은 국민연금 조기수령 감액 계산기를 보세요. 몇 년 앞당겨 받는지에 따라 연금액이 줄어드는 비율과, 평생 받는 총액이 어느 시점에서 뒤바뀌는지를 함께 보여줘요. 당장 소득이 없을 때와 조금 더 기다릴 수 있을 때 어느 쪽이 유리한지 판단하는 데 도움이 돼요.
           </p>
           <p>
-            세금을 줄이면서 노후 자금을 모으려면 IRP와 연금저축 계산기를 써요. 연 납입액과 총급여를 넣으면 세액공제 한도와 돌려받는 세금이 나와요. 소득 구간에 따라 공제율이 달라지니 자신의 급여를 정확히 넣는 것이 중요해요. 개인사업자나 소기업 대표라면 노란우산공제 계산기로 소득공제 효과를 따로 확인할 수 있어요.
+            세금을 줄이면서 노후 자금을 모으려면 IRP와 연금저축 계산기를 써요. 연 납입액과 총급여를 넣으면 세액공제 한도와 돌려받는 세금이 나와요. 소득 구간에 따라 공제율이 달라지니 자신의 급여를 그대로 넣는 것이 중요해요. 개인사업자나 소기업 대표라면 노란우산공제 계산기로 소득공제 효과를 따로 확인할 수 있어요.
           </p>
           <p>
             연금 제도는 법 개정으로 요율과 연령이 바뀌니 계산 기준 시점을 꼭 확인해 주세요. 제도 설명과 자주 묻는 질문은 <a href="/national-pension/guide/">국민연금 가이드</a>, <a href="/pension-early/guide/">조기수령 가이드</a>, <a href="/irp/guide/">IRP 세액공제 가이드</a>, <a href="/noranumbrella/guide/">노란우산공제 가이드</a>에 담았어요.
@@ -51,29 +51,29 @@ export default function Page() {
         <a href="/irp/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">IRP·연금저축 세액공제 계산기</h3>
-            <p className="cat-desc">소득세법 §59의3 연금계좌 세액공제 환급 산출</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">IRP와 연금저축 납입액으로 돌려받는 세금 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/pension-early/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">국민연금 조기수령 감액 계산기</h3>
-            <p className="cat-desc">60~64세 조기수령 시 1년당 6% 감액</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">국민연금을 일찍 받을 때 줄어드는 월 수령액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/national-pension/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">국민연금 예상수령액 계산기</h3>
-            <p className="cat-desc">국민연금공단 공식 산식 기반 노령연금 추정</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">가입월수와 평균소득으로 월 노령연금액 어림</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/noranumbrella/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">노란우산공제 절세 계산기</h3>
-            <p className="cat-desc">사업소득 한계세율 × 납입액 절세효과</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">노란우산공제 소득공제 한도와 줄어드는 소득세 어림</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         </div>

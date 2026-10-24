@@ -6,7 +6,7 @@ import spec from "@/data/calculators/government/median-income.json";
 export const metadata: Metadata = {
   title: "기준중위소득 계산기 (2026)",
   description:
-    "가구원수별 중위 100/50/48/40/32% + 본인 소득 비율 (2026 6.51% 인상 적용). 기준중위소득 계산. 가구원수 입력 시 2026년 기준중위소득 100%·중위 30~200% 자동 산출 (1인 256만, 4인 649만 기준). 복지급여 자격 비교 기준.",
+    "가구원 수와 월 소득을 넣으면 2026년 기준 중위소득 100%와 50%, 48%, 40%, 32% 금액, 내 소득이 중위소득의 몇 %인지 계산해요. 1인 가구는 월 2,564,238원, 4인 가구는 월 6,494,738원이에요.",
   alternates: { canonical: "/median-income/" },
 };
 

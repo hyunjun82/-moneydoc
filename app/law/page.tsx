@@ -5,7 +5,7 @@ import { GuideList } from "@/components/GuideList";
 
 export const metadata: Metadata = {
   title: "법률 계산기 6종",
-  description: "양육비·이혼 위자료·상속분·퇴직금·연차수당·임금체불 — 서울가정법원 양육비 산정기준표 + 민법 §1009 + 근로기준법 §60·§34",
+  description: "퇴직금, 연차수당, 임금체불, 양육비, 이혼 위자료, 법정 상속분을 계산하는 법률 계산기 6종이에요. 입사일과 급여, 가족 구성 같은 조건을 넣으면 받을 금액이나 몫을 미리 가늠할 수 있어요.",
   alternates: { canonical: "/law/" },
 };
 
@@ -22,7 +22,7 @@ export default function Page() {
 
       <header className="page-head">
         <h1 className="page-title">법률 계산기</h1>
-        <p className="page-sub">양육비·위자료·법정상속분·퇴직금 — 서울가정법원 산정기준표·민법 §1009</p>
+        <p className="page-sub">퇴직금, 연차수당, 임금체불, 양육비, 위자료, 법정상속분을 어림해요.</p>
       </header>
 
       <section className="guide-section">
@@ -51,43 +51,43 @@ export default function Page() {
         <a href="/annual-leave/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">연차수당 계산기</h3>
-            <p className="cat-desc">월급 / 209시간 × 8시간 × 미사용 일수</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">월 통상임금과 쓰지 못한 연차 일수로 연차수당 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/child-support/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">양육비 계산기</h3>
-            <p className="cat-desc">서울가정법원 양육비산정기준표 2024 (자녀 1인 표준)</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">부모 합산 월소득과 자녀 나이로 표준 양육비와 비양육친 분담액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/alimony/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">이혼 위자료 산정기준표</h3>
-            <p className="cat-desc">[참고용 추정] 판례 통계 기반 — 실제 위자료는 법원 재량</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">결혼 기간과 상대방 유책 정도로 이혼 위자료를 참고용으로 추정</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/inheritance-share/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">상속분 계산기</h3>
-            <p className="cat-desc">민법 §1009 배우자·자녀·부모 비율 분배</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">배우자, 자녀, 부모, 형제자매가 받는 법정상속분 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/severance/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">퇴직금 계산기</h3>
-            <p className="cat-desc">근로자퇴직급여보장법 §8 평균임금 기준</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">입사일, 퇴사일, 월 기본급으로 법정 퇴직금 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         <a href="/unpaid-wages/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">임금체불 계산기</h3>
-            <p className="cat-desc">미지급액 + 연 20% 지연이자</p>
-            <span className="cat-count">정부 공식 산식</span>
+            <p className="cat-desc">받지 못한 임금에 지연이자를 더한 총 청구액 계산</p>
+            <span className="cat-count">2026년 기준</span>
           </div>
         </a>
         </div>

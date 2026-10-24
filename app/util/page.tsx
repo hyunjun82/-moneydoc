@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "유틸 계산기 5종",
-  description: "퍼센트·나이·날짜·할부·현금서비스 — 일상 계산 도구",
+  description: "퍼센트, 나이, 날짜, 신용카드 할부 수수료, 현금서비스 수수료를 계산하는 유틸 계산기 5종이에요. 만 나이와 D-Day, 비율과 증감률, 할부 수수료처럼 생활 속 계산을 빠르게 할 수 있어요.",
   alternates: { canonical: "/util/" },
 };
 
@@ -21,7 +21,7 @@ export default function Page() {
 
       <header className="page-head">
         <h1 className="page-title">유틸 계산기</h1>
-        <p className="page-sub">퍼센트·나이·날짜·할부·현금서비스 — 일상 계산 도구</p>
+        <p className="page-sub">퍼센트, 나이, 날짜, 카드 할부 수수료, 현금서비스 이자를 계산하는 생활 도구예요.</p>
       </header>
 
       <section className="guide-section">
@@ -50,31 +50,31 @@ export default function Page() {
         <a href="/age/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">나이 계산기</h3>
-            <p className="cat-desc">만 나이 + 한국 나이 + 띠 자동 산출</p>
+            <p className="cat-desc">생년월일과 기준일로 만 나이, 세는 나이, 띠 계산</p>
           </div>
         </a>
         <a href="/cash-service/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">현금서비스 수수료 계산기</h3>
-            <p className="cat-desc">이용금액 × 연이율 / 365 × 사용일수 (단리)</p>
+            <p className="cat-desc">이용금액, 연 수수료율, 사용일수로 현금서비스 이자 계산</p>
           </div>
         </a>
         <a href="/date/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">날짜 계산기 (D-Day)</h3>
-            <p className="cat-desc">두 날짜 사이 일수·년월일 + 디데이</p>
+            <p className="cat-desc">두 날짜 사이 날수를 세고 디데이 계산</p>
           </div>
         </a>
         <a href="/card-installment/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">신용카드 할부 수수료 계산기</h3>
-            <p className="cat-desc">원리금균등 방식 월 결제액 + 총 수수료</p>
+            <p className="cat-desc">신용카드 할부의 월 결제액과 총 수수료 계산</p>
           </div>
         </a>
         <a href="/percent/" className="cat" style={{ textDecoration: "none" }}>
           <div className="cat-body">
             <h3 className="cat-name">퍼센트 계산기</h3>
-            <p className="cat-desc">% 계산 4가지 모드 (전체 중 일부 / 비율 / 증감률 / 증감 후)</p>
+            <p className="cat-desc">전체 중 일부, 비율, 증감률, 늘리거나 줄인 값 계산</p>
           </div>
         </a>
         </div>

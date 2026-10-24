@@ -6,7 +6,7 @@ import spec from "@/data/calculators/util/installment-fee.json";
 export const metadata: Metadata = {
   title: "신용카드 할부 수수료 계산기 (2026년 기준)",
   description:
-    "원리금균등 방식 월 결제액 + 총 수수료. 신용카드 할부 수수료 계산. 결제금액·할부개월·연이율 입력. 보통 3개월 무이자, 6개월+ 유이자(연 13~20%). 할부 회당 원리금균등 산식 적용.",
+    "할부 원금, 할부 개월, 연 수수료율로 신용카드 할부의 월 결제액과 총 수수료를 계산해요. 매달 같은 금액을 내는 원리금균등 방식이에요. 1,000만원을 연 15%로 12개월 할부하면 월 결제액은 902,583원이에요.",
   alternates: { canonical: "/card-installment/" },
 };
 
