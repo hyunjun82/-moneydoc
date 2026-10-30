@@ -64,6 +64,9 @@
       "default": 1
     }
   ],
+  "outputLabels": {
+    "profit": "소득금액 (매출 − 경비)"
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-09",

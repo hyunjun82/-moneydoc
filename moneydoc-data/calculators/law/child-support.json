@@ -206,6 +206,10 @@
       "default": 3000000
     }
   ],
+  "outputLabels": {
+    "ageGroup": "자녀 연령 구간",
+    "nonCustodianShare": "비양육자 분담액"
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-01",

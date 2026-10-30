@@ -176,6 +176,15 @@
       "default": 2
     }
   ],
+  "outputLabels": {
+    "gain": "양도차익",
+    "taxableGain": "과세되는 양도차익 (12억 초과분)",
+    "incomeAmount": "양도소득금액 (장기보유특별공제 뒤)",
+    "taxBeforeLocal": "양도소득세",
+    "baseTax": "기본세율 세액",
+    "surcharge": "중과 세액 (20·30%p)",
+    "totalIncomeTax": "양도소득세"
+  },
   "formula": [
     {
       "step": 1,

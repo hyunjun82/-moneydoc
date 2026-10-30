@@ -64,6 +64,9 @@
       "default": 4500000
     }
   ],
+  "outputLabels": {
+    "tier": "소득구간"
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-01",

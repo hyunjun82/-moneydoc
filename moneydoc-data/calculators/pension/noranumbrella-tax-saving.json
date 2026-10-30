@@ -49,6 +49,10 @@
       "default": 50000000
     }
   ],
+  "outputLabels": {
+    "limit": "소득공제 한도",
+    "applied": "공제 적용 금액"
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-01",

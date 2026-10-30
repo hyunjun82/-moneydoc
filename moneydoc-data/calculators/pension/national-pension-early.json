@@ -53,6 +53,9 @@
       "default": 60
     }
   ],
+  "outputLabels": {
+    "reductionRate": "감액률"
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-01",

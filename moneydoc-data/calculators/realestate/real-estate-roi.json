@@ -63,6 +63,15 @@
       "default": 5
     }
   ],
+  "outputLabels": {
+    "totalReturn": "총 수익금",
+    "totalROI": "총 수익률",
+    "annualROI": "연 수익률"
+  },
+  "outputUnits": {
+    "totalROI": "%",
+    "annualROI": "%"
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-01",

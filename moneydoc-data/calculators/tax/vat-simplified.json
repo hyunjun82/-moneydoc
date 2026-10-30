@@ -60,6 +60,9 @@
       "default": 0.15
     }
   ],
+  "outputLabels": {
+    "payable": "납부할 부가세"
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-09",

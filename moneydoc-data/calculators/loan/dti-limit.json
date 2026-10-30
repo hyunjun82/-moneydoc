@@ -112,6 +112,9 @@
       "hint": "DTI는 보통 스트레스 미적용 (DSR이 주 규제)"
     }
   ],
+  "outputLabels": {
+    "monthlyAvail": "월 상환 가능액"
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-07",

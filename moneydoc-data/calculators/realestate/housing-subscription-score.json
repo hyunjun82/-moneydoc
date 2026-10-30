@@ -64,6 +64,15 @@
       "default": 5
     }
   ],
+  "outputLabels": {
+    "total": "총 가점"
+  },
+  "outputUnits": {
+    "total": "점",
+    "noHomeScore": "점",
+    "familyScore": "점",
+    "accountScore": "점"
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-01",

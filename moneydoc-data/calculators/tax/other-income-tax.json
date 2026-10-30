@@ -52,6 +52,10 @@
       "default": 1000000
     }
   ],
+  "outputLabels": {
+    "expense": "필요경비 (60%)",
+    "incomeAmount": "기타소득금액"
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-09",

@@ -60,6 +60,9 @@
       "default": 10
     }
   ],
+  "outputLabels": {
+    "annualConverted": "환산급여"
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-09",

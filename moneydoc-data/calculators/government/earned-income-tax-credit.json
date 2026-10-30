@@ -89,6 +89,10 @@
       "default": 20000000
     }
   ],
+  "outputLabels": {
+    "limit": "총소득 기준 (이 금액 미만)",
+    "maxAmount": "최대 지급액"
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-01",

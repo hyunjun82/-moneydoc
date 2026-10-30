@@ -124,7 +124,7 @@ export const OUTPUT_LABELS: Record<string, string> = {
   generalTax: "일반세",
   transferTax: "양도세",
   longTermDeduction: "장기보유특별공제",
-  yearsDed: "보유기간 공제",
+  yearsDed: "근속연수공제",
   // 대출 / 금융
   monthlyPayment: "월 상환액",
   monthlyInterest: "월 이자",

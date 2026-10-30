@@ -123,6 +123,9 @@
       ]
     }
   ],
+  "outputLabels": {
+    "monthlyAvailable": "월 상환 가능액"
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-07",

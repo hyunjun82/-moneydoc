@@ -36,9 +36,14 @@ type Spec = {
   lastVerified?: string;
   inputs: InputDef[];
   verification?: { cases?: { expected?: Record<string, unknown>; govSource?: unknown }[] };
+  /** 이 계산기에서만 쓰는 결과 이름. 같은 키라도 계산기마다 뜻이 달라 공통 이름표가 틀릴 때 (예: incomeAmount 가 기초연금에선 소득인정액, 양도세에선 양도소득금액) */
+  outputLabels?: Record<string, string>;
+  /** 원이 아닌 결과의 단위 (예: 가점 '점', 수익률 '%'). 여기 있는 키는 숫자를 그대로 쓰고 이 단위를 붙인다 */
+  outputUnits?: Record<string, string>;
+  /** 큰 글씨로 보여 줄 대표 결과 키 (자동 선택이 엉뚱할 때) */
+  primaryOutput?: string;
 };
 
-const outputLabel = (key: string) => OUTPUT_LABELS[key] ?? key;
 const won = (n: number) => Math.round(n).toLocaleString("ko-KR");
 const manwon = (n: number) => {
   if (n >= 1e8) return `${+(n / 1e8).toFixed((n / 1e8) % 1 ? 1 : 0)}억`;
@@ -51,7 +56,7 @@ function isPercentKey(key: string): boolean {
   return /Pct|Rate(?!s)|Ratio|Pcnt|^ltv$|^dti$|^dsr$|^userPct/i.test(key);
 }
 const isCountKey = (key: string) =>
-  /^(year|months|days|totalDays|yearsToCollege|yearsEarly|yearsDed|remainingDays|benefitDays|kids|dependents|tier|newLevel|westAge|koreanAge|ageGroup|ageMultiplier)$/.test(key) || /Score$/.test(key);
+  /^(year|months|days|totalDays|yearsToCollege|yearsEarly|remainingDays|benefitDays|kids|dependents|tier|newLevel|westAge|koreanAge|ageGroup|ageMultiplier)$/.test(key) || /Score$/.test(key);
 
 function formatValue(v: unknown, key: string): string {
   if (v === null || v === undefined) return "—";
@@ -72,7 +77,7 @@ const unitOf = (key: string, v: unknown) => (typeof v === "number" && !isPercent
 
 const PRIORITY = [
   "netMonthly", "inheritanceTax", "giftTax", "transferTax", "acquisitionTax", "totalTax", "brokerageFee", "totalCost",
-  "maturityAmount", "monthlyPayment", "totalBenefit", "monthlyPension", "severancePay", "maxLoan", "totalDeduction", "refund",
+  "maturityAmount", "maturity", "monthlyPayment", "totalBenefit", "monthlyPension", "severancePay", "severance", "maxLoan", "totalDeduction", "refund",
   "taxCredit", "taxSaving", "estimatedAmount", "payable", "tax", "total", "totalSaving", "totalPay", "totalReturn", "result",
   "decisionTax", "annualPension", "yearlyPension", "rentalYield", "totalInsurance", "monthlyPremium", "annualPremium",
 ];
@@ -119,6 +124,10 @@ function normalizeOptions(def: InputDef): Option[] {
 type CalcFn = (input: Record<string, unknown>, spec?: unknown) => Record<string, unknown>;
 
 export function GenericCalculator({ spec, calc }: { spec: Spec; calc: CalcFn }) {
+  const outputLabel = (key: string) => spec.outputLabels?.[key] ?? OUTPUT_LABELS[key] ?? key;
+  const customUnit = (key: string, v: unknown) => typeof v === "number" && spec.outputUnits !== undefined && key in spec.outputUnits;
+  const fmtNum = (v: unknown, key: string) => (customUnit(key, v) ? (v as number).toLocaleString("ko-KR", { maximumFractionDigits: 4 }) : formatValue(v, key));
+  const fmtRow = (v: unknown, key: string) => fmtNum(v, key) + (customUnit(key, v) ? spec.outputUnits![key] : "");
   const inputs = spec.inputs ?? [];
   const initial = () => {
     const v: Record<string, unknown> = {};
@@ -162,7 +171,7 @@ export function GenericCalculator({ spec, calc }: { spec: Spec; calc: CalcFn }) 
 
   const calcFn = calc;
   const expected = spec.verification?.cases?.[0]?.expected ?? {};
-  const primaryKey = pickPrimaryOutput(expected);
+  const primaryKey = spec.primaryOutput && spec.primaryOutput in expected ? spec.primaryOutput : pickPrimaryOutput(expected);
   const govVerified = (spec.verification?.cases ?? []).some((c) => c.govSource);
 
   const run = (v: Record<string, unknown>) => { try { return calcFn ? (calcFn(v, spec as unknown as Record<string, unknown>) as Record<string, unknown>) : null; } catch { return null; } };
@@ -182,7 +191,7 @@ export function GenericCalculator({ spec, calc }: { spec: Spec; calc: CalcFn }) 
   const update = (id: string, v: unknown) => setValues((s) => ({ ...s, [id]: v }));
   const breakdownKeys = Object.keys(expected).filter((k) => k !== primaryKey);
   const primaryVal = result?.[primaryKey];
-  const primaryUnit = unitOf(primaryKey, primaryVal);
+  const primaryUnit = customUnit(primaryKey, primaryVal) ? spec.outputUnits![primaryKey] : unitOf(primaryKey, primaryVal);
   const tableCols = [primaryKey, ...breakdownKeys.filter((k) => typeof (result?.[k]) === "number").slice(0, 3)];
   const deductionStyle = /^net|Net$/.test(primaryKey) || "totalDeduction" in expected;
   // 한 줄 인사이트: 첫 금액 입력이 한 단계 오르면 결과가 얼마나 변하는지 (목업의 "연봉 1,000만원 오르면" 줄)
@@ -224,7 +233,7 @@ export function GenericCalculator({ spec, calc }: { spec: Spec; calc: CalcFn }) 
           <div className="gc-res-l"><span>{outputLabel(primaryKey)}</span><button type="button" onClick={copyLink}>{copied ? "복사됨" : "링크 복사"}</button></div>
           {result ? (
             <>
-              <div className="gc-res-v">{formatValue(primaryVal, primaryKey)}{primaryUnit && <small>{primaryUnit}</small>}</div>
+              <div className="gc-res-v">{fmtNum(primaryVal, primaryKey)}{primaryUnit && <small>{primaryUnit}</small>}</div>
               <div className="gc-res-s">{summary}</div>
               {breakdownKeys.length > 0 && (
                 <ul className="gc-rows">
@@ -237,14 +246,14 @@ export function GenericCalculator({ spec, calc }: { spec: Spec; calc: CalcFn }) 
                         <li key={key} className="gc-group">
                           <div className="gc-group-t">{outputLabel(key)}</div>
                           {Object.entries(obj).map(([k2, v2]) => (v2 === null || v2 === undefined || typeof v2 === "object") ? null : (
-                            <div key={k2} className="gc-group-r"><span>{outputLabel(k2)}</span><b>{formatValue(v2, k2)}</b></div>
+                            <div key={k2} className="gc-group-r"><span>{outputLabel(k2)}</span><b>{fmtRow(v2, k2)}</b></div>
                           ))}
                         </li>
                       );
                     }
                     const total = /^total|Total$|합계/.test(key);
                     const minus = deductionStyle && typeof v === "number" && v > 0 && /(Tax|Insurance|Pension|Care|Deduction|Fee|Premium|Cost)$/i.test(key) && !/^total(?!Deduction)/.test(key);
-                    return <li key={key} className={total ? "tot" : ""}><span>{outputLabel(key)}</span><b className={minus ? "minus" : ""}>{minus ? "−" : ""}{formatValue(v, key)}</b></li>;
+                    return <li key={key} className={total ? "tot" : ""}><span>{outputLabel(key)}</span><b className={minus ? "minus" : ""}>{minus ? "−" : ""}{fmtRow(v, key)}</b></li>;
                   })}
                 </ul>
               )}
@@ -253,7 +262,7 @@ export function GenericCalculator({ spec, calc }: { spec: Spec; calc: CalcFn }) 
             <div className="gc-empty">입력값을 확인해 주세요.</div>
           )}
           {insight && result && (
-            <div className="gc-rev">{tableInput!.label} {manwon(insight.step)}원 오르면 {outputLabel(primaryKey)}은 <b>{insight.diff >= 0 ? "+" : "−"}{formatValue(Math.abs(insight.diff), primaryKey)}{primaryUnit}</b>{insight.diff === 0 ? " (변화 없음)" : ""}</div>
+            <div className="gc-rev">{tableInput!.label} {manwon(insight.step)}원 오르면 {outputLabel(primaryKey)}은 <b>{insight.diff >= 0 ? "+" : "−"}{fmtNum(Math.abs(insight.diff), primaryKey)}{primaryUnit}</b>{insight.diff === 0 ? " (변화 없음)" : ""}</div>
           )}
           <div className="gc-trust"><i />{govVerified ? "정부 계산기와 0원 일치 확인" : "법령·공식 고시 기준"}{spec.lastVerified ? ` · ${spec.lastVerified} 검증` : spec.year ? ` · ${spec.year}년 기준` : ""}</div>
         </div>
@@ -274,7 +283,7 @@ export function GenericCalculator({ spec, calc }: { spec: Spec; calc: CalcFn }) 
               {tableRows.map(({ x, r }) => (
                 <tr key={x} className={x === values[tableInput.id] ? "hi" : ""} onClick={() => update(tableInput.id, x)} title="이 값으로 계산">
                   <td>{manwon(x)}원</td>
-                  {tableCols.map((k) => <td key={k}>{r ? formatValue(r[k], k) : "—"}</td>)}
+                  {tableCols.map((k) => <td key={k}>{r ? fmtRow(r[k], k) : "—"}</td>)}
                 </tr>
               ))}
             </tbody>

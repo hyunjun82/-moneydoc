@@ -84,6 +84,9 @@
       "hint": "서민형: 직전 연도 총급여 5,000만원 이하 또는 종합소득금액 3,800만원 이하, 농어민"
     }
   ],
+  "outputLabels": {
+    "generalTax": "일반 계좌 세금"
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-07",

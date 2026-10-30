@@ -53,6 +53,11 @@
       "default": "2026-04-30"
     }
   ],
+  "primaryOutput": "westAge",
+  "outputUnits": {
+    "westAge": "세",
+    "koreanAge": "세"
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-01",

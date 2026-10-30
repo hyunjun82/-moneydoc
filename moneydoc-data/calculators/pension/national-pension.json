@@ -69,6 +69,12 @@
       "hint": "내 가입기간 기준소득월액을 재평가율로 올려 평균 낸 금액"
     }
   ],
+  "outputLabels": {
+    "P": "가입기간 계수 (20년 = 1)"
+  },
+  "outputUnits": {
+    "P": ""
+  },
   "verification": {
     "verified": true,
     "verifiedAt": "2026-05-01",
