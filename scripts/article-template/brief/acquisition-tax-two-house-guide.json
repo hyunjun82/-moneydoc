@@ -1,0 +1,20 @@
+{
+  "slug": "acquisition-tax-two-house-guide",
+  "keyword": "취득세 2주택 중과",
+  "calc": "realestate/acquisition-tax",
+  "reuseEvidence": "acquisition-tax-guide",
+  "mustInclude": [
+    "2주택",
+    "분양권",
+    "주택수",
+    "일시적 2주택"
+  ],
+  "queries": [
+    "취득세 2주택 중과",
+    "2주택",
+    "분양권",
+    "주택수",
+    "일시적 2주택"
+  ],
+  "sources": []
+}

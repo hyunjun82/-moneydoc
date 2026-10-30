@@ -1,0 +1,16 @@
+{
+  "slug": "basic-pension-rejection-guide",
+  "keyword": "기초연금 탈락 이유",
+  "calc": "government/basic-pension",
+  "reuseEvidence": "basic-pension-spoke-guide",
+  "mustInclude": [
+    "탈락 이유",
+    "재신청"
+  ],
+  "queries": [
+    "기초연금 탈락 이유",
+    "탈락 이유",
+    "재신청"
+  ],
+  "sources": []
+}

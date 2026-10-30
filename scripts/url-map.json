@@ -180,6 +180,17 @@
     "insurance/insurance-silson-guide": "medical-payout/guide",
     "insurance/insurance-silson-gen-guide": "medical-payout/generation",
     "insurance/insurance-autotax-annual-guide": "auto-tax/annual",
-    "insurance/insurance-ev-tax-guide": "auto-tax/ev"
+    "insurance/insurance-ev-tax-guide": "auto-tax/ev",
+    "realestate/acquisition-tax-newborn-guide": "acquisition-tax/newborn",
+    "realestate/acquisition-tax-two-house-guide": "acquisition-tax/two-house",
+    "realestate/acquisition-tax-inheritance-gift-guide": "acquisition-tax/inheritance-gift",
+    "realestate/transfer-tax-temporary-two-house-guide": "transfer-tax/temporary-two-house",
+    "realestate/transfer-tax-rate-guide": "transfer-tax/rate",
+    "realestate/transfer-tax-filing-guide": "transfer-tax/filing",
+    "law/severance-interim-guide": "severance/interim",
+    "law/severance-irp-guide": "severance/irp",
+    "government/basic-pension-property-guide": "basic-pension/property",
+    "government/basic-pension-earned-income-guide": "basic-pension/earned-income",
+    "government/basic-pension-rejection-guide": "basic-pension/rejection"
   }
 }

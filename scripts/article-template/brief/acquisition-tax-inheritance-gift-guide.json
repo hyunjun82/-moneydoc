@@ -1,0 +1,17 @@
+{
+  "slug": "acquisition-tax-inheritance-gift-guide",
+  "keyword": "상속 취득세율",
+  "calc": "realestate/acquisition-tax",
+  "reuseEvidence": "acquisition-tax-guide",
+  "mustInclude": [
+    "상속 취득세율",
+    "증여 취득세율",
+    "12%"
+  ],
+  "queries": [
+    "상속 취득세율",
+    "증여 취득세율",
+    "12%"
+  ],
+  "sources": []
+}

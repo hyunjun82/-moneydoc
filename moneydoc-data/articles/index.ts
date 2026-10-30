@@ -773,6 +773,83 @@ export const GUIDES: GuideLink[] = [
     "blurb": "동시 신청 가능 여부 · 소득 산정에서 실업급여 제외 · 신청 다섯 요건 · 재산별 지급액"
   },
   {
+    "cat": "realestate",
+    "catLabel": "부동산",
+    "href": "/acquisition-tax/newborn/",
+    "title": "신생아 취득세 감면 조건과 기간, 출산 전에 산 집도 받나요",
+    "blurb": "출산 전후 산 집 · 1가구 1주택 요건 · 감면액 계산 · 추징 사유 · 생애최초와 중복 여부"
+  },
+  {
+    "cat": "realestate",
+    "catLabel": "부동산",
+    "href": "/acquisition-tax/two-house/",
+    "title": "취득세 2주택 중과, 분양권도 주택수에 포함되나요",
+    "blurb": "세대 기준 · 분양권과 오피스텔 주택수 · 빠지는 주택 · 일시적 2주택 처분기한"
+  },
+  {
+    "cat": "realestate",
+    "catLabel": "부동산",
+    "href": "/acquisition-tax/inheritance-gift/",
+    "title": "상속 취득세율과 증여 취득세율, 집 한 채면 몇 프로인가요",
+    "blurb": "상속과 증여 세율 · 무주택 상속 특례 · 조정대상지역 증여 중과 · 과세표준"
+  },
+  {
+    "cat": "government",
+    "catLabel": "정부지원금",
+    "href": "/basic-pension/property/",
+    "title": "기초연금 재산기준, 집과 예금이 얼마까지면 받나요",
+    "blurb": "기본재산액 공제 · 금융재산 공제 · 부채 차감 · 재산 소득환산 · 고급 자동차"
+  },
+  {
+    "cat": "government",
+    "catLabel": "정부지원금",
+    "href": "/basic-pension/earned-income/",
+    "title": "기초연금 근로소득기준, 일하면서도 받을 수 있나요",
+    "blurb": "근로소득 공제 후 반영 · 다른 소득과의 차이 · 부부 합산 · 변동 신고"
+  },
+  {
+    "cat": "government",
+    "catLabel": "정부지원금",
+    "href": "/basic-pension/rejection/",
+    "title": "기초연금 탈락 이유, 재신청과 이의신청은 언제 하나요",
+    "blurb": "탈락 사유 · 모의계산과 결정이 다른 이유 · 이의신청 기한 · 재신청 시점"
+  },
+  {
+    "cat": "law",
+    "catLabel": "법률",
+    "href": "/severance/interim/",
+    "title": "퇴직금 중간정산 조건, 받으면 퇴직금 차이는 얼마나 나나요",
+    "blurb": "중간정산 사유 · 받은 뒤 퇴직금 계산 · 임금이 오를 때 차이 · 세금"
+  },
+  {
+    "cat": "law",
+    "catLabel": "법률",
+    "href": "/severance/irp/",
+    "title": "퇴직금 수령방법, 퇴직금 irp 이전 안 하면 통장으로 받나요",
+    "blurb": "IRP 이전이 원칙 · 현금으로 받는 예외 · 이연 퇴직소득세 · 연금수령 감면"
+  },
+  {
+    "cat": "realestate",
+    "catLabel": "부동산",
+    "href": "/transfer-tax/rate/",
+    "title": "양도세 세율 표와 누진공제, 2주택 중과 세율은 얼마나 되나요",
+    "blurb": "기본세율과 누진공제 · 단기 보유 세율 · 조정대상지역 중과 · 분양권과 미등기"
+  },
+  {
+    "cat": "realestate",
+    "catLabel": "부동산",
+    "href": "/transfer-tax/temporary-two-house/",
+    "title": "양도세 일시적 2주택 비과세, 3년 넘기면 못 받나요",
+    "blurb": "3년 처분 요건 · 기한 예외 · 혼인과 동거봉양 · 상속주택과 공동명의"
+  },
+  {
+    "cat": "realestate",
+    "catLabel": "부동산",
+    "href": "/transfer-tax/filing/",
+    "title": "양도세 예정신고 가산세, 확정신고도 해야 하나요",
+    "blurb": "예정신고 기한 · 무신고 가산세 · 기한 후 신고 감면 · 확정신고 대상 · 분납"
+  },
+  {
     "cat": "government",
     "catLabel": "정부지원금",
     "href": "/gov/earned-income-tax-credit-guide/",

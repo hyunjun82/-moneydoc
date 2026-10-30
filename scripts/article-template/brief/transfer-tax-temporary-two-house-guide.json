@@ -1,0 +1,18 @@
+{
+  "slug": "transfer-tax-temporary-two-house-guide",
+  "keyword": "양도세 일시적 2주택 비과세",
+  "calc": "realestate/transfer-tax",
+  "reuseEvidence": "transfer-tax-guide",
+  "mustInclude": [
+    "일시적 2주택",
+    "3년",
+    "비과세"
+  ],
+  "queries": [
+    "양도세 일시적 2주택 비과세",
+    "일시적 2주택",
+    "3년",
+    "비과세"
+  ],
+  "sources": []
+}

@@ -5,8 +5,92 @@
     <link>https://moneydoc.kr/</link>
     <description>한국 금융·세금·법률 계산 기준을 법령 원문으로 확인해 정리한 가이드</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 29 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://moneydoc.kr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>2026년 기초연금 수급 조건과 금액, 선정기준액부터 신청까지</title>
+      <link>https://moneydoc.kr/basic-pension/guide/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/basic-pension/guide/</guid>
+      <description>65세 이상이고 소득인정액이 단독가구 2,470,000원 이하면 기초연금을 받아요. 단독가구는 월 349,700원, 부부가구는 559,520원이에요. 선정기준액, 소득인정액, 국민연금 연계 감액, 신청 방법을 정리했어요.</description>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>기초연금 근로소득기준, 일하면서도 받을 수 있나요</title>
+      <link>https://moneydoc.kr/basic-pension/earned-income/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/basic-pension/earned-income/</guid>
+      <description>기초연금 근로소득기준은 월 근로소득에서 116만원을 빼고 남은 금액의 70%만 소득으로 보는 거예요. 다른 소득과 재산이 없는 단독가구는 월급 4,688,571원까지 대상이에요. 다른 소득과의 차이, 부부 합산, 취업 뒤 신고를 정리했어요.</description>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>기초연금 재산기준, 집과 예금이 얼마까지면 받나요</title>
+      <link>https://moneydoc.kr/basic-pension/property/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/basic-pension/property/</guid>
+      <description>기초연금 재산기준은 집값 한도 하나가 아니에요. 집에서 지역 기본재산액, 예금에서 2,000만원, 빚을 뺀 뒤 4%를 곱하고 12로 나눠 월 소득으로 봐요. 다른 소득이 없으면 이렇게 남은 재산이 단독 7억 4,100만원까지 대상이에요.</description>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>기초연금 탈락 이유, 재신청과 이의신청은 언제 하나요</title>
+      <link>https://moneydoc.kr/basic-pension/rejection/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/basic-pension/rejection/</guid>
+      <description>기초연금 탈락 이유는 소득인정액 초과, 직역연금, 국적과 거주, 서류와 조사 문제예요. 이의신청은 탈락을 안 날부터 90일 안에 서면으로 하고, 재신청은 선정기준액이 바뀌는 새해나 소득이 줄었을 때 해요.</description>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>상속 취득세율과 증여 취득세율, 집 한 채면 몇 프로인가요</title>
+      <link>https://moneydoc.kr/acquisition-tax/inheritance-gift/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/acquisition-tax/inheritance-gift/</guid>
+      <description>상속받은 부동산의 취득세율은 2.8%(농지 2.3%)이고, 집이 없던 가구가 집 한 채를 상속받으면 0.8%예요. 증여는 3.5%인데 조정대상지역의 시가표준액 3억원 이상 주택이면 12%예요. 지방교육세와 3억원 집 예시까지 정리했어요.</description>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>신생아 취득세 감면 조건과 기간, 출산 전에 산 집도 받나요</title>
+      <link>https://moneydoc.kr/acquisition-tax/newborn/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/acquisition-tax/newborn/</guid>
+      <description>아이를 낳은 부모가 그 아이와 살 12억원 이하 집을 사면 취득세에서 500만원을 빼 줘요. 5억원 집이면 산출세액 5,000,000원이 전부 면제돼요. 출산 전 1년 안에 산 집, 1가구 1주택 판단, 3년 추징까지 원문으로 정리했어요.</description>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>양도세 세율 표와 누진공제, 2주택 중과 세율은 얼마나 되나요</title>
+      <link>https://moneydoc.kr/transfer-tax/rate/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/transfer-tax/rate/</guid>
+      <description>양도세 기본세율은 과세표준에 따라 6%부터 45%까지 8단계이고, 구간 세율을 곱한 뒤 누진공제를 빼요. 조정대상지역 2주택은 20%포인트, 3주택 이상은 30%포인트를 더해요. 세율 표, 단기 세율, 2026년 5월 9일 기한, 분양권과 미등기 세율을 정리했어요.</description>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>양도세 예정신고 가산세, 확정신고도 해야 하나요</title>
+      <link>https://moneydoc.kr/transfer-tax/filing/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/transfer-tax/filing/</guid>
+      <description>양도세 예정신고를 기한 안에 안 하면 내야 할 세액의 20%가 무신고가산세로 붙고, 부정행위면 40%예요. 예정신고를 놓쳐도 다음 해 5월 확정신고 기한까지 신고하면 가산세가 절반으로 줄어요. 확정신고가 필요한 경우, 신고 서류, 분납을 정리했어요.</description>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>양도세 일시적 2주택 비과세, 3년 넘기면 못 받나요</title>
+      <link>https://moneydoc.kr/transfer-tax/temporary-two-house/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/transfer-tax/temporary-two-house/</guid>
+      <description>옛 집을 산 지 1년이 지나 새 집을 사고, 새 집을 산 날부터 3년 안에 옛 집을 팔면 1주택으로 보고 비과세해요. 3년을 넘기면 2주택으로 과세돼요. 기한 예외, 혼인과 동거봉양 10년, 상속주택, 공동명의 주택 수를 법령 원문으로 정리했어요.</description>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>취득세 2주택 중과, 분양권도 주택수에 포함되나요</title>
+      <link>https://moneydoc.kr/acquisition-tax/two-house/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/acquisition-tax/two-house/</guid>
+      <description>분양권과 조합원입주권, 주택으로 과세하는 오피스텔은 취득세 주택수에 들어가요. 조정대상지역 6억원 집을 일시적 2주택으로 사고 3년 안에 종전 집을 못 팔면 취득세 42,000,000원을 더 내요. 세대 기준과 빠지는 집까지 정리했어요.</description>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>퇴직금 수령방법, 퇴직금 irp 이전 안 하면 통장으로 받나요</title>
+      <link>https://moneydoc.kr/severance/irp/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/severance/irp/</guid>
+      <description>퇴직금은 통장이 아니라 IRP 계정으로 받는 게 원칙이고, 계좌를 정하지 않아도 근로자 명의 IRP로 옮겨져요. 통장 예외, 2021년 1월 2일부터 2026년 1월 1일까지 월급 300만원 예시로 IRP 안에서 미뤄지는 퇴직소득세 152,174원, 해지와 연금의 세율을 정리했어요.</description>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>퇴직금 중간정산 조건, 받으면 퇴직금 차이는 얼마나 나나요</title>
+      <link>https://moneydoc.kr/severance/interim/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/severance/interim/</guid>
+      <description>퇴직금 중간정산은 법에 정한 사유가 있고 근로자가 요구할 때만 돼요. 2016년 입사, 2021년 정산, 2026년 퇴사 예시에서 월급이 그대로면 차이는 1원이지만, 250만원에서 350만원으로 오르면 합계가 줄어요. 조건, 정산 시점별 차이, IRP 인출 사유, 세금을 정리했어요.</description>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>IRP 세액공제 한도, 900만원 채우면 얼마 돌려받나요</title>
       <link>https://moneydoc.kr/irp/guide/</link>
@@ -298,7 +382,7 @@
       <title>취득세 생애최초 감면 조건과 신청 서류, 추징은 언제 되나요</title>
       <link>https://moneydoc.kr/acquisition-tax/exemption/</link>
       <guid isPermaLink="true">https://moneydoc.kr/acquisition-tax/exemption/</guid>
-      <description>무주택자가 12억원 이하 집을 처음 사면 취득세에서 200만원을 빼 줘요. 수도권 4억원 집이면 취득세 4,000,000원이 2,000,000원이 돼요. 감면 신청 시기와 서류, 3년 추징 기준을 원문으로 정리했어요.</description>
+      <description>무주택자가 12억원 이하 집을 처음 사면 취득세에서 200만원을 빼 줘요. 4억원 아파트면 취득세 4,000,000원이 2,000,000원이 돼요. 감면 신청 시기와 서류, 3년 추징 기준을 원문으로 정리했어요.</description>
       <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -754,13 +838,6 @@
       <link>https://moneydoc.kr/basic-livelihood/guide/</link>
       <guid isPermaLink="true">https://moneydoc.kr/basic-livelihood/guide/</guid>
       <description>1인 가구 소득인정액이 820,556원 이하면 생계급여를 받아요. 기준 중위소득, 급여 4종의 선정기준, 소득인정액 계산, 신청 서류를 한 번에 정리했어요.</description>
-      <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>2026년 기초연금 수급 조건과 금액, 선정기준액부터 신청까지</title>
-      <link>https://moneydoc.kr/basic-pension/guide/</link>
-      <guid isPermaLink="true">https://moneydoc.kr/basic-pension/guide/</guid>
-      <description>65세 이상이고 소득인정액이 단독가구 2,470,000원 이하면 기초연금을 받아요. 단독가구는 월 349,700원, 부부가구는 559,520원이에요. 선정기준액, 소득인정액, 국민연금 연계 감액, 신청 방법을 정리했어요.</description>
       <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>

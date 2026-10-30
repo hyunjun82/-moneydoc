@@ -38,7 +38,7 @@ export const html = `<h1>1주택 양도세 비과세 요건과 계산, 2년 보�
     <div class="v2-row"><dt>기본공제</dt><dd>한 해에 250만원을 양도소득금액에서 빼 줘요</dd></div>
     <div class="v2-row"><dt>15억에 팔면</dt><dd>과세 대상 140,000,000원, 세금 2,821,500원 (지방소득세 포함)</dd></div>
     <div class="v2-row"><dt>단기 보유</dt><dd>1년 미만은 70%, 1년 이상 2년 미만은 60%예요</dd></div>
-    <div class="v2-row"><dt>신고 기한</dt><dd>판 달의 말일부터 2개월 안에 예정신고를 해요</dd></div>
+    <div class="v2-row"><dt>신고 기한</dt><dd>판 달의 말일부터 2개월 안에 예정신고, 지방소득세는 4개월 안</dd></div>
   </dl>
 </section>
 
@@ -119,9 +119,9 @@ export const html = `<h1>1주택 양도세 비과세 요건과 계산, 2년 보�
 <p class="v2-lead"><span class="v2-ans">잔금을 받은 달의 말일부터 2개월 안에 예정신고를 해야 해요.</span> 비과세라서 낼 세금이 0원이어도 신고는 하는 편이 안전해요. 한 해에 두 건 이상 팔았다면 다음 해 5월에 합쳐서 확정신고를 해야 해요.</p>
 <div class="v2-steps">
   <div><i>1단계</i><b>증빙 모으기</b><span>매매계약서, 취득세 영수증, 중개보수 영수증, 인테리어 세금계산서를 모아요</span><em>잔금 직후</em></div>
-  <div><i>2단계</i><b>세액 미리 계산</b><span>판 금액과 산 금액, 보유와 거주 기간을 넣어 세금을 확인해요</span><em>5분</em><a class="v2-go" href="/transfer-tax/">양도소득세 계산기</a></div>
+  <div><i>2단계</i><b>세액 미리 계산</b><span>판 금액과 산 금액, 보유와 거주 기간을 넣어 세금을 확인해요</span><em>5분</em><a class="v2-go" href="/transfer-tax/calculator/">양도소득세 계산기</a></div>
   <div><i>3단계</i><b>홈택스 예정신고</b><span>양도소득세 신고 메뉴에서 신고서를 제출하고 세금을 내요</span><em>판 달 말일부터 2개월</em><a class="v2-go" href="https://www.hometax.go.kr" target="_blank" rel="noopener">홈택스 바로가기</a></div>
-  <div><i>4단계</i><b>지방소득세 납부</b><span>산출된 세금의 10%를 위택스에서 따로 내요</span><em>같은 기한</em></div>
+  <div><i>4단계</i><b>지방소득세 신고·납부</b><span>양도소득 지방소득세를 지자체에 따로 신고하고 내요. 지자체가 보낸 납부서대로 기한까지 내면 신고한 것으로 봐요</span><em>판 달 말일부터 4개월</em></div>
 </div>
 <div class="v2-tips">
   <div><b>필요경비 영수증을 꼭 챙기세요</b>취득세, 중개보수, 확장 공사비는 경비로 인정돼요. 3,000만원을 넣으면 세금이 198,000원 줄어요.</div>
@@ -136,22 +136,22 @@ export const html = `<h1>1주택 양도세 비과세 요건과 계산, 2년 보�
 <details class="v2-faq"><summary><i>Q</i><span>양도세 계산에서 장기보유특별공제는 얼마인가요?</span></summary><div><i>A</i><p>1주택은 보유 연 4%와 거주 연 4%를 더해 최대 80%까지 빼 줘요. 보유 3년과 거주 2년을 함께 채워야 해요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>2년 보유를 못 채우고 팔면 어떻게 되나요?</span></summary><div><i>A</i><p>비과세를 받지 못하고 1년 미만은 70%, 1년 이상 2년 미만은 60%의 세율이 붙어요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>일시적 2주택도 비과세가 되나요?</span></summary><div><i>A</i><p>새 집을 산 날부터 3년 안에 옛 집을 팔면 1주택으로 봐서 비과세가 돼요. 옛 집은 산 지 1년이 지난 뒤에 새 집을 사야 해요.</p></div></details>
-<details class="v2-faq"><summary><i>Q</i><span>양도세 신고 기한이 언제인가요?</span></summary><div><i>A</i><p>판 달의 말일부터 2개월 안에 예정신고를 해요. 같은 해에 두 건 이상 팔았다면 다음 해 5월에 확정신고를 해요.</p></div></details>
+<details class="v2-faq"><summary><i>Q</i><span>양도세 신고 기한이 언제인가요?</span></summary><div><i>A</i><p>판 달의 말일부터 2개월 안에 예정신고를 해요. 지방소득세는 그 기한에 2개월을 더한 날까지예요. 같은 해에 두 건 이상 팔았다면 다음 해 5월에 확정신고를 해요.</p></div></details>
 <details class="v2-faq"><summary><i>Q</i><span>양도세 필요경비로 뭘 넣을 수 있나요?</span></summary><div><i>A</i><p>취득세, 중개보수, 확장이나 새시 같은 자본적 지출이 들어가요. 3,000만원을 넣으면 세금이 198,000원 줄어요.</p></div></details>
 </div>
 <section class="v2-sum" aria-label="정리"><div class="v2-hd"><small>이 글 한 줄 정리</small><b>정리</b></div><ul>
 <li>1세대 1주택을 2년 이상 보유하고 12억원 이하로 팔면 양도세가 없어요.</li>
 <li>12억을 넘으면 넘는 비율만큼만 과세해요. 8억에 사서 15억에 팔면 2,821,500원이에요.</li>
 <li>1주택 장기보유특별공제는 보유와 거주를 각각 연 4%씩 더해 최대 80%예요.</li>
-<li>판 달의 말일부터 2개월 안에 예정신고를 해요. 지방소득세는 위택스에서 따로 내요.</li>
+<li>판 달의 말일부터 2개월 안에 예정신고를 해요. 지방소득세는 그 뒤 2개월 안에 따로 신고·납부해요.</li>
 </ul></section>
 <a class="v2-cta" href="/transfer-tax/calculator/">양도소득세 계산기 바로가기</a>
 <h2 id="src">출처</h2>
 <div class="v2-src">
-<b>법령</b>소득세법 제89조(비과세 양도소득, 12억원 초과 고가주택 제외), 제95조(장기보유 특별공제), 제103조(양도소득 기본공제 연 250만원), 제104조(양도소득세의 세율), 제105조(예정신고, 양도일이 속하는 달의 말일부터 2개월). 소득세법 시행령 제154조(1세대1주택의 범위, 보유 2년과 조정대상지역 거주 2년), 제155조(일시적 2주택 3년), 제159조의3(1주택 장기보유특별공제), 제160조(고가주택 양도차익 안분).
+<b>법령</b>소득세법 제89조(비과세 양도소득, 12억원 초과 고가주택 제외), 제95조(장기보유 특별공제), 제103조(양도소득 기본공제 연 250만원), 제104조(양도소득세의 세율), 제105조(예정신고, 양도일이 속하는 달의 말일부터 2개월). 소득세법 시행령 제154조(1세대1주택의 범위, 보유 2년과 조정대상지역 거주 2년), 제155조(일시적 2주택 3년), 제159조의3(1주택 장기보유특별공제), 제160조(고가주택 양도차익 안분). 지방세법 제103조의5(양도소득 개인지방소득세 예정신고, 소득세 예정신고 기한에 2개월을 더한 날, 납부서 납부).
 <b>정부 도구</b>홈택스 양도소득세 신고 화면의 세율표와 이 글의 계산이 같은 값이에요 (2026-09-09 대조).
 </div>
-<div class="v2-rel"><a href="/transfer-tax/"><b>계산기</b>양도소득세 계산기</a><a href="/acquisition-tax/"><b>부동산 계산기</b>취득세 계산기</a><a href="/acquisition-tax/"><b>부동산 가이드</b>집 살 때 취득세 세율과 계산</a></div>
+<div class="v2-rel"><a href="/transfer-tax/calculator/"><b>계산기</b>양도소득세 계산기</a><a href="/acquisition-tax/calculator/"><b>부동산 계산기</b>취득세 계산기</a><a href="/acquisition-tax/guide/"><b>부동산 가이드</b>집 살 때 취득세 세율과 계산</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
   <div class="v2-box"><div class="v2-t">공식 페이지로 이동해요</div><div class="v2-d" id="md-inter-d">새 창에서 열려요</div>
     <div class="v2-slot" id="md-ad-slot" data-ad="interstitial"></div>
@@ -207,7 +207,7 @@ export const faqLd = {
       "name": "양도세 신고 기한이 언제인가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "판 달의 말일부터 2개월 안에 예정신고를 해요. 같은 해에 두 건 이상 팔았다면 다음 해 5월에 확정신고를 해요."
+        "text": "판 달의 말일부터 2개월 안에 예정신고를 해요. 지방소득세는 그 기한에 2개월을 더한 날까지예요. 같은 해에 두 건 이상 팔았다면 다음 해 5월에 확정신고를 해요."
       }
     },
     {
@@ -311,7 +311,7 @@ export const landing = {
       ],
       [
         "신고 기한",
-        "판 달의 말일부터 2개월 안에 예정신고를 해요"
+        "판 달의 말일부터 2개월 안에 예정신고, 지방소득세는 4개월 안"
       ]
     ]
   },
@@ -365,7 +365,7 @@ export const landing = {
     },
     {
       "q": "양도세 신고 기한이 언제인가요?",
-      "a": "판 달의 말일부터 2개월 안에 예정신고를 해요. 같은 해에 두 건 이상 팔았다면 다음 해 5월에 확정신고를 해요."
+      "a": "판 달의 말일부터 2개월 안에 예정신고를 해요. 지방소득세는 그 기한에 2개월을 더한 날까지예요. 같은 해에 두 건 이상 팔았다면 다음 해 5월에 확정신고를 해요."
     },
     {
       "q": "양도세 필요경비로 뭘 넣을 수 있나요?",
@@ -376,17 +376,17 @@ export const landing = {
     {
       "kind": "계산기",
       "label": "양도소득세 계산기",
-      "href": "/transfer-tax/"
+      "href": "/transfer-tax/calculator/"
     },
     {
       "kind": "부동산 계산기",
       "label": "취득세 계산기",
-      "href": "/acquisition-tax/"
+      "href": "/acquisition-tax/calculator/"
     },
     {
       "kind": "부동산 가이드",
       "label": "집 살 때 취득세 세율과 계산",
-      "href": "/acquisition-tax/"
+      "href": "/acquisition-tax/guide/"
     }
   ]
 };

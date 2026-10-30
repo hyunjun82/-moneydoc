@@ -1,0 +1,15 @@
+{
+  "slug": "severance-interim-guide",
+  "keyword": "퇴직금 중간정산",
+  "calc": "law/severance-pay",
+  "reuseEvidence": "severance-pay-guide",
+  "mustInclude": [
+    "퇴직금 중간정산",
+    "조건",
+    "차이"
+  ],
+  "queries": [
+    "퇴직금 중간정산"
+  ],
+  "sources": []
+}

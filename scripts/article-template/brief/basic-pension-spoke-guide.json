@@ -1,0 +1,54 @@
+{
+  "slug": "basic-pension-spoke-guide",
+  "_설명": "기초연금 스포크 3편(property·earned-income·rejection) 공용 근거. savings-taxfree-guide 1~7(기초연금법·2026 보도자료 포함)과 basic-pension-guide 2(기초연금법 시행령)를 그대로 복사했다. 새로 수집한 것 없음 (2026-10-30)",
+  "keyword": "기초연금",
+  "calc": "government/basic-pension",
+  "mustInclude": [],
+  "queries": [],
+  "sources": [
+    {
+      "label": "조세특례제한법 (제88조의2 비과세종합저축, 제89조의3 조합등예탁금)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/조세특례제한법"
+    },
+    {
+      "label": "조세특례제한법 시행령 (비과세종합저축 가입 서류·한도 관리)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/조세특례제한법시행령"
+    },
+    {
+      "label": "소득세법 (이자소득 원천징수세율 14%)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법"
+    },
+    {
+      "label": "지방세법 (지방소득세 특별징수 10%)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세법"
+    },
+    {
+      "label": "금융감독원 금융상품한눈에 비과세종합저축 안내",
+      "kind": "gov",
+      "url": "https://finlife.fss.or.kr/finlife/main/contents.do?menuNo=700067"
+    },
+    {
+      "label": "기초연금법 (기초연금 수급자)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/기초연금법"
+    },
+    {
+      "label": "대한민국 정책브리핑 2026년 기초연금 선정기준액 (보건복지부)",
+      "kind": "gov",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156737807"
+    },
+    {
+      "label": "기초연금법 시행령 (선정기준액, 소득인정액 산정)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/기초연금법시행령",
+      "must": [
+        "소득인정액",
+        "선정기준액"
+      ]
+    }
+  ]
+}

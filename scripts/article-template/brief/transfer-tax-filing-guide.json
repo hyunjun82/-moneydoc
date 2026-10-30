@@ -1,0 +1,18 @@
+{
+  "slug": "transfer-tax-filing-guide",
+  "keyword": "양도세 예정신고 가산세",
+  "calc": "realestate/transfer-tax",
+  "reuseEvidence": "comprehensive-income-tax-guide",
+  "mustInclude": [
+    "예정신고",
+    "가산세",
+    "확정신고"
+  ],
+  "queries": [
+    "양도세 예정신고 가산세",
+    "예정신고",
+    "가산세",
+    "확정신고"
+  ],
+  "sources": []
+}

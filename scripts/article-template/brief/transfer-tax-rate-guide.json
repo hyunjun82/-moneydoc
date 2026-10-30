@@ -1,0 +1,18 @@
+{
+  "slug": "transfer-tax-rate-guide",
+  "keyword": "양도세 세율 표와 누진공제",
+  "calc": "realestate/transfer-tax",
+  "reuseEvidence": "transfer-tax-guide",
+  "mustInclude": [
+    "양도세 세율 표",
+    "누진공제",
+    "중과"
+  ],
+  "queries": [
+    "양도세 세율 표와 누진공제",
+    "양도세 세율 표",
+    "누진공제",
+    "중과"
+  ],
+  "sources": []
+}
