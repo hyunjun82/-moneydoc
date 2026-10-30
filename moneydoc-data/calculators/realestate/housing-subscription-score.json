@@ -24,7 +24,7 @@
     {
       "step": 1,
       "name": "무주택 점수",
-      "expr": "min(32, 무주택연수 × 2)"
+      "expr": "1년 미만 2점, 그 뒤 min(32, (floor(무주택연수) + 1) × 2)"
     },
     {
       "step": 2,
@@ -34,7 +34,7 @@
     {
       "step": 3,
       "name": "청약통장 점수",
-      "expr": "6개월 미만 1점 / 1년 미만 2점 / 1년+ 매년 +1점 (15년+ 17점). 산식: accountYears < 0.5 ? 1 : accountYears < 1 ? 2 : min(17, accountYears + 1)"
+      "expr": "6개월 미만 1점 / 1년 미만 2점 / 1년+ 매년 +1점 (15년+ 17점). 산식: accountYears < 0.5 ? 1 : accountYears < 1 ? 2 : min(17, floor(accountYears) + 2)"
     }
   ],
   "inputs": [

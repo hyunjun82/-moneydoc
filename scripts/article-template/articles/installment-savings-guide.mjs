@@ -98,7 +98,9 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     var rm = rate / 12;
     var interest = 0;
     if (rm !== 0) { var future = monthly * (Math.pow(1 + rm, months) - 1) / rm * (1 + rm); interest = Math.round(future - principal); }
-    var tax = Math.floor(interest * (taxFree ? 0 : ${C.INTEREST_TAX_RATE}));
+    // 비과세종합저축은 원금 5천만원까지. 넘는 원금 몫 이자에는 세금을 뗀다 (엔진과 같은 비율 배분)
+    var taxable = !taxFree ? interest : principal <= 50000000 ? 0 : Math.round(interest * (principal - 50000000) / principal);
+    var tax = Math.floor(taxable * ${C.INTEREST_TAX_RATE});
     return { principal: principal, interest: interest, tax: tax, maturity: principal + interest - tax };
   }`,
           js: `

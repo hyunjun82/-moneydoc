@@ -63,7 +63,7 @@ export const html = `<h1>정기예금 이자 계산 방법, 1천만원 넣으면
     <div><label>원금 (만원)</label><input id="dp" type="number" inputmode="numeric" value="1000" min="10" max="100000" step="10"></div>
     <div><label>연 금리 (%)</label><input id="dr" type="number" inputmode="numeric" value="3" min="0.1" max="10" step="0.05"></div>
     <div><label>기간</label><select id="dy"><option value="0.25">3개월</option><option value="0.5">6개월</option><option value="1" selected>1년</option><option value="2">2년</option><option value="3">3년</option></select></div>
-    <div><label>과세</label><select id="dt"><option value="0" selected>일반과세 (15.4%)</option><option value="1">비과세종합저축 (0%)</option></select></div>
+    <div><label>과세</label><select id="dt"><option value="0" selected>일반과세 (15.4%)</option><option value="1">비과세종합저축 (원금 5천만원까지 0%)</option></select></div>
   </div>
   <div class="v2-result">
     <div class="v2-main"><span>세후 이자</span><b id="do1">—</b></div>

@@ -1150,14 +1150,14 @@ function mdSalary(annual, dependents, kids, nontaxable){
     var fmr = 0.6;
     if (oneHome) fmr = value <= 300000000 ? 0.43 : value <= 600000000 ? 0.44 : 0.45;
     var base = Math.round(value * fmr);
-    var br = oneHome ? PBR1 : PBR, tax = 0;
+    var br = oneHome && value <= 900000000 ? PBR1 : PBR, tax = 0;
     for (var i = 0; i < br.length; i++) { if (br[i][0] === null || base <= br[i][0]) { tax = Math.round(base * br[i][1] - br[i][2]); break; } }
     tax = Math.max(0, tax);
     var edu = Math.round(tax * 0.2);
     return { base: base, tax: tax, edu: edu, total: tax + edu };
   }
 
-  function prender(){ var v=(+document.getElementById('pv').value||0)*1e4, one=document.getElementById('po').value==='1'; if(one && v>900000000) one=false; var r=proptax(v,one);
+  function prender(){ var v=(+document.getElementById('pv').value||0)*1e4, one=document.getElementById('po').value==='1'; var r=proptax(v,one);
     document.getElementById('pbase').textContent=won(r.base)+'원'; document.getElementById('ptax').textContent=won(r.tax)+'원'; document.getElementById('pedu').textContent=won(r.edu)+'원'; document.getElementById('ptot').textContent=won(r.total)+'원'; }
   ['pv','po'].forEach(function(id){document.getElementById(id).addEventListener('input',prender);document.getElementById(id).addEventListener('change',prender)}); prender();
 
@@ -1474,6 +1474,83 @@ function mdSalary(annual, dependents, kids, nontaxable){
   ['pm','pl'].forEach(function(id){document.getElementById(id).addEventListener('input',plrender)}); plrender();
 
   },
+  "basic-livelihood-eligibility-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
+
+  var MEDIAN = {"1":2564238,"2":4199292,"3":5359036,"4":6494738,"5":7556719,"6":8555952};
+  function livelihood(size, income){
+    var m = MEDIAN[String(size)] || 7618369;
+    function t(rate){ return Math.round(m * rate); }
+    return {
+      median: m,
+      live: { th: t(0.32), ok: income <= t(0.32) },
+      med: { th: t(0.40), ok: income <= t(0.40) },
+      house: { th: t(0.48), ok: income <= t(0.48) },
+      edu: { th: t(0.50), ok: income <= t(0.50) }
+    };
+  }
+
+  function lrender(){ var s=+document.getElementById('lh').value||1, i=(+document.getElementById('li').value||0)*1e4; var r=livelihood(s,i);
+    function set(id,o){ document.getElementById(id).textContent=(o.ok?'대상 ':'대상 아님 ')+'('+won(o.th)+'원)'; }
+    set('llive',r.live); set('lmed',r.med); set('lhouse',r.house); set('ledu',r.edu); }
+  ['lh','li'].forEach(function(id){document.getElementById(id).addEventListener('input',lrender)}); lrender();
+
+  },
+  "dsr-limit-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
+
+  function dsrLimit(income, debt, years, rate, stress){
+    var applied = rate + stress;
+    var avail = Math.round(income * 0.4 / 12 - debt);
+    if (avail <= 0) return { applied: applied, avail: 0, max: 0 };
+    var r = applied / 12, n = years * 12, pow = Math.pow(1 + r, n);
+    var factor = r > 0 ? (pow - 1) / (r * pow) : n;
+    return { applied: applied, avail: avail, max: Math.round(avail * factor) };
+  }
+
+  function drender(){ var inc=(+document.getElementById('di').value||0)*1e4, d=(+document.getElementById('dd').value||0)*1e4, y=+document.getElementById('dy').value||1, rate=(+document.getElementById('dr').value||0)/100;
+    var a=dsrLimit(inc,d,y,rate,0.015), b=dsrLimit(inc,d,y,rate,0);
+    document.getElementById('drate').textContent=(a.applied*100).toFixed(2)+'%'; document.getElementById('dmon').textContent=won(a.avail)+'원';
+    document.getElementById('dmax').textContent=won(a.max)+'원'; document.getElementById('dgap').textContent=won(b.max-a.max)+'원'; }
+  ['di','dd','dy','dr'].forEach(function(id){document.getElementById(id).addEventListener('input',drender)}); drender();
+
+  },
   "loan-jeonse-guide": function () {
 
   var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
@@ -1607,7 +1684,7 @@ function lam(p,y,rate,m){ var r=rate/12, n=y*12, ti=0, bal=p, first=0, i, it;
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
 var TAX=0.154;
-  function dcalc(p,rate,y,tf){ var it=Math.round(p*rate*y); var tx=tf?0:Math.round(it*TAX); return {i:it, t:tx, m:p+it-tx}; }
+  function dcalc(p,rate,y,tf){ var it=Math.round(p*rate*y); var tb=!tf?it:p<=50000000?0:Math.round(it*(p-50000000)/p); var tx=Math.round(tb*TAX); return {i:it, t:tx, m:p+it-tx}; }
 
   function drender(){ var p=(+document.getElementById('dp').value||0)*1e4, r=(+document.getElementById('dr').value||0)/100, y=+document.getElementById('dy').value, tf=+document.getElementById('dt').value; if(p<=0||r<=0)return; var x=dcalc(p,r,y,tf);
     document.getElementById('do1').textContent=won(x.i-x.t)+'원'; document.getElementById('do2').textContent=won(x.t)+'원'; document.getElementById('do3').textContent=won(x.m)+'원'; }
@@ -1808,6 +1885,41 @@ var PL=6000000, TL=9000000, RL=0.165, RH=0.132;
   ['sp','si','ss'].forEach(function(id){document.getElementById(id).addEventListener('input',srender)}); srender();
 
   },
+  "national-pension-early-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
+
+  function earlyPension(normal, startAge){
+    var years = 65 - startAge;
+    var rate = +(years * 0.06).toFixed(2);
+    var reduced = Math.round(normal * (1 - rate));
+    var be = (65 * normal - startAge * reduced) / (normal - reduced);
+    return { rate: rate, reduced: reduced, cut: normal - reduced, be: Math.round(be * 10) / 10 };
+  }
+
+  function nrender(){ var p=(+document.getElementById('np').value||0)*1e4, a=+document.getElementById('na').value||60; if(p<=0)return; var r=earlyPension(p,a);
+    document.getElementById('nrate').textContent=(r.rate*100).toFixed(0)+'%'; document.getElementById('nmon').textContent=won(r.reduced)+'원';
+    document.getElementById('ncut').textContent=won(r.cut)+'원'; document.getElementById('nbe').textContent=r.be+'세'; }
+  ['np','na'].forEach(function(id){document.getElementById(id).addEventListener('input',nrender)}); nrender();
+
+  },
   "installment-savings-guide": function () {
 
   var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
@@ -1834,7 +1946,9 @@ var PL=6000000, TL=9000000, RL=0.165, RH=0.132;
     var rm = rate / 12;
     var interest = 0;
     if (rm !== 0) { var future = monthly * (Math.pow(1 + rm, months) - 1) / rm * (1 + rm); interest = Math.round(future - principal); }
-    var tax = Math.floor(interest * (taxFree ? 0 : 0.154));
+    // 비과세종합저축은 원금 5천만원까지. 넘는 원금 몫 이자에는 세금을 뗀다 (엔진과 같은 비율 배분)
+    var taxable = !taxFree ? interest : principal <= 50000000 ? 0 : Math.round(interest * (principal - 50000000) / principal);
+    var tax = Math.floor(taxable * 0.154);
     return { principal: principal, interest: interest, tax: tax, maturity: principal + interest - tax };
   }
 

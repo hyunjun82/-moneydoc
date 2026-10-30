@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <CalculatorShell
+      path="/transfer-tax/calculator/"
       spec={spec}
       sourceBadge="국세청·소득세법 §89·§95·§104 · 17 case 검증"
     >

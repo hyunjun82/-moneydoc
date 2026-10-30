@@ -14,6 +14,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
   const R = pt(5e8);                                   // 대표: 공시가격 5억, 1세대 1주택이 아닌 경우
   const R1 = pt(5e8, true);                            // 같은 공시가격, 1세대 1주택 특례
   const BIG = pt(1e9);
+  const BIG1 = pt(1e9, true);
   const oneGap = derive(R.totalTax - R1.totalTax);
   const half = derive(Math.round(R.totalTax / 2));
   const BR = spec.tables.brackets.brackets;
@@ -88,10 +89,10 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           rows: VALUES.map(({ v, gen }) => ({ hi: v === 5e8, cells: [`${man(v)}원`, won(gen.taxableBase), won(gen.propertyTax), won(gen.educationTax), won(gen.totalTax)] })),
           moreLabel: '과세표준까지 보기',
           fn: '단위: 원. 도시지역분과 지방자치단체 조례에 따른 가감은 넣지 않은 금액이에요.' },
-        { type: 'widget', label: '내 재산세 계산', title: '내 공시가격으로 바로 보기', note: '공시가격을 넣고 1세대 1주택인지 고르면 과세표준과 세금이 바로 나와요. 도시지역분과 조례에 따른 가감은 넣지 않은 금액이에요.',
+        { type: 'widget', label: '내 재산세 계산', title: '내 공시가격으로 바로 보기', note: '공시가격을 넣고 1세대 1주택인지 고르면 과세표준과 세금이 바로 나와요. 9억원을 넘는 1세대 1주택은 비율 45%와 표준세율로 계산해요. 도시지역분과 조례에 따른 가감은 넣지 않은 금액이에요.',
           inputs: [
             { id: 'pv', label: '공시가격 (만원)', type: 'number', value: 50000, min: 0, max: 500000, step: 1000 },
-            { id: 'po', label: '1세대 1주택 (9억원 이하)', type: 'select', value: '0', options: [['0', '아니오'], ['1', '예']] },
+            { id: 'po', label: '1세대 1주택', type: 'select', value: '0', options: [['0', '아니오'], ['1', '예']] },
           ],
           outputs: [{ id: 'pbase', label: '과세표준' }, { id: 'ptax', label: '재산세' }, { id: 'pedu', label: '지방교육세' }, { id: 'ptot', label: '합계' }],
           port: `
@@ -101,14 +102,14 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
     var fmr = ${spec.constants.FAIR_MARKET_RATIO};
     if (oneHome) fmr = value <= 300000000 ? ${spec.constants.FMR_ONE_HOME_UNDER_3EOK} : value <= 600000000 ? ${spec.constants.FMR_ONE_HOME_3_TO_6EOK} : ${spec.constants.FMR_ONE_HOME_OVER_6EOK};
     var base = Math.round(value * fmr);
-    var br = oneHome ? PBR1 : PBR, tax = 0;
+    var br = oneHome && value <= 900000000 ? PBR1 : PBR, tax = 0;
     for (var i = 0; i < br.length; i++) { if (br[i][0] === null || base <= br[i][0]) { tax = Math.round(base * br[i][1] - br[i][2]); break; } }
     tax = Math.max(0, tax);
     var edu = Math.round(tax * ${spec.constants.EDUCATION_TAX_RATE});
     return { base: base, tax: tax, edu: edu, total: tax + edu };
   }`,
           js: `
-  function prender(){ var v=(+document.getElementById('pv').value||0)*1e4, one=document.getElementById('po').value==='1'; if(one && v>900000000) one=false; var r=proptax(v,one);
+  function prender(){ var v=(+document.getElementById('pv').value||0)*1e4, one=document.getElementById('po').value==='1'; var r=proptax(v,one);
     document.getElementById('pbase').textContent=won(r.base)+'원'; document.getElementById('ptax').textContent=won(r.tax)+'원'; document.getElementById('pedu').textContent=won(r.edu)+'원'; document.getElementById('ptot').textContent=won(r.total)+'원'; }
   ['pv','po'].forEach(function(id){document.getElementById(id).addEventListener('input',prender);document.getElementById(id).addEventListener('change',prender)}); prender();`,
           check: (port) => {
@@ -116,8 +117,8 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
             for (let v = 0; v <= 200000; v += 500) for (const one of [false, true]) {
               n++;
               const value = v * 1e4;
-              const e = pt(value, one && value <= 900000000);
-              const q = port.proptax(value, one && value <= 900000000);
+              const e = pt(value, one);
+              const q = port.proptax(value, one);
               if (q.total !== e.totalTax || q.base !== e.taxableBase || q.tax !== e.propertyTax) bad++;
             }
             return { n, bad };
@@ -134,7 +135,7 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
           rows: VALUES.map(({ v, gen, one }) => ({ hi: v === 5e8, cells: [`${man(v)}원`, won(one.taxableBase), won(one.totalTax), won(gen.totalTax), won(derive(gen.totalTax - one.totalTax))] })),
           moreLabel: '과세표준까지 보기',
           fn: '단위: 원. 지방교육세를 포함한 금액이에요. 공시가격이 9억원을 넘으면 특례세율은 적용되지 않아요.' },
-        { type: 'note', title: '9억원을 넘어도 비율 우대는 남아요', text: `공시가격이 9억원을 넘는 1세대 1주택은 특례세율은 못 받지만 공정시장가액비율 45%는 그대로 적용돼요. 공시가격 10억원인 일반 주택이라면 재산세가 ${won(BIG.propertyTax)}원이에요.` },
+        { type: 'note', title: '9억원을 넘어도 비율 우대는 남아요', text: `공시가격이 9억원을 넘는 1세대 1주택은 특례세율은 못 받지만 공정시장가액비율 45%는 그대로 적용돼요. 공시가격 10억원이면 1세대 1주택은 재산세 ${won(BIG1.propertyTax)}원, 그 밖의 주택은 ${won(BIG.propertyTax)}원이에요.` },
         { type: 'tips', items: [
           { title: '세대 기준으로 판단해요', text: '주민등록상 같은 세대인 가족이 가진 주택을 모두 세어요. 세대원이 다른 집을 갖고 있으면 특례를 못 받아요.' },
           { title: '신탁한 집도 내 주택 수에 들어가요', text: '신탁으로 넘긴 주택은 맡긴 사람의 주택 수에 다시 더해서 판단해요.' },

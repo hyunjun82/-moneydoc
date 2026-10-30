@@ -23,15 +23,19 @@ export function CalculatorShell({
   sourceBadge,
   description,
   guideTitle,
+  path,
   children,
 }: {
   spec: CalcSpec;
   sourceBadge: string;
   description?: string;
   guideTitle?: string;
+  /** 페이지의 실제 주소 (canonical). 계산기가 허브 아래 /calculator/ 에 있을 때만 넘긴다 */
+  path?: string;
   children: React.ReactNode;
 }) {
   const cat = CATEGORIES[spec.category as CategorySlug];
+  const pagePath = path ?? hubHref(spec.category, spec.slug);
   const breadcrumbLabel = spec.title.replace(/\s*계산기$/, "");
 
   const breadcrumbJsonLd = {
@@ -51,7 +55,7 @@ export function CalculatorShell({
               "@type": "ListItem",
               position: 3,
               name: spec.title,
-              item: `https://moneydoc.kr${hubHref(spec.category, spec.slug)}`,
+              item: `https://moneydoc.kr${pagePath}`,
             },
           ]
         : []),
@@ -89,7 +93,8 @@ export function CalculatorShell({
     "@type": "WebApplication",
     name: spec.title,
     description: description ?? spec.subtitle,
-    url: `https://moneydoc.kr/${spec.category}/${spec.slug}/`,
+    // 구조화 데이터 주소는 실제 페이지 주소와 같아야 한다 (예전엔 /{category}/{slug}/ 라 301 되는 옛 주소를 가리켰다)
+    url: `https://moneydoc.kr${pagePath}`,
     applicationCategory: "FinanceApplication",
     operatingSystem: "Any",
     inLanguage: "ko",

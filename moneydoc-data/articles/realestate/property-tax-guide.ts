@@ -78,10 +78,10 @@ export const html = `<h1>재산세 계산과 납부, 공시가격부터 특례�
 <button class="v2-more" type="button" data-more="valTbl">과세표준까지 보기</button>
 <p class="v2-fn">단위: 원. 도시지역분과 지방자치단체 조례에 따른 가감은 넣지 않은 금액이에요.</p>
 <section class="v2-widget" aria-label="내 재산세 계산">
-  <h4>내 공시가격으로 바로 보기</h4><p class="v2-note">공시가격을 넣고 1세대 1주택인지 고르면 과세표준과 세금이 바로 나와요. 도시지역분과 조례에 따른 가감은 넣지 않은 금액이에요.</p>
+  <h4>내 공시가격으로 바로 보기</h4><p class="v2-note">공시가격을 넣고 1세대 1주택인지 고르면 과세표준과 세금이 바로 나와요. 9억원을 넘는 1세대 1주택은 비율 45%와 표준세율로 계산해요. 도시지역분과 조례에 따른 가감은 넣지 않은 금액이에요.</p>
   <div class="v2-grid">
     <div><label>공시가격 (만원)</label><input id="pv" type="number" inputmode="numeric" value="50000" min="0" max="500000" step="1000"></div>
-    <div><label>1세대 1주택 (9억원 이하)</label><select id="po"><option value="0" selected>아니오</option><option value="1">예</option></select></div>
+    <div><label>1세대 1주택</label><select id="po"><option value="0" selected>아니오</option><option value="1">예</option></select></div>
   </div>
   <div class="v2-result">
     <div class="v2-main"><span>과세표준</span><b id="pbase">—</b></div>
@@ -109,7 +109,7 @@ export const html = `<h1>재산세 계산과 납부, 공시가격부터 특례�
 </tbody></table></div>
 <button class="v2-more" type="button" data-more="oneTbl">과세표준까지 보기</button>
 <p class="v2-fn">단위: 원. 지방교육세를 포함한 금액이에요. 공시가격이 9억원을 넘으면 특례세율은 적용되지 않아요.</p>
-<div class="v2-note"><b>9억원을 넘어도 비율 우대는 남아요</b> 공시가격이 9억원을 넘는 1세대 1주택은 특례세율은 못 받지만 공정시장가액비율 45%는 그대로 적용돼요. 공시가격 10억원인 일반 주택이라면 재산세가 1,770,000원이에요.</div>
+<div class="v2-note"><b>9억원을 넘어도 비율 우대는 남아요</b> 공시가격이 9억원을 넘는 1세대 1주택은 특례세율은 못 받지만 공정시장가액비율 45%는 그대로 적용돼요. 공시가격 10억원이면 1세대 1주택은 재산세 1,170,000원, 그 밖의 주택은 1,770,000원이에요.</div>
 <div class="v2-tips">
   <div><b>세대 기준으로 판단해요</b>주민등록상 같은 세대인 가족이 가진 주택을 모두 세어요. 세대원이 다른 집을 갖고 있으면 특례를 못 받아요.</div>
   <div><b>신탁한 집도 내 주택 수에 들어가요</b>신탁으로 넘긴 주택은 맡긴 사람의 주택 수에 다시 더해서 판단해요.</div>

@@ -4,7 +4,7 @@ export const meta = {
   title: "2026년 기초생활수급 조건과 급여, 소득인정액부터 신청 서류까지",
   description: "1인 가구 소득인정액이 820,556원 이하면 생계급여를 받아요. 기준 중위소득, 급여 4종의 선정기준, 소득인정액 계산, 신청 서류를 한 번에 정리했어요.",
   datePublished: "2026-09-03",
-  dateModified: "2026-09-02",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/government/basic-livelihood-eligibility-guide/",
   image: "https://moneydoc.kr/og/basic-livelihood-eligibility-guide.png",
   imageAlt: "기초생활수급 조건. 1인 가구 생계급여 기준은 월 820,556원",
@@ -83,7 +83,7 @@ export const html = `<h1>2026년 기초생활수급 조건과 급여, 소득인�
 <tr><th scope="row">재산소득</th><td data-l="내용">임대료와 이자, 배당이 들어가요</td></tr>
 <tr><th scope="row">이전소득</th><td data-l="내용">연금과 가족이 주는 돈도 소득으로 봐요</td></tr>
 <tr><th scope="row">일반재산</th><td data-l="내용">기본재산액과 부채를 뺀 뒤 소득환산율을 곱해요</td></tr>
-<tr><th scope="row">금융재산</th><td data-l="내용">예금과 적금도 환산해요. 생활준비금은 빼 줘요</td></tr>
+<tr><th scope="row">금융재산</th><td data-l="내용">예금과 적금, 주식, 보험상품도 재산으로 환산해요</td></tr>
 <tr><th scope="row">자동차</th><td data-l="내용">환산율이 높아 자동차가 있으면 탈락하기 쉬워요</td></tr>
 </tbody></table></div>
 <p class="v2-fn">소득인정액 산정 방법은 국민기초생활 보장법 제6조의3에 있어요. 구체적인 범위는 시행령에서 정해요.</p>

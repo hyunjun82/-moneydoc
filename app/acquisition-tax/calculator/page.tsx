@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <CalculatorShell
+      path="/acquisition-tax/calculator/"
       spec={spec}
       sourceBadge="행정안전부 2026 · 검증 완료"
     >

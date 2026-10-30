@@ -145,6 +145,31 @@
           "progressiveDeduction": 630000
         }
       ]
+    },
+    "propertyTaxBracketsOneHomeUnder9Eok": {
+      "description": "재산세 1세대1주택 시가표준액 9억원 이하 특례세율 (지방세법 §111의2①). 9억 초과 1주택과 다주택은 propertyTaxBrackets",
+      "brackets": [
+        {
+          "upperBound": 60000000,
+          "rate": 0.0005,
+          "progressiveDeduction": 0
+        },
+        {
+          "upperBound": 150000000,
+          "rate": 0.001,
+          "progressiveDeduction": 30000
+        },
+        {
+          "upperBound": 300000000,
+          "rate": 0.002,
+          "progressiveDeduction": 180000
+        },
+        {
+          "upperBound": null,
+          "rate": 0.0035,
+          "progressiveDeduction": 630000
+        }
+      ]
     }
   },
   "formula": [
@@ -534,7 +559,7 @@
           "compTax": 0,
           "ruralTax": 0,
           "payableTax": 0,
-          "propertyTaxTotal": 810000
+          "propertyTaxTotal": 630000
         },
         "govSource": {
           "adapter": "hometax-comp-tax",
@@ -554,7 +579,6 @@
             "compTax": 0,
             "ruralTax": 0,
             "payableTax": 0,
-            "propertyTaxTotal": 810000,
             "source": "홈택스 종합부동산세 간이세액계산 (주택)",
             "_ref": {
               "form": {
@@ -570,7 +594,8 @@
               "ratePct": 0,
               "notice": null
             }
-          }
+          },
+          "note": "홈택스 화면의 재산세 810,000원은 표준세율 계산이다. 1세대1주택 시가표준액 9억 이하는 지방세법 §111의2 특례세율이 적용돼 실제 재산세는 630,000원(법령 대조). 재산세 줄은 정부값 대조에서 뺐다 (2026-10-30)"
         }
       },
       {

@@ -4,7 +4,7 @@ export const meta = {
   title: "스트레스 DSR 계산과 대출 한도, 3단계 적용부터 주담대 한도까지",
   description: "연소득 5,000만원이면 30년 원리금균등 기준 대출 한도가 293,536,331원이에요. 스트레스 금리 1.5%가 붙어 55,565,806원이 줄어든 금액이에요. DSR 계산법, 단계별 가산금리, 소득과 기간별 한도표를 정리했어요.",
   datePublished: "2026-09-03",
-  dateModified: "2026-09-02",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/loan/dsr-limit-guide/",
   image: "https://moneydoc.kr/og/dsr-limit-guide.png",
   imageAlt: "스트레스 DSR 대출 한도. 연소득 5,000만원이면 293,536,331원",
@@ -54,8 +54,6 @@ export const html = `<h1>스트레스 DSR 계산과 대출 한도, 3단계 적�
 <tr><th scope="row">주택담보대출</th><td data-l="반영 방식">원금과 이자를 모두 넣어요</td></tr>
 <tr><th scope="row">신용대출</th><td data-l="반영 방식">정해진 기간으로 나눠 원리금을 계산해 넣어요</td></tr>
 <tr><th scope="row">마이너스 통장</th><td data-l="반영 방식">한도 금액을 기준으로 계산해 넣어요. 안 써도 잡혀요</td></tr>
-<tr><th scope="row">자동차 할부와 카드론</th><td data-l="반영 방식">원리금이 그대로 들어가요</td></tr>
-<tr><th scope="row">전세자금대출</th><td data-l="반영 방식">이자만 반영하는 경우가 많아요</td></tr>
 <tr><th scope="row">서민금융과 소액대출</th><td data-l="반영 방식">DSR 규제 예외로 빠지는 대출이 정책 목적에 따라 정해져 있어요</td></tr>
 </tbody></table></div>
 <p class="v2-fn">DSR 산정의 세부 기준은 은행업감독규정 별표에서 정하고, 구체적인 판단 기준은 금융감독원장이 정해요.</p>

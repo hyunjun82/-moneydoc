@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <CalculatorShell
+      path="/severance/calculator/"
       spec={spec}
       sourceBadge="고용노동부 2026 · 검증 완료"
     >

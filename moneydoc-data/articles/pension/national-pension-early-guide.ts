@@ -4,7 +4,7 @@ export const meta = {
   title: "국민연금 조기수령 감액과 손익분기, 조건부터 연기연금 비교까지",
   description: "정상수령 월 100만원인 사람이 60세부터 받으면 700,000원으로 30% 깎여요. 감액률표, 손익분기 나이, 신청 조건, 연기연금과의 비교를 한 번에 정리했어요.",
   datePublished: "2026-09-03",
-  dateModified: "2026-09-02",
+  dateModified: "2026-09-03",
   url: "https://moneydoc.kr/pension/national-pension-early-guide/",
   image: "https://moneydoc.kr/og/national-pension-early-guide.png",
   imageAlt: "국민연금 조기수령 감액. 정상 100만원이면 60세에 700,000원",
@@ -132,7 +132,6 @@ export const html = `<h1>국민연금 조기수령 감액과 손익분기, 조�
 <p class="v2-fn">소득활동에 따른 감액은 국민연금법 제63조의2에 있어요. 초과소득월액은 소득월액에서 정해진 금액을 뺀 값이에요.</p>
 <div class="v2-tips">
   <div><b>조기수령 중 취업하면 정지될 수 있어요</b>조기노령연금을 받는 동안 소득이 있는 업무에 종사하면 지급이 멈출 수 있어요. 취업 전에 공단에 확인하세요.</div>
-  <div><b>연금도 소득세 대상이에요</b>연금소득으로 잡혀 연말정산이나 종합소득세 신고에 반영돼요. 다른 소득과 합쳐 확인해 보세요.</div>
   <div><b>내 예상 연금액을 먼저 확인하세요</b>국민연금공단 홈페이지에서 가입 내역과 예상 수령액을 볼 수 있어요.</div>
 </div>
 <div class="v2-steps">

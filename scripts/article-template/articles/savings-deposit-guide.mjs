@@ -74,11 +74,11 @@ export default function article({ calculators, loadSpec, VERIFIED, derive = (v) 
             { id: 'dp', label: '원금 (만원)', type: 'number', value: 1000, min: 10, max: 100000, step: 10 },
             { id: 'dr', label: '연 금리 (%)', type: 'number', value: 3, min: 0.1, max: 10, step: 0.05 },
             { id: 'dy', label: '기간', type: 'select', value: 1, options: [[0.25, '3개월'], [0.5, '6개월'], [1, '1년'], [2, '2년'], [3, '3년']] },
-            { id: 'dt', label: '과세', type: 'select', value: 0, options: [[0, '일반과세 (15.4%)'], [1, '비과세종합저축 (0%)']] },
+            { id: 'dt', label: '과세', type: 'select', value: 0, options: [[0, '일반과세 (15.4%)'], [1, '비과세종합저축 (원금 5천만원까지 0%)']] },
           ],
           outputs: [{ id: 'do1', label: '세후 이자' }, { id: 'do2', label: '세금' }, { id: 'do3', label: '만기에 받는 돈' }],
           port: `var TAX=${FD.constants.INTEREST_TAX_RATE};
-  function dcalc(p,rate,y,tf){ var it=Math.round(p*rate*y); var tx=tf?0:Math.round(it*TAX); return {i:it, t:tx, m:p+it-tx}; }`,
+  function dcalc(p,rate,y,tf){ var it=Math.round(p*rate*y); var tb=!tf?it:p<=50000000?0:Math.round(it*(p-50000000)/p); var tx=Math.round(tb*TAX); return {i:it, t:tx, m:p+it-tx}; }`,
           js: `
   function drender(){ var p=(+document.getElementById('dp').value||0)*1e4, r=(+document.getElementById('dr').value||0)/100, y=+document.getElementById('dy').value, tf=+document.getElementById('dt').value; if(p<=0||r<=0)return; var x=dcalc(p,r,y,tf);
     document.getElementById('do1').textContent=won(x.i-x.t)+'원'; document.getElementById('do2').textContent=won(x.t)+'원'; document.getElementById('do3').textContent=won(x.m)+'원'; }

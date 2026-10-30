@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <CalculatorShell spec={spec} sourceBadge="고용노동부 2026 · 검증 완료">
+    <CalculatorShell spec={spec} sourceBadge="고용노동부 2026 · 검증 완료" path="/unemployment/calculator/">
       <Client />
       <div className="main" style={{ paddingTop: 18 }}>
         <a href="/unemployment/" style={{ color: "var(--brand)", fontWeight: 600, fontSize: 15 }}>

@@ -42,10 +42,10 @@
       "id": "delayDays",
       "label": "지연 일수",
       "type": "number",
-      "min": 14,
+      "min": 1,
       "max": 1825,
       "default": 90,
-      "hint": "지급기일 14일 이후부터 기산"
+      "hint": "지급 기한 다음 날부터 실제로 받은 날까지의 날수 (퇴직이면 퇴직일부터 14일이 지난 다음 날부터)"
     }
   ],
   "verification": {
@@ -93,7 +93,7 @@
         "lawSource": "근로기준법 제37조 및 시행령 제17조 (미지급 임금 지연이자 연 20%)"
       },
       {
-        "name": "Case 4 — 200만 / 14일 (최소)",
+        "name": "Case 4 — 200만 / 14일",
         "input": {
           "unpaidAmount": 2000000,
           "delayDays": 14

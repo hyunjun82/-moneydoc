@@ -330,6 +330,9 @@ export const OUTPUT_LABELS: Record<string, string> = {
   dailyWage: "일급",
   deduction: "공제액",
   tax: "세금",
+  incomeReduction: "소득역전 방지 감액",
+  shortTermTax: "단기세율 세액 (2년 미만 비교용)",
+  taxableInterest: "과세되는 이자 (5,000만원 초과분)",
   monthlyAvg: "월 평균",
   annualConverted: "연 환산",
 };

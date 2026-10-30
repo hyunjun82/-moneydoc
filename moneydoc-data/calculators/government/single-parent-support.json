@@ -117,6 +117,31 @@
           "annualSupport": 0
         },
         "lawSource": "한부모가족지원법 및 여성가족부 2026년 한부모가족 지원사업 안내 — 아동양육비 자녀 1인당 월 23만원 (기준 중위소득 65% 이하), 미혼모·부/조손/청년한부모 추가 10만원"
+      },
+      {
+        "name": "경계 — 65% / 10세 (2026년 기준 65% 이하)",
+        "input": {
+          "medianIncomePct": 65,
+          "childAge": 10
+        },
+        "expected": {
+          "isEligible": true,
+          "monthlySupport": 230000,
+          "annualSupport": 2760000
+        },
+        "note": "2026년 복지급여 대상 기준 중위소득 65% 이하. 출처: 정책브리핑 https://www.korea.kr/news/policyNewsView.do?newsId=148949076 , 여성가족부 https://www.mogef.go.kr/sp/fam/sp_fam_f006.do"
+      },
+      {
+        "name": "경계 — 66% / 10세 (기준 초과)",
+        "input": {
+          "medianIncomePct": 66,
+          "childAge": 10
+        },
+        "expected": {
+          "isEligible": false,
+          "monthlySupport": 0,
+          "annualSupport": 0
+        }
       }
     ]
   },

@@ -73,8 +73,10 @@ export class HometaxCompTaxAdapter extends BaseAdapter {
     if (slug === 'property-tax') {
       // 재산세 계산기: 홈택스 결과의 '재산세액 합계' 줄만 쓴다. 홈택스는 재산세를 표준세율(60%)로만 계산하므로
       // 1세대1주택 9억 이하 특례(지방세법 §111조의2, 2026.12.28까지 유효)는 여기서 대조하지 않는다 → 일반 케이스만 govSource 지정
-      if (input.isOneHomeUnder9Eok) throw new AdapterError(this.constructor.id, '홈택스는 1주택 특례세율을 계산하지 않음 — 법령 대조 케이스');
-      const r = await this.lookup({ values: [Math.round(input.publicValue)], oneHome: false, birth: null, acq: null });
+      // 9억 초과 1주택은 특례세율이 없고 공정시장가액비율(43~45%)만 낮다. 홈택스에 1주택으로 넣으면 같은 계산이다
+      const oneHome = !!input.isOneHomeUnder9Eok;
+      if (oneHome && input.publicValue <= 900000000) throw new AdapterError(this.constructor.id, '홈택스는 1주택 특례세율을 계산하지 않음 — 법령 대조 케이스');
+      const r = await this.lookup({ values: [Math.round(input.publicValue)], oneHome, birth: null, acq: null });
       return { propertyTax: r.propertyTaxTotal, source: '홈택스 종합부동산세 간이세액계산 (주택) — 재산세액 합계', _ref: { standardRate: true } };
     }
     this.validateInput(input);
@@ -89,15 +91,19 @@ export class HometaxCompTaxAdapter extends BaseAdapter {
     };
     const r = await this.lookup(form);
     const ref = { form, totalValue: r.totalValue, deduction: r.deduction, ratePct: r.ratePct, notice: r.notice ?? null };
+    // 홈택스 화면의 재산세는 표준세율이다. 1세대1주택 시가표준액 9억 이하는 실제 재산세에 특례세율(지방세법 §111의2)이
+    // 적용되므로 재산세 줄은 대조하지 않는다 (법령 대조). 이 경우 공시가 12억 이하라 종부세는 0원이고 그 줄만 대조한다
+    const specialRateHome = values.length === 1 && values[0] <= 900000000;
+    const pt = specialRateHome ? {} : null;
     if (slug === 'holding-tax-total') {
-      return { propertyTax: r.propertyTaxTotal, compTax: r.compTax, ruralTax: r.ruralTax, compPayable: r.payableTax, source: '홈택스 종합부동산세 간이세액계산 (주택)', _ref: ref };
+      return { ...(pt ?? { propertyTax: r.propertyTaxTotal }), compTax: r.compTax, ruralTax: r.ruralTax, compPayable: r.payableTax, source: '홈택스 종합부동산세 간이세액계산 (주택)', _ref: { ...ref, ...(pt ? { propertyTaxNotCompared: r.propertyTaxTotal } : {}) } };
     }
     return {
       totalValue: r.totalValue, deduction: r.deduction, taxableBase: r.taxableBase,
       taxBeforePropertyCredit: r.taxBeforePropertyCredit, propertyTaxCredit: r.propertyTaxCredit, calcTax: r.calcTax,
       ageCredit: r.ageCredit, holdingCredit: r.holdingCredit, creditTotal: r.creditTotal,
-      compTax: r.compTax, ruralTax: r.ruralTax, payableTax: r.payableTax, propertyTaxTotal: r.propertyTaxTotal,
-      source: '홈택스 종합부동산세 간이세액계산 (주택)', _ref: ref,
+      compTax: r.compTax, ruralTax: r.ruralTax, payableTax: r.payableTax, ...(pt ?? { propertyTaxTotal: r.propertyTaxTotal }),
+      source: '홈택스 종합부동산세 간이세액계산 (주택)', _ref: { ...ref, ...(pt ? { propertyTaxNotCompared: r.propertyTaxTotal } : {}) },
     };
   }
 
