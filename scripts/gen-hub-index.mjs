@@ -12,6 +12,7 @@
 //   popular[{ term, slug }] 는 그 스포크로, [{ term, href }] 는 사이트 안 아무 페이지로 건다
 import fs from 'node:fs';
 import path from 'node:path';
+import { loadReviewAnswers } from './lib/review-answers.mjs';
 
 const ROOT = process.cwd();
 const HUBS = [
@@ -34,11 +35,14 @@ const metaOf = (cat, file) => {
 // 링크가 실제 페이지인지. 없는 주소를 허브에 걸면 죽은 링크가 된다
 const pageExists = (href) => fs.existsSync(path.join(ROOT, 'app', ...href.split('/').filter(Boolean), 'page.tsx'));
 
+// 스포크마다 검토 기록의 소제목 답 2개까지 — 허브 묶음 아래 "바로 답" 으로 보여 준다
+const ANSWERS = loadReviewAnswers(ROOT);
 const OUT_DIR = path.join(ROOT, 'moneydoc-data/hubs');
 fs.mkdirSync(OUT_DIR, { recursive: true });
 
 fs.writeFileSync(path.join(OUT_DIR, 'types.ts'), `// 자동 생성: scripts/gen-hub-index.mjs — 직접 수정하지 말 것
-export type HubSpoke = { href: string; title: string; description: string };
+export type HubQA = { q: string; a: string };
+export type HubSpoke = { href: string; title: string; description: string; answers: HubQA[] };
 export type HubGroup = { key: string; name: string; intro: string; spokes: HubSpoke[] };
 export type HubPopular = { term: string; href: string };
 export type HubData = {
@@ -65,7 +69,8 @@ for (const h of HUBS) {
       spokes: g.spokes.map((s) => {
         const href = check(s.route ?? `/${h.topic}/${s.slug}/`, `스포크 ${s.slug}`);
         routeOf.set(s.slug, href);
-        return { href, ...metaOf(h.cat, s.file ?? `${h.topic}-${s.slug}-guide`) };
+        const file = s.file ?? `${h.topic}-${s.slug}-guide`;
+        return { href, ...metaOf(h.cat, file), answers: (ANSWERS.get(file) ?? []).slice(0, 2) };
       }),
     };
   });
@@ -81,7 +86,7 @@ for (const h of HUBS) {
     title: landing.title,
     h1: landing.h1,
     description: landing.description,
-    guide: { href: check(landing.guideRoute, '총정리 글'), ...metaOf(h.cat, landing.guideFile ?? `${h.topic}-benefit-guide`) },
+    guide: { href: check(landing.guideRoute, '총정리 글'), ...metaOf(h.cat, landing.guideFile ?? `${h.topic}-benefit-guide`), answers: (ANSWERS.get(landing.guideFile ?? `${h.topic}-benefit-guide`) ?? []).slice(0, 2) },
     calculator: { route: check(plan.calculator.route, '계산기') },
     popular,
     groups,

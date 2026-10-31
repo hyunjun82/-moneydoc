@@ -90,6 +90,25 @@ export function TopicHub({ hub, quick, sources, navActive }: Props) {
                 </a>
               ))}
             </div>
+            {(() => {
+              // 바로 답: 스포크마다 검토 기록에서 읽어 온 소제목 답. 글마다 1개씩 먼저, 자리가 남으면 2번째 (묶음당 4개)
+              const first = g.spokes.flatMap((s) => (s.answers[0] ? [{ ...s.answers[0], href: s.href }] : []));
+              const second = g.spokes.flatMap((s) => (s.answers[1] ? [{ ...s.answers[1], href: s.href }] : []));
+              const qa = [...first, ...second].slice(0, 4);
+              if (!qa.length) return null;
+              return (
+                <dl className="th-qa">
+                  {qa.map((x) => (
+                    <div key={x.href + x.q} className="th-qa-item">
+                      <dt>{x.q}</dt>
+                      <dd>
+                        {x.a} <a href={x.href}>자세히 →</a>
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              );
+            })()}
           </section>
         ))}
 

@@ -34,6 +34,23 @@ export function GuideList({
         <h2 className="section-title">{heading}</h2>
         {sub ? <p className="section-sub">{sub}</p> : null}
       </div>
+      {(() => {
+        // 바로 답: 검토 기록에서 읽어 온 소제목 답 (글에 있는 문장 그대로). 글마다 1개, 10개까지
+        const qa = items.flatMap((g) => (g.answers?.[0] ? [{ ...g.answers[0], href: g.href }] : [])).slice(0, 10);
+        if (!qa.length) return null;
+        return (
+          <dl className="guide-qa">
+            {qa.map((x) => (
+              <div key={x.href} className="guide-qa-item">
+                <dt>{x.q}</dt>
+                <dd>
+                  {x.a} <a href={x.href}>자세히 →</a>
+                </dd>
+              </div>
+            ))}
+          </dl>
+        );
+      })()}
       <div className="articles">
         {items.map((g, i) => (
           <a key={g.href} href={g.href} className="article">

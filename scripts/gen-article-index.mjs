@@ -4,9 +4,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ARTICLES } from './articles-v1-list.mjs';
 import { ARTICLES as V2 } from './article-template/articles/index.mjs';
+import { loadReviewAnswers } from './lib/review-answers.mjs';
 
 const ROOT = process.cwd();
 
+const ANSWERS = loadReviewAnswers(ROOT);
 const URLMAP = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/url-map.json'), 'utf8'));
 const HUBMAP = Object.fromEntries(Object.entries(URLMAP).filter(([k]) => !k.startsWith('_')));
 const NOCALC = URLMAP['_계산기없는허브'] ?? {};
@@ -47,13 +49,15 @@ const rows = [
     const data = fs.readFileSync(path.join(ROOT, 'moneydoc-data/articles', a.cat, `${a.slug}.ts`), 'utf8');
     const title = /title: "((?:[^"\\]|\\.)*)"/.exec(data)?.[1];
     if (!title) throw new Error(`${a.slug}: title 추출 실패`);
-    return { cat: a.cat, catLabel: a.catLabel, href: hubHref(a.cat, a.slug), title: JSON.parse(`"${title}"`), blurb: a.blurb };
+    // 검토 기록의 소제목 답 2개까지 — 카테고리 가이드 목록의 "바로 답" (글에 있는 문장 그대로)
+    return { cat: a.cat, catLabel: a.catLabel, href: hubHref(a.cat, a.slug), title: JSON.parse(`"${title}"`), blurb: a.blurb, answers: (ANSWERS.get(a.slug) ?? []).slice(0, 2) };
   }),
   ...EXISTING,
 ];
 
 const out = `// 자동 생성: scripts/gen-article-index.mjs — 직접 수정하지 말 것
-export type GuideLink = { cat: string; catLabel: string; href: string; title: string; blurb: string };
+export type GuideQA = { q: string; a: string };
+export type GuideLink = { cat: string; catLabel: string; href: string; title: string; blurb: string; answers?: GuideQA[] };
 
 export const GUIDES: GuideLink[] = ${JSON.stringify(rows, null, 2)};
 
