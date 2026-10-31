@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "dsr-limit-guide";
 
 export const html = `<h1>스트레스 DSR 계산과 대출 한도, 3단계 적용부터 주담대 한도까지</h1>
-<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">은행업감독규정 DSR 규제와 스트레스 금리 반영 · 2026-09-02</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>7분</span><span class="v2-badge">은행업감독규정 DSR 규제와 스트레스 금리 반영 · 2026-09-03</span></div>
 <img class="v2-hero" src="/og/dsr-limit-guide.png" width="1200" height="630" alt="스트레스 DSR 대출 한도. 연소득 5,000만원이면 293,536,331원">
 <p class="v2-lead v2-intro">대출 한도는 집값보다 내 소득이 먼저 정해요. 한 해 갚는 원리금이 연소득의 일정 비율을 넘지 못하게 막는 규제가 총부채원리금상환비율이고, 줄여서 디에스알이라고 불러요. 여기에 금리가 오를 상황을 미리 반영하는 스트레스 금리까지 더해요. 연소득 5,000만원이 30년 만기로 빌린다면 한도는 293,536,331원이에요. 계산 순서, 단계별 가산금리, 소득과 기간에 따른 한도, 한도를 늘리는 방법을 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -159,7 +159,7 @@ export const html = `<h1>스트레스 DSR 계산과 대출 한도, 3단계 적�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>은행업감독규정 제29조의2(주택관련 담보대출 등에 대한 리스크관리, 담보인정비율·총부채상환비율·총부채원리금상환비율 준수와 별표 기준). 상호저축은행업감독규정 제39조의2(같은 취지의 2금융권 규제). 스트레스 금리는 금융당국이 정한 시행 방안에 따라 단계별로 적용돼요.
-<b>정부 도구</b>금융감독원이 안내하는 DSR 산정 방식과 이 글의 계산이 같은 구조예요 (2026-09-02 대조).
+<b>정부 도구</b>금융감독원이 안내하는 DSR 산정 방식과 이 글의 계산이 같은 구조예요 (2026-09-03 대조).
 </div>
 <div class="v2-rel"><a href="/dsr/"><b>계산기</b>DSR 대출 한도 계산기</a><a href="/mortgage/"><b>대출 계산기</b>주택담보대출 계산기</a><a href="/repayment/"><b>대출 계산기</b>원리금균등 상환 계산기</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -238,7 +238,7 @@ export const landing = {
     "line2": "얼마까지 되나요",
     "sub1": "연소득 5,000만원 · 30년 · 금리 4% → 293,536,331원",
     "sub2": "스트레스 금리 1.5%가 붙어 55,565,806원이 줄었어요",
-    "foot": "은행업감독규정 DSR 규제와 스트레스 금리 반영 · 2026-09-02 검증",
+    "foot": "은행업감독규정 DSR 규제와 스트레스 금리 반영 · 2026-09-03 검증",
     "card": {
       "label": "대출 한도",
       "big": "293,536,331",
@@ -252,7 +252,7 @@ export const landing = {
     "href": "/dsr/",
     "label": "DSR 대출 한도 계산기 바로가기"
   },
-  "badge": "은행업감독규정 DSR 규제와 스트레스 금리 반영 · 2026-09-02",
+  "badge": "은행업감독규정 DSR 규제와 스트레스 금리 반영 · 2026-09-03",
   "basis": "2026년 9월 기준",
   "readMinutes": 7,
   "quick": [

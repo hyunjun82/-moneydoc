@@ -191,6 +191,14 @@
     "law/severance-irp-guide": "severance/irp",
     "government/basic-pension-property-guide": "basic-pension/property",
     "government/basic-pension-earned-income-guide": "basic-pension/earned-income",
-    "government/basic-pension-rejection-guide": "basic-pension/rejection"
+    "government/basic-pension-rejection-guide": "basic-pension/rejection",
+    "pension/pension-tax-guide": "irp/tax",
+    "pension/pension-income-cut-guide": "national-pension/income-cut",
+    "insurance/insurance-premium-credit-guide": "medical-payout/tax-credit",
+    "insurance/insurance-car-acquisition-guide": "auto-tax/acquisition",
+    "loan/loan-jeonse-youth-guide": "jeonse-loan/youth",
+    "loan/loan-ltv-first-home-guide": "ltv/guide",
+    "savings/savings-interest-tax-guide": "deposit/interest-tax",
+    "savings/savings-compare-guide": "installment/compare"
   }
 }

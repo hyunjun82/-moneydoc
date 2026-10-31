@@ -13,7 +13,7 @@ export const meta = {
 export const scriptKey = "basic-livelihood-eligibility-guide";
 
 export const html = `<h1>2026년 기초생활수급 조건과 급여, 소득인정액부터 신청 서류까지</h1>
-<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">기준 중위소득과 급여별 선정기준 대조 · 2026-09-02</span></div>
+<div class="v2-meta"><span>글 한결</span><span>·</span><span>2026년 9월 기준</span><span>·</span><span>8분</span><span class="v2-badge">기준 중위소득과 급여별 선정기준 대조 · 2026-09-03</span></div>
 <img class="v2-hero" src="/og/basic-livelihood-eligibility-guide.png" width="1200" height="630" alt="기초생활수급 조건. 1인 가구 생계급여 기준은 월 820,556원">
 <p class="v2-lead v2-intro">기초생활보장은 소득인정액이 기준 중위소득의 일정 비율 이하인 가구를 돕는 제도예요. 생계, 의료, 주거, 교육 네 가지 급여가 있고 각각 기준선이 달라서 하나만 받는 경우도 흔해요. 1인 가구라면 소득인정액이 820,556원 이하일 때 생계급여를, 1,282,119원 이하일 때 교육급여를 받을 수 있어요. 기준 중위소득이 뭔지, 소득인정액은 어떻게 계산하는지, 어떤 서류로 신청하는지 정리했어요.</p>
 <section class="v2-answer" aria-label="즉답">
@@ -169,7 +169,7 @@ export const html = `<h1>2026년 기초생활수급 조건과 급여, 소득인�
 <h2 id="src">출처</h2>
 <div class="v2-src">
 <b>법령</b>국민기초생활 보장법 제6조의2(기준 중위소득), 제6조의3(소득인정액 산정), 제7조(급여의 종류), 제8조(생계급여, 기준 중위소득의 100분의 30 이상), 제11조(주거급여), 제12조(교육급여, 100분의 50 이상), 제12조의3(의료급여, 100분의 40 이상), 제21조(급여의 신청과 금융정보 제공 동의). 국민기초생활 보장법 시행령(소득의 범위와 재산의 소득환산).
-<b>정부 도구</b>보건복지부가 고시한 2026년 기준 중위소득과 급여별 선정기준을 그대로 반영했어요 (2026-09-02 대조).
+<b>정부 도구</b>보건복지부가 고시한 2026년 기준 중위소득과 급여별 선정기준을 그대로 반영했어요 (2026-09-03 대조).
 </div>
 <div class="v2-rel"><a href="/basic-livelihood/"><b>계산기</b>기초생활수급 자격 계산기</a><a href="/median-income/"><b>정부지원금 계산기</b>기준 중위소득 계산기</a><a href="/basic-pension/"><b>정부지원금 가이드</b>2026년 기초연금 수급 조건과 금액</a></div>
 <div id="md-inter" role="dialog" aria-modal="true" aria-label="외부 사이트로 이동">
@@ -248,7 +248,7 @@ export const landing = {
     "line2": "나도 되나요",
     "sub1": "1인 가구 생계급여 기준 820,556원",
     "sub2": "의료 1,025,695원 · 주거 1,230,834원 · 교육 1,282,119원",
-    "foot": "기준 중위소득과 급여별 선정기준 대조 · 2026-09-02 검증",
+    "foot": "기준 중위소득과 급여별 선정기준 대조 · 2026-09-03 검증",
     "card": {
       "label": "1인 생계급여 기준",
       "big": "820,556",
@@ -262,7 +262,7 @@ export const landing = {
     "href": "/basic-livelihood/",
     "label": "기초생활수급 자격 계산기 바로가기"
   },
-  "badge": "기준 중위소득과 급여별 선정기준 대조 · 2026-09-02",
+  "badge": "기준 중위소득과 급여별 선정기준 대조 · 2026-09-03",
   "basis": "2026년 9월 기준",
   "readMinutes": 8,
   "quick": [

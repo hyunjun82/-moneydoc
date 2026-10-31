@@ -128,4 +128,12 @@ export const ARTICLES = [
   { slug: 'transfer-tax-rate-guide', cat: 'realestate', catLabel: '부동산', crumb: '양도세 세율', blurb: '기본세율과 누진공제 · 단기 보유 세율 · 조정대상지역 중과 · 분양권과 미등기' },
   { slug: 'transfer-tax-temporary-two-house-guide', cat: 'realestate', catLabel: '부동산', crumb: '일시적 2주택 비과세', blurb: '3년 처분 요건 · 기한 예외 · 혼인과 동거봉양 · 상속주택과 공동명의' },
   { slug: 'transfer-tax-filing-guide', cat: 'realestate', catLabel: '부동산', crumb: '양도세 예정신고 가산세', blurb: '예정신고 기한 · 무신고 가산세 · 기한 후 신고 감면 · 확정신고 대상 · 분납' },
+  { slug: 'pension-tax-guide', cat: 'pension', catLabel: '연금', crumb: '연금소득세율', blurb: '국민연금 월 665,800원이면 1년 13,501원 · 1월 연말정산 · 연금저축 1,500만원 경계' },
+  { slug: 'pension-income-cut-guide', cat: 'pension', catLabel: '연금', crumb: '국민연금 감액 기준', blurb: '기준선 5,193,511원 · 사업·근로소득금액만 · 초과 350만원 400,000원 감액 · 상한 절반' },
+  { slug: 'insurance-premium-credit-guide', cat: 'insurance', catLabel: '보험·자동차', crumb: '보장성보험 세액공제', blurb: '100만원 × 12% · 지방소득세까지 132,000원 · 장애인전용 15%' },
+  { slug: 'insurance-car-acquisition-guide', cat: 'insurance', catLabel: '보험·자동차', crumb: '자동차 취득세율', blurb: '승용 7%·경차 4% · 3천만원 2,100,000원 · 감면 경계 · 60일 납부' },
+  { slug: 'loan-jeonse-youth-guide', cat: 'loan', catLabel: '대출', crumb: '청년버팀목전세대출 한도', blurb: '청년 1.5억·신혼 2.5억 · 1억 한 달 183,333원 · 소득별 금리표' },
+  { slug: 'loan-ltv-first-home-guide', cat: 'loan', catLabel: '대출', crumb: '생애최초 LTV', blurb: '디딤돌 80%·2.4억 · 보금자리론 70%·4.2억 · 월 1,071,020원' },
+  { slug: 'savings-interest-tax-guide', cat: 'savings', catLabel: '저축', crumb: '예금 이자 세금', blurb: '15.4% 원천징수 · 2천만원 넘으면 5월 신고 · 넘는 몫만 기본세율' },
+  { slug: 'savings-compare-guide', cat: 'savings', catLabel: '저축', crumb: '적금 예금 이자 차이', blurb: '적금 26만 vs 예금 48만 (연 4%) · 손익분기 7.38% · 목돈은 예금' },
 ];

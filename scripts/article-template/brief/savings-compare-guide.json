@@ -1,0 +1,42 @@
+{
+  "slug": "savings-compare-guide",
+  "keyword": "적금 정기예금 금리 비교, 같은 금리면 이자 차이는 얼마인가요",
+  "calc": "savings/installment-savings",
+  "mustInclude": [
+    "적금 정기예금 금리 비교",
+    "이자 차이"
+  ],
+  "queries": [],
+  "sources": [
+    {
+      "label": "소득세법 (제129조 원천징수세율 이자소득 100분의 14, 제16조 이자소득)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법",
+      "must": [
+        "그 밖의 이자소득에 대해서는 100분의 14",
+        "제16조(이자소득)"
+      ]
+    },
+    {
+      "label": "조세특례제한법 (제88조의2 비과세종합저축)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/조세특례제한법",
+      "must": [
+        "비과세종합저축"
+      ]
+    },
+    {
+      "label": "지방세법 (개인지방소득세 특별징수)",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세법",
+      "must": [
+        "개인지방소득세"
+      ]
+    },
+    {
+      "label": "전국은행연합회 소비자포털 예금금리 비교공시",
+      "kind": "gov",
+      "url": "https://portal.kfb.or.kr/compare/receiving_deposit_3.php"
+    }
+  ]
+}

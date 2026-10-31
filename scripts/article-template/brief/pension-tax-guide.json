@@ -1,0 +1,13 @@
+{
+  "slug": "pension-tax-guide",
+  "keyword": "연금소득세율, 국민연금과 연금저축 받을 때 세금 얼마 떼나요",
+  "calc": "pension/irp-tax-credit",
+  "mustInclude": [
+    "연금소득세율",
+    "국민연금 소득세",
+    "연금저축 수령 세금"
+  ],
+  "queries": [],
+  "sources": [],
+  "reuseEvidence": "pension-irp-guide"
+}

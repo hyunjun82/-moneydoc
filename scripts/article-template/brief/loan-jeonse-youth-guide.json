@@ -1,0 +1,13 @@
+{
+  "slug": "loan-jeonse-youth-guide",
+  "keyword": "청년버팀목전세대출 한도와 이자, 신혼부부 전세대출 한도는 얼마인가요",
+  "calc": "loan/jeonse-loan",
+  "mustInclude": [
+    "청년버팀목전세대출 한도",
+    "이자",
+    "신혼부부 전세대출 한도"
+  ],
+  "queries": [],
+  "sources": [],
+  "reuseEvidence": "loan-jeonse-guide"
+}
