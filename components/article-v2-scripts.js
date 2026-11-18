@@ -18,7 +18,7 @@ export const SCRIPTS = {
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
@@ -843,7 +843,7 @@ function mdSalary(annual, dependents, kids, nontaxable){
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -881,7 +881,7 @@ function mdSalary(annual, dependents, kids, nontaxable){
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
@@ -1070,7 +1070,7 @@ function mdSalary(annual, dependents, kids, nontaxable){
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -1373,7 +1373,7 @@ function mdSalary(annual, dependents, kids, nontaxable){
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
@@ -1567,7 +1567,7 @@ function mdSalary(annual, dependents, kids, nontaxable){
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
@@ -1594,7 +1594,7 @@ function ji(p,rate,y){ var m=Math.round(p*rate/12); return {m:m,t:m*y*12}; }
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -1621,7 +1621,7 @@ function pfee(b,r,e){ var rem=36-e; if(rem<0)rem=0; return {f:Math.round(b*r*rem
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -1649,7 +1649,7 @@ function am(b,y,n){ var r=y/12, m=n*12; if(r===0)return {p:Math.round(b/m), t:b}
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -1679,7 +1679,7 @@ function lam(p,y,rate,m){ var r=rate/12, n=y*12, ti=0, bal=p, first=0, i, it;
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -1707,7 +1707,7 @@ var TAX=0.154;
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -1735,7 +1735,7 @@ var LG=2000000, LL=4000000, IR=0.099, GR=0.154;
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -1762,7 +1762,7 @@ function yfut(m,r,t){ var p=m*36; var i=Math.round(m*(r/12)*36*37/2); var c=Math
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -1846,7 +1846,7 @@ var AV=3193511, PR=1.29, BM=240, BN=0.05;
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -2194,7 +2194,7 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -2240,7 +2240,7 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -2309,7 +2309,7 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -2401,7 +2401,7 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -2447,7 +2447,7 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -2493,7 +2493,7 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -2516,7 +2516,7 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -2631,7 +2631,7 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -2838,7 +2838,7 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -3206,7 +3206,7 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -3505,7 +3505,7 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -3643,7 +3643,7 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -3676,7 +3676,7 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -3848,7 +3848,7 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
@@ -3964,7 +3964,7 @@ function gen(c,k,n){ var P={gcl:[1e4,.2,1e4,Math.max(n,.2)],gbig:[2e4,.2,2e4,Mat
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -4086,7 +4086,7 @@ var AV=3193511, PR=1.29, BM=240, BN=0.05;
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -4116,7 +4116,7 @@ var AV=3193511, PR=1.29, BM=240, BN=0.05;
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -4148,7 +4148,7 @@ var AV=3193511, PR=1.29, BM=240, BN=0.05;
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -4179,7 +4179,7 @@ var AV=3193511, PR=1.29, BM=240, BN=0.05;
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
@@ -4208,7 +4208,7 @@ function jl(d,ratio,lim){ var raw=Math.round(d*ratio); return raw<lim?raw:lim; }
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
@@ -4236,7 +4236,7 @@ function lv(hp,reg,dep){ var r=reg==='other'?0.8:0.7; var lim=Math.round(hp*r); 
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -4264,7 +4264,7 @@ var ITAX=0.154;
   // 판정 트리
   document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
     tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='verdict ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
   // 표 펼치기
   document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
     mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
@@ -4274,6 +4274,292 @@ var CT=0.154;
   function crender(){ var m=(+document.getElementById('cm').value||0)*1e4, n=+document.getElementById('cn').value||1, r=(+document.getElementById('cr').value||0)/100; if(m<=0||r<=0)return; var x=cmp(m,n,r);
     document.getElementById('co1').textContent=won(x.di-x.si)+'원'; document.getElementById('co2').textContent=won(x.si)+'원 · '+won(x.sm-x.p)+'원'; document.getElementById('co3').textContent=won(x.di)+'원 · '+won(x.dm-x.p)+'원'; }
   ['cm','cn','cr'].forEach(function(id){document.getElementById(id).addEventListener('input',crender);document.getElementById(id).addEventListener('change',crender)}); crender();
+
+  },
+  "tax-gift-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
+var GD={"spouse":600000000,"lineal_adult":50000000,"lineal_minor":20000000,"sibling":10000000,"other":0}, GB=[[100000000,0.1,0],[500000000,0.2,10000000],[1000000000,0.3,60000000],[3000000000,0.4,160000000],[null,0.5,460000000]], GMIN=500000, GCR=0.03, GR=["lineal_adult","lineal_minor","spouse","lineal_adult","sibling","other"];
+  function gtax(a,r){ var d=Math.min(GD[r]||0,a), b=Math.max(0,a-d), t=0;
+    if(b>=GMIN){ for(var i=0;i<GB.length;i++){ if(GB[i][0]===null||b<=GB[i][0]){ t=Math.floor(b*GB[i][1]-GB[i][2]); break; } } t=Math.max(0,t); }
+    var c=Math.floor(t*GCR); return {d:d,b:b,t:t,c:c,p:t-c}; }
+
+  function grender(){ var a=(+document.getElementById('ga').value||0)*1e4, k=+document.getElementById('gr').value||0; if(a<0)return; var x=gtax(a,GR[k]);
+    document.getElementById('go1').textContent=won(x.p)+'원'; document.getElementById('go2').textContent=won(x.d)+'원';
+    document.getElementById('go3').textContent=won(x.b)+'원'; document.getElementById('go4').textContent=won(x.t)+'원'; }
+  ['ga','gr'].forEach(function(id){document.getElementById(id).addEventListener('input',grender)}); grender();
+
+  },
+  "tax-inheritance-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
+var IB=[{"upperBound":100000000,"rate":0.1,"progressiveDeduction":0},{"upperBound":500000000,"rate":0.2,"progressiveDeduction":10000000},{"upperBound":1000000000,"rate":0.3,"progressiveDeduction":60000000},{"upperBound":3000000000,"rate":0.4,"progressiveDeduction":160000000},{"upperBound":null,"rate":0.5,"progressiveDeduction":460000000}], ILUMP=500000000, IBASIC=200000000, ICH=50000000, ISMIN=500000000, ISMAX=3000000000, IFUN=5000000, IFC=0.03, IMINB=500000;
+  function inh(E,sp,ch,pa){ var tv=Math.max(0,E-IFUN), sd=0; if(sp){ var r=1; if(ch>0) r=1.5/(ch*1.0+1.5); else if(pa>0) r=1.5/(pa*1.0+1.5); sd=Math.min(ISMAX,Math.max(ISMIN,Math.floor(E*r))); }
+    var pd=ch*ICH, only=!!sp&&!(ch>0)&&!(pa>0), bd=only?IBASIC+pd:Math.max(ILUMP,IBASIC+pd), ded=Math.min(bd+sd,tv), tb=Math.max(0,tv-ded), tax=0;
+    if(tb>=IMINB){ for(var i=0;i<IB.length;i++){ var b=IB[i]; if(b.upperBound===null||tb<=b.upperBound){ tax=Math.floor(tb*b.rate-b.progressiveDeduction); break; } } tax=Math.max(0,tax); }
+    var fc=Math.floor(tax*IFC); return {sd:sd,tb:tb,tax:tax,pay:tax-fc}; }
+
+  function wrender(){ var E=(+document.getElementById('we').value||0)*1e4, sp=+document.getElementById('wsp').value, ch=+document.getElementById('wc').value, pa=+document.getElementById('wpa').value; if(E<0)return; var x=inh(E,sp,ch,pa);
+    document.getElementById('wo1').textContent=won(x.pay)+'원'; document.getElementById('wo2').textContent=won(x.sd)+'원'; document.getElementById('wo3').textContent=won(x.tb)+'원'; document.getElementById('wo4').textContent=won(x.tax)+'원'; }
+  ['we','wsp','wc','wpa'].forEach(function(id){document.getElementById(id).addEventListener('input',wrender)}); wrender();
+
+  },
+  "tax-daily-wage-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
+var EX=150000, RT=27000, LR=0.1;
+  function f10(v){ return Math.floor(v/10+1e-9)*10; }
+  function dwt(w,n){ var t=Math.max(0,w-EX); var raw=t*RT/1e6; var tax=raw<1000?0:f10(raw); var loc=f10(tax*LR); var d=tax+loc; return {raw:raw, tax:tax, loc:loc, d:d, net:w-d, total:(w-d)*n}; }
+
+  function wrender(){ var w=+document.getElementById('ww').value||0, n=+document.getElementById('wn').value||0; if(w<0||n<1)return; var r=dwt(w,n);
+    var cut=(r.raw>=1000&&Math.abs(r.raw-r.tax)>1e-6)||Math.abs(r.tax*LR-r.loc)>1e-6;
+    var msg=n<2?'하루 치를 그날 받을 때의 세금이에요':(r.raw>0&&r.raw<1000?'날마다 받을 때만 0원이에요. 몰아서 받는다면 아래 셋째 질문을 보세요':(cut?'하루 치마다 끝수를 버린 값이에요. 몰아서 받으면 조금 다를 수 있어요':'하루 치를 계산해 날수를 곱했어요'));
+    document.getElementById('wo1').textContent=won(r.d*n)+'원'; document.getElementById('wo2').textContent=won(r.d)+'원'; document.getElementById('wo3').textContent=won(r.net)+'원'; document.getElementById('wo4').textContent=won(r.total)+'원'; document.getElementById('wo5').textContent=msg; }
+  ['ww','wn'].forEach(function(id){document.getElementById(id).addEventListener('input',wrender)}); wrender();
+
+  },
+  "tax-stock-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
+function stx(t,g,m){ var b=Math.max(0,g-2500000); var mj=(t==='domestic'||t==='domestic-sme')&&m; var lo=mj?Math.min(b,300000000):b; var hi=mj?Math.max(0,b-300000000):0; var r=(t==='domestic-sme'&&!mj)?0.10:0.20; var it=Math.floor(lo*r+hi*0.25); var lt=Math.floor(it*0.10); return {base:b,it:it,lt:lt,total:it+lt}; }
+
+  function strender(){ var t=document.getElementById('stt').value, m=document.getElementById('stm').value==='1', g=(+document.getElementById('stg').value||0)*1e4; if(g<0)return; var x=stx(t,g,m);
+    document.getElementById('sto').textContent=won(x.total)+'원'; document.getElementById('stb').textContent=won(x.base)+'원'; document.getElementById('sti').textContent=won(x.it)+'원'; document.getElementById('stl').textContent=won(x.lt)+'원'; }
+  ['stt','stm','stg'].forEach(function(id){document.getElementById(id).addEventListener('input',strender)}); strender();
+
+  },
+  "law-inheritance-share-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
+
+  function ishare(e, sp, c, p, s){
+    var r = { spouse: 0, child: 0, parent: 0, sibling: 0, who: '' };
+    if (c > 0) { var t = c * 1.0 + (sp ? 1.5 : 0); r.spouse = sp ? Math.round(e * 1.5 / t) : 0; r.child = Math.round(e * 1.0 / t); r.who = (sp ? '배우자와 ' : '') + '자녀 ' + c + '명 (1순위)'; }
+    else if (p > 0) { var u = p * 1.0 + (sp ? 1.5 : 0); r.spouse = sp ? Math.round(e * 1.5 / u) : 0; r.parent = Math.round(e * 1.0 / u); r.who = (sp ? '배우자와 ' : '') + '부모 ' + p + '명 (2순위)'; }
+    else if (sp) { r.spouse = e; r.who = '배우자 혼자'; }
+    else if (s > 0) { r.sibling = Math.round(e / s); r.who = '형제자매 ' + s + '명 (3순위)'; }
+    else { r.who = '입력한 상속인이 없어요'; }
+    return r;
+  }
+
+  function ihrender(){ var g=function(id){return +document.getElementById(id).value||0}; var e=g('ihE')*1e4; if(e<0)return;
+    var r=ishare(e, g('ihS')===1, Math.max(0,Math.floor(g('ihC'))), g('ihP'), Math.max(0,Math.floor(g('ihB'))));
+    document.getElementById('iho0').textContent=r.who;
+    ['spouse','child','parent','sibling'].forEach(function(k,i){document.getElementById('iho'+(i+1)).textContent=won(r[k])+'원'}); }
+  ['ihE','ihS','ihC','ihP','ihB'].forEach(function(id){document.getElementById(id).addEventListener('input',ihrender)}); ihrender();
+
+  },
+  "tax-child-credit-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
+var STEP={"2026":9,"2027":10,"2028":11,"2029":12}, BASE=13, UP=20, EX=2017, K1=250000, K2=550000, K3=950000, KA=400000, N1=300000, N2=500000, N3=700000;
+  function cage(y,b,dis){ var a=y-b; if(a>UP&&!dis) return 0; var t=(STEP[y]&&b!==EX)?STEP[y]:BASE; return a>=t?1:0; }
+  function ccred(k,f,s,t){ var r=k<=0?0:(k===1?K1:(k===2?K2:K3+(k-3)*KA)); var n=f*N1+s*N2+t*N3; return {r:r,n:n,t:r+n}; }
+
+  var NOPT=[[0,0,0],[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1]];
+  function wrender(){ var y=+document.getElementById('wy').value, o=NOPT[+document.getElementById('wn').value]||NOPT[0], d=+document.getElementById('wd').value, k=0, ex=0;
+    ['wb1','wb2','wb3','wb4'].forEach(function(id,i){ var b=+document.getElementById(id).value; if(!b) return; k+=cage(y,b,d===i+1?1:0); if(b===EX&&STEP[y]) ex++; });
+    var x=ccred(k,o[0],o[1],o[2]);
+    document.getElementById('wo1').textContent=won(x.t)+'원'; document.getElementById('wo2').textContent=k+'명'; document.getElementById('wo3').textContent=won(x.r)+'원'; document.getElementById('wo4').textContent=won(x.n)+'원';
+    document.getElementById('wo5').textContent=ex?(EX+'년생 '+ex+'명은 '+(EX+BASE)+'년 귀속부터'):'없음'; }
+  ['wy','wb1','wb2','wb3','wb4','wd','wn'].forEach(function(id){document.getElementById(id).addEventListener('input',wrender)}); wrender();
+
+  },
+  "gov-maternity-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
+var MW=2156880, UP=2200000;
+  function ml(m,sme,multi){ var s=Math.max(m,MW), days=multi?120:90, cd=multi?75:60, gd=days-cd, cap=Math.min(s,UP), g, c;
+    if(sme){ g=Math.round(cap*days/30); c=Math.round(Math.max(0,s-UP)*cd/30); } else { c=Math.round(m*cd/30); g=Math.round(cap*gd/30); }
+    return {g:g,c:c,t:g+c,days:days}; }
+
+  function mrender(){ var m=(+document.getElementById('mw').value||0)*1e4, sme=+document.getElementById('mk').value===1, multi=+document.getElementById('mm').value===1; if(m<=0)return;
+    var r=ml(m,sme,multi), paid=ml(m,false,multi).c;
+    document.getElementById('mt').textContent=won(r.t)+'원 ('+r.days+'일)'; document.getElementById('mg').textContent=won(r.g)+'원'; document.getElementById('mc').textContent=won(r.c)+'원';
+    document.getElementById('md').textContent=won(Math.max(0,m*r.days/30-r.t))+'원'; document.getElementById('mn').textContent=won(paid)+'원 (회사 유급분)'; }
+  ['mw','mk','mm'].forEach(function(id){document.getElementById(id).addEventListener('input',mrender)}); mrender();
+
+  },
+  "tax-vat-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('v2-compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('v2-compact'); mb.textContent=close;} });
+var VEX=48000000, VLIM=104000000;
+  function vat(sMan,rate,pMan){ var gross=sMan*10000, buy=pMan*10000; var saleVat=Math.round(gross/11), buyVat=Math.round(buy/11); var c=Math.round(gross*rate*0.10); var ex=gross<VEX; var s=ex?0:c; var d=Math.round(buy*0.005); var net=s-d; if(net<0)net=0; return {saleVat:saleVat, buyVat:buyVat, g:saleVat-buyVat, c:c, ex:ex, s:s, d:d, net:net, over:gross>=VLIM}; }
+
+  function vrender(){ var s=+document.getElementById('vs').value||0, r=+document.getElementById('vr').value, p=+document.getElementById('vp').value||0; if(s<=0)return; var x=vat(s,r,p);
+    document.getElementById('vg').textContent=x.g<0?won(-x.g)+'원 환급':won(x.g)+'원';
+    document.getElementById('vn').textContent=x.ex?'0원 (납부의무 면제)':won(x.net)+'원'; document.getElementById('vq').textContent=won(x.s)+'원';
+    document.getElementById('vw').textContent=(x.g<x.net?'일반과세자':(x.g>x.net?'간이과세자':'같아요'))+(x.over?' (직전 연도 매출이 이 금액이면 간이과세 대상이 아니에요)':''); }
+  ['vs','vr','vp'].forEach(function(id){document.getElementById(id).addEventListener('input',vrender)}); vrender();
+  // 판정 트리: 공용 런타임은 다섯 질문을 모두 '예'로 눌러 둔 채 시작한다. 누르기 전에는 판정을 보이지 않게 되돌린다.
+  (function(){ var tr=document.getElementById('simTree'); if(!tr)return; var v=tr.querySelector('[data-verdict]'), bs=tr.querySelectorAll('.v2-sw button'), ans={}, total=tr.querySelectorAll('.v2-q').length;
+    function idle(){ v.classList.remove('v2-ok'); v.innerHTML='<b>다섯 질문에 답해 보세요</b>모두 예라면 간이과세 요건에 맞고, 아니오가 하나라도 있으면 그 이유가 나와요.'; }
+    bs.forEach(function(b){ b.setAttribute('aria-pressed','false'); b.addEventListener('click',function(){ ans[b.dataset.q]=b.dataset.v; var n=0, no=false; for(var k in ans){ n++; if(ans[k]==='0')no=true; } if(!no&&n<total)idle(); }); });
+    idle(); })();
+
+  },
+  "realestate-brokerage-guide": function () {
+
+  var won=function(n){return Math.round(n).toLocaleString('ko-KR')};
+  // 즉답 칩
+  var qc=document.getElementById('qchips'); if(qc){ var Q=JSON.parse(qc.dataset.q); var chips=qc.querySelectorAll('button');
+    chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); var q=Q[+b.dataset.i];
+      document.getElementById('qnet').innerHTML=q.big+'<small>'+q.unit+'</small>'; document.getElementById('qsub').textContent=q.sub;})}); }
+  // 외부 이동 레이어 (오퍼월·전면광고 SDK 는 window.mdAd.show(slot, done) 로 끼운다)
+  var inter=document.getElementById('md-inter'), interGo=document.getElementById('md-inter-go'), interD=document.getElementById('md-inter-d'), pending=null;
+  function openOut(){ if(!pending)return; var h=pending; pending=null; inter.removeAttribute('open'); window.open(h,'_blank','noopener'); }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a.v2-go,a.doc'); if(!a||!/^https?:/.test(a.href))return; e.preventDefault(); pending=a.href; interD.textContent=(a.textContent||'').replace(' ↗','')+' · 새 창에서 열려요';
+    if(window.mdAd&&typeof window.mdAd.show==='function'){ inter.setAttribute('open',''); window.mdAd.show(document.getElementById('md-ad-slot'), openOut); } else { openOut(); } });
+  interGo.addEventListener('click',openOut); inter.addEventListener('click',function(e){ if(e.target===inter){ pending=null; inter.removeAttribute('open'); } });
+  // 판정 트리
+  document.querySelectorAll('.v2-tree').forEach(function(tree){ var D=JSON.parse(tree.dataset.tree), st=D.no.map(function(){return 1}), v=tree.querySelector('[data-verdict]');
+    tree.querySelectorAll('.v2-sw button').forEach(function(b){b.addEventListener('click',function(){var q=+b.dataset.q; st[q]=+b.dataset.v; tree.querySelectorAll('.v2-sw button[data-q="'+q+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      for(var i=0;i<st.length;i++){ if(!st[i]){ v.className='v2-verdict'; v.innerHTML='<b>'+D.no[i].title+'</b>'+D.no[i].text; return; } } v.className='v2-verdict v2-ok'; v.innerHTML='<b>'+D.ok.title+'</b>'+D.ok.text; })}); });
+  // 표 펼치기
+  document.querySelectorAll('[data-more]').forEach(function(mb){ var t=document.getElementById(mb.dataset.more), open=mb.textContent, close='핵심만 보기';
+    mb.addEventListener('click',function(){var c=t.classList.toggle('compact'); mb.textContent=c?open:close;}); if(window.innerWidth>640){t.classList.remove('compact'); mb.textContent=close;} });
+var BSALE=[{"upperBound":50000000,"rate":0.006,"limit":250000},{"upperBound":200000000,"rate":0.005,"limit":800000},{"upperBound":900000000,"rate":0.004,"limit":null},{"upperBound":1200000000,"rate":0.005,"limit":null},{"upperBound":1500000000,"rate":0.006,"limit":null},{"upperBound":null,"rate":0.007,"limit":null}], BRENT=[{"upperBound":50000000,"rate":0.005,"limit":200000},{"upperBound":100000000,"rate":0.004,"limit":300000},{"upperBound":600000000,"rate":0.003,"limit":null},{"upperBound":1200000000,"rate":0.004,"limit":null},{"upperBound":1500000000,"rate":0.005,"limit":null},{"upperBound":null,"rate":0.006,"limit":null}];
+  function bf(t,a,r){ var amt=a; if(t==='rent_monthly'&&(r>0||a>0)){ amt=a+r*100; if(amt<50000000) amt=a+r*70; } var B=t==='sale'?BSALE:BRENT, b=B[B.length-1]; for(var i=0;i<B.length;i++){ if(B[i].upperBound===null||amt<B[i].upperBound){ b=B[i]; break; } } var fee=Math.round(amt*b.rate); if(b.limit!==null&&b.limit!==undefined) fee=Math.min(fee,b.limit); return {amt:amt,rate:b.rate,fee:fee,lim:b.limit}; }
+
+  function brender(){ var t=document.getElementById('bt').value, a=(+document.getElementById('ba').value||0)*1e4, r=t==='rent_monthly'?(+document.getElementById('br').value||0)*1e4:0; if(a<=0&&r<=0)return; var x=bf(t,a,r);
+    document.getElementById('bfee').textContent=won(x.fee)+'원'; document.getElementById('bamt').textContent=won(x.amt)+'원'; document.getElementById('brate').textContent=(Math.round(x.rate*1000)/10)+'%'; document.getElementById('blim').textContent=x.lim?won(x.lim)+'원':'없음'; }
+  ['bt','ba','br'].forEach(function(id){document.getElementById(id).addEventListener('input',brender)}); brender();
 
   },
 };

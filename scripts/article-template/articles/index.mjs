@@ -136,4 +136,13 @@ export const ARTICLES = [
   { slug: 'loan-ltv-first-home-guide', cat: 'loan', catLabel: '대출', crumb: '생애최초 LTV', blurb: '디딤돌 80%·2.4억 · 보금자리론 70%·4.2억 · 월 1,071,020원' },
   { slug: 'savings-interest-tax-guide', cat: 'savings', catLabel: '저축', crumb: '예금 이자 세금', blurb: '15.4% 원천징수 · 2천만원 넘으면 5월 신고 · 넘는 몫만 기본세율' },
   { slug: 'savings-compare-guide', cat: 'savings', catLabel: '저축', crumb: '적금 예금 이자 차이', blurb: '적금 26만 vs 예금 48만 (연 4%) · 손익분기 7.38% · 목돈은 예금' },
+  { slug: 'tax-gift-guide', cat: 'tax', catLabel: '세금', crumb: '증여세 면제한도', blurb: '성인 자녀 5,000만원 · 1억 주면 4,850,000원 · 10년 합산' },
+  { slug: 'tax-inheritance-guide', cat: 'tax', catLabel: '세금', crumb: '상속세 면제한도', blurb: '배우자·자녀 10억 500만원 · 자녀만 5억 500만원 · 무신고가산세 20%' },
+  { slug: 'tax-daily-wage-guide', cat: 'tax', catLabel: '세금', crumb: '일용직 세금 계산 방법', blurb: '25만원 하루 2,970원 · 187,037원까지 0원 · 한 달 500만원이면 59,400원' },
+  { slug: 'tax-stock-guide', cat: 'tax', catLabel: '세금', crumb: '주식 양도세 기준', blurb: '해외주식 250만원 공제 · 상장 대주주 50억 · 비상장 10억 · 5월 신고' },
+  { slug: 'law-inheritance-share-guide', cat: 'law', catLabel: '법률', crumb: '상속 순위 및 비율', blurb: '배우자 1.5배 · 7억원이면 3억원 · 포기 3개월 · 유류분 절반' },
+  { slug: 'tax-child-credit-guide', cat: 'tax', catLabel: '세금', crumb: '자녀세액공제 나이 개정', blurb: '2026년 귀속 2006~2016년생 · 2명 55만원 · 2017년생은 2030년부터' },
+  { slug: 'gov-maternity-guide', cat: 'government', catLabel: '정부지원금', crumb: '출산휴가비 금액', blurb: '300만원 → 820만원 · 상한 660만원 · 쌍둥이 120일 · 배우자 20일' },
+  { slug: 'tax-vat-guide', cat: 'tax', catLabel: '세금', crumb: '부가세 계산 방법', blurb: '일반 250만원·간이 797,500원 · 면제 4,800만원 미만 · 신고기한 25일' },
+  { slug: 'realestate-brokerage-guide', cat: 'realestate', catLabel: '부동산', crumb: '부동산 중개수수료', blurb: '매매 6억 240만원 · 전세 4억 120만원 · 월세 100배 · 상가 0.9%' },
 ];

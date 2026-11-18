@@ -5,8 +5,71 @@
     <link>https://moneydoc.kr/</link>
     <description>한국 금융·세금·법률 계산 기준을 법령 원문으로 확인해 정리한 가이드</description>
     <language>ko</language>
-    <lastBuildDate>Sat, 31 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://moneydoc.kr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>부가세 계산 방법, 일반과세자와 간이과세자는 얼마나 다른가요</title>
+      <link>https://moneydoc.kr/vat/guide/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/vat/guide/</guid>
+      <description>부가세 포함 매출 6,600만원, 세금계산서를 받은 매입 3,850만원인 소매점은 일반과세자면 2,500,000원, 간이과세자면 797,500원을 내요. 1.1 계산법, 간이과세자 면제 경계와 업종별 금액, 1억 400만원 기준, 신고기간과 예정고지를 조문과 계산기 값으로 풀었어요.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>부동산 중개수수료, 전세 월세 복비는 얼마인가요</title>
+      <link>https://moneydoc.kr/brokerage/guide/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/brokerage/guide/</guid>
+      <description>주택 중개수수료 상한은 거래금액에 구간별 상한요율을 곱한 금액이고, 낮은 구간은 한도액에서 멈춰요. 전세 4억원은 1,200,000원, 매매 6억원은 2,400,000원이에요. 월세 환산, 오피스텔과 상가 요율, 내는 때, 넘겨 받았을 때의 처벌을 법령 원문으로 정리했어요.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>상속 순위 및 비율, 법정상속분 계산은 어떻게 하나요</title>
+      <link>https://moneydoc.kr/inheritance-share/guide/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/inheritance-share/guide/</guid>
+      <description>상속 순위는 직계비속, 직계존속, 형제자매, 4촌 이내 방계혈족 순서이고 배우자는 자녀나 부모 한 사람 몫의 1.5배를 받아요. 재산 7억원을 배우자와 자녀 2명이 나누면 배우자 3억원, 자녀 2억원씩이에요. 대습상속, 상속포기, 유류분, 기여분 계산을 민법 원문으로 정리했어요.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>상속세 면제한도, 배우자 있으면 10억까지 세금이 없나요</title>
+      <link>https://moneydoc.kr/inheritance-tax/guide/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/inheritance-tax/guide/</guid>
+      <description>배우자와 자녀 2명이 상속받으면 일괄공제 5억원과 배우자공제 최소 5억원, 장례비 최소 500만원을 빼서 세금은 10억 550만원부터 나와요. 자녀만 상속받을 때와 자녀·부모 없는 배우자가 상속받을 때의 금액, 배우자가 받은 금액별 세금, 세율, 금융재산·동거주택 공제, 신고기한과 가산세를 법령과 계산기 값으로 정리했어요.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>일용직 세금 계산 방법, 일급 25만원이면 얼마 떼나요</title>
+      <link>https://moneydoc.kr/daily-wage/guide/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/daily-wage/guide/</guid>
+      <description>일용직 세금은 하루 15만원을 넘는 금액의 2.7%가 소득세, 그 10%가 지방소득세예요. 일급 25만원이면 하루 2,970원, 20일이면 59,400원을 떼요. 10원 미만 끝수, 세금이 0원인 일급, 3.3%나 월급 방식과의 차이, 3개월 기준, 영수증 기한을 법령 원문과 계산기 값으로 정리했어요.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>자녀세액공제 나이 개정, 몇 살부터 얼마 받나요</title>
+      <link>https://moneydoc.kr/child-credit/guide/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/child-credit/guide/</guid>
+      <description>자녀세액공제 나이는 2026년 4월 21일 개정으로 13세 이상이 됐고, 2029년 귀속까지는 해마다 한 살씩 올려요. 2026년 귀속 대상은 2006년생부터 2016년생까지예요. 출생연도별 대상 연도, 자녀 수와 출산 순서별 공제액, 맞벌이 부부와 자녀장려금까지 정리했어요.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>주식 양도세 기준, 해외주식과 대주주는 얼마부터 내나요</title>
+      <link>https://moneydoc.kr/stock-tax/guide/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/stock-tax/guide/</guid>
+      <description>해외주식 양도세는 한 해 차익 250만원을 넘는 금액부터 내요. 차익 2,000만원이면 3,850,000원이에요. 증권시장에서 판 국내 상장주식은 대주주만 내는데, 지분율 1%(코스닥 2%, 코넥스 4%) 이상이거나 그 회사 주식 보유액이 50억원 이상이면 대주주예요. 비상장주식 10억원 기준, 손익통산, 신고 기한을 법령 원문으로 정리했어요.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>증여세 면제한도, 자녀에게 1억 주면 세금은 얼마인가요</title>
+      <link>https://moneydoc.kr/gift-tax/guide/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/gift-tax/guide/</guid>
+      <description>성인 자녀에게 1억원을 주면 증여세 면제한도 5,000만원을 빼고 10% 세율로 4,850,000원을 내요. 묶음별 10년 합산, 혼인·출산 공제 1억원, 손주 30% 할증, 신고기한과 무신고 가산세를 금액 예시로 보여 줘요.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>출산휴가비 금액, 90일 동안 회사와 고용보험에서 얼마 받나요</title>
+      <link>https://moneydoc.kr/maternity/guide/</link>
+      <guid isPermaLink="true">https://moneydoc.kr/maternity/guide/</guid>
+      <description>월 통상임금 300만원이면 출산휴가 90일 동안 8,200,000원을 받아요. 법이 유급으로 정한 처음 60일과 고용보험 상한이 걸리는 30일을 나눠 계산했어요. 우선지원 대상기업인지에 따라 누가 얼마를 주는지, 쌍둥이와 미숙아, 신청 시기, 배우자 20일까지 법령과 고시로 정리했어요.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>국민연금 감액 기준 소득, 519만원 넘기면 연금 얼마 받나요</title>
       <link>https://moneydoc.kr/national-pension/income-cut/</link>

@@ -34,6 +34,13 @@
       "url": "https://www.law.go.kr/법령/국세기본법",
       "wait": 20000,
       "minChars": 5000
+    },
+    {
+      "label": "민법",
+      "url": "https://www.law.go.kr/법령/민법",
+      "kind": "gov",
+      "wait": 20000,
+      "minChars": 5000
     }
   ]
 }

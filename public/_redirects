@@ -163,6 +163,8 @@
 /government/basic-pension-property/                     /basic-pension/property/  301
 /government/basic-pension-rejection-guide/              /basic-pension/rejection/  301
 /government/basic-pension-rejection/                    /basic-pension/rejection/  301
+/government/gov-maternity-guide/                        /maternity/guide/  301
+/government/gov-maternity/                              /maternity/guide/  301
 /government/unemployment-180days-guide/                 /unemployment/180days/  301
 /government/unemployment-180days/                       /unemployment/180days/  301
 /government/unemployment-amount-guide/                  /unemployment/amount/  301
@@ -303,6 +305,8 @@
 /law/certified-mail/                                    /certified-mail/  301
 /law/deposit-return-suit-guide/                         /deposit-return/  301
 /law/deposit-return-suit/                               /deposit-return/  301
+/law/law-inheritance-share-guide/                       /inheritance-share/guide/  301
+/law/law-inheritance-share/                             /inheritance-share/guide/  301
 /law/personal-rehabilitation-guide/                     /rehabilitation/  301
 /law/personal-rehabilitation/                           /rehabilitation/  301
 /law/severance-claim-form-guide/                        /severance/claim/  301
@@ -347,6 +351,8 @@
 /realestate/acquisition-tax-payment/                    /acquisition-tax/payment/  301
 /realestate/acquisition-tax-two-house-guide/            /acquisition-tax/two-house/  301
 /realestate/acquisition-tax-two-house/                  /acquisition-tax/two-house/  301
+/realestate/realestate-brokerage-guide/                 /brokerage/guide/  301
+/realestate/realestate-brokerage/                       /brokerage/guide/  301
 /realestate/transfer-tax-expense-guide/                 /transfer-tax/expense/  301
 /realestate/transfer-tax-expense/                       /transfer-tax/expense/  301
 /realestate/transfer-tax-filing-guide/                  /transfer-tax/filing/  301
@@ -371,6 +377,18 @@
 /savings/savings-youth/                                 /installment/youth/  301
 /tax/part-time-insurance-guide/                         /four-insurance/part-time/  301
 /tax/part-time-insurance/                               /four-insurance/part-time/  301
+/tax/tax-child-credit-guide/                            /child-credit/guide/  301
+/tax/tax-child-credit/                                  /child-credit/guide/  301
+/tax/tax-daily-wage-guide/                              /daily-wage/guide/  301
+/tax/tax-daily-wage/                                    /daily-wage/guide/  301
+/tax/tax-gift-guide/                                    /gift-tax/guide/  301
+/tax/tax-gift/                                          /gift-tax/guide/  301
+/tax/tax-inheritance-guide/                             /inheritance-tax/guide/  301
+/tax/tax-inheritance/                                   /inheritance-tax/guide/  301
+/tax/tax-stock-guide/                                   /stock-tax/guide/  301
+/tax/tax-stock/                                         /stock-tax/guide/  301
+/tax/tax-vat-guide/                                     /vat/guide/  301
+/tax/tax-vat/                                           /vat/guide/  301
 # --- 스포크 옛 주소 끝 ---
 
 /tax/overseas-stock-tax/                                /stock-tax/  301

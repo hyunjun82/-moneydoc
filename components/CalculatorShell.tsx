@@ -3,6 +3,7 @@ import { Footer } from "./Footer";
 import { GuideAccordion } from "./GuideAccordion";
 import { SourceBox } from "./SourceBox";
 import { RelatedCards } from "./RelatedCards";
+import { CalcGuideLinks } from "./CalcGuideLinks";
 import { CATEGORIES, type CategorySlug } from "@/lib/calculators-index";
 import { hubHref } from "@/lib/hub-map";
 
@@ -157,6 +158,7 @@ export function CalculatorShell({
       {children}
 
       <GuideAccordion guide={spec.guide} title={guideTitle ?? spec.guide?.title ?? "계산기 가이드"} />
+      <CalcGuideLinks pagePath={pagePath} />
       <SourceBox source={spec.source} />
       {spec.related && spec.related.length > 0 && <RelatedCards related={spec.related} />}
 

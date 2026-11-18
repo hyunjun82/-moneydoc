@@ -199,6 +199,15 @@
     "loan/loan-jeonse-youth-guide": "jeonse-loan/youth",
     "loan/loan-ltv-first-home-guide": "ltv/guide",
     "savings/savings-interest-tax-guide": "deposit/interest-tax",
-    "savings/savings-compare-guide": "installment/compare"
+    "savings/savings-compare-guide": "installment/compare",
+    "tax/tax-gift-guide": "gift-tax/guide",
+    "tax/tax-inheritance-guide": "inheritance-tax/guide",
+    "tax/tax-daily-wage-guide": "daily-wage/guide",
+    "tax/tax-stock-guide": "stock-tax/guide",
+    "law/law-inheritance-share-guide": "inheritance-share/guide",
+    "tax/tax-child-credit-guide": "child-credit/guide",
+    "government/gov-maternity-guide": "maternity/guide",
+    "tax/tax-vat-guide": "vat/guide",
+    "realestate/realestate-brokerage-guide": "brokerage/guide"
   }
 }

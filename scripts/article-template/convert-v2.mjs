@@ -44,6 +44,10 @@ function prefixScript(js, classes) {
   let out = js.replace(/'((?:[^'\\]|\\.)*)'/g, (_m, s) => `'${inString(s)}'`);
   for (const c of classes)
     out = out.replace(new RegExp(`(classList\\.(?:add|remove|toggle|contains)\\(')${c}(')`, 'g'), `$1${PREFIX}${c}$2`); // classList.toggle('compact')
+  // v.className='verdict ok' 처럼 통째로 갈아 끼우는 대입도 접두사를 붙인다.
+  // 안 붙이면 판정 트리를 한 번 누른 뒤 판정 상자의 모양(.v2-verdict)이 사라진다 (2026-11-18 실측).
+  out = out.replace(/(className\s*=\s*')([^']*)(')/g, (_m, a, l, b) =>
+    a + l.split(/\s+/).filter(Boolean).map((c) => (classes.has(c) ? PREFIX + c : c)).join(' ') + b);
   return out;
 }
 

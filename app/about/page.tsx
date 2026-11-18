@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "MoneyDoc 소개",
   description:
-    "MoneyDoc은 한국 금융·세금·법률 계산기 66종을 운영합니다. 모든 산식을 법령 원문과 대조하고 387개 케이스로 자동 검증합니다.",
+    "MoneyDoc은 한국 금융·세금·법률 계산기 66종을 운영합니다. 모든 산식을 법령 원문과 대조하고 399개 케이스로 자동 검증합니다.",
   alternates: { canonical: "/about/" },
 };
 
@@ -44,7 +44,7 @@ export default function Page() {
               국가법령정보센터의 조문을 직접 확인해 반영하고, 근거 조항을 페이지에 명시합니다.
             </li>
             <li>
-              <strong>387개 케이스 자동 검증</strong> — 계산기 66종에 대해 표본 케이스를
+              <strong>399개 케이스 자동 검증</strong> — 계산기 66종에 대해 표본 케이스를
               자동 실행합니다. 하나라도 어긋나면 배포하지 않습니다.
             </li>
             <li>
@@ -71,7 +71,7 @@ export default function Page() {
             발견 즉시 고치고, 무엇을 왜 고쳤는지 해당 계산기의 근거 항목에 남깁니다.
           </p>
           <p style={{ fontSize: 14, color: "var(--text-3, var(--text-2))" }}>
-            최근 전체 검증: <strong>2026년 10월 30일</strong> · 387개 케이스 통과
+            최근 전체 검증: <strong>2026년 11월 18일</strong> · 399개 케이스 통과
           </p>
 
           <h2 style={H2}>출처</h2>

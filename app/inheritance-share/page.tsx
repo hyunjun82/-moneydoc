@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <CalculatorShell
       spec={spec}
-      sourceBadge="대법원 2026 · 검증 완료"
+      sourceBadge="법무부 민법 2026 · 검증 완료"
     >
       <Client />
     </CalculatorShell>

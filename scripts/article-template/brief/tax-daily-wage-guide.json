@@ -40,6 +40,27 @@
       "url": "https://www.law.go.kr/법령/국세기본법",
       "wait": 20000,
       "minChars": 5000
+    },
+    {
+      "label": "국고금 관리법",
+      "url": "https://www.law.go.kr/법령/국고금관리법",
+      "kind": "gov",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "국고금 관리법 시행령",
+      "url": "https://www.law.go.kr/법령/국고금관리법시행령",
+      "kind": "gov",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "지방세기본법",
+      "url": "https://www.law.go.kr/법령/지방세기본법",
+      "kind": "gov",
+      "wait": 20000,
+      "minChars": 5000
     }
   ]
 }
