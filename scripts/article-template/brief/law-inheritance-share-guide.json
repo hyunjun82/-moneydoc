@@ -1,0 +1,32 @@
+{
+  "slug": "law-inheritance-share-guide",
+  "keyword": "상속 순위 및 비율, 법정상속분 계산은 어떻게 하나요",
+  "calc": "law/inheritance-share",
+  "mustInclude": [
+    "상속 순위 및 비율",
+    "법정상속분 계산"
+  ],
+  "queries": [
+    "상속 순위",
+    "법정상속분",
+    "상속분",
+    "유류분",
+    "상속포기"
+  ],
+  "sources": [
+    {
+      "label": "민법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/민법",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "가사소송법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/가사소송법",
+      "wait": 20000,
+      "minChars": 5000
+    }
+  ]
+}

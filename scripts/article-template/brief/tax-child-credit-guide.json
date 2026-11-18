@@ -1,0 +1,45 @@
+{
+  "slug": "tax-child-credit-guide",
+  "keyword": "자녀세액공제 나이 개정, 몇 살부터 얼마 받나요",
+  "calc": "tax/child-tax-credit",
+  "mustInclude": [
+    "자녀세액공제 나이 개정",
+    "얼마"
+  ],
+  "queries": [
+    "자녀세액공제",
+    "자녀세액공제 금액",
+    "자녀세액공제 나이",
+    "자녀장려금"
+  ],
+  "sources": [
+    {
+      "label": "소득세법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "소득세법 시행령",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법시행령",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "조세특례제한법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/조세특례제한법",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "지방세법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세법",
+      "wait": 20000,
+      "minChars": 5000
+    }
+  ]
+}

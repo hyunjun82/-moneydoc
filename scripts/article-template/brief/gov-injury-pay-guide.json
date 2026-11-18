@@ -1,0 +1,40 @@
+{
+  "slug": "gov-injury-pay-guide",
+  "keyword": "산재 휴업급여",
+  "calc": "government/industrial-accident-pay",
+  "mustInclude": [
+    "산재 휴업급여",
+    "휴업급여 계산",
+    "산재 휴업급여 기간"
+  ],
+  "queries": [
+    "산재 휴업급여",
+    "휴업급여 계산",
+    "산재 휴업급여 기간",
+    "산재 신청",
+    "산재 평균임금"
+  ],
+  "sources": [
+    {
+      "label": "산업재해보상보험법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/산업재해보상보험법",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "산업재해보상보험법 시행령",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/산업재해보상보험법시행령",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "근로기준법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/근로기준법",
+      "wait": 20000,
+      "minChars": 5000
+    }
+  ]
+}

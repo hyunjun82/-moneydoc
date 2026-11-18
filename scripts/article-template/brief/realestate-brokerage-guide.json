@@ -1,0 +1,55 @@
+{
+  "slug": "realestate-brokerage-guide",
+  "keyword": "부동산 중개수수료, 전세 월세 복비는 얼마인가요",
+  "calc": "realestate/brokerage-fee",
+  "mustInclude": [
+    "부동산 중개수수료",
+    "전세",
+    "월세",
+    "복비"
+  ],
+  "queries": [
+    "중개수수료",
+    "부동산 중개수수료",
+    "복비",
+    "전세 중개수수료",
+    "중개보수"
+  ],
+  "sources": [
+    {
+      "label": "공인중개사법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/공인중개사법",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "공인중개사법 시행령",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/공인중개사법시행령",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "공인중개사법 시행규칙",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/공인중개사법시행규칙",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "공인중개사법 시행규칙 별표 1 (주택 중개보수 상한요율)",
+      "url": "https://www.law.go.kr/법령별표서식/(공인중개사법시행규칙,별표1)",
+      "kind": "gov",
+      "wait": 20000,
+      "minChars": 100
+    },
+    {
+      "label": "공인중개사법 시행규칙 별표 2 (오피스텔 중개보수 요율)",
+      "url": "https://www.law.go.kr/법령별표서식/(공인중개사법시행규칙,별표2)",
+      "kind": "gov",
+      "wait": 20000,
+      "minChars": 100
+    }
+  ]
+}

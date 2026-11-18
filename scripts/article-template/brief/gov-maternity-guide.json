@@ -1,0 +1,54 @@
+{
+  "slug": "gov-maternity-guide",
+  "keyword": "출산휴가비 금액, 90일 동안 회사와 고용보험에서 얼마 받나요",
+  "calc": "government/maternity-leave-pay",
+  "mustInclude": [
+    "출산휴가비 금액",
+    "90일",
+    "고용보험"
+  ],
+  "queries": [
+    "출산휴가 급여",
+    "출산전후휴가 급여",
+    "출산휴가 기간",
+    "배우자 출산휴가",
+    "출산휴가 급여 신청"
+  ],
+  "sources": [
+    {
+      "label": "근로기준법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/근로기준법",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "고용보험법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "고용보험법 시행령",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/고용보험법시행령",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/남녀고용평등과일ㆍ가정양립지원에관한법률",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "출산전후휴가 급여등 상한액 고시 (고용노동부고시 제2026-67호)",
+      "url": "https://www.law.go.kr/행정규칙/출산전후휴가급여등상한액고시",
+      "kind": "gov",
+      "wait": 20000,
+      "minChars": 100
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "slug": "realestate-subscription-score-guide",
+  "keyword": "청약 가점",
+  "calc": "realestate/housing-subscription-score",
+  "mustInclude": [
+    "청약 가점",
+    "청약가점 계산",
+    "청약 가점 무주택기간"
+  ],
+  "queries": [
+    "청약 가점",
+    "청약가점 계산",
+    "청약 가점 무주택기간",
+    "청약 가점 부양가족",
+    "청약통장 가입기간 점수"
+  ],
+  "sources": [
+    {
+      "label": "주택공급에 관한 규칙",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/주택공급에관한규칙",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "주택법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/주택법",
+      "wait": 20000,
+      "minChars": 5000
+    }
+  ]
+}

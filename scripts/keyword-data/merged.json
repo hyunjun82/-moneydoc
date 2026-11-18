@@ -15825,6 +15825,3518 @@
       "spoke": "car-insurance",
       "src": "네이버 자동완성 실측",
       "collected": "2026-09-29"
+    },
+    {
+      "word": "가족간 증여세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "결혼 증여세 신고 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "국세청 증여세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부모님집 증여세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세와 증여세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "세금 증여세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "손자 증여세 면제한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "손주 증여세 면제한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "아기 증여세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀 증여세 면제한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀 증여세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀 증여세 신고방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "주택 증여세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 면제한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 면제한도 1억",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 면제한도 결혼",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 면제한도 며느리",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 면제한도 부모",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 면제한도 상향",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 면제한도 자녀",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 세율 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 세율 구간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 세율은",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 세율표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 신고 서류",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 신고기한",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 신고방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 신고서",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "타인 증여세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "홈택스 증여세 신고방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "gift",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부모 상속세 면제한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 개정",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 개편",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 면제한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 면제한도 개정",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 면제한도 개편",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 면제한도 배우자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 면제한도 상향",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 면제한도 자녀",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 면제한도 자식",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 세율 개편",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 세율 공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 세율 구간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 세율 누진세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 세율 자녀",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 세율 표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 세율은",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 신고 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 신고 서류",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 신고 세무사 비용",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 신고 수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 신고 안하면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 신고기한",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 신고대상",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 신고방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 신고서",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세 증여세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "손자 상속세 면제한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀 상속세 면제한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "주택 상속세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "증여세 상속세 세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "간이과세자 부가세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "간이과세자 부가세 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "간이과세자 부가세 면제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "간이과세자 부가세 면제 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "간이과세자 부가세 신고기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "간이과세자 부가세 환급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "간이과세자 부가세신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "간이과세자 부가세신고 날짜",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "간이과세자 부가세신고 하는법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "간이과세자 부가세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "간이사업자 부가세 신고기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "네이버 부가세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "법인 부가세 신고기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가가치세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가가치세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가가치세 납부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가가치세 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가가치세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가가치세 신고 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가가치세 예정고지",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가가치세 표준증명원",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가가치세 환급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가가치세법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 계산 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 계산기 1.1",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 계산기 10%",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 계산법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 계산법 1.1",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 계산서",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 계산식",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 납부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 부과세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 신고기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 신고기간 10일",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 신고기간 12월",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 신고기간 2기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 신고기간 지났을때",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 신고기간언제부터",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 신고기간주기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 예정고지",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세 환급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부가세신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "세금 vat 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "세금 부가세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "세금 부가세 차이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "vat",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "건설일용직 4대보험",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 4대보험",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 4대보험 가입",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 4대보험 가입 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 4대보험 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 4대보험 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 4대보험 세금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 4대보험 의무",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 4대보험료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 세금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 세금 3.3",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 세금 3.3%",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 세금 계산 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 세금 공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 세금 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 세금 몇프로",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 세금계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 세금신고 확인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 소득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 소득세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 소득세 구간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 소득세 금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 소득세 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 소득세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 소득세 요율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 소득세 주민세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 소득세 환급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 소득세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 원천징수",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 원천징수 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 원천징수 발급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 원천징수 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 원천징수 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 원천징수 신고방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 원천징수 조회",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 원천징수세액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직 원천징수영수증",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "일용직원천징수 뽑는법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "쿠팡 일용직 4대보험",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "쿠팡 일용직 세금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "daily-wage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "2026 자녀장려금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "2027 자녀장려금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "2027년자녀장려금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로 자녀장려금 조건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로자녀장려금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로자녀장려금 신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀 세액공제 금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀 세액공제 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀 세액공제 나이 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀세액공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀세액공제 2025",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀세액공제 2026",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀세액공제 3명",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀세액공제 나이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀세액공제 나이 개정",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀세액공제 나이 요건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀세액공제 등록",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀세액공제 출산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀장려금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀장려금 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀장려금 대상",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "자녀장려금 신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "child-credit",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "국내주식 양도세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "국내주식 양도소득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "대주주 양도세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "대주주 양도세 10억",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "대주주 양도세 50억",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "대주주 양도세 가족합산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "대주주 양도세 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "대주주 양도세 기준금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "대주주 양도세 기준일",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "대주주 양도세 피하는법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "대주주 양도세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "미국주식 양도세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "미국주식 양도세 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "미국주식 양도소득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "비상장주식 양도세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "비상장주식 양도소득세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "비상장주식 양도소득세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "주식 양도세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "주식 양도세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "주식 양도세 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "주식 양도세 납부기한",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "주식 양도세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "주식 양도세 신고 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "주식 양도세 신고 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "주식 양도세 신고기한",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "주식 양도세 환급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "주식 양도소득세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "주식양도세신고일",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "해외주식 양도세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "해외주식 양도세 감면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "해외주식 양도세 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "해외주식 양도세 공제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "해외주식 양도세 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "해외주식 양도세 납부",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "해외주식 양도세 미신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "해외주식 양도세 손익통산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "해외주식 양도세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "해외주식 양도세율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "해외주식 양도소득세 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "해외주식 양도소득세 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "해외주식 양도소득세 신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "stock",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "남편 사망시 상속 순위",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "법정상속분 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "법정상속분 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "법정상속분 비율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "법정상속분 서류",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "법정상속분 유류분 차이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "법정상속분 한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "법정상속분할뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속 분쟁 사례",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속 순위 및 비율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속 유류분",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속 유류분 제도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속분",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속분 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속분 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속분배",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속분쟁",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속분할",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속분할심판청구",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속분할협의",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속분할협의서",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속순위",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속순위 대습상속",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속순위 조카",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속순위 직계비속",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속순위 형제자매",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속포기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속포기신고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속포기신고서",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속포기신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "상속포기한정승인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "유류분",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "유류분 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "유류분 비율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "유류분 지문",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "유류분권",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "유류분제도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "유류분청구",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "유류분청구소송",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "유산 상속 순위",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "재산 상속 순위",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "재산 상속 순위 비율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "재산상속포기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "inheritance-share",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "복비",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "복비 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "복비계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "복비계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 복비",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 복비 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 복비 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 복비 네고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 복비 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 복비 부가세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 복비 언제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 복비 요율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 복비 카드",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 복비 현금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 전세 중개수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 전세 중개수수료 부가세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 전세 중개수수료율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개보수",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개보수 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개보수 부가세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개보수 수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개보수 시점",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개보수 언제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개보수 요율표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개보수 지원",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개보수 카드결제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개보수 협의",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개수수료 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개수수료 네고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개수수료 부가세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개수수료 지급시점",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개수수료 지원",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개수수료 카드",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개수수료 현금영수증",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "부동산 중개수수료율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "아파트 부동산 중개수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "아파트 전세 중개수수료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "월세 복비",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "월세 복비 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "전세 복비",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "전세 재계약 복비",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "전세 중개수수료 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "전세 중개수수료 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "전세 중개수수료 네고",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "전세 중개수수료 반반",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "전세 중개수수료 요율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "전세 중개수수료 협의",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "전세 중개수수료율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "중개보수",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "중개보수 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "중개보수 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "중개보수 부가세",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "중개보수 요율",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "중개보수 요율표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "중개보수 지원",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "중개보수 협의",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "중개보수비",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "brokerage",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약 가점",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약 가점 계산 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약 가점 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약 가점 계산기 부양가족",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약 가점 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약 가점 만점",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약 가점 무주택 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약 가점 확인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약 가점제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약 가점제 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약 가점제 추첨제",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약 가점제도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약가점 부양가족 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약가점계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약통장 가입기간 점수",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "청약통장 가입기간 점수 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "subscription-score",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "2026 근로장려금 반기신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "2026 근로장려금 상반기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 반기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 반기신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 반기신청 날짜",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 반기신청 놓치면",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 반기신청 대상자",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 반기신청 뜻",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 반기신청 정기신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 반기신청 지급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 반기신청 지급일",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 반기신청 차이",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 신청 자격 요건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 신청 자격 조회",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 신청방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 신청자격",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 신청자격확인하는곳",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 재산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 재산 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 재산 요건",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 재산 전세금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 재산 조회",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 재산기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 재산기준 날짜",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 재산기준 아파트",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 재산기준일",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 재산확인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 지급액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 지급액 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 지급액 구간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 지급액 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 지급액 산정표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 지급액 조회",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금 지급액표",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "근로장려금지급액내년한도",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "eitc",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "배우자 출산휴가비",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "배우자 출산휴가일",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "배우자 출산휴가일 20일",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "배우자 출산휴가일 20일 급여",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "배우자 출산휴가일 20일 주말",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "배우자 출산휴가일 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "배우자 출산휴가일 급여",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "배우자 출산휴가일 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "배우자 출산휴가일 분할",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "배우자 출산휴가일 주말",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "병원 산재 신청 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 신청 기간 3년",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 신청 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 신청 서류 양식",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 신청 필요 서류",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 신청 후 승인 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 신청 후 출근",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 신청 후 취소",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 평균임금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 평균임금 기준",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 평균임금 산정",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 평균임금 세전",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 평균임금 수당",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 평균임금 정정",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 평균임금 최고액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 평균임금 최저",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 평균임금 확인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 평균임금산정 수당",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 휴업급여 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 휴업급여 기간 건강보험료",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 휴업급여 기간 보는 법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 휴업급여 기간 연장",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 휴업급여 기간 중 알바",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 휴업급여 기간 해외여행",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 휴업급여 기간 확인",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 휴업급여 신청방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 휴업급여 지급 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 휴업급여 지급일",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 휴업급여 최저 금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "산재 휴업급여기간은",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "허리디스크 산재 신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "휴업급여 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "휴업급여 계산방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "휴업급여 계산하는법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "injury-pay",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가비",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가비 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가비 금액",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가비 세금",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가비 신청",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가비 신청 기간",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가비 신청 서류",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가비 신청 시기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가비 신청 후기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가비 신청하는방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가비 신청하는법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가비 지급",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가비 지급일",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가일",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가일 계산",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가일 계산 방법",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
+    },
+    {
+      "word": "출산휴가일 계산기",
+      "intent": "정보형",
+      "code": "AC",
+      "spoke": "maternity",
+      "src": "네이버 자동완성 실측",
+      "collected": "2026-11-18"
     }
   ],
   "questions": [

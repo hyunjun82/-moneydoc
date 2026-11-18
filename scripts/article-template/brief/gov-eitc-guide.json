@@ -1,0 +1,40 @@
+{
+  "slug": "gov-eitc-guide",
+  "keyword": "근로장려금",
+  "calc": "government/earned-income-tax-credit",
+  "mustInclude": [
+    "근로장려금",
+    "근로장려금 신청자격",
+    "근로장려금 지급액"
+  ],
+  "queries": [
+    "근로장려금",
+    "근로장려금 신청자격",
+    "근로장려금 지급액",
+    "근로장려금 재산",
+    "근로장려금 반기신청"
+  ],
+  "sources": [
+    {
+      "label": "조세특례제한법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/조세특례제한법",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "조세특례제한법 시행령",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/조세특례제한법시행령",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "소득세법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법",
+      "wait": 20000,
+      "minChars": 5000
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "tax-stock-guide",
+  "keyword": "주식 양도세 기준, 해외주식과 대주주는 얼마부터 내나요",
+  "calc": "tax/stock-transfer-tax",
+  "mustInclude": [
+    "주식 양도세 기준",
+    "해외주식",
+    "대주주"
+  ],
+  "queries": [
+    "주식 양도세",
+    "주식 양도소득세",
+    "해외주식 양도세",
+    "대주주 양도세",
+    "주식 양도세 신고"
+  ],
+  "sources": [
+    {
+      "label": "소득세법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "소득세법 시행령",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/소득세법시행령",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "지방세법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/지방세법",
+      "wait": 20000,
+      "minChars": 5000
+    },
+    {
+      "label": "증권거래세법",
+      "kind": "law",
+      "url": "https://www.law.go.kr/법령/증권거래세법",
+      "wait": 20000,
+      "minChars": 5000
+    }
+  ]
+}
